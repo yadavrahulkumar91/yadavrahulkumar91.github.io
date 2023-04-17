@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secondary Schooling | GameChanger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <h1><a href="index.html">GameChanger</a></h1>
+    </div>
+    <ul class="menu">
+      <li><a href="#notes">Notes</a></li>
+      <li><a href="#online-videos">Online Videos</a></li>
+      <li><a href="#home-tutor">Home Tutor</a></li>
+      <li><a href="#online-classes">Online Classes</a></li>
+      <li><a href="#offline-classes">Offline Classes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Secondary Schooling Content -->
+  <section class="faculty">
+    <div class="banner">
+      <h2>Secondary Schooling</h2>
+      <p>Prepare your child for a bright future</p>
+    </div>
+    <div class="description">
+      <p>Our Secondary Schooling program is designed to help students excel academically and prepare them for success in higher education and their careers. Our experienced teachers use a range of teaching methods to help students learn, including lectures, discussions, group projects, and practical applications.</p>
+      <p>Our program is designed for students in grades 7-10 and covers all the key subjects, including math, science, English, social studies, and more. We provide students with a well-rounded education that emphasizes critical thinking, problem-solving, communication, and collaboration.</p>
+      <p>Enroll your child today and give them the tools they need to succeed!</p>
+    </div>
+    <div id="notes" class="section">
+      <h3>Notes</h3>
+      <p>Our Secondary Schooling program includes comprehensive notes for all the key subjects, developed by experienced educators. These notes cover all the essential concepts and skills that students need to master and are designed to support students' learning both in and out of the classroom.</p>
+    </div>
+    <div id="online-videos" class="section">
+      <h3>Online Videos</h3>
+      <p>Our online video library includes a wide range of engaging and informative videos that cover all the key subjects. These videos are designed to support students' learning and provide additional explanations and examples of the concepts covered in class.</p>
+    </div>
+    <div id="home-tutor" class="section">
+      <h3>Home Tutor</h3>
+      <p>We understand that some students may need additional support to succeed in their learning. That's why we offer home tutoring services that are tailored to each student's individual needs. Our experienced and qualified tutors provide one-on-one support that helps students build their confidence and achieve their academic goals.</p>
+    </div>
+    <div id="online-classes" class="section">
+      <h3>Online Classes</h3>
+      <p>Our online classes are designed to provide students with a flexible and convenient way to learn. These classes are taught by experienced educators who use a range of engaging and interactive teaching methods to support students' learning. Our online classes are ideal for students who are unable to attend our offline classes or who prefer to learn at their own pace.</p>
+      </div>
+    <div id="offline-classes" class="section">
+      <h3>Offline Classes</h3>
+      <p>For students who prefer a traditional classroom experience, we offer offline classes at our state-of-the-art learning centers. These classes are taught by experienced educators who use a range of teaching methods to support students' learning. Our offline classes are ideal for students who thrive in a structured learning environment and who benefit from face-to-face interactions with teachers and peers.</p>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+  <div class="wrapper">
+    <div class="footer-left">
+      <h4>About GameChanger</h4>
+      <p>GameChanger is a leading education platform that helps students of all ages reach their full potential. We offer a range of programs and resources that are designed to support students' learning and help them achieve their academic and career goals.</p>
+    </div>
+    <div class="footer-middle">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Kindergarten Faculty</a></li>
+        <li><a href="#">Upper Primary Faculty</a></li>
+        <li><a href="#">Secondary Schooling</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> 123 Main St, City, State ZIP</li>
+        <li><i class="fa fa-phone"></i> (123) 456-7890</li>
+        <li><i class="fa fa-envelope"></i> info@gamechanger.com</li>
+      </ul>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 GameChanger. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
