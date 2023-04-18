@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CEE Botany Game Changer</title>
+</head>
+<body>
+<div id="sidebar">
+    <button id="pin-btn">Pin</button>
+    <nav id="sidebar-nav">
+      <ul>
+        <li><a href="1_Tools_and_Techniques_used_in_Cytology.html">1. Tools and Techniques used in Cytology</a></li>
+        <li><a href="2_Cell_Biology_Modern_Cytology.html">2. Cell Biology (Modern Cytology)</a></li>
+        <li><a href="3_Cell_cycle.html">3. Cell cycle (shorter Cell division) (Duplicate)</a></li>
+        <li><a href="4_Biomolecules_The_molecules_of_Life.html">4. Biomolecules/ The molecules of Life</a></li>
+        <li><a href="5_Heredity_and_Variation.html">5. Heredity and Variation</a></li>
+        <li><a href="6_Mendels_Laws_of_Inheritance.html">6. Mendel's Laws of Inheritance</a></li>
+        <li><a href="7_Patterns_of_Inheritance.html">7. Patterns of Inheritance</a></li>
+        <li><a href="8_Linkage_and_Crossing_over.html">8. Linkage and Crossing over</a></li>
+        <li><a href="9_Mutation_and_Polypoidy.html">9. Mutation and Polypoidy</a></li>
+        <li><a href="10_Plant_Anatomy.html">10. Plant Anatomy</a></li>
+        <li><a href="11_Tissue_system.html">11. Tissue system</a></li>
+        <li><a href="12_Secondary_Growth.html">12. Secondary Growth</a></li>
+        <li><a href="13_Plant_physiology.html">13. Plant physiology</a></li>
+        <li><a href="14_Water_relation.html">14. Water relation</a></li>
+        <li><a href="15_Stomata.html">15. Stomata</a></li>
+        <li><a href="16_Respiration.html">16. Respiration</a></li>
+        <li><a href="17_Photosynthesis.html">17. Photosynthesis</a></li>
+        <li><a href="18_Growth_and_Plant_hormones.html">18. Growth and Plant hormones</a></li>
+        <li><a href="19_Plant_movement.html">19. Plant movement</a></li>
+        <li><a href="20_Mode_of_nutrition_and_Habitat_in_plants.html">20. Mode of nutrition and Habitat in plants</a></li>
+        <li><a href="21_Classification_and_Nomenclature.html">21. Classification and Nomenclature</a></li>
+        <li><a href="22_Virus.html">22. Virus</a></li>
+        <li><a href="23_Bacteria.html">23. Bacteria</a></li>
+        <li><a href="24_Biodiversity.html">24. Biodiversity</a></li>
+        <li><a href="25_Thallophyta.html">25. Thallophyta</a></li>
+        <li><a href="26_Algae.html">
+  </ul>
+</nav>
+</div>
+<style>
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #f1f1f1;
+  overflow: auto;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+#sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sidebar-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar-nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#sidebar-nav li a:hover {
+  background-color: #ddd;
+}
+
+#pin-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#pin-btn:hover {
+  background-color: #3e8e41;
+}
+
+.pinned {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background-color: #f1f1f1;
+  overflow: auto;
+  z-index: 1;
+}
+
+.pinned #pin-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #sidebar {
+    left: -300px;
+  }
+
+  #sidebar.show {
+    left: 0;
+  }
+
+  #pin-btn {
+    display: none;
+  }
+
+  .pinned {
+    display: none;
+  }
+}
+
+/* Resizable sidebar */
+.resizable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.resizable:hover {
+  background-color: #ccc;
+}
+
+.resizable:active {
+  background-color: #aaa;
+}
+</style>
+<script>
+const sidebar = document.getElementById('sidebar');
+const sidebarNav = document.getElementById('sidebar-nav');
+const pinBtn = document.getElementById('pin-btn');
+const resizable = document.createElement('div');
+resizable.classList.add('resizable');
+sidebar.appendChild(resizable);
+
+let startX, startWidth;
+
+resizable.addEventListener('mousedown', (event) => {
+  startX = event.clientX;
+  startWidth = parseInt(window.getComputedStyle(sidebar).width, 10);
+  document.addEventListener('mousemove', mousemove);
+  document.addEventListener('mouseup', mouseup);
+});
+
+function mousemove(event) {
+  const width = startWidth + event.clientX - startX;
+  sidebar.style.width = `${width}px`;
+}
+
+function mouseup() {
+  document.removeEventListener('mousemove', mousemove);
+  document.removeEventListener('mouseup', mouseup);
+}
+
+function toggleSidebar() {
+  sidebar.classList.toggle('show');
+}
+
+function pinSidebar() {
+  sidebar.classList.toggle('pinned');
+}
+
+sidebar.addEventListener('mouseenter', () => {
+  if (!sidebar.classList.contains('pinned')) {
+    sidebar.classList.add('show');}
+});
+
+sidebar.addEventListener('mouseleave', () => {
+if (!sidebar.classList.contains('pinned')) {
+sidebar.classList.remove('show');
+}
+});
+
+pinBtn.addEventListener('click', () => {
+pinSidebar();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CEE Botany Game Changer</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.sidebar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 200px;
+			background-color: #f1f1f1;
+			overflow-x: hidden;
+			padding-top: 20px;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+		.sidebar.hide {
+			width: 0;
+			transition: all 0.3s ease;
+		}
+		.main {
+			margin-left: 200px;
+			padding: 20px;
+			overflow: auto;
+		}
+		.nav-link {
+			display: block;
+			padding: 8px 16px;
+			text-decoration: none;
+			color: #818181;
+			transition: all 0.3s ease;
+		}
+		.nav-link:hover {
+			background-color: #ddd;
+			color: #000;
+		}
+		.pin-btn {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			padding: 10px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+		.pin-btn:hover {
+			background-color: #3e8e41;
+		}
+		.resize {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			height: 20px;
+			width: 20px;
+			background-color: #4CAF50;
+			cursor: nwse-resize;
+			transition: all 0.3s ease;
+		}
+		.resize:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<button class="pin-btn" onclick="pinNav()">Pin Navigation</button>
+	<div class="sidebar" id="sidebar">
+		<a class="nav-link" href="ToolsAndTechniques.html">Tools and Techniques used in Cytology</a>
+		<a class="nav-link" href="CellBiology.html">Cell Biology (Modern Cytology)</a>
+		<a class="nav-link" href="CellCycle.html">Cell cycle (shorter Cell division) (Duplicate)</a>
+		<a class="nav-link" href="Biomolecules.html">Biomolecules/ The molecules of Life</a>
+		<a class="nav-link" href="HeredityAndVariation.html">Heredity and Variation</a>
+		<a class="nav-link" href="MendelsLaws.html">Mendel's Laws of Inheritance</a>
+		<a class="nav-link" href="PatternsOfInheritance.html">Patterns of Inheritance</a>
+		<a class="nav-link" href="LinkageAndCrossingOver.html">Linkage and Crossing over</a>
+		<a class="nav-link" href="MutationAndPolypoidy.html">Mutation and Polypoidy</a>
+		<a class="nav-link
+        " href="PlantAnatomy.html">Plant Anatomy</a>
+        <a class="nav-link" href="TissueSystem.html">Tissue system</a>
+        <a class="nav-link" href="SecondaryGrowth.html">Secondary Growth</a>
+        <a class="nav-link" href="PlantPhysiology.html">Plant physiology</a>
+        <a class="nav-link" href="WaterRelation.html">Water relation</a>
+        <a class="nav-link" href="Stomata.html">Stomata</a>
+        <a class="nav-link" href="Respiration.html">Respiration</a>
+        <a class="nav-link" href="Photosynthesis.html">Photosynthesis</a>
+        <a class="nav-link" href="PlantHormones.html">Growth and Plant hormones</a>
+        <a class="nav-link" href="PlantMovement.html">Plant movement</a>
+        <a class="nav-link" href="ModeOfNutrition.html">Mode of nutrition and Habitat in plants</a>
+        <a class="nav-link" href="ClassificationAndNomenclature.html">Classification and Nomenclature</a>
+        <a class="nav-link" href="Virus.html">Virus</a>
+        <a class="nav-link" href="Bacteria.html">Bacteria</a>
+        <a class="nav-link" href="Biodiversity.html">Biodiversity</a>
+        <a class="nav-link" href="Thallophyta.html">Thallophyta</a>
+        <a class="nav-link" href="Algae.html">Algae</a>
+        <a class="nav-link" href="Fungi.html">Fungi</a>
+        <a class="nav-link" href="Lichens.html">Lichens</a>
+        <a class="nav-link" href="Bryophyta.html">Bryophyta</a>
+        <a class="nav-link" href="Marchantia.html">Marchantia</a>
+        <a class="nav-link" href="Funaria.html">Funaria</a>
+        <a class="nav-link" href="Pteridophyta.html">Pteridophyta</a>
+        <a class="nav-link" href="Fern.html">Dryopteris/ Pteris (Fern)</a>
+        <a class="nav-link" href="Gymnosperm.html">Gymnosperm</a>
+        <a class="nav-link" href="Cycas.html">Cycas</a>
+        <a class="nav-link" href="Pinus.html">Pinus</a>
+        <a class="nav-link" href="Reproduction.html">Reproduction</a>
+        <a class="nav-link" href="Morphology.html">Morphology</a>
+        <a class="nav-link" href="Root.html">Root</a>
+        <a class="nav-link" href="Stem.html">Stem</a>
+        <a class="nav-link" href="Leaf.html">Leaf</a>
+        <a class="nav-link" href="Inflorescence.html">Inflorescence</a>
+        <a class="nav-link" href="Flower.html">Flower</a>
+        <a class="nav-link" href="Ecology.html">Ecology</a>
+        <a class="nav-link" href="ApplicationOfBiology.html">Application of Biology</a>
+        <div class="resize" id="resize" onclick="resizeNav()"></div>
+    </div>
+    </body>
+    </html>
+    
