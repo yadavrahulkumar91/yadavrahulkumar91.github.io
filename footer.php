@@ -45,6 +45,7 @@ footer {
   color: #ffffff;
   font-size: 14px;
   padding: 40px 0;
+  align:center;
 }
 
 footer a {
