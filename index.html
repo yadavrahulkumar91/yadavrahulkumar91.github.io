@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <title>GameChanger - Hit the target, or be forgotten.</title>
     <!-- Add CSS and JavaScript files here -->
+    <style>
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+	</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="playgroup.html">Playgroup GameChanger</a></li>
-                <li><a href="kindergarten.html">Kindergarten GameChanger</a></li>
-                <li><a href="primary-schooling.html">Primary schooling - Class 1 to 5 GameGhanger</a></li>
-                <li><a href="upper-primary-schooling.html">Upper primary schooling - Class 6 to 8 GameChanger</a></li>
-                <li><a href="secondary-schooling.html">Secondary schooling - Class 9 and 10 GameChanger</a></li>
-                <li><a href="management-entrance.html">+2 Management Entrance GameChanger</a></li>
-                <li><a href="st-xaviers-entrance.html">St. Xavier's Entrance GameChanger</a></li>
-                <li><a href="neb.html">NEB GameChanger</a></li>
-                <li><a href="ioe-entrance.html">IOE Entrance preparation GameChanger</a></li>
-                <li><a href="cee-medical.html">CEE Medical GameChanger</a></li>
-                <li><a href="cee-paramedical.html">CEE Paramedical GameChanger</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="center"><p style="font-size: 48px; font-weight: bold; color: #2E2E2E;">
+        Game<span style="font-weight: 900; color: #000;">Changer</span>
+      </p>
+    </div>
     <a href="playgroup.html">
         <div class="box">
             <section id="playgroup">
@@ -171,101 +166,15 @@
     <footer>
         <div id="footer-container"></div>
         <?php include 'footer.php'; ?>
-        <!--
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <h4>GameChanger</h4>
-              <p>Maharajgunj, Kathmandu, Nepal</p>
-              <p><a href="tel:+9779808305830">+977 9808305830</a></p>
-              <p><a href="mailto:gamechanger.com.np@gmail.com">gamechanger.com.np@gmail.com</a></p>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <h4>Connect with us</h4>
-              <ul class="social-icons">
-                <li><a href="https://youtube.com/@gamechangervlog-xr6kd"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100091780968711"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a></li>
-                <li><a href="https://www.instagram.com"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a></li>
-                <li><a href="https://www.twitter.com/GameChangerNp"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png"/></a></li>
-                <li><a href="https://www.linkedin.com/in/gamechanger-company-59b029273"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a></li>
-              </ul>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              !-- You can generate the FB Messenger button code from the Facebook Developer site as I mentioned in the previous response --
-              <h4>Chat with us</h4>
-              <div class="fb-messengermessageus"
-                   messenger_app_id="YOUR_APP_ID"
-                   page_id="YOUR_PAGE_ID"
-                   color="white"
-                   size="standard">
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    <style>
-    /* Footer Section */
-    
-    footer {
-      background-color: #222222;
-      color: #ffffff;
-      font-size: 14px;
-      padding: 40px 0;
-    }
-    
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-    
-    footer h4 {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    
-    footer p {
-      margin-bottom: 10px;
-    }
-    
-    .social-icons li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-    
-    .social-icons li:last-child {
-      margin-right: 0;
-    }
-    
-    .social-icons a {
-      color: #ffffff;
-      font-size: 20px;
-      display: block;
-      height: 40px;
-      width: 40px;
-      text-align: center;
-      line-height: 40px;
-      border-radius: 50%;
-      transition: all 0.3s ease-in-out;
-    }
-    
-    .social-icons a:hover {
-      transform: scale(1.1);
-    }
-    
-    .fb-messengermessageus {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    </style>
-    -->
-    <script>
-        fetch('footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-container').innerHTML = data;
-  });
-
+       
+        <script>
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
     </script>
+    </footer>
 </body>
 </html>
    
