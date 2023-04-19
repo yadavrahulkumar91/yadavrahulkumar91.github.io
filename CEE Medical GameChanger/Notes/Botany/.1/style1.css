@@ -1,0 +1,130 @@
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #f1f1f1;
+  overflow: auto;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+#sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sidebar-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar-nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#sidebar-nav li a:hover {
+  background-color: #ddd;
+}
+
+#pin-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#pin-btn:hover {
+  background-color: #3e8e41;
+}
+
+.pinned {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background-color: #f1f1f1;
+  overflow: auto;
+  z-index: 1;
+}
+
+.pinned #pin-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #sidebar {
+    left: -300px;
+  }
+
+  #sidebar.show {
+    left: 0;
+  }
+
+  #pin-btn {
+    display: none;
+  }
+
+  .pinned {
+    display: none;
+  }
+}
+
+/* Resizable sidebar */
+.resizable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.resizable:hover {
+  background-color: #ccc;
+}
+
+.resizable:active {
+  background-color: #aaa;
+}
+
+		
+    /* Style for collapsible button */
+		.collapsible {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+		}
+
+		/* Style for active collapsible button */
+		.active, .collapsible:hover {
+			background-color: #ccc;
+		}
+
+		/* Style for collapsible content */
+		.content-collapsible {
+			padding: 0 18px;
+			display: none;
+			overflow: hidden;
+			background-color: #f1f1f1;
+        }
