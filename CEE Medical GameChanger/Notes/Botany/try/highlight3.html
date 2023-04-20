@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlight and Save Text</title>
+	<style>
+		.highlight-yellow {
+			background-color: yellow;
+		}
+		.highlight-green {
+			background-color: green;
+		}
+		.highlight-blue {
+			background-color: blue;
+		}
+		.highlight-pink {
+			background-color: pink;
+		}
+	</style>
+	<script>
+		var currentColor = "yellow";
+		
+		function highlight(color) {
+			currentColor = color;
+			var selection = window.getSelection();
+			var range = selection.getRangeAt(0);
+			var selectedText = range.extractContents();
+			var span = document.createElement("span");
+			span.classList.add("highlight-" + color);
+			span.appendChild(selectedText);
+			range.insertNode(span);
+			save();
+			document.getElementById("buttons-div").style.display = "none";
+		}
+		
+		function save() {
+			var highlightedText = document.getElementById("text").innerHTML;
+			localStorage.setItem("highlighted_text", highlightedText);
+		}
+		
+		function retrieveHighlightedText() {
+			var highlightedText = localStorage.getItem("highlighted_text");
+			if (highlightedText !== null) {
+				document.getElementById("text").innerHTML = highlightedText;
+			}
+		}
+		
+		function onTextClick() {
+			if (isMobile()) {
+				var selection = window.getSelection();
+				if (selection.toString().length === 0) {
+					return;
+				}
+				var buttonsDiv = document.getElementById("buttons-div");
+				buttonsDiv.style.display = "block";
+				buttonsDiv.style.position = "fixed";
+				buttonsDiv.style.bottom = "0";
+				buttonsDiv.style.width = "100%";
+			}
+		}
+		
+		function isMobile() {
+			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		}
+	</script>
+</head>
+<body onload="retrieveHighlightedText()">
+	<p>Select some text in this paragraph to highlight it:</p>
+	<p id="text" onclick="onTextClick()">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+	</p>
+	
+	<div id="buttons-div" style="display:none;">
+		Highlight Color: 
+		<button onclick="highlight('yellow'); return false;">Yellow</button>
+		<button onclick="highlight('green'); return false;">Green</button>
+		<button onclick="highlight('blue'); return false;">Blue</button
+    		<button onclick="highlight('pink'); return false;">Pink</button>
+	</div>
+</body>
+</html>
