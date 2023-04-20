@@ -3,16 +3,16 @@
 <head>
 	<title>Highlight and Save Text</title>
 	<style>
-		.highlight {
+		.highlight-yellow {
 			background-color: yellow;
 		}
-		.green {
+		.highlight-green {
 			background-color: green;
 		}
-		.blue {
+		.highlight-blue {
 			background-color: blue;
 		}
-		.pink {
+		.highlight-pink {
 			background-color: pink;
 		}
 	</style>
@@ -22,7 +22,7 @@
 			var range = selection.getRangeAt(0);
 			var selectedText = range.extractContents();
 			var span = document.createElement("span");
-			span.className = "highlight " + color;
+			span.classList.add("highlight-" + color);
 			span.appendChild(selectedText);
 			range.insertNode(span);
 			save();
@@ -48,17 +48,21 @@
 	
 	<div>
 		Highlight Color: 
+		<button onclick="highlight('yellow')">Yellow</button>
 		<button onclick="highlight('green')">Green</button>
 		<button onclick="highlight('blue')">Blue</button>
 		<button onclick="highlight('pink')">Pink</button>
-		<button onclick="highlight('')">Yellow</button>
 	</div>
 	
 	<script>
 		localStorage.removeItem("highlighted_text");
 		
-		document.addEventListener("mouseup", highlight);
-		document.addEventListener("keyup", highlight);
+		document.addEventListener("mouseup", function() {
+			highlight("yellow");
+		});
+		document.addEventListener("keyup", function() {
+			highlight("yellow");
+		});
 		window.addEventListener("beforeunload", save);
 	</script>
 </body>
