@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stylus Drawing Example</title>
+    <style>
+      #canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+    const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let isDrawing = false;
+let isErasing = false;
+
+canvas.addEventListener('pointerdown', startDrawing);
+canvas.addEventListener('pointermove', draw);
+canvas.addEventListener('pointerup', stopDrawing);
+
+function startDrawing(e) {
+  if (e.button === 5) { // Pen button
+    isErasing = true;
+    ctx.globalCompositeOperation = "destination-out";
+  } else {
+    isDrawing = true;
+    ctx.beginPath();
+    draw(e);
+  }
+}
+
+function draw(e) {
+  if (!isDrawing || isErasing) return;
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  if (e.pointerType === 'touch') {
+    const touch = e.touches[0];
+    ctx.lineTo(touch.clientX, touch.clientY);
+  } else {
+    ctx.lineTo(e.clientX, e.clientY);
+  }
+  ctx.stroke();
+  ctx.beginPath();
+  if (e.pointerType === 'touch') {
+    const touch = e.touches[0];
+    ctx.moveTo(touch.clientX, touch.clientY);
+  } else {
+    ctx.moveTo(e.clientX, e.clientY);
+  }
+}
+
+function stopDrawing() {
+  if (isErasing) {
+    isErasing = false;
+    ctx.globalCompositeOperation = "source-over";
+  } else {
+    isDrawing = false;
+    ctx.beginPath();
+  }
+}
+
+
+
+    </script>
+  </body>
+</html>
