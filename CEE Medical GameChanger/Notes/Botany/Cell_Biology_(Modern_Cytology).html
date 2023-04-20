@@ -986,8 +986,16 @@
     </main>
     
     <footer>
-      <p>GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+      <div id="footer-container"></div>
+      <?php include 'yadavrahulkumar91.github.io\footer.php'; ?>
+     
+      <script>
+          fetch('yadavrahulkumar91.github.io\footer.html')
+          .then(response => response.text())
+          .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+      });
+      </script>
     </footer>
   </body>
 </html>
