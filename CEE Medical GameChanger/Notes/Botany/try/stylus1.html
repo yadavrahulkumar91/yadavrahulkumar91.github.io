@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stylus Drawing</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js" integrity="sha512-wjYlN8pHfNlA/7FcBV17QTzk5W5p5w5zP36oOZPxYIAYJ9eQx5OyO7ftIWTbF++48/Ki1wov6CDZg4Q31oYi3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    const canvas = new fabric.Canvas('canvas');
+    canvas.isDrawingMode = true;
+    canvas.freeDrawingBrush.width = 5;
+
+    canvas.on('mouse:down', function(options) {
+      if (options.pointerType === 'pen') {
+        canvas.freeDrawingBrush.color = 'black';
+      } else {
+        canvas.freeDrawingBrush.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>

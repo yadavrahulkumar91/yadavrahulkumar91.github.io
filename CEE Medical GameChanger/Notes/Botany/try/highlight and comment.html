@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlight and Comment Text</title>
+	<style>
+		.highlight {
+			background-color: yellow;
+			cursor: pointer;
+		}
+		.comment {
+			position: relative;
+		}
+		.comment .tooltip {
+			position: absolute;
+			top: -30px;
+			left: 0;
+			display: none;
+			padding: 5px;
+			background-color: white;
+			border: 1px solid black;
+			box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+		}
+		.comment:hover .tooltip {
+			display: block;
+		}
+	</style>
+	<script>
+		function highlightAndComment() {
+			var selection = window.getSelection();
+			var range = selection.getRangeAt(0);
+			var selectedText = range.toString();
+			if (selectedText.length > 0) {
+				var span = document.createElement("span");
+				span.classList.add("highlight");
+				span.appendChild(range.extractContents());
+				range.insertNode(span);
+				var tooltip = document.createElement("div");
+				tooltip.classList.add("tooltip");
+				tooltip.innerHTML = '<textarea placeholder="Add a comment"></textarea><button onclick="saveComment(this)">Save</button>';
+				span.classList.add("comment");
+				span.appendChild(tooltip);
+			}
+		}
+		
+		function saveComment(button) {
+			var commentText = button.parentNode.querySelector("textarea").value;
+			button.parentNode.innerHTML = commentText;
+		}
+		
+		function retrieveHighlightedText() {
+			var highlightedText = localStorage.getItem("highlighted_text");
+			if (highlightedText !== null) {
+				document.getElementById("text").innerHTML = highlightedText;
+			}
+		}
+		
+		function save() {
+			var highlightedText = document.getElementById("text").innerHTML;
+			localStorage.setItem("highlighted_text", highlightedText);
+		}
+	</script>
+</head>
+<body onload="retrieveHighlightedText()">
+	<p>Select some text in this paragraph to highlight it and add a comment:</p>
+	<p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+	</p>
+	
+	<div>
+		<button onclick="highlightAndComment()">Highlight and Add Comment</button>
+	</div>
+	
+	<script>
+        /*
+		localStorage.removeItem("highlighted_text");
+		*/
+		window.addEventListener("beforeunload", save);
+	</script>
+    </body>
+    </html>

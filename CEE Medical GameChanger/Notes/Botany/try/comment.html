@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Commenting System</title>
+	<style>
+		.comment {
+			border: 1px solid black;
+			padding: 5px;
+			margin-bottom: 10px;
+			position: relative;
+		}
+		.comment p {
+			margin: 0;
+			padding: 0;
+			line-height: 1.2em;
+		}
+		.comment-buttons {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.comment-buttons button {
+			margin-left: 5px;
+		}
+	</style>
+	<script>
+		function comment() {
+			var selection = window.getSelection();
+			var range = selection.getRangeAt(0);
+			var commentText = prompt("Enter your comment:");
+			if (commentText !== null) {
+				var comment = document.createElement("div");
+				comment.classList.add("comment");
+				var p = document.createElement("p");
+				p.innerHTML = commentText;
+				comment.appendChild(p);
+				var buttons = document.createElement("div");
+				buttons.classList.add("comment-buttons");
+				var editButton = document.createElement("button");
+				editButton.innerHTML = "Edit";
+				editButton.onclick = function() {
+					editComment(comment);
+				};
+				buttons.appendChild(editButton);
+				var deleteButton = document.createElement("button");
+				deleteButton.innerHTML = "Delete";
+				deleteButton.onclick = function() {
+					deleteComment(comment);
+				};
+				buttons.appendChild(deleteButton);
+				comment.appendChild(buttons);
+				range.insertNode(comment);
+			}
+		}
+
+		function editComment(comment) {
+			var p = comment.querySelector("p");
+			var commentText = prompt("Edit your comment:", p.innerHTML);
+			if (commentText !== null) {
+				p.innerHTML = commentText;
+			}
+		}
+
+		function deleteComment(comment) {
+			comment.parentNode.removeChild(comment);
+		}
+	</script>
+</head>
+<body>
+	<h1>Comment on this text:</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu metus vel erat ultricies rhoncus a ac augue. Nam euismod orci ut odio pellentesque volutpat. Nullam ut nulla eu tellus elementum viverra vitae id augue. Donec ut dolor sapien. Sed condimentum ex nec nibh suscipit, vel dignissim lectus eleifend. Praesent vitae nulla lacinia, vehicula felis non, bibendum justo. Aliquam erat volutpat. Suspendisse quis quam a justo sagittis eleifend eu vel nulla. Etiam malesuada lacus vitae bibendum congue.</p>
+	<button onclick="comment()">Comment</button>
+</body>
+</html>
