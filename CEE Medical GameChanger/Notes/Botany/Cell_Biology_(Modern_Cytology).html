@@ -3,7 +3,7 @@
   <head>
     <title>Cell Biology</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
+    <!--<script>
       // Load the contents of the navigation bar file
       fetch('navbar.html')
         .then(response => response.text())
@@ -12,7 +12,7 @@
           const navElement = document.querySelector('nav');
           navElement.innerHTML = data;
         });
-    </script>
+    </script>  -->
   </head>
   <body>
     
@@ -891,8 +891,8 @@
 
 
     </main>
-    
-    <nav></nav>
+    <object type="text/html" data="navbar.html"></object>
+   <!--<nav></nav>  --> 
     
 
     <footer>
