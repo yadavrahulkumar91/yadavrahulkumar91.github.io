@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>Decorate</title>
+        <style>
+                .services {
+  background: #f6f6f6;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5;
+}
+.service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.service-item {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.service-item {
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+h2:hover::after {
+  transform: scaleX(1);
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+body {
+  cursor: url(cursor.png), auto;
+}
+h1 {
+  font-size: 36px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+.services {
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.service-item {
+  transform: translateZ(0);
+  perspective: 1000px;
+}
+
+.service-item img {
+  transform: translateZ(-1px) scale(2);
+}
+
+
+
+
+        </style>
+    </Head>
+    <body>
+        <div class="services">
+            <h1>Our Services</h1>
+            <div class="service-item">
+              <img src="service-1.jpg" alt="Service 1">
+              <h2>Service 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet fermentum nunc. Vivamus sit amet aliquet ex. Sed at magna id risus.</p>
+            </div>
+            <div class="service-item">
+              <img src="service-2.jpg" alt="Service 2">
+              <h2>Service 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet fermentum nunc. Vivamus sit amet aliquet ex. Sed at magna id risus.</p>
+            </div>
+            <div class="service-item">
+              <img src="service-3.jpg" alt="Service 3">
+              <h2>Service 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet fermentum nunc. Vivamus sit amet aliquet ex. Sed at magna id risus.</p>
+            </div>
+          </div>
+          
+
+
+
+
+
+
+    </body>
+</html>
