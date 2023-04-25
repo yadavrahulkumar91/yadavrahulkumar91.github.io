@@ -5,26 +5,105 @@ body {
 	padding: 0;
 }
 
-/* Header styles */
 header {
-	background-color: #0066CC;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background-color: #692323;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ /* border-bottom-left-radius: 50% 100%; */
+
+}
+
+
+header .logo {
+  float: left;
+  width: 110px;
+  height: 110px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top:10px;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+header .title {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+header .subtitle {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Optional: Add a little extra margin to the top of the page to prevent content from being hidden behind the fixed header */
+body {
+  margin-top: 80px;
+}
+
+
+
+/* Header styles */
+/*
+header {
+	background: linear-gradient(to right, #af8718, #FFA500);
 	color: #FFFFFF;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 20px;
+	padding: 10px;
 }
 
 .logo img {
-	height: 50px;
+	height: 150px;
 }
 
-.slogan h1 {
-	font-size: 36px;
-	margin: 0;
+.title {
+  font-size: 5em;
+  margin-bottom: 0em;
+  color: #333;
 }
+
+.subtitle {
+  font-size: 1.5em;
+  color: #666;
+}
+
+
+*/
 
 /* Main content styles */
+.container {
+  display: flex;
+  align-items: center;
+}
+.image-container {
+  flex: 1;
+  padding-right: 20px;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+.text-container {
+  flex: 2;
+}
+
+
 main {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -38,7 +117,7 @@ section {
 h2 {
 	font-size: 28px;
 	font-weight: bold;
-	margin: 0 0 20px;
+	margin: 0 0 0 px;
 }
 
 .feature {
@@ -77,7 +156,7 @@ h2 {
 .story h3 {
 	font-size: 20px;
 	font-weight: bold;
-	margin: 0 0 10px;
+	margin: 0 0 0px;
 }
 
 .story p {
@@ -112,13 +191,17 @@ footer {
 
 
 
+
 /* Mobile styles */
 @media (max-width: 767px) {
 
-    /* Header styles */
-    .logo img {
+  /* Header styles */
+ /*   .logo img {
       height: 40px;
+      width: 40px;
     }
+    */
+    
   
     .slogan h1 {
       font-size: 24px;
@@ -234,7 +317,7 @@ footer {
 
   /* Sector options section */
   .sector-options {
-    margin-top: 80px;
+    margin-top: 0px;
     text-align: center;
   }
   
@@ -255,7 +338,7 @@ footer {
     position: relative;
     z-index: 1;
     padding: 20px;
-    color: #fff;
+    color: #771a1a;
     text-decoration: none;
   }
   

@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Inverted book</title>
+        <style>
+                .book {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.page-1 {
+  z-index: 4;
+}
+
+.page-2 {
+  z-index: 3;
+  transform: rotateY(-180deg);
+}
+
+.page-3 {
+  z-index: 2;
+  transform: rotateY(-180deg);
+}
+
+.page-4 {
+  z-index: 1;
+}
+
+.page-2:before,
+.page-3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: white;
+  transform-origin: right;
+  transform: rotateY(-90deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-3:before {
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+
+.book:hover .page-1 {
+  transform: rotateY(180deg);
+}
+
+.book:hover .page-2 {
+  transform: rotateY(0deg);
+}
+
+.book:hover .page-3 {
+  transform: rotateY(0deg);
+}
+
+.book:hover .page-4 {
+  transform: rotateY(180deg);
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="book">
+            <div class="page page-1">
+              <h1>Page 1</h1>
+            </div>
+            <div class="page page-2">
+              <h1>Page 2</h1>
+            </div>
+            <div class="page page-3">
+              <h1>Page 3</h1>
+            </div>
+            <div class="page page-4">
+              <h1>Page 4</h1>
+            </div>
+        </div>
+          
+
+        <script>
+            const book = document.querySelector(".book");
+            const pages = document.querySelectorAll(".page");
+
+            let currentPage = 1;
+
+            book.addEventListener("click", function() {
+            if (currentPage < pages.length) {
+                currentPage++;
+                book.classList.remove(`page-${currentPage-1}`);
+                book.classList.add(`page-${currentPage}`);
+            } else {
+                currentPage = 1;
+                book.classList.remove(`page-${pages.length}`);
+                book.classList.add(`page-1`);
+            }
+            });cc
+
+
+        </script>
+
+    </body>
+</html>
