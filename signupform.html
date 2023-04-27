@@ -17,11 +17,10 @@
     </form>
 
     <!-- Include Firebase SDK -->
-    <!--<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
     <script>
-      import { initializeApp } from "firebase/app";
-      import { getAnalytics } from "firebase/analytics";
+  
       // Initialize Firebase app
       const firebaseConfig = {
         apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
@@ -51,7 +50,8 @@ const analytics = getAnalytics(app);
         const password = passwordField.value;
 
         // Create user with email and password
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+        //firebase.auth().createUserWithEmailAndPassword(email, password)
+        app.auth().createUserWithEmailAndPassword(email, password)
           .then((userCredential) => {
             // User signed up successfully
             const user = userCredential.user;
