@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Authentication - Sign In</title>
+  <!-- Include Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+  <!-- Set up Firebase -->
+  <script>
+    var firebaseConfig = {
+      // Replace with your own Firebase project config
+      apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
+  authDomain: "gamechanger-f5da7.firebaseapp.com",
+  databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
+  projectId: "gamechanger-f5da7",
+  storageBucket: "gamechanger-f5da7.appspot.com",
+  messagingSenderId: "358268649157",
+  appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
+  measurementId: "G-QBH1QYTY8V"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <h1>Sign In</h1>
+  <form>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" onclick="signIn()">Sign In</button>
+  </form>
+  <script>
+    // Sign in function
+    function signIn() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Signed in
+          var user = userCredential.user;
+          // Redirect to home page
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert("Error: " + errorMessage);
+        });
+    }
+  </script>
+</body>
+</html>
