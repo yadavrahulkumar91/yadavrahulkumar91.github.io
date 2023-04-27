@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes and Questions</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: row;
+			height: 100vh;
+		}
+		
+		.notes {
+			background-color: #f2f2f2;
+			flex: 1;
+			overflow: hidden;
+			position: relative;
+			transition: transform 0.3s ease-in-out;
+			transform: translateX(0%);
+		}
+		
+		.questions {
+			background-color: #f2f2f2;
+			flex: 1;
+			overflow: hidden;
+			position: relative;
+			transition: transform 0.3s ease-in-out;
+			transform: translateX(100%);
+		}
+		
+		.nav {
+			display: flex;
+			flex-direction: row;
+			background-color: #e6e6e6;
+			padding: 10px;
+		}
+		
+		.nav-item {
+			padding: 10px;
+			cursor: pointer;
+			font-weight: bold;
+			border-radius: 5px;
+			margin-right: 10px;
+			color: #555;
+			background-color: #f2f2f2;
+			transition: background-color 0.3s ease-in-out;
+		}
+		
+		.nav-item.active {
+			background-color: #ccc;
+		}
+		
+		.notes.active {
+			transform: translateX(0%);
+		}
+		
+		.questions.active {
+			transform: translateX(-100%);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="notes active">
+			<h1>Notes</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet posuere nibh. Fusce ut ullamcorper quam, sit amet eleifend nulla. Sed ultricies, dui vitae fringilla fringilla, est enim placerat ipsum, vel eleifend metus sapien vitae lectus. Sed sit amet ex non nisl facilisis pharetra. Nullam et quam eget ex venenatis ultricies. Sed pharetra enim ac leo dignissim, non iaculis massa bibendum. </p>
+		</div>
+		<div class="questions">
+			<h1>Questions</h1>
+			<ul>
+				<li>What is Lorem Ipsum?</li>
+				<li>Where does it come from?</li>
+				<li>Why do we use it?</li>
+			</ul>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="nav-item active" onclick="toggle('notes')">Notes</div>
+		<div class="nav-item" onclick="toggle('questions')">Questions</div>
+	</div>
+	
+	<script>
+		function toggle(container) {
+			const notes = document.querySelector('.notes');
+			const questions = document.querySelector('.questions');
+			const notesNavItem = document.querySelector('.nav-item:nth-child(1)');
+			const questionsNavItem = document.querySelector('.nav-item:nth-child(2)');
+			
+			if(container === 'notes') {
+				notes.classList.add('active');
+				questions.classList.remove('active');
+				notesNavItem.classList.add('active');
+			questionsNavItem.classList.remove('active');
+		} else {
+			questions.classList.add('active');
+			notes.classList.remove('active');
+			questionsNavItem.classList.add('active');
+			notesNavItem.classList.remove('active');
+		}
+	}
+</script>
+</body>
+</html>

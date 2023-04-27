@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Notes and Questions</title>
+    <style>
+      /* CSS for the container boxes */
+      .container {
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        padding: 20px;
+        height: 100vh;
+        overflow-y: auto;
+      }
+      
+      /* CSS for the active and inactive tabs */
+      .tab {
+        display: inline-block;
+        padding: 10px;
+        background-color: lightgray;
+        cursor: pointer;
+      }
+      .active-tab {
+        background-color: white;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Tabs for toggling the containers -->
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'notes')">Notes</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+    </div></center>
+    
+    <!-- Container for notes -->
+    <div id="notes-container" class="container">
+      <h2>Notes</h2>
+      <p>Some notes here...</p>
+      <p>aaaa
+        aaaa
+        sans-serif
+        sssssssss
+        aa
+        sans-serif
+        sssssssssaa
+        sans-serif
+        sssssssssaa
+        sans-serif
+        sssssssssaa
+        sans-serif
+        sssssssssaa
+        sans-serif
+        sssssssssaa
+        sans-serif
+        sssssssssaa
+        sans-serif
+        sssssssss
+      </p>
+    </div>
+    
+    <!-- Container for questions -->
+    <div id="questions-container" class="container" style="display:none">
+      <h2>Questions</h2>
+      <p>Some questions ddfdfd df dfasdfds sdfasdf sdfasdfsdf
+        sdfasdf dfasdfsdafsafsdfsdafsdf dsfasdf sdSome questions ddfdfd df dfasdfds sdfasdf sdfasdfsdf
+        sdfasdf dfasdfsdafsafsdfsdafsdf dsfasdf sdSome questions ddfdfd df dfasdfds sdfasdf sdfasdfsdf
+        sdfasdf dfasdfsdafsafsdfsdafsdf dsfasdf sdSome questions ddfdfd df dfasdfds sdfasdf sdfasdfsdf
+        sdfasdf dfasdfsdafsafsdfsdafsdf dsfasdf sdSome questions ddfdfd df dfasdfds sdfasdf sdfasdfsdf
+        sdfasdf dfasdfsdafsafsdfsdafsdf dsfasdf sd
+      </here></p>
+    </div>
+    
+    <!-- JavaScript for toggling the containers -->
+    <script>
+      function openContainer(evt, containerName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("container");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+        }
+        document.getElementById(containerName + "-container").style.display = "block";
+        evt.currentTarget.className += " active-tab";
+      }
+    </script>
+  </body>
+</html>

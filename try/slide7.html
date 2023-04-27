@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Notes and Questions</title>
+    <style>
+      /* CSS for the container boxes */
+      .container {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding: 20px;
+        height: 100vh;
+        overflow-y: auto;
+      }
+      
+      /* CSS for the active and inactive tabs */
+      .tab {
+        display: inline-block;
+        padding: 10px;
+        background-color: lightgray;
+        cursor: pointer;
+      }
+      .active-tab {
+        background-color: white;
+      }
+      
+      /* CSS for the slider on touch screens */
+      .slider {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background-color: lightgray;
+        transition: 0.5s;
+      }
+      .slide-notes {
+        left: 100%;
+      }
+      .slide-questions {
+        left: 100%;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Tabs for toggling the containers -->
+    <div>
+      <div class="tab active-tab" onclick="openContainer(event, 'notes')">Notes</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+    </div>
+    
+    <!-- Slider for touch screens -->
+    <div class="slider"></div>
+    
+    <!-- Container for notes -->
+    <div id="notes-container" class="container">
+      <h2>Notes</h2>
+      <p>Some notes here...</p>
+    </div>
+    
+    <!-- Container for questions -->
+    <div id="questions-container" class="container" style="display:none">
+      <h2>Questions</h2>
+      <p>Some questions here...</p>
+    </div>
+    
+    <!-- JavaScript for toggling the containers and sliding on touch screens -->
+    <script>
+      function openContainer(evt, containerName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("container");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+        }
+        document.getElementById(containerName + "-container").style.display = "block";
+        evt.currentTarget.className += " active-tab";
+        
+        // Slide the slider on touch screens
+        var slider = document.getElementsByClassName("slider")[0];
+        if (containerName === "notes") {
+          slider.classList.remove("slide-questions");
+          slider.classList.add("slide-notes");
+        } else {
+          slider.classList.remove("slide-notes");
+          slider.classList.add("slide-questions");
+        }
+      }
+      
+      // Slide the slider on touch screens
+      var startX;
+      var currentX;
+      var slider = document.getElementsByClassName("slider")[0];
+      slider.addEventListener("touchstart", touchStart);
+      slider.addEventListener("touchmove", touchMove);
+      
+      function touchStart(event) {
+        startX = event.touches[0].clientX;
+      }
+      
+      function touchMove(event) {
+        event.preventDefault();
+        currentX = event.touches[0].clientX;
+        var diffX = startX - currentX;
+        if (diffX < 0) {
+          slider.style.left = "0%";
+        } else if (diffX > 0) {
+          slider.style.left = "50%";
+        }
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+  </head>
+  <body>
+    <h1>Sign up</h1>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <button type="submit" id="signup-btn">Sign up</button>
+    </form>
+
+    <!-- Include Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script>
+      // Initialize Firebase app
+      const firebaseConfig = {
+        apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
+        authDomain: "gamechanger-f5da7.firebaseapp.com",
+        databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
+        projectId: "gamechanger-f5da7",
+        storageBucket: "gamechanger-f5da7.appspot.com",
+        messagingSenderId: "358268649157",
+        appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
+        measurementId: "G-QBH1QYTY8V"
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // Get form elements
+      const emailField = document.querySelector('#email');
+      const passwordField = document.querySelector('#password');
+      const signupBtn = document.querySelector('#signup-btn');
+
+      // Add sign up event listener
+      signupBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = emailField.value;
+        const password = passwordField.value;
+
+        // Create user with email and password
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            // User signed up successfully
+            const user = userCredential.user;
+            console.log(`User ${user.email} signed up successfully.`);
+            // You can redirect the user to a different page here
+          })
+          .catch((error) => {
+            // Handle errors
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error(`Error: ${errorCode} - ${errorMessage}`);
+          });
+      });
+    </script>
+  </body>
+</html>

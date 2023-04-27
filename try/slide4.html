@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes and Questions</title>
+	<meta charset="UTF-8">
+	<style>
+        .container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.left-column, .right-column {
+	flex: 1;
+	padding: 20px;
+	transition: transform 0.5s ease-in-out;
+}
+
+.left-column.show {
+	transform: translateX(0%);
+}
+
+.right-column.show {
+	transform: translateX(-100%);
+}
+
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="left-column">
+			<h2>Notes</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla consequat pharetra mi, at sagittis nulla ultricies a. Vestibulum nec leo sit amet velit fringilla congue vel vitae sapien. Donec id aliquet massa. Proin mattis nibh ut velit efficitur, non dapibus eros pharetra. Integer malesuada dolor risus, vel suscipit justo feugiat non.</p>
+		</div>
+		<div class="right-column">
+			<h2>Questions</h2>
+			<p>Curabitur ac justo vel sapien aliquam pulvinar. Vivamus tempus nibh non dolor tempor venenatis. Aliquam placerat mauris at mi accumsan euismod. Nam pretium tincidunt ex, a lacinia turpis bibendum eu. Integer tristique posuere sem, vel tincidunt eros laoreet eu. Fusce imperdiet lacus quis ligula dictum, vel molestie justo auctor.</p>
+			<p>Suspendisse potenti. Sed vestibulum, sapien vitae iaculis pretium, eros enim fringilla mi, eu bibendum lectus elit a tellus. Integer ut massa vitae justo sodales blandit. Donec ac magna malesuada, congue risus id, efficitur justo. Fusce rhoncus consequat nunc, in bibendum purus rutrum sed. Sed non ullamcorper est, a pharetra turpis. Suspendisse potenti.</p>
+		</div>
+	</div>
+
+	<button onclick="showNotes()">Show Notes</button>
+	<button onclick="showQuestions()">Show Questions</button>
+
+	<script>
+		function showNotes() {
+			var leftColumn = document.querySelector('.left-column');
+			var rightColumn = document.querySelector('.right-column');
+			leftColumn.classList.add('show');
+			rightColumn.classList.remove('show');
+		}
+
+		function showQuestions() {
+			var leftColumn = document.querySelector('.left-column');
+			var rightColumn = document.querySelector('.right-column');
+			leftColumn.classList.remove('show');
+			rightColumn.classList.add('show');
+		}
+	</script>
+</body>
+</html>

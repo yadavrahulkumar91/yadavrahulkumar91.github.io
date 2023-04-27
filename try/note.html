@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Notes Section</title>
+  </head>
+  <body>
+    <h1>My Notes Section</h1>
+    <form id="note-form">
+      <label for="note-title">Title:</label>
+      <input type="text" id="note-title" name="note-title">
+      <br>
+      <label for="note-content">Content:</label>
+      <textarea id="note-content" name="note-content"></textarea>
+      <br>
+      <button type="submit">Save Note</button>
+    </form>
+    <hr>
+    <h2>My Notes</h2>
+    <ul id="notes-list"></ul>
+    <hr>
+    <h2>Note Details</h2>
+    <div id="note-details">
+      <h3 id="note-title-display"></h3>
+      <p id="note-content-display"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script >
+        // This code assumes that you have an HTML form with an input for the note title and another input for the note content.
+
+// This function creates a new note.
+function createNote() {
+  var title = $("#note-title").val(); // Get the title from the input field.
+  var content = $("#note-content").val(); // Get the content from the input field.
+  var note = { // Create an object with the note's title and content.
+    title: title,
+    content: content
+  };
+  var notes = JSON.parse(localStorage.getItem("notes")) || []; // Get the current notes from local storage or create an empty array.
+  notes.push(note); // Add the new note to the array.
+  localStorage.setItem("notes", JSON.stringify(notes)); // Save the updated notes array to local storage.
+}
+
+// This function displays the list of notes.
+function displayNotes() {
+  var notes = JSON.parse(localStorage.getItem("notes")) || []; // Get the current notes from local storage or create an empty array.
+  var $notesList = $("#notes-list"); // Get the HTML element where the notes will be displayed.
+  $notesList.empty(); // Clear the list of any existing notes.
+  $.each(notes, function(index, note) { // Iterate over each note in the array.
+    var $noteItem = $("<li>").html(note.title); // Create an HTML element for the note title.
+    $noteItem.click(function() { // Add a click event listener to the note title.
+      displayNoteDetails(index); // Display the details for the selected note.
+    });
+    $notesList.append($noteItem); // Add the note title to the list.
+  });
+}
+
+// This function displays the details for a specific note.
+function displayNoteDetails(index) {
+  var notes = JSON.parse(localStorage.getItem("notes")) || []; // Get the current notes from local storage or create an empty array.
+  var note = notes[index]; // Get the note object at the specified index.
+  $("#note-title-display").html(note.title); // Display the note title.
+  $("#note-content-display").html(note.content); // Display the note content.
+}
+
+// Call the displayNotes function to initially display the list of notes.
+displayNotes();
+
+    </script>
+  </body>
+</html>
