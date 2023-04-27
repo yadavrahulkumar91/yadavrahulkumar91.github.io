@@ -17,9 +17,11 @@
     </form>
 
     <!-- Include Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>-->
     <script>
+      import { initializeApp } from "firebase/app";
+      import { getAnalytics } from "firebase/analytics";
       // Initialize Firebase app
       const firebaseConfig = {
         apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
@@ -31,7 +33,11 @@
         appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
         measurementId: "G-QBH1QYTY8V"
       };
-      firebase.initializeApp(firebaseConfig);
+
+      const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+    //  firebase.initializeApp(firebaseConfig);
 
       // Get form elements
       const emailField = document.querySelector('#email');
@@ -49,7 +55,8 @@
           .then((userCredential) => {
             // User signed up successfully
             const user = userCredential.user;
-            console.log(`User ${user.email} signed up successfully.`);
+           // console.log(`User ${user.email} signed up successfully.`);
+            window.location.href = "index.html";
             // You can redirect the user to a different page here
           })
           .catch((error) => {
