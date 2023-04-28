@@ -7,7 +7,7 @@ body {
 
 header {
   position: fixed;
-  overflow: hidden;
+  overflow: auto;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,6 +49,9 @@ header .subtitle {
   text-align: center;
   font-size: 16px;
   margin-top: 5px;
+}
+header .sign{
+  float: right;
 }
 
 /* Optional: Add a little extra margin to the top of the page to prevent content from being hidden behind the fixed header */
