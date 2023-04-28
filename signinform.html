@@ -39,25 +39,27 @@ const auth = firebase.auth();
 // Add sign in event listener
 const signinBtn = document.getElementById('signin-btn');
 signinBtn.addEventListener('click', (e) => {
-e.preventDefault();
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
-// Sign in with email and password
-auth.signInWithEmailAndPassword(email, password)
-.then((userCredential) => {
-// User signed in successfully
-const user = userCredential.user;
-console.log(User ${user.email} signed in successfully.);
-window.location.href = "index.html";
-// You can redirect the user to a different page here
-})
-.catch((error) => {
-// Handle errors
-const errorCode = error.code;
-const errorMessage = error.message;
-console.error(Error: ${errorCode} - ${errorMessage});
-});
+  // Sign in with email and password
+  auth.signInWithEmailAndPassword(email, password)
+
+  .then((userCredential) => {
+    // User signed in successfully
+    const user = userCredential.user;
+    console.log(`User ${user.email} signed in successfully.`);
+    window.location.href = "index.html";
+    // You can redirect the user to a different page here
+  })
+
+  .catch((error) => {
+    // Handle errors
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.error(`Error: ${errorCode} - ${errorMessage}`);
+  });
 });
 
 </script>
