@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical Universities in Nepal</title>
+	<style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.box {
+			width: 400px;
+			height: 400px;
+			background-color: #f9f9f9;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			padding: 20px;
+			margin-bottom: 50px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			transition: transform 0.2s ease-in-out;
+			cursor: pointer;
+		}
+		.box:hover {
+			transform: translateY(-5px);
+		}
+		.box img {
+			max-width: 100%;
+			height: auto;
+		}
+		.box h2 {
+			font-size: 30px;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Medical Universities in Nepal</h1>
+	<div class="container">
+		<div class="box" onclick="location.href='tu-iom.html';">
+			<img src="tu-iom.jpg" alt="Tribhuvan University - Institute of Medicine">
+			<h2>Tribhuvan University - Institute of Medicine</h2>
+		</div>
+		<div class="box" onclick="location.href='ku-sms.html';">
+			<img src="ku-sms.jpg" alt="Kathmandu University - School of Medical Sciences">
+			<h2>Kathmandu University - School of Medical Sciences</h2>
+		</div>
+		<div class="box" onclick="location.href='bpkihs.html';">
+			<img src="bpkihs.jpg" alt="B.P. Koirala Institute of Health Sciences">
+			<h2>B.P. Koirala Institute of Health Sciences</h2>
+		</div>
+		<div class="box" onclick="location.href='pahs.html';">
+			<img src="pahs.jpg" alt="Patan Academy of Health Sciences">
+			<h2>Patan Academy of Health Sciences</h2>
+		</div>
+		<div class="box" onclick="location.href='kahs.html';">
+			<img src="kahs.jpg" alt="Karnali Academy of Health Sciences">
+			<h2>Karnali Academy of Health Sciences</h2>
+		</div>
+	</div>
+</body>
+</html>

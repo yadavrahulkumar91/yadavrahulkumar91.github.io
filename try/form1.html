@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Physics Quiz</title>
+	<style>
+		/* Center the form on the page */
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+
+		/* Style the headings */
+		h2, h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		/* Style the questions */
+		p {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		/* Style the radio buttons and labels */
+		input[type="radio"] {
+			display: none;
+		}
+
+		label {
+			display: inline-block;
+			margin: 10px;
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		label:hover {
+			background-color: #f1f1f1;
+		}
+
+		input[type="radio"]:checked + label {
+			background-color: #6c63ff;
+			color: #fff;
+		}
+
+		/* Style the hint */
+		.hint {
+			display: none;
+			margin-top: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f1f1f1;
+		}
+
+		input[type="radio"]:checked + label + .hint {
+			display: block;
+		}
+
+		/* Style the correct answer */
+		.correct {
+			display: none;
+			margin-top: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #d4edda;
+			color: #155724;
+		}
+
+		input[type="radio"]:checked + label + .correct {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h2>Physics Quiz</h2>
+	<form>
+		<h3>Question 1</h3>
+		<p>1.e^2/(ϵ_o h) has dimension of:</p>
+		<label for="q1a">a. Time</label>
+		<input type="radio" id="q1a" name="q1">
+		<div class="hint">Hint: e is charge</div>
+		<div class="correct">Correct! The expression has dimensions of time.</div>
+
+		<label for="q1b">b. Length</label>
+		<input type="radio" id="q1b" name="q1">
+		<div class="hint">Hint: ϵ_o is the permittivity of free space</div>
+
+		<label for="q1c">c. Dimensionless</label>
+		<input type="radio" id="q1c" name="q1">
+		<div class="hint">Hint: The expression has dimensions.</div>
+
+		<label for="q1d">d. Mass</label>
+		<input type="radio" id="q1d" name="q1">
+		<div class="hint">Hint: h is Planck's constant</div>
+
+		<h3>Question 2</h3>
+        <p>2. Mercury is cooled to 4K, it behaves as:</p>
+		<label for="q2a">a. Semiconductor</label>
+		<input type="radio" id="q2a" name="q2">
+		<div class="hint">Hint: At 4K, the electrical conductivity of mercury increases significantly.</div>
+
+		<label for="q2b">b. Insulator</label>
+		<input type="radio" id="q2b" name="q2">
+		<div class="hint">Hint: At 4K, mercury is not an insulator.</div>
+		
+		<label for="q2c">c. Superconductor</label>
+		<input type="radio" id="q2c" name="q2">
+		<div class="hint">Hint: At 4K, mercury exhibits superconductivity.</div>
+
+		<label for="q2d">d. Conductor</label>
+		<input type="radio" id="q2d" name="q2">
+		<div class="hint">Hint: At 4K, the electrical conductivity of mercury is high, but it also exhibits other properties.</div>
+
+		<h3>Question 3</h3>
+		<p>3. A person is traveling at 4 m/s towards east. The rain is apparently falling vertically downwards with 3 m/s, then the actual velocity of rain is:</p>
+		<label for="q3a">a. 3/4 m/s</label>
+		<input type="radio" id="q3a" name="q3">
+		<div class="hint">Hint: Use vector addition to find the actual velocity of the rain.</div>
+
+		<label for="q3b">b. 5 m/s</label>
+		<input type="radio" id="q3b" name="q3">
+		<div class="hint">Hint: The actual velocity of the rain is not equal to the sum of the person's velocity and the rain's velocity.</div>
+		
+		<label for="q3c">c. 4/3 m/s</label>
+		<input type="radio" id="q3c" name="q3">
+		<div class="hint">Hint: Use vector addition to find the actual velocity of the rain.</div>
+
+		<label for="q3d">d. 7 m/s</label>
+		<input type="radio" id="q3d" name="q3">
+		<div class="hint">Hint: The actual velocity of the rain is not equal to the difference between the person's velocity and the rain's velocity.</div>
+
+		<h3>Question 4</h3>
+		<p>4. A cyclist turned over at 15 miles/hr. If doubled the speed of cycle then what is the chance of overturning?</p>
+		<label for="q4a">a. Doubled</label>
+		<input type="radio" id="q4a" name="q4">
+		<div class="hint">Hint: The chance of overturning is not proportional to the speed of the cycle.</div>
+
+		<label for="q4b">b. Halved</label>
+		<input type="radio" id="q4b" name="q4">
+		<div class="hint">Hint: The chance of overturning is not inversely proportional to the speed of the cycle.</div>
+		
+		<label for="q4c">c. Quadrupled</label>
+        </form>
+        
+
+        <script>
+            function checkAnswers() {
+  const answer1 = document.querySelector('input[name="q1"]:checked').value;
+  const answer2 = document.querySelector('input[name="q2"]:checked').value;
+  const answer3 = document.querySelector('input[name="q3"]:checked').value;
+  const answer4 = document.querySelector('input[name="q4"]:checked').value;
+  const answer5 = document.querySelector('input[name="q5"]:checked').value;
+  
+  let score = 0;
+  
+  if (answer1 === 'c') {
+    score++;
+  }
+  
+  if (answer2 === 'c') {
+    score++;
+  }
+  
+  if (answer3 === 'a') {
+    score++;
+  }
+  
+  if (answer4 === 'c') {
+    score++;
+  }
+  
+  if (answer5 === 'd') {
+    score++;
+  }
+  
+  const results = document.getElementById('results');
+  results.innerHTML = `You scored ${score} out of 5.`;
+  
+  const hint1 = document.getElementById('hint1');
+  if (answer1 === 'c') {
+    hint1.innerHTML = '';
+  } else {
+    hint1.innerHTML = 'Hint: Dimension of e^2/(ϵ_o h) is the reciprocal of the dimension of the speed of light squared.';
+  }
+  
+  const hint2 = document.getElementById('hint2');
+  if (answer2 === 'c') {
+    hint2.innerHTML = '';
+  } else {
+    hint2.innerHTML = 'Hint: What happens to the electrical resistance of a material when it is cooled to very low temperatures?';
+  }
+  
+  const hint3 = document.getElementById('hint3');
+  if (answer3 === 'a') {
+    hint3.innerHTML = '';
+  } else {
+    hint3.innerHTML = 'Hint: Use vector addition to find the actual velocity of the rain.';
+  }
+  
+  const hint4 = document.getElementById('hint4');
+  if (answer4 === 'c') {
+    hint4.innerHTML = '';
+  } else {
+    hint4.innerHTML = 'Hint: What is the relationship between the centrifugal force and the speed of an object in circular motion?';
+  }
+  
+  const hint5 = document.getElementById('hint5');
+  if (answer5 === 'd') {
+    hint5.innerHTML = '';
+  } else {
+    hint5.innerHTML = 'Hint: What is the relationship between the slopes of the P-V graphs of adiabatic and isothermal processes in an ideal gas?';
+  }
+}
+
+        </script>
+    </body>
+    </html>
+    
+

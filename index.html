@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>GameChanger - Change the game of your field</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
 
 	<script>
-			// Replace with your Firebase project configuration
-const firebaseConfig = {
-  
-  apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
-  authDomain: "gamechanger-f5da7.firebaseapp.com",
-  databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
-  projectId: "gamechanger-f5da7",
-  storageBucket: "gamechanger-f5da7.appspot.com",
-  messagingSenderId: "358268649157",
-  appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
-  measurementId: "G-QBH1QYTY8V"
-};
+		// Replace with your Firebase project configuration
+		const firebaseConfig = {
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+			apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
+			authDomain: "gamechanger-f5da7.firebaseapp.com",
+			databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
+			projectId: "gamechanger-f5da7",
+			storageBucket: "gamechanger-f5da7.appspot.com",
+			messagingSenderId: "358268649157",
+			appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
+			measurementId: "G-QBH1QYTY8V"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
 
 	</script>
 </head>
+
 <body>
 	<header>
 		<div class="logo">
 			<img src="GCround.png" alt="GameChanger logo" height="100%" width="100%">
 		</div>
 
-			<h1 class="title"><p style="font-size: 48px; font-weight: bold; color: #2E2E2E;">
-				Game<span style="font-weight: 900; color: #000;">Changer Institute  </span>
-			  </p></h1> 
-			<h4 class="subtitle">Your subtitle here</h4>
+		<h1 class="title">
+			<p style="font-size: 48px; font-weight: bold; color: #2E2E2E;">
+				Game<span style="font-weight: 900; color: #000;">Changer Institute </span>
+			</p>
+		</h1>
+		<h4 class="subtitle">Your subtitle here</h4>
 		<div class="sign">
 			<a href="signupform.html">Signup</a>
 			<a href="signinform.html">Signin</a>
@@ -46,206 +50,264 @@ firebase.initializeApp(firebaseConfig);
 		<a href="signinform.html">Signin</a>
 		<a href="try\Algae.html">algae</a>
 	</div>
-    <main>
-        <div class="container">
-          <!-- Sector options section -->
-          <section class="sector-options">
-            <h2>Choose Your Sector</h2>
-            <div class="row">
+	<main>
+		<div class="container">
+			<!-- Sector options section -->
+			<section class="sector-options">
+				<h2>Choose Your Sector</h2>
+				<div class="row">
 
 
-              <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="playgroup.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/playgroup.jpeg" alt="your-image-description">
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="playgroup.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/playgroup.jpeg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>Playgroup GameChanger</h2>
+										<p class="slogan">Learning made fun!</p>
+										<p class="description">Our playgroup program is designed to make learning fun
+											and engaging for young children. We focus on building a strong foundation
+											for learning while also helping children develop their social skills and
+											confidence.</p>
+									</div>
+								</div>
+							</a>
 						</div>
-						<div class="text-container">
-							<h2>Playgroup GameChanger</h2>
-							<p class="slogan">Learning made fun!</p>
-							<p class="description">Our playgroup program is designed to make learning fun and engaging for young children. We focus on building a strong foundation for learning while also helping children develop their social skills and confidence.</p>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="kindergarten.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/kindergarten.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>Kindergarten GameChanger</h2>
+										<p class="slogan">Preparing your child for the future</p>
+										<p class="description">Our kindergarten program is designed to prepare your
+											child for success in primary school and beyond. We focus on building a
+											strong foundation in language, math, and social skills, while also fostering
+											creativity and curiosity.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="primary-schooling.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/primaryschooling.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>Primary schooling - Class 1 to 5 GameChanger</h2>
+										<p class="slogan">Empowering young minds</p>
+										<p class="description">Our primary schooling program is designed to empower
+											young minds and help them develop a love for learning. We focus on building
+											a strong foundation in all subjects, while also encouraging critical
+											thinking and creativity.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="upper-primary-schooling.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/upperprimaryschooling.jpeg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>Upper primary schooling - Class 6 to 8 GameChanger</h2>
+										<p class="slogan">Preparing for success</p>
+										<p class="description">Our upper primary schooling program is designed to
+											prepare students for success in secondary school and beyond. We focus on
+											building a strong foundation in all subjects, while also providing
+											opportunities for students to explore their interests and passions.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="secondary-schooling.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/secondaryschooling.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>Secondary schooling - Class 9 and 10 GameChanger</h2>
+										<p class="slogan">Achieving excellence</p>
+										<p class="description">Our secondary schooling program is designed to help
+											students achieve excellence and prepare for higher education. We focus on
+											building a strong foundation in all subjects, while also providing
+											opportunities for students to develop their leadership skills and pursue
+											their interests.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="management-entrance.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/+2managemententrance.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>+2 Management Entrance GameChanger</h2>
+										<p class="slogan">Opening doors to success</p>
+										<p class="description">Our +2 management entrance program is designed to help
+											students excel in their management career. With experienced teachers and
+											comprehensive study materials, we provide students with the knowledge and
+											skills required to crack management entrance exams and succeed in their
+											professional life.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="st-xaviers-entrance.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/stxaviersentrance.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>St. Xavier's Entrance GameChanger</h2>
+										<p class="slogan">Unlock your potential</p>
+										<p class="description">Our St. Xavier's entrance program is designed to help
+											students get admission in St. Xavier's College, one of the most prestigious
+											colleges in the country. With expert guidance and study materials, we help
+											students prepare for the entrance exams and achieve their dream of studying
+											in St. Xavier's College.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="neb.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/neb.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>NEB GameChanger</h2>
+										<p class="slogan">Empowering students for success</p>
+										<p class="description">Our NEB program is designed to help students excel in
+											their Class 11 and 12 studies. With experienced teachers and comprehensive
+											study materials, we provide students with the knowledge and skills required
+											to score high in their NEB exams and prepare for their future academic and
+											professional careers.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="ioe-entrance.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/ioe.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>IOE Entrance preparation GameChanger</h2>
+										<p class="slogan">Achieve your engineering dreams</p>
+										<p class="description">Our IOE entrance preparation program is designed to help
+											students prepare for the entrance exams of the Institute of Engineering, one
+											of the top engineering colleges in Nepal. With expert guidance and study
+											materials, we help students crack the entrance exams and achieve their dream
+											of studying engineering at IOE.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="cee-medical.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/mecmedical.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>CEE Medical GameChanger</h2>
+										<p class="slogan">Shape your medical career</p>
+										<p class="description">Our CEE medical program is designed to help students
+											prepare for the Common Entrance Examination for medical courses. With
+											experienced teachers and comprehensive study materials, we provide students
+											with the knowledge and skills required to crack the CEE exams and succeed in
+											their medical career.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+
+					<div class="col-md-4">
+						<div class="sector-option">
+							<a href="cee-paramedical.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/mecmedical.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>CEE Paramedical GameChanger</h2>
+										<p class="slogan">Pave the way for your paramedical career</p>
+										<p class="description">Our CEE paramedical program is designed to help students
+											prepare for the Common Entrance Examination for paramedical courses. With
+											expert guidance and study materials, we help students crack the CEE exams
+											and achieve their dream of pursuing a career in the paramedical field.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="sector-option">
+						  <a href="mbbs-courses.html">
+							<div class="container">
+							  <div class="image-container">
+								<img src="MBBS.jpg" alt="MBBS courses">
+							  </div>
+							  <div class="text-container">
+								<h2>MBBS GameChanger</h2>
+								<p class="slogan">Ace your MBBS exams with our expert guidance</p>
+								<p class="description">Our MBBS GameChanger program is designed to help students excel in their MBBS courses across all universities in Nepal. With experienced teachers and comprehensive study materials, we provide students with the tools they need to succeed in their studies and achieve their dreams of becoming a doctor.</p>
+							  </div>
+							</div>
+						  </a>
 						</div>
 					  </div>
-                  </a>
-    	     </div>
-         </div>
+					  
 
-              <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="kindergarten.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/kindergarten.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>Kindergarten GameChanger</h2>
-							<p class="slogan">Preparing your child for the future</p>
-							<p class="description">Our kindergarten program is designed to prepare your child for success in primary school and beyond. We focus on building a strong foundation in language, math, and social skills, while also fostering creativity and curiosity.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="primary-schooling.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/primaryschooling.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>Primary schooling - Class 1 to 5 GameChanger</h2>
-							<p class="slogan">Empowering young minds</p>
-							<p class="description">Our primary schooling program is designed to empower young minds and help them develop a love for learning. We focus on building a strong foundation in all subjects, while also encouraging critical thinking and creativity.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="upper-primary-schooling.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/upperprimaryschooling.jpeg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>Upper primary schooling - Class 6 to 8 GameChanger</h2>
-							<p class="slogan">Preparing for success</p>
-							<p class="description">Our upper primary schooling program is designed to prepare students for success in secondary school and beyond. We focus on building a strong foundation in all subjects, while also providing opportunities for students to explore their interests and passions.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="secondary-schooling.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/secondaryschooling.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>Secondary schooling - Class 9 and 10 GameChanger</h2>
-							<p class="slogan">Achieving excellence</p>
-							<p class="description">Our secondary schooling program is designed to help students achieve excellence and prepare for higher education. We focus on building a strong foundation in all subjects, while also providing opportunities for students to develop their leadership skills and pursue their interests.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="management-entrance.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/+2managemententrance.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>+2 Management Entrance GameChanger</h2>
-							<p class="slogan">Opening doors to success</p>
-							<p class="description">Our +2 management entrance program is designed to help students excel in their management career. With experienced teachers and comprehensive study materials, we provide students with the knowledge and skills required to crack management entrance exams and succeed in their professional life.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="st-xaviers-entrance.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/stxaviersentrance.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>St. Xavier's Entrance GameChanger</h2>
-							<p class="slogan">Unlock your potential</p>
-							<p class="description">Our St. Xavier's entrance program is designed to help students get admission in St. Xavier's College, one of the most prestigious colleges in the country. With expert guidance and study materials, we help students prepare for the entrance exams and achieve their dream of studying in St. Xavier's College.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="neb.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/neb.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>NEB GameChanger</h2>
-							<p class="slogan">Empowering students for success</p>
-							<p class="description">Our NEB program is designed to help students excel in their Class 11 and 12 studies. With experienced teachers and comprehensive study materials, we provide students with the knowledge and skills required to score high in their NEB exams and prepare for their future academic and professional careers.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="ioe-entrance.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/ioe.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>IOE Entrance preparation GameChanger</h2>
-							<p class="slogan">Achieve your engineering dreams</p>
-							<p class="description">Our IOE entrance preparation program is designed to help students prepare for the entrance exams of the Institute of Engineering, one of the top engineering colleges in Nepal. With expert guidance and study materials, we help students crack the entrance exams and achieve their dream of studying engineering at IOE.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-
-			  <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="cee-medical.html">
-					<div class="container">
-						<div class="image-container">
-						  <img src="image/mecmedical.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>CEE Medical GameChanger</h2>
-							<p class="slogan">Shape your medical career</p>
-							<p class="description">Our CEE medical program is designed to help students prepare for the Common Entrance Examination for medical courses. With experienced teachers and comprehensive study materials, we provide students with the knowledge and skills required to crack the CEE exams and succeed in their medical career.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-
-
-              <div class="col-md-4">
-                <div class="sector-option">
-                  <a href="cee-paramedical.html">
-                    <div class="container">
-						<div class="image-container">
-						  <img src="image/mecmedical.jpg" alt="your-image-description">
-						</div>
-						<div class="text-container">
-							<h2>CEE Paramedical GameChanger</h2>
-							<p class="slogan">Pave the way for your paramedical career</p>
-							<p class="description">Our CEE paramedical program is designed to help students prepare for the Common Entrance Examination for paramedical courses. With expert guidance and study materials, we help students crack the CEE exams and achieve their dream of pursuing a career in the paramedical field.</p>
-						</div>
-					  </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </main>
+				</div>
+			</section>
+		</div>
+	</main>
 
 
 
@@ -312,12 +374,13 @@ firebase.initializeApp(firebaseConfig);
 	<footer>
 		<p>&copy; 2023 GameChanger</p>
 		<script>
-            fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        });
-        </script>
+			fetch('footer.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('footer-container').innerHTML = data;
+				});
+		</script>
 	</footer>
 </body>
+
 </html>

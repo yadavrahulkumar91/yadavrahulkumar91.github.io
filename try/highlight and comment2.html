@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlight and Comment Text</title>
+	<style>
+		.highlight {
+			background-color: yellow;
+			cursor: pointer;
+		}
+		.comment {
+			position: relative;
+		}
+		.comment .tooltip {
+			position: absolute;
+			top: -30px;
+			left: 0;
+			display: none;
+			padding: 5px;
+			background-color: white;
+			border: 1px solid black;
+			box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+		}
+		.comment:hover .tooltip {
+			display: block;
+		}
+		.comment .tooltip textarea {
+			display: block;
+			width: 100%;
+			resize: none;
+			border: none;
+			background-color: transparent;
+			margin-bottom: 5px;
+		}
+		.comment .tooltip button {
+			display: block;
+			margin-top: 5px;
+		}
+	</style>
+	<script>
+		function highlightAndComment() {
+			var selection = window.getSelection();
+			var range = selection.getRangeAt(0);
+			var selectedText = range.toString();
+			if (selectedText.length > 0) {
+				var span = document.createElement("span");
+				span.classList.add("highlight");
+				span.appendChild(range.extractContents());
+				range.insertNode(span);
+				var tooltip = document.createElement("div");
+				tooltip.classList.add("tooltip");
+				tooltip.innerHTML = '<textarea placeholder="Add a comment"></textarea><button onclick="saveComment(this)">Save</button>';
+				span.classList.add("comment");
+				span.appendChild(tooltip);
+			}
+		}
+		
+		function saveComment(button) {
+			var commentText = button.parentNode.querySelector("textarea").value;
+			button.parentNode.innerHTML = commentText + ' <a href="#" onclick="editComment(this)">Edit</a>';
+		}
+		
+		function retrieveHighlightedText() {
+			var highlightedText = localStorage.getItem("highlighted_text");
+			if (highlightedText !== null) {
+				document.getElementById("text").innerHTML = highlightedText;
+			}
+		}
+		
+		function save() {
+			var highlightedText = document.getElementById("text").innerHTML;
+			localStorage.setItem("highlighted_text", highlightedText);
+		}
+		
+		function editComment(link) {
+			var tooltip = link.parentNode;
+			var commentText = tooltip.textContent.trim();
+			var textarea = document.createElement("textarea");
+			textarea.value = commentText;
+			textarea.placeholder = "Add a comment";
+			tooltip.insertBefore(textarea, link);
+			tooltip.removeChild(link);
+			textarea.focus();
+			textarea.addEventListener("blur", function() {
+				var newCommentText = textarea.value;
+				var button = tooltip.querySelector("button");
+				button.parentNode.innerHTML = newCommentText + ' <a href="#" onclick="editComment(this)">Edit</a>';
+			});
+		}
+	</script>
+</head>
+<body onload="retrieveHighlightedText()">
+	<p>Select some text in this paragraph to highlight it and add a comment:</p>
+	<p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit
+    </p>
+	<button onclick="save()">Save</button>
+	<script>
+		document.addEventListener("mouseup", highlightAndComment);
+	</script>
+</body>
+</html>
