@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phonics and Sound Recognition Lesson</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.lesson {
+			margin: 50px 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+		.lesson p {
+			margin: 10px 0;
+			line-height: 1.5;
+			font-size: 16px;
+			color: #333;
+		}
+		.letter {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			border: 2px solid #ccc;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+			cursor: pointer;
+		}
+		.selected {
+			border: 5px solid #333;
+		}
+	</style>
+</head>
+<body>
+	<h1>Phonics and Sound Recognition Lesson</h1>
+	<div class="lesson">
+		 <p>Welcome to our phonics and sound recognition lesson! Today we will be learning about different sounds that letters make.</p>
+		 <p>Let's start with some basic letters:</p>
+		 <div class="letter">A</div>
+		 <div class="letter">B</div>
+		 <div class="letter">C</div>
+		 <div class="letter">D</div>
+		 <div class="letter">E</div>
+		 <div class="letter">F</div>
+		 <div class="letter">G</div>
+		 <div class="letter">H</div>
+		 <div class="letter">I</div>
+		 <div class="letter">J</div>
+		<p>These are some common letters that we see around us. Can you name any other letters?</p>
+		 <p>Now, let's play a game! We're going to listen to the sound that each letter makes. Click on a letter to select it, and then click on the speaker button to listen to its sound.</p>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <div class="letter"></div>
+		 <button id="sound-button">Listen to Sound</button>
+	</div>
+	<script>
+		var selectedLetter = null;
+		var letters = document.querySelectorAll(".letter");
+		for (var i = 0; i < letters.length; i++) {
+			letters[i].addEventListener("click", function() {
+				if (selectedLetter) {
+					selectedLetter.classList.remove("selected");
+				}
+				this.classList.add("selected");
+				selectedLetter = this;
+			});
+		}
+		var soundButton = document.getElementById("sound-button");
+		soundButton.addEventListener("click", function() {
+			if (selectedLetter) {
+				var letter = selectedLetter.textContent;
+                var audio = new Audio(letter + ".mp3");
+
+audio.play();
+}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counting Objects - Playgroup</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #ffd700;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 3em;
+			margin-bottom: 20px;
+		}
+
+		h1 {
+			color: #ffd700;
+			font-size: 2em;
+			margin-bottom: 10px;
+		}
+
+		.container {
+			margin: 20px auto;
+			max-width: 800px;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+
+		.object {
+			display: inline-block;
+			margin: 10px;
+			width: 150px;
+			height: 150px;
+			background-color: #fff;
+			border: 2px solid #333;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 3em;
+			font-weight: bold;
+			line-height: 150px;
+			color: #333;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.object:hover {
+			background-color: #ffd700;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		Counting Objects
+	</header>
+	<div class="container">
+		<h1>Click on the objects to count them!</h1>
+		<div>
+			<div class="object" data-count="1">1</div>
+			<div class="object" data-count="2">2</div>
+			<div class="object" data-count="3">3</div>
+			<div class="object" data-count="4">4</div>
+			<div class="object" data-count="5">5</div>
+			<div class="object" data-count="6">6</div>
+			<div class="object" data-count="7">7</div>
+			<div class="object" data-count="8">8</div>
+			<div class="object" data-count="9">9</div>
+			<div class="object" data-count="10">10</div>
+		</div>
+	</div>
+	<audio id="audio">
+		<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+	</audio>
+	<script>
+		let objects = document.querySelectorAll('.object');
+		let audio = document.getElementById('audio');
+
+		objects.forEach((object) => {
+			object.addEventListener('click', () => {
+				let count = object.getAttribute('data-count');
+				audio.currentTime = 0;
+				audio.play();
+				alert(`You clicked on ${count} objects!`);
+			});
+		});
+	</script>
+</body>
+</html>

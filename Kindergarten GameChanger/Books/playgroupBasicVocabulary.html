@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Vocabulary Lesson</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.lesson {
+			margin: 50px 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+		.lesson p {
+			margin: 10px 0;
+			line-height: 1.5;
+			font-size: 16px;
+			color: #333;
+		}
+		.word {
+			display: inline-block;
+			margin: 10px;
+			padding: 10px;
+			background-color: #ccc;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px #999;
+			font-size: 24px;
+			cursor: pointer;
+		}
+		.selected {
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Basic Vocabulary Lesson</h1>
+	<div class="lesson">
+		 <p>Welcome to our basic vocabulary lesson! Today we will be learning some new words.</p>
+		 <p>Let's start with some easy words:</p>
+		 <div class="word">cat</div>
+		 <div class="word">dog</div>
+		 <div class="word">book</div>
+		 <div class="word">house</div>
+		 <div class="word">tree</div>
+		 <div class="word">car</div>
+		 <div class="word">flower</div>
+		 <div class="word">sun</div>
+		 <div class="word">moon</div>
+		 <div class="word">bird</div>
+		<p>These are some common words that we use in our daily life. Can you think of any other words?</p>
+		 <p>Now, let's play a game! We're going to listen to the pronunciation of each word. Click on a word to select it, and then click on the speaker button to listen to its pronunciation.</p>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <div class="word"></div>
+		 <button id="pronunciation-button">Listen to Pronunciation</button>
+	</div>
+	<script>
+		var selectedWord = null;
+		var words = document.querySelectorAll(".word");
+		for (var i = 0; i < words.length; i++) {
+			words[i].addEventListener("click", function() {
+				if (selectedWord) {
+					selectedWord.classList.remove("selected");
+				}
+				this.classList.add("selected");
+				selectedWord = this;
+			});
+		}
+		var pronunciationButton = document.getElementById("pronunciation-button");
+		pronunciationButton.addEventListener("click", function() {
+			if (selectedWord) {
+				var word = selectedWord.textContent;
+				var audio = new Audio(word + ".mp3");
+                audio.play();
+		}
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating Patterns Lesson</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.lesson {
+			margin: 50px 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+		.lesson p {
+			margin: 10px 0;
+			line-height: 1.5;
+			font-size: 16px;
+			color: #333;
+		}
+		.pattern {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			box-shadow: 0px 0px 5px #ccc;
+			cursor: pointer;
+		}
+		.pattern.red {
+			background-color: #f00;
+		}
+		.pattern.green {
+			background-color: #0f0;
+		}
+		.pattern.blue {
+			background-color: #00f;
+		}
+		.pattern.yellow {
+			background-color: #ff0;
+		}
+		.pattern.purple {
+			background-color: #f0f;
+		}
+		.selected {
+			border: 5px solid #333;
+		}
+	</style>
+</head>
+<body>
+	<h1>Creating Patterns Lesson</h1>
+	<div class="lesson">
+		 <p>Welcome to our creating patterns lesson! Today we will be learning about different colors and creating patterns with them.</p>
+		 <p>Let's start with some basic colors:</p>
+		 <div class="pattern red"></div>
+		 <div class="pattern green"></div>
+		 <div class="pattern blue"></div>
+		 <div class="pattern yellow"></div>
+		 <div class="pattern purple"></div>
+		 <p>These are some common colors that we see around us. Can you name any other colors?</p>
+		 <p>Now, let's play a game! We're going to create patterns using these colors. Click on a color to select it, and then click on the squares to create your pattern.</p>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+		 <div class="pattern"></div>
+	</div>
+	<script>
+		var selectedColor = null;
+		var patterns = document.querySelectorAll(".pattern");
+		for (var i = 0; i < patterns.length; i++) {
+			patterns[i].addEventListener("click", function() {
+				if (selectedColor) {
+					this.classList.remove(selectedColor);
+				}
+				this.classList.add(selectedColor);
+			});
+		}
+		var colors = document.querySelectorAll(".pattern");
+		for (var i = 0; i < colors.length; i++) {
+			colors[i].addEventListener("click", function() {
+				if (selectedColor) {
+					selectedColor.classList.remove("selected");
+				}
+				selectedColor = this.classList;
+                selectedColor.add("selected");
+		});
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comparing Numbers for Playgroup</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		label {
+			font-size: 24px;
+			margin-right: 10px;
+		}
+
+		input[type="number"] {
+			font-size: 24px;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+			max-width: 150px;
+			margin-bottom: 10px;
+		}
+
+		button[type="submit"] {
+			font-size: 24px;
+			padding: 5px 10px;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+
+		.result {
+			font-size: 24px;
+			margin-top: 20px;
+		}
+
+		.error {
+			color: #f00;
+			font-size: 18px;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Comparing Numbers for Playgroup</h1>
+		<form>
+			<label>Enter first number:</label>
+			<input type="number" name="number1" required>
+			<label>Enter second number:</label>
+			<input type="number" name="number2" required>
+			<button type="submit">Compare</button>
+		</form>
+		<div class="result">
+			<!-- Result will be displayed here -->
+		</div>
+		<div class="error">
+			<!-- Error message will be displayed here -->
+		</div>
+	</div>
+	<script>
+		var form = document.querySelector('form');
+		var result = document.querySelector('.result');
+		var error = document.querySelector('.error');
+
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+
+			// Get the input values
+			var number1 = parseInt(form.querySelector('input[name="number1"]').value);
+			var number2 = parseInt(form.querySelector('input[name="number2"]').value);
+
+			// Check if the inputs are valid numbers
+			if (isNaN(number1) || isNaN(number2)) {
+				error.textContent = 'Please enter valid numbers';
+				result.textContent = '';
+				return;
+			}
+
+			// Compare the numbers
+			if (number1 > number2) {
+				result.textContent = number1 + ' is greater than ' + number2;
+			} else if (number1 < number2) {
+				result.textContent = number1 + ' is less than ' + number2;
+			} else {
+				result.textContent = number1 + ' is equal to ' + number2;
+			}
+
+			error.textContent = '';
+		});
+	</script>
+</body>
+</html>

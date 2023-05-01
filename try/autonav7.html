@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Auto Navigation Bar</title>
+    <style>
+      /* Style the navbar */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        z-index: 9999;
+      }
+      
+      /* Style the navigation links */
+      #navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      #navbar ul li {
+        margin: 0 10px;
+      }
+      
+      #navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      /* Style the active link */
+      #navbar ul li a.active {
+        font-weight: bold;
+      }
+
+      /* Style the dropdown menu */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        display: none;
+      }
+
+      .dropdown ul li {
+        margin: 0;
+      }
+
+      .dropdown ul li a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown.open ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Auto Navigation Bar</h1>
+      <nav id="navbar"></nav>
+    </header>
+    <main>
+      <h1>Section 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium dapibus est, in elementum orci. Proin nec elit id elit porttitor congue a a nisi. Fusce vel faucibus enim, id malesuada massa. Donec euismod nulla ante, ut ultrices orci hendrerit ut. Nullam ut nisi mauris. Sed eget eleifend orci. Pellentesque a ipsum purus.</p>
+      <h2>Subsection 1.1</h2>
+      <p>Phasellus scelerisque ante et velit ultrices, quis bibendum magna sollicitudin. Curabitur mollis pharetra ipsum in blandit. Vivamus vel quam eu mauris accumsan auctor. In viverra leo non arcu malesuada venenatis. Fusce nec eros eget ex fringilla laoreet ut quis nibh. Donec semper, nibh ut bibendum lacinia, sapien metus lacinia elit, ut faucibus felis enim eget mauris.</p>
+      <h2>Subsection 1.2</h2>
+      <p>Nunc elementum metus eget justo sagittis congue. Sed dignissim efficitur nulla, vitae malesuada justo facilisis vel. Suspendisse potenti. Etiam nec risus felis. Proin tempor, ex eu malesuada interdum, risus tell
+</p>
+</main>
+<script>
+
+const navList = document.createElement('ul');
+navList.innerHTML = `
+  <li><a class="active" href="#section-1">Section 1</a></li>
+  <li class="dropdown">
+    <a href="#">Section 2</a>
+    <ul>
+      <li><a href="#subsection-2-1">Subsection 2.1</a></li>
+      <li><a href="#subsection-2-2">Subsection 2.2</a></li>
+    </ul>
+  </li>
+`;
+
+
+    // Add the nav list to the navbar
+const navbar = document.getElementById('navbar');
+navbar.appendChild(navList);
+
+// Add an active class to the current link
+const links = navbar.getElementsByTagName('a');
+for (let i = 0; i < links.length; i++) {
+const link = links[i];
+link.addEventListener('click', function() {
+const current = document.getElementsByClassName('active');
+if (current.length > 0) {
+current[0].classList.remove('active');
+}
+this.classList.add('active');
+});
+}
+
+// Highlight the correct link when scrolling
+window.addEventListener('scroll', function() {
+const currentScroll = window.pageYOffset;
+const sections = document.getElementsByTagName('section');
+for (let i = 0; i < sections.length; i++) {
+const section = sections[i];
+const sectionTop = section.offsetTop - navbar.offsetHeight;
+const id = section.getAttribute('id');
+const link = navbar.querySelector(a[href="#${id}"]);
+if (currentScroll >= sectionTop && currentScroll < sectionTop + section.offsetHeight) {
+link.classList.add('active');
+} else {
+link.classList.remove('active');
+}
+}
+});
+
+
+</script>
+  </body>
+</html>

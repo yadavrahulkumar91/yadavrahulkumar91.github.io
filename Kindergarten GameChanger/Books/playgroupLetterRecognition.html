@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Letter Recognition Activity</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.activity {
+			margin: 50px auto;
+			width: 500px;
+			height: 500px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: #ddd;
+			border-radius: 10px;
+			box-shadow: 0px 0px 5px #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 60px;
+			cursor: pointer;
+			margin: 10px;
+		}
+		.box.selected {
+			background-color: #0f0;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box">A</div>
+		<div class="box">B</div>
+		<div class="box">C</div>
+		<div class="box">D</div>
+		<div class="box">E</div>
+		<div class="box">F</div>
+		<div class="box">G</div>
+		<div class="box">H</div>
+		<div class="box">I</div>
+		<div class="box">J</div>
+		<div class="box">K</div>
+		<div class="box">L</div>
+		<div class="box">M</div>
+		<div class="box">N</div>
+		<div class="box">O</div>
+		<div class="box">P</div>
+		<div class="box">Q</div>
+		<div class="box">R</div>
+		<div class="box">S</div>
+		<div class="box">T</div>
+		<div class="box">U</div>
+		<div class="box">V</div>
+		<div class="box">W</div>
+		<div class="box">X</div>
+		<div class="box">Y</div>
+		<div class="box">Z</div>
+	</div>
+	<script>
+		var boxes = document.querySelectorAll(".box");
+		var selectedBox = null;
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].addEventListener("click", function() {
+				if (selectedBox) {
+					selectedBox.classList.remove("selected");
+				}
+				selectedBox = this;
+				this.classList.add("selected");
+			});
+		}
+	</script>
+</body>
+</html>

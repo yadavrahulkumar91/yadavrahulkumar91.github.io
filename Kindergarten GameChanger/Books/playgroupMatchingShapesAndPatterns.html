@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matching Shapes and Colors Lesson</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.lesson {
+			margin: 50px 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+		.lesson p {
+			margin: 10px 0;
+			line-height: 1.5;
+			font-size: 16px;
+			color: #333;
+		}
+		.shape {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 5px #ccc;
+			cursor: pointer;
+		}
+		.shape.circle {
+			background-color: #f00;
+		}
+		.shape.square {
+			background-color: #0f0;
+		}
+		.shape.triangle {
+			background-color: #00f;
+		}
+		.shape.heart {
+			background-color: #ff0;
+		}
+		.shape.star {
+			background-color: #f0f;
+		}
+		.selected {
+			border: 5px solid #333;
+		}
+	</style>
+</head>
+<body>
+	<h1>Matching Shapes and Colors Lesson</h1>
+	<div class="lesson">
+		 <p>Welcome to our matching shapes and colors lesson! Today we will be learning about different shapes and colors.</p>
+		 <p>Let's start with some basic shapes:</p>
+		 <div class="shape circle"></div>
+		 <div class="shape square"></div>
+		 <div class="shape triangle"></div>
+		 <div class="shape heart"></div>
+		 <div class="shape star"></div>
+		 <p>These are some common shapes that we see around us. Can you name any other shapes?</p>
+		 <p>Now, let's play a game! We're going to match the shapes with their corresponding colors. Click on a shape to select it, and then click on its matching color.</p>
+		 <div class="shape circle"></div>
+		 <div class="shape square"></div>
+		 <div class="shape triangle"></div>
+		 <div class="shape heart"></div>
+		 <div class="shape star"></div>
+		 <div class="color red"></div>
+		 <div class="color green"></div>
+		 <div class="color blue"></div>
+		 <div class="color yellow"></div>
+		 <div class="color purple"></div>
+	</div>
+	<script>
+			var selectedShape = null;
+	var shapes = document.querySelectorAll(".shape");
+	var colors = document.querySelectorAll(".color");
+	for (var i = 0; i < shapes.length; i++) {
+		shapes[i].addEventListener("click", function() {
+			if (selectedShape) {
+				selectedShape.classList.remove("selected");
+			}
+			selectedShape = this;
+			this.classList.add("selected");
+		});
+	}
+	for (var i = 0; i < colors.length; i++) {
+		colors[i].addEventListener("click", function() {
+			if (
+				selectedShape &&
+				selectedShape.style.backgroundColor === this.style.backgroundColor
+			) {
+				console.log("You matched the shape and color!");
+			} else {
+				console.log("Sorry, that's not a match. Try again!");
+			}
+		});
+	}
+    </script>
+    </body>
+    </html>

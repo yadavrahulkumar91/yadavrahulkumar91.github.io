@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Auto Navigation Bar</title>
+    <style>
+      /* Style the navbar */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        z-index: 9999;
+      }
+      
+      /* Style the navigation links */
+      #navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      #navbar ul li {
+        margin: 0 10px;
+      }
+      
+      #navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      /* Style the active link */
+      #navbar ul li a.active {
+        font-weight: bold;
+      }
+
+      /* Style the dropdown menu */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        display: none;
+      }
+
+      .dropdown ul li {
+        margin: 0;
+      }
+
+      .dropdown ul li a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown.open ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Auto Navigation Bar</h1>
+      <nav id="navbar"></nav>
+    </header>
+    <main>
+      <h1>Section 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium dapibus est, in elementum orci. Proin nec elit id elit porttitor congue a a nisi. Fusce vel faucibus enim, id malesuada massa. Donec euismod nulla ante, ut ultrices orci hendrerit ut. Nullam ut nisi mauris. Sed eget eleifend orci. Pellentesque a ipsum purus.</p>
+      <h2>Subsection 1.1</h2>
+      <p>Phasellus scelerisque ante et velit ultrices, quis bibendum magna sollicitudin. Curabitur mollis pharetra ipsum in blandit. Vivamus vel quam eu mauris accumsan auctor. In viverra leo non arcu malesuada venenatis. Fusce nec eros eget ex fringilla laoreet ut quis nibh. Donec semper, nibh ut bibendum lacinia, sapien metus lacinia elit, ut faucibus felis enim eget mauris.</p>
+      <h2>Subsection 1.2</h2>
+      <p>Nunc elementum metus eget justo sagittis congue. Sed dignissim efficitur nulla, vitae malesuada justo facilisis vel. Suspendisse potenti. Etiam nec risus felis. Proin tempor, ex eu malesuada interdum, risus tellus fermentum velit, nec elementum tellus odio sed lect
+        </p>
+        </main>
+        <script>
+                  const navList = document.createElement('ul');
+
+// Create a list item for each H1
+for (let i = 0; i < headings.length; i++) {
+  const heading = headings[i];
+  const linkText = heading.textContent;
+  const linkTarget = `#${heading.id}`;
+
+  // Create the list item and link for the H1
+  const listItem = document.createElement('li');
+  const link = document.createElement('a');
+  link.textContent = linkText;
+  link.setAttribute('href', linkTarget);
+  listItem.appendChild(link);
+
+  // Create the dropdown menu for H1 subheadings
+  const subheadings = heading.querySelectorAll('h2, h3, h4, h5, h6');
+  if (subheadings.length > 0) {
+    const dropdown = document.createElement('div');
+    dropdown.classList.add('dropdown');
+
+    // Create the toggle link for the dropdown menu
+    const toggleLink = document.createElement('a');
+    toggleLink.classList.add('dropdown-toggle');
+    toggleLink.innerHTML = '&#x25BC;';
+    dropdown.appendChild(toggleLink);
+
+    // Create the list for the dropdown menu
+    const dropdownList = document.createElement('ul');
+    for (let j = 0; j < subheadings.length; j++) {
+      const subheading = subheadings[j];
+      const sublinkText = subheading.textContent;
+      const sublinkTarget = `#${subheading.id}`;
+      const subListItem = document.createElement('li');
+      const subLink = document.createElement('a');
+      subLink.textContent = sublinkText;
+      subLink.setAttribute('href', sublinkTarget);
+      subListItem.appendChild(subLink);
+      dropdownList.appendChild(subListItem);
+    }
+    dropdown.appendChild(dropdownList);
+    listItem.appendChild(dropdown);
+
+    // Add event listeners for dropdown menu toggle
+    toggleLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      dropdown.classList.toggle('open');
+    });
+    link.addEventListener('click', function() {
+      dropdown.classList.remove('open');
+    });
+  }
+
+  navList.appendChild(listItem);
+}
+
+// Add the nav list to the navbar
+navbar.appendChild(navList);
+
+// Highlight the active link in the navbar
+window.addEventListener('scroll', function(event) {
+  const scrollPosition = window.scrollY;
+  for (let i = headings.length - 1; i >= 0; i--) {
+    const heading = headings[i];
+    if (heading.offsetTop <= scrollPosition) {
+      const activeLink = navList.querySelector('a.active');
+      if (activeLink) {
+        activeLink.classList.remove('active');
+      }
+
+      const newActiveLink = navList.querySelector(`a[href="#${heading.id}"]`);
+      newActiveLink.classList.add('active');
+      break;
+    }
+  }
+});
+</script>
+</body>
+</html>

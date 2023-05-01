@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content Page</title>
+	<style>
+		.unit{
+			margin: 20px 0;
+			padding: 10px;
+			background-color: #f2f2f2;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		.unit h2{
+			margin: 0;
+			padding: 5px;
+			font-size: 22px;
+			color: #333;
+		}
+		.unit ol{
+			margin: 10px 0;
+			padding: 0 0 0 20px;
+			list-style-type: decimal;
+		}
+		.lessons {
+			margin: 10px 0;
+			padding: 25px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+css
+Copy code
+	.lessons li {
+		margin: 5px 0;
+	}
+	a.lesson-name {
+		display: block;
+		padding: 5px;
+		color: #333;
+		text-decoration: none;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+	}
+
+	a.lesson-name:hover {
+		background-color: #333;
+		color: #fff;
+	}
+</style>
+</head>
+<body>
+	<div class="unit">
+		<h2>Unit 1 - Introduction to HTML</h2>
+		<ol>
+			<li class="lessons"><a class="lesson-name" href="#">Lesson 1 - Getting Started with HTML</a></li>
+			<li class="lessons"><a class="lesson-name" href="#">Lesson 2 - HTML Tags and Elements</a></li>
+			<li class="lessons"><a class="lesson-name" href="#">Lesson 3 - Working with Text and Images</a></li>
+			<li class="lessons"><a class="lesson-name" href="#">Lesson 4 - Creating Links and Lists</a></li>
+		</ol>
+	</div>
+php
+Copy code
+<div class="unit">
+	<h2>Unit 2 - Introduction to CSS</h2>
+	<ol>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 1 - Getting Started with CSS</a></li>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 2 - CSS Selectors and Properties</a></li>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 3 - Working with Colors and Backgrounds</a></li>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 4 - Creating Layouts with CSS</a></li>
+	</ol>
+</div>
+
+<div class="unit">
+	<h2>Unit 3 - Advanced Topics in Web Development</h2>
+	<ol>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 1 - Introduction to JavaScript</a></li>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 2 - Working with Forms and Events</a></li>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 3 - Introduction to jQuery</a></li>
+		<li class="lessons"><a class="lesson-name" href="#">Lesson 4 - Responsive Web Design</a></li>
+	</ol>
+</div>
+</body>
+</html>
