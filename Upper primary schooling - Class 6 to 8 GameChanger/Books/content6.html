@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Class 6 Syllabus</title>
 	<style>
@@ -8,172 +9,551 @@
 			padding: 0;
 			font-family: Arial, sans-serif;
 		}
-css
-Copy code
-	header {
-		background-color: #008080;
-		color: #fff;
-		padding: 20px;
-		text-align: center;
-		font-size: 3em;
-		margin-bottom: 20px;
-	}
 
-	nav {
-		background-color: #f2f2f2;
-		padding: 10px;
-		margin-bottom: 20px;
-	}
+		header {
+			background-color: #008080;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 3em;
+			margin-bottom: 20px;
+		}
 
-	nav ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-	}
+		nav {
+			background-color: #f2f2f2;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
 
-	nav li {
-		float: left;
-		margin-right: 10px;
-	}
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
 
-	nav li a {
-		display: block;
-		color: #333;
-		text-align: center;
-		padding: 10px;
-		text-decoration: none;
-		font-size: 1.2em;
-		font-weight: bold;
-	}
+		nav li {
+			float: left;
+			margin-right: 10px;
+		}
 
-	nav li a:hover {
-		background-color: #008080;
-		color: #fff;
-	}
+		nav li a {
+			display: block;
+			color: #333;
+			text-align: center;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 1.2em;
+			font-weight: bold;
+		}
 
-	.units {
-		margin: 20px 0;
-		padding: 20px;
-		background-color: #f2f2f2;
-		border-radius: 5px;
-	}
+		nav li a:hover {
+			background-color: #008080;
+			color: #fff;
+		}
 
-	.units h2 {
-		margin-top: 0;
-		color: #008080;
-		font-size: 2em;
-	}
+		.units {
+			margin: 20px 0;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+		}
 
-	.lessons {
-		margin: 20px 0;
-		padding: 25px;
-		background-color: #fff;
-		border-radius: 5px;
-		box-shadow: 0px 0px 10px #ccc;
-	}
+		.units h2 {
+			margin-top: 0;
+			color: #008080;
+			font-size: 2em;
+		}
 
-	.lessons li {
-		margin: 10px 0;
-	}
+		.lessons {
+			margin: 20px 0;
+			padding: 25px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
 
-	a.lesson-name {
-		display: block;
-		padding: 10px;
-		color: #333;
-		text-decoration: none;
-		border: 2px solid #ccc;
-		border-radius: 10px;
-		background-color: #f2f2f2;
-		font-size: 1.2em;
-		font-weight: bold;
-		transition: background-color 0.3s ease;
-	}
+		.lessons li {
+			margin: 10px 0;
+		}
 
-	a.lesson-name:hover {
-		background-color: #008080;
-		color: #fff;
-		border-color: #008080;
-	}
+		a.lesson-name {
+			display: block;
+			padding: 10px;
+			color: #333;
+			text-decoration: none;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			background-color: #f2f2f2;
+			font-size: 1.2em;
+			font-weight: bold;
+			transition: background-color 0.3s ease;
+		}
 
-	.bg {
-		background-image: url("https://images.unsplash.com/photo-1584265086482-c05f3c85f8a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 500px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+		a.lesson-name:hover {
+			background-color: #008080;
+			color: #fff;
+			border-color: #008080;
+		}
 
-	.bg h1 {
-		color: #fff;
-		font-size: 4em;
-		text-shadow: 2px 2px #008080;
-	}
-
-	@media (max-width: 768px) {
 		.bg {
-			height: 300px;
+			background-image: url("https://images.unsplash.com/photo-1584265086482-c05f3c85f8a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 500px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.bg h1 {
-			font-size: 2em;
+			color: #fff;
+			font-size: 4em;
+			text-shadow: 2px 2px #008080;
 		}
-	}
 
+		@media (max-width: 768px) {
+			.bg {
+				height: 300px;
+			}
+
+			.bg h1 {
+				font-size: 2em;
+			}
+		}
+
+		.book {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 10px;
+			max-width: 800px;
+			padding: 20px;
+			border: solid;
+			border-radius: 20px;
+			position: center;
+		}
+
+		.book h1 {
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
+
+		.book h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		
+		.book h3 {
+			font-size: 20px;
+			margin-bottom: 10px;
+			text-decoration: black;
+		}
+
+		.book p {
+			margin-bottom: 20px;
+		}
+
+		.book img {
+			display: block;
+			max-width: 100%;
+			margin: 20px auto;
+		}
+
+		<style>
+  ol.unit {
+    counter-reset: unit-counter;
+    list-style-type: none;
+  }
+  ol.unit > li:before {
+    counter-increment: unit-counter;
+    content: "Unit " counter(unit-counter) ": ";
+  }
+  ol.lesson {
+    counter-reset: lesson-counter;
+    list-style-type: none;
+  }
+  ol.lesson > li:before {
+    counter-increment: lesson-counter;
+    content: "Lesson " counter(lesson-counter) ": ";
+  }
 </style>
+
+
+
 </head>
+
 <body>
 	<header>
 		Class 6 Syllabus
 	</header>
-<nav>
-	<ul>
-		<li><a href="#">Home
-            
-</a></li>
-<li><a href="#units">Units</a></li>
-<li><a href="#about">About</a></li>
-</ul>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#units">Units</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
 
-</nav>
-<div class="bg">
-	<h1>Welcome to Class 6 Syllabus</h1>
-</div>
-<div class="units" id="units">
-	<h2>Units</h2>
-	<ol>
-		<li class="unit">
-			<h3>Unit 1: Introduction to Mathematics</h3>
-			<ul class="lessons">
-				<li><a href="#" class="lesson-name">Lesson 1: Numbers and Place Value</a></li>
-				<li><a href="#" class="lesson-name">Lesson 2: Addition and Subtraction</a></li>
-				<li><a href="#" class="lesson-name">Lesson 3: Multiplication and Division</a></li>
-			</ul>
-		</li>
-		<li class="unit">
-			<h3>Unit 2: Geometry and Measurement</h3>
-			<ul class="lessons">
-				<li><a href="#" class="lesson-name">Lesson 1: Lines, Angles, and Shapes</a></li>
-				<li><a href="#" class="lesson-name">Lesson 2: Perimeter and Area</a></li>
-				<li><a href="#" class="lesson-name">Lesson 3: Volume and Capacity</a></li>
-			</ul>
-		</li>
-		<li class="unit">
-			<h3>Unit 3: Data Handling</h3>
-			<ul class="lessons">
-				<li><a href="#" class="lesson-name">Lesson 1: Data and Graphs</a></li>
-				<li><a href="#" class="lesson-name">Lesson 2: Probability</a></li>
-			</ul>
-		</li>
-	</ol>
-</div>
-<div class="about" id="about">
-	<h2>About</h2>
-	<p>This website contains the syllabus for Class 6 Mathematics.</p>
-</div>
+	</nav>
+
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1>English Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1>Nepali Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Science Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Mathematics Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Health and Physical Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Social-Studies Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Computer Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Symphony Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> व्याकरण Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> निबन्ध Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="book">
+		<h3>GameChanger </h3>
+		<h1> Grammar Grade-6</h1>
+		<img src="bookcover.jpeg" alt="Book cover">
+		<div class="units" id="units">
+			<ol type="I">
+				<li class="unit">
+					<h3>Introduction to Mathematics</h3>
+					<ol class="lessons" >
+						<li><a href="#" class="lesson-name">Numbers and Place Value</a></li>
+						<li><a href="#" class="lesson-name">Addition and Subtraction</a></li>
+						<li><a href="#" class="lesson-name">Multiplication and Division</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Geometry and Measurement</h3>
+					<ol class="lessons" start="3">
+						<li><a href="#" class="lesson-name">Lines, Angles, and Shapes</a></li>
+						<li><a href="#" class="lesson-name">Perimeter and Area</a></li>
+						<li><a href="#" class="lesson-name">Volume and Capacity</a></li>
+					</ol>
+				</li>
+				<li class="unit">
+					<h3>Data Handling</h3>
+					<ol class="lessons" start="7">
+						<li><a href="#" class="lesson-name">Data and Graphs</a></li>
+						<li><a href="#" class="lesson-name">Probability</a></li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="about" id="about">
+		<h2>About</h2>
+		<p>This website contains the syllabus for Class 6 Mathematics.</p>
+	</div>
 </body>
+
 </html>

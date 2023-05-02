@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cell Biology</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style for page header */
+  header {
+    background-color: #8B0000;
+    padding: 30px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Style for main content section */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+  
+  /* Style for heading of main content */
+  main h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Style for paragraph text of main content */
+  main p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for image in main content */
+  main img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for footer */
+  footer {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Style for links in footer */
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+ 
+            /* Table formatting */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    }
+
+    tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+
+    ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    }
+
+    ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    }
+
+    p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+    }
+
+    </style>
+    
+  </head>
+  <body>
+    
+    <header>
+      <h1>Vectors and Scalars </h1>
+      <p>Learn the fundamental concepts of units and dimensions, and how to handle errors in measurements.  </p>
+    </header>
+    <main>
+      <h2>A. Vectors and Scalars</h2>
+      <h3>a. Scalars:</h3>
+      <ul>
+        <li>All potentials</li>
+        <li>All fluxes</li>
+        <li>Intensity of energy ⚡</li>
+      </ul>
+      <h3>b. Vectors</h3>
+      <ul>
+        <li>
+          <h4>Examples</h4>
+          <ol>
+            <li>All flux densities</li>
+            <li>Gradients of all quantities</li>
+            <li>All field strengths/ intensities</li>
+            <li>All dipole moments</li>
+          </ol>
+        </li>
+        <li>
+          <h4>Special types of Vectors</h4>
+          <ol>
+            <li>
+              <h5>Polar vector</h5>
+              <ul>
+                <li>Vectors associated with linear directional effect.</li>
+                <li>Displacement (s)</li>
+                <li>Velocity (v)</li>
+                <li>Acceleration (a)</li>
+                <li>Momentum (P)</li>
+                <li>Force (F)</li>
+              </ul>
+            </li>
+            <li>
+              <h5>Axial vector</h5>
+              <ul>
+                <li>Vectors associated with rotation about an axis.</li>
+                <li>Angular displacement (θ)</li>
+                <li>Angular velocity (ω)</li>
+                <li>Angular acceleration (α)</li>
+                <li>Angular momentum (L/ J)</li>
+                <li>Moment of force/ Torque (τ)</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+      </ul>
+      <h3>c. Tensor</h3>
+      <ul>
+        <li>Quantity whose magnitude differs from direction to direction</li>
+        <li>Pressure</li>
+        <li>Stress</li>
+        <li>Modulus of elasticity</li>
+        <li>Moment of Inertia</li>
+        <li>Coefficient of viscosity</li>
+      </ul>
+      <h2>B. Calculation of Vectors</h2>
+      <h3>a. Unit vector</h3>
+        <p>i. Vector with unit magnitude is called Unit vector.</p>
+        <p>ii. Represented by â.</p>
+        <p>iii. â = a⃗ / |a⃗|</p>
+        <ol>
+          <li>Unit vector along î + ĵ + k̂ is (î + ĵ + k̂) / √3</li>
+        </ol>
+        <p>iv. Unit vector is unitless and dimensionless. It possesses only direction.</p>
+      <h3>b. Vector sum of two vectors a⃗ and b⃗.</h3>
+        <p>i.</p>
+        <p>ii. If a⃗ and b⃗ are inclined at an angle θ and resultant R⃗ makes an angle α with the direction of a⃗, then,</p>
+        <ol>
+          <li>|R⃗| = √(|a⃗|² + |b⃗|² + 2 |a⃗| |b⃗| cosθ)</li>
+          <li>α = tan⁻¹((b sinθ)/(a + b cosθ)) with a⃗.</li>
+          <li>β = tan⁻¹((a sinθ)/(b + a cosθ)) with b⃗.</li>
+        </ol>
+        <p>iii. Special cases</p>
+        <ol type="i">
+          <li>If θ = 0°, then |a⃗ + b⃗| = R = a + b (Maximum value).</li>
+          <li>If θ = 90°, then |a⃗ + b⃗| = R = √(a² + b²).</li>
+          <li>If θ = 180°, then |a⃗ + b⃗| = (a - b) or (b - a).</li>
+          <li>When |a⃗| = |b⃗| = A, then</li>
+          <ol type="1">
+            <li>|a⃗ + b⃗| = 2A cos(θ/2)</li>
+            <ol type="a">
+              <li>If θ = 90°, then |a⃗ + b⃗| = √2A.</li>
+              <li>If θ = 60°, then |a⃗ + b⃗| = √3A.</li>
+            </ol>
+          </ol>
+          <li>If |a⃗| = |b⃗| = |a⃗ + b⃗| then, θ = 120°.</li>
+          <li>If a⃗ + b⃗ = c⃗ and a² + b² = c², then the angle between a⃗ and b⃗ is 90°.</li>
+          <li>If a⃗ + b⃗ = r⃗ then a⃗, b⃗, and r⃗ lie in the same plane.</li>
+        </ol>
+        <h1>Vector Subtraction</h1>
+      <h2>Formula:</h2>
+      <p>If a <b>&#x2192;</b> and b <b>&#x2192;</b> are inclined at an angle &#x03B8; and resultant R <b>&#x2192;</b> makes an angle &#x03B1; with the direction of a <b>&#x2192;</b>, then,</p>
+      <ol>
+        <li>|R <b>&#x2192;</b>| = &#x221A;(|a <b>&#x2192;</b>|<sup>2</sup> + |b <b>&#x2192;</b>|<sup>2</sup> - 2|a <b>&#x2192;</b>| |b <b>&#x2192;</b>|cos &#x03B8;)</li>
+        <li>&#x03B1; = tan<sup>-1</sup>((b sin &#x03B8;)/(a - b cos &#x03B8;)) with a <b>&#x2192;</b>.</li>
+        <li>&#x03B2; = tan<sup>-1</sup>((a sin &#x03B8;)/(b - a cos &#x03B8;)) with b <b>&#x2192;</b>.</li>
+      </ol>
+      <h2>Special Cases:</h2>
+      <ol>
+        <li>If &#x03B8; = 0&deg;, then |a <b>&#x2192;</b> - b <b>&#x2192;</b>| = R = a <b>&#x2192;</b> - b <b>&#x2192;</b> (Minimum value).</li>
+        <li>If &#x03B8; = 90&deg;, then |a <b>&#x2192;</b> - b <b>&#x2192;</b>| = R = &#x221A;(a<sup>2</sup> - b<sup>2</sup>).</li>
+        <li>If &#x03B8; = 180&deg;, then |a <b>&#x2192;</b> - b <b>&#x2192;</b>| = (a + b) (Maximum).</li>
+        <li>When |a <b>&#x2192;</b>| = |b <b>&#x2192;</b>| = A, then:
+          <ol type="a">
+            <li>|a <b>&#x2192;</b> - b <b>&#x2192;</b>| = 2A sin(&#x03B8;/2).
+              <ol type="i">
+                <li>If &#x03B8; = 90&deg;, then |a <b>&#x2192;</b> - b <b>&#x2192;</b>| = &#x221A;2A.</li>
+                <li>If &#x03B8; = 60&deg;, then |a <b>&#x2192;</b> - b <b>&#x2192;</b>| = A.</li>
+              </ol>
+            </li>
+    
+            <p>i.</p>
+      <p>ii. If a and b are inclined at an angle θ and resultant R makes an angle α with the direction of a, then,</p>
+      <ol>
+        <li>|R|=√(〖|a|〗^2+〖|b|〗^2−2 |a| |b|cos⁡θ )</li>
+        <li>α=tan^(−1)⁡((b sin⁡θ)/(a−b cos⁡θ )) with a.</li>
+        <li>β=tan^(−1)⁡((a sin⁡θ)/(b−a cos⁡θ )) with b.</li>
+      </ol>
+      <p>iii. Special cases:</p>
+      <ol>
+        <li>If θ=0°, then |a−b|=R=a−b (Minimum value).</li>
+        <li>If θ=90°, then |a−b|=R=√(a^2−b^2).</li>
+        <li>If θ=180°, then |a−b|=(a+b) (Maximum).</li>
+        <li>When |a|=|b|=A, then:</li>
+        <ul>
+          <li>|a−b|=2A 〖sin 〗⁡〖θ/2〗.</li>
+          <ol>
+            <li>If θ=90°, then |a−b|=√2 A.</li>
+            <li>If θ=60°, then |a−b|=A.</li>
+          </ol>
+          <li>The vector of magnitude A is rotated through θ, then the change in that vector is 2A sin⁡〖θ/2〗.</li>
+        </ul>
+        <li>If |a|=|b|=|a−b| then, θ=60°.</li>
+      </ol>
+      <p>iv. Limits of |a−b|:</p>
+      <ol>
+        <li>a−b≤|a−b|≤a+b</li>
+      </ol>
+      <p>v. Special cases of Addition and Subtraction:</p>
+      <ol>
+        <li>|a−b|=|a+b| then θ=180°.</li>
+        <li>|a+b|=|a−b| then θ=90°.</li>
+        <li>If a+b=a−b then b is zero vector.</li>
+      </ol>
+      <p>vi. Properties of vector Addition and Subtraction:</p>
+      <ol>
+        <li>Vector addition is commutative.</li>
+        <ul>
+          <li>a+b=b+a</li>
+        </ul>
+        <li>Vector subtraction is not commutative.</li>
+        <ul>
+          <li>a−b≠b−a</li>
+          <ol>
+            <li>Angle between a−b and b−a is 180°.</li>
+          </ol>
+        </ul>
+      </ol>
+    
+      <h2>Vector Laws</h2>
+        <h3>Triangle Law of Vector Addition:</h3>
+          <ol>
+            <li></li>
+            <li>c&#x20D7;=a&#x20D7;+b&#x20D7;</li>
+          </ol>
+        <h3>Lami's Theorem:</h3>
+          <ol>
+            <li></li>
+            <li>It states that if three coplanar vectors a &#x20D7;, b &#x20D7;, and c &#x20D7; acting simultaneously on a particle are in equilibrium, then magnitude of each vector is proportional to the Sine of angle between other two vectors.</li>
+              <ul>
+                <li>i.e., a/sin&alpha; =b/sin&beta; =c/sin&gamma; </li>
+              </ul>
+            <li>cos&gamma;=(c<sup>2</sup>-a<sup>2</sup>-b<sup>2</sup>)/2ab</li>
+          </ol>
+        <p>If a &#x20D7;+b &#x20D7;+c &#x20D7;=0 then a &#x20D7;&times;b &#x20D7;=b &#x20D7;&times;c &#x20D7;=c &#x20D7;&times;a &#x20D7;</p>
+    
+    
+        <h2>B. Calculation of Vectors</h2>
+      <h3>a. Unit vector</h3>
+      <p>i. Vector with unit magnitude is called Unit vector.</p>
+      <p>ii. Represented by &#226;&#136;&#146;.</p>
+      <p>iii. a&#770;=a&#8594;/(|a&#8594;|)</p>
+      <ul>
+        <li>Unit vector along i&#770;+j&#770;+k&#770;  is (i&#770;+j&#770;+k&#770;)/&#8730;3</li>
+      </ul>
+      <p>iv. Unit vector is unitless and dimensionless. It possess only direction.</p>
+      <h3>b. Vector sum of two vectors a&#8594; and b&#8594;.</h3>
+      <p>i. </p>
+      <p>ii. If a&#8594; and b&#8594; are inclined at an angle &#952; and resultant R&#8594; makes an angle &#945; with the direction of a&#8594;, then,</p>
+      <ul>
+        <li>|R&#8594;|=&#8730;(|a&#8594;|&#178;+|b&#8594;|&#178;+2|a&#8594;||b&#8594;|cos&#952;)</li>
+        <li>&#945;=tan&#8315;&#185;((b sin&#952;)/(a+b cos&#952;))  with a&#8594;.</li>
+        <li>&#946;=tan&#8315;&#185;((a sin&#952;)/(b+a cos&#952;))  with b&#8594;.</li>
+      </ul>
+      <p>iii. Special cases</p>
+      <ul>
+        <li>i. If &#952;=0&deg;, then |a&#8594;+b&#8594;|=R=a+b (Maximum value).</li>
+        <li>ii. If &#952;=90&deg;, then |a&#8594;+b&#8594;|=R=&#8730;(a&#178;+b&#178;).</li>
+        <li>iii. If &#952;=180&deg;, then |a&#8594;+b&#8594;|=(a-b)  or (b-a).</li>
+        <li>iv. When |a&#8594;|=|b&#8594;|=A, then.</li>
+        <ul>
+          <li>|a&#8594;+b&#8594;|=2A cos&#952;/2</li>
+          <ul>
+            <li>a) If &#952;=90&deg;, then |a&#8594;+b&#8594;|=&#8730;2 A.</li>
+            <li>b) If &#952;=60&deg;, then |a&#8594;+b&#8594;|=&#8730;3 A.</li>
+          </ul>
+          <li>v. If |a&#8594;|=|b&#8594;|=|a&#8594;+b&#8594;|  then, &#952;=120&deg;.</li>
+          <li>vi. If a&#8594;+b&#8594;=c&#8594;  and a&#178;+b&#178;=c&#178;, then angle between a&#859
+    
+    
+            <h2>R ⃗=R<sub>x</sub> i&#770;+R<sub>y</sub> j&#770; = [Resultant vector]</h2>
+      <ol>
+        <li>R<sub>x</sub>=R cos(α) [horizontal component]</li>
+        <li>R<sub>y</sub>=R sin(α) [Vertical component]</li>
+        <li>R=&#8730;(R<sub>x</sub><sup>2</sup>+R<sub>y</sub><sup>2</sup>) [Magnitude of resultant]</li>
+        <li>α=tan<sup>-1</sup>(R<sub>y</sub>/R<sub>x</sub>) [Direction of resultant]</li>
+          <ol type="a">
+            <li>A vector in plane has two equal rectangular components then that vector is inclined at an angle cos<sup>-1</sup>(1/&#8730;2) or 45° with each axis.</li>
+            <li>A vector in space has 3 equal rectangular components then that vector is inclined at cos<sup>-1</sup>(1/&#8730;3) or 54.74° with each axis.</li>
+          </ol>
+      </ol>
+      <h2>A vector can have infinite component vectors.</h2>
+      <h2>Rectangular components of a vector</h2>
+      <ol>
+        <li>Vector has 2 rectangular components in a plane and 3 rectangular components in space.</li>
+        <li>Rectangular components of a vector can never be greater than the vector itself.</li>
+      </ol>
+    
+    
+      <f>Vector Multiplication ✖ </f>
+      <i>Scalar/ Dot product of vectors</i>
+        <ol>
+          <li>▭(a ⃗  .b ⃗=a.b.cos⁡θ )  where θ is the angle between a ⃗  and b ⃗.</li>
+          <li>Special cases
+            <ul>
+              <li>When θ=0° (parallel vectors), a ⃗.b ⃗=ab (maximum).
+                <ul>
+                  <li>i ̂.i ̂=j ̂.j ̂=k ̂.k ̂=1.</li>
+                </ul>
+              </li>
+              <li>When θ=90° (perpendicular vector), a ⃗.b ⃗=0.
+                <ul>
+                  <li>i ̂.j ̂=j ̂.k ̂=k ̂.j ̂=0</li>
+                </ul>
+              </li>
+              <li>When θ=180°, a ⃗.b ⃗=−ab (minimum).</li>
+            </ul>
+          </li>
+          <li>Examples of Scalar products:
+            <ul>
+              <li>Work done, W=F.s.cos⁡θ</li>
+              <li>Instantaneous power, P=F.v.cos⁡θ</li>
+              <li>Magnetic flux, ϕ=B.A.cos⁡θ</li>
+              <li>So, there are scalar quantities,</li>
+            </ul>
+          </li>
+          <li>Limits of a ⃗.b ⃗ ▭(−a.b≤a ⃗.b ⃗≤ab)</li>
+        </ol>
+    </f>
+    <h2>Vector/Cross Product of Vectors</h2>
+    <ol>
+      <li>
+        <p>Vector product of <strong>a</strong><sub>&#8594;</sub> and <strong>b</strong><sub>&#8594;</sub> acting at angle &#952; is a vector quantity and denoted as <strong>a</strong><sub>&#8594;</sub>&times;<strong>b</strong><sub>&#8594;</sub> is</p>
+        <p>&#8743;(<strong>a</strong><sub>&#8594;</sub>&times;<strong>b</strong><sub>&#8594;</sub>) = ab sin &#952; <strong>n</strong><sub>&#770;</sub></p>
+        <ol type="a">
+          <li>Where, <strong>n</strong><sub>&#770;</sub> is a unit vector perpendicular to both <strong>a</strong><sub>&#8594;</sub> and <strong>b</strong><sub>&#8594;</sub>.</li>
+          <li>Angle between <strong>a</strong><sub>&#8594;</sub>+<strong>b</strong><sub>&#8594;</sub> and <strong>a</strong><sub>&#8594;</sub>&times;<strong>b</strong><sub>&#8594;</sub> is 90&deg;.</li>
+          <li>Its direction is given by right-hand screw law and right-hand thumb rule.</li>
+          <ol type="i">
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Right_hand_screw_rule.svg/200px-Right_hand_screw_rule.svg.png" alt="Right-hand screw rule"></li>
+          </ol>
+        </ol>
+      </li>
+      <li>
+        <p>Special cases:</p>
+        <ol type="a">
+          <li>If &#952; = 0&deg; or 180&deg;, <strong>a</strong><sub>&#8594;</sub>&times;<strong>b</strong><sub>&#8594;</sub> = 0</li>
+          <ol type="i">
+            <li><strong>i</strong><sub>&#8594;</sub>&times;<strong>i</strong><sub>&#8594;</sub> = <strong>j</strong><sub>&#8594;</sub>&times;<strong>j</strong><sub>&#8594;</sub> = <strong>k</strong><sub>&#8594;</sub>&times;<strong>k</strong><sub>&#8594;</sub> = 0</li>
+          </ol>
+          <li>If &#952; = 90&deg;, <strong>a</strong><sub>&#8594;</sub>&times;<strong>b</strong><sub>&#8594;</sub> = ab<strong>n</strong><sub>&#770;</sub></li>
+          <ol type="i">
+            <li><strong>i</strong><sub>&#8594;</sub>&times;<strong>j</strong><sub>&#8594;</sub> = -<strong>j</strong><sub>&#8594;</sub>&times;<strong>i</strong><sub>&#8594;</sub> = <strong>k</strong><sub>&#8594;</sub></li>
+            <li><strong>j</strong><sub>&#8594;</sub>&times;<strong>k</strong><sub>&#8594;</sub> = -<strong>k</
+    
+              <ol>
+                <li>
+                  <p>Magnitude of vector product is equal to the area of the parallelogram whose adjacent sides are represented by the parallelogram.</p>
+                  <ol type="a">
+                    <li></li>
+                    <li>Area of parallelogram OACB = ab sin⁡θ=|a ⃗×b ⃗|.</li>
+                    <ol type="i">
+                      <li>If θ=0° or 180°, |a ⃗×b ⃗ |=0 (minimum).</li>
+                      <li>If θ=90°, |a ⃗×b ⃗ |=ab (maximum).</li>
+                    </ol>
+                    <li>Area of parallelogram=1/2 d<sub>1</sub>⋅ d<sub>2</sub>⋅sin⁡θ</li>
+                    <p>Where θ is angle between the two diagonals, d<sub>1</sub> is the first diagonal, and d<sub>2</sub> is the second diagonal.</p>
+                  </ol>
+                </li>
+                <li>
+                  <p>Limits of |a ⃗×b ⃗| is ▭(0≤|a ⃗×b ⃗ |≤ab), i.e, cross product is never negative in magnitude.</p>
+                </li>
+              </ol>
+    
+              <h2>f. Vector Multiplication ✖</h2>
+    <h3>i. Scalar/ Dot product of vectors</h3>
+    <ol>
+      <li>&#9645;(<em>a</em> &#8407; <em>b</em>) = <em>a</em><em>b</em>cos&#952; where &#952; is the angle between <em>a</em> &#8407; and <em>b</em> &#8407;.</li>
+      <li>Special cases
+        <ol type="a">
+          <li>When &#952; = 0° (parallel vectors), <em>a</em> &#8407; <em>b</em> = <em>ab</em> (maximum).
+            <ul>
+              <li><em>i</em> &#770; &#8407; <em>i</em> &#770; = <em>j</em> &#770; &#8407; <em>j</em> &#770; = <em>k</em> &#770; &#8407; <em>k</em> &#770; = 1.</li>
+            </ul>
+          </li>
+          <li>When &#952; = 90° (perpendicular vector), <em>a</em> &#8407; <em>b</em> = 0.
+            <ul>
+              <li><em>i</em> &#770; &#8407; <em>j</em> &#770; = <em>j</em> &#770; &#8407; <em>k</em> &#770; = <em>k</em> &#770; &#8407; <em>j</em> &#770; = 0</li>
+            </ul>
+          </li>
+          <li>When &#952; = 180°, <em>a</em> &#8407; <em>b</em> = -<em>ab</em> (minimum).</li>
+        </ol>
+      </li>
+      <li>Examples of Scalar products:
+        <ol type="a">
+          <li>Work done, <em>W</em> = <em>F</em><em>s</em>cos&#952;</li>
+          <li>Instantaneous power, <em>P</em> = <em>F</em><em>v</em>cos&#952;</li>
+          <li>Magnetic flux, &#981; = <em>B</em><em>A</em>cos&#952;</li>
+          <li>So, there are scalar quantities,</li>
+        </ol>
+      </li>
+      <li>Limits of <em>a</em> &#8407; <em>b</em>
+        <br>
+        &#9645;(-<em>a</em><em>b</em> &#8804; <em>a</em> &#8407; <em>b</em> &#8804; <em>ab</em>)
+      </li>
+    </ol>
+    
+    <h3>ii. Cross product of vectors</h3>
+    <ol>
+      <li>&#9645;(<em>a</em> &#215; <em>b</em>) = |<em>a</em>||<em>b</em>|sin&#952; <em>n</em> where &#952; is the angle between <em>a</em> &#8407; and <em>b</em> &#8407; and <em>n</em> is the unit vector perpendicular to the plane containing <em>a</em> &#8407; and
+    
+        <h2>Vector Projections</h2>
+        <p>
+          <strong>g. Projection of b ⃗  on a ⃗.</strong><br>
+          i. It is a scalar quantity and represented in fig by On.<br>
+          ii. Projection of b ⃗  on a ⃗=OM=b cos⁡θ<br>
+             &emsp;=(a ⃗⋅b ⃗)/a<br>
+             &emsp;=b ⃗⋅a ̂<br>
+          iii. Also component of b ⃗  along a ⃗  =(OM) ⃗<br>
+              &emsp;=(b cos⁡θ ) a ̂<br>
+              &emsp;=(b ⃗⋅a ̂ ) a ̂<br>
+        </p>
+        <p>
+          <strong>h. Minimum no. of vectors giving zero resultant</strong><br>
+          i. Collinear vectors=2<br>
+          ii. Collinear vectors unequal in magnitudes=3<br>
+          iii. Coplanar vectors =3<br>
+          iv. Non-coplanar vectors=4<br>
+        </p>
+
+    </main>
+ 
+   <nav></nav>  
+    
+
+    <footer>
+      <p>CEE Physics GameChanger</p>
+       <p>&copy; 2023 GameChanger</p>
+      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+    </footer>
+    
+  </body>
+</html>
+ 

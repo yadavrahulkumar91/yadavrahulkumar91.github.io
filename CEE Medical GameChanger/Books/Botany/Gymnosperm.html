@@ -1,224 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cell Biology</title>
-    <style>
-    body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-  }
-  
-  /* Style for page header */
-  header {
-    background-color: #1abc9c;
-    padding: 30px;
-    color: white;
-    text-align: center;
-  }
-  
-  /* Style for main content section */
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #ccc;
-  }
-  
-  /* Style for heading of main content */
-  main h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Style for paragraph text of main content */
-  main p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for image in main content */
-  main img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for footer */
-  footer {
-    background-color: #333;
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
-  
-  /* Style for links in footer */
-  footer a {
-    color: white;
-    text-decoration: none;
-  }
-
- 
-            /* Table formatting */
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    th, td {
-        padding: 8px;
-        text-align: left;
-        border: 1px solid #ddd;
-    }
-
-    th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-align: center;
-    }
-
-    tr:nth-child(even) {
-    background-color: #f2f2f2;
-    }
-
-    ol {
-    list-style-type: decimal;
-    margin-left: 20px;
-    }
-
-    ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    }
-
-    p {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 10px 0;
-    }
-
-    </style>
+    <title></title>
+    <link rel="stylesheet" href="bookstyle.css">
     
   </head>
   <body>
     
     <header>
-      <h1>Gymnosperms</h1>
-      <p>Gymnosperms are the botanical equivalent of a time capsule, containing living relics from the ancient forests of the past.</p>
+      <h1></h1>
+      <p></p>
     </header>
-    <main>
-
-        <h1>Gymnosperm</h1>
-        <p>Gymnosperm is a naked seeded plant because ovary is absent.</p>
-        <p>Some members of gymnosperm are called living fossils:</p>
-        <ul>
-            <li>Cycas</li>
-            <li>Ginkgo</li>
-            <li>Metasequoia</li>
-        </ul>
-        <p>Living fossil is such type of organism which is present in both living and fossil form but they have no evolutionary changes.</p>
-        <p>Q. Living fossil is:</p>
-        <ol>
-            <li>Pinus</li>
-            <li>Ginkgo
-                <ul>
-                    <li>Ginkgo is angiosperm</li>
-                </ul>
-            </li>
-            <li>Mango</li>
-            <li>None</li>
-        </ol>
-        <p>It is a successful land plant.</p>
-        <h2>Conduction tissue</h2>
-        <p>Xylem is without vessel except Gnetales order = Vessel is "+ve".</p>
-        <ul>
-            <li>Gnetum</li>
-            <li>Ephedra</li>
-            <li>Welwitchia</li>
-        </ul>
-        <p>Phloem is without companion cell instead of which albuminous tissue is +ve.</p>
-        <p>Sieve tube is absent instead which sieve cell is +ve.</p>
-        <h2>Leaf</h2>
-        <p>Unipinnately compounded</p>
-        <p>They are generally large sized and branched except:</p>
-        <ul>
-                <li>Cycas</li>
-                <li>Zamia pygmaea (Smallest gymnosperm)</li>
-        </ul>
-        <p>Male and female reproductive structure is called male cone and female cone respectively except female cone of Cycas.</p>
-        <p>Pollination is anemophilous type (by wind).</p>
-        <p>Pollination of gymnosperm is defined as transfer of microspore from microsporophyll to ovule directly.</p>
-        <p>Ovule is orthotropous except Pinus → Anatropous. (PAN)<br>
-        Fertilization is siphonogamous type except Cycas which has zooidogamous type.</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Fertilization is of 2 types.</th>
-                    <th>Zooidogamous type</th>
-                    <th>Siphonogamous type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1. When motile male gamete moves to the female gamete with the help of flagella or cilia.</td>
-                    <td>Cryptogamous and Cycas</td>
-                    <td>1. When non-motile male gamete and pollen tube is needed.</td>
-                </tr>
-                <tr>
-                    <td>2. E.g: Phanerogams except Cycas.</td>
-                    <td></td>
-                    <td>2. E.g: Phanerogams except Cycas.</td>
-                </tr>
-            </tbody>
-        </table>
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div></center>
         
+    <div id="home-container" class="container">    
 
-        <p>
-            b) Inside the leptosporangiate sporangium, homosporous spores are found.
-        </p>
-        <p>
-            c) Sporangium wall breaks from stomium region due to annulus.
-        </p>
-        <p>
-            d) When spores come out then germinate to produce heart ❣ shaped prothallus.
-        </p>
-        <ul>
-            <li>ii) Prothallus is green in colour except Rhizoid which is brown in colour.</li>
-            <li>iii) Prothallus is monoecious gametophyte.</li>
-            <li>iv) Antheridium &nbsp;&nbsp;&nbsp; Archegonium</li>
-            <ul>
-                <li>1. Near rhizoid, dome shaped antheridium is present which produces multi-flagellated and coiled male gamete.</li>
-                <li>2. Just below the apical notch, flask shaped archegonium is present with bent neck.</li>
-                <li>
-                    3. Archegonium consist of
-                    <ul>
-                        <li>1. 1 egg cell</li>
-                        <li>2. 1 Venter canal cell (VCC) and</li>
-                        <li>3. 1 binucleate Neck canal cell (NCC).</li>
-                    </ul>
-                </li>
-            </ul>
-            <li>v) Zygote is formed after fertilization.</li>
-            <li>vi) Zygote develops into embryo which differentiate into diploid sporophytic plant of fern.</li>
-        </ul>
-        
-    </main>
- 
-   <nav></nav>  
+
+    </div>
+
+    <div id="questions-container" class="container" style="display:none">
     
+    
+    </div>
+  
+    <div id="videos-container" class="container" style="display:none">
+    
+    </div>
 
-    <footer>
+    <div id="remnant-container" class="container" style="display:none">
+    
+    </div>
+    
+ 
+    
+   <script src="bookscript.js"></script>
+   
+   <footer>
       <p>&copy; 2023 GameChanger</p>
       <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
     </footer>
-    
+  
   </body>
 </html>

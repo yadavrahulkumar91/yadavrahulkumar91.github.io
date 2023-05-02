@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+     .grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 10px;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.grid-item {
+  background: linear-gradient(white, transparent);
+  filter: opacity(0.2);
+  transition: filter 0.5s ease;
+}
+
+.grid-item:hover {
+  filter: opacity(1);
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">Hi</div>
+      <div class="grid-item">Hello
+        I Am al right
+      </div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+    
+  </body>
+</html>
