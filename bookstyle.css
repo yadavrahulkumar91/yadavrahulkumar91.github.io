@@ -14,7 +14,7 @@ header {
 }
 
 /* Style for main content section */
-main {
+.container {
   max-width: 800px;
   margin: 0 auto;
   padding: 30px;
@@ -24,14 +24,48 @@ main {
 }
 
 /* Style for heading of main content */
-main h1 {
+.container h1 {
   font-size: 36px;
   margin-bottom: 20px;
   color: #333;
 }
+.container h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #1abc9c;
+  }
+  
+  .container h3 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  color: #333;
+  }
+  
+  .container h4 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #666;
+  }
+  
+  .container h5 {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #999;
+  }
+  
+  .container h6 {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #ccc;
+  }
 
 /* Style for paragraph text of main content */
-main p {
+.container p {
   font-size: 18px;
   line-height: 1.5;
   color: #666;
@@ -39,7 +73,7 @@ main p {
 }
 
 /* Style for image in main content */
-main img {
+.container img {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
