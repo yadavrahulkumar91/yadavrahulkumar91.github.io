@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.activity {
+			margin: 50px auto;
+			width: 600px;
+			height: auto;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: #ddd;
+			border-radius: 10px;
+			box-shadow: 0px 0px 5px #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 60px;
+			cursor: pointer;
+			margin: 10px;
+		}
+
+		.box.selected {
+			background-color: rgb(198, 37, 137);
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box" id="box1">a</div>
+		<div class="box" id="box2">b</div>
+		<div class="box" id="box3">c</div>
+		<div class="box" id="box4">d</div>
+		<div class="box" id="box5">e</div>
+		<div class="box" id="box6">f</div>
+		<div class="box" id="box7">g</div>
+		<div class="box" id="box8">h</div>
+		<div class="box" id="box9">i</div>
+		<div class="box" id="box10">j</div>
+		<div class="box" id="box11">k</div>
+		<div class="box" id="box12">l</div>
+		<div class="box" id="box13">m</div>
+		<div class="box" id="box14">n</div>
+		<div class="box" id="box15">o</div>
+		<div class="box" id="box16">p</div>
+		<div class="box" id="box17">q</div>
+		<div class="box" id="box18">r</div>
+		<div class="box" id="box19">s</div>
+		<div class="box" id="box20">t</div>
+		<div class="box" id="box21">u</div>
+		<div class="box" id="box22">v</div>
+		<div class="box" id="box23">w</div>
+		<div class="box" id="box24">x</div>
+		<div class="box" id="box25">y</div>
+		<div class="box" id="box26">z</div>
+	</div>
+	<script>
+		var audioFiles = {
+			"box1": "Audio/Small abcd/A.mp3",
+			"box2": "Audio/Small abcd/B.mp3",
+			"box3": "Audio/Small abcd/C.mp3",
+			"box4": "Audio/Small abcd/D.mp3",
+			"box5": "Audio/Small abcd/E.mp3",
+			"box6": "Audio/Small abcd/F.mp3",
+			"box7": "Audio/Small abcd/G.mp3",
+			"box8": "Audio/Small abcd/H.mp3",
+			"box9": "Audio/Small abcd/I.mp3",
+			"box10": "Audio/Small abcd/J.mp3",
+			"box11": "Audio/Small abcd/K.mp3",
+			"box12": "Audio/Small abcd/L.mp3",
+			"box13": "Audio/Small abcd/M.mp3",
+			"box14": "Audio/Small abcd/N.mp3",
+			"box15": "Audio/Small abcd/O.mp3",
+			"box16": "Audio/Small abcd/P.mp3",
+			"box17": "Audio/Small abcd/Q.mp3",
+			"box18": "Audio/Small abcd/R.mp3",
+			"box19": "Audio/Small abcd/S.mp3",
+			"box20": "Audio/Small abcd/T.mp3",
+			"box21": "Audio/Small abcd/U.mp3",
+			"box22": "Audio/Small abcd/V.mp3",
+			"box23": "Audio/Small abcd/W.mp3",
+			"box24": "Audio/Small abcd/X.mp3",
+			"box25": "Audio/Small abcd/Y.mp3",
+			"box26": "Audio/Small abcd/Z.mp3"
+		};
+
+
+		var boxes = document.querySelectorAll(".box");
+		var selectedBox = null;
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].addEventListener("click", function () {
+				if (selectedBox) {
+					selectedBox.classList.remove("selected");
+				}
+				selectedBox = this;
+				this.classList.add("selected");
+
+				// Get the ID of the selected box
+				var boxId = this.getAttribute("id");
+				// Get the corresponding audio file URL
+				var audioFile = audioFiles[boxId];
+				// Create a new Audio object and play the audio file
+				var audio = new Audio(audioFile);
+				audio.play();
+			});
+		}
+
+
+
+	</script>
+</body>
+
+</html>
