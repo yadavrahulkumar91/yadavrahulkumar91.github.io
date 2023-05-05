@@ -330,8 +330,8 @@ ol {
   list-style-type: decimal;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: 0px;
-  
+  margin-left: px;
+
   
 }
 
@@ -362,7 +362,7 @@ p {
   padding: 7px;
   overflow-y: auto;
   max-width: 800px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0px 0px 10px #ccc;
 }
 
@@ -414,4 +414,37 @@ area::before {
 #label3::before {
   top: 250px;
   left: 275px;
+}
+
+.qa-block {
+  margin: 20px 0;
+}
+
+.qa-question {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.qa-question::before {
+  content: "Q.";
+  font-weight: bold;
+  margin-right: 10px;
+}
+.qa-answer {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.qa-answer::before {
+  content: "Ans:";
+  font-weight: bold;
+  margin-right: 10px;
+}
+.qa-answer strong {
+  font-weight: bold;
+  color: #ff5722;
+}
+.question-number {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
 }
