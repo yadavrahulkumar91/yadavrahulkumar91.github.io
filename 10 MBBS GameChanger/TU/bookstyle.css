@@ -448,3 +448,9 @@ area::before {
   font-weight: bold;
   margin-right: 10px;
 }
+.right-text {
+  font-size: small;
+  float: right;
+  margin-top: 7px;
+  margin-left: 3px;
+}
