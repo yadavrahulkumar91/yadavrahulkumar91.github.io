@@ -121,6 +121,7 @@ h2 {
 	font-size: 28px;
 	font-weight: bold;
 	margin: 0 0 0 px;
+  background-color: azure;
 }
 
 .feature {
@@ -222,6 +223,8 @@ h2 {
 
 .story {
 	display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
 	align-items: center;
 	margin-bottom: 20px;
 }
