@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question Practice</title>
+    <style>
+		/* General styling */
+		* {
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.question {
+			flex-basis: 45%;
+			margin-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 20px;
+			background-color: #f0f0f0;
+			border-radius: 5px;
+			position: relative;
+		}
+
+		.question p {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.choices {
+			display: flex;
+			flex-direction: column;
+			margin-left: 20px;
+		}
+
+		.choice {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		.choice input[type="radio"] {
+			margin-right: 10px;
+		}
+
+		.check-button {
+			margin-top: 10px;
+			padding: 5px;
+		}
+
+		.answer {
+			font-weight: bold;
+			display: none;
+			margin-top: 10px;
+		}
+
+		.hint {
+			font-style: italic;
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			margin-top: 10px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.question {
+				flex-basis: 100%;
+				align-items: flex-start;
+			}
+
+			.hint {
+				position: static;
+				margin-top: 20px;
+			}
+		}
+	</style>
+    </style>
+</head>
+
+<body>
+    <ol class="container">
+    <div class="question" data-answer="a">
+        <li>What is the capital of France?</li>
+        <div class="choices">
+            <ol>
+            <div class="choice">
+                <input type="radio" name="q1" value="a"><li> London</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q1" value="b"><li> Paris</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q1" value="c"><li> Madrid</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q1" value="d"><li> Yes</li>
+            </div>
+            </ol>
+        </div>
+        <div class="answer"></div>
+        <div class="hint" >Hint: The Eiffel Tower is located here.</div>
+        <button class="check-button" onclick="checkAnswer(this)">Check</button>
+        
+    </div>
+    <div class="question" data-answer="b">
+        <li>What is the largest country by area in the world?</li>
+        <div class="choices">
+        <ol>
+            <div class="choice">
+                <input type="radio" name="q2" value="a"><li> Russia</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q2" value="b"><li> Canada</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q2" value="c"><li> China</li>
+            </div>
+        </ol>
+        </div>
+        <div class="answer"></div>
+        <div class="hint">Hint: This country spans two continents.</div>
+        <button class="check-button" onclick="checkAnswer(this)">Check</button>
+    </div>
+    <div class="question" data-answer="c">
+        <li>What is the highest mountain in the world?</li>
+        <div class="choices">
+            <ol>
+            <div class="choice">
+                <input type="radio" name="q3" value="a"><li> Mount Kilimanjaro</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q3" value="b"><li> Mount Everest</li>
+            </div>
+            <div class="choice">
+                <input type="radio" name="q3" value="c"><li> Mount McKinley</li>
+            </div>
+            </ol>
+        </div>
+        <div class="answer"></div>
+        <div class="hint">Hint: This mountain is located in the Himalayas.</div>
+        <button class="check-button" onclick="checkAnswer(this)">Check</button>
+    </div>
+</ol>
+
+    <script>
+        /*
+
+       function checkAnswer(button) {
+    // Get the question div and the selected radio button
+    var questionDiv = button.parentElement;
+    var selectedAnswer = questionDiv.querySelector('input[name="' + button.parentElement.id + '"]:checked');
+
+    // Get the answer div and the hint div
+    var answerDiv = questionDiv.querySelector('.answer');
+    var hintDiv = questionDiv.querySelector('.hint');
+
+    // Check if an answer is selected
+    if (selectedAnswer === null) {
+        alert('Please select an answer.');
+        return;
+    }
+
+    // Check if the selected answer is correct
+    if (selectedAnswer.value === answerDiv.innerText) {
+       // alert('Correct!');
+         // Display "Correct!" message in the answer div
+         var answerDiv = questionDiv.querySelector('.answer');
+                    answerDiv.style.display = 'block';
+                    answerDiv.style.color = 'green';
+                    answerDiv.textContent = 'Correct!';
+                hintDiv.style.display = 'block';
+    } else {
+       // alert('Incorrect. Please try again.');
+        // Show the hint if it is hidden
+       // if (hintDiv.style.display === 'none') {
+           //}
+           var answerDiv = questionDiv.querySelector('.answer');
+           answerDiv.style.display = 'block';
+           answerDiv.style.color = 'red';
+           answerDiv.textContent = 'Incorrect.';
+        hintDiv.style.display = 'block';
+    }
+}
+
+
+function checkAnswer(button) {
+    // Get the question div and the selected radio button
+    var questionDiv = button.closest('.question');
+    var selectedAnswer = questionDiv.querySelector('input[name="' + button.previousElementSibling.name + '"]:checked');
+
+    // Get the answer div and the hint div
+    var answerDiv = questionDiv.querySelector('.answer');
+    var hintDiv = questionDiv.querySelector('.hint');
+
+    // Check if an answer is selected
+    if (selectedAnswer === null) {
+        alert('Please select an answer.');
+        return;
+    }
+
+    // Check if the selected answer is correct
+    if (selectedAnswer.value === answerDiv.innerText) {
+        // Display "Correct!" message in the answer div
+        answerDiv.style.display = 'block';
+        answerDiv.style.color = 'green';
+        answerDiv.textContent = 'Correct!';
+        hintDiv.style.display = 'block';
+    } else {
+        // Show the hint if it is hidden
+        answerDiv.style.display = 'block';
+        answerDiv.style.color = 'red';
+        answerDiv.textContent = 'Incorrect.';
+        hintDiv.style.display = 'block';
+    }
+}
+
+
+
+
+
+
+
+
+function checkAnswer(button) {
+  // Get the parent question div
+  var questionDiv = button.closest('.question');
+
+  // Get all the answer options for the current question
+  var answerOptions = questionDiv.querySelectorAll('input[type="radio"][name^="q"]');
+
+  // Check if an answer is selected
+  var selectedAnswer = null;
+  for (var i = 0; i < answerOptions.length; i++) {
+    if (answerOptions[i].checked) {
+      selectedAnswer = answerOptions[i].value;
+      break;
+    }
+  }
+
+  if (selectedAnswer === null) {
+    alert('Please select an answer.');
+    return;
+  }
+
+  // Get the answer div and the hint div
+  var answerDiv = questionDiv.querySelector('.answer');
+  var hintDiv = questionDiv.querySelector('.hint');
+
+  // Check if the selected answer is correct
+  if (selectedAnswer === answerDiv.innerText) {
+    // Display "Correct!" message in the answer div
+    answerDiv.style.display = 'block';
+    answerDiv.style.color = 'green';
+    answerDiv.textContent = 'Correct!';
+    hintDiv.style.display = 'block';
+  } else {
+    // Show the hint if it is hidden
+    answerDiv.style.display = 'block';
+    answerDiv.style.color = 'red';
+    answerDiv.textContent = 'Incorrect.';
+    hintDiv.style.display = 'block';
+  }
+}
+
+*/
+
+
+
+function checkAnswer(button) {
+  // Get the question div and the selected radio button
+  var questionDiv = button.closest('.question');
+  var selectedAnswer = questionDiv.querySelector('input[type="radio"]:checked');
+
+  // Get the answer div and the hint div
+  var answerDiv = questionDiv.querySelector('.answer');
+  var hintDiv = questionDiv.querySelector('.hint');
+
+  // Check if an answer is selected
+  if (selectedAnswer === null) {
+    alert('Please select an answer.');
+    return;
+  }
+
+  // Check if the selected answer is correct
+  if (selectedAnswer.value === questionDiv.dataset.answer) {
+    // Display "Correct!" message in the answer div
+    answerDiv.style.display = 'block';
+    answerDiv.style.color = 'green';
+    answerDiv.textContent = 'Correct!';
+    hintDiv.style.display = 'block';
+  } else {
+    // Show the hint if it is hidden
+    var answerDiv = questionDiv.querySelector('.answer');
+    answerDiv.style.display = 'block';
+    answerDiv.style.color = 'red';
+    answerDiv.textContent = 'Incorrect.';
+    hintDiv.style.display = 'block';
+  }
+}
+
+
+
+    </script>
+</body>
+
+</html>
