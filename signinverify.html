@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Email Verification</title>
+  <style>
+    /* CSS styles for the verification page */
+    /* ... */
+
+    .message {
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="message" id="message"></div>
+
+  <!-- Include Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase app
+    // ...
+    const firebaseConfig = {
+      apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
+      authDomain: "gamechanger-f5da7.firebaseapp.com",
+      databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
+      projectId: "gamechanger-f5da7",
+      storageBucket: "gamechanger-f5da7.appspot.com",
+      messagingSenderId: "358268649157",
+      appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
+      measurementId: "G-QBH1QYTY8V"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the auth service
+    // ...
+    const auth = firebase.auth();
+
+    // Get the verification action code from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get('mode');
+    const actionCode = urlParams.get('oobCode');
+
+    // Check if the verification action is to verify the email
+    if (mode === 'verifyEmail' && actionCode) {
+      // Apply the email verification action code
+      auth.applyActionCode(actionCode)
+        .then(() => {
+          // Email verification successful
+          document.getElementById('message').textContent = 'Email verified successfully. Redirecting to sign in...';
+
+          // Redirect to the sign-in page after a delay
+          setTimeout(() => {
+            window.location.href = 'signinform.html';
+          }, 3000); // Redirect after 3 seconds (adjust the delay as needed)
+        })
+        .catch((error) => {
+          // Handle errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          document.getElementById('message').textContent = `Error: ${errorCode} - ${errorMessage}`;
+        });
+    } else {
+      // Invalid verification action or action code
+      document.getElementById('message').textContent = 'Invalid verification link.';
+    }
+  </script>
+</body>
+
+</html>
