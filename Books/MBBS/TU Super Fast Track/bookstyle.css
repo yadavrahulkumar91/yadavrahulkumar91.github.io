@@ -21,11 +21,12 @@ header {
   padding: 30px;
   background-color: #fff;
   box-shadow: 0px 0px 10px #ccc;
+  text-align: justify;
 
 }
 @media (max-width: 767px) {
   .container {
-    width: 95%;
+    width: 90%;
     padding: 10px;
     box-sizing: border-box;
   }
