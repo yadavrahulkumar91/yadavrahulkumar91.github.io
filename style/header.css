@@ -1,0 +1,78 @@
+
+.header {
+    height: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #692323;
+    color: #fff;
+    z-index: 100;
+}
+
+.title-wrapper {
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.forms {
+    display: absolute;
+    align-items:
+}
+
+.sign-in,
+.sign-up {
+    position: relative;
+}
+
+.sign-in-form,
+.sign-up-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 20%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    z-index: 100;
+}
+
+.forms .sign-up {
+    margin-right: 10px;
+}
+
+.sign-in:hover .sign-in-form,
+.sign-up:hover .sign-up-form {
+    display: block;
+}
+
+header .logo img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

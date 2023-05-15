@@ -1,0 +1,370 @@
+   /* Reset some default styles */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.5;
+    margin: 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 10px;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #333;
+}
+
+/* Resources section styles */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.container2 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+.boxbook {
+    width: 125px;
+    height: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    overflow-wrap: wrap;
+}
+
+.boxbook:hover {
+    transform: translateY(-5px);
+}
+
+.boxbook img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.boxbook h2 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+
+}
+
+/* Home Tutors section styles */
+.tutor-profile {
+    display: flex;
+    flex-direction: auto;
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the breakpoint as needed */
+    .tutor-profile {
+        flex-wrap: wrap;
+    }
+}
+
+.teacher-profile {
+
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teacher-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.teacher-profile:hover {
+    transform: scale(1.1);
+}
+
+.teacher-profile:hover img {
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.teacher-profile-details {
+    margin-top: 3px;
+    line-height: 100%;
+    font-size: smaller;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.teacher-profile:hover .teacher-profile-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.teacher-profile-details p {
+    margin: 5px 0;
+}
+
+.teacher-profile-details p:first-child {
+    font-weight: bold;
+}
+
+
+
+/* Online Coaching section styles */
+.google-form-preview {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.enroll-container {
+    text-align: center;
+    
+}
+
+.embed-container {
+    max-width: 600px;
+    overflow-x: auto;
+    align-items: center;
+}
+
+.embed-container iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .embed-container {
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 500px) {
+    .embed-container iframe {
+        height: 400px;
+    }
+}
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .about-section h2 {
+    text-align: center;
+  }
+  
+  .about-section h3 {
+    margin-top: 20px;
+  }
+  
+  .about-section p {
+    margin-bottom: 10px;
+  }
+  
+  .teachers-section,
+  .course-duration-section,
+  .fee-section,
+  .class-time-section {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .about-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-section h3 {
+      text-align: center;
+    }
+  
+    .teachers-section,
+    .course-duration-section,
+    .fee-section,
+    .class-time-section {
+      flex-basis: 100%;
+    }
+  }
+  
+
+.coaching-plan {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.calendar-container {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+/* News and Notices section styles */
+.notice {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-grid {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.pdf-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.pdf-item iframe {
+    max-width: 100%;
+    height: 200px;
+    /* Adjust the height as needed */
+}
+
+.caption {
+    margin-top: 10px;
+}
+
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .book-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
