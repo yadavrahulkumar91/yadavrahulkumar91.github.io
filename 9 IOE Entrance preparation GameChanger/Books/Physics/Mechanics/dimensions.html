@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dimensions</title>
+    <link rel="stylesheet" type="text/css" href="/style/bookstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/script/bookscript.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dimensions</h1>
+        <p></p>
+    </header>
+    <center>
+        <div>
+            <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+            <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+            <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+            <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+        </div>
+    </center>
+    <div id="home-container" class="container">
+        <h1>Dimensions</h1>
+
+        <h2>Introduction</h2>
+        <p>In physics, dimensions are used to describe the fundamental quantities involved in physical phenomena. Understanding dimensions and dimensional analysis is crucial in formulating and analyzing physical equations. This chapter explores the concept of dimensions and their applications.</p>
+      
+        <h2>Dimensional Analysis</h2>
+        <p>Dimensional analysis is a powerful tool that allows us to check the correctness of equations and derive relationships between physical quantities. It involves analyzing the dimensions of the different terms in an equation to ensure dimensional consistency.</p>
+        
+        <h2>Dimensional Formula</h2>
+        <p>The dimensional formula represents the physical quantity in terms of its fundamental dimensions. Each fundamental dimension is assigned a symbol. Here are some common fundamental dimensions:</p>
+        
+        <table>
+          <tr>
+            <th>Quantity</th>
+            <th>Symbol</th>
+          </tr>
+          <tr>
+            <td>Length</td>
+            <td>L</td>
+          </tr>
+          <tr>
+            <td>Mass</td>
+            <td>M</td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>T</td>
+          </tr>
+          <tr>
+            <td>Electric current</td>
+            <td>I</td>
+          </tr>
+          <!-- Add more fundamental dimensions as needed -->
+        </table>
+        
+        <p>The dimensional formula of a quantity is obtained by expressing it as a product of powers of these fundamental dimensions. For example, the dimensional formula of velocity (v) can be expressed as [LT<sup>-1</sup>].</p>
+        
+        <h2>Applications</h2>
+        <p>Dimensional analysis finds applications in various branches of physics, including fluid dynamics, electromagnetism, and thermodynamics. It can be used to:</p>
+        <ul>
+          <li>Check the dimensional consistency of equations</li>
+          <li>Derive relationships between physical quantities</li>
+          <li>Perform unit conversions</li>
+          <li>Simplify complex equations</li>
+        </ul>
+        
+        <h2>Example</h2>
+        <p>Let's work through an example to understand the application of dimensional analysis:</p>
+        <p>Suppose we have an equation relating the period (T) of a simple pendulum, the length (L) of the pendulum, and the acceleration due to gravity (g):</p>
+        <p>$T = 2\pi \sqrt{\frac{L}{g}}$</p>
+        <p>Using dimensional analysis, we can verify the correctness of this equation. Let's analyze the dimensions of each term:</p>
+        <p>Dimension of T = [T]</p>
+        <p>Dimension of 2π = [1]</p>
+        <p>Dimension of L = [L]</p>
+        <p>Dimension of g = [LT<sup>-2</sup>]</p>
+        <p>Substituting these dimensions into the equation:</p>
+        <p>[T] = [1] × √([L] / [LT<sup>-2</sup>])</p>
+        <p>Simplifying further:</p>
+        <p>[T] = [T<sup>0</sup> L<sup>0.5</sup> (LT<sup>-2</sup>)<sup>-0.5</sup>]</p>
+        <p>Comparing the dimensions on both sides, we find that the equation is dimensionally consistent.</p>
+        
+    </div>
+    <div id="questions-container" class="container" style="display:none"></div>
+    <div id="videos-container" class="container" style="display:none"></div>
+    <div id="remnant-container" class="container" style="display:none"></div>
+    <footer>
+        <p>&copy; 2023 GameChanger</p>
+    </footer>
+</body>
+</html>
