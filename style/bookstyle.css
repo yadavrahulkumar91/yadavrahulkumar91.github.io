@@ -8,9 +8,21 @@ body {
 /* Style for page header */
 header {
   background-color: #1abc9c;
-  padding: 30px;
+  padding: 5px;
   color: white;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 2px; /* Reduce the padding for small screens */
+  }
+  header h1{
+    font-size:x-large;
+  }
+  .container{
+  
+  }
 }
 
 /* Style for main content section */
