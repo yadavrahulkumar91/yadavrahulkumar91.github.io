@@ -2,7 +2,9 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="bookstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+    <script src="/script/bookscript.js"></script>
     
   </head>
   <body>
@@ -19,6 +21,163 @@
     </div></center>
         
     <div id="home-container" class="container">    
+      <h2>Electric Field due to Point Charges and Field Lines</h2>
+
+<p>The electric field is a vector quantity that describes the influence of an electric charge on other charges in its vicinity. When dealing with point charges, the electric field can be calculated to determine the force experienced by other charges at different points in space.</p>
+
+<h3>Electric Field due to a Point Charge</h3>
+
+<p>The electric field, denoted as E, created by a point charge q at a given point in space can be calculated using the following formula:</p>
+
+<p align="center">
+  $ \mathbf{E} = \frac{{k \cdot q}}{{r^2}} \cdot \mathbf{\hat{r}} $
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>$ \mathbf{E} $ is the electric field vector.</li>
+  <li>k is the electrostatic constant ($9 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2$).</li>
+  <li>q is the magnitude of the point charge.</li>
+  <li>r is the distance between the charge and the point where the electric field is being calculated.</li>
+  <li>$ \mathbf{\hat{r}} $ is the unit vector pointing from the charge to the point.</li>
+</ul>
+
+<p>The electric field points away from a positive charge and toward a negative charge. Its magnitude decreases with increasing distance from the charge.</p>
+
+<h3>Field Lines</h3>
+
+<p>Field lines are a visual representation used to depict the electric field around charges. They are imaginary lines that indicate the direction of the electric field at each point in space. The following characteristics are associated with field lines:</p>
+
+<ul>
+  <li>Field lines originate from positive charges and terminate on negative charges.</li>
+  <li>Field lines never intersect each other.</li>
+  <li>The density of field lines indicates the strength of the electric field, with a higher density representing a stronger field.</li>
+  <li>Field lines are closer together where the electric field is stronger and farther apart where the field is weaker.</li>
+  <li>Field lines are perpendicular to the surfaces of conductors at equilibrium.</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>The electric field created by a point charge can be determined using the formula involving the electrostatic constant, charge magnitude, and distance. Field lines provide a visual representation of the electric field and its direction at different points in space. Understanding the electric field and field lines helps in analyzing the behavior of charges and their interactions in electrostatic systems.</p>
+<h2>Gauss's Law - Electric Flux</h2>
+
+<p>Gauss's law is a fundamental principle in electrostatics that relates the electric flux through a closed surface to the net charge enclosed by that surface. It provides a powerful tool for calculating electric fields in symmetric charge distributions.</p>
+
+<h3>Electric Flux</h3>
+
+<p>The electric flux, denoted as Φ, is a measure of the electric field passing through a given surface. It is defined as the dot product of the electric field vector (E) and the surface area vector (A). Mathematically, it can be expressed as:</p>
+
+<p align="center">
+  $ \Phi = \mathbf{E} \cdot \mathbf{A} $
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>$ \Phi $ is the electric flux.</li>
+  <li>$ \mathbf{E} $ is the electric field vector.</li>
+  <li>$ \mathbf{A} $ is the surface area vector.</li>
+</ul>
+
+<p>The electric flux passing through a closed surface is directly proportional to the net charge enclosed by that surface.</p>
+
+<h3>Gauss's Law</h3>
+
+<p>Gauss's law states that the electric flux through a closed surface is equal to the net charge enclosed by that surface divided by the permittivity of free space (ε<sub>0</sub>). Mathematically, it can be written as:</p>
+
+<p align="center">
+  $ \Phi = \frac{{Q_{\text{enc}}}}{{\varepsilon_0}} $
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>$ \Phi $ is the electric flux through the closed surface.</li>
+  <li>$ Q_{\text{enc}} $ is the net charge enclosed by the surface.</li>
+  <li>$ \varepsilon_0 $ is the permittivity of free space (approximately $8.85 \times 10^{-12} \, \text{C}^2/\text{N} \cdot \text{m}^2$).</li>
+</ul>
+
+<p>Gauss's law is particularly useful in situations with high symmetry, where the electric field is constant over a closed surface. It allows for the determination of the electric field using the known charge distribution.</p>
+
+<h3>Applications</h3>
+
+<p>Gauss's law finds application in various areas of physics and engineering, including:</p>
+
+<ul>
+  <li>Analysis of electric fields in symmetric systems, such as charged spheres, cylinders, and planes.</li>
+  <li>Determination of the electric field inside conductors at equilibrium.</li>
+  <li>Calculation of electric flux and charge distributions in capacitors.</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>Gauss's law provides a powerful method for calculating electric fields in situations with high symmetry. It relates the electric flux passing through a closed surface to the net charge enclosed by that surface. Understanding Gauss's law is essential for analyzing electric fields and their interactions with charge distributions in various physical systems.</p>
+<h2>Application of Gauss's Law - Field of a Charged Sphere, Line Charge, Charged Plane Conductor</h2>
+
+<p>Gauss's law is a powerful tool in determining electric fields for systems with high symmetry. Let's explore its application in calculating the electric field for specific charge distributions.</p>
+
+<h3>Field of a Charged Sphere</h3>
+
+<p>Consider a uniformly charged sphere with total charge Q and radius R. By utilizing the symmetry of the system, Gauss's law can be applied to find the electric field inside and outside the sphere.</p>
+
+<p>Inside the sphere, the electric field is zero as the net charge enclosed by any Gaussian surface is zero.</p>
+
+<p>Outside the sphere, the electric field can be calculated using Gauss's law:</p>
+
+<p align="center">
+  $ \Phi = \frac{{Q_{\text{enc}}}}{{\varepsilon_0}} $
+</p>
+
+<p>Since the charge distribution of the sphere is spherically symmetric, the electric field E is also spherically symmetric. Thus, the electric field magnitude E depends only on the radial distance r from the center of the sphere and is given by:</p>
+
+<p align="center">
+  $ E = \frac{{kQ}}{{r^2}} $
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>E is the magnitude of the electric field.</li>
+  <li>k is the electrostatic constant ($9 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2$).</li>
+  <li>Q is the total charge of the sphere.</li>
+  <li>r is the radial distance from the center of the sphere.</li>
+</ul>
+
+<h3>Field of a Line Charge</h3>
+
+<p>For an infinitely long line charge with linear charge density λ, Gauss's law can be applied to find the electric field surrounding the charge.</p>
+
+<p>The electric field is radially symmetric and depends only on the radial distance r from the line charge. The electric field magnitude E is given by:</p>
+
+<p align="center">
+  $ E = \frac{{k \cdot \lambda}}{{r}} $
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>E is the magnitude of the electric field.</li>
+  <li>k is the electrostatic constant ($9 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2$).</li>
+  <li>λ is the linear charge density of the line charge.</li>
+  <li>r is the radial distance from the line charge.</li>
+</ul>
+
+<h3>Field of a Charged Plane Conductor</h3>
+
+<p>A charged plane conductor creates a uniform electric field in its vicinity due to its infinite dimensions and symmetry. The electric field is perpendicular to the plane and has constant magnitude E throughout the region near the conductor.</p>
+
+<p>The magnitude of the electric field E near the charged plane conductor is given by:</p>
+
+<p align="center">
+  $ E = \frac{{\sigma}}{{2 \varepsilon_0}} $
+</p>
+
+<p>Where:</p>
+<ul>
+  <li>E is the magnitude of the electric field.</li>
+  <li>$ \sigma $ is the surface charge density of the plane conductor.</li>
+  <li>$ \varepsilon_0 $ is the permittivity of free space (approximately $8.85 \times 10^{-12} \, \text{C}^2/\text{N} \cdot \text{m}^2$).</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>Gauss's law allows us to calculate electric fields for systems with high symmetry. In this context, we explored the application of Gauss's law to determine the electric field for a charged sphere, line charge, and charged plane conductor. Understanding these applications is crucial for analyzing and predicting the behavior of electric fields in various practical situations.</p>
 
 
     </div>
