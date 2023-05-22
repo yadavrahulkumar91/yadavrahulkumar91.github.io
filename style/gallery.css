@@ -72,6 +72,7 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index:10000 ;
   }
 
   /* Fullscreen image */

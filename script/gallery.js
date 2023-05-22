@@ -16,4 +16,13 @@
   function closeFullscreen() {
     const fullscreen = document.querySelector('.fullscreen');
     fullscreen.style.display = 'none';
+ 
+  //  var imagePreview = event.currentTarget;
+    const imageDetails = imagePreview.querySelector('.image-details');
+
+
+    // Show image details
+    imageDetails.style.display = 'none';
+  
+ 
   }
