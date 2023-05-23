@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <style>
+        #zoomedImage {
+            cursor: zoom-in;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .zoomed {
+            cursor: zoom-out;
+            transform: scale(2);
+        }
+    </style>
+    <script>
+        function openFullscreen() {
+            var imagePreview = event.currentTarget;
+            var imageElement = imagePreview.querySelector('#zoomedImage');
+
+            if (imagePreview.requestFullscreen) {
+                imagePreview.requestFullscreen();
+            } else if (imagePreview.mozRequestFullScreen) {
+                imagePreview.mozRequestFullScreen();
+            } else if (imagePreview.webkitRequestFullscreen) {
+                imagePreview.webkitRequestFullscreen();
+            } else if (imagePreview.msRequestFullscreen) {
+                imagePreview.msRequestFullscreen();
+            }
+
+            imageElement.classList.add('zoomed');
+
+            // Add event listeners for zooming
+            imageElement.addEventListener('wheel', handleZoom);
+            imageElement.addEventListener('touchstart', handleTouchStart);
+            imageElement.addEventListener('touchmove', handleTouchMove);
+        }
+
+        function handleZoom(event) {
+            event.preventDefault();
+
+            var imageElement = event.currentTarget;
+
+            // Adjust zoom level based on scroll direction
+            var zoomLevel = event.deltaY > 0 ? 0.9 : 1.1;
+            imageElement.style.transform = `scale(${zoomLevel})`;
+        }
+
+        var touchStartX = 0;
+        var touchStartY = 0;
+
+        function handleTouchStart(event) {
+            touchStartX = event.touches[0].clientX;
+            touchStartY = event.touches[0].clientY;
+        }
+
+        function handleTouchMove(event) {
+            event.preventDefault();
+
+            var imageElement = event.currentTarget;
+            var touchCurrentX = event.touches[0].clientX;
+            var touchCurrentY = event.touches[0].clientY;
+
+            // Adjust zoom level based on touch movement
+            var zoomLevel = touchCurrentY > touchStartY ? 0.9 : 1.1;
+            imageElement.style.transform = `scale(${zoomLevel})`;
+
+            touchStartX = touchCurrentX;
+            touchStartY = touchCurrentY;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="image-preview" onclick="openFullscreen()">
+        <img src="/image/Microbiology/Urea htdrolulysis test.jpg" alt="Image 1" id="zoomedImage">
+        <div class="image-details">
+            <h3>Urea Hydrolysis Test</h3>
+            <p>Description 5</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

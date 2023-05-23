@@ -1,28 +1,27 @@
- // Open fullscreen mode
- function openFullscreen(title, description) {
-    const fullscreen = document.querySelector('.fullscreen');
-    const image = document.querySelector('.fullscreen .image');
-    const titleElement = document.querySelector('.fullscreen-title');
-    const descriptionElement = document.querySelector('.fullscreen-description');
+function openFullscreen() {
+  const fullscreen = document.querySelector('.fullscreen');
+  const image = document.querySelector('.fullscreen .image');
+  image.src = event.target.src;
+  fullscreen.style.display = 'flex';
 
-    image.src = event.target.src;
-    titleElement.textContent = title;
-    descriptionElement.textContent = description;
-    fullscreen.style.display = 'flex';
-  }
+  var imagePreview = event.currentTarget;
+  var imageDetailsList = imagePreview.querySelectorAll('.image-details');
 
+  imageDetailsList.forEach(function (imageDetails) {
+      if (imageDetails.parentElement === imagePreview) {
+          imageDetails.style.display = 'block';
+      } else {
+          imageDetails.style.display = 'none';
+      }
+  });
+}
 
-  // Close fullscreen mode
-  function closeFullscreen() {
-    const fullscreen = document.querySelector('.fullscreen');
-    fullscreen.style.display = 'none';
- 
-  //  var imagePreview = event.currentTarget;
-    const imageDetails = imagePreview.querySelector('.image-details');
+function closeFullscreen() {
+  var fullscreen = document.querySelector('.fullscreen');
+  fullscreen.style.display = 'none';
 
-
-    // Show image details
-    imageDetails.style.display = 'none';
-  
- 
-  }
+  var imageDetailsList = document.querySelectorAll('.image-details');
+  imageDetailsList.forEach(function (imageDetails) {
+      imageDetails.style.display = 'none';
+  });
+}

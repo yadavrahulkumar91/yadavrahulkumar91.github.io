@@ -1,113 +1,119 @@
 body {
-    padding:2%;
-}
- /* Gallery container */
- .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: center;
-    border: 1px solid;
-    border-radius:1%;
-   
-  }
-
-
-  /* Image preview in circle */
-  .gallery .image-preview {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 25px;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .gallery .image-preview img {
-    width: 100%;
-    height: 100%;
-   
-    object-fit: cover;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-  }
-
- .gallery .image-row:hover .image-preview:not(:hover) {
-    width:100px;
-  margin-left: 0px;
-  margin-right: 0px;
+  padding: 2%;
 }
 
-  /* Enlarged view on hover */
-  .gallery .image-preview:hover {
-    width: 300px;
-    height: 300px;
-    margin:2px;
-    border-radius: 2%;
-    cursor: pointer;
-    z-index: 1;
-  }
+/* Gallery container */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 1%;
 
-  .gallery .image-preview:hover img {
-    transform: scale(1.2);
-  }
+}
 
-  /* Enlarged view with title and description */
-  .gallery .image-preview:hover .image-details {
-    display: block;
-  }
 
-  /* Image title and description */
-  .gallery .image-details {
-    display: none;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    z-index:10000 ;
-  }
+/* Image preview in circle */
+.gallery .image-preview {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Fullscreen image */
-  .fullscreen {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
-  }
+.gallery .image-preview img {
+  width: 100%;
+  height: 100%;
 
-  .fullscreen .image {
-    display: block;
-    max-width: 90%;
-    max-height: 90%;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
 
-  .fullscreen .image-details {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 14px;
-    box-sizing: border-box;
-  }
+
+
+/* Enlarged view on hover */
+.gallery .image-preview:hover {
+  width: 300px;
+  height: 300px;
+  margin: 2px;
+  border-radius: 2%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.gallery .image-preview:hover img {
+  transform: scale(1.2);
+}
+
+
+
+.gallery .image-preview:hover .image-details,
+.gallery .image-preview.fullscreen .image-details,
+.gallery .image-preview.fullscreen:hover .image-details {
+  display: block !important;
+}
+
+.gallery .image-details {
+  display: none;
+}
+
+
+/* Image title and description */
+.gallery .image-details {
+  display: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+/* Fullscreen image */
+.fullscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 4;
+}
+
+.fullscreen .image {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fullscreen .image-details {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+
+}
