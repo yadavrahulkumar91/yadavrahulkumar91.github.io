@@ -106,3 +106,188 @@ function closeFullscreen() {
   fullscreen.style.display = 'none';
 }
 
+
+
+
+
+
+// Media script
+
+
+
+ // Get all media containers
+ const mediaContainers = document.querySelectorAll('.media-container');
+
+ // Add click event listener to each media container
+ mediaContainers.forEach((container) => {
+     container.addEventListener('click', () => {
+         const source = container.querySelector('.media-source img').src;
+         const title = container.querySelector('.media-details h3').textContent;
+         const description = container.querySelector('.media-details p').textContent;
+
+         openPreview(source, title, description);
+
+
+         container.classList.add('selected');
+
+     });
+ });
+
+ // Open preview mode
+ function openPreview(source, title, description) {
+     // Create preview elements
+     const previewContainer = document.createElement('div');
+     previewContainer.classList.add('preview-container');
+
+     const previewImage = document.createElement('img');
+     previewImage.classList.add('preview-image');
+     previewImage.src = source;
+
+     const previewDetails = document.createElement('div');
+     previewDetails.classList.add('preview-details');
+
+     const closeButton = document.createElement('span');
+     closeButton.classList.add('close-preview');
+     closeButton.innerHTML = '&times;';
+
+     const collapseButton = document.createElement('span');
+     collapseButton.classList.add('collapse-preview');
+     collapseButton.innerHTML = '&times;';
+
+     const uncollapseButton = document.createElement('div');
+     uncollapseButton.classList.add('uncollapse-preview');
+     uncollapseButton.innerHTML = '&alpha;';
+
+     const previewTitle = document.createElement('h3');
+     previewTitle.textContent = title;
+
+     const previewDescription = document.createElement('p');
+     previewDescription.textContent = description;
+
+     // Append elements to preview container
+     previewContainer.appendChild(previewImage);
+     previewContainer.appendChild(closeButton);
+     previewDetails.appendChild(previewTitle);
+     previewDetails.appendChild(previewDescription);
+     previewDetails.appendChild(collapseButton);
+     previewDetails.appendChild(uncollapseButton);
+     previewContainer.appendChild(previewDetails);
+
+     // Append preview container to the body
+     document.body.appendChild(previewContainer);
+
+     // Add click event listener to close button
+     closeButton.addEventListener('click', closePreview);
+
+     // Add click event listener to close button
+     collapseButton.addEventListener('click', collapseDetail);
+
+     // Add click event listener to close button
+     uncollapseButton.addEventListener('click', collapseDetail);
+
+     // Display the preview container
+     previewContainer.style.display = 'block';
+
+     addNavigationButtons();
+
+ }
+
+ // Close preview mode
+ function closePreview() {
+     const previewContainer = document.querySelector('.preview-container');
+     previewContainer.remove();
+ }
+
+ function collapseDetail() {
+     const previewDetails = document.querySelector('.preview-details');
+     previewDetails.classList.add('collapsible-content');
+     
+ }
+
+ function showDetails() {
+     const showDetails = document.querySelector('.preview-details');
+     previewDetails.classList.add('collapsible-content.open');
+ }
+
+ // Add navigation buttons to preview mode
+ function addNavigationButtons() {
+    const previewContainer = document.querySelector('.preview-container');
+    const previewNav = document.createElement('div');
+    previewNav.classList.add('preview-nav');
+  
+    const prevButton = document.createElement('button');
+    prevButton.innerHTML = '&lt; Prev';
+    prevButton.addEventListener('click', showPrevMedia);
+  
+    const nextButton = document.createElement('button');
+    nextButton.innerHTML = 'Next &gt;';
+    nextButton.addEventListener('click', showNextMedia);
+  
+    previewNav.appendChild(prevButton);
+    previewNav.appendChild(nextButton);
+    previewContainer.appendChild(previewNav);
+  
+    // Listen for keydown events on the document
+    document.addEventListener('keydown', function (event) {
+      // Check if the left arrow key is pressed (code 37)
+      if (event.keyCode === 37) {
+        showPrevMedia();
+      }
+      // Check if the right arrow key is pressed (code 39)
+      else if (event.keyCode === 39) {
+        showNextMedia();
+      }
+    });
+  }
+  
+
+ // Show previous media in preview mode
+ function showPrevMedia() {
+     const currentContainer = document.querySelector('.media-container.selected');
+     const prevContainer = currentContainer.previousElementSibling;
+
+     if (prevContainer) {
+         const prevImage = prevContainer.querySelector('.media-source img');
+         const prevTitle = prevContainer.querySelector('.media-details h3').textContent;
+         const prevDescription = prevContainer.querySelector('.media-details p').textContent;
+
+         currentContainer.classList.remove('selected');
+         prevContainer.classList.add('selected');
+
+         const previewImage = document.querySelector('.preview-image');
+         previewImage.src = prevImage.src;
+
+         const previewTitle = document.querySelector('.preview-details h3');
+         previewTitle.textContent = prevTitle;
+
+         const previewDescription = document.querySelector('.preview-details p');
+         previewDescription.textContent = prevDescription;
+     }
+ }
+
+ // Show next media in preview mode
+ function showNextMedia() {
+     const currentContainer = document.querySelector('.media-container.selected');
+     const nextContainer = currentContainer.nextElementSibling;
+
+     if (nextContainer) {
+         const nextImage = nextContainer.querySelector('.media-source img');
+         const nextTitle = nextContainer.querySelector('.media-details h3').textContent;
+         const nextDescription = nextContainer.querySelector('.media-details p').textContent;
+
+         currentContainer.classList.remove('selected');
+         nextContainer.classList.add('selected');
+
+         const previewImage = document.querySelector('.preview-image');
+         previewImage.src = nextImage.src;
+
+         const previewTitle = document.querySelector('.preview-details h3');
+         previewTitle.textContent = nextTitle;
+
+         const previewDescription = document.querySelector('.preview-details p');
+         previewDescription.textContent = nextDescription;
+     }
+ }
+
+ // Set up navigation buttons
+// addNavigationButtons();

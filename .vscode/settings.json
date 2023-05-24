@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/aaPlan.html"
+    "livePreview.defaultPreviewPath": "/aaPlan.html",
+    "html.validate.styles": false
 }

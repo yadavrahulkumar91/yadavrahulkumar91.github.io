@@ -474,3 +474,137 @@ border-radius: 5px;
 
 
 
+
+/*  Media preview container */
+.media-container {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.media-source img {
+  max-width: 100%;
+  height: auto;
+}
+
+.media-details {
+  display: block;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+/* Preview mode styles */
+.preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 251, 251, 0.9);
+  z-index: 9999;
+  display: none;
+}
+
+.preview-image {
+  max-width: 90%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preview-details {
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: #1d1414;
+  color:#f5f5f5;
+  opacity:0.8;
+  border-radius: 5px;
+}
+
+.close-preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0a0707;
+  border: solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.collapse-preview {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0a0707;
+  border: solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.uncollapse-preview {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0a0707;
+  border: solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.preview-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+}
+
+.preview-nav button {
+  background-color: transparent;
+  border: solid;
+  outline:brown;
+  color: #0a0707;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.preview-nav button:focus {
+  outline: none;  
+}
+
+/* Collapsible details styles */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-content.open {
+  max-height: 300px;
+  /* Adjust this value to your desired height */
+}
+
+
+
+
+
+
