@@ -123,7 +123,7 @@ function closeFullscreen() {
      container.addEventListener('click', () => {
          const source = container.querySelector('.media-source img').src;
          const title = container.querySelector('.media-details h3').textContent;
-         const description = container.querySelector('.media-details p').textContent;
+         const description = container.querySelector('.media-details div').innerHTML;
 
          openPreview(source, title, description);
 
@@ -146,27 +146,28 @@ function closeFullscreen() {
      const previewDetails = document.createElement('div');
      previewDetails.classList.add('preview-details');
 
-     const closeButton = document.createElement('span');
-     closeButton.classList.add('close-preview');
-     closeButton.innerHTML = '&times;';
+    
 
      const collapseButton = document.createElement('span');
      collapseButton.classList.add('collapse-preview');
      collapseButton.innerHTML = '&times;';
+     
+
+     
 
      const uncollapseButton = document.createElement('div');
      uncollapseButton.classList.add('uncollapse-preview');
      uncollapseButton.innerHTML = '&alpha;';
+     
 
      const previewTitle = document.createElement('h3');
      previewTitle.textContent = title;
 
-     const previewDescription = document.createElement('p');
-     previewDescription.textContent = description;
+     const previewDescription = document.createElement('div');
+     previewDescription.innerHTML = description;
 
      // Append elements to preview container
      previewContainer.appendChild(previewImage);
-     previewContainer.appendChild(closeButton);
      previewDetails.appendChild(previewTitle);
      previewDetails.appendChild(previewDescription);
      previewDetails.appendChild(collapseButton);
@@ -177,13 +178,13 @@ function closeFullscreen() {
      document.body.appendChild(previewContainer);
 
      // Add click event listener to close button
-     closeButton.addEventListener('click', closePreview);
+    
+
+     // Add click event listener to collapse button
+        collapseButton.addEventListener('click', collapseDetail);
 
      // Add click event listener to close button
-     collapseButton.addEventListener('click', collapseDetail);
-
-     // Add click event listener to close button
-     uncollapseButton.addEventListener('click', collapseDetail);
+     //uncollapseButton.addEventListener('click', collapseDetail);
 
      // Display the preview container
      previewContainer.style.display = 'block';
@@ -192,22 +193,7 @@ function closeFullscreen() {
 
  }
 
- // Close preview mode
- function closePreview() {
-     const previewContainer = document.querySelector('.preview-container');
-     previewContainer.remove();
- }
 
- function collapseDetail() {
-     const previewDetails = document.querySelector('.preview-details');
-     previewDetails.classList.add('collapsible-content');
-     
- }
-
- function showDetails() {
-     const showDetails = document.querySelector('.preview-details');
-     previewDetails.classList.add('collapsible-content.open');
- }
 
  // Add navigation buttons to preview mode
  function addNavigationButtons() {
@@ -216,30 +202,62 @@ function closeFullscreen() {
     previewNav.classList.add('preview-nav');
   
     const prevButton = document.createElement('button');
-    prevButton.innerHTML = '&lt; Prev';
+    prevButton.innerHTML = '&lt';
     prevButton.addEventListener('click', showPrevMedia);
   
     const nextButton = document.createElement('button');
-    nextButton.innerHTML = 'Next &gt;';
+    nextButton.innerHTML = '&gt;';
     nextButton.addEventListener('click', showNextMedia);
+
+    const closeButton = document.createElement('span');
+    closeButton.classList.add('close-preview');
+    closeButton.innerHTML = '&times;';
+    closeButton.addEventListener('click', closePreview);
+    
   
     previewNav.appendChild(prevButton);
     previewNav.appendChild(nextButton);
     previewContainer.appendChild(previewNav);
+    previewContainer.appendChild(closeButton);
+
   
     // Listen for keydown events on the document
     document.addEventListener('keydown', function (event) {
-      // Check if the left arrow key is pressed (code 37)
-      if (event.keyCode === 37) {
-        showPrevMedia();
-      }
-      // Check if the right arrow key is pressed (code 39)
-      else if (event.keyCode === 39) {
-        showNextMedia();
-      }
-    });
+        // Check if the left arrow key is pressed (code 37)
+        if (event.keyCode === 37) {
+          showPrevMedia();
+          event.preventDefault(); // Prevent key repeat
+        }
+        // Check if the right arrow key is pressed (code 39)
+        else if (event.keyCode === 39) {
+          showNextMedia();
+          event.preventDefault(); // Prevent key repeat
+        }
+        // Check if the escape key is pressed (code 27)
+        else if (event.keyCode === 27) {
+          closePreview();
+          event.preventDefault(); // Prevent key repeat
+        }
+      });
+      
   }
   
+   // Close preview mode
+ function closePreview() {
+    const previewContainer = document.querySelector('.preview-container');
+    previewContainer.remove();
+}
+
+function collapseDetail() {
+    const previewDetails = document.querySelector('.preview-details');
+    previewDetails.classList.add('collapsible-content');
+    
+}
+
+function showDetails() {
+    const showDetails = document.querySelector('.preview-details');
+//    previewDetails.classList.add('.collapsible-content.open');
+}
 
  // Show previous media in preview mode
  function showPrevMedia() {
@@ -249,7 +267,7 @@ function closeFullscreen() {
      if (prevContainer) {
          const prevImage = prevContainer.querySelector('.media-source img');
          const prevTitle = prevContainer.querySelector('.media-details h3').textContent;
-         const prevDescription = prevContainer.querySelector('.media-details p').textContent;
+         const prevDescription = prevContainer.querySelector('.media-details div').innerHTML;
 
          currentContainer.classList.remove('selected');
          prevContainer.classList.add('selected');
@@ -260,8 +278,8 @@ function closeFullscreen() {
          const previewTitle = document.querySelector('.preview-details h3');
          previewTitle.textContent = prevTitle;
 
-         const previewDescription = document.querySelector('.preview-details p');
-         previewDescription.textContent = prevDescription;
+         const previewDescription = document.querySelector('.preview-details div');
+         previewDescription.innerHTML = prevDescription;
      }
  }
 
@@ -273,7 +291,7 @@ function closeFullscreen() {
      if (nextContainer) {
          const nextImage = nextContainer.querySelector('.media-source img');
          const nextTitle = nextContainer.querySelector('.media-details h3').textContent;
-         const nextDescription = nextContainer.querySelector('.media-details p').textContent;
+         const nextDescription = nextContainer.querySelector('.media-details div').innerHTML;
 
          currentContainer.classList.remove('selected');
          nextContainer.classList.add('selected');
@@ -284,8 +302,8 @@ function closeFullscreen() {
          const previewTitle = document.querySelector('.preview-details h3');
          previewTitle.textContent = nextTitle;
 
-         const previewDescription = document.querySelector('.preview-details p');
-         previewDescription.textContent = nextDescription;
+         const previewDescription = document.querySelector('.preview-details div');
+         previewDescription.innerHTML = nextDescription;
      }
  }
 
