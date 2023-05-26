@@ -2,225 +2,456 @@
 <html>
 
 <head>
-	<title>Medical Universities in Nepal</title>
-	<style>
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: 50px;
-		}
+    <title>MBBS GameChanger</title>
+    <link rel="stylesheet" type="text/css" href="/style/sector.css">
+    <style>
 
-		.box {
-			width: 300px;
-			height: 300px;
-			background-color: #f9f9f9;
-			border: 1px solid #ddd;
-			border-radius: 10px;
-			padding: 20px;
-			margin-bottom: 50px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			transition: transform 0.2s ease-in-out;
-			cursor: pointer;
-		}
-
-		.box:hover {
-			transform: translateY(-5px);
-		}
-
-		.box img {
-			max-width: 100%;
-			height: auto;
-		}
-
-		.box h2 {
-			font-size: 30px;
-			margin-top: 10px;
-			margin-bottom: 20px;
-		}
-
-
-		.container1 {
-			display: block;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			
-			background-color: #f2f2f2;
-			padding: 20px;
-			border-radius: 10px;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-		}
-
-		.container2 {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-		
-			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: 20px;
-			border-radius: 5px;
-			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-		}
-
-		.container2 h2 {
-			margin-top: 0;
-			font-size: 24px;
-			color: #333;
-			text-align: center;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			margin-bottom: 20px;
-		}
-
-		.container2 p {
-			font-size: 16px;
-			line-height: 1.5;
-			color: #666;
-		}
-
-
-		.boxbook {
-			width: 125px;
-			height: 200px;
-			background-color: #f9f9f9;
-			border: 1px solid #ddd;
-			border-radius: 10px;
-			padding: 20px;
-			margin-bottom: 50px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			transition: transform 0.2s ease-in-out;
-			cursor: pointer;
-			overflow-wrap: wrap;
-		}
-
-		.boxbook:hover {
-			transform: translateY(-5px);
-		}
-
-		.boxbook img {
-			max-width: 100%;
-			height: auto;
-		}
-
-		.boxbook h2 {
-			font-size: 15px;
-			margin-top: 10px;
-			margin-bottom: 20px;
-			
-
-		}
-	</style>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div id="header"></div>
-	<script>
-		fetch('/html/header.html')
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById('header').innerHTML = data;
-			});
-	</script>
-	
-	<center><h1>MBBS GameChanger</h1></center>
 
-	<div class="container1">
-		<h2>IOM (Institute of Medicine) Notes</h2>
-		<div class="container2">
-			<div class="boxbook" onclick="location.href='/10 MBBS GameChanger/Books/TU Super Fast Track/Paper content.html';">
-				<img src="iom.jpeg" alt="Tribhuvan University - Institute of Medicine">
-				<h2>TU MBBS Super Fast Track</h2>
-			</div>
-			<div class="boxbook" onclick="location.href='/10 MBBS GameChanger/TU/Firstyear/practical.html';">
-				<img src="/image/practical2.png" alt="TU 1st year practical">
-				<h2>TU (IOM) 1st year practical</h2>
-			</div>
+    <div id="header"></div>
+    <script>
+        fetch('/html/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+    <h1>MBBS GameChanger</h1>
 
-			<div class="boxbook" onclick="location.href='/10 MBBS GameChanger/Real PBL/realPBLcontent.html';">
-				<img src="/image/practical2.png" alt="TU 1st year practical">
-				<h2>Real PBL at IOM</h2>
-			</div>
+    <section id="resources">
+        <h2>Resources</h2>
+        <div class="container">
+            <div class="column">
+                <h3>Our Books</h3>
+                <div class="book-container">
+                    <h4>IOM (Institute of Medicine) Notes</h4>
+                    <div class="container2">
+                        <div class="boxbook"
+                            onclick="location.href='/10 MBBS GameChanger/Books/TU Super Fast Track/Paper content.html';">
+                            <img src="iom.jpeg" alt="Tribhuvan University - Institute of Medicine">
+                            <h2>TU MBBS Super Fast Track</h2>
+                        </div>
+                        <div class="boxbook"
+                            onclick="location.href='/10 MBBS GameChanger/TU/Firstyear/practical.html';">
+                            <img src="/image/practical2.png" alt="TU 1st year practical">
+                            <h2>TU (IOM) 1st year practical</h2>
+                        </div>
+
+                        <div class="boxbook"
+                            onclick="location.href='/10 MBBS GameChanger/Real PBL/realPBLcontent.html';">
+                            <img src="/image/practical2.png" alt="TU 1st year practical">
+                            <h2>Real PBL at IOM</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3>Basic Science Reference Books</h3>
+                <div class="book-container">
+                    <h4>Anatomy</h4>
+                    <div class="container2">
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/" alt="Gray's Anatomy for Clinical Practice 42th edition"> 
+                                <h2 class="title">Gray's Anatomy for Clinical Practice 42th edition</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-container">
+                    <h4>Biochemistry</h4>
+                    <div class="container2">
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Pharmacology/_-%20Essentials%20of%20Medical%20Pharmacology%208th%20Edition%20(DIGITAL%20VERSION)-Jaypee%20Brothers%20Medical%20Publishers%20(P)%20Ltd.%20(Latest).pdf';">
+                                <img src="/image/" alt="K.D. Tripathi Pharmacology">
+                                <h2>Pharmacology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <h4>Microbiology</h4>
+                    <div class="container2">
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Pharmacology/_-%20Essentials%20of%20Medical%20Pharmacology%208th%20Edition%20(DIGITAL%20VERSION)-Jaypee%20Brothers%20Medical%20Publishers%20(P)%20Ltd.%20(Latest).pdf';">
+                                <img src="/image/" alt="K.D. Tripathi Pharmacology">
+                                <h2>Pharmacology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <h4>Physiology</h4>
+                    <div class="container2">
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Pharmacology/_-%20Essentials%20of%20Medical%20Pharmacology%208th%20Edition%20(DIGITAL%20VERSION)-Jaypee%20Brothers%20Medical%20Publishers%20(P)%20Ltd.%20(Latest).pdf';">
+                                <img src="/image/" alt="K.D. Tripathi Pharmacology">
+                                <h2>Pharmacology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <h4>Pathology</h4>
+                    <div class="container2">
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Pharmacology/_-%20Essentials%20of%20Medical%20Pharmacology%208th%20Edition%20(DIGITAL%20VERSION)-Jaypee%20Brothers%20Medical%20Publishers%20(P)%20Ltd.%20(Latest).pdf';">
+                                <img src="/image/" alt="K.D. Tripathi Pharmacology">
+                                <h2>Pharmacology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <h4>Pharmacology</h4>
+                    <div class="container2">
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Pharmacology/_-%20Essentials%20of%20Medical%20Pharmacology%208th%20Edition%20(DIGITAL%20VERSION)-Jaypee%20Brothers%20Medical%20Publishers%20(P)%20Ltd.%20(Latest).pdf';">
+                                <img src="/image/" alt="K.D. Tripathi Pharmacology">
+                                <h2>Pharmacology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Anatomy/Gray's%20Anatomy/Susan%20Standring%20-%20Gray's%20anatomy%20-%20The%20anatomical%20basis%20of%20clinical%20practice-Elsevier%20(2021)(latest).pdf';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-		</div>
+                
+
+                <div class="column">
+                    <h3>Any Recent Resources</h3>
+                    <div class="notice">
+
+                        <div class="pdf-grid">
+                            <div class="boxbook"
+                                onclick="location.href='https://tunepal-my.sharepoint.com/personal/rahul_772422_puc_tu_edu_np/Documents/4.%20Medical/MBBS%20Basic%20science/Pharmacology/_-%20Essentials%20of%20Medical%20Pharmacology%208th%20Edition%20(DIGITAL%20VERSION)-Jaypee%20Brothers%20Medical%20Publishers%20(P)%20Ltd.%20(Latest).pdf';">
+                                <img src="/image/" alt="K.D. Tripathi Pharmacology">
+                                <h2>Pharmacology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentChemistry.html';">
+                                <img src="iom.jpeg" alt="IOE Chemistry GameChanger">
+                                <h2>Chemistry</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentZoology.html';">
+                                <img src="ku-sms.jpg" alt="Biology">
+                                <h2>Zoology</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentBotany.html';">
+                                <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
+                                <h2>Botany</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/contentMathematics.html';">
+                                <img src="ku-sms.jpg" alt="IOE Mathematics GameChanger">
+                                <h2>Mathematics</h2>
+                            </div>
+                            <div class="boxbook" onclick="location.href='Books/12/englishContent.html';">
+                                <img src="bpkihs.jpg" alt="IOE English GameChanger">
+                                <h2>English</h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+    </section>
+
+    <!--
+
+    <section id="home-tutors">
+        <h2>Available Home Tutors</h2>
+        <div class="container">
+            <div class="column">
+                <div class="tutor-profile">
+
+                    <div class="teacher-profile">
+                        <img src="image1.jpg" alt="Teacher Profile">
+                        <div class="teacher-profile-details">
+                            <p>Name: Rahul Kumar Yadav</p>
+                            <p>Qualification: <br>
+                            <ul>
+                                <li>MBBS, </li>
+                                <li> St. Xavier’s Entrance Cracker, </li>
+                                <li>IOE Entrance Cracker, </li>
+                                <li>CEE Entrance Cracker</li>
+
+                            </ul>
+                            </p>
+                            <p>Phone no: 9808305830</p>
+                            <p>Email: yadavrahulkumar91@gmail.com</p>
+                            <p>Location: Maharajgunj, Kathmandu, Behind Teaching Hospital</p>
+                        </div>
+                    </div>
+
+                    <div class="teacher-profile">
+                        <img src="image1.jpg" alt="Teacher Profile">
+                        <div class="teacher-profile-details">
+                            <p>Name: Rahul Kumar Yadav</p>
+                            <p>Qualification: MBBS, St. Xavier’s Entrance Cracker, IOE Entrance Cracker, CEE Entrance
+                                Cracker</p>
+                            <p>Phone no: 9808305830</p>
+                            <p>Email: yadavrahulkumar91@gmail.com</p>
+                            <p>Location: Maharajgunj, Kathmandu, Behind Teaching Hospital</p>
+                        </div>
+                    </div>
 
 
-	</div>
-	<div class="container1">
-	<h2>Basic science GameChanger Books</h2>
-	<div class="container2">
-		<div class="boxbook" onclick="location.href='MBBS GameChanger\KU\KUMBBS.html';">
-			<img src="ku-sms.jpg" alt="Anatomy">
-			<h2>Anatomy</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='MBBS GameChanger\KU\KUMBBS.html';">
-			<img src="ku-sms.jpg" alt="Embrylogy">
-			<h2>Embrylogy</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='MBBS GameChanger\KU\KUMBBS.html';">
-			<img src="ku-sms.jpg" alt="Histology">
-			<h2>Histology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='MBBS GameChanger\KU\KUMBBS.html';">
-			<img src="ku-sms.jpg" alt="Kathmandu University - School of Medical Sciences">
-			<h2>Biochemistry</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='bpkihs.html';">
-			<img src="bpkihs.jpg" alt="B.P. Koirala Institute of Health Sciences">
-			<h2>Microbiology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='pahs.html';">
-			<img src="pahs.jpg" alt="Patan Academy of Health Sciences">
-			<h2>Physiology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='kahs.html';">
-			<img src="kahs.jpg" alt="Karnali Academy of Health Sciences">
-			<h2>Pathology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='kahs.html';">
-			<img src="kahs.jpg" alt="Karnali Academy of Health Sciences">
-			<h2>Pharmacology</h2>
-		</div>
-	</div>
-</div>
-<div class="container1">
-	<h2>Clinical science GameChanger Books</h2>
-	<div class="container2">
-		<div class="boxbook" onclick="location.href='MBBS GameChanger\TU\TUMBBS.html';">
-			<img src="iom.jpeg" alt="Tribhuvan University - Institute of Medicine">
-			<h2>Anatomy</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='MBBS GameChanger\KU\KUMBBS.html';">
-			<img src="ku-sms.jpg" alt="Kathmandu University - School of Medical Sciences">
-			<h2>Biochemistry</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='bpkihs.html';">
-			<img src="bpkihs.jpg" alt="B.P. Koirala Institute of Health Sciences">
-			<h2>Microbiology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='pahs.html';">
-			<img src="pahs.jpg" alt="Patan Academy of Health Sciences">
-			<h2>Physiology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='kahs.html';">
-			<img src="kahs.jpg" alt="Karnali Academy of Health Sciences">
-			<h2>Pathology</h2>
-		</div>
-		<div class="boxbook" onclick="location.href='kahs.html';">
-			<img src="kahs.jpg" alt="Karnali Academy of Health Sciences">
-			<h2>Pharmacology</h2>
-		</div>
-	</div>
-</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<h1>Medical Universities in Nepal</h1>
-	<div class="container">
+
+    <section id="online-coaching">
+        <h2>Online Coaching Class</h2>
+        <div class="container">
+            <div class="column">
+                <h2>About</h2>
+                <section class="about-section">
+
+                    <div class="teachers-section">
+                        <h3>Teachers</h3>
+                        <div class="teacher-profile">
+                            <img src="/image/rahul.png" alt="Teacher Profile">
+                            <div class="teacher-profile-details">
+                                <p>Name: Rahul Kumar Yadav</p>
+                                <p>Qualification: <br>
+                                <ul>
+                                    <li>MBBS, </li>
+                                    <li> St. Xavier’s Entrance Cracker, </li>
+                                    <li>IOE Entrance Cracker, </li>
+                                    <li>CEE Entrance Cracker</li>
+
+                                </ul>
+                                </p>
+                                <p>Phone no: 9808305830</p>
+                                <p>Email: yadavrahulkumar91@gmail.com</p>
+                                <p>Location: Maharajgunj, Kathmandu, Behind Teaching Hospital</p>
+                            </div>
+                        </div>
+
+                        <div class="course-duration-section">
+                            <h3>Course Duration</h3>
+                            <p>Our course is designed to be completed in 9 months, providing comprehensive
+                                coverage of all the subjects required for the IOE entrance exams. We follow a
+                                structured curriculum to ensure effective learning and progress.</p>
+                        </div>
+
+                        <div class="fee-section">
+                            <h3>Fee</h3>
+                            <p>The fee for our Online IOE Entrance Preparation program is affordable and
+                                competitive according to the market. We offer free recorded videos, online
+                                books, and many more. However we have to impose certain fees to attend in the
+                                class and it is only Rs. 8000. There will be 500 off for the first 50 students.
+                            </p>
+                        </div>
+
+                        <div class="class-time-section">
+                            <h3>Class Time</h3>
+                            <p>Classes are held on weekdays, from Sunday to Friday, in the evenings to
+                                accommodate the schedules of students. The exact class timings will be provided
+                                upon enrollment.</p>
+                        </div>
+                </section>
+            </div>
+            <div class="column">
+                <h2>Enroll</h2>
+                <div class="google-form-preview">
+                    <div class="enroll-container">
+                        <h2>Enroll</h2>
+                        <div class="embed-container">
+                            <iframe
+                                src="https://docs.google.com/forms/d/e/1FAIpQLScE-zY0TM_PGKNeszf3qyfiV4niN60R-6OWfn2027BNVNfbdA/viewform?usp=sf_link&embedded=true"
+                                frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                        </div>
+                        <p class="caption">Get Enrolled for Online Coaching class</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="column">
+                <h3>Plan</h3>
+                <div class="coaching-plan">
+                    <div class="calendar-container">
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?src=gamechanger.com.np@gmail.com&ctz=Nepal/Kathmandu"
+                            title="Google Calendar Preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news-notices">
+        <h2>News and Notices</h2>
+        <div class="container">
+            <div class="notice">
+              
+                <div class="pdf-grid">
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    <div class="pdf-item">
+                        <iframe src="../visio account.pdf" frameborder="0"></iframe>
+                        <a href="../visio account.pdf">
+                            <div class="caption">Caption for PDF 1</div>
+                        </a>
+                    </div>
+                    -->
+
+            </div>
+
+
+            
+
+
+
+        </div>
+        </div>
+    </section>
+
+    <h1>Medical Universities in Nepal</h1>
+	<div class="sector">
+        <div class="column">
+            <div class="container1">
+
+        
 		<div class="box" onclick="location.href='MBBS GameChanger\TU\TUMBBS.html';">
 			<img src="iom.jpeg" alt="Tribhuvan University - Institute of Medicine">
 			<h2>Tribhuvan University - Institute of Medicine</h2>
@@ -241,7 +472,24 @@
 			<img src="kahs.jpg" alt="Karnali Academy of Health Sciences">
 			<h2>Karnali Academy of Health Sciences</h2>
 		</div>
+
+
+
+    </div>
+    </div>
 	</div>
+
+    <footer id="footer">
+        <script>
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('/html/footer').innerHTML = data;
+                });
+        </script>
+    </footer>
+
+
 </body>
 
 </html>
