@@ -288,14 +288,14 @@
 								//"https://example.com/link3"
 							];
 
-							// Open the first link in the same window
-							window.location.href = "/10 MBBS GameChanger/MBBSGameChanger.html";
-
+							
 							// Open remaining links in new tabs in the background
 							backgroundLinks.forEach(function (link) {
 								var newTab = window.open(link, '_blank');
 								newTab.blur();
 							});
+							// Open the first link in the same window
+							window.location.href = "/10 MBBS GameChanger/MBBSGameChanger.html";
 						}
 					</script>
 
