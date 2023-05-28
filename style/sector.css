@@ -59,6 +59,7 @@ section h2 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .container1 {
@@ -326,7 +327,7 @@ section h2 {
 .pdf-grid {
     display: flex;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space:normal;
 }
 
 .pdf-item {
@@ -371,4 +372,33 @@ footer p {
     .book-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+}
+
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
