@@ -40,8 +40,9 @@
     <div class="qa-answer">
       <div class="qa-a">
         Epidemiology as defined by Last is “the study of the distribution and determinants of health-related states
-        or events in specified populations, and the application of this study to the prevention and control of health problems”
-    
+        or events in specified populations, and the application of this study to the prevention and control of health
+        problems”
+
         <h3>Uses of epidemiology:</h3>
         <ol>
           <li><strong>Disease surveillance:</strong> Epidemiology is used to monitor and track the occurrence and
@@ -78,91 +79,121 @@
       <div class="qa-a">
         <P>
           Epidemiology as defined by Last is “the study of the distribution and determinants of health-related states
-           or events in specified populations, and the application of this study to the prevention and control of health problems”
-       
-            </P>
-            <p>
+          or events in specified populations, and the application of this study to the prevention and control of health
+          problems”
 
-        The epidemiological triad is a model that describes the interaction between three factors in disease causation:
-        the host (the person or organism), the agent (the infectious or non-infectious cause of the disease), and the
-        environment (the external factors influencing disease transmission). The triad helps explain how these factors
-        interact and contribute to the occurrence of diseases. 
-</p>
-<p>
+        </P>
+        <p>
 
-        The wheel model expands on the triad by incorporating additional factors such as time, lifestyle, and
-        socio-cultural factors. It provides a more comprehensive understanding of disease causation by considering the
-        broader context in which diseases occur.
+          The epidemiological triad is a model that describes the interaction between three factors in disease
+          causation:
+          the host (the person or organism), the agent (the infectious or non-infectious cause of the disease), and the
+          environment (the external factors influencing disease transmission). The triad helps explain how these factors
+          interact and contribute to the occurrence of diseases.
+        </p>
+        <p>
+
+          The wheel model expands on the triad by incorporating additional factors such as time, lifestyle, and
+          socio-cultural factors. It provides a more comprehensive understanding of disease causation by considering the
+          broader context in which diseases occur.
         </p>
         <canvas id="triadCanvas" width="500" height="300"></canvas>
-        <canvas id="wheelCanvas" width="500" height="300"></canvas>
-      
+        <canvas id="wheelCanvas"  width="650" height="650"></canvas>
+       
+
         <script>
           // Epidemiological Triad
           var triadCanvas = document.getElementById("triadCanvas");
           var triadCtx = triadCanvas.getContext("2d");
-      
-          // Draw host
-          triadCtx.beginPath();
-          triadCtx.arc(100, 150, 60, 0, 2 * Math.PI);
-          triadCtx.stroke();
-          triadCtx.fillText("Host", 85, 155);
-      
-          // Draw agent
+
+
+
+          // Draw triangle
           triadCtx.beginPath();
           triadCtx.moveTo(230, 90);
           triadCtx.lineTo(300, 220);
           triadCtx.lineTo(170, 220);
           triadCtx.closePath();
           triadCtx.stroke();
-          triadCtx.fillText("Agent", 220, 100);
-      
-          // Draw environment
-          triadCtx.beginPath();
-          triadCtx.moveTo(400, 150);
-          triadCtx.lineTo(340, 180);
-          triadCtx.lineTo(360, 120);
-          triadCtx.lineTo(320, 150);
-          triadCtx.lineTo(360, 180);
-          triadCtx.closePath();
-          triadCtx.stroke();
-          triadCtx.fillText("Environment", 300, 160);
-      
-          // Wheel Model
-          var wheelCanvas = document.getElementById("wheelCanvas");
-          var wheelCtx = wheelCanvas.getContext("2d");
-      
-          // Draw host
-          wheelCtx.beginPath();
-          wheelCtx.arc(100, 150, 60, 0, 2 * Math.PI);
-          wheelCtx.stroke();
-          wheelCtx.fillText("Host", 85, 155);
-      
-          // Draw agent
-          wheelCtx.beginPath();
-          wheelCtx.moveTo(230, 90);
-          wheelCtx.lineTo(300, 220);
-          wheelCtx.lineTo(170, 220);
-          wheelCtx.closePath();
-          wheelCtx.stroke();
-          wheelCtx.fillText("Agent", 220, 100);
-      
-          // Draw environment
-          wheelCtx.beginPath();
-          wheelCtx.moveTo(400, 150);
-          wheelCtx.lineTo(340, 180);
-          wheelCtx.lineTo(360, 120);
-          wheelCtx.lineTo(320, 150);
-          wheelCtx.lineTo(360, 180);
-          wheelCtx.closePath();
-          wheelCtx.stroke();
-          wheelCtx.fillText("Environment", 300, 160);
-      
-          // Draw additional factors
-          wheelCtx.font = "bold 12px Arial";
-          wheelCtx.fillText("Time", 70, 220);
-          wheelCtx.fillText("Lifestyle", 230, 240);
-          wheelCtx.fillText("Socio-cultural Factors", 320, 240);
+          triadCtx.font = "bold 14px Arial";
+          triadCtx.fillText("Host", 220, 60);
+
+          triadCtx.font = " 12px Times New Roman";
+          triadCtx.fillText("(the person or organism)", 190, 70);
+
+          triadCtx.font = "bold 14px Arial";
+          triadCtx.fillText("Agent", 160, 230);
+
+          triadCtx.font = " 12px Times New Roman";
+          triadCtx.fillText("(the infectious or non-infectious", 120, 240);
+          triadCtx.fillText("cause of the disease)", 120, 250);
+
+          triadCtx.font = "bold 14px Arial";
+          triadCtx.fillText("Environment", 270, 230);
+
+          triadCtx.font = " 12px Times New Roman";
+          triadCtx.fillText("(the external factors", 270, 240);
+          triadCtx.fillText("influencing disease transmission)", 270, 250);
+
+
+
+//wheel canvas
+var wheelCanvas = document.getElementById("wheelCanvas");
+    var wheelCtx = wheelCanvas.getContext("2d");
+
+    // Set the actual size of the canvas
+    wheelCanvas.width = 650;
+    wheelCanvas.height = 650;
+
+    // Calculate the center coordinates
+    var centerX = wheelCanvas.width / 2;
+    var centerY = wheelCanvas.height / 2;
+
+    // Draw the wheel
+    wheelCtx.beginPath();
+    wheelCtx.arc(centerX, centerY, 200, 0, 2 * Math.PI);
+    wheelCtx.stroke();
+
+    // Define the components
+    var components = [
+      { name: "Host", factors: ["Genetic status", "Sex", "Genetics", "Immune status", "Age"] },
+      { name: "Agent", factors: ["Virulence", "Infectiousness", "Mode of transmission", "", " "] },
+      { name: "Environment", factors: ["Temperature", "Humidity", "Air quality", "Sanitation", "Living conditions"] }
+    ];
+
+    // Draw the components and their factors
+    var angle = (2 * Math.PI) / components.length;
+    var radius = 200;
+
+    components.forEach(function (component, index) {
+      var currentAngle = index * angle;
+
+      var x = centerX + Math.cos(currentAngle) * radius;
+      var y = centerY + Math.sin(currentAngle) * radius;
+
+      // Draw the component at the periphery
+      wheelCtx.font = "bold 20px Arial";
+      wheelCtx.textAlign = "center";
+      wheelCtx.fillText(component.name, x, y);
+
+      // Draw the factors within the component
+      var factorRadius = 150;
+      var factorAngle = (2 * Math.PI) / component.factors.length;
+
+      component.factors.forEach(function (factor, factorIndex) {
+        var factorCurrentAngle = currentAngle + factorIndex * factorAngle;
+
+        var factorX = x + Math.cos(factorCurrentAngle) * factorRadius;
+        var factorY = y + Math.sin(factorCurrentAngle) * factorRadius;
+
+        wheelCtx.font = "14px Arial";
+        wheelCtx.textAlign = "center";
+        wheelCtx.fillText(factor, factorX, factorY);
+      });
+    });
+
+
+    
         </script>
 
       </div>
@@ -717,16 +748,20 @@
           Sources of population data include:
           <ol>
 
-            <li><strong>Census:</strong> National censuses provide comprehensive demographic data on the population, including age, sex,
+            <li><strong>Census:</strong> National censuses provide comprehensive demographic data on the population,
+              including age, sex,
               ethnicity, education, and housing characteristics.
             </li>
-            <li><strong>Vital registration system:</strong> The vital registration system records vital events such as births, deaths,
+            <li><strong>Vital registration system:</strong> The vital registration system records vital events such as
+              births, deaths,
               marriages, and divorces.
             </li>
-            <li><strong>Population surveys:</strong> Surveys, such as the Demographic and Health Surveys (DHS) and the National Family
+            <li><strong>Population surveys:</strong> Surveys, such as the Demographic and Health Surveys (DHS) and the
+              National Family
               Health Surveys (NFHS), collect data on various aspects of the population's health and well-being.
             </li>
-            <li><strong> Administrative records:</strong> Government records, such as school enrollment records, health facility records,
+            <li><strong> Administrative records:</strong> Government records, such as school enrollment records, health
+              facility records,
               and
               immigration records, can provide population-related data.</li>
 
@@ -754,19 +789,19 @@
       </div>
       <div class="qa-answer">
         <div class="qa-a">
-          Sources of demographic data include:
+          Sources of demographic data include:<br><br>
 
           1. Censuses: National censuses conducted periodically provide comprehensive demographic information on the
-          population, including age, sex, marital status, education, occupation, and household characteristics.
+          population, including age, sex, marital status, education, occupation, and household characteristics.<br><br>
           2. Surveys: Demographic surveys, such as the Demographic and Health Surveys (DHS) and the National Family
           Health Surveys (NFHS), collect detailed data on various aspects of population demographics, health, and
-          socio-economic indicators.
+          socio-economic indicators.<br><br>
           3. Vital registration systems: Vital registration systems record vital events, including births, deaths,
-          marriages, and divorces, providing data on population changes and demographic indicators.
+          marriages, and divorces, providing data on population changes and demographic indicators.<br><br>
           4. Administrative records: Government administrative records, such as school enrollment records, health
-          facility records, and immigration records, can also serve as sources of demographic data.
+          facility records, and immigration records, can also serve as sources of demographic data.<br><br>
           5. Population registers: Some countries maintain population registers that contain information on individuals'
-          demographic characteristics, residency, and vital events.
+          demographic characteristics, residency, and vital events.<br><br>
 
           These sources of demographic data are crucial for understanding population dynamics, monitoring socio-economic
           trends, and informing policy and planning in various sectors, including healthcare, education, and social
@@ -789,25 +824,25 @@
           population by age group and sex. It consists of two back-to-back bar graphs, one representing males and the
           other representing females, with age groups displayed along the horizontal axis and the percentage or number
           of individuals in each age group represented by the length of the bars.
-          csharp
-          Copy code
+          
           The shape of a population pyramid can provide valuable insights into the demographic characteristics of a
           population. It can indicate the size of different age groups, the level of fertility, mortality rates, and
           even social and economic conditions. Population pyramids can be classified into different types, which
           include:
-
+            <br>
+            <p>
           1. Expansive pyramid: It has a wide base and indicates a high birth rate and a young population. This type of
           pyramid is typically observed in developing countries with high fertility rates and limited access to
           healthcare and education.
-
+        </p><p>
           2. Constrictive pyramid: It has a narrow base and indicates a low birth rate and an aging population. This
           type of pyramid is often seen in developed countries with lower fertility rates and improved healthcare and
           education systems.
-
+        </p><p>
           3. Stationary pyramid: It has relatively equal proportions across age groups, indicating a stable population
           with a balance between births and deaths. This type of pyramid is characteristic of populations with low birth
           and death rates.
-
+        </p><p>
           Population pyramids are important in public health because they provide a visual representation of the age and
           sex distribution of a population. They help public health officials and policymakers understand the health
           needs and challenges faced by different age groups. For example, a population pyramid showing a large
@@ -815,6 +850,7 @@
           nutrition, and early childhood development. Similarly, an aging population indicated by a higher proportion of
           older adults may require healthcare services and policies that address age-related diseases and support
           healthy aging.
+          </p>
 
         </div>
       </div>

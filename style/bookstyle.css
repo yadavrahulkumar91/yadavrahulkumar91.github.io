@@ -115,7 +115,7 @@ table {
 
   .table-wrapper {
     height: 100%; /* take up full height of container */
-    overflow: auto; /* add scrolling functionality */
+    overflow: scroll; /* add scrolling functionality */
   }
 
   th, td {
