@@ -867,8 +867,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           The population pyramid is important in public health because it provides valuable information about the age
           and sex distribution of a population, which is essential for understanding health needs, planning healthcare
           services, and developing targeted interventions. Here's an example to illustrate its importance:
-          vbnet
-          Copy code
+          <br>
           Suppose a population pyramid of a country shows a bulge in the middle-age groups, indicating a significant
           proportion of the population in their 40s and 50s. This suggests an aging population and has implications for
           public health planning. Based on this information, public health officials can anticipate an increased demand
@@ -877,7 +876,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Additionally, they may also focus on promoting healthy aging and implementing policies to address the specific
           health needs of older adults, such as social support programs, geriatric care facilities, and community-based
           services.
-
+<br>
           By analyzing the population pyramid, public health professionals can identify specific health challenges and
           tailor their interventions to meet the needs of different age groups. This helps in improving overall
           population health outcomes and ensuring efficient resource allocation in the healthcare system.
@@ -897,21 +896,21 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           A population pyramid, also known as an age-sex pyramid, is a graphical representation of the distribution of a
           population by age group and sex. It displays the percentage or number of individuals in each age group along
           the horizontal axis, while the vertical axis represents the age groups, typically in five-year intervals.
-
+<br>
           Types of population pyramids include:
-
+<br>
           1. Expansive pyramid: This type of pyramid has a wide base, indicating a high proportion of young individuals.
           It suggests a high birth rate and a growing population. Developing countries with high fertility rates often
           exhibit this type of pyramid.
-
+<br>
           2. Constrictive pyramid: This pyramid has a narrow base, indicating a low proportion of young individuals. It
           suggests a low birth rate and a declining population. Developed countries with lower fertility rates and
           improved healthcare often have this type of pyramid.
-
+<br>
           3. Stationary pyramid: This pyramid has a roughly equal proportion of individuals across age groups,
           indicating a relatively stable population. Birth and death rates are balanced, resulting in a constant
           population size.
-
+<br>
           Population pyramids provide insights into a population's age structure, which is essential for understanding
           demographic trends, planning healthcare services, and implementing social policies. They help identify
           potential health challenges, such as the need for maternal and child health services or geriatric care, and
@@ -934,75 +933,109 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           Using the provided data, we can calculate the General Fertility Rate (GFR), Age-Specific Fertility Rate
           (ASFR), and Total Fertility Rate (TFR) as follows:
-          vbnet
-          Copy code
-          Female population:
-          Age 15-19: 20,000
-          Age 20-24: 25,000
-          Age 25-29: 28,000
-          Age 30-34: 30,000
-          Age 35-39: 22,000
-          Age 40-44: 15,000
-          Age 45-49: 5,000
-
-          Number of live births:
-          Age 15-19: 430
-          Age 20-24: 2,200
-          Age 25-29: 4,000
-          Age 30-34: 3,000
-          Age 35-39: 1,500
-          Age 40-44: 900
-          Age 45-49: 50
+         
+          <table>
+            <tr>
+              <th>Age Group</th>
+              <th>Female Population</th>
+              <th>Number of Live Births</th>
+            </tr>
+            <tr>
+              <td>15-19</td>
+              <td>20,000</td>
+              <td>430</td>
+            </tr>
+            <tr>
+              <td>20-24</td>
+              <td>25,000</td>
+              <td>2,200</td>
+            </tr>
+            <tr>
+              <td>25-29</td>
+              <td>28,000</td>
+              <td>4,000</td>
+            </tr>
+            <tr>
+              <td>30-34</td>
+              <td>30,000</td>
+              <td>3,000</td>
+            </tr>
+            <tr>
+              <td>35-39</td>
+              <td>22,000</td>
+              <td>1,500</td>
+            </tr>
+            <tr>
+              <td>40-44</td>
+              <td>15,000</td>
+              <td>900</td>
+            </tr>
+            <tr>
+              <td>45-49</td>
+              <td>5,000</td>
+              <td>50</td>
+            </tr>
+          </table>
+          
 
           1. Age-Specific Fertility Rate (ASFR):
           ASFR is the number of live births occurring to women in specific age groups per 1,000 women in the same age
           group. We can calculate the ASFR for each age group using the formula:
+<br>
+$ASFR = \left(\frac{\text{Number of live births in age group}}{\text{Female population in age group}}\right) \times 1,000$
+<br>
+$\text{ASFR for each age group:}$<br>
+$
+\begin{align*}
+\text{Age 15-19:} & \quad \left(\frac{430}{20,000}\right) \times 1,000 = 21.5 \\
+\text{Age 20-24:} & \quad \left(\frac{2,200}{25,000}\right) \times 1,000 = 88 \\
+\text{Age 25-29:} & \quad \left(\frac{4,000}{28,000}\right) \times 1,000 = 142.9 \\
+\text{Age 30-34:} & \quad \left(\frac{3,000}{30,000}\right) \times 1,000 = 100 \\
+\text{Age 35-39:} & \quad \left(\frac{1,500}{22,000}\right) \times 1,000 = 68.2 \\
+\text{Age 40-44:} & \quad \left(\frac{900}{15,000}\right) \times 1,000 = 60 \\
+\text{Age 45-49:} & \quad \left(\frac{50}{5,000}\right) \times 1,000 = 10 \\
+\end{align*}$
 
-          ASFR = (Number of live births in age group / Female population in age group) x 1,000
-
-          ASFR for each age group:
-          Age 15-19: (430 / 20,000) x 1,000 = 21.5
-          Age 20-24: (2,200 / 25,000) x 1,000 = 88
-          Age 25-29: (4,000 / 28,000) x 1,000 = 142.9
-          Age 30-34: (3,000 / 30,000) x 1,000 = 100
-          Age 35-39: (1,500 / 22,000) x 1,000 = 68.2
-          Age 40-44: (900 / 15,000) x 1,000 = 60
-          Age 45-49: (50 / 5,000) x 1,000 = 10
-
-          2. General Fertility Rate (GFR):
+<br>
+          2. General Fertility Rate (GFR):<br>
           GFR is the number of live births occurring in a given population per 1,000 women of reproductive age (usually
           defined as 15-49 years). We can calculate the GFR by summing up the number of live births in all age groups
-          and dividing it by the sum of the female population in the reproductive age group:
+          and dividing it by the sum of the female population in the reproductive age group:<br>
 
-          GFR = (Number of live births in all age groups / Female population in reproductive age group) x 1,000
+          $GFR = \left(\frac{{\text{{Number of live births in all age groups}}}}{{\text{{Female population in reproductive age group}}}}\right) \times 1,000$
 
-          GFR = (430 + 2,200 + 4,000 + 3,000 + 1,500 + 900 + 50) / (20,000 + 25,000 + 28,000 + 30,000 + 22,000 + 15,000
-          + 5,000) x 1,000
-          = 11,080 / 145,000 x 1,000
-          = 76.34
+$GFR = \left(\frac{{430 + 2,200 + 4,000 + 3,000 + 1,500 + 900 + 50}}{{20,000 + 25,000 + 28,000 + 30,000 + 22,000 + 15,000 + 5,000}}\right) \times 1,000$
 
-          3. Total Fertility Rate (TFR):
+$= \frac{{11,080}}{{145,000}} \times 1,000$
+
+$= 76.34$
+
+
+          3. Total Fertility Rate (TFR):<br>
           TFR represents the average number of children a woman would have during her reproductive years if she
           experienced the current age-specific fertility rates throughout her lifetime. It is calculated by summing up
           the age-specific fertility rates and multiplying them by the width of each age group, then dividing the sum by
-          1,000:
+          1,000:<br>
 
-          TFR = (ASFR1 x Width of age group 1 + ASFR2 x Width of age group 2 + ... + ASFRn x Width of age group n) /
-          1,000
+          $TFR = \left(\frac{{\text{{ASFR1}} \times \text{{Width of age group 1}} + \text{{ASFR2}} \times \text{{Width of age group 2}} + \ldots + \text{{ASFRn}} \times \text{{Width of age group n}}}}{{1,000}}\right)$
 
           In this case, we assume the width of each age group to be 5 years.
-
-          TFR = (21.5 x 5 + 88 x 5 + 142.9 x 5 + 100 x 5 + 68.2 x 5 + 60 x 5 + 10 x 5) / 1,000
-          = (107.5 + 440 + 714.5 + 500 + 341 + 300 + 50) / 1,000
-          = 2,453 / 1,000
-          = 2.453
-
-          Interpretation:
+          
+          $TFR = \left(\frac{{21.5 \times 5 + 88 \times 5 + 142.9 \times 5 + 100 \times 5 + 68.2 \times 5 + 60 \times 5 + 10 \times 5}}{{1,000}}\right)$
+          
+          $= \left(\frac{{107.5 + 440 + 714.5 + 500 + 341 + 300 + 50}}{{1,000}}\right)$
+          
+          $= \frac{{2,453}}{{1,000}}$
+          
+          $= 2.453$
+          
+<br>
+          Interpretation:<br>
           The General Fertility Rate (GFR) for the district is 76.34, indicating that, on average, 76.34 live births
           occur per 1,000 women of reproductive age. The Age-Specific Fertility Rates (ASFR) provide information on
           fertility patterns in different age groups, with the highest rates observed among women aged 25-29 (142.9) and
           20-24 (88). The Total Fertility Rate (TFR) is 2.453, suggesting that each woman, on average, is expected to
-          have approximately 2.453 children during her reproductive years.
+          have approximately 2.453 children during her reproductive years.<br>
 
           These fertility indicators can help assess the reproductive health status of the population, inform family
           planning programs, and guide healthcare resource allocation for maternal and child health services.
@@ -1055,16 +1088,16 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           would have during their reproductive years, taking into account age-specific fertility rates and the mortality
           of both males and females. It provides an indication of whether a population is growing or declining over
           time.
-
+<br>
           NRR is calculated by summing up the age-specific fertility rates and multiplying them by the corresponding
           survival rates for females. The survival rates reflect the probability of females surviving from one age group
           to the next. The NRR is expressed as a ratio, with a value above 1 indicating population growth and a value
           below 1 indicating population decline.
-
+<br>
           NRR takes into account both fertility and mortality, providing a more comprehensive measure of population
           growth potential compared to fertility measures alone. It considers the impact of changes in fertility rates
           as well as changes in mortality rates on population dynamics.
-
+<br>
           NRR is useful in demographic analyses and projections, as it helps policymakers and researchers understand the
           sustainability of population growth and plan for future population trends. It provides insights into the
           replacement level of fertility needed to maintain a stable population size.
@@ -1085,22 +1118,22 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Standardization of mortality rates is a method used to compare mortality rates between populations or
           subgroups while adjusting for differences in age distribution. It allows for a more meaningful comparison by
           removing the confounding effect of age.
-
+<br>
           The process of standardization involves two steps: direct standardization and indirect standardization.
-
+<br>
           Direct standardization involves applying age-specific death rates from a standard population to the age
           distribution of the population being studied. This allows for a comparison of mortality rates as if the
           populations had the same age structure. The formula for calculating the directly standardized death rate is as
           follows:
-
+<br>
           Directly Standardized Death Rate = (Sum of (Age-Specific Death Rates in the Standard Population x Age-Specific
           Population in the Study Population)) / Total Standard Population
-
+<br>
           Indirect standardization, on the other hand, involves calculating expected deaths in the study population
           based on the age-specific death rates of a standard population and comparing them to the observed deaths. It
           is useful when age-specific death rates are available for the standard population but not for the study
           population.
-
+<br>
           Standardization of mortality rates helps in comparing mortality patterns between different populations or
           subgroups while accounting for differences in age distribution. It allows for a more accurate assessment of
           the impact of specific factors on mortality by controlling for the effect of age.
@@ -1117,26 +1150,26 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           Several factors can affect mortality rates in a country. These factors include:
-
+<br>
           1. Socioeconomic Factors: Socioeconomic conditions, such as income, education, and employment, can influence
           mortality rates. Higher socioeconomic status is often associated with better access to healthcare, improved
           living conditions, and healthier behaviors, which can result in lower mortality rates.
-
+<br>
           2. Healthcare System: The availability and quality of healthcare services play a crucial role in mortality
           rates. Access to timely and affordable healthcare, including preventive care, disease management, and
           emergency services, can significantly impact mortality outcomes.
-
+<br>
           3. Lifestyle and Behavior: Lifestyle factors, such as smoking, diet, physical activity, and substance abuse,
           can affect mortality rates. Unhealthy behaviors increase the risk of chronic diseases and premature death.
-
+<br>
           4. Environmental Conditions: Environmental factors, including air pollution, water quality, sanitation, and
           exposure to hazards, can impact mortality rates. Poor environmental conditions contribute to various health
           problems and increase the risk of mortality.
-
+<br>
           5. Demographic Factors: Demographic characteristics, such as age, sex, and ethnicity, can influence mortality
           rates. Different age groups and population subgroups may have varying mortality risks due to biological,
           social, and cultural factors.
-
+<br>
           It is important to consider these factors when analyzing mortality patterns and developing strategies to
           improve population health and reduce mortality rates. Addressing these factors through public health
           interventions, policy changes, and healthcare improvements can contribute to reducing mortality and improving
@@ -1159,49 +1192,75 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           To compute the crude and indirect standardized death rates for populations A and B, we need the following
           data:
-
-          Population A:
-          Age-specific death rates:
-          Age 0-4: 10 deaths per 1,000 population
-          Age 5-9: 5 deaths per 1,000 population
-          Age 10-14: 3 deaths per 1,000 population
-          Age 15-19: 2 deaths per 1,000 population
-
-          Population B:
-          Age-specific death rates:
-          Age 0-4: 12 deaths per 1,000 population
-          Age 5-9: 6 deaths per 1,000 population
-          Age 10-14: 4 deaths per 1,000 population
-          Age 15-19: 3 deaths per 1,000 population
+          <table>
+            <tr>
+              <th>Population</th>
+              <th>Age Group</th>
+              <th>Death Rate per 1,000 Population</th>
+            </tr>
+            <tr>
+              <td rowspan="4">Population A</td>
+              <td>Age 0-4</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Age 5-9</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Age 10-14</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Age 15-19</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td rowspan="4">Population B</td>
+              <td>Age 0-4</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Age 5-9</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Age 10-14</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Age 15-19</td>
+              <td>3</td>
+            </tr>
+          </table>
+          
 
           <strong>Crude Death Rate:</strong>
           The crude death rate is calculated by dividing the total number of deaths in a population by the total
           population and then multiplying by 1,000.
 
           For Population A:
-          Total deaths in Population A: (10 x 1000) + (5 x 1000) + (3 x 1000) + (2 x 1000) = 10,000 + 5,000 + 3,000 +
-          2,000 = 20,000
-          Total population in Population A: 1000 + 1000 + 1000 + 1000 = 4,000
-          Crude Death Rate of Population A = (20,000 / 4,000) x 1000 = 5 deaths per 1,000 population
-
+          Total deaths in Population A: $(10 \times 1000) + (5 \times 1000) + (3 \times 1000) + (2 \times 1000) = 10,000 + 5,000 + 3,000 + 2,000 = 20,000$
+          Total population in Population A: $1000 + 1000 + 1000 + 1000 = 4,000$
+          Crude Death Rate of Population A = $\left(\frac{{20,000}}{{4,000}}\right) \times 1000 = 5$ deaths per 1,000 population
+          
           For Population B:
-          Total deaths in Population B: (12 x 1000) + (6 x 1000) + (4 x 1000) + (3 x 1000) = 12,000 + 6,000 + 4,000 +
-          3,000 = 25,000
-          Total population in Population B: 1000 + 1000 + 1000 + 1000 = 4,000
-          Crude Death Rate of Population B = (25,000 / 4,000) x 1000 = 6.25 deaths per 1,000 population
-
+          Total deaths in Population B: $(12 \times 1000) + (6 \times 1000) + (4 \times 1000) + (3 \times 1000) = 12,000 + 6,000 + 4,000 + 3,000 = 25,000$
+          Total population in Population B: $1000 + 1000 + 1000 + 1000 = 4,000$
+          Crude Death Rate of Population B = $\left(\frac{{25,000}}{{4,000}}\right) \times 1000 = 6.25$ deaths per 1,000 population
+          
           <strong>Direct Standardization:</strong>
           Direct standardization is a method used to compare death rates between populations with different age
           distributions. It involves applying age-specific death rates from a standard population to the age
           distribution of the population being studied.
 
-          The steps for direct standardization are as follows:
-          1. Choose a standard population with known age-specific death rates.
+          The steps for direct standardization are as follows:<br>
+          1. Choose a standard population with known age-specific death rates.<br>
           2. Calculate the expected number of deaths in the study population by applying the age-specific death rates of
-          the standard population to the age distribution of the study population.
-          3. Sum the expected deaths across all age groups.
-          4. Divide the total expected deaths by the standard population's total person-years of observation.
-          5. Multiply the result by a constant (e.g., 1,000) to obtain the standardized death rate.
+          the standard population to the age distribution of the study population.<br>
+          3. Sum the expected deaths across all age groups.<br>
+          4. Divide the total expected deaths by the standard population's total person-years of observation.<br>
+          5. Multiply the result by a constant (e.g., 1,000) to obtain the standardized death rate.<br>
 
           The direct standardization process allows for a comparison of death rates between populations by removing the
           effect of differences in age distribution.
@@ -1278,12 +1337,12 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           The Crude Birth Rate is calculated by dividing the number of live births in a year by the mid-year population
           and multiplying by a constant factor (usually 1,000).
 
-          $CBR = \(\frac{{\text{{Number of live births}}}}{{\text{{Mid-year population}}}} \times 1,000\)$
+          $CBR = \(\frac{\text{Number of live births}}{\text{Mid-year population}} \times 1,000\)$
 
           Given that the number of live births in New Zealand in 1958 was 69,615 and the total population was 2,285,800,
           we can calculate the CBR as follows:
 
-          $CBR = \(\frac{{69,615}}{{2,285,800}} \times 1,000\)$
+          $CBR = \(\frac{69,615}{2,285,800} \times 1,000\)$
 
           <strong>$CBR ≈ \$30.42 per 1,000 population$</strong>
 
@@ -1293,8 +1352,8 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           The Age-Specific Fertility Rate is calculated by dividing the number of live births to women in a specific age
           group by the female population in that age group and multiplying by a constant factor (usually 1,000).
 
-          $ ASFR = \(\frac{{\text{{Number of live births to women in a specific age group}}}}{{\text{{Female population
-          in that age group}}}} \times 1,000\)$
+          $ ASFR = \(\frac{\text{Number of live births to women in a specific age group}}{\text{Female population
+          in that age group}} \times 1,000\)$
 
           The ASFR can be calculated for each age group of the childbearing period.
 
@@ -1305,7 +1364,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           population of childbearing age (usually defined as 15-49 years) and multiplying by a constant factor (usually
           1,000).
 
-          $GFR = \(\frac{{\text{{Number of live births}}}}{{\text{{Female population of childbearing age}}}} \times
+          $GFR = \(\frac{\text{Number of live births}}{\text{Female population of childbearing age}} \times
           1,000\)$
 
           The GFR represents the fertility rate for the entire population of women of childbearing age.
@@ -1337,27 +1396,32 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           <strong>Causes of Infant Mortality:</strong>
 
           Several factors contribute to infant mortality. Common causes include:
-          - Congenital anomalies
-          - Preterm birth and low birth weight
-          - Infections, such as pneumonia and sepsis
-          - Birth asphyxia
-          - Sudden Infant Death Syndrome (SIDS)
-          - Neonatal complications
+          <ul>
+            <li>Congenital anomalies</li>
+            
+              <li>Preterm birth and low birth weight</li>
+              <li>Infections, such as pneumonia and sepsis</li>
+              <li>Birth asphyxia</li>
+              <li>Sudden Infant Death Syndrome (SIDS)</li>
+              <li>Neonatal complications</li>
+            
+          </ul>
+          
 
           <strong>Reducing Infant Mortality in Nepal:</strong>
 
           To reduce infant mortality in Nepal, the following strategies can be implemented:
-          - Improving access to quality prenatal care and promoting healthy pregnancies.
-          - Enhancing skilled attendance at childbirth to ensure safe deliveries and timely interventions.
-          - Promoting breastfeeding and providing support for proper infant nutrition.
-          - Strengthening immunization programs to protect infants against vaccine-preventable diseases.
-          - Enhancing the quality and accessibility of neonatal care, including early detection and management of
-          complications.
-          - Improving water, sanitation, and hygiene practices to reduce the risk of infections.
-          - Educating communities about safe infant sleep practices and reducing the risk of SIDS.
-          - Addressing social determinants of health, such as poverty, education, and gender inequality, which influence
-          infant health outcomes.
-
+          <ul>
+            <li>Improving access to quality prenatal care and promoting healthy pregnancies.</li>
+            <li>Enhancing skilled attendance at childbirth to ensure safe deliveries and timely interventions.</li>
+            <li>Promoting breastfeeding and providing support for proper infant nutrition.</li>
+            <li>Strengthening immunization programs to protect infants against vaccine-preventable diseases.</li>
+            <li>Enhancing the quality and accessibility of neonatal care, including early detection and management of complications.</li>
+            <li>Improving water, sanitation, and hygiene practices to reduce the risk of infections.</li>
+            <li>Educating communities about safe infant sleep practices and reducing the risk of SIDS.</li>
+            <li>Addressing social determinants of health, such as poverty, education, and gender inequality, which influence infant health outcomes.</li>
+          </ul>
+          
           These interventions, coupled with strong healthcare systems and community engagement, can contribute to
           reducing infant mortality in Nepal.
 
@@ -1378,11 +1442,11 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Measures of mortality are indicators used to assess the occurrence and impact of death in a population. Some
           common measures of mortality include:
           - Crude Death Rate (CDR): The CDR is the number of deaths per 1,000 population in a given time period. It
-          provides a general overview of mortality in a population.
+          provides a general overview of mortality in a population.<br>
           - Age-Specific Death Rate (ASDR): The ASDR is the number of deaths in a specific age group per 1,000
-          population in that age group. It helps understand mortality patterns within different age groups.
+          population in that age group. It helps understand mortality patterns within different age groups.<br>
           - Infant Mortality Rate (IMR): The IMR measures the number of deaths of infants under one year of age per
-          1,000 live births. It reflects the health and well-being of infants in a population.
+          1,000 live births. It reflects the health and well-being of infants in a population.<br>
           - Maternal Mortality Ratio (MMR): The MMR is the number of maternal deaths per 100,000 live births. It
           assesses the risks and outcomes related to pregnancy and childbirth.
 
@@ -1390,9 +1454,9 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           Standardization is a statistical method used to compare rates between different populations by removing the
           effect of differences in age distribution. Standardization rates are calculated using age-specific rates and a
-          standard population. The process involves two main steps:
+          standard population. The process involves two main steps:<br>
           1. Calculating age-specific rates: The age-specific rates are calculated by dividing the number of events
-          (e.g., deaths) in each age group by the corresponding population in that age group.
+          (e.g., deaths) in each age group by the corresponding population in that age group.<br>
           2. Applying standardization: The age-specific rates are then applied to a standard population, which
           represents the age distribution of a reference population. This allows for meaningful comparisons between
           populations with different age structures.
@@ -1416,21 +1480,20 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Standardization of Death Rates:</strong>
-          vbnet
-          Copy code
+      
           Standardization of death rates is a statistical method used to compare mortality rates between different
           populations or groups. It adjusts the death rates to account for differences in population composition, such
           as age and sex distribution, to allow for a fairer comparison.
-
+          <br>
           The process of standardization involves calculating the expected number of deaths in a particular population
           by applying age-specific death rates from a standard population to the age distribution of the population
           being studied. This allows for the removal of the influence of age structure on the observed death rates.
-
+          <br>
           Standardization of death rates is important because it enables meaningful comparisons of mortality rates
           between different populations or time periods. By removing the confounding effect of age structure, it
           provides a more accurate assessment of the underlying mortality patterns and allows for better understanding
           and monitoring of health disparities.
-
+          <br>
           Overall, standardization of death rates helps in evaluating and comparing mortality rates across different
           populations or groups, facilitating the identification of variations in health outcomes and enabling
           policymakers and researchers to make informed decisions regarding public health interventions and resource
@@ -1450,17 +1513,16 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>a. Standardization of Death Rates:</strong>
-          vbnet
-          Copy code
+
           Standardization of death rates is a statistical technique used to compare mortality rates between different
           populations or groups. It involves adjusting the death rates to account for differences in population
           composition, specifically the age and sex distribution.
-
+          <br>
           The process of standardization involves applying age-specific death rates from a standard population to the
           age distribution of the population being studied. This allows for a fairer comparison by removing the
           influence of age structure on the observed death rates. The standardized death rate represents what the death
           rate would have been if the population being studied had the same age structure as the standard population.
-
+          <br>
           Standardization of death rates is important in public health research and epidemiology as it helps in
           assessing and comparing mortality rates across different populations or time periods. It allows for a more
           accurate understanding of the underlying mortality patterns and helps identify variations in health outcomes
@@ -1481,22 +1543,21 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>b. Standardization of Mortality Rates:</strong>
-          vbnet
-          Copy code
+       
           Standardization of mortality rates is a statistical method used to compare mortality rates between different
           populations or groups while adjusting for differences in population composition, such as age and sex
           distribution.
-
+          <br>
           The process of standardization involves calculating the expected number of deaths in a particular population
           by applying age-specific mortality rates from a standard population to the age distribution of the population
           being studied. This allows for the removal of the influence of age structure on the observed mortality rates,
           enabling a fairer comparison.
-
+          <br>
           Standardization of mortality rates is crucial in public health research and epidemiology as it facilitates
           meaningful comparisons of mortality rates across different populations or time periods. By accounting for
           differences in age and sex distribution, it provides a more accurate assessment of the underlying mortality
           patterns and helps identify disparities in health outcomes.
-
+          <br>
           This statistical technique is particularly useful when comparing mortality rates between populations with
           different age structures. It allows researchers and policymakers to evaluate the impact of various factors on
           mortality, monitor changes in health trends over time, and inform public health interventions and policies
@@ -1522,7 +1583,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           another location. It involves individuals or groups relocating to a new place with the intention of settling
           there for an extended period or permanently. In-migration leads to an increase in the population of the
           destination area.
-
+          <br>
           Out-migration, on the other hand, refers to the movement of people out of a specific geographic area or
           region. It involves individuals or groups leaving their current location and relocating to another place.
           Out-migration results in a decrease in the population of the origin area.
@@ -1530,31 +1591,31 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           <strong>Determinants of Migration:</strong>
 
           Various factors influence migration decisions. Some of the determinants of migration include:
-
+          <br>
           1. Economic Factors: Economic opportunities, job availability, income disparities, and labor market conditions
           play a crucial role in migration. People often migrate in search of better employment prospects and higher
           wages. For example, individuals may move from rural areas to urban centers where there are more job
           opportunities and higher incomes.
-
+          <br>
           2. Social Factors: Social factors such as family ties, social networks, and community support can influence
           migration. People may migrate to be closer to their family members or to join existing social networks in a
           different location. For instance, individuals might move to a particular neighborhood or city where they have
           relatives or friends already residing.
-
+          <br>
           3. Political Factors: Political instability, conflicts, and persecution can be drivers of migration. People
           may choose to migrate to escape political oppression, violence, or war in their home country. As an example,
           individuals may seek refuge in neighboring countries due to political unrest in their place of origin.
-
+          <br>
           4. Environmental Factors: Environmental conditions and natural disasters can also trigger migration. People
           may migrate to escape from areas prone to frequent natural disasters, such as hurricanes, floods, or droughts.
           For instance, individuals may relocate from a coastal region vulnerable to rising sea levels to a safer inland
           area.
-
+          <br>
           5. Education and Health Services: Access to quality education and healthcare facilities can influence
           migration patterns. People may migrate to regions with better educational institutions or healthcare services
           for themselves or their children. For example, individuals might move to a city known for its prestigious
           universities or advanced medical facilities.
-
+          <br>
           These are just a few examples of the determinants of migration. It's important to note that migration is a
           complex phenomenon influenced by multiple factors, and individual motivations for migration can vary
           significantly.
@@ -1573,11 +1634,11 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Definition of In-migration and Out-migration:</strong>
-
+          <br>
           In-migration refers to the process of individuals or groups moving into a specific geographic area or region,
           typically from another location. It involves individuals or households relocating to a new place with the
           intention of settling there for an extended period or permanently.
-
+          <br>
           Out-migration, on the other hand, refers to the process of individuals or groups leaving a particular
           geographic area or region. It involves individuals or households moving away from their current location and
           relocating to another place.
@@ -1586,22 +1647,22 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           Lifetime migration and net migration can be calculated by simply asking about the place of birth and duration
           of stay. Here's an example to illustrate the calculation process:
-
+          <br>
           Let's consider a hypothetical population in a city. We ask individuals the following two questions:
-
-          1. Place of Birth: Where were you born?
-          2. Duration of Stay: How long have you lived in this city?
+          <br>
+          1. Place of Birth: Where were you born?<br>
+          2. Duration of Stay: How long have you lived in this city?<br>
 
           Based on the responses, we can categorize individuals into different groups:
-
+          <br>
           a) Lifetime In-migrants: Individuals who were born outside the city and have lived there for their entire
-          life.
-          b) Recent In-migrants: Individuals who were born outside the city but have lived there for a shorter duration.
-          c) Lifetime Out-migrants: Individuals who were born in the city but have moved away to live elsewhere.
-          d) Net Migration: The difference between the number of lifetime in-migrants and lifetime out-migrants.
+          life.<br>
+          b) Recent In-migrants: Individuals who were born outside the city but have lived there for a shorter duration.<br>
+          c) Lifetime Out-migrants: Individuals who were born in the city but have moved away to live elsewhere.<br>
+          d) Net Migration: The difference between the number of lifetime in-migrants and lifetime out-migrants.<br>
 
           By analyzing the responses and categorizing individuals accordingly, we can calculate the lifetime migration
-          and net migration figures for the given population.
+          and net migration figures for the given population.<br>
 
           It's important to note that this is a simplified example, and in practice, migration data collection and
           analysis can involve more complex methodologies and considerations. However, using basic information on place
@@ -1625,23 +1686,23 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Migration refers to the movement of individuals or groups from one place to another, often involving a change
           in residence. It is a key factor contributing to demographic change. Migration plays a significant role in
           altering the population distribution, composition, and characteristics of both the origin and destination
-          areas.
+          areas.<br>
 
           Migration affects demographic change in several ways. Firstly, it influences population growth and decline in
           specific regions. Migration can lead to population growth in the destination areas, while the origin areas may
           experience population decline. This redistribution of population has implications for economic, social, and
-          cultural aspects of society.
+          cultural aspects of society.<br>
 
           Secondly, migration affects the age and sex structure of populations. The movement of people across different
           age groups and genders can result in demographic imbalances. For instance, migration of young adults to urban
-          areas can lead to an aging population in rural areas.
+          areas can lead to an aging population in rural areas.<br>
 
           Thirdly, migration influences the cultural diversity of a region. When people migrate from one place to
           another, they bring their customs, traditions, and languages, contributing to the cultural fabric of the
-          destination area.
+          destination area.<br>
 
           Overall, migration is a crucial factor in shaping demographic changes, including population growth, age and
-          sex structure, and cultural diversity.
+          sex structure, and cultural diversity.<br>
         </div>
       </div>
     </div>
@@ -1663,39 +1724,39 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           <strong>Determinants of Migration:</strong>
 
-          Several factors influence migration patterns in Nepal. These determinants include:
+          Several factors influence migration patterns in Nepal. These determinants include:<br>
 
           1. Economic factors: Economic opportunities and disparities between regions can drive migration. People often
           move to areas with better job prospects, higher wages, or improved living conditions.
-
+          <br>
           2. Social factors: Social factors such as education, marriage, and family ties can influence migration
           decisions. For instance, individuals may migrate to pursue educational opportunities or to join family members
           who have already migrated.
-
+          <br>
           3. Political factors: Political instability, conflicts, and changes in governance can also lead to migration.
           People may flee their homes due to persecution, violence, or lack of safety.
-
+          <br>
           4. Environmental factors: Environmental changes, such as natural disasters or ecological degradation, can
           trigger migration. Displaced individuals may seek refuge in safer regions.
-
+          <br>
           <strong>Consequences of Migration:</strong>
 
           Migration has various consequences, both positive and negative, in Nepal. Some of the key consequences
           include:
-
+          <br>
           1. Economic impact: Migration can contribute to economic development through remittances sent back by
           migrants. Remittances play a significant role in Nepal's economy, supporting households and contributing to
           poverty reduction.
-
+          <br>
           2. Social impact: Migration can lead to changes in social structures and relationships. It can create new
           cultural dynamics, influence norms and values, and affect social cohesion within communities.
-
+          <br>
           3. Demographic impact: Migration influences population size and composition. It can contribute to population
           growth in destination areas and impact the age and sex structure of both origin and destination regions.
-
+          <br>
           4. Brain drain: Migration of skilled individuals can result in a loss of human capital for the origin country.
           This brain drain can hinder the development of certain sectors and professions.
-
+          <br>
           In summary, migration in Nepal is influenced by economic, social, political, and environmental factors. It has
           consequences for various aspects of society, including the economy, social dynamics, and population
           characteristics.
@@ -1713,43 +1774,43 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Importance of Migration Studies in Demography:</strong>
-
+          <br>
           Migration studies are of great importance in demography due to the significant impact migration has on
           population dynamics. Understanding migration patterns, determinants, and consequences helps demographers gain
           insights into population changes and develop effective policies and strategies.
-
+          <br>
           Migration studies provide valuable information for demographic research and planning. They contribute to the
           following areas:
-
+          <br>
           1. Population forecasting: Migration data assists in projecting future population trends and estimating
           population sizes in different regions. By considering migration patterns, demographers can make more accurate
           population projections.
-
+          <br>
           2. Policy formulation: Migration studies help policymakers understand the drivers and implications of
           migration. This knowledge enables them to develop appropriate policies related to labor markets, social
           welfare, urban planning, and integration of migrant populations.
-
+          <br>
           3. Social and economic analysis: Migration studies provide insights into the social and economic impacts of
           migration. Researchers can analyze the effects of migration on employment, income distribution, poverty rates,
           and social inequality.
-
+          <br>
           <strong>Estimating Internal Migration and Net Migration:</strong>
-
+          <br>
           Place of birth statistics can be used to estimate internal migration and net migration by simply asking
           questions about an individual's place of birth. Here's an example:
-
+          <br>
           Suppose a survey asks individuals about their place of birth and current residence. By comparing the two
           pieces of information, demographers can identify internal migrants. If someone was born in Region A but
           currently resides in Region B, they are considered an internal migrant from Region A to Region B.
-
+          <br>
           To estimate net migration, demographers can compare the number of individuals who migrated into an area with
           the number of individuals who migrated out of that area. Positive net migration indicates a net inflow of
           migrants, while negative net migration suggests a net outflow.
-
+          <br>
           By analyzing place of birth statistics and migration patterns, demographers can gain insights into the scale
           and direction of internal migration, as well as calculate net migration figures, which are essential for
           understanding population movements and their implications.
-
+          <br>
           In conclusion, migration studies play a crucial role in demography by providing valuable information for
           population forecasting, policy formulation, and social-economic analysis. By examining place of birth
           statistics, demographers can estimate internal migration and net migration, aiding in understanding population
@@ -1769,48 +1830,48 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Importance of Migration Studies in Demography:</strong>
-
+          <br>
           Migration studies play a crucial role in demography, the study of human population dynamics. Understanding
           migration patterns and trends is essential for accurately analyzing and predicting changes in population size,
           composition, and distribution. Here are some key reasons why migration studies are important in demography:
-
+          <br>
           1. Population Change: Migration significantly affects population change. It can contribute to population
           growth or decline in specific regions. By studying migration patterns, demographers can assess the impact of
           migration on population size and understand the factors driving population change.
-
+          <br>
           2. Age Structure: Migration influences the age structure of a population. For example, migration of young
           adults to urban areas can result in a "youth drain" in rural areas and an aging population in urban centers.
           Migration studies help demographers analyze how migration contributes to changes in the age distribution of a
           population.
-
+          <br>
           3. Urbanization and Rural-Urban Migration: Migration plays a crucial role in urbanization, the process of
           population concentration in urban areas. Demographers study rural-urban migration patterns to understand the
           dynamics of urban growth, infrastructure planning, and resource allocation.
-
+          <br>
           4. Social and Cultural Impacts: Migration can bring cultural diversity and shape the social fabric of
           communities. By examining migration patterns, demographers can assess the social and cultural impacts of
           migration on both sending and receiving areas, including changes in language, customs, and social norms.
-
+          <br>
           5. Policy Planning: Migration studies provide valuable insights for policymakers in developing effective
           migration policies and planning for socio-economic development. By understanding migration patterns,
           policymakers can address challenges related to infrastructure, employment, housing, healthcare, and education.
-
+          <br>
           <strong>Estimating Internal Migration through Place of Birth Statistics:</strong>
-
+          <br>
           Internal migration refers to the movement of people within a country or region. It can be estimated by simply
           asking questions about place of birth statistics. Here's an example to illustrate how this estimation can be
           done:
-
+          <br>
           Suppose a survey is conducted to collect demographic information from individuals in a specific area. As part
           of the survey, respondents are asked the following question:
-
+          <br>
           "Where were you born?"
-
+          <br>
           By analyzing the responses to this question, demographers can estimate internal migration. For instance, if a
           significant number of individuals report being born in a different city or region than their current place of
           residence, it indicates internal migration. The analysis of place of birth statistics provides insights into
           the magnitude and direction of internal migration flows within the studied area.
-
+          <br>
           It's important to note that this method provides a broad estimation of internal migration and may not capture
           specific details such as the number of moves or reasons behind migration. However, it serves as a valuable
           starting point for understanding internal migration dynamics and their impact on the demographic picture of
@@ -1830,43 +1891,43 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Role of Migration in Changing the Demographic Picture:</strong>
-
+          <br>
           Migration plays a significant role in shaping the demographic picture of an area. It influences population
           size, composition, and distribution, leading to changes in various demographic indicators. Here's an
           explanation of the role of migration and how internal migration can be estimated using place of birth
           information:
-
+          <br>
           1. Population Size: Migration affects the overall population size of an area. In-migration increases the
           population, while out-migration decreases it. The net migration balance, the difference between in-migration
           and out-migration, contributes to changes in population size.
-
+          <br>
           2. Age and Gender Composition: Migration can alter the age and gender composition of a population. For
           example, young adults moving to urban areas for employment opportunities can result in a higher proportion of
           working-age individuals in the urban population. Similarly, migration patterns can influence the gender
           balance in specific areas.
-
+          <br>
           3. Ethnic and Cultural Diversity: Migration brings ethnic and cultural diversity to an area. Different migrant
           groups contribute to the overall cultural fabric of a region, influencing traditions, languages, and social
           norms. This cultural exchange shapes the demographic landscape of the area.
-
+          <br>
           4. Urbanization and Rural Decline: Migration often leads to urbanization, with people moving from rural to
           urban areas. This shift can result in a decline in the population and resources in rural areas, affecting
           their demographic structure. Urban areas, on the other hand, experience population growth and changes in the
           socio-economic landscape.
-
+          <br>
           <strong>Estimating Internal Migration through Place of Birth:</strong>
-
+          <br>
           Internal migration refers to movement within a country or region. By asking questions about place of birth,
           internal migration can be estimated. For instance, in a survey or census, individuals can be asked the
           question:
-
+          <br>
           "Where were you born?"
-
+          <br>
           Analyzing the responses provides insights into internal migration. If a significant number of individuals
           report being born in a different location than their current place of residence, it indicates internal
           migration. This method allows demographers to track the movement of individuals within an area and understand
           its demographic implications.
-
+          <br>
           Although estimating internal migration through place of birth provides an initial understanding, it may not
           capture detailed information about the frequency or reasons behind migration. However, it serves as a
           practical approach for studying and monitoring internal migration patterns and their impact on the demographic
@@ -1886,46 +1947,46 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Importance of Migration Studies in Demography:</strong>
-
+          <br>
           Migration studies hold significant importance in the field of demography, the study of human population
           dynamics. Understanding migration patterns and trends is essential for accurately analyzing population size,
           composition, distribution, and changes over time. Here are some key reasons why migration studies are
           important in demography:
-
+          <br>
           1. Population Dynamics: Migration is a major driver of population dynamics. It influences population growth,
           decline, and redistribution. By studying migration patterns, demographers can assess the impact of migration
           on population size and understand the factors shaping population change.
-
+          <br>
           2. Age Structure: Migration plays a crucial role in shaping the age structure of a population. Different age
           groups may have varying migration patterns, such as young adults moving for education or employment
           opportunities. By analyzing migration data, demographers can examine changes in the age distribution of a
           population.
-
+          <br>
           3. Urbanization and Rural-Urban Migration: Migration is closely linked to urbanization, the process of
           population concentration in urban areas. Understanding patterns of rural-urban migration helps demographers
           analyze the dynamics of urban growth, infrastructure planning, and resource allocation.
-
+          <br>
           4. Social and Cultural Impacts: Migration brings cultural diversity and influences social dynamics. It can
           lead to changes in language, customs, and social norms within communities. Migration studies allow
           demographers to examine the social and cultural impacts of migration on both sending and receiving areas.
-
+          <br>
           5. Policy Planning: Migration studies provide valuable insights for policymakers in developing effective
           migration policies and planning for socio-economic development. By understanding migration patterns,
           policymakers can address challenges related to housing, employment, education, healthcare, and social
           integration.
-
+          <br>
           <strong>Estimating Internal Migration through Place of Birth:</strong>
-
+          <br>
           Internal migration, the movement of individuals within a country or region, can be estimated by asking
           questions about place of birth. By including a specific question in surveys or censuses such as:
-
+          <br>
           "Where were you born?"
-
+          <br>
           Demographers can gather information about internal migration. Analyzing the responses helps identify
           individuals who were born in a different location than their current place of residence, indicating internal
           migration. This method provides a basic estimation of internal migration patterns and allows for the
           monitoring of demographic changes within an area.
-
+          <br>
           While estimating internal migration through place of birth provides a starting point, it may not capture
           detailed information on the frequency or reasons behind migration. However, it serves as a practical approach
           for understanding the extent and direction of internal migration and its demographic implications.
@@ -1945,38 +2006,38 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           <strong>Migration Definition:</strong>
-
+          <br>
           Migration refers to the movement of individuals or groups from one place to another, usually involving a
           change in residence. It involves the crossing of administrative or political boundaries and can occur within a
           country (internal migration) or between countries (international migration). Migration may be temporary or
           permanent, voluntary or forced, and driven by various factors.
 
           <strong>Determinants of Migration in Nepal:</strong>
-
+          <br>
           Several determinants influence migration patterns in Nepal. These determinants include:
-
+          <br>
           1. Economic factors: Economic opportunities and disparities play a significant role in migration. People may
           migrate to regions with better job prospects, higher wages, or improved living conditions. For example,
           individuals from rural areas in Nepal may migrate to urban centers such as Kathmandu or Pokhara in search of
           employment opportunities.
-
+          <br>
           2. Social factors: Social factors, including education, marriage, and family ties, can also influence
           migration decisions. Students may migrate to pursue higher education, while individuals may move to join
           family members who have already migrated. For instance, people from rural areas may migrate to urban areas to
           live with their relatives or seek educational opportunities.
-
+          <br>
           3. Political factors: Political instability, conflicts, and changes in governance can contribute to migration.
           People may be forced to migrate due to persecution, violence, or lack of safety. For example, during the
           Maoist insurgency in Nepal, many individuals were internally displaced or sought refuge in other countries.
-
+          <br>
           4. Environmental factors: Environmental changes, such as natural disasters or ecological degradation, can also
           trigger migration. Displaced individuals may move to safer regions or areas with better environmental
           conditions. An example of this is the migration of people from landslide-prone areas to more stable regions.
-
+          <br>
           5. Demographic factors: Demographic factors, such as population pressure or demographic imbalances, can
           influence migration. For instance, rural-urban migration in Nepal can be driven by population growth in rural
           areas, leading to limited resources and opportunities.
-
+          <br>
           These determinants interact and can vary in their influence on migration decisions in Nepal. It is essential
           to consider the multidimensional nature of migration and the interplay of factors when studying and analyzing
           migration patterns and trends in the country.
@@ -1995,25 +2056,29 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           To estimate the population of a town after a specific time period using geometric growth, we can use the
           formula:
-
-          Population after 'n' years = Present population * (1 + growth rate)^n
-
-          Given:
-          Present population = 250,000
-          Annual geometric growth rate = 2.3% or 0.023
-          Time period = 4 years
-
-          Substituting the values into the formula:
-
-          Population after 4 years = 250,000 * (1 + 0.023)^4
-
-          Calculating the population:
-
-          Population after 4 years = 250,000 * (1.023)^4
-
-          Population after 4 years ≈ 274,454
-
-          Therefore, the estimated population of the town after four years would be approximately 274,454.
+          <br>
+          Population after 'n' years = Present population $\times (1 + \text{growth rate})^n$
+          <br>
+          $\text{Given:}$
+          \begin{align*}
+          \text{Present population} &= 250,000 \\
+          \text{Annual geometric growth rate} &= 2.3\% \text{ or } 0.023 \\
+          \text{Time period} &= 4 \text{ years}
+          \end{align*}
+          
+          $\text{Substituting the values into the formula:}$
+          \begin{align*}
+          \text{Population after 4 years} &= 250,000 \times (1 + 0.023)^4 \\
+          \end{align*}
+          
+         $ \text{Calculating the population:}$
+          \begin{align*}
+          \text{Population after 4 years} &= 250,000 \times (1.023)^4 \\
+          \text{Population after 4 years} &\approx 274,454 \\
+          \end{align*}
+          
+         Therefore, the estimated population of the town after four years would be approximately $274,454$.
+          
         </div>
       </div>
     </div>
@@ -2030,42 +2095,44 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           To find the population of a town after a specific time period using a constant annual growth rate, we can use
           the formula for exponential growth:
+<br>
+          Population after 'n' years = Present population $\times (1 + \frac{\text{growth rate}}{100})^n$
 
-          Population after 'n' years = Present population * (1 + growth rate/100)^n
-
-          Given:
-          Present population = 200,000
-          Annual growth rate = 2.5%
-          Time period = 3 years
-
-          Substituting the values into the formula:
-
-          Population after 3 years = 200,000 * (1 + 2.5/100)^3
-
-          Calculating the population:
-
-          Population after 3 years = 200,000 * (1.025)^3
-
-          Population after 3 years ≈ 216,506
-
+          Given:<br>
+          \begin{align*}
+          \text{Present population} &= 200,000 \\
+          \text{Annual growth rate} &= 2.5\% \\
+          \text{Time period} &= 3 \text{ years}
+          \end{align*}
+          <br>
+          Substituting the values into the formula:<br>
+          \begin{align*}
+          \text{Population after 3 years} &= 200,000 \times (1 + \frac{2.5}{100})^3 \\
+          \end{align*}
+          <br>
+          Calculating the population:<br>
+          \begin{align*}
+          \text{Population after 3 years} &= 200,000 \times (1.025)^3 \\
+          \text{Population after 3 years} &\approx 216,506 \\
+          \end{align*}
+          <br>
           Therefore, the estimated population of the town after three years would be approximately 216,506.
-
-          To determine when the population will double based on the given growth rate, we can use the concept of the
-          doubling time. The doubling time is the amount of time it takes for a population to double in size at a
-          constant growth rate.
-
-          The formula for calculating the doubling time is:
-
-          Doubling time = ln(2) / (ln(1 + growth rate/100))
-
-          Given the annual growth rate of 2.5%, we can calculate the doubling time:
-
-          Doubling time = ln(2) / (ln(1 + 2.5/100))
-
-          Doubling time ≈ 27.726 years
-
-          Therefore, based on the given growth rate of 2.5%, the population of the town will double in approximately
-          27.726 years.
+          <br>
+          To determine when the population will double based on the given growth rate, we can use the concept of the doubling time.<br>
+          
+          The formula for calculating the doubling time is: <br>
+          \begin{align*}
+          \text{Doubling time} &= \frac{\ln(2)}{\ln(1 + \frac{\text{growth rate}}{100})}
+          \end{align*}
+          <br>
+          Given the annual growth rate of 2.5\%, we can calculate the doubling time:<br>
+          \begin{align*}
+          \text{Doubling time} &= \frac{\ln(2)}{\ln(1 + \frac{2.5}{100})} \\
+          \text{Doubling time} &\approx 27.726 \text{ years} \\
+          \end{align*}
+          
+          Therefore, based on the given growth rate of 2.5\%, the population of the town will double in approximately 27.726 years.
+          
         </div>
       </div>
     </div>
@@ -2091,20 +2158,17 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Census year Population<br>
           1991 23,214,681<br>
           2001 (unknown)<br>
-          2010 (unknown)<br><br>
-          Growth rate = \(\frac{{\text{{Population in 2001}} - \text{{Population in 1991}}}}{{\text{{Population in
-          1991}}}}\)<br>
-          Let's assume the growth rate between 1991 and 2001 is constant and apply it to the 1991 population:<br>
-          Estimated population in 2001 = \((1 + \text{{Growth rate}}) \times \text{{Population in 1991}}\)<br>
-          Estimated population in 2001 = \((1 + \frac{{\text{{Population in 2001}} - \text{{Population in
-          1991}}}}{{\text{{Population in 1991}}}}) \times \text{{Population in 1991}}\)<br><br>
-          Now, we can estimate the population for 2010 using the growth rate between 1991 and 2001:<br>
-          Estimated population in 2010 = \((1 + \text{{Growth rate}}) \times \text{{Estimated population in 2001}}\)<br>
-          Estimated population in 2010 = \((1 + \frac{{\text{{Population in 2001}} - \text{{Population in
-          1991}}}}{{\text{{Population in 1991}}}}) \times \text{{Estimated population in 2001}}\)<br><br>
-          Therefore, to estimate the population of Nepal for 2010, we need the population data for the year 2001.<br>
-          Please provide the population of Nepal for the year 2001 to continue the calculation.<br>
-        </div>
+          2010 (unknown)<br>
+          Growth rate = $\frac{\text{Population in 2001} - \text{Population in 1991}}{\text{Population in 1991}}$
+          Let's assume the growth rate between 1991 and 2001 is constant and apply it to the 1991 population:
+          Estimated population in 2001 = $(1 + \text{Growth rate}) \times \text{Population in 1991}$
+          Estimated population in 2001 = $(1 + \frac{\text{Population in 2001} - \text{Population in 1991}}{\text{Population in 1991}}) \times \text{Population in 1991}$
+          Now, we can estimate the population for 2010 using the growth rate between 1991 and 2001:
+          Estimated population in 2010 = $(1 + \text{Growth rate}) \times \text{Estimated population in 2001}$
+          Estimated population in 2010 = $(1 + \frac{\text{Population in 2001} - \text{Population in 1991}}{\text{Population in 1991}}) \times \text{Estimated population in 2001}$
+          Therefore, to estimate the population of Nepal for 2010, we need the population data for the year 2001.
+          Please provide the population of Nepal for the year 2001 to continue the calculation.
+       </div>
       </div>
     </div>
 
@@ -2122,32 +2186,32 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           To find the population of the town after 3 years with an annual exponential growth rate, we can use the
           formula:
 
-          Population after t years = Present Population × (1 + Growth Rate)^t
+          Population after t years = Present Population × (1 + Growth Rate)^t  <br>
 
-          Given:
-          Present Population = 201,600
-          Annual Exponential Growth Rate = 2.5% = 0.025 (decimal)
+          Given: <br>
+          Present Population = 201,600 <br>
+          Annual Exponential Growth Rate = 2.5% = 0.025 (decimal) <br>
 
-          Let's calculate the population after 3 years:
+          Let's calculate the population after 3 years: <br>
 
-          Population after 3 years = 201,600 × (1 + 0.025)^3
+          Population after 3 years = 201,600 × (1 + 0.025)^3 <br>
 
-          Population after 3 years = 201,600 × (1.025)^3
+          Population after 3 years = 201,600 × (1.025)^3 <br>
 
-          Population after 3 years ≈ 201,600 × 1.07718
+          Population after 3 years ≈ 201,600 × 1.07718<br>
 
-          Population after 3 years ≈ 217,239.648
+          Population after 3 years ≈ 217,239.648<br>
 
-          Therefore, the population of the town after 3 years is approximately 217,239.
+          Therefore, the population of the town after 3 years is approximately 217,239.<br>
 
           To determine when the population of the town will double, we can use the exponential growth formula and solve
-          for t:
+          for t:<br>
 
-          Doubling Time = log(2) / log(1 + Growth Rate)
+          Doubling Time = log(2) / log(1 + Growth Rate)<br>
 
-          Doubling Time = log(2) / log(1 + 0.025)
+          Doubling Time = log(2) / log(1 + 0.025)<br>
 
-          Doubling Time ≈ 27.726 years
+          Doubling Time ≈ 27.726 years<br>
 
           Therefore, the population of the town will double in approximately 27.726 years.
         </div>
@@ -2173,21 +2237,22 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           1981 15,022,839<br>
           1991 18,462,081<br>
           2005 (unknown)<br><br>
-          Growth rate = \(\frac{{\text{{Population in 1991}} - \text{{Population in 1981}}}}{{\text{{Population in
-          1981}}}}\)<br>
+          Growth rate = $\(\frac{\text{Population in 1991} - \text{Population in 1981}}{\text{Population in
+          1981}}\)$<br>
           Let's assume the growth rate between 1981 and 1991 is constant and apply it to the 1991 population:<br>
-          Estimated population in 1991 = \((1 + \text{{Growth rate}}) \times \text{{Population in 1981}}\)<br>
-          Estimated population in 1991 = \((1 + \frac{{\text{{Population in 1991}} - \text{{Population in
-          1981}}}}{{\text{{Population in 1981}}}}) \times \text{{Population in 1981}}\)<br><br>
+          Estimated population in 1991 = $\((1 + \text{Growth rate}) \times \text{Population in 1981}\)$<br>
+          Estimated population in 1991 = $\((1 + \frac{\text{Population in 1991} - \text{Population in
+          1981}}{\text{Population in 1981}}) \times \text{Population in 1981}\)$<br><br>
+
           Now, we can estimate the expected population for 2005 using the growth rate between 1981 and 1991:<br>
-          Estimated population in 2005 = \((1 + \text{{Growth rate}}) \times \text{{Estimated population in 1991}}\)<br>
-          Estimated population in 2005 = \((1 + \frac{{\text{{Population in 1991}} - \text{{Population in
-          1981}}}}{{\text{{Population in 1981}}}}) \times \text{{Estimated population in 1991}}\)<br><br>
+          Estimated population in 2005 = $\((1 + \text{Growth rate}) \times \text{Estimated population in 1991}\)$<br>
+          Estimated population in 2005 = $\((1 + \frac{\text{Population in 1991} - \text{Population in
+          1981}}{\text{Population in 1981}}) \times \text{Estimated population in 1991}\)$<br><br>
           Calculating the values:<br>
-          Growth rate = \(\frac{{18,462,081 - 15,022,839}}{{15,022,839}}\) = \(\frac{{3,439,242}}{{15,022,839}}\)<br>
-          Estimated population in 1991 = \((1 + \frac{{3,439,242}}{{15,022,839}}) \times 15,022,839\)<br>
-          Estimated population in 2005 = \((1 + \frac{{3,439,242}}{{15,022,839}}) \times \left((1 +
-          \frac{{3,439,242}}{{15,022,839}}) \times 15,022,839\right)\)<br><br>
+          Growth rate = $\(\frac{18,462,081 - 15,022,839}{15,022,839}\) = \(\frac{3,439,242}{15,022,839}\)$<br>
+          Estimated population in 1991 = $\((1 + \frac{3,439,242}{15,022,839}) \times 15,022,839\)$<br>
+          Estimated population in 2005 = $\((1 + \frac{3,439,242}{15,022,839}) \times \left((1 +
+          \frac{3,439,242}{15,022,839}) \times 15,022,839\right)\)$<br><br>
           Therefore, the estimated population of Nepal for 2005 using this method is the value calculated above.<br><br>
           <strong>Usefulness of this Method:</strong><br>
           Estimating the population based on the growth rate between two census years can provide a rough approximation
@@ -2220,37 +2285,37 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           yaml
           Copy code
           1. Calculate the growth rate:
-          Growth Rate = ((Population in 2011 - Population in 2001) / Population in 2001) * 100
+          Growth Rate = ((Population in 2011 - Population in 2001) / Population in 2001) * 100 <br>
 
-          Population in 2011 = 26,494,504 (given)
-          Population in 2001 = 23,214,681 (given)
+          Population in 2011 = 26,494,504 (given)<br>
+          Population in 2001 = 23,214,681 (given)<br>
 
-          Growth Rate = ((26,494,504 - 23,214,681) / 23,214,681) * 100
+          Growth Rate = ((26,494,504 - 23,214,681) / 23,214,681) * 100<br>
 
-          2. Calculate the average annual growth rate:
-          Average Annual Growth Rate = Growth Rate / (Number of years between census years)
+          2. Calculate the average annual growth rate:<br>
+          Average Annual Growth Rate = Growth Rate / (Number of years between census years)<br>
 
-          Number of years between census years = 2011 - 2001 = 10 years
+          Number of years between census years = 2011 - 2001 = 10 years<br>
 
-          Average Annual Growth Rate = Growth Rate / 10
+          Average Annual Growth Rate = Growth Rate / 10<br>
 
-          3. Estimate the population for 2017 using exponential growth:
-          Population in 2017 = Population in 2011 × (1 + Average Annual Growth Rate)^6
+          3. Estimate the population for 2017 using exponential growth:<br>
+          Population in 2017 = Population in 2011 × (1 + Average Annual Growth Rate)^6<br>
 
-          Number of years between 2011 and 2017 = 6 years
+          Number of years between 2011 and 2017 = 6 years<br>
 
-          Now, let's calculate the projected population for 2017:
+          Now, let's calculate the projected population for 2017:<br>
 
-          Growth Rate = ((26,494,504 - 23,214,681) / 23,214,681) * 100
-          Growth Rate ≈ 14.12%
+          Growth Rate = ((26,494,504 - 23,214,681) / 23,214,681) * 100<br>
+          Growth Rate ≈ 14.12%<br>
 
-          Average Annual Growth Rate = 14.12% / 10
-          Average Annual Growth Rate ≈ 1.412%
+          Average Annual Growth Rate = 14.12% / 10<br>
+          Average Annual Growth Rate ≈ 1.412%<br>
 
-          Population in 2017 = 26,494,504 × (1 + 0.01412)^6
-          Population in 2017 ≈ 29,619,781
+          Population in 2017 = 26,494,504 × (1 + 0.01412)^6<br>
+          Population in 2017 ≈ 29,619,781<br>
 
-          Therefore, the projected population of Nepal for 2017 is estimated to be approximately 29,619,781.
+          Therefore, the projected population of Nepal for 2017 is estimated to be approximately 29,619,781.<br>
 
           The method of exponential growth is chosen because it allows for the estimation of population based on the
           historical growth rate. By assuming a relatively consistent growth rate, this method provides a reasonable
@@ -2541,27 +2606,27 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           <strong>Necessity to Study Demographic Transition:</strong>
 
-          It is necessary to study demographic transition for several reasons:
+          It is necessary to study demographic transition for several reasons:<br>
 
           1. Policy Planning: Understanding demographic transition helps policymakers anticipate and plan for changes in
           population structure and size. It enables the development of appropriate social, economic, and healthcare
-          policies to address the needs of different population groups.
+          policies to address the needs of different population groups.<br>
 
           2. Resource Allocation: Demographic transition influences resource allocation, such as healthcare services,
           education facilities, and social welfare programs. Studying demographic transition assists in determining the
-          distribution of resources based on population characteristics and needs.
+          distribution of resources based on population characteristics and needs.<br>
 
           3. Economic Development: Demographic transition affects economic development. A declining population growth
           rate and changes in age structure impact labor force participation, productivity, and savings patterns.
-          Analyzing demographic transition helps policymakers devise strategies for sustainable economic growth.
+          Analyzing demographic transition helps policymakers devise strategies for sustainable economic growth.<br>
 
           4. Health and Well-being: Demographic transition has implications for health and well-being. Understanding the
           changing patterns of mortality and fertility rates aids in designing effective healthcare systems, addressing
-          public health challenges, and ensuring the overall well-being of the population.
+          public health challenges, and ensuring the overall well-being of the population.<br>
 
           Therefore, studying demographic transition provides valuable insights into population dynamics, enabling
           policymakers to make informed decisions and implement strategies that promote sustainable development and
-          improve quality of life.
+          improve quality of life.<br>
         </div>
       </div>
     </div>
@@ -2585,35 +2650,35 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           <strong>Critical Evaluation:</strong>
 
           The demographic transition theory has been subject to criticism and debate. Some key points of critique
-          include:
+          include:<br>
 
           1. Universal Application: Critics argue that the theory assumes a universal applicability, disregarding
           diverse social, cultural, and economic contexts. Demographic transitions can vary across countries and
-          regions, influenced by unique historical, political, and social factors.
+          regions, influenced by unique historical, political, and social factors.<br>
 
           2. Causality and Directionality: The theory assumes a direct causal relationship between economic development
           and demographic changes. However, the relationship is complex, and factors such as government policies,
-          education, healthcare, and cultural norms also influence demographic outcomes.
+          education, healthcare, and cultural norms also influence demographic outcomes.<br>
 
           3. Developing Countries: The theory's applicability to developing countries like Nepal is debated. These
           countries often face distinct challenges, including high fertility rates, inadequate healthcare systems, and
           poverty. Factors such as limited access to contraceptives, cultural norms, and lack of education may hinder
-          the smooth progression through the demographic transition stages.
+          the smooth progression through the demographic transition stages.<br>
 
           <strong>Applicability in the Case of Nepal:</strong>
 
           The demographic transition theory can provide insights into the general patterns of population change in
           Nepal. However, Nepal's unique context necessitates careful consideration. Factors such as cultural norms,
-          poverty, limited access to healthcare and education, and government policies influence population dynamics.
+          poverty, limited access to healthcare and education, and government policies influence population dynamics.<br>
 
           Nepal has made progress in reducing fertility rates, but challenges remain, particularly in rural areas.
           Cultural practices, gender inequality, and limited access to family planning services impact fertility rates.
           Additionally, healthcare infrastructure and education levels need further improvement to support the
-          transition.
+          transition.<br>
 
           Therefore, while the demographic transition theory offers a useful framework for understanding population
           change, its application in developing countries like Nepal requires adaptation to the specific context and
-          consideration of various social, cultural, and economic factors.
+          consideration of various social, cultural, and economic factors.<br>
         </div>
       </div>
     </div>
@@ -2630,40 +2695,39 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           The population policies and strategies of the Nepal government aim to address various demographic challenges
           and promote sustainable population growth. The specific policies and strategies can vary over time, but some
-          common areas of focus include:
-          vbnet
-          Copy code
+          common areas of focus include:<br>
+
           1. Family Planning: The government emphasizes the promotion of family planning methods and reproductive health
           services to enable individuals and couples to make informed decisions about their family size and spacing of
-          children. This includes improving access to contraceptives, reproductive health education, and counseling.
+          children. This includes improving access to contraceptives, reproductive health education, and counseling.<br>
 
           2. Maternal and Child Health: The government prioritizes improving maternal and child health outcomes by
           enhancing healthcare services, increasing skilled birth attendance, expanding immunization coverage, and
-          reducing infant and child mortality rates.
+          reducing infant and child mortality rates.<br>
 
           3. Adolescent and Youth Health: Recognizing the importance of addressing the unique health needs of
           adolescents and youth, the government implements programs to provide comprehensive sexual and reproductive
-          health education, access to youth-friendly healthcare services, and support for their overall well-being.
+          health education, access to youth-friendly healthcare services, and support for their overall well-being.<br>
 
           4. Gender Equality and Empowerment: The government promotes gender equality and women's empowerment as
           essential components of population policies. Efforts are made to address gender-based discrimination, ensure
-          access to education and healthcare for women and girls, and empower women in decision-making processes.
+          access to education and healthcare for women and girls, and empower women in decision-making processes.<br>
 
           5. Migration and Urbanization: Given the increasing rates of rural-to-urban migration and urbanization, the
           government focuses on managing population movements, improving living conditions in urban areas, and
-          addressing the associated challenges such as urban poverty, housing, and basic services.
+          addressing the associated challenges such as urban poverty, housing, and basic services.<br>
 
           Whether the targets of population policies and strategies can be fulfilled within the 9th five-year plan
           depends on the specific goals, resources allocated, and the progress made in implementation. It requires
           continuous monitoring, evaluation, and adjustments based on the evolving demographic context. The
           effectiveness of the policies also depends on various factors such as political commitment, community
           engagement, and collaboration with stakeholders, including civil society organizations and international
-          partners.
+          partners.<br>
 
           It is essential to refer to the specific targets and progress indicators outlined in the 9th five-year plan to
           determine the feasibility of achieving the population-related targets within that timeframe. Regular
           assessments and updates are necessary to ensure the alignment of policies and strategies with changing
-          demographic dynamics and to track progress towards the desired outcomes.
+          demographic dynamics and to track progress towards the desired outcomes.<br>
         </div>
       </div>
     </div>
@@ -3010,31 +3074,31 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           Graphic and diagrammatic representations of data are visual tools used to present information in a clear and
           concise manner. They help in understanding and interpreting complex data sets, making it easier to identify
-          patterns, trends, and relationships. Here are some key points about graphic and diagrammatic representations:
+          patterns, trends, and relationships. Here are some key points about graphic and diagrammatic representations:<br>
 
           1. Bar Graphs: Bar graphs use rectangular bars of varying heights or lengths to represent data. They are
           suitable for comparing discrete categories or groups and visualizing the magnitude of each category. Bar
-          graphs are commonly used to present categorical data or data with distinct groups.
+          graphs are commonly used to present categorical data or data with distinct groups.<br>
 
           2. Line Graphs: Line graphs show the relationship between two variables by connecting data points with lines.
           They are effective in displaying trends and changes over time. Line graphs are commonly used to represent
-          time-series data or continuous variables.
+          time-series data or continuous variables.<br>
 
           3. Pie Charts: Pie charts represent data as sectors of a circle, with each sector representing a proportion of
           the whole. They are useful for displaying the composition or distribution of a categorical variable. Pie
-          charts are commonly used to represent percentages or proportions.
+          charts are commonly used to represent percentages or proportions.<br>
 
           4. Histograms: Histograms are similar to bar graphs but are used to represent continuous data. They group data
           into intervals or bins on the x-axis and display the frequency or count of data within each interval on the
-          y-axis. Histograms provide a visual representation of the distribution of data.
+          y-axis. Histograms provide a visual representation of the distribution of data.<br>
 
           5. Scatter Plots: Scatter plots are used to display the relationship between two continuous variables. Each
           data point is plotted on a graph, with one variable on the x-axis and the other on the y-axis. Scatter plots
-          are useful for identifying correlations or patterns between variables.
+          are useful for identifying correlations or patterns between variables.<br>
 
           Graphic and diagrammatic representations of data are powerful tools for presenting information visually,
           aiding in data analysis, and facilitating better understanding of complex data sets. They enhance data
-          interpretation and communication, allowing for effective data-driven decision-making.
+          interpretation and communication, allowing for effective data-driven decision-making.<br>
         </div>
       </div>
     </div>
@@ -3048,32 +3112,32 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           Measures of central tendency are statistical values that provide information about the center or typical value
           of a dataset. They summarize the data by focusing on a single representative value. Here are some key points
-          about measures of central tendency:
+          about measures of central tendency:<br>
 
           1. Mean: The mean is the arithmetic average of a dataset. It is calculated by summing all the values and
           dividing by the number of observations. The mean is sensitive to extreme values and can be affected by
-          outliers.
+          outliers.<br>
 
           2. Median: The median is the middle value in a dataset when it is arranged in ascending or descending order.
           If there is an even number of observations, the median is the average of the two middle values. The median is
           less affected by outliers and is useful for skewed distributions.
-
+          <br>
           3. Mode: The mode is the most frequently occurring value in a dataset. It represents the value or values that
           appear with the highest frequency. The mode is useful for categorical or discrete data and can be used for
-          both numeric and non-numeric variables.
+          both numeric and non-numeric variables.<br>
 
           These measures of central tendency provide different perspectives on the typical value of a dataset. The
           choice of which measure to use depends on the nature of the data and the research question.
-
+          <br>
           The mean is considered the ideal measure of central tendency when the data follows a symmetrical distribution
           without significant outliers. It provides a balance of values and is commonly used in many statistical
           analyses.
-
+          <br>
           However, in the presence of outliers or skewed distributions, the median may be a better measure as it is less
           affected by extreme values. For example, if we have a dataset of household incomes where a few extremely
           high-income values exist, the median income would be a better representation of the typical income level
           compared to the mean, which could be heavily influenced by those high-income outliers.
-
+          <br>
           Overall, the choice of the measure of central tendency depends on the characteristics of the dataset and the
           specific research question at hand. It is important to consider the distribution and nature of the data when
           selecting the appropriate measure.
@@ -3092,30 +3156,30 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Measures of central tendency are statistical values that provide information about the center or typical value
           of a dataset. The main measures of central tendency are the mean, median, and mode. Here's a brief explanation
           of each measure:
-
+          <br>
           1. Mean: The mean is the arithmetic average of a dataset. It is calculated by summing all the values and
           dividing by the number of observations. The mean is widely used and provides a balanced representation of the
           data. It is the ideal measure when the data follows a symmetrical distribution without significant outliers.
           For example, if we have a dataset of exam scores for a class of students, the mean score would provide an
           overall measure of the class's performance.
-
+          <br>
           2. Median: The median is the middle value in a dataset when it is arranged in ascending or descending order.
           If there is an even number of observations, the median is the average of the two middle values. The median is
           less affected by outliers and is useful for skewed distributions. For instance, if we have a dataset of
           household incomes, where a few extremely high-income values exist, the median income would be a better
           representation of the typical income level compared to the mean, which could be heavily influenced by those
           high-income outliers.
-
+          <br>
           3. Mode: The mode is the most frequently occurring value in a dataset. It represents the value or values that
           appear with the highest frequency. The mode is useful for categorical or discrete data and can be used for
           both numeric and non-numeric variables. For example, in a dataset of exam grades with letter grades (A, B, C,
           etc.), the mode would represent the most commonly achieved grade.
-
+          <br>
           The choice of which measure to use depends on the nature of the data and the research question. The mean is
           commonly used as it provides a comprehensive summary when the data is normally distributed. However, in the
           presence of outliers or skewed distributions, the median may be a better measure. The mode is useful for
           identifying the most common value or category.
-
+          <br>
           It is important to consider the characteristics of the dataset, the distribution of the data, and the research
           objectives when selecting the appropriate measure of central tendency.
 
@@ -3282,28 +3346,27 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Measures of dispersion, also known as measures of variability or spread, provide information about the extent
           to which data points vary or spread out from the central tendency. They help in understanding the distribution
           and variability within a dataset. Here are some key points about measures of dispersion:
-          sql
-          Copy code
+          <br>
           1. Range: The range is the simplest measure of dispersion and represents the difference between the highest
           and lowest values in a dataset. It provides an idea of the total spread of the data but does not consider the
           distribution of values within that range.
-
+          <br>
           2. Variance: Variance measures the average squared deviation of each data point from the mean. It considers
           all the values in the dataset and provides an understanding of how widely the data points are spread out. A
           higher variance indicates greater dispersion.
-
+          <br>
           3. Standard Deviation: The standard deviation is the square root of the variance. It provides a measure of
           dispersion that is in the same unit as the original data. The standard deviation is commonly used and provides
           a more interpretable measure of spread compared to variance.
-
+          <br>
           4. Mean Deviation: The mean deviation measures the average absolute deviation of each data point from the
           mean. It considers the absolute difference between each value and the mean, providing a measure of dispersion
           that is less sensitive to outliers compared to variance or standard deviation.
-
+          <br>
           5. Coefficient of Variation: The coefficient of variation (CV) is the ratio of the standard deviation to the
           mean, expressed as a percentage. It provides a relative measure of dispersion, allowing for comparisons
           between datasets with different scales. A higher CV indicates greater relative dispersion.
-
+          <br>
           Measures of dispersion help in understanding the variability and spread of data, complementing the measures of
           central tendency. They are useful for comparing datasets, assessing the reliability of data, and making
           statistical inferences. The choice of the appropriate measure of dispersion depends on the characteristics of
@@ -3322,34 +3385,33 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           There are several measures of dispersion that provide information about the spread or variability of data.
           Here are some common measures of dispersion along with their explanations and examples:
-          vbnet
-          Copy code
+          <br>
           1. Range: The range is the simplest measure of dispersion and represents the difference between the highest
           and lowest values in a dataset. For example, if we have a dataset of exam scores ranging from 60 to 90, the
           range would be 30.
-
+          <br>
           2. Variance: Variance measures the average squared deviation of each data point from the mean. It considers
           all the values in the dataset and provides a measure of the spread. For example, if we have a dataset of daily
           rainfall in millimeters, the variance would quantify the average squared difference between each day's
           rainfall and the mean rainfall.
-
+          <br>
           3. Standard Deviation: The standard deviation is the square root of the variance. It provides a measure of
           dispersion that is in the same unit as the original data. It is widely used and provides a more interpretable
           measure of spread compared to variance. For example, if we have a dataset of heights in centimeters, the
           standard deviation would indicate how spread out the heights are from the mean.
-
+          <br>
           4. Mean Deviation: Mean deviation measures the average absolute deviation of each data point from the mean. It
           considers the absolute difference between each value and the mean, providing a measure of dispersion that is
           less sensitive to outliers compared to variance or standard deviation. For example, if we have a dataset of
           temperatures in Celsius, the mean deviation would quantify the average absolute difference between each
           temperature and the mean temperature.
-
+          <br>
           5. Coefficient of Variation: The coefficient of variation (CV) is the ratio of the standard deviation to the
           mean, expressed as a percentage. It provides a relative measure of dispersion, allowing for comparisons
           between datasets with different scales. For example, if we have two datasets, one representing the annual
           income and the other representing the annual expenses of individuals, the coefficient of variation would help
           compare the relative variability between the two.
-
+          <br>
           These measures of dispersion offer insights into the spread and variability of data, aiding in understanding
           the distribution and making comparisons between datasets. The choice of the appropriate measure depends on the
           characteristics of the data and the specific research objective.
@@ -3368,36 +3430,35 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           There are various measures of dispersion that provide insights into the spread or variability of data. Let's
           discuss some commonly used measures of dispersion along with their characteristics and examples:
-          vbnet
-          Copy code
+          <br>
           1. Range: The range is the simplest measure of dispersion and represents the difference between the highest
           and lowest values in a dataset. It is easy to calculate but is highly influenced by extreme values and does
           not consider the distribution within the range. For example, if we have a dataset of monthly temperatures, the
           range would be the difference between the highest and lowest recorded temperatures.
-
+          <br>
           2. Variance: Variance measures the average squared deviation of each data point from the mean. It considers
           all the values in the dataset and provides a measure of the spread. Variance gives more weight to extreme
           values and is sensitive to outliers. For example, if we have a dataset of exam scores, the variance would
           indicate how much the scores deviate from the average.
-
+          <br>
           3. Standard Deviation: The standard deviation is the square root of the variance. It provides a measure of
           dispersion that is in the same unit as the original data. Standard deviation is widely used and provides a
           more interpretable measure of spread compared to variance. It is less sensitive to outliers than variance. For
           example, if we have a dataset of stock prices, the standard deviation would give an idea of how volatile the
           prices are.
-
+          <br>
           4. Mean Deviation: Mean deviation measures the average absolute deviation of each data point from the mean. It
           considers the absolute difference between each value and the mean, providing a measure of dispersion that is
           less influenced by extreme values. Mean deviation is less sensitive to outliers compared to variance or
           standard deviation. For example, if we have a dataset of employee salaries, the mean deviation would give an
           indication of the average absolute difference between individual salaries and the mean salary.
-
+          <br>
           5. Coefficient of Variation: The coefficient of variation (CV) is the ratio of the standard deviation to the
           mean, expressed as a percentage. It provides a relative measure of dispersion, allowing for comparisons
           between datasets with different scales. CV helps assess the relative variability between datasets. For
           example, if we have datasets of two different stocks with different price levels, the coefficient of variation
           would enable comparison of their relative volatilities.
-
+          <br>
           These measures of dispersion provide information about the spread and variability of data. The choice of the
           appropriate measure depends on the data characteristics, the research objective, and the level of sensitivity
           to outliers.
@@ -3564,8 +3625,8 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           207, 210, 201, 191, 203, 165, 187, 194, 162, 187, 168,
           178, 193, 176, 189, 169, 198
 
-          From these data, construct:
-          i) A frequency distribution with suitable class intervals.
+          From these data, construct:<br>
+          i) A frequency distribution with suitable class intervals.<br>
           ii) A less than cumulative frequency curve.
         </div>
       </div>
@@ -3575,31 +3636,89 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           frequency of values falling within each interval. Here is a frequency distribution with suitable class
           intervals for the given data:
 
-          vbnet
-          Copy code
-          Class Intervals | Frequency
-          ----------------|----------
-          160 - 169 | 5
-          170 - 179 | 9
-          180 - 189 | 12
-          190 - 199 | 10
-          200 - 209 | 8
-          210 - 219 | 3
-          220 - 229 | 3
+          <table>
+            <tr>
+              <th>Class Intervals</th>
+              <th>Frequency</th>
+            </tr>
+            <tr>
+              <td>160 - 169</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>170 - 179</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>180 - 189</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>190 - 199</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>200 - 209</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>210 - 219</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>220 - 229</td>
+              <td>3</td>
+            </tr>
+          </table>
+          
 
           ii) To construct a less than cumulative frequency curve, we need to calculate the cumulative frequency for
           each class interval. The cumulative frequency represents the total number of values that are less than or
           equal to a given class interval. Here is the less than cumulative frequency curve for the given data:
 
-          Class Intervals | Frequency | Cumulative Frequency
-          ----------------|-----------|---------------------
-          160 - 169 | 5 | 5
-          170 - 179 | 9 | 14
-          180 - 189 | 12 | 26
-          190 - 199 | 10 | 36
-          200 - 209 | 8 | 44
-          210 - 219 | 3 | 47
-          220 - 229 | 3 | 50
+          <table>
+            <tr>
+              <th>Class Intervals</th>
+              <th>Frequency</th>
+              <th>Cumulative Frequency</th>
+            </tr>
+            <tr>
+              <td>160 - 169</td>
+              <td>5</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>170 - 179</td>
+              <td>9</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>180 - 189</td>
+              <td>12</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td>190 - 199</td>
+              <td>10</td>
+              <td>36</td>
+            </tr>
+            <tr>
+              <td>200 - 209</td>
+              <td>8</td>
+              <td>44</td>
+            </tr>
+            <tr>
+              <td>210 - 219</td>
+              <td>3</td>
+              <td>47</td>
+            </tr>
+            <tr>
+              <td>220 - 229</td>
+              <td>3</td>
+              <td>50</td>
+            </tr>
+          </table>
+          
 
           The less than cumulative frequency curve represents the cumulative frequency plotted against the upper class
           limits of each interval. It shows the accumulation of values up to a certain blood pressure range.
@@ -3779,7 +3898,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           The normal distribution has a probability density function (PDF) that follows the mathematical equation:
 
-          $$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+          $$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}e^{-\frac{(x-\mu)^2}{2\sigma^2}$$
 
           The cumulative distribution function (CDF) for the normal distribution can be calculated using mathematical
           tables or statistical software.
@@ -3818,7 +3937,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           The normal distribution has a probability density function (PDF) that follows the mathematical equation:
 
-          $$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+          $$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}e^{-\frac{(x-\mu)^2}{2\sigma^2}$$
 
           The cumulative distribution function (CDF) for the normal distribution can be calculated using mathematical
           tables or statistical software.
@@ -3885,25 +4004,25 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           In probability theory, a trial refers to an action or process that results in an outcome or set of outcomes,
-          while an event refers to a specific outcome or a collection of outcomes of interest.
+          while an event refers to a specific outcome or a collection of outcomes of interest. <br>
 
           - Equally Likely Events: Equally likely events are events in which all possible outcomes have the same
           probability of occurring. For example, when rolling a fair six-sided die, each face (outcome) has an equal
-          probability of 1/6. So, the events of getting a 1, 2, 3, 4, 5, or 6 are equally likely events.
+          probability of 1/6. So, the events of getting a 1, 2, 3, 4, 5, or 6 are equally likely events.<br>
 
           - Mutually Exclusive Events: Mutually exclusive events are events that cannot occur simultaneously. If one
           event happens, the other event(s) cannot happen at the same time. For example, when flipping a coin, the
           events of getting a heads and getting a tails are mutually exclusive because only one of them can occur on a
-          single flip.
+          single flip.<br>
 
           - Exhaustive Events: Exhaustive events are events that cover all possible outcomes of a trial. In other words,
           when considering all possible outcomes, the events together form a complete set. For example, when rolling a
           fair six-sided die, the events of getting an odd number (1, 3, 5) and getting an even number (2, 4, 6) are
-          exhaustive events because they cover all possible outcomes (all numbers on the die).
+          exhaustive events because they cover all possible outcomes (all numbers on the die).<br>
 
           These concepts of equally likely, mutually exclusive, and exhaustive events are fundamental in probability
           theory and play a crucial role in analyzing and calculating probabilities for various situations and
-          experiments.
+          experiments.<br>
 
         </div>
       </div>
@@ -3921,41 +4040,40 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           A normal distribution, also known as a Gaussian distribution, is a continuous probability distribution that is
           symmetric and bell-shaped. It is characterized by its mean (μ) and standard deviation (σ). In a normal
           distribution, the data cluster around the mean, and the probability decreases as the distance from the mean
-          increases.
-          sql
-          Copy code
-          Features of the normal curve include:
+          increases.<br>
+       
+          Features of the normal curve include:<br>
 
           1. Symmetry: The normal curve is symmetric around its mean, dividing the area under the curve equally on both
-          sides.
+          sides.<br>
 
           2. Bell-shaped: The normal curve has a characteristic bell-shaped appearance, with the highest point at the
-          mean and the tails extending infinitely in both directions.
+          mean and the tails extending infinitely in both directions.<br>
 
-          3. Unimodal: The normal curve has a single peak at the mean, representing the most probable value.
+          3. Unimodal: The normal curve has a single peak at the mean, representing the most probable value.<br>
 
           4. Standardized: The normal curve is standardized, with specific proportions of data falling within different
           standard deviations from the mean. Approximately 68% of the data falls within one standard deviation of the
-          mean, 95% falls within two standard deviations, and 99.7% falls within three standard deviations.
+          mean, 95% falls within two standard deviations, and 99.7% falls within three standard deviations.<br>
 
-          Applications of the normal distribution include:
+          Applications of the normal distribution include:<br>
 
           - Statistical Analysis: The normal distribution is widely used in statistical analysis and inference,
-          including hypothesis testing, confidence intervals, and estimation.
+          including hypothesis testing, confidence intervals, and estimation.<br>
 
           - Quality Control: The normal distribution is employed in quality control processes to assess product
-          variability and determine acceptable limits.
+          variability and determine acceptable limits.<br>
 
           - Risk Assessment: Many natural phenomena, such as heights and weights of individuals, IQ scores, and errors
           in measurements, can be approximated using the normal distribution, making it useful in risk assessment and
-          decision-making.
+          decision-making.<br>
 
           - Financial Modeling: The normal distribution is frequently used in financial modeling, such as estimating
-          stock prices and evaluating investment returns.
+          stock prices and evaluating investment returns.<br>
 
           Example: The heights of adult males in a population often follow a normal distribution. The mean height might
           be around 175 cm, and the standard deviation could be 5 cm. The normal distribution allows us to determine the
-          probability of finding a man within a specific height range, such as between 170 cm and 180 cm.
+          probability of finding a man within a specific height range, such as between 170 cm and 180 cm.<br>
 
         </div>
       </div>
@@ -3970,31 +4088,30 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           The normal distribution, also known as the Gaussian distribution, is a continuous probability distribution
           that is symmetric and bell-shaped. It is characterized by two parameters: the mean (μ) and the standard
-          deviation (σ). The properties of the normal distribution are as follows:
-          sql
-          Copy code
+          deviation (σ). The properties of the normal distribution are as follows:<br>
+      
           1. Symmetry: The normal distribution is symmetric around its mean. This means that the left and right halves
           of the distribution mirror each other. The mean, median, and mode of the distribution are all equal and
-          located at the center of the distribution.
+          located at the center of the distribution.<br>
 
           2. Bell-shaped: The normal distribution has a characteristic bell-shaped curve. The highest point of the curve
           is at the mean, and the curve gradually tapers off as it moves away from the mean. The tails of the
-          distribution extend indefinitely in both directions.
+          distribution extend indefinitely in both directions.<br>
 
           3. Unimodal: The normal distribution is unimodal, meaning it has a single peak. The peak represents the most
-          probable value or the mean of the distribution.
+          probable value or the mean of the distribution.<br>
 
           4. Standardized: The normal distribution is standardized with a mean of 0 and a standard deviation of 1 in the
           standard form, known as the standard normal distribution. This standardization allows for easier comparison
-          and calculation of probabilities.
+          and calculation of probabilities.<br>
 
           5. Empirical Rule: The normal distribution follows the empirical rule, which states that approximately 68% of
           the data falls within one standard deviation of the mean, about 95% falls within two standard deviations, and
-          approximately 99.7% falls within three standard deviations.
+          approximately 99.7% falls within three standard deviations.<br>
 
           The normal distribution is widely used in statistical analysis, hypothesis testing, modeling, and inference.
           It provides a fundamental framework for understanding and analyzing data in various fields such as social
-          sciences, natural sciences, finance, and engineering.
+          sciences, natural sciences, finance, and engineering.<br>
 
         </div>
       </div>
@@ -4010,38 +4127,37 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           - Binomial Distribution: The binomial distribution is a discrete probability distribution that models the
           number of successes in a fixed number of independent Bernoulli trials. It is characterized by two parameters:
-          the probability of success (p) and the number of trials (n).
-          vbnet
-          Copy code
-          Conditions for using the binomial distribution:
+          the probability of success (p) and the number of trials (n).<br>
+      
+          Conditions for using the binomial distribution:<br>
 
           1. There must be a fixed number of trials, denoted by 'n', which means the number of experiments or events is
-          predetermined.
+          predetermined.<br>
 
-          2. Each trial must be independent, meaning the outcome of one trial does not affect the outcome of another.
+          2. Each trial must be independent, meaning the outcome of one trial does not affect the outcome of another.<br>
 
-          3. Each trial has only two possible outcomes: success or failure (often represented as 1 or 0).
+          3. Each trial has only two possible outcomes: success or failure (often represented as 1 or 0).<br>
 
-          4. The probability of success ('p') must remain constant for each trial.
+          4. The probability of success ('p') must remain constant for each trial.<br>
 
           The binomial distribution is commonly used to model situations such as flipping a coin, rolling dice, or
-          counting the number of successes in a series of independent events.
+          counting the number of successes in a series of independent events.<br>
 
           - Poisson Distribution: The Poisson distribution is a discrete probability distribution that models the number
           of events occurring in a fixed interval of time or space when the events occur randomly and independently at a
-          constant rate. It is characterized by a single parameter: the average rate of events (λ).
+          constant rate. It is characterized by a single parameter: the average rate of events (λ).<br>
 
-          Conditions for using the Poisson distribution:
+          Conditions for using the Poisson distribution:<br>
 
-          1. The events must occur randomly and independently of each other.
+          1. The events must occur randomly and independently of each other.<br>
 
-          2. The average rate of events must remain constant over the given interval.
+          2. The average rate of events must remain constant over the given interval.<br>
 
-          3. The probability of more than one event occurring in an infinitesimally small interval is negligible.
+          3. The probability of more than one event occurring in an infinitesimally small interval is negligible.<br>
 
           The Poisson distribution is commonly used to model rare events such as the number of customer arrivals at a
           service counter, the number of accidents in a given time period, or the number of phone calls received in an
-          hour.
+          hour.<br>
 
         </div>
       </div>
@@ -4060,7 +4176,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           from -1 to 1, where -1 indicates a perfect negative correlation, 1 indicates a perfect positive correlation,
           and 0 indicates no correlation. Correlation analysis helps in understanding the linear relationship between
           variables, identifying patterns, and making predictions. It is widely used in social sciences, finance,
-          economics, and other fields to analyze data and draw conclusions about the relationship between variables.
+          economics, and other fields to analyze data and draw conclusions about the relationship between variables.<br>
 
           - Regression Analysis: Regression analysis is a statistical method used to model the relationship between a
           dependent variable and one or more independent variables. It helps in predicting the value of the dependent
@@ -4069,7 +4185,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           the equation of a straight line that best fits the data, minimizing the sum of squared differences between the
           observed and predicted values. Regression analysis allows for understanding the impact of independent
           variables on the dependent variable, making predictions, and testing hypotheses. It is extensively used in
-          economics, social sciences, marketing, and various other fields to analyze and interpret data.
+          economics, social sciences, marketing, and various other fields to analyze and interpret data.<br>
 
         </div>
       </div>
@@ -4225,13 +4341,29 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           | Hypertension
           | Complication
-          ---------------------------
-          | Absent | Present
-          ---------------------------
-          Absent | 23 | 12
-          Present | 35 | 55
-          ---------------------------
-          Total | 78 | 112
+          <table>
+            <tr>
+              <th></th>
+              <th>Absent</th>
+              <th>Present</th>
+            </tr>
+            <tr>
+              <th>Absent</th>
+              <td>23</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <th>Present</th>
+              <td>35</td>
+              <td>55</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td>78</td>
+              <td>112</td>
+            </tr>
+          </table>
+          
 
           The first step is to calculate the expected frequencies under the assumption that there is no association
           between complications and hypertension. The expected frequencies can be calculated using the formula:
@@ -4242,32 +4374,48 @@ var wheelCanvas = document.getElementById("wheelCanvas");
 
           | Hypertension
           | Complication
-          ---------------------------
-          | Absent | Present
-          ---------------------------
-          Absent | 16.73 | 18.27
-          Present | 61.27 | 50.73
-          ---------------------------
-          Total | 78 | 112
+          <table>
+            <tr>
+              <th></th>
+              <th>Absent</th>
+              <th>Present</th>
+            </tr>
+            <tr>
+              <th>Absent</th>
+              <td>16.73</td>
+              <td>18.27</td>
+            </tr>
+            <tr>
+              <th>Present</th>
+              <td>61.27</td>
+              <td>50.73</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td>78</td>
+              <td>112</td>
+            </tr>
+          </table>
+          
 
-          Once we have the observed and expected frequencies, we can calculate the chi-square statistic:
+          Once we have the observed and expected frequencies, we can calculate the chi-square statistic:<br>
 
-          Chi-square = Σ [(Observed Frequency - Expected Frequency)^2 / Expected Frequency]
+          Chi-square = Σ [(Observed Frequency - Expected Frequency)^2 / Expected Frequency]<br>
 
-          Calculating the chi-square statistic using the given data, we find that the value is 8.328.
+          Calculating the chi-square statistic using the given data, we find that the value is 8.328.<br>
 
           Next, we need to compare this value to the critical value from the chi-square distribution with (r-1) * (c-1)
           degrees of freedom, where r is the number of rows and c is the number of columns. In this case, we have (2-1)
-          * (2-1) = 1 degree of freedom.
+          * (2-1) = 1 degree of freedom.<br>
 
           Looking up the critical value at a 5% level of significance in the chi-square distribution table with 1 degree
-          of freedom, we find the critical value to be 3.84.
+          of freedom, we find the critical value to be 3.84.<br>
 
           Since the calculated chi-square value (8.328) is greater than the critical value (3.84), we can reject the
           null hypothesis. This indicates that there is sufficient evidence to suggest an association between
-          complications and hypertension.
+          complications and hypertension.<br>
 
-          Therefore, based on the provided data, we can conclude that complications and hypertension are associated.
+          Therefore, based on the provided data, we can conclude that complications and hypertension are associated.<br>
 
         </div>
       </div>
@@ -4532,30 +4680,29 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           population for the purpose of conducting research or obtaining statistical information. It is impractical and
           time-consuming to collect data from the entire population, so sampling allows researchers to gather
           information from a smaller, manageable sample that represents the population of interest.
-          vbnet
-          Copy code
-          There are various methods of sampling techniques, including:
+     
+          There are various methods of sampling techniques, including:<br>
 
-          1. Simple Random Sampling:
+          1. Simple Random Sampling:<br>
           Simple random sampling is a basic sampling technique where each member of the population has an equal chance
           of being selected. It involves selecting individuals or items at random without any specific pattern or
           criteria. For example, if you want to survey the opinions of students in a school, you could assign a number
           to each student, use a random number generator, and select a certain number of students based on the generated
           numbers.
 
-          2. Stratified Sampling:
+          2. Stratified Sampling:<br>
           Stratified sampling involves dividing the population into subgroups or strata based on certain
           characteristics, such as age, gender, or occupation. Then, a random sample is taken from each stratum in
           proportion to the size of that stratum in the population. For example, if you want to study the income levels
           of people in a city, you can divide the population into income groups (e.g., low-income, middle-income,
-          high-income) and randomly select individuals from each group.
+          high-income) and randomly select individuals from each group.<br>
 
-          3. Cluster Sampling:
+          3. Cluster Sampling:<br>
           Cluster sampling involves dividing the population into clusters or groups and randomly selecting entire
           clusters as the sampling units. It is often used when the population is geographically dispersed or when it is
           difficult to obtain a complete list of the population. For example, if you want to study the reading habits of
           students in different schools, you can randomly select a few schools and survey all the students within those
-          selected schools.
+          selected schools.<br>
 
           These are just three examples of sampling techniques, and there are other methods such as systematic sampling,
           convenience sampling, and quota sampling. The choice of sampling technique depends on the research objectives,
@@ -4565,7 +4712,7 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           population based on a sample. By selecting a representative sample, researchers can generalize their findings
           to the larger population and draw conclusions with a certain level of confidence. Sampling techniques help
           ensure the validity and reliability of statistical analyses and reduce the time and cost involved in data
-          collection.
+          collection.<br>
 
         </div>
       </div>
@@ -4583,16 +4730,15 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Sampling refers to the process of selecting a subset of individuals or units from a larger population for
           research or analysis. It is necessary because it is often impractical or impossible to study the entire
           population due to constraints such as time, cost, and feasibility. By studying a representative sample,
-          researchers can make inferences and draw conclusions about the population as a whole.
-          sql
-          Copy code
+          researchers can make inferences and draw conclusions about the population as a whole.<br>
+        
           One sampling method I am familiar with is stratified sampling. In stratified sampling, the population is
           divided into subgroups or strata based on certain characteristics. Within each stratum, a random sample is
           then selected. This method ensures that each subgroup is represented in the sample proportionally to its size
           in the population. For example, in a study on the prevalence of diabetes in a city, the population can be
           stratified by age groups (e.g., 18-30, 31-50, 51-70). A random sample can then be selected from each age
           group, ensuring representation from different age categories in the final sample. This method helps account
-          for the diversity within the population and provides more precise estimates for each subgroup.
+          for the diversity within the population and provides more precise estimates for each subgroup.<br>
         </div>
       </div>
     </div>
@@ -4733,27 +4879,27 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           larger population for the purpose of data collection or research. It involves selecting a representative
           sample that can provide insights and inferences about the entire population.
 
-          There are various sampling techniques available, including:
+          There are various sampling techniques available, including:<br>
 
-          1. Simple Random Sampling:
+          1. Simple Random Sampling:<br>
           Simple random sampling involves selecting individuals from a population randomly and equally. Each member of
           the population has an equal chance of being selected. For example, if you want to study the preferences of
           smartphone users in a city, you could assign each smartphone user a number and use a random number generator
-          to select a sample of participants.
+          to select a sample of participants.<br>
 
-          2. Stratified Sampling:
+          2. Stratified Sampling:<br>
           Stratified sampling involves dividing the population into distinct subgroups or strata based on certain
           characteristics, such as age, gender, or income level. Then, a random sample is taken from each stratum in
           proportion to its size in the population. For instance, if you want to study the educational attainment of a
           population, you can divide them into strata based on educational levels (e.g., high school, college,
-          postgraduate) and randomly select participants from each stratum.
+          postgraduate) and randomly select participants from each stratum.<br>
 
-          3. Cluster Sampling:
+          3. Cluster Sampling:<br>
           Cluster sampling involves dividing the population into clusters or groups, usually based on geographical
           regions or other identifiable units. Then, a random sample of clusters is selected, and all individuals within
           the chosen clusters are included in the sample. For example, if you want to conduct a health survey in a
           country, you can randomly select a few regions or districts and include all households within those selected
-          regions in the sample.
+          regions in the sample.<br>
 
           These are just three examples of sampling techniques. Other common sampling techniques include systematic
           sampling, convenience sampling, and quota sampling. The choice of sampling technique depends on factors such
@@ -4771,29 +4917,29 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           In statistical hypothesis testing, Type I and Type II errors refer to the two types of mistakes that can
-          occur.
+          occur.<br>
 
           Type I error, also known as a "false positive," occurs when the null hypothesis is rejected even though it is
           true. In other words, it is the incorrect rejection of a true null hypothesis. The probability of committing a
           Type I error is denoted by the Greek letter alpha (α) and is typically set as the level of significance in a
           hypothesis test. For example, if the significance level is set at 0.05, it means that there is a 5% chance of
-          committing a Type I error.
+          committing a Type I error.<br>
 
           Type II error, also known as a "false negative," occurs when the null hypothesis is not rejected even though
           it is false. In other words, it is the failure to reject a false null hypothesis. The probability of
           committing a Type II error is denoted by the Greek letter beta (β). The complement of beta, denoted as power
           (1 - β), represents the probability of correctly rejecting a false null hypothesis. Type II error is
-          influenced by factors such as sample size, effect size, and the chosen level of significance.
+          influenced by factors such as sample size, effect size, and the chosen level of significance.<br>
 
           Type I and Type II errors are inversely related, meaning that reducing the probability of one type of error
           increases the probability of the other. Researchers must strike a balance between the two types of errors
           based on the specific context and consequences of the study. The ideal scenario is to minimize both Type I and
-          Type II errors, but this is not always possible.
+          Type II errors, but this is not always possible.<br>
 
           It is important to understand and consider the potential for Type I and Type II errors when interpreting the
           results of statistical tests. The consequences of making these errors can vary depending on the field of study
           and the specific research question at hand. Therefore, researchers must carefully design their experiments,
-          choose appropriate sample sizes, and interpret the results in light of the potential for these errors.
+          choose appropriate sample sizes, and interpret the results in light of the potential for these errors.<br>
 
         </div>
       </div>
@@ -4809,26 +4955,26 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           Sampling theory is a branch of statistics that deals with the selection and analysis of a subset of
           individuals or items from a larger population to make inferences about the whole population. It provides a
-          framework for drawing valid conclusions about a population based on a sample.
+          framework for drawing valid conclusions about a population based on a sample.<br>
 
           Probability sampling is a sampling technique where each member of the population has a known and non-zero
           probability of being selected. It ensures that every individual or item in the population has an equal chance
           of being included in the sample. One example of probability sampling is simple random sampling, where each
           member of the population is selected independently and randomly. For instance, if a researcher wants to study
           the average height of students in a school, they can assign a unique number to each student, use a random
-          number generator, and select a sample of students based on the generated numbers.
+          number generator, and select a sample of students based on the generated numbers.<br>
 
           Non-probability sampling is a sampling technique where the selection of individuals or items from the
           population does not involve randomization or known probabilities. It does not guarantee equal representation
           of the population. One example of non-probability sampling is convenience sampling, where individuals or items
           are selected based on their availability and accessibility. For example, if a researcher wants to gather
-          opinions about a new product, they might approach people in a shopping mall to participate in a survey.
+          opinions about a new product, they might approach people in a shopping mall to participate in a survey.<br>
 
           Probability sampling techniques generally provide more representative and unbiased results, allowing for the
           generalization of findings to the larger population. Non-probability sampling techniques are more convenient
           and less resource-intensive but may introduce selection bias and limit the generalizability of results. The
           choice of sampling technique depends on the research objectives, available resources, and the characteristics
-          of the population under study.
+          of the population under study.<br>
 
         </div>
       </div>
@@ -4844,28 +4990,27 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           A sampling technique refers to the method used to select a subset of individuals or items from a larger
           population for the purpose of data collection or research. It involves selecting a representative sample that
-          can provide insights into the characteristics of the entire population.
-          vbnet
-          Copy code
-          Two different sampling techniques are:
+          can provide insights into the characteristics of the entire population.<br>
+        
+          Two different sampling techniques are:<br>
 
-          1. Stratified Sampling:
+          1. Stratified Sampling:<br>
           Stratified sampling involves dividing the population into subgroups or strata based on certain characteristics
           and then randomly selecting individuals from each stratum. This technique ensures that each subgroup is
           represented in the sample proportionally to its size in the population. For example, if a researcher wants to
           study the job satisfaction of employees in a company, they can divide the employees into different departments
-          (strata) and randomly select a certain number of employees from each department.
+          (strata) and randomly select a certain number of employees from each department.<br>
 
-          2. Cluster Sampling:
+          2. Cluster Sampling:<br>
           Cluster sampling involves dividing the population into clusters or groups and randomly selecting entire
           clusters as the sampling units. It is often used when it is difficult or impractical to obtain a complete list
           of the population. Cluster sampling is especially useful when the population is geographically dispersed. For
           example, if a researcher wants to study the prevalence of a disease in a country, they can randomly select a
-          few geographical regions (clusters) and include all individuals within those regions in the sample.
+          few geographical regions (clusters) and include all individuals within those regions in the sample.<br>
 
           These sampling techniques allow researchers to obtain representative samples that can provide valuable
           insights into the population of interest. The choice of sampling technique depends on factors such as the
-          research objectives, available resources, and the nature of the population being studied.
+          research objectives, available resources, and the nature of the population being studied.<br>
 
         </div>
       </div>
@@ -4883,34 +5028,34 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           Sampling refers to the process of selecting a subset of individuals or units from a larger population to
           gather data and make inferences about the population as a whole. It is a practical approach used in research
-          and surveys when studying the entire population is not feasible.
+          and surveys when studying the entire population is not feasible.<br>
 
-          Advantages of probability sampling over non-probability sampling:
+          Advantages of probability sampling over non-probability sampling:<br>
           1. Representative Sample: Probability sampling techniques ensure that each member of the population has a
           known chance of being included in the sample. This helps in obtaining a representative sample that reflects
-          the characteristics of the population.
+          the characteristics of the population.<br>
           2. Generalizability: Probability sampling allows for generalizing the findings from the sample to the larger
           population with a certain level of confidence. The results are more likely to be valid and applicable to the
-          population as a whole.
+          population as a whole.<br>
           3. Statistical Inference: Probability sampling enables the use of statistical techniques to estimate
           population parameters and test hypotheses. It provides a solid foundation for making statistical inferences.
           4. Control over Sampling Error: Probability sampling methods provide a basis for calculating and controlling
-          sampling error, which is the difference between the sample result and the true population value.
+          sampling error, which is the difference between the sample result and the true population value.<br>
 
           Sampling Error: Sampling error refers to the discrepancy between the sample statistic and the population
           parameter it represents. It arises due to the variability inherent in the process of sampling. For example, if
           a researcher conducts a survey to estimate the average height of adults in a city and selects a random sample
           of 100 individuals, the difference between the average height obtained from the sample and the true average
-          height of the entire population would be a sampling error.
+          height of the entire population would be a sampling error.<br>
 
           Non-sampling Error: Non-sampling error includes all other errors that can occur in the research process, apart
           from sampling error. These errors can arise from data collection, measurement, coding, analysis, or reporting.
           For example, if there is a mistake in recording the responses during data collection, it would lead to a
-          non-sampling error.
+          non-sampling error.<br>
 
           Overall, probability sampling provides more rigorous and reliable results compared to non-probability sampling
           methods, as it minimizes bias and allows for statistical inference. However, the choice of sampling method
-          depends on the research objectives, available resources, and the nature of the population being studied.
+          depends on the research objectives, available resources, and the nature of the population being studied.<br>
         </div>
       </div>
     </div>
@@ -5020,26 +5165,26 @@ var wheelCanvas = document.getElementById("wheelCanvas");
       <div class="qa-answer">
         <div class="qa-a">
           Research questions and hypotheses are essential components of the research process. They guide the direction
-          and scope of a research study and help researchers investigate specific phenomena or relationships.
+          and scope of a research study and help researchers investigate specific phenomena or relationships.<br>
 
-          a. Research Questions:
+          a. Research Questions:<br>
           Research questions are inquiries that define the focus of a research study. They are broad and open-ended and
           are used to explore a particular topic or issue. Research questions typically begin with words like "what,"
           "why," "how," or "describe." They help researchers define the purpose of their study and determine the
           information they need to gather. For example, a research question could be, "What are the effects of exercise
-          on cardiovascular health?"
+          on cardiovascular health?"<br>
 
-          b. Hypotheses:
+          b. Hypotheses:<br>
           Hypotheses are specific statements or predictions that researchers make based on existing knowledge or theory.
           They propose a relationship between variables or phenomena that can be tested through research. Hypotheses are
           often stated as null hypotheses (H0) and alternative hypotheses (H1). The null hypothesis assumes no
           relationship or difference between variables, while the alternative hypothesis suggests the presence of a
           relationship or difference. For example, a hypothesis could be, "Regular exercise leads to a decrease in blood
-          pressure."
+          pressure."<br>
 
           Research questions and hypotheses provide a framework for research studies and help guide the design, data
           collection, and analysis phases. They enable researchers to systematically investigate and answer specific
-          research inquiries, contributing to the advancement of knowledge in various fields.
+          research inquiries, contributing to the advancement of knowledge in various fields.<br>
 
         </div>
       </div>
@@ -5055,29 +5200,29 @@ var wheelCanvas = document.getElementById("wheelCanvas");
         <div class="qa-a">
           Research plays a crucial role in the field of medicine, contributing to advancements in healthcare, treatment
           protocols, and patient outcomes. Its rational use ensures that medical decisions and practices are based on
-          scientific evidence and rigorous investigation.
+          scientific evidence and rigorous investigation.<br>
 
-          Research in Medicine:
+          Research in Medicine:<br>
           - Clinical Trials: Clinical trials are research studies that evaluate the safety and efficacy of medical
           interventions, such as drugs, vaccines, or medical devices, in human subjects. They follow strict protocols to
-          gather data and determine the benefits and risks of specific treatments.
+          gather data and determine the benefits and risks of specific treatments.<br>
           - Epidemiological Studies: Epidemiological studies investigate patterns and determinants of disease occurrence
           and distribution in populations. They help identify risk factors, understand disease trends, and inform public
-          health interventions.
+          health interventions.<br>
           - Translational Research: Translational research aims to bridge the gap between basic scientific discoveries
           and their application in clinical practice. It focuses on translating laboratory findings into tangible
-          improvements in patient care.
+          improvements in patient care.<br>
 
-          Rational Use of Research:
+          Rational Use of Research:<br>
           - Evidence-Based Medicine: Evidence-based medicine involves integrating research evidence, clinical expertise,
           and patient values to inform medical decision-making. It ensures that healthcare interventions are based on
-          the best available evidence and are tailored to individual patient needs.
+          the best available evidence and are tailored to individual patient needs.<br>
           - Guidelines and Protocols: Research findings are used to develop clinical guidelines and treatment protocols,
           providing standardized approaches to patient care. These guidelines help healthcare professionals make
-          informed decisions and deliver high-quality, evidence-based care.
+          informed decisions and deliver high-quality, evidence-based care.<br>
           - Quality Improvement: Research helps identify areas for improvement in healthcare delivery and patient
           outcomes. By conducting studies and analyzing data, healthcare organizations can implement interventions and
-          measure their impact on quality and safety.
+          measure their impact on quality and safety.<br>
 
           Research in medicine is essential for advancing medical knowledge, improving patient care, and optimizing
           healthcare practices. It provides a scientific foundation for medical decision-making and contributes to the
@@ -5097,32 +5242,32 @@ var wheelCanvas = document.getElementById("wheelCanvas");
           Biostatistics is a branch of statistics that deals with the collection, analysis, interpretation, and
           presentation of data in the context of biological and health sciences. It plays a crucial role in research and
           medical sciences by providing tools and techniques for making sense of data and drawing meaningful
-          conclusions. Some of the uses and applications of biostatistics are:
+          conclusions. Some of the uses and applications of biostatistics are:<br>
 
           1. Study Design: Biostatistics helps in designing research studies, including determining sample sizes,
           selecting appropriate study designs, and identifying relevant variables to measure. It ensures that studies
-          are conducted in a rigorous and systematic manner to yield valid and reliable results.
+          are conducted in a rigorous and systematic manner to yield valid and reliable results.<br>
 
           2. Data Collection: Biostatistical methods guide the collection of data in research and medical studies. It
           involves developing survey instruments, designing experiments, and implementing data collection protocols.
-          Biostatisticians ensure that data are collected accurately and efficiently, reducing bias and errors.
+          Biostatisticians ensure that data are collected accurately and efficiently, reducing bias and errors.<br>
 
           3. Data Analysis: Biostatistics provides a wide range of statistical techniques to analyze and interpret data.
           It includes descriptive statistics for summarizing data, inferential statistics for making inferences about
           populations based on sample data, and advanced methods such as regression, survival analysis, and Bayesian
-          statistics.
+          statistics.<br>
 
           4. Clinical Trials: Biostatistics plays a crucial role in the design and analysis of clinical trials. It helps
           in determining sample sizes, randomizing participants, and analyzing treatment effects. Biostatisticians
-          ensure that clinical trials are conducted ethically and yield valid results.
+          ensure that clinical trials are conducted ethically and yield valid results.<br>
 
           5. Epidemiology: Biostatistics is an integral part of epidemiological studies that investigate patterns and
           determinants of diseases in populations. It helps in estimating disease prevalence, calculating incidence
-          rates, identifying risk factors, and assessing the impact of interventions.
+          rates, identifying risk factors, and assessing the impact of interventions.<br>
 
           6. Public Health: Biostatistics is used to analyze public health data, monitor disease outbreaks, assess
           healthcare policies, and evaluate the effectiveness of public health interventions. It provides evidence for
-          making informed decisions and improving population health.
+          making informed decisions and improving population health.<br>
 
           These are just a few examples of how biostatistics is applied in research and medical sciences. Its
           applications are diverse and span various fields, contributing to evidence-based decision-making, improved
