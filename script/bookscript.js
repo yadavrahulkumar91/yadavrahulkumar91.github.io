@@ -43,7 +43,7 @@ script3.innerHTML = `
     });
 `;
 document.head.appendChild(script3);
-
+MathJax.Hub.Queue(["Typeset", MathJax.Hub, "equation"]);
 
 
 
@@ -105,11 +105,6 @@ function closeFullscreen() {
   const fullscreen = document.querySelector('.fullscreen');
   fullscreen.style.display = 'none';
 }
-
-
-
-
-
 
 // Media script
 
