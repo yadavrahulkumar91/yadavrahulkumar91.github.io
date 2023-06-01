@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/style/aForApple.css">
+
+</head>
+
+<body>
+	<header>
+
+		<h1>क बाट कमल</h1>
+	</header>
+	<div class="activity">
+		<div class="box" id="box1">क</div>
+		<div class="box" id="box2">ख</div>
+		<div class="box" id="box3">ग</div>
+		<div class="box" id="box4">घ</div>
+		<div class="box" id="box5">ङ</div>
+	</div>
+	<div class="activity">
+		<div class="box" id="box6">च</div>
+		<div class="box" id="box7">छ</div>
+		<div class="box" id="box8">ज</div>
+		<div class="box" id="box9">झ</div>
+		<div class="box" id="box10">ञ</div>
+	</div>
+	<div class="activity">
+		<div class="box" id="box11">ट</div>
+		<div class="box" id="box12">ठ</div>
+		<div class="box" id="box13">ड</div>
+		<div class="box" id="box14">ढ</div>
+		<div class="box" id="box15">ण</div>
+	</div>
+	<div class="activity">
+		<div class="box" id="box16">त</div>
+		<div class="box" id="box17">थ</div>
+		<div class="box" id="box18">द</div>
+		<div class="box" id="box19">ध</div>
+		<div class="box" id="box20">न</div>
+	</div>
+	<div class="activity">
+		<div class="box" id="box21">प</div>
+		<div class="box" id="box22">फ</div>
+		<div class="box" id="box23">ब</div>
+		<div class="box" id="box24">भ</div>
+		<div class="box" id="box25">म</div>
+	</div>
+	<div class="activity">
+		<div class="box" id="box26">य</div>
+		<div class="box" id="box27">र</div>
+		<div class="box" id="box28">ल</div>
+		<div class="box" id="box29">व</div>
+		<div class="box" id="box30">श</div>
+		<div class="box" id="box31">ष</div>
+		<div class="box" id="box32">स</div>
+		<div class="box" id="box33">ह</div>
+		<div class="box" id="box34">क्ष</div>
+		<div class="box" id="box35">त्र</div>
+		<div class="box" id="box36">ज्ञ</div>
+	</div>
+	<script>
+
+		/*
+		var audioFiles = {
+			"box1": "../Audio/A.mp3",
+			"box2": "../Audio/B.mp3",
+			"box3": "../Audio/C.mp3",
+			"box4": "../Audio/D.mp3",
+			"box5": "../Audio/E.mp3",
+			"box6": "../Audio/F.mp3",
+			"box7": "../Audio/G.mp3",
+			"box8": "../Audio/H.mp3",
+			"box9": "../Audio/I.mp3",
+			"box10": "../Audio/J.mp3",
+			"box11": "../Audio/K.mp3",
+			"box12": "../Audio/L.mp3",
+			"box13": "../Audio/M.mp3",
+			"box14": "../Audio/N.mp3",
+			"box15": "../Audio/O.mp3",
+			"box16": "../Audio/P.mp3",
+			"box17": "../Audio/Q.mp3",
+			"box18": "../Audio/R.mp3",
+			"box19": "../Audio/S.mp3",
+			"box20": "../Audio/T.mp3",
+			"box21": "../Audio/U.mp3",
+			"box22": "../Audio/V.mp3",
+			"box23": "../Audio/W.mp3",
+			"box24": "../Audio/X.mp3",
+			"box25": "../Audio/Y.mp3",
+			"box26": "../Audio/Z.mp3"
+		};
+		*/
+
+		var imageFiles = {
+			"box1": "/image/kindergarten/Nursery/ABCD/apple.png",
+			"box2": "/image/kindergarten/Nursery/ABCD/ball.jpeg",
+			"box3": "/image/kindergarten/Nursery/ABCD/cat.png",
+			"box4": "/image/kindergarten/Nursery/ABCD/dog.jpg",
+			"box5": "/image/kindergarten/Nursery/ABCD/elephant.png",
+			"box6": "/image/kindergarten/Nursery/ABCD/fish.png",
+			"box7": "/image/kindergarten/Nursery/ABCD/grapes.png",
+			"box8": "/image/kindergarten/Nursery/ABCD/horse.png",
+			"box9": "/image/kindergarten/Nursery/ABCD/icecream.png",
+			"box10": "/image/kindergarten/Nursery/ABCD/jocker.jpg",
+			"box11": "/image/kindergarten/Nursery/ABCD/kite.jpg",
+			"box12": "/image/kindergarten/Nursery/ABCD/lion.jpeg",
+			"box13": "/image/kindergarten/Nursery/ABCD/monkey.jpeg",
+			"box14": "/image/kindergarten/Nursery/ABCD/nest.jpeg",
+			"box15": "/image/kindergarten/Nursery/ABCD/owl.jpeg",
+			"box16": "/image/kindergarten/Nursery/ABCD/parrot.jpg",
+			"box17": "/image/kindergarten/Nursery/ABCD/queen.jpg",
+			"box18": "/image/kindergarten/Nursery/ABCD/rabbit.jpeg",
+			"box19": "/image/kindergarten/Nursery/ABCD/sun.jpeg",
+			"box20": "/image/kindergarten/Nursery/ABCD/tiger.jpeg",
+			"box21": "/image/kindergarten/Nursery/ABCD/umbrella.jpeg",
+			"box22": "/image/kindergarten/Nursery/ABCD/van.jpeg",
+			"box23": "/image/kindergarten/Nursery/ABCD/watch.jpg",
+			"box24": "/image/kindergarten/Nursery/ABCD/xmax tree.jpeg",
+			"box25": "/image/kindergarten/Nursery/ABCD/yak.jpeg",
+			"box26": "/image/kindergarten/Nursery/ABCD/zebra.jpeg"
+		}
+
+
+		var textContent = {
+			"box1": "क बाट कमल",
+			"box2": "ख बाट खरगोश",
+			"box3": "ग बाट गाई",
+			"box4": "घ बाट घोडा",
+			"box5": "ङ बाट ङौला",
+			"box6": "च बाट चामली",
+			"box7": "छ बाट छाती",
+			"box8": "ज बाट जुलाई",
+			"box9": "झ बाट झरना",
+			"box10": "ञ बाट ञान",
+			"box11": "ट बाट टावा",
+			"box12": "ठ बाट ठुलो",
+			"box13": "ड बाट डल्ला",
+			"box14": "ढ बाट ढुङ्गा",
+			"box15": "ण बाट णगर",
+			"box16": "त बाट तिता",
+			"box17": "थ बाट थोर",
+			"box18": "द बाट देउता",
+			"box19": "ध बाट धुप",
+			"box20": "न बाट नर",
+			"box21": "प बाट पुस्तक",
+			"box22": "फ बाट फुल",
+			"box23": "ब बाट बाघ",
+			"box24": "भ बाट भालु",
+			"box25": "म बाट माछा",
+			"box26": "य बाट यात्री",
+			"box27": "र बाट रात",
+			"box28": "ल बाट लोमडी",
+			"box29": "व बाट वाली",
+			"box30": "श बाट शेर",
+			"box31": "ष बाट षड्यन्त्र",
+			"box32": "स बाट सुन",
+			"box33": "ह बाट हरियो",
+			"box34": "क्ष बाट क्षेत्र",
+			"box35": "त्र बाट त्रिकोण",
+			"box36": "ज्ञ बाट ज्ञान"
+		}
+
+	</script>
+	<script src="/script/aForApple.js"></script>
+
+</body>
+
+</html>

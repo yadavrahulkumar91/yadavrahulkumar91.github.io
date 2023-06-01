@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.activity {
+			margin: 50px auto;
+			width: 600px;
+			height: auto;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: #ddd;
+			border-radius: 10px;
+			box-shadow: 0px 0px 5px #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 60px;
+			cursor: pointer;
+			margin: 10px;
+		}
+
+		.box.selected {
+			background-color: #0f0;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box" id="box1">ष</div>
+		<div class="box" id="box2">षा</div>
+		<div class="box" id="box3">षि</div>
+		<div class="box" id="box4">षी</div>
+		<div class="box" id="box5">षु</div>
+		<div class="box" id="box6">षू</div>
+		<div class="box" id="box7">षे</div>
+		<div class="box" id="box8">षै</div>
+		<div class="box" id="box9">षो</div>
+		<div class="box" id="box10">षौ</div>
+		<div class="box" id="box11">षृ</div>
+		<div class="box" id="box12">षॄ</div>
+		<!-- Add more combinations if needed -->
+		
+
+	</div>
+	<script>
+		var audioFiles = {
+  "box1": "../Audio/Nepali/nepaliConsonant/ka.mp3",
+  "box2": "../Audio/Nepali/nepaliConsonant/kha.mp3",
+  "box3": "../Audio/Nepali/nepaliConsonant/ga.mp3",
+  "box4": "../Audio/Nepali/nepaliConsonant/gha.mp3",
+  "box5": "../Audio/Nepali/nepaliConsonant/ṅa.mp3",
+  "box6": "../Audio/Nepali/nepaliConsonant/cha.mp3",
+  "box7": "../Audio/Nepali/nepaliConsonant/chha.mp3",
+  "box8": "../Audio/Nepali/nepaliConsonant/ja.mp3",
+  "box9": "../Audio/Nepali/nepaliConsonant/jha.mp3",
+  "box10": "../Audio/Nepali/nepaliConsonant/ña.mp3",
+  "box11": "../Audio/Nepali/nepaliConsonant/ṭa.mp3",
+  "box12": "../Audio/Nepali/nepaliConsonant/ṭha.mp3",
+  "box13": "../Audio/Nepali/nepaliConsonant/ḍa.mp3",
+  "box14": "../Audio/Nepali/nepaliConsonant/ḍha.mp3",
+  "box15": "../Audio/Nepali/nepaliConsonant/ṇa.mp3",
+  "box16": "../Audio/Nepali/nepaliConsonant/ta.mp3",
+  "box17": "../Audio/Nepali/nepaliConsonant/tha.mp3",
+  "box18": "../Audio/Nepali/nepaliConsonant/da.mp3",
+  "box19": "../Audio/Nepali/nepaliConsonant/dha.mp3",
+  "box20": "../Audio/Nepali/nepaliConsonant/na.mp3",
+  "box21": "../Audio/Nepali/nepaliConsonant/pa.mp3",
+  "box22": "../Audio/Nepali/nepaliConsonant/pha.mp3",
+  "box23": "../Audio/Nepali/nepaliConsonant/ba.mp3",
+  "box24": "../Audio/Nepali/nepaliConsonant/bha.mp3",
+  "box25": "../Audio/Nepali/nepaliConsonant/ma.mp3",
+  "box26": "../Audio/Nepali/nepaliConsonant/ya.mp3",
+  "box27": "../Audio/Nepali/nepaliConsonant/ra.mp3",
+  "box28": "../Audio/Nepali/nepaliConsonant/la.mp3",
+  "box29": "../Audio/Nepali/nepaliConsonant/va.mp3",
+  "box30": "../Audio/Nepali/nepaliConsonant/śa.mp3",
+  "box31": "../Audio/Nepali/nepaliConsonant/ṣa.mp3",
+  "box32": "../Audio/Nepali/nepaliConsonant/sa.mp3",
+  "box33": "../Audio/Nepali/nepaliConsonant/ha.mp3",
+  "box34": "../Audio/Nepali/nepaliConsonant/kṣa.mp3",
+  "box35": "../Audio/Nepali/nepaliConsonant/tra.mp3",
+  "box36": "../Audio/Nepali/nepaliConsonant/gya.mp3"
+};
+
+
+		var boxes = document.querySelectorAll(".box");
+		var selectedBox = null;
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].addEventListener("click", function () {
+				if (selectedBox) {
+					selectedBox.classList.remove("selected");
+				}
+				selectedBox = this;
+				this.classList.add("selected");
+
+				// Get the ID of the selected box
+				var boxId = this.getAttribute("id");
+				// Get the corresponding audio file URL
+				var audioFile = audioFiles[boxId];
+				// Create a new Audio object and play the audio file
+				var audio = new Audio(audioFile);
+				audio.play();
+			});
+		}
+
+
+
+	</script>
+</body>
+
+</html>

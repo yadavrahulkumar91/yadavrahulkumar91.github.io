@@ -1,65 +1,69 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  h2 {
-    color: #666;
-  }
-  
-  ul {
-    margin-top: 0;
-    padding-left: 20px;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  a:hover {
-    color: #666;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  h2 {
-    color: #666;
-  }
+h1 {
+  text-align: center;
+  color: #333;
+}
 
-  h2.unit{
-    counter-increment: unit-counter ;
-    margin-left: px;
-    display:flex;
+h2 {
+  color: #666;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #666;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #666;
+}
+
+
+
+
+
+h2.unit {
+  counter-increment: unit-counter;
+  margin-left: px;
+  display: flex;
 }
 
 h2.unit:before {
@@ -67,10 +71,14 @@ h2.unit:before {
   margin-right: 5px;
 }
 
-h3.lesson{
-  counter-increment: lesson-counter ;
+
+
+
+
+h3.lesson {
+  counter-increment: lesson-counter;
   margin-left: 15px;
-  display:flex;
+  display: flex;
   margin-bottom: 10px;
   /*
   background-color: #fff;
@@ -81,20 +89,25 @@ h3.lesson{
 }
 
 h3.lesson:before {
-content: counter(lesson-counter, upper-roman) ".";
-margin-right: 5px;
+  content: counter(lesson-counter, upper-roman) ".";
+  margin-right: 5px;
 
 }
+
 /*
 h3.lesson:hover {
   background-color: #f0f0f0;
 }
 */
 
-h4.topic{
-  counter-increment: topic-counter ;
+
+
+
+
+h4.topic {
+  counter-increment: topic-counter;
   margin-left: 15px;
-  display:flex;
+  display: flex;
   margin-bottom: 10px;
   background-color: #fff;
   padding: 10px;
@@ -103,8 +116,8 @@ h4.topic{
 }
 
 h4.topic:before {
-content: counter(topic-counter, decimal) ".";
-margin-right: 5px;
+  content: counter(topic-counter, decimal) ".";
+  margin-right: 5px;
 
 }
 
@@ -116,10 +129,41 @@ h4.topic:hover {
 
 
 
-a.lesson{
-  counter-increment: lesson-counter ;
+a.unit {
+  counter-increment: unit-counter;
+  display: block;
+		padding: 10px;
+		color: #333;
+		text-decoration: none;
+		border: 2px solid #ccc;
+		border-radius: 10px;
+		background-color: #f2f2f2;
+		font-size: 1.2em;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+a.unit:before {
+  content: counter(unit-counter, upper-alpha) ".";
+  margin-right: 5px;
+}
+
+a.unit:hover {
+  background-color: #ffcc00;
+  color: #fff;
+  border-color: #ffcc00;
+}
+
+
+
+
+
+
+a.lesson {
+  counter-increment: lesson-counter;
   margin-left: 15px;
-  display:flex;
+  display: flex;
   margin-bottom: 10px;
   background-color: #fff;
   padding: 10px;
@@ -128,18 +172,21 @@ a.lesson{
 }
 
 a.lesson:before {
-content: counter(lesson-counter, decimal) ".";
-margin-right: 5px;
+  content: counter(lesson-counter, decimal) ".";
+  margin-right: 5px;
 }
 
 a.lesson:hover {
   background-color: #f0f0f0;
 }
 
-a.topic{
-  counter-increment: topic-counter ;
+
+
+
+a.topic {
+  counter-increment: topic-counter;
   margin-left: 30px;
-  display:flex;
+  display: flex;
   margin-bottom: 10px;
   background-color: #fff;
   padding: 10px;
@@ -148,18 +195,22 @@ a.topic{
 }
 
 a.topic:before {
-content: counter(topic-counter, decimal) ".";
-margin-right: 5px;
+  content: counter(topic-counter, decimal) ".";
+  margin-right: 5px;
 }
 
 a.topic:hover {
   background-color: #f0f0f0;
 }
 
-a.subtopic{
-  counter-increment: subtopic-counter ;
+
+
+
+
+a.subtopic {
+  counter-increment: subtopic-counter;
   margin-left: 45px;
-  display:flex;
+  display: flex;
   margin-bottom: 10px;
   background-color: #fff;
   padding: 10px;
@@ -168,39 +219,39 @@ a.subtopic{
 }
 
 a.subtopic:before {
-content: counter(subtopic-counter, decimal) ".";
-margin-right: 5px;
+  content: counter(subtopic-counter, decimal) ".";
+  margin-right: 5px;
 }
 
 a.subtopic:hover {
   background-color: #f0f0f0;
 }
 
-  
-  ul {
-    margin-top: 0;
-    padding-left: 20px;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  a:hover {
-    color: #666;
-  }
-  
-  
+
+
+
+ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #666;
+}

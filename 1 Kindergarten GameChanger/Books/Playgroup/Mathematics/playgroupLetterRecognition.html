@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.activity {
+			margin: 50px auto;
+			width: 600px;
+			height: auto;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: #ddd;
+			border-radius: 10px;
+			box-shadow: 0px 0px 5px #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 60px;
+			cursor: pointer;
+			margin: 10px;
+		}
+
+		.box.selected {
+			background-color: #0f0;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box" id="box1">A</div>
+		<div class="box" id="box2">B</div>
+		<div class="box" id="box3">C</div>
+		<div class="box" id="box4">D</div>
+		<div class="box" id="box5">E</div>
+		<div class="box" id="box6">F</div>
+		<div class="box" id="box7">G</div>
+		<div class="box" id="box8">H</div>
+		<div class="box" id="box9">I</div>
+		<div class="box" id="box10">J</div>
+		<div class="box" id="box11">K</div>
+		<div class="box" id="box12">L</div>
+		<div class="box" id="box13">M</div>
+		<div class="box" id="box14">N</div>
+		<div class="box" id="box15">O</div>
+		<div class="box" id="box16">P</div>
+		<div class="box" id="box17">Q</div>
+		<div class="box" id="box18">R</div>
+		<div class="box" id="box19">S</div>
+		<div class="box" id="box20">T</div>
+		<div class="box" id="box21">U</div>
+		<div class="box" id="box22">V</div>
+		<div class="box" id="box23">W</div>
+		<div class="box" id="box24">X</div>
+		<div class="box" id="box25">Y</div>
+		<div class="box" id="box26">Z</div>
+	</div>
+	<script>
+		var audioFiles = {
+			"box1": "../Audio/A.mp3",
+			"box2": "../Audio/B.mp3",
+			"box3": "../Audio/C.mp3",
+			"box4": "../Audio/D.mp3",
+			"box5": "../Audio/E.mp3",
+			"box6": "../Audio/F.mp3",
+			"box7": "../Audio/G.mp3",
+			"box8": "../Audio/H.mp3",
+			"box9": "../Audio/I.mp3",
+			"box10": "../Audio/J.mp3",
+			"box11": "../Audio/K.mp3",
+			"box12": "../Audio/L.mp3",
+			"box13": "../Audio/M.mp3",
+			"box14": "../Audio/N.mp3",
+			"box15": "../Audio/O.mp3",
+			"box16": "../Audio/P.mp3",
+			"box17": "../Audio/Q.mp3",
+			"box18": "../Audio/R.mp3",
+			"box19": "../Audio/S.mp3",
+			"box20": "../Audio/T.mp3",
+			"box21": "../Audio/U.mp3",
+			"box22": "../Audio/V.mp3",
+			"box23": "../Audio/W.mp3",
+			"box24": "../Audio/X.mp3",
+			"box25": "../Audio/Y.mp3",
+			"box26": "../Audio/Z.mp3"
+		};
+
+
+		var boxes = document.querySelectorAll(".box");
+		var selectedBox = null;
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].addEventListener("click", function () {
+				if (selectedBox) {
+					selectedBox.classList.remove("selected");
+				}
+				selectedBox = this;
+				this.classList.add("selected");
+
+				// Get the ID of the selected box
+				var boxId = this.getAttribute("id");
+				// Get the corresponding audio file URL
+				var audioFile = audioFiles[boxId];
+				// Create a new Audio object and play the audio file
+				var audio = new Audio(audioFile);
+				audio.play();
+			});
+		}
+
+
+
+	</script>
+</body>
+
+</html>

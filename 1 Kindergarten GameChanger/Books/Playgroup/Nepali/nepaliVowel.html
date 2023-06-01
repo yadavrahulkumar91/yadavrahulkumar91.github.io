@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<link rel="stylesheet" type="text/css" href="/style/abcd.css">
+
+</head>
+
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box" id="box1">अ</div>
+		<div class="box" id="box2">आ</div>
+		<div class="box" id="box3">इ</div>
+		<div class="box" id="box4">ई</div>
+		<div class="box" id="box5">उ</div>
+		<div class="box" id="box6">ऊ</div>
+		<div class="box" id="box7">ए</div>
+		<div class="box" id="box8">ऐ</div>
+		<div class="box" id="box9">ओ</div>
+		<div class="box" id="box10">ऋ</div>
+		<div class="box" id="box11">ॠ</div>
+	</div>
+	<script>
+		
+		var audioFiles = {
+			"box1": "../Audio/A.mp3",
+			"box2": "../Audio/B.mp3",
+			"box3": "../Audio/C.mp3",
+			"box4": "../Audio/D.mp3",
+			"box5": "../Audio/E.mp3",
+			"box6": "../Audio/F.mp3",
+			"box7": "../Audio/G.mp3",
+			"box8": "../Audio/H.mp3",
+			"box9": "../Audio/I.mp3",
+			"box10": "../Audio/J.mp3",
+			"box11": "../Audio/K.mp3",
+			"box12": "../Audio/L.mp3",
+			"box13": "../Audio/M.mp3",
+			"box14": "../Audio/N.mp3",
+			"box15": "../Audio/O.mp3",
+			"box16": "../Audio/P.mp3",
+			"box17": "../Audio/Q.mp3",
+			"box18": "../Audio/R.mp3",
+			"box19": "../Audio/S.mp3",
+			"box20": "../Audio/T.mp3",
+			"box21": "../Audio/U.mp3",
+			"box22": "../Audio/V.mp3",
+			"box23": "../Audio/W.mp3",
+			"box24": "../Audio/X.mp3",
+			"box25": "../Audio/Y.mp3",
+			"box26": "../Audio/Z.mp3"
+		};
+
+
+		var boxes = document.querySelectorAll(".box");
+		var selectedBox = null;
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].addEventListener("click", function () {
+				if (selectedBox) {
+					selectedBox.classList.remove("selected");
+				}
+				selectedBox = this;
+				this.classList.add("selected");
+
+				// Get the ID of the selected box
+				var boxId = this.getAttribute("id");
+				// Get the corresponding audio file URL
+				var audioFile = audioFiles[boxId];
+				// Create a new Audio object and play the audio file
+				var audio = new Audio(audioFile);
+				audio.play();
+			});
+		}
+
+
+
+	</script>
+			<script src="/script/abcd.js"></script>
+
+</body>
+
+</html>
