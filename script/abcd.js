@@ -20,39 +20,21 @@
 
 				// Get the ID of the selected box
 				var boxId = this.getAttribute("id");
-				// Get the corresponding audio file URL
-				//   var audioFile = audioFiles[boxId];
-				// Get the corresponding image URL
-				var imageUrl = imageFiles[boxId];
+				
 				// Get the corresponding text
 				var text = textContent[boxId];
 
-				// Create a new Audio object and play the audio file
-				/*
-				var audio = new Audio(audioFile);
-				audio.play();
-				*/
+				
 
-				// Display the image in the selected box
-				var imageContainer = document.createElement("img");
-				imageContainer.classList.add("image-container");
-				imageContainer.src = imageUrl;
-				this.appendChild(imageContainer);
 
-				// Display the text in the selected box
-				var textContainer = document.createElement("p");
-				textContainer.classList.add("text-container");
-
-				textContainer.textContent = text;
-				this.appendChild(textContainer);
 
 
 				// Read the text aloud
 				var speechSynthesis = window.speechSynthesis;
-				var utterance = new SpeechSynthesisUtterance(text);
-				speechSynthesis.speak(utterance);
+		var modifiedText = text.replace("→", ""); // Modify the text to replace the multiplication sign with "into"
+		var utterance = new SpeechSynthesisUtterance(modifiedText);
+		speechSynthesis.speak(utterance);
 
-                  
 
 
 			});

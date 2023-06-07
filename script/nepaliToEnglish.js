@@ -20,10 +20,7 @@
 
 				// Get the ID of the selected box
 				var boxId = this.getAttribute("id");
-				// Get the corresponding audio file URL
-				//   var audioFile = audioFiles[boxId];
-				// Get the corresponding image URL
-				var imageUrl = imageFiles[boxId];
+			
 				// Get the corresponding text
 				var text = textContent[boxId];
 

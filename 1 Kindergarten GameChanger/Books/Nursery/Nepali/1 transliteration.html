@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<link rel="stylesheet" type="text/css" href="/style/nepaliToEnglish.css">
+
+</head>
+
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box" id="box1">क</div>
+		<div class="box" id="box2">का</div>
+		<div class="box" id="box3">कि</div>
+		<div class="box" id="box4">की</div>
+		<div class="box" id="box5">कु</div>
+		<div class="box" id="box6">कू</div>
+		<div class="box" id="box7">के</div>
+		<div class="box" id="box8">कै</div>
+		<div class="box" id="box9">को</div>
+		<div class="box" id="box10">कौ</div>
+		<div class="box" id="box11">कं</div>
+		<div class="box" id="box12">कः</div>
+
+	</div>
+
+	<div class="activity">
+		<div class="box" id="box01">ख</div>
+		<div class="box" id="box02">खा</div>
+		<div class="box" id="box03">खि</div>
+		<div class="box" id="box04">खी</div>
+		<div class="box" id="box05">खु</div>
+		<div class="box" id="box06">खू</div>
+		<div class="box" id="box07">खे</div>
+		<div class="box" id="box08">खै</div>
+		<div class="box" id="box09">खो</div>
+		<div class="box" id="box010">खौ</div>
+		<div class="box" id="box011">खं</div>
+		<div class="box" id="box012">खः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+	<div class="activity">
+		<div class="box" id="box001">ग</div>
+		<div class="box" id="box002">गा</div>
+		<div class="box" id="box003">गि</div>
+		<div class="box" id="box004">गी</div>
+		<div class="box" id="box005">गु</div>
+		<div class="box" id="box006">गू</div>
+		<div class="box" id="box007">गे</div>
+		<div class="box" id="box008">गै</div>
+		<div class="box" id="box009">गो</div>
+		<div class="box" id="box0010">गौ</div>
+		<div class="box" id="box0011">गं</div>
+		<div class="box" id="box0012">गः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+	<div class="activity">
+
+		<div class="box" id="box0001">घ</div>
+		<div class="box" id="box0002">घा</div>
+		<div class="box" id="box0003">घि</div>
+		<div class="box" id="box0004">घी</div>
+		<div class="box" id="box0005">घु</div>
+		<div class="box" id="box0006">घू</div>
+		<div class="box" id="box0007">घे</div>
+		<div class="box" id="box0008">घै</div>
+		<div class="box" id="box0009">घो</div>
+		<div class="box" id="box00010">घौ</div>
+		<div class="box" id="box00011">घं</div>
+		<div class="box" id="box00012">घः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+	<div class="activity">
+
+		<div class="box" id="box00001">ङ</div>
+		<div class="box" id="box00002">ङा</div>
+		<div class="box" id="box00003">ङि</div>
+		<div class="box" id="box00004">ङी</div>
+		<div class="box" id="box00005">ङु</div>
+		<div class="box" id="box00006">ङू</div>
+		<div class="box" id="box00007">ङे</div>
+		<div class="box" id="box00008">ङै</div>
+		<div class="box" id="box00009">ङो</div>
+		<div class="box" id="box000010">ङौ</div>
+		<div class="box" id="box000011">ङं</div>
+		<div class="box" id="box000012">ङः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+
+	<script>
+		
+
+		var textContent = {
+			"box1": "Ka क",
+			"box2": "Kā का",
+			"box3": "Ki कि",
+			"box4": "Kī की",
+			"box5": "Ku कु",
+			"box6": "Kū कू",
+			"box7": "Ke के",
+			"box8": "Kai कै",
+			"box9": "Ko को",
+			"box10": "Kau कौ",
+			"box11": "Kaṅ कं",
+			"box12": "Kaḥ कः",
+
+			"box01": "Kha ख",
+			"box02": "Khā खा",
+			"box03": "Khi खि",
+			"box04": "Khī खी",
+			"box05": "Khu खु",
+			"box06": "Khū खू",
+			"box07": "Khe खे",
+			"box08": "Khai खै",
+			"box09": "Kho खो",
+			"box010": "Khau खौ",
+			"box011": "Khaṅ खं",
+			"box012": "Khaḥ खः",
+
+			"box001": "Ga ग",
+			"box002": "Gā गा",
+			"box003": "Gi गि",
+			"box004": "Gī गी",
+			"box005": "Gu गु",
+			"box006": "Gū गू",
+			"box007": "Ge गे",
+			"box008": "Gai गै",
+			"box009": "Go गो",
+			"box0010": "Gau गौ",
+			"box0011": "Gaṅ गं",
+			"box0012": "Gaḥ गः",
+
+			"box0001": "Gha घ",
+			"box0002": "Ghā घा",
+			"box0003": "Ghi घि",
+			"box0004": "Ghī घी",
+			"box0005": "Ghu घु",
+			"box0006": "Ghū घू",
+			"box0007": "Ghe घे",
+			"box0008": "Ghai घै",
+			"box0009": "Gho घो",
+			"box00010": "Ghau घौ",
+			"box00011": "Ghaṅ घं",
+			"box00012": "Ghaḥ घः",
+
+			"box00001": "ṅa ङ",
+			"box00002": "ṅā ङा",
+			"box00003": "ṅi ङि",
+			"box00004": "ṅī ङी",
+			"box00005": "ṅu ङु",
+			"box00006": "ṅū ङू",
+			"box00007": "ṅe ङे",
+			"box00008": "ṅai ङै",
+			"box00009": "ṅo ङो",
+			"box000010": "ṅau ङौ",
+			"box000011": "ṅaṅ ङं",
+			"box000012": "ṅaḥ ङः"
+		}
+
+	</script>
+
+	<script src="/script/nepaliToEnglish.js"></script>
+
+</body>
+
+</html>

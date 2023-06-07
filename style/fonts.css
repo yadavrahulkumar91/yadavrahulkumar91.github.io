@@ -1,0 +1,22 @@
+@font-face {
+    /* Specify other font-face properties if needed */
+    font-family: 'KG Primary Dots';
+    src: url('/fonts/kindergarten/kg_primary_dots/KGPrimaryDots.ttf') format('truetype');
+    
+    
+}
+@font-face {
+font-family: 'KG Primary Dots Lined Alt';
+src: url('/fonts/kindergarten/kg_primary_dots/KGPrimaryDotsLinedAlt.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'KGPrimaryDotsLinedNOSPACE';
+src: url('/fonts/kindergarten/kg_primary_dots/KGPrimaryDotsLinedNOSPACE.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'KG Primary Dots Lined';
+src: url('/fonts/kindergarten/kg_primary_dots/KGPrimaryDotsLined.ttf') format('truetype');
+/* Add additional font formats if necessary */
+}

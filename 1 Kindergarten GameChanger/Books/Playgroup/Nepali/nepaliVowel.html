@@ -2,13 +2,13 @@
 <html>
 
 <head>
-	<title>Letter Recognition Activity</title>
+	<title>Nepali Vowel letters</title>
 	<link rel="stylesheet" type="text/css" href="/style/abcd.css">
 
 </head>
 
 <body>
-	<h1>Letter Recognition Activity</h1>
+	<h1>स्वर्णमाला</h1>
 	<div class="activity">
 		<div class="box" id="box1">अ</div>
 		<div class="box" id="box2">आ</div>
@@ -26,57 +26,20 @@
 		
 	</div>
 	<script>
-		
-		var audioFiles = {
-			"box1": "../Audio/nepali/A.mp3",
-			"box2": "../Audio/nepali/B.mp3",
-			"box3": "../Audio/nepali/C.mp3",
-			"box4": "../Audio/nepali/D.mp3",
-			"box5": "../Audio/nepali/E.mp3",
-			"box6": "../Audio/nepali/F.mp3",
-			"box7": "../Audio/nepali/G.mp3",
-			"box8": "../Audio/nepali/H.mp3",
-			"box9": "../Audio/nepali/I.mp3",
-			"box10": "../Audio/nepali/J.mp3",
-			"box11": "../Audio/nepali/K.mp3",
-			"box12": "../Audio/nepali/L.mp3",
-			"box13": "../Audio/nepali/M.mp3",
-			"box14": "../Audio/nepali/N.mp3",
-			"box15": "../Audio/nepali/O.mp3",
-			"box16": "../Audio/nepali/P.mp3",
-			"box17": "../Audio/nepali/Q.mp3",
-			"box18": "../Audio/nepali/R.mp3",
-			"box19": "../Audio/nepali/S.mp3",
-			"box20": "../Audio/nepali/T.mp3",
-			"box21": "../Audio/nepali/U.mp3",
-			"box22": "../Audio/nepali/V.mp3",
-			"box23": "../Audio/nepali/W.mp3",
-			"box24": "../Audio/nepali/X.mp3",
-			"box25": "../Audio/nepali/Y.mp3",
-			"box26": "../Audio/nepali/Z.mp3"
-		};
-
-
-		var boxes = document.querySelectorAll(".box");
-		var selectedBox = null;
-		for (var i = 0; i < boxes.length; i++) {
-			boxes[i].addEventListener("click", function () {
-				if (selectedBox) {
-					selectedBox.classList.remove("selected");
-				}
-				selectedBox = this;
-				this.classList.add("selected");
-
-				// Get the ID of the selected box
-				var boxId = this.getAttribute("id");
-				// Get the corresponding audio file URL
-				var audioFile = audioFiles[boxId];
-				// Create a new Audio object and play the audio file
-				var audio = new Audio(audioFile);
-				audio.play();
-			});
-		}
-
+	var textContent = {
+  "box1": "a अ",
+  "box2": "ā आ",
+  "box3": "i इ",
+  "box4": "ī ई",
+  "box5": "u उ",
+  "box6": "ū ऊ",
+  "box7": "e ए",
+  "box8": "ai ऐ",
+  "box9": "o ओ",
+  "box10": "au औ",
+  "box11": "aṁ अं",
+  "box12": "aḥ अः"
+	}
 
 
 	</script>

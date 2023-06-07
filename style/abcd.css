@@ -1,64 +1,20 @@
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    color: #333;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.activity {
-    margin: 50px auto;
-    width: 600px;
-    height: auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    cursor: pointer;
-    margin: 10px;
-}
-
-.box.selected {
-    background-color: #0f0;
-    color: #fff;
-}
-
-
-
-
-
-body {
     background: linear-gradient(to bottom right, #c93939, #e5e5e5);
   box-shadow: 10px 10px 20px rgba(235, 26, 26, 0.1), -10px -10px 20px rgba(235, 7, 7, 0.1);
   margin: 0;
   padding: 0;
     font-family: Arial, sans-serif;
 
+
 }
 
 header {
     background-color: #e6c11b;
     padding: 0px;
+    margin-top:-30px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
   }
 
 h1 {
@@ -73,21 +29,25 @@ h1 {
 
 .activity {
     margin:10px;
-    margin-bottom:25px;
+    margin-bottom:0px;
+    margin-top: -50px;
     width: 98%;
     height: auto;
-    background-color: #fff;
+    background-color:inherit;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
+   
+  /*  box-shadow: 0px 0px 10px #ccc; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    
 }
 
 .box {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 120px;
     background-color: #a1a1a1;
     border-radius: 10px;
     box-shadow: 0px 0px 5px #ccc;
@@ -95,8 +55,9 @@ h1 {
     align-items: center;
     justify-content: center;
     font-size: 60px;
-    cursor: pointer;
-    margin: 10px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38"><text x="0" y="30" font-size="30">😂</text></svg>') 0 0, auto;
+    margin: 20px;
+    margin-top: 1px;
 
 
 
@@ -105,19 +66,20 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 100px;
-    font-weight:600;
+    font-size: 105px;
+    font-family: KG Primary Dots;
+    
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    cursor: pointer;
-    margin: 10px;
+   font-weight:600;
     overflow: hidden;
     transition: transform 0.3s ease;
+    
 }
 
 .box:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px #eee;
-    background-color: #eee;
+    background-color: #d211bb;
   }
   
 
@@ -132,7 +94,7 @@ h1 {
 
 .box.clicked {
     background-color: #ffffff;
-   
+   font-family:serif;
     transform: scale(1.0);
 }
 

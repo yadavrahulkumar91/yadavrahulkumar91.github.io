@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Addition and Subtraction for Playgroup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #8AC6D0;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #F2F2F2;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        nav li a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        nav li a:hover {
+            background-color: #8AC6D0;
+            color: #fff;
+        }
+
+        .main {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #F2F2F2;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #CCC;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #8AC6D0;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .numbers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .number {
+            background-color: #8AC6D0;
+            color: #FFF;
+            padding: 30px;
+            font-size: 4em;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px #CCC;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .number:hover {
+            transform: scale(1.1);
+            background-color: #FFD166;
+            box-shadow: 0px 0px 20px #FFD166;
+        }
+
+        .addition-subtraction {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .operation {
+            font-size: 2em;
+            margin: 0 20px;
+            color: #8AC6D0;
+        }
+
+        .result {
+            font-size: 4em;
+            color: #8AC6D0;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Addition and Subtraction for Playgroup
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <h2>Addition and Subtraction Practice</h2>
+        <div class="numbers">
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+            <div class="number">10</div>
+        </div>
+        <div class="addition-subtraction">
+            <div class="number operation">+</div>
+            <div class="number operation">-</div>
+            <div class="number operation">=</div>
+            <div class="number result">0</div>
+        </div>
+    </div>
+    <audio id="audio1" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+    <audio id="audio2" src="https://www.soundjay.com/button/sounds/button-4.mp3"></audio>
+    <script>
+        const numbers = document.querySelectorAll('.number');
+        const operation = document.querySelectorAll('.operation');
+        const result = document.querySelector('.result');
+
+        let firstNumber = 0;
+        let secondNumber = 0;
+        let operationType = '';
+        let audio1 = document.querySelector('#audio1');
+        let audio2 = document.querySelector('#audio2');
+
+        numbers.forEach(number => {
+            number.addEventListener('click', () => {
+                if (operationType === '') {
+                    firstNumber = parseInt(number.innerText);
+                    result.innerText = firstNumber;
+                    audio1.play();
+                } else {
+                    secondNumber = parseInt(number.innerText);
+                    if (operationType === '+') {
+                        result.innerText = firstNumber + secondNumber;
+                    } else {
+                        result.innerText = firstNumber - secondNumber;
+                    }
+                    audio2.play();
+                }
+            });
+        });
+
+        operation.forEach(operator => {
+            operator.addEventListener('click', () => {
+                operationType = operator.innerText;
+            });
+        });
+    </script>
+</body>
+
+</html>

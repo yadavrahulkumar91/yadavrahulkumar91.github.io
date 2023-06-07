@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+
 body {
     font-family: Arial, sans-serif;
     color: #444;
     background-color: #f1f3f2;
     margin: 0;
     padding: 0;
+}
+header{
+    background-color: skyblue;
+    padding: 10px;
+    box-shadow: darkturquoise;
 }
 
 h1 {
@@ -31,6 +45,12 @@ h1 {
     /*display: flex;
 			flex-wrap: wrap;
             */
+            font-family: 'Pacifico', cursive;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Libre Baskerville';
+            font-family: 'Satisfy', cursive;
+            font-family: 'Source Serif Pro', serif;
+            color:black;
     background-color: #ffffff;
     border-bottom: 2px solid #ddd;
     /*   
@@ -110,6 +130,7 @@ h1 {
     margin-left: 20px;
     font-weight: bold;
     display: none;
+    font-family: 'Arima Madurai', cursive;
 
 
     font-size: 18px;
@@ -136,7 +157,7 @@ h1 {
     margin-left: 20px;
     font-style: normal;
     display: none;
-
+    font-family: 'Arima Madurai', cursive;
 
 
     background-color: #f2f2f2;
@@ -215,8 +236,11 @@ h1 {
             }
             */
     .choices {
-        margin-left: 0;
-        font-size: 14px;
+        margin-left: -5px;
+    }
+    .answer, .solution {
+        margin-left: -15px;
+        font-size: 18px;
     }
 
     /*

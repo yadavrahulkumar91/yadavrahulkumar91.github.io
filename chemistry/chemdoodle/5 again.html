@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Render Benzene with ChemDoodleWeb.js</title>
+  <script src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+  <script src="ChemDoodleWeb.js"></script>
+</head>
+<body>
+  <canvas id="benzeneCanvas" width="400" height="300"></canvas>
+
+  <script>
+    // Get the canvas element
+    const canvas = document.getElementById('benzeneCanvas');
+
+    // Create a ChemDoodleWeb object
+    const chemDoodle = new ChemDoodle.drawing.Canvas('benzeneCanvas', 400, 300);
+
+    // Create the benzene molecule
+    const benzene = new ChemDoodle.structures.Molecule();
+    
+    // Add carbon atoms
+    for (let i = 0; i < 6; i++) {
+      benzene.atoms[i] = new ChemDoodle.structures.Atom('C');
+      benzene.atoms[i].x = 100 + 80 * Math.cos((2 * Math.PI * i) / 6);
+      benzene.atoms[i].y = 150 + 80 * Math.sin((2 * Math.PI * i) / 6);
+    }
+
+    // Add bonds between carbon atoms
+    for (let i = 0; i < 6; i++) {
+      const bond = new ChemDoodle.structures.Bond(benzene.atoms[i], benzene.atoms[(i + 1) % 6], 1);
+      benzene.bonds[i] = bond;
+    }
+
+    // Customize the display settings
+    const displayOptions = {
+      carbonTextVisible: true,
+      carbonTextColor: '#000000',
+      carbonTextSize: 18,
+      carbonTextOffset: 5,
+    };
+
+    // Clear the canvas and render the benzene structure
+    chemDoodle.clear();
+    chemDoodle.specs.atoms_displayTerminalCarbonLabels_2Letter = true;
+    chemDoodle.specs.atoms_useJMOLColors = true;
+    chemDoodle.specs.bonds_width_2D = 2;
+    chemDoodle.specs.atoms_implicitHydrogens = false;
+    chemDoodle.specs.atoms_showAtoms = true;
+    chemDoodle.specs.atoms_font_bold = false;
+    chemDoodle.specs.atoms_font_italic = false;
+    chemDoodle.specs.atoms_font_size = 12;
+
+    chemDoodle.specs.bonds_show = true;
+    chemDoodle.specs.bonds_useJMOLColors = true;
+    chemDoodle.specs.bonds_width_2D = 2;
+    chemDoodle.specs.bonds_font_bold = false;
+    chemDoodle.specs.bonds_font_italic = false;
+    chemDoodle.specs.bonds_font_size = 12;
+
+    chemDoodle.loadContent([benzene], displayOptions);
+    chemDoodle.repaint();
+
+  </script>
+</body>
+</html>

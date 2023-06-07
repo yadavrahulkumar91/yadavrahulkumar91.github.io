@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Render Benzene with RDKit</title>
+  <script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script>
+</head>
+<body>
+  <canvas id="benzeneCanvas" width="400" height="300"></canvas>
+
+  <script>
+    // Get the canvas element
+    const canvas = document.getElementById('benzeneCanvas');
+
+    // Create a RDKit object
+    const rdkit = RDKitModule();
+
+    // Create the benzene molecule
+    const smiles = 'c1ccccc1';
+    const mol = rdkit.get_mol(smiles);
+
+    // Draw the molecule on the canvas
+    rdkit.render_svg_from_canvas(canvas, mol);
+  </script>
+</body>
+</html>

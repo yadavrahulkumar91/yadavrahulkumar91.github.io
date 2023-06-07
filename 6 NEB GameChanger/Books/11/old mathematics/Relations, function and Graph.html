@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/style/bookstyle.css">
+    
+  </head>
+  <body>
+    
+    <header>
+      <h1></h1>
+      <p></p>
+    </header>
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div></center>
+        
+    <div id="home-container" class="container">    
+        <h2>1. Solution:</h2>
+        <p>
+          a. \((1, 3)\) and \((3, 1)\) are unequal, i.e. \((1, 3) \neq (3, 1)\).<br>
+          b. \((a, b)\) and \((a, b)\) are equal, i.e. \((a, b) = (a, b)\).<br>
+          c. \((1, a)\) and \((1, x)\) are unequal, i.e. \((1, a) \neq (1, x)\).<br>
+          d. \((x, x)\) and \((y, y)\) are unequal, i.e. \((x, x) \neq (y, y)\).
+        </p>
+      
+        <h2>2. Solution:</h2>
+        <p>
+          a. \((x + y, 3) = (1, x - y)\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x + y = 1\) ...(i)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and \(x - y = 3\) ...(ii)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Adding (i) and (ii), we get:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;\(2x = 4\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x = 2\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Putting \(x = 2\) in (i), we get:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;\(2 + y = 1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(y = -1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Hence, \((x, y) = (2, -1)\)<br>
+          <br>
+          b. \((x + 2y, 3) = (-1, 2x - y)\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x + 2y = -1\) ...(i)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and \(2x - y = 3\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(4x - 2y = 6\) ...(ii) &nbsp;&nbsp;&nbsp;&nbsp;\[ \text{[multiplication by 2]} \]<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Adding (i) and (ii), we have:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;\(5x = 5\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x = 1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Putting \(x = 1\) in (i), we get:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;\(1 + 2y = -1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Or, \(2y = -2\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(y = -1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Hence, \(x = 1\), \(y = -1\)<br>
+          <br>
+          c. \((x - 2, y + 1) = (1, 0)\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x - 2 = 1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x = 3\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;And \(y + 1 = 0\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(y = -1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Hence, \(x = 3\) and \(y = -1\)<br>
+          <br>
+          d. \((2x - 1, -3) = (1, y + 3)\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(2x - 1 = 1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Or, \(2x = 2\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(x = 1\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;And \(y + 3 = -3\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;So, \(y = -6\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Hence, \(x = 1\) and \(y = -6\)<br>
+        </p>
+      
+        <h2>3. Solution:</h2>
+        <p>
+          Here, \(A = \{1, 2, 3\}\) and \(B = \{a, b\}\)<br>
+          So, \(A \times A = \{1, 2, 3\} \times \{1, 2, 3\}\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)\}\)<br>
+          Or, \(B \times B = \{a, b\} \times \{a, b\}\) = \(\{(a, a), (a, b), (b, a), (b, b)\}\)<br>
+          And \(B \times A = \{a, b\} \times \{1, 2, 3\}\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)\}\)<br>
+        </p>
+      
+        <h2>4. Solution:</h2>
+        <p>
+          Here, \(A = \{a, b\}\), \(B = \{b, c\}\), \(C = \{c, d\}\)<br>
+          Now,<br>
+          a. \(B \cup C = \{b, c\} \cup \{c, d\} = \{b, c, d\}\)<br>
+          So, \(A \times (B \cup C) = \{a, b\} \times \{b, c, d\} = \{(a, b), (a, c), (a, d), (b, b), (b, c), (b, d)\}<br>
+          <br>
+          b. \(B \cap C = \{b, c\} \cap \{c, d\} = \{c\}\)<br>
+          So, \(A \times (B \cap C) = \{a, b\} \times \{c\} = \{(a, c), (b, c)\}<br>
+          <br>
+          c. \(A \times B = \{a, b\} \times \{b, c\} = \{(a, b), (a, c), (b, b), (b, c)\}<br>
+          \(A \times C = \{a, b\} \times \{c, d\} = \{(a, c), (a, d), (b, c), (b, d)\}<br>
+          So, \((A \times B) \cup (A \times C) = \{(a, b), (a, c), (b, b), (b, c)\} \cup \{(a, c), (a, d), (b, c), (b, d)\}<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, b), (a, c), (a, d), (b, b), (b, c), (b, d)\}\)<br>
+          <br>
+          d. \((A \times B) \cap (A \times C) = \{(a, b), (a, c), (b, b), (b, c)\} \cap \{(a, c), (a, d), (b, c), (b, d)\}<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, c), (b, c)\}\)<br>
+        </p>
+      
+        <h2>5. Solution:</h2>
+        <p>
+          Here, \(A = \{a, b\}\), \(B = \{c, d\}\), \(C = \{d, e\}\)<br>
+          Now, \(B \cup C = \{c, d\} \cup \{d, e\} = \{c, d, e\}\)<br>
+          Now, \(B \cap C = \{c, d\} \cap \{d, e\} = \{d\}\)<br>
+          \(A \times B = \{a, b\} \times \{c, d\} = \{(a, c), (a, d), (b, c), (b, d)\)<br>
+          \(A \times C = \{a, b\} \times \{d, e\} = \{(a, d), (a, e), (b, d), (b, e)\)<br>
+          <br>
+          a. \(A \times (B \cup C) = \{a, b\} \times \{c, d, e\}\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, c), (a, d), (a, e), (b, c), (b, d), (b, e)\}\)<br>
+          <br>
+          b. \(A \times (B \cap C) = \{a, b\} \times \{d\}\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, d), (b, d)\}\)<br>
+          <br>
+          c. \((A \times B) \cup (A \times C) = \{(a, c), (a, d), (b, c), (b, d)\} \cup \{(a, d), (a, e), (b, d), (b, e)\}\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, c), (a, d), (a, e), (b, c), (b, d), (b, e)\}\)<br>
+          <br>
+          d. \((A \times B) \cap (A \times C) = \{(a, c), (a, d), (b, c), (b, d)\} \cap \{(a, d), (a, e), (b, d), (b, e)\}\)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;= \(\{(a, d)\}\)<br>
+        </p>
+        <p>6.</p>
+
+        <p>Solution:</p>
+        
+        <p>a.</p>
+        
+        <p>A = \(\{x: x = 1, 2, 3\}\) = \(\{1, 2, 3\}\)</p>
+        
+        <p>And B = \(\{y: y = 3 - x\}\) = \(\{0, 1, 2\}\)</p>
+        
+        <p>Now, A × B = \(\{1, 2, 3\}\) × \(\{0, 1, 2\}\)</p>
+        
+        <p>So, A × B = \(\{(1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 0), (3, 1), (3, 2)\}\)</p>
+        
+        <p>Graph of A × B:</p>
+        
+        <!-- Insert the graph of A × B here -->
+        
+        <p>b.</p>
+        
+        <p>A = \(\{x: x = 0, 1, 2\}\) = \(\{0, 1, 2\}\)</p>
+        
+        <p>B = \(\{y: y = x^2\}\) = \(\{0, 1, 4\}\)</p>
+        
+        <p>Now, A × B = \(\{0, 1, 2\}\) × \(\{0, 1, 4\}\)</p>
+        
+        <p>So, A × B = \(\{(0, 0), (0, 1), (0, 4), (1, 0), (1, 1), (1, 4), (2, 0), (2, 1), (2, 4)\}\)</p>
+        
+        <p>Graph of A × B:</p>
+        
+        <!-- Insert the graph of A × B here -->
+        
+
+
+
+
+
+
+
+
+
+        <h3>7.</h3>
+  <h4>a. Soln:</h4>
+  <p>
+    Here, \(A \times B = \{1, 2, 3, 4\} \times \{1, 3, 5\}\)
+    <br>
+    So, \(A \times B = \{(1, 1), (1, 3), (1, 5), (2, 1), (2, 3), (2, 5), (3, 1), (3, 3), (3, 5), (4, 1), (4, 3), (4, 5)\}\)
+  </p>
+  <p>(i) \(R = \{(x, y) : x > y\}\)
+    <br>
+    So, \(R = \{(2, 1), (3, 1), (4, 1), (4, 3)\}\)
+  </p>
+  <p>(ii) \(R = \{(x, y) : x < y\}\)
+    <br>
+    \(R = \{(1, 1), (1, 3), (1, 5), (2, 3), (2, 5), (3, 3), (3, 5), (4, 5)\}\)
+  </p>
+  <p>(iii) \(R = \{(x, y) : y = x^2\}\)
+    <br>
+    \(R = \{(1, 1)\}\)
+  </p>
+  <h4>b. Soln:</h4>
+  <p>
+    Here, \(A = \{1, 2, 3, 4\}\)
+    <br>
+    So, \(A \times A = \{1, 2, 3, 4\} \times \{1, 2, 3, 4\}\)
+    <br>
+    \(A \times A = \{(1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 3), (2, 4), (3, 1), (3, 2), (3, 3), (3, 4), (4, 1), (4, 2), (4, 3), (4, 4)\}\)
+  </p>
+  <p>(i) \(R = \{(x, y) : y = 2x\}\)
+    <br>
+    \(R = \{(1, 2), (2, 4)\}\)
+  </p>
+  <p>(ii) \(R = \{(x, y) : x + y = 6\}\)
+    <br>
+    \(R = \{(2, 4), (3, 3), (4, 2)\}\)
+  </p>
+  <p>(iii) \(R = \{(x, y) : x + y \leq 4\}\)
+    <br>
+    \(R = \{(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (3, 1)\}\)
+  </p>
+  <p>(iv) \(R = \{(x, y) : x - y \geq 1\}\)
+    <br>
+    \(R = \{(2, 1), (3, 1), (3, 2), (4, 1), (4, 2), (4, 3)\}\)
+  </p>
+  <h3>8.</h3>
+  <h4>a. Soln:</h4>
+  <p>
+    Here, \(D(R1) = \{1, 2, 3, 4\}\)
+    <br>
+    \(R(R1) = \{2, 3, 4, 5\}\)
+    <br>
+    And \(R1^{-1} = \{(2, 1), (3, 2), (4, 3), (5, 4)\}\)
+  </p>
+  <h4>b. Soln:</h4>
+  <p>
+    Here, \(D(R2) = \{1, 2, 3, 4\}\)
+    <br>
+    \(R(R2) = \{3, 5, 7, 9\}\)
+    <br>
+    And \(R2^{-1} = \{(3, 1), (5, 2), (7, 3), (9, 4)\}\)
+  </p>
+  <h4>c. Soln:</h4>
+  <p>
+    Here, \(D(R3) = \{a, b, c\}\)
+    <br>
+    \(R(R3) = \{a, b, c\}\)
+    <br>
+    And \(R3^{-1} = \{(b, a), (a, b), (c, b), (b, c), (a, c), (c, a)\}\)
+  </p>
+  <h4>d. Soln:</h4>
+  <p>
+    Here, \(D(R4) = \{a, c, d, e\}\)
+    <br>
+    \(R(R4) = \{b\}\)
+    <br>
+    And \(R4^{-1} = \{(b, a), (b, c), (b, d), (b, e)\}\)
+  </p>
+  <h3>9.</h3>
+  <h4>a. Soln:</h4>
+  <p>
+    Here, \(A = \{2, 3, 4\}\) and \(B = \{2, 3, 4, 6\}\)
+    <br>
+    \(A \times B = \{2, 3, 4\} \times \{2, 3, 4, 6\}\)
+    <br>
+    \(A \times B = \{(2, 2), (2, 3), (2, 4), (2, 6), (3, 2), (3, 3), (3, 4), (3, 6), (4, 2), (4, 3), (4, 4), (4, 6)\}\)
+    <br>
+    Let \(R\) be the required relation on \(A \times B\).
+    <br>
+    Where, \(R = \{(x, y) : x \text{ divides } y\}\)
+    <br>
+    \(R = \{(2, 2), (2, 4), (2, 6), (3, 3), (3, 6), (4, 4)\}\)
+    <br>
+    Domain \(R = \{2, 3, 4\}\)
+    <br>
+    Range \(R = \{2, 3, 4, 6\}\)
+  </p>
+  <h4>b. Soln:</h4>
+  <p>
+    Here, \(A = \{3, 4, 5, 6\}\)
+    <br>
+    \(A \times A = \{3, 4, 5, 6\} \times \{3, 4, 5, 6\}\)
+    <br>
+    \(A \times A = \{(3, 3), (3, 4), (3, 5), (3, 6), (4, 3), (4, 4), (4, 5), (4, 6), (5, 3), (5, 4), (5, 5), (5, 6), (6, 3), (6, 4), (6, 5), (6, 6)\}\)
+  </p>
+  <p>\(R = \{(x, y) : x, y \in A \text{ and } x + y = 7\}\)
+    <br>
+    \(R = \{(3, 4), (4, 3)\}\)
+    <br>
+    Domain \(R = \{3, 4\}\)
+    <br>
+    Range \(R = \{3, 4\}\)
+    <br>
+    And \(R^{-1} = \{(4, 3), (3, 4)\}\)
+  </p>
+
+    </div>
+
+    <div id="questions-container" class="container" style="display:none">
+                
+  <h2>1.</h2>
+  <p><strong>Solution:</strong></p>
+  <ol type="a">
+    <li>The arrow diagram defines a function from \(A\) to \(B\) because each element of \(A\) has a unique image in \(B\).</li>
+    <li>The arrow diagram defines a function from \(A\) to \(B\) because each element of \(A\) has a unique image in \(B\).</li>
+    <li>The arrow diagram does not define a function from \(A\) to \(B\) because the element \(c\) of \(A\) has no image in \(B\).</li>
+    <li>The arrow diagram defines a function from \(A\) to \(B\) because each element of \(A\) has a unique image in \(B\).</li>
+    <li>The arrow diagram does not define a function from \(A\) to \(B\) because the element \(b\) of \(A\) has no image in \(B\).</li>
+    <li>The arrow diagram defines a function from \(A\) to \(B\) because each element of \(A\) has a unique image in \(B\).</li>
+  </ol>
+
+  <h2>2.</h2>
+  <p><strong>Solution:</strong></p>
+  <ol type="a">
+    <li>The relation \(R1\) is not a function from \(X\) to \(Y\) because the element \(a\) of \(X\) has two images \(p\) and \(r\) in \(Y\) but \(p \neq r\).</li>
+    <li>The relation \(R2\) is not a function from \(X\) to \(Y\) because the element \(c\) of \(X\) has no image in \(Y\).</li>
+    <li>The relation \(R3\) is a function from \(X\) to \(Y\) because each element of \(X\) has a unique image in \(Y\).</li>
+    <li>The relation \(R4\) is a function from \(X\) to \(Y\) because each element of \(X\) has a unique image in \(Y\).</li>
+    <li>The relation \(R5\) is a function from \(X\) to \(Y\) because each element of \(X\) has a unique image in \(Y\).</li>
+  </ol>
+
+  <h2>3.</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = 1 - x\) and \(x = 1, \frac{3}{2}, -1, 2 \in A\).</p>
+  <p>So, image, \(f(1) = 1 - 1 = 0\)</p>
+  <p>\(f\left(\frac{3}{2}\right) = 1 - \frac{3}{2} = -\frac{1}{2}\)</p>
+  <p>\(f(-1) = 1 - (-1) = 2\)</p>
+  <p>And \(f(2) = 1 - 2 = -1\)</p>
+
+  <h2>4.</h2>
+  <p><strong>Solution:</strong></p>
+  <p>(i)</p>
+  <p>\(f(x) = x + 2\), where \(-1 \leq x \leq 2\).</p>
+  <p>Now,</p>
+  <p>\(f(-1) = -1 + 2 = 1\)</p>
+  <p>\(f(0) = 0 + 2 = 2\)</p>
+  <p>\(f(1) = 1 + 2 = 3\)</p>
+  <p>\(f(2) = 2 + 2 = 4\)</p>
+  <p>\(f(-2)\) and \(f(3)\) are not defined because \(-2\) and \(3\) do not lie in \(-1 \leq x \leq 2\).</p>
+
+  <p>(ii)</p>
+  <p>\(f(x) = 2|x| + 3x\), where \(-1 \leq x \leq 2\).</p>
+  <p>Now,</p>
+  <ol type="a">
+    <li>\(f(-1) = 2|-1| + 3(-1) = 2 - 3 = -1\)</li>
+    <li>\(f(0) = 2|0| + 3(0) = 0 + 0 = 0\)</li>
+    <li>\(f(1) = 2|1| + 3(1) = 2 + 3 = 5\)</li>
+    <li>\(f(2) = 2|2| + 3(2) = 4 + 6 = 10\)</li>
+    <li>\(f(-2)\) and \(f(3)\) are not defined because \(-2\) and \(3\) do not lie in \(-1 \leq x \leq 2\).</li>
+  </ol>
+
+  <h2>5.</h2>
+  <p>(i)</p>
+  <p><strong>Solution:</strong></p>
+  <ol type="a">
+    <li>\(f(-12) = 3 + 2(-12) = 3 - 1 = 2\)</li>
+    <li>\(f(0) = 3 - 2(0) = 3\)</li>
+    <li>\(f(12) = -3 - 2(-12) = -3 - 1 = -4\)</li>
+    <li>\(f(h) - f(0)h = (3 - 2h) - (3 - 2 \cdot 0)h\) [\(0 \leq h < 12\)]</li>
+    <p>= -2</p>
+  </ol>
+
+  <p>(ii)</p>
+  <p><strong>Solution:</strong></p>
+  <ol type="a">
+    <li>\(f(2) = 4 \cdot 2 - 2 = 6\)</li>
+    <li>\(f(1) = 4 \cdot 1 - 2 = 2\)</li>
+    <li>\(f(0) = 2 \cdot 0 = 0\)</li>
+    <li>\(f(-1) = 2(-1) = -2\)</li>
+    <li>\(f(h) - f(1)h = (4h - 2) - (4 \cdot 1 - 2)h\) [since, \(1 < h\)]</li>
+    <p>= \(\frac{4(h-1)}{h}\)</p>
+  </ol>
+
+
+  <h3>6.</h3>
+  <h4>Soln:</h4>
+  <p>
+    Here, \(A = \{-1, 0, 2, 4, 6\}\)
+  </p>
+  <p>(i) \(y = f(x) = \frac{x}{x+2}\)</p>
+  <p>
+    So, range of \(f = \{f(-1), f(0), f(2), f(4), f(6)\}\)
+    <br>
+    \(= \{\frac{-1}{-1+2}, \frac{0}{0+2}, \frac{2}{2+2}, \frac{4}{4+2}, \frac{6}{6+2}\}\)
+    <br>
+    \(= \{-1, 0, \frac{2}{4}, \frac{4}{6}, \frac{6}{8}\}\)
+    <br>
+    \(= \{-1, 0, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}\}\)
+  </p>
+  <p>(ii) \(y = f(x) = x(x+1)(x+2)\)</p>
+  <p>
+    So, range of \(f = \{f(-1), f(0), f(2), f(4), f(6)\}\)
+    <br>
+    \(= \{(-1)(-1+1)(-1+2), (0)(0+1)(0+2), (2)(2+1)(2+2), (4)(4+1)(4+2), (6)(6+1)(6+2)\}\)
+    <br>
+    \(= \{0, 0, 32, 103, 214\}\)
+    <br>
+    \(= \{0, 32, 103, 214\}\)
+  </p>
+  <h3>7.</h3>
+  <h4>Soln:</h4>
+  <p>
+    Here, \(f(x) = x^2\) where \(A = \{-1, -2, -3\}\)
+  </p>
+  <p>
+    So, \(f(1) = (-1)^2 = 1\)
+    <br>
+    \(f(-2) = (-2)^2 = 4\)
+    <br>
+    \(f(-3) = (-3)^2 = 9\)
+  </p>
+  <p>
+    So, domain of \(f = \{-1, -2, -3\}\) and range of \(f = \{1, 4, 9\}\)
+    <br>
+    And from the Venn diagram, we have:
+    <br>
+    \(g(-1) = 1\)
+    <br>
+    \(g(-2) = 4\)
+    <br>
+    \(g(-3) = 9\)
+  </p>
+  <p>
+    So, domain of \(g = \{-1, -2, -3\}\) and range of \(g = \{1, 4, 9\}\)
+    <br>
+    Thus, \(f\) and \(g\) have the same domain \(\{-1, -2, -3\}\) and \(f(x) = g(x)\) for all \(x \in A\), so the functions \(f\) and \(g\) are equal.
+  </p>
+  <h3>8.</h3>
+  <p>
+    <strong>a. Soln:</strong>
+  </p>
+  <p>
+    Here, \(A = \{-2, -1, 0, 1, 2\}\), \(B = \{4, 0, 1\}\), and \(f: A \rightarrow B\) is \(f(x) = x^2\).
+    <br>
+    So, \(f\) is not one-to-one because \(f(-2) = 4 = f(2)\), but \(-2 \neq 2\).
+  </p>
+  <p>
+    <strong>b. Soln:</strong>
+  </p>
+  <p>
+    Here, \(A\) is the set of positive integers.
+    <br>
+    So, \(A = \{1, 2, 3, \ldots\}\)
+    <br>
+    And \(B\) is the set of squares of positive integers.
+    <br>
+    So, \(B = \{1, 4, 9, \ldots\}\)
+    <br>
+    The function \(f: A \rightarrow B\) is defined by \(f(x) = x^2\).
+    <br>
+    To show: \(f\) is one-to-one.
+    <br>
+    Let \(x \neq y\) where \(x, y \in A\), then to show \(f(x) \neq f(y)\).
+    <br>
+    Since \(x \neq y\),
+    <br>
+    \[x^2 \neq y^2\] (for \(x, y \in \mathbb{Z}^+\))
+    <br>
+    \[f(x) \neq f(y)\] (since \(f(x) = x^2\))
+    <br>
+    Hence, \(f\) is one-to-one.
+  </p>
+  <p>
+    <strong>c. Soln:</strong>
+  </p>
+  <p>
+    Here, \(f: [-2, 2] \rightarrow \mathbb{R}\) is \(f(x) = x^2\).
+    <br>
+    To show: \(f\) is one-to-one.
+    <br>
+    Let \(x, y \in [-2, 2]\) such that \(x \neq y\).
+    <br>
+    Then to show: \(f(x) \neq f(y)\).
+    <br>
+    Since \(x \neq y\), but \(x^2 = y^2\) \((-2 \leq x, y \leq 2\), \(x \neq 2\), but \((-2)^2 = 2^2 = 4\)).
+    <br>
+    So, \(f(x) = f(y)\).
+    <br>
+    Hence, \(x \neq y \rightarrow f(x) = f(y)\). So \(f\) is not one-to-one.
+  </p>
+  <p>
+    <strong>d. Soln:</strong>
+  </p>
+  <p>
+    Here, \(f: [0, 3] \rightarrow \mathbb{R}\) is \(f(x) = x^2\).
+    <br>
+    To show: \(f\) is one-to-one.
+    <br>
+    Let \(x, y \in [0, 3]\), \(x \neq y\) implies \(f(x) \neq f(y)\).
+    <br>
+    Since \(x, y \in [0, 3]\), \(x \neq y\) implies \(f(x) \neq f(y)\).
+    <br>
+    Hence, \(f\) is one-to-one.
+  </p>
+  <h3>9.</h3>
+  <p>
+    <strong>i. Soln:</strong>
+  </p>
+  <p>
+    Here, \(A = \{1, -3, 3\}\), \(B = \{1, 9\}\)
+    <br>
+    And \(f: A \rightarrow B\) is \(f(x) = x^2\).
+    <br>
+    To show: \(f\) is one-to-one and onto.
+    <br>
+    \(f\) is not one-to-one because \(-3 \neq 3\) but \(f(-3) = 9 = f(3)\).
+    <br>
+    Moreover, the function \(f\) is onto because every element of \(B\) has a pre-image in \(A\).
+    <br>
+    Hence, \(f\) is not one-to-one but is onto.
+  </p>
+  <p>
+    <strong>ii. Soln:</strong>
+  </p>
+  <p>
+    Here, \(f: \mathbb{N} \rightarrow \mathbb{N}\) is \(f(x) = 2x\).
+    <br>
+    To show: \(f\) is one-to-one and onto.
+    <br>
+    <strong>a. \(f\) is one-to-one:</strong>
+    <br>
+    Let \(x, y \in \mathbb{N}\) such that \(x \neq y\). Then to show \(f(x) \neq f(y)\).
+    <br>
+    Since \(x \neq y\),
+    <br>
+    \[2x \neq 2y\]
+    <br>
+    \[f(x) \neq f(y)\] (since \(f(x) = 2x\))
+    <br>
+    Therefore, \(f\) is one-to-one.
+    <br>
+    <strong>b. \(f\) is onto:</strong>
+    <br>
+    Let \(y \in \mathbb{N}\) such that \(y = f(x) = 2x\).
+    <br>
+    So, \(y = 2x\).
+    <br>
+    \[x = \frac{y}{2}\]
+    <br>
+    \[x \in \mathbb{N}\] if \(y\) is even.
+    <br>
+    Hence, \(f\) is not onto.
+    <br>
+    Therefore, the function is one-to-one but not onto.
+  </p>
+  <p>
+    <strong>iii. Soln:</strong>
+  </p>
+  <p>
+    Here, \(f: (-2, 2) \rightarrow \mathbb{R}\) is \(f(x) = x^2\).
+    <br>
+    <strong>a. The function is not one-to-one because:</strong>
+    <br>
+    \(-1 \neq 1\) but \(f(-1) = 1 = f(1)\).
+    <br>
+    <strong>b. The function is not onto because:</strong>
+    <br>
+    \(f(-2, 2) = (0, 4) \neq \mathbb{R}\).
+    <br>
+    Therefore, the function is neither one-to-one nor onto.
+  </p>
+  <h3>10.</h3>
+  <h4>Soln:</h4>
+  <p>
+    The function \(f: \mathbb{R} \rightarrow \mathbb{R}\) is \(f(x) = \frac{1}{1+e^{-x}}\).
+    <br>
+    To show: \(f\) is one-to-one and onto.
+    <br>
+    <strong>a. \(f\) is one-to-one:</strong>
+    <br>
+    Let \(x, y \in \mathbb{R}\) such that \(x \neq y\). Then to show \(f(x) \neq f(y)\).
+    <br>
+    Since \(x \neq y\),
+    <br>
+    \[e^{-x} \neq e^{-y}\]
+    <br>
+    \[1+e^{-x} \neq 1+e^{-y}\]
+    <br>
+    \[\frac{1}{1+e^{-x}} \neq \frac{1}{1+e^{-y}}\] (since \(f(x) = \frac{1}{1+e^{-x}}\))
+    <br>
+    Therefore, \(f\) is one-to-one.
+    <br>
+    <strong>b. \(f\) is onto:</strong>
+    <br>
+    Let \(y \in \mathbb{R}\). We need to find an \(x \in \mathbb{R}\) such that \(f(x) = y\).
+    <br>
+    Given \(f(x) = \frac{1}{1+e^{-x}} = y\).
+    <br>
+    Solving for \(x\),
+    <br>
+    \[\frac{1}{y} = 1+e^{-x}\]
+    <br>
+    \[e^{-x} = \frac{1}{y} - 1\]
+    <br>
+    \[e^{-x} = \frac{1-y}{y}\]
+    <br>
+    \[-x = \ln\left(\frac{1-y}{y}\right)\]
+    <br>
+    \[x = -\ln\left(\frac{1-y}{y}\right)\]
+    <br>
+    Since \(-\ln\left(\frac{1-y}{y}\right) \in \mathbb{R}\), we can find \(x\) for any given \(y\).
+    <br>
+    Hence, \(f\) is onto.
+    <br>
+    Therefore, the function is both one-to-one and onto.
+  </p>
+  <h1>Chapter 10: Solutions</h1>
+
+  <h2>a.</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Here \(A = \{-2, -1, 0, 1, 2\}\), \(B = \{1, 16, 23\}\), and \(f(x) = x^2 - 6\).</p>
+  <p>So, range of \(f\) = \(\{f(-2), f(-1), f(0), f(1), f(2)\} = \{4, 16, 0, 16, 4\}\).</p>
+  <p>So, range of \(f\) = \(\{0, 16, 23\}\).</p>
+  <p>The function is not one-one because \(f(-2) = 23 = f(2)\) but \(-2 \neq 2\).</p>
+  <p>However, the function is onto because \(f(A) = B\).</p>
+
+  <h2>b.</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(A = \{-1, 0, 1, 2, 3, 4\}\), \(B = \{-1, 0, 45, 57, 1, 2, 3\}\), and \(f:A \to B\) is \(f(x) = \frac{{(x+1)^2}}{{x-1}}\).</p>
+  <p>(i)</p>
+  <p>Range of \(f\) = \(\{f(-1), f(0), f(1), f(2), f(3), f(4)\} = \{0, -1, 2, 1, 45, 57\}\).</p>
+  <p>So, Range of \(f\) = \(\{-1, 0, 45, 57, 12\}\).</p>
+  <p>(ii)</p>
+  <p>The function \(f\) is one-one because each element in \(A\) has a distinct image in \(B\). But the function is not onto because the element 3 \(\in B\) does not have a pre-image in \(A\).</p>
+  <p>(iii)</p>
+  <p>T
+
+
+    </div>
+  
+    <div id="videos-container" class="container" style="display:none">
+    
+
+        
+  <h2>1.</h2>
+  <h3>a.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here,</p>
+  <p>f<sup>-1</sup>(1) = {2}</p>
+  <p>f<sup>-1</sup>(3) = {1, 3, 5}</p>
+  <p>f<sup>-1</sup>(5) = {4}</p>
+  <p>f<sup>-1</sup>(2) = &empty;</p>
+  <p>f<sup>-1</sup>(1, 3, 5) = {1, 2, 3, 4, 5}</p>
+  <p>f<sup>-1</sup>(2, 4) = &empty;</p>
+
+  <h2>2.</h2>
+  <h3>a.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(A = \{0, 1, 2, 3\}\), \(B = \{10, 13, 16, 19\}\), and \(f:A \to B\) is \(f(0) = 10\), \(f(1) = 13\), \(f(2) = 16\), and \(f(3) = 19\).</p>
+  <p>Then \(f^{-1}:B \to A\) as an ordered pair is \(\{(10, 0), (13, 1), (16, 2), (19, 3)\}\).</p>
+
+  <h3>b.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(X = \{-1, 1, 2, 4\}\), \(Y = \{15, 25, 12, 1\}\), and \(f: X \to Y\) is \(f(-1) = 15\), \(f(1) = 1\), \(f(2) = 12\), \(f(4) = 25\).</p>
+  <p>Then \(f^{-1}: Y \to X\) as an ordered pair is \(f^{-1} = \{(15, 1), (1, 1), (12, 2), (25, 4)\}\).</p>
+
+  <h2>3.</h2>
+  <h3>a.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, let \(y = f(x) = x + 1\).</p>
+  <p>So, \(y = f(x) \rightarrow x = f^{-1}(y)\) ...(i)</p>
+  <p>Also, \(y = x + 1\).</p>
+  <p>So, \(x = y - 1\).</p>
+  <p>Or, \(f^{-1}(y) = y - 1\) [from (i)].</p>
+  <p>Hence, \(f^{-1}(x) = x - 1\).</p>
+
+  <h3>b.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, let \(y = f(x) = 2x + 3\).</p>
+  <p>So, \(y = f(x) \rightarrow x = f^{-1}(y)\) ...(i)</p>
+  <p>Also, \(y = 2x + 3\).</p>
+  <p>So, \(x = \frac{{y - 3}}{{2}}\).</p>
+  <p>Or, \(f^{-1}(y) = \frac{{y - 3}}{{2}}\) [from (i)].</p>
+  <p>Hence, \(f^{-1}(x) = x - \frac{{3}}{{2}}\).</p>
+
+  <h3>c.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, let \(y = f(x) = 2x + 5\).</p>
+  <p>So, \(y = f(x) \rightarrow x = f^{-1}(y)\) ...(i)</p>
+  <p>Also, \(y = 2x + 5\).</p>
+  <p>So, \(x = \frac{{y - 5}}{{2}}\).</p>
+  <p>Or, \(f^{-1}(y) = \frac{{y - 5}}{{2}}\) [from (i)].</p>
+  <p>Hence, \(f^{-1}(x) = x - \frac{{5}}{{2}}\).</p>
+
+  <h3>d.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, let \(y = f(x) = x^3 + 5\).</p>
+  <p>So, \(y = f(x) \rightarrow x = f^{-1}(y)\) ...(i)</p>
+  <p>Also, \(y = x^3 + 5\).</p>
+  <p>So, \(x^3 = y - 5\).</p>
+  <p>So, \(x = \sqrt[3]{{y - 5}}\).</p>
+  <p>Or, \(f^{-1}(y) = \sqrt[3]{{y - 5}}\) [from (i)].</p>
+  <p>Hence, \(f^{-1}(x) = \sqrt[3]{{x - 5}}\).</p>
+
+  <h3>e.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, let \(y = f(x) = 3x - 2\).</p>
+  <p>So, \(y = f(x) \rightarrow x = f^{-1}(y)\) ...(i)</p>
+  <p>Also, \(y = 3x - 2\).</p>
+  <p>So, \(x = \frac{{y + 2}}{{3}}\).</p>
+  <p>Or, \(f^{-1}(y) = \frac{{y + 2}}{{3}}\) [from (i)].</p>
+  <p>Hence, \(f^{-1}(x) = x + \frac{{2}}{{3}}\).</p>
+
+  <h2>4.</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = 4x^3 - 1\) and \(g(x) = 3x^3\).</p>
+  <p>Now,</p>
+  <p>a. \((2f - 5)(x) = 2f(x) - 5 = 2(4x^3 - 1) - 5 = 8x^3 - 7\)</p>
+  <p>b. \((f^2)(x) = (f(x))^2 = (4x^3 - 1)^2\)</p>
+  <p>c. \((3f - 4g)(x) = 3f(x) - 4g(x) = 3(4x^3 - 1) - 4(3x^3) = 12x^3 - 3 - 12x^3 = -3\)</p>
+  <p>d. \((fg)(x) = f(x)g(x) = (4x^3 - 1)(3x^3)\)</p>
+  <p>e. \((f/g)(x) = \frac{{f(x)}}{{g(x)}} = \frac{{4x^3 - 1}}{{3x^3}}\)</p>
+
+  <h2>5.</h2>
+  <h3>a.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = 2x + 1\) and \(g(x) = 3x - 1\).</p>
+  <p>Now, \((gof)(x) = g(f(x)) = g(2x + 1) = 3(2x + 1) - 1 = 6x + 2\).</p>
+  <p>And \((fog)(x) = f(g(x)) = f(3x - 1) = 2(3x - 1) + 1 = 6x - 1\).</p>
+
+  <h3>b.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = 3x^2 - 4\) and \(g(x) = 2x - 5\).</p>
+  <p>Now, \((gof)(x) = g(f(x)) = g(3x^2 - 4) = 2(3x^2 - 4) - 5 = 6x^2 - 13\).</p>
+  <p>And \((fog)(x) = f(g(x)) = f(2x - 5) = 3(2x - 5)^2 - 4\).</p>
+
+  <h3>c.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = x^3 - 1\) and \(g(x) = x^2\).</p>
+  <p>Now, \((gof)(x) = g(f(x)) = g(x^3 - 1) = (x^3 - 1)^2\).</p>
+  <p>And \((fog)(x) = f(g(x)) = f(x^2) = (x^2)^3 - 1 = x^6 - 1\).</p>
+
+  <h3>d.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = x^2 + 2\) and \(g(x) = x + 1\).</p>
+  <p>Now, \((gof)(x) = g(f(x)) = g(x^2 + 2) = (x^2 + 2) + 1 = x^2 + 3\).</p>
+  <p>And \((fog)(x) = f(g(x)) = f(x + 1) = (x + 1)^2 + 2 = x^2 + 2x + 3\).</p>
+
+  <h2>6.</h2>
+  <h3>a.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = 3x + 2\) and \(g(x) = 2x - 1\).</p>
+  <p>Now, \((fog)(x) = f(g(x)) = f(2x - 1) = 3(2x - 1) + 2 = 6x - 1\).</p>
+  <p>And \((gof)(x) = g(f(x)) = g(3x + 2) = 2(3x + 2) - 1 = 6x + 3\).</p>
+
+  <h3>b.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = x^2\) and \(g(x) = x + 1\).</p>
+  <p>Now, \((fog)(x) = f(g(x)) = f(x + 1) = (x + 1)^2 = x^2 + 2x + 1\).</p>
+  <p>And \((gof)(x) = g(f(x)) = g(x^2) = x^2 + 1\).</p>
+
+  <h3>c.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = 2x + 1\) and \(g(x) = x^2 - 3\).</p>
+  <p>Now, \((fog)(x) = f(g(x)) = f(x^2 - 3) = 2(x^2 - 3) + 1 = 2x^2 - 5\).</p>
+  <p>And \((gof)(x) = g(f(x)) = g(2x + 1) = (2x + 1)^2 - 3 = 4x^2 + 4x - 2\).</p>
+
+  <h3>d.</h3>
+  <p><strong>Solution:</strong></p>
+  <p>Here, \(f(x) = x^2\) and \(g(x) = 3x - 1\).</p>
+  <p>Now, \((fog)(x) = f(g(x)) = f(3x - 1) = (3x - 1)^2 = 9x^2 - 6x + 1\).</p>
+  <p>And \((gof)(x) = g(f(x)) = g(x^2) = 3x^2 - 1\).</p>
+
+  
+    <h4>6.</h4>
+    
+    <p>Soln:</p>
+    
+    <p>a.</p>
+    <p>For \(g \circ f\),</p>
+    <p>so, \(f(1) = 5\), \(g(5) = 1\).</p>
+    <p>\(f(2) = 6\), \(g(6) = 2\).</p>
+    <p>\(f(3) = 7\), \(g(7) = 3\).</p>
+    <p>\(f(4) = 6\).</p>
+    <p>Now,</p>
+    <p>\((g \circ f)(1) = g(f(1)) = g(5) = 1\).</p>
+    <p>\((g \circ f)(2) = g(f(2)) = g(6) = 2\).</p>
+    <p>\((g \circ f)(3) = g(f(3)) = g(7) = 3\).</p>
+    <p>\((g \circ f)(4) = g(f(4)) = g(6) = 2\).</p>
+    <p>So, \(g \circ f = \{(1, 1), (2, 2), (3, 3), (4, 2)\}\)</p>
+    
+    <p>For \(f \circ g\),</p>
+    <p>\(g(5) = 1\), \(f(1) = 5\).</p>
+    <p>\(g(6) = 2\), \(f(2) = 6\).</p>
+    <p>\(g(7) = 3\), \(f(3) = 7\).</p>
+    <p>Now, \((f \circ g)(1) = f(g(1)) = f(3) = 5\).</p>
+    <p>\((f \circ g)(2) = f(g(2)) = f(3) = 5\).</p>
+    <p>\((f \circ g)(5) = f(g(5)) = f(1) = 2\).</p>
+    <p>So, \(f \circ g = \{(1, 5), (2, 5), (5, 2)\}\)</p>
+    
+    <h4>7.</h4>
+    
+    <p>a.</p>
+    
+    <p>Soln:</p>
+    
+    <p>Here, \(f : \mathbb{R} \rightarrow \mathbb{R}\) is \(f(x) = 11 - x\), (\(x \neq 1\))</p>
+    
+    <p>To show: \((f \circ f)\left(\frac{1}{2}\right) = -1\)</p>
+    
+    <p>Now, \((f \circ f)(x) = f(f(x)) = f(11 - x) = 11 - (11 - x) = 1 - x\)</p>
+    
+    <p>So, \((f \circ f)(x) = 1 - x\)</p>
+    <p>So, \((f \circ f)\left(\frac{1}{2}\right) = \left(1 - \frac{1}{2}\right) = -1\)</p>
+    
+    <p>Hence, \((f \circ f)\left(\frac{1}{2}\right) = -1\)</p>
+   
+
+    <h3>6.</h3>
+<h4>b.</h4>
+<p>
+For \(g \circ f\),
+<br>
+So, \(f(1) = 2\), \(f(3) = 5\), \(f(4) = 1\)
+<br>
+And, \(g(2) = 3\), \(g(5) = 1\), \(g(1) = 3\)
+<br>
+Now, \((g \circ f)(1) = g(f(1)) = g(2) = 3\).
+<br>
+\((g \circ f)(3) = g(f(3)) = g(5) = 1\).
+<br>
+\((g \circ f)(4) = g(f(4)) = g(1) = 3\).
+<br>
+So, \(g \circ f = \{(1, 3), (3, 1), (4, 3)\}\)
+<br>
+For \(f \circ g\).
+<br>
+\(g(2) = 3\), \(g(5) = 1\), \(g(1) = 3\)
+<br>
+\(f(3) = 5\), \(f(1) = 2\), \(f(4) = 1\)
+<br>
+Now, \((f \circ g)(1) = f(g(1)) = f(3) = 5\).
+<br>
+\((f \circ g)(2) = f(g(2)) = f(3) = 5\).
+<br>
+\((f \circ g)(5) = f(g(5)) = f(1) = 2\).
+<br>
+So, \(f \circ g = \{(1, 5), (2, 5), (5, 2)\}\)
+</p>
+<h3>7.</h3>
+<h4>a.</h4>
+<p>
+Soln:
+<br>
+Here, \(f : \mathbb{R} \rightarrow \mathbb{R}\) is \(f(x) = 11-x\), (\(x \neq 1\))
+<br>
+To show: \((f \circ f)(\frac{1}{2}) = -1\).
+<br>
+Now, \((f \circ f)(x) = f(f(x)) = f (11-x)
+= 11-(11-x)
+ = 1-x1-x-1
+ = 1-x-x
+ = x-1x
+\).
+<br>
+So, \((f \circ f)(x) = \frac{x-1}{x}\).
+<br>
+So, \((f \circ f)(\frac{1}{2}) = (\frac{1}{2}-1)\frac{1}{2}
+ = 1-\frac{2}{2}
+ = -1\)
+<br>
+Hence, \((f \circ f)(\frac{1}{2}) = -1\).
+</p>
+<h4>b.</h4>
+<p>
+Soln:
+<br>
+Here, \(f:\mathbb{R}\rightarrow \mathbb{R}\) is \(f(x) = \frac{x-1}{x+1}\), (\(x \neq -1\))
+<br>
+To show: \((f \circ f)(4) = -\frac{1}{4}\).
+<br>
+Now, \((f \circ f)(x) = f(f(x)) = f (\frac{x-1}{x+1})
+= \frac{x-1}{x+1}-1\frac{x-1}{x+1}+1
+ = \frac{x-1-x+1}{x+1}
+ = -\frac{2}{2x}
+ = -\frac{1}{x}\).
+<br>
+So, \((f \circ f)(x) = -\frac{1}{x}\).
+<br>
+So, \((f \circ f)(4) = -\frac{1}{4}\).
+</p>
+<h3>8.</h3>
+<h4>a.</h4>
+<p>
+Soln: Here given function is \(y = 3x + 1\)
+<br>
+Since \(y\) is defined for all real values of \(x\), so the domain of the function is \(D(f) = \mathbb{R} = (-\infty, \infty)\).
+<br>
+Also, \(y\) can take all real values, so the range of the function is \(R(f) = \mathbb{R} = (-\infty, \infty)\)
+</p>
+<h4>b.</h4>
+<p>
+Soln:
+<br>
+Given function is \(y = x^2 - 1\)
+<br>
+Since \(y\) is defined for all real values of \(x\), so the domain of the function is \(D(f) = \mathbb{R} = (-\infty, \infty)\).
+<br>
+Also, \(y\) can take all real values, so the range of the function is \(R(f) = \mathbb{R} = (-\infty, \infty)\).
+<br>
+since \(y = x^2 - 1\), therefore \(x^2 = y + 1\).
+<br>
+Since \(x^2 \geq 0\), so \(y + 1 \geq 0\).
+<br>
+Therefore \(y \geq -1\).
+<br>
+Hence, the range of the function is \(R(f) = [-1, \infty)\).
+</p>
+<h4>c.</h4>
+<p>
+Soln:
+<br>
+Given function is: \(y = x^3\).
+<br>
+Since \(y\) is defined for all real values of \(x\), so the domain of the function is \(D(f) = \mathbb{R} = (-\infty, \infty)\).
+<br>
+Since \(x\) is real, \(x^3\) is also real.
+<br>
+Also, \(y\) can take all real values, so the range of the function is \(R(f) = \mathbb{R} = (-\infty, \infty)\).
+</p>
+<h4>d.</h4>
+<p>
+Soln:
+<br>
+Given function is: \(y = -x^2 + 4x - 3\).
+<br>
+Since \(y\) is defined for all real values of \(x\), so the domain of the function is \(D(f) = \mathbb{R} = (-\infty, \infty)\).
+<br>
+Again, \(y = -x^2 + 4x - 3 = -(x^2 - 4x) - 3 = -(x - 2)^2 + 4 - 1 = -(x - 2)^2 + 1\).
+<br>
+Since, \(x - 2 \geq 0\) so \(y \leq 1\) for all real \(x\), Hence, the range of the function is \(R(f) = (-\infty, 1]\).
+</p>
+<h4>e.</h4>
+<p>
+Soln:
+<br>
+Given function is: \(y = \sqrt{x - 2}\).
+<br>
+Since \(y\) is defined for the real values of \(x\) for which \(x - 2 \geq 0\).
+<br>
+So, \(x \geq 2\).
+<br>
+The domain, \(D(f) = [2, \infty)\).
+<br>
+Again, since \(x \in [2, \infty)\), so the range is \(R(f) = [0, \infty)\).
+</p>
+<h4>f.</h4>
+<p>
+Soln:
+<br>
+Given function is: \(y = \frac{1}{x + 1}\).
+<br>
+Since \(y\) is defined for the real values of \(x\) except \(x + 1 = 0\), i.e., \(x = -1\).
+<br>
+Thus, the domain of the function is: \(D(f) = \mathbb{R} - \{-1\}\).
+<br>
+Since, \(y = \frac{1}{x + 1}\).
+<br>
+So, \(x + 1 = \frac{1}{y}\).
+<br>
+So, \(x = \frac{1}{y} - 1\).
+<br>
+Since \(x\) is not defined for \(y = 0\), so the range of the function is \(R(f) = \mathbb{R} - \{0\}\).
+</p>
+<h4>g.</h4>
+<p>
+Soln:
+<br>
+Given function is: \(y = x^2 - 16x - 4\).
+<br>
+Since \(y\) is not defined for \(x - 4 = 0\), i.e., \(x = 4\).
+<br>
+Thus, the domain of the function is: \(D(f) = \mathbb{R} - \{4\}\).
+<br>
+Again, if \(x \neq 4\), then,
+<br>
+\(y = x^2 - 16x - 4 = x + 4\).
+<br>
+Since \(x = 4\) is not defined, for \(y = 8\) it will not be in the range.
+<br>
+Thus, the range is: \(R(f) = \mathbb{R} - \{8\}\).
+</p>
+<h4>h.</h4>
+<p>
+Soln:
+<br>
+Given function is: \(y = x^2 - 2x - 8\sqrt{x}\).
+<br>
+Since \(y\) is defined only when,
+<br>
+\(x^2 - 2x - 8 \geq 0\).
+<br>
+Or, \(x^2 - 4x + 2x - 8 \geq 0\).
+<br>
+Or, \(x(x - 4) + 2(x - 4) \geq 0\).
+<br>
+So, \((x - 4)(x + 2) \geq 0\).
+<br>
+This is true only when either \(x - 4 \geq 0\) and \(x + 2 \geq 0\) (i.e., \(x \geq 4\) and \(x \geq -2\)),
+<br>
+or \(x - 4 \leq 0\) and \(x + 2 \leq 0\) (i.e., \(x \leq 4\) and \(x \leq -2\)),
+<br>
+or \(x \geq 4\) and \(x \leq -2\).
+<br>
+So, the domain is \(D(f) = (-\infty, -2] \cup [4, \infty)\).
+<br>
+Since \(x \geq 4\), \(y = x^2 - 2x - 8\sqrt{x} = x(x - 2) - 8\sqrt{x}\).
+<br>
+So, for \(x \geq 4\), \(\sqrt{x} \geq 2\), and \(x(x - 2) - 8\sqrt{x} \leq 0\).
+<br>
+Thus, the range is \(R(f) = (-\infty, 0]\).
+</p>
+<h3>9.</h3>
+<p>
+To prove the given statement, we need to show that for all functions \(f : A \rightarrow B\) and \(g : B \rightarrow C\), if \(g \circ f\) is injective, then \(f\) is injective.
+<br>
+Let's assume that \(g \circ f\) is injective, which means that for any \(x_1, x_2 \in A\), if \(f(x_1) \neq f(x_2)\), then \((g \circ f)(x_1) \neq (g \circ f)(x_2)\).
+<br>
+We will prove by contradiction that \(f\) is injective, assuming that it is not.
+<br>
+So, assume that there exist \(x_3, x_4 \in A\) such that \(x_3 \neq x_4\) but \(f(x_3) = f(x_4)\).
+<br>
+Since \(x_3 \neq x_4\) and \(f(x_3) = f(x_4)\), by the definition of composition, \((g \circ f)(x_3) = g(f(x_3)) = g(f(x_4)) = (g \circ f)(x_4)\).
+<br>
+This contradicts the injectivity of \(g \circ f\) because we assumed that if \(f(x_1) \neq f(x_2)\), then \((g \circ f)(x_1) \neq (g \circ f)(x_2)\).
+<br>
+Hence, our assumption that \(f\) is not injective must be false.
+<br>
+Therefore, we can conclude that if \(g \circ f\) is injective, then \(f\) is injective.
+</p>
+
+<h2>9.</h2>
+<p><strong>Solution:</strong></p>
+<p><em>Test of one-one:</em></p>
+<p>Let \(x, y \in \mathbb{R}\) (domain)</p>
+<p>And \(f(x) = f(y)\)</p>
+<p>Then, \(cx + d = cy + d\)</p>
+<p>Then, \(x = y\)</p>
+<p>So, \(f\) is one-one.</p>
+<p><em>Test of onto:</em></p>
+<p>Let \(y \in \mathbb{R}\) (range) and let \(y = cx + d\)</p>
+<p>i.e. \(x = \frac{{y-d}}{{c}} \in \mathbb{R}\) (domain)</p>
+<p>So, for every value \(y \in \mathbb{R}\) (range), there exist \(x \in \mathbb{R}\) (domain), therefore the given function is onto.</p>
+<p>Hence, the given function is bijective, so there exists \(f^{-1}\).</p>
+<p>For this, let \(y = cx + d\), then \(x = \frac{{y-d}}{{c}}\).</p>
+<p>i.e. \(f^{-1}(y) = \frac{{y-d}}{{c}}\)</p>
+<p>Since \(y\) is a dummy variable, so interchanging \(y\) to \(x\), we get,</p>
+<p>\(f^{-1}(x) = \frac{{x-d}}{{c}}\)</p>
+<p>Now, \(f(f^{-1}(x)) = f(x-d) = c \cdot (x-d) + d = x\)</p>
+<p>Again, \(f^{-1}(f(x)) = f^{-1}(cx+d) = \left(cx+d\right) - d = x\).</p>
+<p>Hence, \(f(f^{-1}(x)) = f^{-1}(f(x))\).</p>
+
+<h2>10.</h2>
+<p><strong>Solution:</strong></p>
+<p><em>Test of one-one:</em></p>
+<p>Let \(x, y \in \mathbb{R} - \{2\}\) and let \(f(x) = f(y)\).</p>
+<p>Or, \(3x^2 - 2 = 3y^2 - 2\).</p>
+<p>Or, \(xy - 2x = xy - 2y\).</p>
+<p>Or, \(x = y\).</p>
+<p>So, the given function is one-one.</p>
+<p><em>Test of onto:</em></p>
+<p>Let \(y \in \mathbb{R} - \{3\}\) and let \(y = \frac{{3x^2 - 2}}{{x}}\).</p>
+<p>i.e. \(xy - 2y = 3x\).</p>
+<p>Or, \(x - 3x = 2y\).</p>
+<p>Or, \(x(y - 3) = 2y\).</p>
+<p>Or, \(x = \frac{{2y}}{{y - 3}} \in \mathbb{R} - \{2\}\).</p>
+<p>So, the given function is onto.</p>
+<p>Hence, the given function is a bijective function. So, there exists an inverse function:</p>
+<p>For this, let \(y = \frac{{3x^2 - 2}}{{x}}\), then \(x = \frac{{2y}}{{y - 3}}\).</p>
+<p>i.e. \(f^{-1}(y) = \frac{{2y}}{{y - 3}}\).</p>
+<p>Since \(y\) is a dummy variable, so interchanging \(y\) to \(x\),</p>
+<p>\(f^{-1}(x) = \frac{{2x}}{{x - 3}}\).</p>
+
+
+
+
+
+
+
+
+</div>
+
+    <div id="remnant-container" class="container" style="display:none">
+        <h2>1.</h2>
+  <p><strong>a.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>L.H.S. = \(\log_a(xy^3/z^2)\)</p>
+  <p>= \(\log_a(xy^3) - \log_az^2\)  \(\left(\log_a\left(\frac{x}{y}\right) = \log_a(x) - \log_a(y)\right)\)</p>
+  <p>= \(\log_ax + \log_ay^3 - \log_az^2\)  \(\left(\log_a(xy) = \log_ax + \log_ay\right)\)</p>
+  <p>= \(\log_ax + 3\log_ay - 2\log_az\)  \(\left(\log_a(x^p) = p\log_ax\right)\)</p>
+  <p>= \(\log_ax + 3\log_ay - 2\log_az\) = R.H.S.</p>
+
+  <p><strong>b.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>L.H.S. = \(\log_a(2x) + 3(\log_ax - \log_ay)\)</p>
+  <p>= \(\log_a(2x) + 3\log_ax - 3\log_ay\)</p>
+  <p>= \(\log_a(2x) + \log_ax^3 - \log_ay^3\)</p>
+  <p>= \(\log_a(2x^4/y^3)\)  \(\left(\log_a(x) - \log_a(y) = \log_a(x/y)\right)\)</p>
+  <p>= R.H.S.</p>
+
+  <p><strong>c.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>L.H.S. = \(\log_a(x^2) - 2\log_a(x\sqrt{x})\)</p>
+  <p>= \(\log_a(x^2) - 2\log_ax^{1/2}\)</p>
+  <p>= \(2\log_ax - 2(\frac{1}{2})\log_ax\)  \(\left(\log_a(x^p) = p\log_ax\right)\)</p>
+  <p>= \(2\log_ax - \log_ax = \log_ax\) = R.H.S.</p>
+
+  <p><strong>d.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p><strong>Proof:</strong></p>
+  <p>Let \(\log_ax = y\)</p>
+  <p>So, \(x = a^y\)</p>
+  <p>Or \(a^y = x\)</p>
+  <p>So, \(a^{\log_ax} = x\)  \(\left(y = \log_ax\right)\)</p>
+
+  <p><strong>e.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>L.H.S. = \(\log_a(a^x)\)</p>
+  <p>= \(x\log_aa\)  \(\left(\log_ax^p = p\log_ax\right)\)</p>
+  <p>= \(x\log_a a = x\)</p>
+
+  <p><strong>f.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>L.H.S. = \((\log a)^2 - (\log b)^2\)</p>
+  <p>= \((\log a + \log b)(\log a - \log b) = \log(ab)\log\left(\frac{a}{b}\right) =\) R.H.S.</p>
+
+  <p><strong>g.</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>L.H.S. = \(\log(1 + 2 + 3) = \log 6 = \log(1 \cdot 2 \cdot 3)\)</p>
+  <p>= \(\log(1 \cdot 2) + \log 3\)  \(\left(\log (ab) = \log a + \log b\right)\)</p>
+  <p>= \(\log 1 + \log 2 + \log 3 =\) R.H.S.</p>
+
+
+  <h4>h.</h4>
+  <p>
+  Proof:
+  <br>
+  Let \(x \log y - \log z \cdot y \log z - \log x \cdot z \log x - \log y = t\) ...(i)
+  <br>
+  To show: \(t = 1\).
+  <br>
+  Now, taking the logarithm on both sides of (i), we have,
+  <br>
+  \(\log(x \log y - \log z \cdot y \log z - \log x \cdot z \log x - \log y) = \log t\)
+  <br>
+  or, \(\log x \log y - \log z + \log y \log z - \log x + \log z \log x - \log y = \log t\)
+  <br>
+  or, \((\log y - \log z) \log x + (\log z - \log x) \log y + (\log x - \log y) \log z = \log t\).
+  <br>
+  or, \(\log y \log x - \log z \log x + \log z \log y - \log x \log y + \log x \log z - \log y \log z = \log t\)
+  <br>
+  or, \(0 = \log t\)
+  <br>
+  So, \(\log t = \log 1\) \([\log 1 = 0]\)
+  <br>
+  So, \(t = 1\).
+  </p>
+  <h4>i.</h4>
+  <p>
+  Proof:
+  <br>
+  Let \((yz) \log y - \log z \cdot (zx) \log z - \log x \cdot (xy) \log x - \log y = t\) ...(i)
+  <br>
+  To show: \(t = 1\)
+  <br>
+  Now, taking the logarithm on both sides of (i), we have,
+  <br>
+  \(\log\{(yz) \log y - \log z \cdot (zx) \log z - \log x \cdot (xy) \log x - \log y\} = \log t\)
+  <br>
+  or, \(\log(yz) \log y - \log z \cdot \log(zx) \log z - \log x \cdot \log(xy) \log x - \log y = \log t\)
+  <br>
+  or, \((\log y - \log z) \log(yz) + (\log z - \log x) \log(zx) + (\log x - \log y) \log(xy) = \log t\)
+  <br>
+  or, \((\log y - \log z)(\log y + \log z) + (\log z - \log x)(\log z + \log x) + (\log x - \log y)(\log x + \log y) = \log t\)
+  <br>
+  or, \((\log y)^2 - (\log z)^2 + (\log z)^2 - (\log x)^2 + (\log x)^2 - (\log y)^2 = \log t\)
+  <br>
+  or, \(0 = \log t\)
+  <br>
+  So, \(\log t = \log 1\) \([\log 1 = 0]\)
+  <br>
+  So, \(t = 1\). Proved.
+  </p>
+  <h4>j.</h4>
+  <p>
+  Soln:
+  <br>
+  L.H.S. = \(\log (a^{a^{a^{2}}}) - \sqrt{\sqrt{\sqrt{a}}}\)
+  <br>
+  = \(\log a.a.a - \sqrt{\sqrt{a}}\)
+  <br>
+  = \(\log a.a - \sqrt{a}\)
+  <br>
+  = \(\log a^{2} - \sqrt{a}\)
+  <br>
+  = \(\log a = 1 = \text{R.H.S.}\)
+  </p>
+  <h4>2.</h4>
+  <p>
+  Soln:
+  <br>
+  Here, \(f(x) = \log\left(\frac{{1-x}}{{1+x}}\right)\)
+  <br>
+  Now, \(f(2ab) = \log\left(\frac{{1-2ab}}{{1+2ab}}\right)\)
+  <br>
+  = \(\log(1-2ab) - \log(1+2ab)\)
+  <br>
+  = \(\log(1-a^2b^2) - \log(1+2ab)\)
+  <br>
+  = \(\log\left(\frac{{1-a^2b^2}}{{1+2ab}}\right)\)
+  <br>
+  = \(2\log\left(\frac{{1-a^2b^2}}{{1+2ab}}\right)\) \([\log(1-x) = -\log(1+x)]\)
+  <br>
+  = \(2f(ab)\) \([\log(1-x) = f(x)]\)
+  </p>
+  <h4>3.</h4>
+  <p>
+  Proof:
+  <br>
+  Here, \(x = \log_2 a \Rightarrow a = (2^a)^x\) ...(i)
+  <br>
+  \(y = \log_3 a \Rightarrow 2^a = (3^a)^y\) ...(ii)
+  <br>
+  and \(z = \log_4 a \Rightarrow 3^a = (4^a)^z\) ...(iii)
+  <br>
+  Now, \(a = (2^a)^x\) \([from(i)]\)
+  <br>
+  Or, \(a = (3^a)^{yx}\) \([from(ii)]\)
+  <br>
+  Or, \(a = (4^a)^{xyz}\) \([from(iii)]\)
+  <br>
+  Or, \(4a.a = (4^a).(4^a)^{xyz} + 1\)
+  <br>
+  Or, \((2^a)^2 = (4^a)^{xyz} + 1\)
+  <br>
+  Or, \((3^a)^{2y} = (4^a)^{xyz} + 1\) \([2^a = (3^a)^y]\)
+  <br>
+  Or, \((4^a)^{2yz} = (4^a)^{xyz} + 1\) \([3^a = (4^a)^z]\)
+  <br>
+  So, \(2z = xyz + 1\).
+  </p>
+  <h4>4.</h4>
+  <p>
+  Proof:
+  <br>
+  Let \( \log(xy-z) = \log(yz-x) = \log(zx-y) = k\)
+  <br>
+  So, \(\log x = k(y - z)\)
+  <br>
+  Or, \(x \log x = kx(y - z)\)
+  <br>
+  Or, \(\log x^x = k(xy - zx) \) ...(i) \([\log(x^p) = p \log x]\)
+  <br>
+  Again, \(\log y = k(z - x)\)
+  <br>
+  Or, \(y \log y = kz(z - x)\)
+  <br>
+  So, \(\log z^z = k(zx - yz) \) ...(ii)
+  <br>
+  Again, \(\log z = k(x - y)\)
+  <br>
+  Or, \(z \log z = k(x - y)\)
+  <br>
+  So, \(\log z^z = k(zx - yz) \) ...(iii)
+  <br>
+  Adding (i), (ii) and (iii).
+  <br>
+  Or, \(\log(x^x y^y z^z) = k(xy - zx + yz - xy + zx - yz)\)
+  <br>
+  Or, \(\log(x^x y^y z^z) = k \cdot 0 = 0\)
+  <br>
+  Or, \(\log(x^x y^y z^z) = \log 1\) \([\log 1 = 0]\)
+  <br>
+  So, \(x^x y^y z^z = 1\).
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+ 
+    
+   <script src="/script/bookscript.js"></script>
+   
+   <footer>
+      <p>&copy; 2023 GameChanger</p>
+      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+    </footer>
+  
+  </body>
+</html>

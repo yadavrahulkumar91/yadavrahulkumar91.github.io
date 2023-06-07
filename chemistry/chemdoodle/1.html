@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CML Structure Example</title>
+  <!-- Include CSS for chemical structure display -->
+  <link rel="stylesheet" href="/chemdoodle/ChemDoodleWeb.css" />
+</head>
+<body>
+  <!-- Display the chemical structure -->
+  <chemical-web id="structure-container" width="300" height="200"></chemical-web>
+
+  <!-- Include JavaScript libraries for chemical structure display -->
+  <script src="/chemdoodle/ChemDoodleWeb.js"></script>
+
+  <!-- Load the CML structure and display it -->
+  <script>
+    // CML structure
+    var cml = `<?xml version="1.0" encoding="UTF-8"?>
+      <chemml xmlns="http://www.xml-cml.org/schema">
+        <molecule>
+          <atomArray>
+            <atom id="a1" elementType="C">
+              <coords2D x2="100" y2="100"/>
+            </atom>
+            <atom id="a2" elementType="H">
+              <coords2D x2="150" y2="100"/>
+            </atom>
+          </atomArray>
+          <bondArray>
+            <bond atomRefs2="a1 a2" order="S"/>
+          </bondArray>
+        </molecule>
+      </chemml>`;
+
+    // Wait for the Chemical Web Components library to be ready
+    window.addEventListener('chemicalweb-ready', function () {
+      // Create a chemicalweb structure viewer instance
+      var viewer = document.getElementById('structure-container');
+      viewer.loadContent(cml, 'cml');
+    });
+  </script>
+</body>
+</html>

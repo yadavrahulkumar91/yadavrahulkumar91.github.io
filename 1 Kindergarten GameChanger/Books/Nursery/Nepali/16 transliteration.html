@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Letter Recognition Activity</title>
+	<link rel="stylesheet" type="text/css" href="/style/nepaliToEnglish.css">
+
+</head>
+
+<body>
+	<h1>Letter Recognition Activity</h1>
+	<div class="activity">
+		<div class="box" id="box1">त</div>
+		<div class="box" id="box2">ता</div>
+		<div class="box" id="box3">ति</div>
+		<div class="box" id="box4">ती</div>
+		<div class="box" id="box5">तु</div>
+		<div class="box" id="box6">तू</div>
+		<div class="box" id="box7">ते</div>
+		<div class="box" id="box8">तै</div>
+		<div class="box" id="box9">तो</div>
+		<div class="box" id="box10">तौ</div>
+		<div class="box" id="box11">तं</div>
+		<div class="box" id="box12">तः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+	<div class="activity">
+		<div class="box" id="box1">थ</div>
+		<div class="box" id="box2">था</div>
+		<div class="box" id="box3">थि</div>
+		<div class="box" id="box4">थी</div>
+		<div class="box" id="box5">थु</div>
+		<div class="box" id="box6">थू</div>
+		<div class="box" id="box7">थे</div>
+		<div class="box" id="box8">थै</div>
+		<div class="box" id="box9">थो</div>
+		<div class="box" id="box10">थौ</div>
+		<div class="box" id="box11">थं</div>
+		<div class="box" id="box12">थः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+	<div class="activity">
+		<div class="box" id="box1">द</div>
+		<div class="box" id="box2">दा</div>
+		<div class="box" id="box3">दि</div>
+		<div class="box" id="box4">दी</div>
+		<div class="box" id="box5">दु</div>
+		<div class="box" id="box6">दू</div>
+		<div class="box" id="box7">दे</div>
+		<div class="box" id="box8">दै</div>
+		<div class="box" id="box9">दो</div>
+		<div class="box" id="box10">दौ</div>
+		<div class="box" id="box11">दं</div>
+		<div class="box" id="box12">दः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+	<div class="activity">
+	<div class="box" id="box1">ध</div>
+	<div class="box" id="box2">धा</div>
+	<div class="box" id="box3">धि</div>
+	<div class="box" id="box4">धी</div>
+	<div class="box" id="box5">धु</div>
+	<div class="box" id="box6">धू</div>
+	<div class="box" id="box7">धे</div>
+	<div class="box" id="box8">धै</div>
+	<div class="box" id="box9">धो</div>
+	<div class="box" id="box10">धौ</div>
+	<div class="box" id="box11">धं</div>
+	<div class="box" id="box12">धः</div>
+	<!-- Add more combinations if needed -->
+
+
+	</div>
+
+	<div class="activity">
+		<div class="box" id="box1">न</div>
+		<div class="box" id="box2">ना</div>
+		<div class="box" id="box3">नि</div>
+		<div class="box" id="box4">नी</div>
+		<div class="box" id="box5">नु</div>
+		<div class="box" id="box6">नू</div>
+		<div class="box" id="box7">ने</div>
+		<div class="box" id="box8">नै</div>
+		<div class="box" id="box9">नो</div>
+		<div class="box" id="box10">नौ</div>
+		<div class="box" id="box11">नं</div>
+		<div class="box" id="box12">नः</div>
+		<!-- Add more combinations if needed -->
+
+
+	</div>
+
+
+
+
+	<script>
+		
+		var textContent = {
+			"box1": "ta त",
+"box2": "tā ता",
+"box3": "ti ति",
+"box4": "tī ती",
+"box5": "tu तु",
+"box6": "tū तू",
+"box7": "te ते",
+"box8": "tai तै",
+"box9": "to तो",
+"box10": "tau तौ",
+"box11": "taṅ तं",
+"box12": "taḥ तः",
+
+"box01": "tha थ",
+"box02": "thā था",
+"box03": "thi थि",
+"box04": "thī थी",
+"box05": "thu थु",
+"box06": "thū थू",
+"box07": "the थे",
+"box08": "thai थै",
+"box09": "tho थो",
+"box010": "thau थौ",
+"box011": "thaṅ थं",
+"box012": "thaḥ थः",
+
+"box001": "da द",
+"box002": "dā दा",
+"box003": "di दि",
+"box004": "dī दी",
+"box005": "du दु",
+"box006": "dū दू",
+"box007": "de दे",
+"box008": "dai दै",
+"box009": "do दो",
+"box0010": "dau दौ",
+"box0011": "daṅ दं",
+"box0012": "daḥ दः",
+
+"box0001": "dha ध",
+"box0002": "dhā धा",
+"box0003": "dhi धि",
+"box0004": "dhī धी",
+"box0005": "dhu धु",
+"box0006": "dhū धू",
+"box0007": "dhe धे",
+"box0008": "dhai धै",
+"box0009": "dho धो",
+"box00010": "dhau धौ",
+"box00011": "dhaṅ धं",
+"box00012": "dhaḥ धः",
+
+"box00001": "na न",
+"box00002": "nā ना",
+"box00003": "ni नि",
+"box00004": "nī नी",
+"box00005": "nu नु",
+"box00006": "nū नू",
+"box00007": "ne ने",
+"box00008": "nai नै",
+"box00009": "no नो",
+"box000010": "nau नौ",
+"box000011": "naṅ नं",
+"box000012": "naḥ नः"
+		}
+
+		var boxes = document.querySelectorAll(".box");
+		var selectedBox = null;
+		for (var i = 0; i < boxes.length; i++) {
+			boxes[i].addEventListener("click", function () {
+				if (selectedBox) {
+					selectedBox.classList.remove("selected");
+				}
+				selectedBox = this;
+				this.classList.add("selected");
+
+				// Get the ID of the selected box
+				var boxId = this.getAttribute("id");
+				// Get the corresponding audio file URL
+				var audioFile = audioFiles[boxId];
+				// Create a new Audio object and play the audio file
+				var audio = new Audio(audioFile);
+				audio.play();
+			});
+		}
+
+
+
+	</script>
+	<script src="/script/nepaliToEnglish.js"></script>
+
+</body>
+
+</html>

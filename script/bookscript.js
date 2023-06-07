@@ -15,9 +15,14 @@ function openContainer(evt, containerName) {
   
 
 
-
-  // JavaScript file
-
+//MathJax configuration for single dollar sign
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+  
+ 
 // Script 1: Polyfill
 var script1 = document.createElement('script');
 script1.src = 'https://polyfill.io/v3/polyfill.min.js?features=es6';
@@ -25,8 +30,13 @@ document.head.appendChild(script1);
 
 // Script 2: MathJax
 var script2 = document.createElement('script');
-script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML';
+script2.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
 document.head.appendChild(script2);
+
+
+
+/*
+
 
 // Script 3: MathJax Configuration
 var script3 = document.createElement('script');
@@ -44,6 +54,14 @@ script3.innerHTML = `
 `;
 document.head.appendChild(script3);
 MathJax.Hub.Queue(["Typeset", MathJax.Hub, "equation"]);
+
+// Script 4: MathJax
+var script4 = document.createElement('script');
+script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML';
+document.head.appendChild(script4);
+
+*/
+
 
 
 

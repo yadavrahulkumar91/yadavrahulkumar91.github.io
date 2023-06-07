@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Render Benzene with ChemDoodleWeb.js</title>
+  <script src="ChemDoodleWeb.js"></script>
+</head>
+<body>
+ <!-- <canvas id="benzeneCanvas" width="400" height="300"></canvas>  -->
+
+  <script>
+    // Get the canvas element
+    const canvas = document.getElementById('benzeneCanvas');
+
+    // Create a ChemDoodleWeb object
+    const chemDoodle = new ChemDoodle.Canvas('benzeneCanvas', 400, 300);
+
+    // Create the benzene molecule and add atoms/bonds
+    const benzene = new ChemDoodle.Molecule();
+    benzene.atoms = [
+      new ChemDoodle.Atom('C', 100, 150),
+      new ChemDoodle.Atom('C', 180, 120),
+      new ChemDoodle.Atom('C', 180, 180),
+      new ChemDoodle.Atom('C', 100, 210),
+      new ChemDoodle.Atom('C', 20, 180),
+      new ChemDoodle.Atom('C', 20, 120)
+    ];
+    benzene.bonds = [
+      new ChemDoodle.Bond(benzene.atoms[0], benzene.atoms[1], 1),
+      new ChemDoodle.Bond(benzene.atoms[1], benzene.atoms[2], 2),
+      new ChemDoodle.Bond(benzene.atoms[2], benzene.atoms[3], 1),
+      new ChemDoodle.Bond(benzene.atoms[3], benzene.atoms[4], 2),
+      new ChemDoodle.Bond(benzene.atoms[4], benzene.atoms[5], 1),
+      new ChemDoodle.Bond(benzene.atoms[5], benzene.atoms[0], 2)
+    ];
+
+    // Customize the display settings
+    const displayOptions = {
+      carbonTextVisible: true,
+      carbonTextColor: '#000000',
+      carbonTextSize: 18,
+      carbonTextOffset: 5
+    };
+
+    // Clear the canvas and render the benzene structure
+    chemDoodle.clear();
+    chemDoodle.loadMolecule(benzene, displayOptions);
+    chemDoodle.repaint();
+  </script>
+</body>
+</html>

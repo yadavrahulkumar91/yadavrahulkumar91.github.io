@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chemical Structure Example</title>
+</head>
+<body>
+  <div id="structure"></div>
+
+  <script type="text/javascript">
+      // CML code representing the chemical structure
+    var cmlCode = `<?xml version="1.0" encoding="UTF-8"?>
+    <chemml xmlns="http://www.xml-cml.org/schema">
+  <molecule>
+    <atomArray>
+      <atom id="a1" elementType="C">
+        <coords2D x2="1.0" y2="1.0"/>
+      </atom>
+      <atom id="a2" elementType="H">
+        <coords2D x2="2.0" y2="1.0"/>
+      </atom>
+    </atomArray>
+    <bondArray>
+      <bond atomRefs2="a1 a2" order="S"/>
+    </bondArray>
+  </molecule>
+  </chemml>`;
+
+    // Create a ChemDoodle sketcher and display the structure
+    var sketcher = new ChemDoodle.SketcherCanvas('structure', 200, 200);
+    sketcher.loadMolecule(cmlCode, 'cml');
+    sketcher.repaint();
+
+    // Optional: You can also add interactivity or additional functionality using the ChemDoodle library
+    </script>
+    <script src="/chemistry/chemdoodle/ChemDoodleWeb.js"></script>
+</body>
+</html>

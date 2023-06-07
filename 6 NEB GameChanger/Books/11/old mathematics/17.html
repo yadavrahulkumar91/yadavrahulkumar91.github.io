@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/style/bookstyle.css">
+    
+  </head>
+  <body>
+    
+    <header>
+      <h1></h1>
+      <p></p>
+    </header>
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div></center>
+        
+    <div id="home-container" class="container">    
+        <h2>1.</h2>
+        <p><strong>(i)</strong></p>
+        <p>Let \(y = 3x^2\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+        <p>Or, \(y + \Delta y = 3(x + \Delta x)^2\)</p>
+        <p>Or, \(\Delta y = 3(x + \Delta x)^2 - y\)</p>
+        <p>Or, \(\Delta y = 3(x + \Delta x)^2 - 3x^2\)</p>
+        <p>\(= 3\{(x + \Delta x)^2 - x^2\}\)</p>
+        <p>\(= 3\{x^2 + 2x\Delta x + (\Delta x)^2 - x^2\} = 3\{2x\Delta x + (\Delta x)^2\}\)</p>
+        <p>So, \(\frac{{dy}}{{dx}} = 3\Delta x(2x + \Delta x)\)</p>
+        <p>Or, \(\frac{{\Delta y}}{{\Delta x}} = 3\Delta x(2x + \Delta x)\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = 3(2x + \Delta x)\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\Delta x \to 0}} 3(2x + \Delta x)\)</p>
+        <p>Or, \(\frac{{dy}}{{dx}} = 3(2x + 0) = 6x\).</p>
+      
+        <p><strong>(ii)</strong></p>
+        <p>Let \(y = x^2 - 2\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+        <p>Or, \(y + \Delta y = (x + \Delta x)^2 - 2\)</p>
+        <p>Or, \(\Delta y = (x + \Delta x)^2 - y\)</p>
+        <p>\(= (x + \Delta x)^2 - 2 - (x^2 - 2)\)</p>
+        <p>\(= x^2 + 2x\Delta x + (\Delta x)^2 - 2 - x^2 + 2\)</p>
+        <p>\(\Delta y = \Delta x(2x + \Delta x)\)</p>
+        <p>Or, \(\frac{{\Delta y}}{{\Delta x}} = \frac{{\Delta x(2x + \Delta x)}}{{\Delta x}}\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = 2x + \Delta x\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\Delta x \to 0}} (2x + \Delta x)\)</p>
+        <p>Or, \(\frac{{dy}}{{dx}} = 2x + 0 = 2x\).</p>
+      
+        <p><strong>(iii)</strong></p>
+        <p>Let \(y = x^2 + 5x - 3\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+        <p>Or, \(y + \Delta y = (x + \Delta x)^2 + 5(x + \Delta x) - 3\)</p>
+        <p>Or, \(\Delta y = (x + \Delta x)^2 + 5(x + \Delta x) - 3 - y\)</p>
+        <p>\(= (x + \Delta x)^2 + 5(x + \Delta x) - 3 - (x^2 + 5x - 3)\)</p>
+        <p>\(= x^2 + 2x\Delta x + (\Delta x)^2 + 5x + 5\Delta x - 3 - x^2 - 5x + 3\)</p>
+        <p>\(= \Delta x(2x + \Delta x + 5)\)</p>
+        <p>Or, \(\frac{{\Delta y}}{{\Delta x}} = \frac{{\Delta x(2x + \Delta x + 5)}}{{\Delta x}}\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = 2x + \Delta x + 5\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\Delta x \to 0}} 3(2x + \Delta x + 5)\)</p>
+        <p>Or, \(\frac{{dy}}{{dx}} = 6x + 0 + 5 = 2x + 5\).</p>
+      
+        <p><strong>(iv)</strong></p>
+        <p>Let \(y = 3x^2 - 2x + 1\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+        <p>Or, \(y + \Delta y = 3(x + \Delta x)^2 - 2(x + \Delta x) + 1\)</p>
+        <p>Or, \(\Delta y = 3x^2 + 6x\Delta x + 3(\Delta x)^2 - 2x - 2\Delta x + 1 - (3x^2 - 2x + 1)\)</p>
+        <p>\(= 3x^2 + 6x\Delta x + 3(\Delta x)^2 - 2x - 2\Delta x + 1 - 3x^2 + 2x - 1\).</p>
+        <p>\(\Delta y = \Delta x(6x + 3\Delta x - 2)\)</p>
+        <p>Or, \(\frac{{\Delta y}}{{\Delta x}} = (6x + 3\Delta x - 2)\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\Delta x \to 0}} (6x + 3\Delta x + 2)\)</p>
+        <p>Or, \(\frac{{dy}}{{dx}} = 6x - 2\).</p>
+      
+        <p><strong>(v)</strong></p>
+        <p>Soln:</p>
+        <p>Let \(y = \frac{1}{x}\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+        <p>Or, \(y + \Delta y = \frac{1}{{x + \Delta x}}\)</p>
+        <p>Or, \(\Delta y = \frac{1}{{x + \Delta x}} - y\)</p>
+        <p>\(-y = \frac{1}{{x + \Delta x}} - \frac{1}{x}\)</p>
+        <p>\(-\frac{1}{x} = \frac{{x - x - \Delta x}}{{x(x + \Delta x)}}\)</p>
+        <p>\(-\frac{1}{x} = -\frac{{\Delta x}}{{x(x + \Delta x)}}\)</p>
+        <p>Or, \(\frac{{\Delta y}}{{\Delta x}} = -\frac{{\Delta x}}{{x(x + \Delta x)}}\)</p>
+        <p>\(\frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\Delta x \to 0}} -\frac{{x}}{{x(x + \Delta x)}}\)</p>
+        <p>Or, \(\frac{{dy}}{{dx}} = -\frac{{1}}{{x(x + 0)}} = -\frac{{1}}{{x^2}}\).</p>
+
+        
+Here is the converted text in HTML with MathJax format:
+
+<h4>(vi)</h4>
+<p>
+Let \( y = 32x^2 \).
+<br>
+Let \( \Delta x \) and \( \Delta y \) be the small increments in \( x \) and \( y \) respectively.
+<br>
+Or, \( y + \Delta y = 32(x+\Delta x)^2 \)
+<br>
+Or, \( \Delta y = 32(x+\Delta x)^2 - y = 32(x^2-(x+\Delta x)^2) = 32x^2-x^2-2x\Delta x-(\Delta x)^2 \)
+<br>
+\( = -32(\Delta x(2x+\Delta x))/(x^2(x+\Delta x)^2) \)
+<br>
+Or, \( \frac{\Delta y}{\Delta x} = -32\frac{(2x+\Delta x)x^2}{(x+\Delta x)^2} \)
+<br>
+\( \lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} -32\frac{(2x+\Delta x)x^2}{(x+\Delta x)^2} \)
+<br>
+Or, \( \frac{dy}{dx} = -3x^3 \).
+</p>
+<h4>(vii)</h4>
+<p>
+Let \( y = \frac{1}{x}-1 \).
+<br>
+Let \( \Delta x \) and \( \Delta y \) be the small increments in \( x \) and \( y \) respectively.
+<br>
+Or, \( y + \Delta y = \frac{1}{x+\Delta x}-1 \)
+<br>
+Or, \( \Delta y = \frac{1}{x+\Delta x}-1 - \left(\frac{1}{x}-1\right) = x^{-1} - (x+\Delta x)^{-1} \)
+<br>
+\( = -\Delta x(x+\Delta x)(x-1)^{-1} \)
+<br>
+\( \lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} -1(x+\Delta x-1)(x-1)^{-1} \)
+<br>
+Or, \( \frac{dy}{dx} = -1(x-1)^{-2} \).
+</p>
+<h4>(viii)</h4>
+<p>
+Let \( y = 15x^{-1} \).
+<br>
+Let \( \Delta x \) and \( \Delta y \) be the small increments in \( x \) and \( y \) respectively.
+<br>
+Or, \( y + \Delta y = 15-(x+\Delta x) \)
+<br>
+Or, \( \Delta y = 15-x-\Delta x - \left(15-x\right) = -\Delta x(x+\Delta x)(5-x)^{-1} \)
+<br>
+\( \frac{\Delta y}{\Delta x} = \frac{\Delta x}{\Delta x}(5-x-\Delta x)(5-x) = (5-x)^{-1} \)
+<br>
+\( \lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} (5-x-\Delta x)(5-x)^{-1} \)
+<br>
+Or, \( \frac{dy}{dx} = -(5-x)^{-2} \).
+</p>
+<h4>(ix)</h4>
+<p>
+Let \( y = 12x+3 \).
+<br>
+Let \( \Delta x \) and \( \Delta y \) be the small increments in \( x \) and \( y \) respectively.
+<br>
+Or, \( y + \Delta y = 12(x+\Delta x)+3 \)
+<br>
+Or, \( \Delta y = 12x+2\Delta x+3 - \left(12x+3\right) = 2x+3-2x-2\Delta x-3(2x+2\Delta x+3)(2x+3) \)
+<br>
+\( \frac{\Delta y}{\Delta x} = -2\Delta x(2x+2\Delta x+3)(2x+3) = -2(2x+2\Delta x+3)(2x+3) \)
+<br>
+\( \lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} -2(2x+2\Delta x+3)(2x+3) \)
+<br>
+Or, \( \frac{dy}{dx} = -2(2x+3)^2 \).
+</p>
+<h4>(x)</h4>
+<p>
+Let \( y = ax^{x+ba} = a+bx \).
+<br>
+Let \( \Delta x \) and \( \Delta y \) be the small increments in \( x \) and \( y \) respectively.
+<br>
+Or, \( y + \Delta y = a+b(x+\Delta x) \)
+<br>
+Or, \( \Delta y = a+bx+\Delta x - (a+bx) = b\left(\frac{1}{x+\Delta x}-\frac{1}{x}\right) = bx-x-\Delta x/x(x+\Delta x) = -b\Delta x/x(x+\Delta x) \)
+<br>
+\( \frac{\Delta y}{\Delta x} = -b\frac{\Delta x}{\Delta x} \cdot x(x+\Delta x) = -bx(x+\Delta x) \)
+<br>
+\( \lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} -bx(x+\Delta x) \)
+<br>
+Or, \( \frac{dy}{dx} = -bx^2 \).
+</p>
+
+<h2>(xi)</h2>
+  <p><strong>Soln:</strong></p>
+  <p>Let \(y = x^{1/2} = \sqrt{x}\).</p>
+  <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+  <p>Or, \(y + \Delta y = \sqrt{x + \Delta x}\)</p>
+  <p>Or, \(\Delta y = \sqrt{x + \Delta x} - \sqrt{x}\)</p>
+  <p>\(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \frac{\sqrt{x + \Delta x} - \sqrt{x}}{\Delta x}\)</p>
+  <p>= \(\lim_{{\Delta x \to 0}} \frac{x + \Delta x - x}{\Delta x(\sqrt{x + \Delta x} + \sqrt{x})}\)</p>
+  <p>= \(\lim_{{\Delta x \to 0}} \frac{\Delta x}{\Delta x(\sqrt{x + \Delta x} + \sqrt{x})}\)</p>
+  <p>= \(\lim_{{\Delta x \to 0}} \frac{1}{\sqrt{x + \Delta x} + \sqrt{x}}\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{1}{2\sqrt{x}} = \frac{1}{2x^{1/2}} = \frac{1}{2\sqrt{x}}\).</p>
+
+  <h2>(xii)</h2>
+  <p><strong>Soln:</strong></p>
+  <p>Let \(y = x + x^{1/2}\).</p>
+  <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+  <p>Or, \(y + \Delta y = x + \Delta x + \sqrt{x + \Delta x}\)</p>
+  <p>Or, \(\Delta y = x + \Delta x + \sqrt{x + \Delta x} - x - \sqrt{x}\)</p>
+  <p>= \(\Delta x + (\sqrt{x + \Delta x} - \sqrt{x})\)</p>
+  <p>= \(\Delta x + (\sqrt{x + \Delta x} - \sqrt{x}) \times \frac{x + \Delta x + \sqrt{x + \Delta x} + \sqrt{x}}{x + \Delta x + \sqrt{x + \Delta x} + \sqrt{x}}\)</p>
+  <p>= \(\Delta x + \frac{(x + \Delta x) - x}{x + \Delta x + \sqrt{x + \Delta x} + \sqrt{x}}\)</p>
+  <p>= \(\Delta x + \frac{\Delta x}{x + \Delta x + \sqrt{x + \Delta x} + \sqrt{x}}\)</p>
+  <p>\(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \frac{\Delta x}{x + \Delta x + \sqrt{x + \Delta x} + \sqrt{x}}\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{1}{1 + \frac{1}{2\sqrt{x}}} = \frac{1}{1 + \frac{1}{2x^{1/2}}}\).</p>
+
+  <h2>(xiii)</h2>
+  <p><strong>Soln:</strong></p>
+  <p>Let \(y = (1 + x)^{1/2} = \sqrt{1 + x}\).</p>
+  <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+  <p>Or, \(y + \Delta y = \sqrt{1 + x + \Delta x}\)</p>
+  <p>Or, \(\Delta y = \sqrt{1 + x + \Delta x} - \sqrt{1 + x}\)</p>
+  <p>= \((\sqrt{1 + x + \Delta x} - \sqrt{1 + x})(\sqrt{1 + x + \Delta x} + \sqrt{1 + x}) (\sqrt{1 + x + \Delta x} + \sqrt{1 + x})\)</p>
+  <p>= \((1 + x + \Delta x - 1 - x)(\sqrt{1 + x + \Delta x} + \sqrt{1 + x})\)</p>
+  <p>= \(\Delta x + (\frac{1}{\sqrt{1 + x + \Delta x}} + \frac{1}{\sqrt{1 + x}})\)</p>
+  <p>\(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \frac{1}{\sqrt{1 + x + \Delta x} + \sqrt{1 + x}}\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{1}{2\sqrt{1 + x}} = \frac{1}{2(1 + x)^{1/2}} = \frac{1}{2\sqrt{1 + x}}\).</p>
+
+  <h2>(xiv)</h2>
+  <p><strong>Soln:</strong></p>
+  <p>Let \(y = (2x + 3)^{1/2} = \sqrt{2x + 3}\).</p>
+  <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+  <p>Or, \(y + \Delta y = \sqrt{2(x + \Delta x) + 3}\)</p>
+  <p>Or, \(\Delta y = \sqrt{2(x + \Delta x) + 3} - \sqrt{2x + 3}\)</p>
+  <p>= \((\sqrt{2(x + \Delta x) + 3} - \sqrt{2x + 3})(\sqrt{2(x + \Delta x) + 3} + \sqrt{2x + 3}) (\sqrt{2(x + \Delta x) + 3} + \sqrt{2x + 3})\)</p>
+  <p>= \((2(x + \Delta x) + 3 - 2x - 3)(\sqrt{2(x + \Delta x) + 3} + \sqrt{2x + 3})\)</p>
+  <p>= \((2\Delta x)(\sqrt{2(x + \Delta x) + 3} + \sqrt{2x + 3})\)</p>
+  <p>\(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \frac{2\Delta x}{\sqrt{2(x + \Delta x) + 3} + \sqrt{2x + 3}}\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{2}{\sqrt{2x + 3}}\).</p>
+
+  <h2>(xv)</h2>
+  <p><strong>Soln:</strong></p>
+  <p>Let \(y = (1 + x^2)^{1/2} = \sqrt{1 + x^2}\).</p>
+  <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+  <p>Or, \(y + \Delta y = \sqrt{1 + (x + \Delta x)^2}\)</p>
+  <p>Or, \(\Delta y = \sqrt{1 + (x + \Delta x)^2} - \sqrt{1 + x^2}\)</p>
+  <p>= \((\sqrt{1 + (x + \Delta x)^2} - \sqrt{1 + x^2})(\sqrt{1 + (x + \Delta x)^2} + \sqrt{1 + x^2}) (\sqrt{1 + (x + \Delta x)^2} + \sqrt{1 + x^2})\)</p>
+  <p>= \((1 + (x + \Delta x)^2 - 1 - x^2)(\sqrt{1 + (x + \Delta x)^2} + \sqrt{1 + x^2})\)</p>
+  <p>= \((2x\Delta x + (\Delta x)^2)(\sqrt{1 + (x + \Delta x)^2} + \sqrt{1 + x^2})\)</p>
+  <p>\(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \frac{2x\Delta x + (\Delta x)^2}{\sqrt{1 + (x + \Delta x)^2} + \sqrt{1 + x^2}}\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{2x}{\sqrt{1 + x^2}} = \frac{x}{\sqrt{1 + x^2}}\).</p>
+
+
+  <h4>(xvi)</h4>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{{x^{1/2}}}\)</p>
+<p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+<p>Or, \(y + \Delta y = (x + \Delta x)^{-1/2}\)</p>
+<p>Or, \(\Delta y = (x + \Delta x)^{-1/2} - x^{-1/2}\)</p>
+<p>\(\frac{{\Delta y}}{{\Delta x}} = \frac{{(x+\Delta x)^{-1/2} - x^{-1/2}}}{{(x+\Delta x) - x}}\)</p>
+<p>Or, \(\frac{{dy}}{{dx}} = -\frac{1}{2}x^{-1/2-1}\) (lim \(\rightarrow a(x^n - a^n) = na^{n-1}\))</p>
+<p>So, \(\frac{{dy}}{{dx}} = -\frac{1}{2}x^{-3/2} = -\frac{1}{2}\frac{1}{x^{3/2}}\).</p>
+<h4>(xvii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{{(1-x)^{1/2}}}\)</p>
+<p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+<p>Or, \(y + \Delta y = (1 - (x + \Delta x))^{-1/2}\)</p>
+<p>Or, \(\Delta y = (1 - x - \Delta x)^{-1/2} - (1 - x)^{-1/2}\)</p>
+<p>\(\frac{{\Delta y}}{{\Delta x}} = \frac{{(1-x-\Delta x)^{-1/2} - (1-x)^{-1/2}}}{{\Delta x}}\)</p>
+<p>\(\Delta x \lim_{{\rightarrow 0}} \frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\rightarrow 0}} \frac{{(1-x-\Delta x)^{-1/2} - (1-x)^{-1/2}}}{{(1-x-\Delta x) - (1-x)}}\)</p>
+<p>\(= (1 - x - \Delta x) \lim_{{\rightarrow 0}} \frac{{(1 - x)}}{{(1 - x - \Delta x)^{-1/2} - (1 - x)^{-1/2}}} - (1 - x)^{-1/2}\)</p>
+<p>Or, \(\frac{{dy}}{{dx}} = -\frac{1}{2}(1-x)^{-1/2-1}(-1) = \frac{1}{2}(1 - x)^{-3/2}\).</p>
+<h4>(xviii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{{(3x+4)^{1/2}}}\)</p>
+<p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+<p>Or, \(y + \Delta y = (3(x + \Delta x) + 4)^{-1/2}\)</p>
+<p>Or, \(\Delta y = (3x + 3\Delta x + 4)^{-1/2} - (3x + 4)^{-1/2}\)</p>
+<p>\(\frac{{\Delta y}}{{\Delta x}} = \frac{{(3x+3\Delta x+4)^{-1/2} - (3x+4)^{-1/2}}}{{\Delta x}}\)</p>
+<p>\(\Delta x \lim_{{\rightarrow 0}} \frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\rightarrow 0}} \frac{{(3x+3\Delta x+4)^{-1/2} - (3x+4)^{-1/2}}}{{(3x+3\Delta x+4) - (3x+4)}}\)</p>
+<p>\(= (3x + 3\Delta x + 4) \lim_{{\rightarrow 0}} \frac{{(3x+4)}}{{(3x+3\Delta x+4)^{-1/2} - (3x+4)^{-1/2}}} - (3x+4)^{-1/2}\)</p>
+<p>Or, \(\frac{{dy}}{{dx}} = -\frac{1}{2}(3x + 4)^{-1/2-1}(3) = \frac{3}{2}(3x+4)^{-3/2}\).</p>
+<h4>(xix)</h4>
+<p>Soln:</p>
+<p>Let \(y = ax + b\sqrt{x}\)</p>
+<p>Let \(y = ax^{1/2} + bx^{-1/2}\)</p>
+<p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively.</p>
+<p>Or, \(y + \Delta y = a(x + \Delta x)^{1/2} + b(x + \Delta x)^{-1/2}\)</p>
+<p>Or, \(\Delta y = a(x + \Delta x)^{1/2} + b(x + \Delta x)^{-1/2} - ax^{1/2} - bx^{-1/2}\)</p>
+<p>\(\frac{{\Delta y}}{{\Delta x}} = a\frac{{(x+\Delta x)^{1/2} - x^{1/2}}}{{\Delta x}} + b\frac{{(x+\Delta x)^{-1/2} - x^{-1/2}}}{{\Delta x}}\)</p>
+<p>\(\Delta x \lim_{{\rightarrow 0}} \frac{{\Delta y}}{{\Delta x}} = \Delta x \lim_{{\rightarrow 0}} \left[a\frac{{(x+\Delta x)^{1/2} - x^{1/2}}}{{(x+\Delta x) - x}} + b\frac{{(x+\Delta x)^{-1/2} - x^{-1/2}}}{{(x+\Delta x) - x}}\right]\)</p>
+<p>\(= (x + \Delta x) \lim_{{\rightarrow 0}} \left[a\frac{{(x+\Delta x)^{1/2} - x^{1/2}}}{{(x+\Delta x) - x}} + b\frac{{(x+\Delta x)^{-1/2} - x^{-1/2}}}{{(x+\Delta x) - x}}\right]\)</p>
+<p>Or, \(\frac{{dy}}{{dx}} = a\frac{1}{2}x^{1/2-1} + b\frac{-1}{2}x^{-1/2-1}\)</p>
+<p>\(= \frac{a}{2}x^{-1/2} - \frac{b}{2}x^{-3/2} = \frac{a}{2\sqrt{x}} - \frac{b}{2x^{3/2}}\).</p>
+
+<h2>2.</h2>
+  <p><strong>(i)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = x^5\)</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^5) = 5x^4\).</p>
+
+  <p><strong>(ii)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = 5x^7\)</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(5x^7) = 5\frac{d}{dx}(x^7) = 5 \cdot 7x^{7-1} = 35x^6\).</p>
+
+  <p><strong>(iii)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = 3x^2 - 5x + 7\)</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(3x^2 - 5x + 7) = \frac{d}{dx}(3x^2) - \frac{d}{dx}(5x) + \frac{d}{dx}(7) = 3\frac{d}{dx}(x^2) - 5\frac{d}{dx}(x) + 0\).</p>
+  <p>= \(3 \cdot 2x^{2-1} - 5 \cdot 1 + 0 = 6x + 5\).</p>
+
+  <p><strong>(iv)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = 3x^3 + 2x - 12x^2 = 3x^3 + 2x - 12x^2\).</p>
+  <p>\(y = 32x + 1x - 12x^2\)</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(32x + 1x - 12x^2)\)</p>
+  <p>= \(3 \cdot 2x^{1+1} - 1 \cdot x^{-1-1} - 12 \cdot 2x^{-2-1}\)</p>
+  <p>= \(3 \cdot 2x^2 - x^{-2} - 12x^{-3}\)</p>
+  <p>= \(6x^2 - \frac{1}{x^2} - \frac{12}{x^3} = 3x^3 - 2x + 22x^3\)</p>
+
+  <p><strong>(v)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = 2x^{3/4} - 3x^{1/2} - 5x^{1/4}\).</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(2x^{3/4} - 3x^{1/2} - 5x^{1/4})\)</p>
+  <p>= \(2 \cdot \frac{3}{4}x^{3/4 - 1} - 3 \cdot \frac{1}{2}x^{1/2 - 1} - 5 \cdot \frac{1}{4}x^{1/4 - 1}\)</p>
+  <p>= \(2 \cdot \frac{3}{4}x^{-1/4} - 3 \cdot \frac{1}{2}x^{-1/2} - 5 \cdot \frac{1}{4}x^{-3/4}\)</p>
+  <p>= \(6x^{1/4} - 3x^{-1/2} - \frac{5}{4}x^{-3/4} = 6x^{1/4} - 6x^{1/4} - \frac{54}{x^{3/4}}\).</p>
+
+  <p><strong>(vi)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = 2x + 3x^{3/4} + x^{1/2} + x^{1/4} = 2x^{3/4} + 3x^{3/4} + x^{1/4} + x^{-1/4}\).</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(2x^{3/4} + 3x^{3/4} + x^{1/4} + x^{-1/4})\)</p>
+  <p>= \(2 \cdot \frac{3}{4}x^{3/4 - 1} + 3 \cdot \frac{3}{4}x^{3/4 - 1} + \frac{1}{4}x^{1/4 - 1} + \frac{1}{4}x^{-1/4 - 1}\)</p>
+  <p>= \(2 \cdot \frac{3}{4}x^{-1/4} + 3 \cdot \frac{3}{4}x^{-1/4} + \frac{1}{4}x^{-3/4} + \frac{-1}{4}x^{-5/4}\)</p>
+  <p>= \(\frac{3}{2}x^{-1/4} + \frac{9}{4}x^{-1/4} + \frac{1}{4}x^{-3/4} - \frac{1}{4}x^{-5/4} = \frac{3}{2}x^{1/4} + \frac{9}{4}x^{1/4} + \frac{1}{4}x^{3/4} - \frac{1}{4}x^{5/4}\).</p>
+
+  <p><strong>(vii)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = x^{3/4}(x^{2/3} + x^{1/3} + 1) = x^{17/12} + x^{13/12} + x^{3/4}\).</p>
+  <p>Differentiating both sides w.r.t. 'x'.</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^{17/12} + x^{13/12} + x^{3/4})\)</p>
+  <p>= \(\frac{17}{12}x^{17/12 - 1} + \frac{13}{12}x^{13/12 - 1} + \frac{3}{4}x^{3/4 - 1}\)</p>
+  <p>= \(\frac{17}{12}x^{5/12} + \frac{13}{12}x^{-11/12} + \frac{3}{4}x^{-1/4} = \frac{17}{12}x^{5/12} + \frac{13}{12}x^{-11/12} + \frac{3}{4}x^{-1/4}\).</p>
+
+  
+<h4>(viii)</h4>
+<p>Soln:</p>
+<p>Let \(y = (x^{1/2} + x^{-1/2})^2\)</p>
+<p>= \(x + 2x^{1/2}x^{-1/2} + x^{-1}\)</p>
+<p>= \(x + 2 + x^{-1}\)</p>
+<p>Differentiating both sides w.r.t. 'x'.</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} (x + 2 + x^{-1})\)</p>
+<p>= \(\frac{{d}}{{dx}} (x) + \frac{{dx}}{{dx}} (2) + \frac{{d}}{{dx}} (x^{-1}) = 1 + 0 + (-1)x^{-1-1} = 1 - \frac{{1}}{{x^2}}\)</p>
+<br>
+<h4>3.</h4>
+<p>(i)</p>
+<p>Soln:</p>
+<p>Let \(y = 3x^2(2x - 1)\)</p>
+<p>Differentiating both sides w.r.t. 'x',</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} \{3x^2(2x - 1)\}\)</p>
+<p>= \(3x^2 \frac{{d}}{{dx}} (2x - 1) + (2x - 1) \frac{{d}}{{dx}} (3x^2)\)</p>
+<p>= \(3x^2(2) + (2x - 1)(3 \cdot 2x) = 6x^2 + 12x^2 - 6x\)</p>
+<p>= \(18x^2 - 6x = 6x(3x - 1)\)</p>
+<br>
+<p>(ii)</p>
+<p>Soln:</p>
+<p>Let \(y = (2x^2 + 1)(3x^2 - 2)\)</p>
+<p>Differentiating both sides w.r.t. 'x',</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} \{(2x^2 + 1)(3x^2 - 2)\}\)</p>
+<p>= \((2x^2 + 1) \frac{{d}}{{dx}} (3x^2 - 2) + (3x^2 - 2) \frac{{d}}{{dx}} (2x^2 + 1)\)</p>
+<p>= \((2x^2 + 1)(3 \cdot 2x) + (3x^2 - 2)(2 \cdot 2x)\)</p>
+<p>= \(12x^3 + 6x + 12x^3 - 8x = 24x^3 - 2x = 2x(12x^2 - 1)\)</p>
+<br>
+<p>(iii)</p>
+<p>Soln:</p>
+<p>Let \(y = (3x^4 + 5)(4x^5 - 3)\)</p>
+<p>Differentiating both sides w.r.t. 'x',</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} \{(3x^4 + 5)(4x^5 - 3)\}\)</p>
+<p>= \((3x^4 + 5) \frac{{d}}{{dx}} (4x^5 - 3) + (4x^5 - 3) \frac{{d}}{{dx}} (3x^4 + 5)\)</p>
+<p>= \((3x^4 + 5)(4 \cdot 5x^4) + (4x^5 - 3)(3 \cdot 4x^3)\)</p>
+<p>= \(60x^9 + 100x^4 + 48x^8 - 36x^3 = 108x + 100x^4 - 35x^3 = 4x^3(27x^5 + 25x - 9)\)</p>
+<br>
+<p>(iv)</p>
+<p>Soln:</p>
+<p>Let \(y = (3x^2 + 5x - 1)(x^2 + 3)\)</p>
+<p>Differentiating both sides w.r.t. 'x',</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} \{(3x^2 + 5x - 1)( x^2 + 3)\}\)</p>
+<p>= \((3x^2 + 5x - 1) \frac{{d}}{{dx}} (x^2 + 3) + (x^2 + 3) \frac{{d}}{{dx}} (3x^2 + 5x - 1)\)</p>
+<p>= \((3x^2 + 5x - 1)(2x) + (x^2 + 3)(3 \cdot 2x + 5)\)</p>
+<p>= \(6x^3 + 10x^2 - 2x + 6x^3 + 18x + 5x^2 + 15\)</p>
+<p>= \(12x^3 + 15x^2 + 16x + 15\).</p>
+
+<h2>(v)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = (a + x\sqrt{})(a - x\sqrt{})\)</p>
+  <p>Differentiating both sides w.r.t. 'x',</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}[(a + x\sqrt{})(a - x\sqrt{})]\)</p>
+  <p>= \((a + x\sqrt{})\frac{d^2}{dx^2}(a - x\sqrt{}) + (a - x\sqrt{})\frac{d}{dx}(a + x\sqrt{})\)</p>
+  <p>= \((a + x\sqrt{})\left(-\frac{1}{2}\frac{1}{\sqrt{x}}\right) + (a - x\sqrt{})\left(\frac{1}{2}\frac{1}{\sqrt{x}}\right)\)</p>
+  <p>= \(-a^2x\sqrt{} - \frac{1}{2} + a^2x\sqrt{} - \frac{1}{2}\)</p>
+  <p>= -1</p>
+
+  <h2>(vi)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = (a + x^{3/4})(a - x^{1/4})\)</p>
+  <p>Differentiating both sides w.r.t. 'x',</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}[(a + x^{3/4})(a - x^{1/4})]\)</p>
+  <p>= \((a + x^{3/4})\left(-\frac{1}{4}x^{-3/4}\right) + (a - x^{1/4})\left(\frac{3}{4}x^{-1/4}\right)\)</p>
+  <p>= \(-\frac{1}{4}ax^{-3/4} - \frac{1}{4} + \frac{3}{4}ax^{-1/4} - \frac{3}{4}\)</p>
+  <p>= \(\frac{3a}{4x} - \frac{a}{4} - 1\)</p>
+
+  <h2>4.</h2>
+  <p><strong>(i)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = x^{1+x}\)</p>
+  <p>Differentiating both sides w.r.t. x,</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^{1+x})\)</p>
+  <p>= \((1+x)\frac{d}{dx}(x) - x\frac{d}{dx}(1+x)\frac{1}{(1+x)^2}\)</p>
+  <p>= \(\frac{1}{(1+x)^2}\)</p>
+
+  <p><strong>(ii)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = x^{2}-x^{2}\)</p>
+  <p>Differentiating both sides w.r.t. x,</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^{2}-x^{2})\)</p>
+  <p>= \((1-x^2)\frac{d}{dx}(x^2) - x^2\frac{d}{dx}(1-x^2)\frac{1}{(1-x^2)^2}\)</p>
+  <p>= \((1-x^2)2x - x^2(-2x)\frac{1}{(1-x^2)^2}\)</p>
+  <p>= \(2x(1-x^2)\)</p>
+
+  <p><strong>(iii)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = x^{2}-a^{2}x^{2}+a^{2}\)</p>
+  <p>Differentiating both sides w.r.t. x,</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^{2}-a^{2}x^{2}+a^{2})\)</p>
+  <p>= \((x^2+a^2)\frac{d}{dx}(x^2-a^2) - (x^2-a^2)\frac{d}{dx}(x^2+a^2)\frac{1}{(x^2+a^2)^2}\)</p>
+  <p>= \((x^2+a^2)2x - (x^2-a^2)2x\frac{1}{(x^2+a^2)^2}\)</p>
+  <p>= \(\frac{4a^2x}{(x^2+a^2)^2}\)</p>
+
+
+  
+<ol>
+    <li>
+    <h4>Soln:</h4>
+    <p>
+    Let \( y = 3x^2 \)
+    Differentiating both sides w.r.t. x,
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(3x^2)\)
+    <br>
+    = \(x^2 \cdot \frac{d}{dx}(3) - 3 \cdot \frac{d}{dx}(x^2)\)
+    <br>
+    = \(x^2 \cdot 0 - 3 \cdot 2x \cdot x^4\)
+    <br>
+    = \(-6x^3\)
+    </p>
+    </li>
+    <li>
+    <h4>Soln:</h4>
+    <p>
+    Let \( y = x^2 - 2x^2 + 1 \)
+    Differentiating both sides w.r.t. x,
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^2 - 2x^2 + 1)\)
+    <br>
+    = \((x+1) \cdot \frac{d}{dx}(x^2 - 2x) - (x^2 - 2x) \cdot \frac{d}{dx}(x+1) \cdot (x+1)^2\)
+    <br>
+    = \((x+1) \cdot (2x - 2) - (x^2 - 2x) \cdot 1 \cdot (x+1)^2\)
+    <br>
+    = \(2x^2 + 2x - 2x - 2 - x^2 + 2x(x+1)^2\)
+    <br>
+    = \(x^2 + 2x - 2(x+1)^2\)
+    </p>
+    </li>
+    <li>
+    <h4>Soln:</h4>
+    <p>
+    Let \( y = \frac{x^2 + 2x - 1}{x^2 - 2x + 1} \)
+    Differentiating both sides w.r.t. x,
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}\left(\frac{x^2 + 2x - 1}{x^2 - 2x + 1}\right)\)
+    <br>
+    = \((x^2 - 2x + 1) \cdot \frac{d}{dx}(x^2 + 2x - 1) - (x^2 + 2x - 1) \cdot \frac{d}{dx}(x^2 - 2x + 1) \cdot (x^2 - 2x + 1)^2\)
+    <br>
+    = \((x^2 - 2x + 1) \cdot (2x + 2) - (x^2 + 2x - 1) \cdot (2x - 2) \cdot (x^2 - 2x + 1)^2\)
+    <br>
+    = \((x - 1)^2 \cdot 2(x + 1) - (x^2 + 2x - 1) \cdot 2(x - 1)(x + 1)^2\)
+    <br>
+    = \(2(x - 1)(x - 1)(x + 1) - 2(x^2 + 2x - 1)(x - 1)(x + 1)^2\)
+    <br>
+    = \(-4x(x - 1)^3\)
+    <br>
+    = \(4x(1 - x)^3\)
+    </p>
+    </li>
+    <li>
+    <h4>Soln:</h4>
+    <p>
+    Let \( y = x\sqrt{x} + \sqrt{x} + 1 \)
+    Differentiating both sides w.r.t. x,
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(x\sqrt{x} + \sqrt{x} + 1)\)
+    <br>
+    = \((x\sqrt{x} + 1) \cdot \frac{d}{dx}(\sqrt{x}) - (\sqrt{x}) \cdot \frac{d}{dx}(x\sqrt{x} + 1) \cdot (\sqrt{x} + 1)^2\)
+    <br>
+    = \((x\sqrt{x} + 1) \cdot \frac{1}{2\sqrt{x}} - (\sqrt{x}) \cdot \frac{1}{2\sqrt{x}} \cdot (\sqrt{x} + 1)^2\)
+    <br>
+    = \(\frac{x\sqrt{x} + 1}{2\sqrt{x}} - \frac{\sqrt{x}(\sqrt{x} + 1)^2}{2\sqrt{x}}\)
+    <br>
+    = \(\frac{x\sqrt{x} + 1 - \sqrt{x}(\sqrt{x} + 1)^2}{2\sqrt{x}}\)
+    <br>
+    = \(\frac{x\sqrt{x} + 1 - \sqrt{x}(x + 2\sqrt{x} + 1)}{2\sqrt{x}}\)
+    <br>
+    = \(\frac{x\sqrt{x} + 1 - (x\sqrt{x} + 2x + \sqrt{x})}{2\sqrt{x}}\)
+    <br>
+    = \(\frac{-x\sqrt{x} - 2x}{2\sqrt{x}}\)
+    <br>
+    = \(\frac{-x - 2}{2\sqrt{x}}\)
+    </p>
+    </li>
+    <li>
+    <ol>
+    <li>
+    <h4>Soln:</h4>
+    <p>
+    Let \( y = (2x + 3)^2 \)
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(2x + 3)^2\)
+    <br>
+    = \(\frac{d}{dx}(2x + 3) \cdot \frac{d}{dx}(2x + 3)\)
+    <br>
+    = \(2 \cdot (2x + 3) \cdot 2 \cdot 1\)
+    <br>
+    = \(4(2x + 3)\)
+    </p>
+    </li>
+    <li>
+    <h4>Soln:</h4>
+    <p>
+    Let \( y = (3 - 2x)^2 \)
+    <br>
+    Differentiating both sides w.r.t. 'x'.
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(3 - 2x)^2\)
+    <br>
+    = \(\frac{d}{dx}(3 - 2x) \cdot \frac{d}{dx}(3 - 2x)\)
+    <br>
+    = \(-2 \cdot (3 - 2x) \cdot 2\)
+    <br>
+    = \(-6(3 - 2x)^2\)
+    </p>
+    </li>
+    </ol>
+    </li>
+    </ol>
+
+
+    <h2>(iii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = (3x^2 + 2x – 1)^4\)</p>
+  <p>Differentiating both sides w.r.t. to \(x\)</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = \frac{{d(3x^2 + 2x – 1)^4}}{{d(3x^2 + 2x – 1)}} \cdot \frac{{d(3x^2 + 2x – 1)}}{{dx}}\)</p>
+  <p>\(= 4(3x^2 + 2x – 1)^3 \cdot (6x + 2) = 4(3x^2 + 2x – 1)^3 \cdot 2(3x + 1)\)</p>
+  <p>\(= 8(3x + 1)(3x^2 + 2x – 1)^3\).</p>
+
+  <h2>(iv)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = (2x^2 + 3x – 3)^{-6}\).</p>
+  <p>Differentiating both sides w.r.t. to \(x\).</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = \frac{{d(2x^2 + 3x – 3)^{-6}}}{{d(2x^2 + 3x – 3)}} \cdot \frac{{d(2x^2 + 3x – 3)}}{{dx}}\)</p>
+  <p>\(= -6(2x^2 + 3x – 3)^{-7}(4x + 3) = -6(4x + 3)(2x^2 + 3x – 3)^{-7}\).</p>
+
+  <h2>(v)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \sqrt[8 - 5x]{8}\).</p>
+  <p>Differentiating both sides w.r.t. \(x\).</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = \frac{{d(8 - 5x)^{1/2}}}{{d(8 - 5x)}} \cdot \frac{{d(8 - 5x)}}{{dx}}\)</p>
+  <p>\(= \frac{{1}}{{2}}(8 - 5x)^{-1/2}(-5) = -\frac{{5}}{{2}}\sqrt[8 - 5x]{8}\).</p>
+
+  <h2>(vi)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = (2x^2 – 3x + 1)^{3/4}\).</p>
+  <p>Differentiating both sides w.r.t. to \(x\).</p>
+  <p>\(\frac{{dy}}{{dx}} = \frac{{d(2x^2 – 3x + 1)^{3/4}}}{{d(2x^2 – 3x + 1)}} \cdot \frac{{d(2x^2 – 3x + 1)}}{{dx}}\)</p>
+  <p>\(= \frac{{3}}{{4}}(2x^2 – 3x + 1)^{-1/4}(4x – 3) = \frac{{3}}{{4}}(4x – 3)(2x^2 – 3x + 1)^{-1/4}\).</p>
+
+  <h2>(vii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \sqrt{(ax^2 + bx + c)}\).</p>
+  <p>Differentiating both sides w.r.t. to \(x\).</p>
+  <p>\(\frac{{dy}}{{dx}} = \frac{{d(ax^2 + bx + c)^{-1/2}}}{{d(ax^2 + bx + c)}} \cdot \frac{{d(ax^2 + bx + c)}}{{dx}}\)</p>
+  <p>\(= -\frac{{1}}{{2}}(ax^2 + bx + c)^{-3/2}(2ax + b) = -\frac{{1}}{{2}}(2ax + b)(ax^2 + bx + c)^{-3/2}\).</p>
+
+  <h2>(viii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = (3x^2 – 4x – 1)^{-1/3}\).</p>
+  <p>Differentiating both sides w.r.t. to \(x\).</p>
+  <p>\(\frac{{dy}}{{dx}} = \frac{{d(3x^2 – 4x – 1)^{-1/3}}}{{d(3x^2 – 4x – 1)}} \cdot \frac{{d(3x^2 – 4x – 1)}}{{dx}}\)</p>
+  <p>\(= -\frac{{1}}{{3}}(3x^2 – 4x – 1)^{-4/3}(6x – 4) = -\frac{{2}}{{3}}(3x – 2)(3x^2 – 4x – 1)^{-4/3}\).</p>
+
+
+  
+<p>(ix)</p>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{\sqrt{a^n - x^n}}\)</p>
+<p>= \(\left(a^n - x^n\right)^{-1/2}\)</p>
+<p>Differentiating both sides with respect to \(x\).</p>
+<p>\(\frac{dy}{dx} = \frac{d}{dx} \left(a^n - x^n\right)^{-1/2}\)</p>
+<p>= \(-\frac{1}{2}\left(a^n - x^n\right)^{-3/2} \cdot \frac{d}{dx}\left(a^n - x^n\right) \cdot \frac{d}{dx}\left(a^n - x^n\right)\)</p>
+<p>= \(-\frac{1}{2}\left(a^n - x^n\right)^{-3/2} \cdot (-nx^{n-1})\)</p>
+<p>= \(\frac{1}{2}nx^{n-1}\left(a^n - x^n\right)^{-3/2}\)</p>
+<p>(x)</p>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{\sqrt{x+a}-\sqrt{x}}\)</p>
+<p>= \(\frac{1}{\sqrt{x+a}} \cdot \frac{\sqrt{x+a}+\sqrt{x}}{\sqrt{x+a}+\sqrt{x}}\)</p>
+<p>= \(\frac{\sqrt{x}+\sqrt{x+a}}{x+a}\)</p>
+<p>Differentiating both sides with respect to \(x\).</p>
+<p>\(\frac{dy}{dx} = \frac{1}{a} \cdot \frac{d}{dx} \left(\sqrt{x+a}+\sqrt{x}\right)\)</p>
+<p>= \(\frac{1}{a} \left(\frac{1}{2\sqrt{x+a}}+\frac{1}{2\sqrt{x}}\right)\)</p>
+<p>= \(\frac{1}{a}\left(\frac{1}{2\sqrt{x+a}}+\frac{1}{2\sqrt{x}}\right)\)</p>
+<p>(xi)</p>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{\sqrt{x^2-a^2}}\)</p>
+<p>= \(\frac{1}{\sqrt{x^2-a^2}} \cdot \frac{x+a}{x+a}\)</p>
+<p>= \(\frac{x+a}{\sqrt{x^2-a^2}}\)</p>
+<p>Differentiating both sides with respect to \(x\).</p>
+<p>\(\frac{dy}{dx} = -\frac{1}{a^2} \cdot \frac{d}{dx}\left(x+\sqrt{x^2-a^2}\right)\)</p>
+<p>= \(-\frac{1}{a^2}\left(1+\frac{x}{\sqrt{x^2-a^2}}\right)\)</p>
+<p>(xii)</p>
+<p>Soln:</p>
+<p>Let \(y = \frac{1}{\sqrt{x+a}+\sqrt{x-a}}\)</p>
+<p>= \(\frac{1}{\sqrt{x+a}+\sqrt{x-a}} \cdot \frac{\sqrt{x+a}-\sqrt{x-a}}{\sqrt{x+a}-\sqrt{x-a}}\)</p>
+<p>= \(\frac{\sqrt{x+a}-\sqrt{x-a}}{2a}\)</p>
+<p>Differentiating both sides with respect to \(x\).</p>
+<p>\(\frac{dy}{dx} = \frac{1}{2a} \cdot \frac{d}{dx}\left(\sqrt{x+a}-\sqrt{x-a}\right)\)</p>
+<p>= \(\frac{1}{2a}\left(\frac{1}{2\sqrt{x+a}}-\frac{1}{2\sqrt{x-a}}\right)\)</p>
+<p>= \(\frac{1}{4a}\left(\frac{1}{\sqrt{x+a}}-\frac{1}{\sqrt{x-a}}\right)\)</p>
+
+
+<h2>(xiii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \frac{1x^2+a^2}{\sqrt{-x^2-a^2}}\)</p>
+  <p>\(= \frac{1x^2+a^2}{\sqrt{-x^2-a^2}} \cdot \frac{x^2+a^2+x^2-a^2}{x^2+a^2+x^2-a^2}\)</p>
+  <p>\(= \frac{x^2+a^2+x^2-a^2}{x^2+a^2-x^2+a^2}\)</p>
+  <p>\(= \frac{1}{2a^2}\left\{(x^2+a^2)^{\frac{1}{2}}+(x^2-a^2)^{\frac{1}{2}}\right\}\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{1}{2a}\frac{d}{dx}\left\{(x^2+a^2)^{\frac{1}{2}}-(x^2-a^2)^{\frac{1}{2}}\right\}\)</p>
+  <p>\(= \frac{1}{2a^2}\left\{\frac{1}{2}(x^2+a^2)^{-\frac{1}{2}}\frac{d}{dx}(x^2+a^2)-\frac{1}{2}(x^2-a^2)^{-\frac{1}{2}}\frac{d}{dx}(x^2-a^2)\right\}\)</p>
+  <p>\(= \frac{1}{2a^2}\left\{\frac{1}{2}(x^2+a^2)^{-\frac{1}{2}}(2x)+\frac{1}{2}(x^2-a^2)^{-\frac{1}{2}}(2x)\right\}\)</p>
+  <p>\(= \frac{x^2}{a^2}\left(\frac{1}{x^2+a^2}+\frac{1}{x^2-a^2}\right)\).</p>
+
+  <h2>(xiv)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \frac{x^2+a^2}{x^2-a^2}^{\frac{1}{2}}\).</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{x^2-a^2}{\sqrt{x^2+a^2}}\frac{d}{dx}\left(\frac{x^2+a^2}{\sqrt{x^2-a^2}}\right)-\frac{x^2+a^2}{\sqrt{x^2-a^2}}\frac{d}{dx}\left(\frac{x^2-a^2}{\sqrt{x^2-a^2}}\right)^2\).</p>
+  <p>\(= \frac{x^2-a^2}{\sqrt{x^2+a^2}}\frac{1}{2}\frac{d}{dx}(x^2+a^2)^{\frac{1}{2}}-\frac{x^2+a^2}{\sqrt{x^2-a^2}}\frac{d}{dx}(x^2-a^2)\).</p>
+  <p>\(= \frac{x^2-a^2}{\sqrt{x^2+a^2}}\frac{1}{2}(x^2+a^2)^{-\frac{1}{2}}(2x)-\frac{x^2+a^2}{\sqrt{x^2-a^2}}\frac{1}{2}(x^2-a^2)^{-\frac{1}{2}}(2x)\).</p>
+  <p>\(= \frac{x^2-a^2}{\sqrt{x^2+a^2}}\frac{1}{\sqrt{x^2-a^2}}-\frac{x^2+a^2}{\sqrt{x^2-a^2}}\frac{1}{\sqrt{x^2+a^2}}\).</p>
+  <p>\(= \frac{1}{x^2-a^2}\left(x\sqrt{x^2-a^2}-x\sqrt{x^2+a^2}\right)\).</p>
+  <p>\(= \frac{1}{x^2-a^2}\left(x(x^2-a^2)-x(x^2+a^2)\right)\).</p>
+  <p>\(= \frac{1}{x^2-a^2}(-2a^2x)\).</p>
+
+  <h2>6.</h2>
+  <p><strong>(i)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Or, \(y = 2u^2 - 3u + 1\)</p>
+  <p>Differentiating both sides with respect to \(u\).</p>
+  <p>\(\frac{dy}{du} = \frac{d}{du}(2u^2 - 3u + 1)\)</p>
+  <p>\(= 2 \cdot 2u - 3 \cdot 1 + 0 = 4u - 3\).</p>
+  <p>Again, \(u = 2x^2\).</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>\(\frac{du}{dx} = \frac{d}{dx}(2x^2) = 2 \cdot 2x = 4x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} = (4u - 3) \cdot 4x = 4x(4 \cdot 2x^2 - 1) = 4x(8x^2 - 1)\).</p>
+
+
+
+  
+<h4>(ii)</h4>
+<p>
+Soln:
+<br>
+Or, \(y = 2u^2 + 3\)
+<br>
+Differentiating both sides w.r.t. 'u'.
+<br>
+Or, \(\frac{{dy}}{{du}} = \frac{{d}}{{du}} (2u^2 + 3) = 2 \cdot 2u + 0 = 4u\).
+<br>
+Again, \(u = 3x^2 - 1\).
+<br>
+Differentiating both sides w.r.t. 'x'.
+<br>
+Or, \(\frac{{du}}{{dx}} = \frac{{d}}{{dx}} (3x^2 - 1) = 3 \cdot 2x - 0 = 6x\).
+<br>
+Or, \(\frac{{dy}}{{dx}} = \frac{{dy}}{{du}} \cdot \frac{{du}}{{dx}} = 4u \cdot 6x = 24x(3x^2 - 1)\).
+</p>
+<h4>(iii)</h4>
+<p>
+Soln:
+<br>
+Or, \(y = 5t^2 + 6t - 7\).
+<br>
+Differentiating both sides w.r.t. 't'.
+<br>
+Or, \(\frac{{dy}}{{dt}} = \frac{{d}}{{dt}} (5t^2 + 6t - 7) = 10t + 6\).
+<br>
+Again, \(t = x^3 - 2\).
+<br>
+Differentiating both sides w.r.t. 'x'.
+<br>
+Or, \(\frac{{dt}}{{dx}} = \frac{{d}}{{dx}} (x^2 - 2) = 3x^2\).
+<br>
+Or, \(\frac{{dy}}{{dx}} = \frac{{dy}}{{dt}} \cdot \frac{{dt}}{{dx}} = (10t + 6) \cdot 3x^2 = \{10(x^3 - 2) + 6\}3x^2\).
+<br>
+= \(3x^2(10x^3 - 14) = 6x^2(5x^3 - 7)\).
+</p>
+<h4>(iv)</h4>
+<p>
+Soln:
+<br>
+Or, \(y = t^{-1/2}t = t^2t^{-1/2} = 12 - \frac{12}{t}\).
+<br>
+Differentiating both sides w.r.t. 't'.
+<br>
+Or, \(\frac{{dy}}{{dt}} = \frac{{d}}{{dt}} \left(12 - \frac{12}{t}\right) = -12(-1)t^{-2} = 12t^2\).
+<br>
+Again, \(t = \sqrt{x + 1} = (x + 1)^{1/2}\).
+<br>
+Differentiating both sides w.r.t. 'x'.
+<br>
+Or, \(\frac{{dt}}{{dx}} = \frac{{d}}{{dx}} \left((x + 1)^{1/2}\right) = \frac{1}{2}(x + 1)^{-1/2} \cdot 1 = \frac{1}{2\sqrt{x + 1}}\).
+<br>
+Or, \(\frac{{dy}}{{dx}} = \frac{{dy}}{{dt}} \cdot \frac{{dt}}{{dx}} = 12t^2 \cdot \frac{1}{2\sqrt{x + 1}} = 14\sqrt{x + 1}^2 = \frac{14}{x + 1}\).
+</p>
+<h4>(v)</h4>
+<p>
+Soln:
+<br>
+Or, \(y = (2u^2 + 3)^{1/3}\)
+<br>
+Differentiating both sides w.r.t. 'u'.
+<br>
+Or, \(\frac{{dy}}{{du}} = \frac{{d}}{{du}} (2u^2 + 3)^{1/3} = \frac{{d}}{{du}} (2u^2 + 3)^{1/3} \cdot \frac{{d}}{{du}} (2u^2 + 3) = \frac{1}{3}(2u^2 + 3)^{-2/3} \cdot 2 \cdot 2u = \frac{4u}{(2u^2 + 3)^{2/3}}\).
+<br>
+Again, \(u = (2x + 1)^{-1/2} = (2x + 1)^{1/2}\)
+<br>
+Differentiating both sides w.r.t. 'x'.
+<br>
+Or, \(\frac{{du}}{{dx}} = \frac{{d}}{{dx}} (2x + 1)^{1/2} = \frac{1}{2}(2x + 1)^{-1/2} \cdot 2 = \frac{1}{\sqrt{2x + 1}}\).
+<br>
+Or, \(\frac{{dy}}{{dx}} = \frac{{dy}}{{du}} \cdot \frac{{du}}{{dx}} = \frac{4u}{(2u^2 + 3)^{2/3}} \cdot \frac{1}{\sqrt{2x + 1}} = \frac{4}{\sqrt{2x + 1}} \cdot \frac{u}{(2u^2 + 3)^{2/3}} = \frac{4}{\sqrt{2x + 1}} \cdot \frac{(2x + 1)^{1/2}}{(2(2x + 1)^2 + 3)^{2/3}} = \frac{4}{\sqrt{2x + 1}} \cdot \frac{3(2x + 1)^{1/2}}{(4x + 5)^{2/3}} = \frac{12}{(4x + 5)^{2/3}}\sqrt{2x + 1}\).
+</p>
+
+
+
+<h2>(vi)</h2>
+<p><strong>Solution:</strong></p>
+<p>Or, \(y = \frac{1}{t^2} - 1\).</p>
+<p>Differentiating both sides with respect to \(t\).</p>
+<p>Or, \(\frac{dy}{dt} = \frac{d}{dt}\left(\frac{1}{t^2} - 1\right) = (t^2 - 1)\frac{d}{dt}\left(\frac{1}{t^2} - 1\right) = (t^2 - 1)\left(\frac{1}{t}\right) - t\frac{d}{dt}\left(\frac{1}{t^2} - 1\right)\left(\frac{t^2 - 1}{2}\right) = (t^2 - 1) - 2t^2\left(\frac{t^2 - 1}{2}\right) = -t^2 - 1\left(\frac{t^2 - 1}{2}\right)^2\).</p>
+<p>Again, \(t = 3x^2 + 1\).</p>
+<p>Differentiating both sides with respect to \(x\).</p>
+<p>Or, \(\frac{dt}{dx} = \frac{d}{dx}(3x^2 + 1) = 3 \cdot 2x = 6x\).</p>
+<p>Or, \(\frac{dy}{dx} = \frac{dy}{dt} \cdot \frac{dt}{dx} = -t^2 - 1\left(\frac{t^2 - 1}{2}\right)^2 \cdot 6x = -\left(t^2 + 1\right)\left(\frac{t^2 - 1}{2}\right)^2 \cdot 6x = \left(3x^2 + 1\right)^2 + 1\right)\left(\frac{3x^2 + 1}{2}\right)^2 \cdot 6x = -2\left(9x^4 + 6x^2 + 2\right)\left(3x^2 + 1\right)^2\left(9x^4 + 6x^2\right)^2\).</p>
+
+<h2>7.</h2>
+
+<p><strong>(i)</strong></p>
+<p><strong>Solution:</strong></p>
+<p>\(y = 7x^2 + 6x - 5\)</p>
+<p>Differentiating both sides with respect to \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(7x^2 + 6x - 5) = 14x + 6\).</p>
+<p>Again, differentiating both sides with respect to \(x\).</p>
+<p>Or, \(\frac{d^2y}{dx^2} = \frac{d}{dx}(14x + 6) = 14 \cdot 1 = 14\).</p>
+
+<p><strong>(ii)</strong></p>
+<p><strong>Solution:</strong></p>
+<p>\(y = 3x^4 - x^2 + 1\)</p>
+<p>Differentiating both sides with respect to \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(3x^4 - x^2 + 1) = 3 \cdot 4x^3 - 2x = 12x^3 - 2x\).</p>
+<p>Or, \(\frac{d^2y}{dx^2} = \frac{d}{dx}(12x^3 - 2x) = 36x^2 - 2\).</p>
+
+<p><strong>(iii)</strong></p>
+<p><strong>Solution:</strong></p>
+<p>\(y = 3x^2\)</p>
+<p>Differentiating both sides with respect to \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(3x^{-2}) = 3 \cdot (-2) \cdot x^{-3}\).</p>
+<p>Or, \(\frac{d^2y}{dx^2} = \frac{d}{dx}(-6x^{-3}) = -6 \cdot (-3) \cdot x^{-4} = 18x^4\).</p>
+
+
+
+
+
+<ol>
+    <li>
+    <h4>(iv)</h4>
+    <p>
+    Soln:
+    <br>
+    \(y = 12x+1\)
+    <br>
+    Differentiating both sides w.r.t. 'x'
+    <br>
+    or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(2x + 1)^{-1} = \frac{{d(2x+1)^{-1}}}{{d(2x+1)}} \cdot \frac{{d(2x+1)}}{{dx} } = -1 \cdot (2x + 1)^{-2} \cdot 2 = -2(2x + 1)^{-2}\)
+    <br>
+    Or, \(\frac{{d^2y}}{{dx^2}} = -2\frac{{d}}{{dx}}(2x + 1)^{-2} = -2\frac{{d(2x+1)^{-2}}}{{d(2x+1)}} \cdot \frac{{d(2x+1)}}{{dx}} = -2 \cdot (-2) \cdot (2x + 1)^{-3} \cdot 2 = 8(2x+1)^3\).
+    </p>
+    </li>
+    <li>
+    <h4>8. (i)</h4>
+    <p>
+    Soln:
+    <br>
+    \(x^2 + y^2 = 16\)
+    <br>
+    Differentiating both sides w.r.t. 'x'.
+    <br>
+    Or, \(\frac{{d}}{{dx}}(x^2+y^2) = \frac{{d}}{{dx}}(16)\)
+    <br>
+    Or, \(\frac{{d}}{{dx}}(x^2) + \frac{{dy^2}}{{dy}} \cdot \frac{{dy}}{{dx}} = 0\)
+    <br>
+    Or, \(2x + 2y \frac{{dy}}{{dx}} = 0\)
+    <br>
+    Or, \(2y \frac{{dy}}{{dx}} = -2x\)
+    <br>
+    So, \(\frac{{dy}}{{dx}} = -\frac{{2x}}{{2y}} = -\frac{{x}}{{y}}\).
+    </p>
+    </li>
+    <li>
+    <h4>(ii)</h4>
+    <p>
+    Soln:
+    <br>
+    Or, \(x^{2a} - y^{2b} = 1\).
+    <br>
+    Differentiating both sides w.r.t. 'x'.
+    <br>
+    Or, \(\frac{{d}}{{dx}}(x^{2a} - y^{2b}) = \frac{{d}}{{dx}}(1)\)
+    <br>
+    Or, \(2a\frac{{d}}{{dx}}(x^2) - 2b\frac{{dy^2}}{{dy}} \cdot \frac{{dy}}{{dx}} = 0\)
+    <br>
+    Or, \(2a \cdot 2x^{2a-1} - 2b \cdot \frac{{dy}}{{dx}} \cdot 2y^{2b-1} = 0\)
+    <br>
+    So, \(\frac{{dy}}{{dx}} = \frac{{2xb^{2-1}}}{{2ay^{2a-1}}} = \frac{{b^2x}}{{a^2y}}\).
+    </p>
+    </li>
+    <li>
+    <h4>(iii)</h4>
+    <p>
+    Soln:
+    <br>
+    Or, \(y^2 = 4ax\)
+    <br>
+    Differentiating both sides w.r.t. 'x'.
+    <br>
+    Or, \(\frac{{d}}{{dx}}(y^2) = \frac{{d}}{{dx}}(4ax)\)
+    <br>
+    Or, \(\frac{{dy^2}}{{dy}} \cdot \frac{{dy}}{{dx}} = 4a \cdot \frac{{d}}{{dx}}(x)\)
+    <br>
+    Or, \(2y \cdot \frac{{dy}}{{dx}} = 4a \cdot 1\)
+    <br>
+    So, \(\frac{{dy}}{{dx}} = \frac{{4a}}{{2y}} = \frac{{2a}}{{y}}\).
+    </p>
+    </li>
+    <li>
+    <h4>(iv)</h4>
+    <p>
+    Soln:
+    <br>
+    Or, \(2x^2 + 3xy + 2y^2 = 0\)
+    <br>
+    Differentiating both sides w.r.t. 'x'.
+    <br>
+    Or, \(\frac{{d}}{{dx}}(2x^2+3xy+2y^2) = \frac{{d}}{{dx}}(0)\)
+    <br>
+    Or, \(2 \cdot \frac{{d}}{{dx}}(x^2) + 3 \cdot \frac{{d}}{{dx}}(xy) + 2 \cdot \frac{{dy^2}}{{dy}} \cdot \frac{{dy}}{{dx}} = 0\)
+    <br>
+    Or, \(2 \cdot 2x + 3 \cdot (x \frac{{dy}}{{dx}} + y) + 2 \cdot 2y \frac{{dy}}{{dx}} = 0\)
+    <br>
+    Or, \((3x + 4y) \frac{{dy}}{{dx}} = -4x - 3y\)
+    <br>
+    So, \(\frac{{dy}}{{dx}} = \frac{{-4x+3y}}{{3x+4y}}\).
+    </p>
+    </li>
+    <li>
+    <h4>(v)</h4>
+    <p>
+    Soln:
+    <br>
+    Or, \(x^2 + 2x^2y = y^3\)
+    <br>
+    Differentiating both sides w.r.t. 'x'.
+    <br>
+    Or, \(\frac{{d}}{{dx}}(x^2 + 2x^2y) = \frac{{d}}{{dx}}(y^3)\)
+    <br>
+    Or, \(2x + 2 \cdot \frac{{d}}{{dx}}(x^2y) = \frac{{d}}{{dx}}(y^3)\)
+    <br>
+    Or, \(2x + 2x^2 \cdot \frac{{dy}}{{dx}} + 4xy = 3y^2 \cdot \frac{{dy}}{{dx}}\)
+    <br>
+    Or, \(2x + 4xy = (3y^2 - 2x^2) \cdot \frac{{dy}}{{dx}}\)
+    <br>
+    So, \(\frac{{dy}}{{dx}} = \frac{{2x(1+2y)}}{{3y^2 - 2x^2}}\).
+    </p>
+    </li>
+    </ol>
+
+
+    <h2>(vi)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(x^3y^6 = (x + y)^9\)</p>
+    <p>Differentiating both sides w.r.t. 'x'.</p>
+    <p>Or, \(\frac{{d}}{{dx}}(x^3y^6)=\frac{{d}}{{dx}}(x+y)^9\)</p>
+    <p>Or, \(x^3\frac{{dy}}{{dx}}6y^5\frac{{dy}}{{dx}}+y^6\frac{{d}}{{dx}}(3x^2)=\frac{{d}}{{dx}}(x+y)\frac{{d}}{{dx}}(x+y)^8\frac{{d}}{{dx}}(x+y)\frac{{d}}{{dx}}x\)</p>
+    <p>Or, \(x^3\cdot6y^5\frac{{dy}}{{dx}}+y^6\cdot3x^2 = 9(x + y)^8(1+\frac{{dy}}{{dx}})\)</p>
+    <p>Or, \(6x^3y^5\frac{{dy}}{{dx}}+3x^2y^6 = 9(x + y)^8 + 9(x + y)^8\frac{{dy}}{{dx}}\)</p>
+    <p>Or, \(\{6x^3y^5\frac{{dy}}{{dx}}+3x^2y^6 = 9(x + y)^8 + 9(x + y)^8\frac{{dy}}{{dx}}\}\)</p>
+    <p>Or, \(\frac{{dy}}{{dx}} = \frac{{9(x+y)^8-3x^2y^6}}{{6x^3y^5-9(x+y)^8}}\)</p>
+    <p>= \(\frac{{9(x+y)^9}}{{x+y}-3x^2y^6}\)</p>
+    <p>= \(\frac{{9x^3y^6}}{{x+y}-3x^2y^6}\) \([x^3y^6=(x+y)^9]\)</p>
+    <p>= \(\frac{{9x^3y^6-3x^3y^6-3x^2y^7}}{{6x^4y^5-3x^3y^6}}\)</p>
+    <p>= \(\frac{{6x^3y^6-3x^3y^7-3x^2y^7}}{{6x^4y^5-3x^3y^6}}\)</p>
+    <p>= \(\frac{{3x^2y^6(2x-y)}}{{3x^3y^5(2x-y)}}\)</p>
+    <p>= \(\frac{{y}}{{x}}\)</p>
+    <p>So, \(\frac{{dy}}{{dx}} = \frac{{2x(1+2y)}}{{3y^2-2x^2}}\)</p>
+  
+    <h2>(vii)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(x^2y+xy^2= a^3\)</p>
+    <p>Differentiating both sides w.r.t. 'x'.</p>
+    <p>Or, \(\frac{{d}}{{dx}}(x^2y+xy^2)=\frac{{d}}{{dx}}(a^3)\)</p>
+    <p>Or, \(\frac{{d}}{{dx}}(x^2y)+\frac{{d}}{{dx}}(xy^2) = 0\)</p>
+    <p>Or, \(x^2\frac{{dy}}{{dx}}+y\frac{{d}}{{dx}}(x^2) + x\frac{{dy}}{{dx}}(y^2) = 0\)</p>
+    <p>Or, \(x^2\frac{{dy}}{{dx}}+y\cdot2x + x\cdot2y\frac{{dy}}{{dx}} + y^2\frac{{d}}{{dx}}(x) = 0\)</p>
+    <p>Or, \(x^2\frac{{dy}}{{dx}}+2xy + 2xy\frac{{dy}}{{dx}} + y^2 = 0\)</p>
+    <p>Or, \(x(x + 2y)\frac{{dy}}{{dx}} = -2xy - y^2\)</p>
+    <p>Or, \(\frac{{dy}}{{dx}} = -\frac{{y(2x+y)}}{{x(x+2y)}}\)</p>
+  
+    <h2>(viii)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(x^3 + y^3 = 3xy^2\)</p>
+    <p>Differentiating both sides w.r.t. 'x'.</p>
+    <p>Or, \(\frac{{d}}{{dx}}(x^3+y^3)=\frac{{d}}{{dx}}(3xy^2)\)</p>
+    <p>Or, \(\frac{{d}}{{dx}}(x^3)+\frac{{d}}{{dx}}(y^3) = 3\frac{{d}}{{dx}}(xy^2)\)</p>
+    <p>Or, \(3x^2 + \frac{{dy}}{{dx}}(3y^2) = 3\left(x\frac{{dy}}{{dx}}y^2 + y^2\frac{{d}}{{dx}}(x)\right)\)</p>
+    <p>Or, \(3x^2 + 3y^2\frac{{dy}}{{dx}} = 6xy\frac{{dy}}{{dx}} + 3y^2\)</p>
+    <p>So, \(\frac{{dy}}{{dx}} = \frac{{3y^2-3x^2}}{{3y^2-6xy}}\)</p>
+    <p>= \(\frac{{3(y^2-x^2)}}{{3y^2-6xy}}\)</p>
+    <p>= \(\frac{{y^2-x^2}}{{y(y-2x)}}\)</p>
+  
+    <h2>(ix)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(x^2y^2 = x^2 + y^2\)</p>
+    <p>Differentiating both sides w.r.t. 'x'.</p>
+    <p>Or, \(\frac{{d}}{{dx}}(x^2y^2)=\frac{{d}}{{dx}}(x^2+y^2)\)</p>
+    <p>Or, \(x^2\frac{{dy}}{{dx}}y^2+y^2\frac{{d}}{{dx}}(x^2) = \frac{{d}}{{dx}}(x^2)+\frac{{dy}}{{dx}}y^2\)</p>
+    <p>Or, \(x^2\cdot2y\frac{{dy}}{{dx}}+y^2\cdot2x = 2x+2y\frac{{dy}}{{dx}}\)</p>
+    <p>Or, \(2xy\frac{{dy}}{{dx}}(x^2 - 1) = 2x(1-y^2)\)</p>
+    <p>So, \(\frac{{dy}}{{dx}} = \frac{{x(1-y^2)}}{{y(x^2-1)}}\)</p>
+
+
+    
+<h4>9.</h4>
+<h5>(i)</h5>
+<p>Soln:</p>
+<p>Let \(y = x^6\).</p>
+<p>Differentiate both sides with respect to \(x^2\).</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{dx^6}}{{dx^2}} = \frac{{dx^6}}{{dx}} \cdot \frac{{dx}}{{dx^2}} = 6x^5 \cdot 2x = 12x^6\).</p>
+<h5>(ii)</h5>
+<p>Soln:</p>
+<p>Let \(y = (3x + 1)^4\).</p>
+<p>Differentiate both sides with respect to \(x^2\).</p>
+<p>Or, \(\frac{{dy}}{{d(3x+1)}} = \frac{{d(3x+1)^4}}{{d(3x+1)}} = 4(3x + 1)^3\).</p>
+<h5>(iii)</h5>
+<p>Soln:</p>
+<p>Let \(y = 2x^6 - 3x^4 + x^2\).</p>
+<p>Differentiate both sides with respect to \(x^3\).</p>
+<p>Or, \(\frac{{dy}}{{dx^3}} = \frac{{d(2x^6 - 3x^4 + x^2)}}{{dx^3}} = \frac{{d(2x^6)}}{{dx^3}} - \frac{{d(3x^4)}}{{dx^3}} + \frac{{d(x^2)}}{{dx^3}} = 2 \cdot \frac{{dx^6}}{{dx}} \cdot \frac{{dx}}{{dx^3}} - 3 \cdot \frac{{dx^4}}{{dx}} \cdot \frac{{dx}}{{dx^3}} + \frac{{dx^2}}{{dx}} \cdot \frac{{dx}}{{dx^3}} = 2 \cdot 6x^5 \cdot 3x^2 - 3 \cdot 4x^3 \cdot 3x^2 + 2x \cdot 1 = 36x^7 - 36x^5 + 2x^3\).</p>
+<p>So, \(\frac{{dy}}{{dx}} = 4x^3 - 4x + 23x\).</p>
+<h5>(iv)</h5>
+<p>Soln:</p>
+<p>Let \(y = (5x - 1)^6\).</p>
+<p>Differentiate both sides with respect to \((x + 1)^2\).</p>
+<p>Or, \(\frac{{dy}}{{d(x+1)^2}} = \frac{{d(5x-1)^6}}{{d(x+1)^2}} = \frac{{d(5x-1)^6}}{{d(5x-1)}} \cdot \frac{{d(5x-1)}}{{dx}} \cdot \frac{{dx}}{{d(x+1)^2}} = 6(5x-1)^5 \cdot 5^2 \cdot (x+1) = 15(5x-1)^5(x+1)\).</p>
+<p>So, \(\frac{{dy}}{{d(x+1)^2}} = 15(5x-1)^5(x+1)\).</p>
+
+
+    </div>
+
+    <div id="questions-container" class="container" style="display:none">
+    
+        <h2>1.</h2>
+        <p><strong>(i)</strong></p>
+        <p><strong>Solution:</strong></p>
+        <p>Let \(y = \sin^4x\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,</p>
+        <p>Or, \(y + \Delta y = \sin^4(x + \Delta x)\)</p>
+        <p>Or, \(\Delta y = \sin(4x + 4\Delta x) - y\)</p>
+        <p>= \(\sin(4x + 4\Delta x) - \sin^4x\)</p>
+        <p>= \(2\cos(4x+4\Delta x+4x^2)\sin(4x+4\Delta x-4x^2)\)</p>
+        <p>= \(2\cos(4x + 2\Delta x)\sin(2\Delta x)\)</p>
+        <p>Or, \(\frac{\Delta y}{\Delta x} = \frac{2\cos(4x+2\Delta x)\sin(2\Delta x)}{\Delta x}\)</p>
+        <p>Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{2\cos(4x + 2\Delta x)\sin(2\Delta x)}{\Delta x} \times 2\)</p>
+        <p>Or, \(\frac{dy}{dx} = 2\cos(4x + 0) \times 1 \times 2 = 4\cos^4x\).</p>
+      
+        <p><strong>(ii)</strong></p>
+        <p><strong>Solution:</strong></p>
+        <p>Let \(y = \cos(ax - b)\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,</p>
+        <p>Or, \(y + \Delta y = \cos\{a(x + \Delta x) - b\}\)</p>
+        <p>Or, \(\Delta y = \cos(ax + a\Delta x - b) - y\)</p>
+        <p>= \(\cos(ax + a\Delta x - b) - \cos(ax - b)\)</p>
+        <p>= \(2\sin\left(\frac{ax+a\Delta x-b+ax-b}{2}\right)\sin\left(\frac{ax-b-a\Delta x+b}{2}\right)\)</p>
+        <p>= \(2\sin\left(ax-b+\frac{a\Delta x}{2}\right)\sin\left(-a\frac{\Delta x}{2}\right)\)</p>
+        <p>Or, \(\frac{\Delta y}{\Delta x} = -2\sin(ax-b+\frac{a\Delta x}{2})\sin\left(-a\frac{\Delta x}{2}\right)\frac{\Delta x}{a\Delta x}\)</p>
+        <p>Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} -2\sin(ax-b+\frac{a\Delta x}{2})\sin\left(-a\frac{\Delta x}{2}\right)\frac{1}{a}\)</p>
+        <p>Or, \(\frac{dy}{dx} = -2\sin(ax - b + 0) \times 1 \times a^2 = -a\sin(ax - b)\).</p>
+      
+        <p><strong>(iii)</strong></p>
+        <p><strong>Solution:</strong></p>
+        <p>Let \(y = \tan(3x - 4)\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,</p>
+        <p>Or, \(y + \Delta y = \tan\{3(x + \Delta x) - 4\}\)</p>
+        <p>Or, \(\Delta y = \tan (3x + 3\Delta x - 4 - y)\)</p>
+        <p>= \(\tan (3x + 3\Delta x - 4 - y) - \tan(3x - 4)\)</p>
+        <p>= \(\sin(3x+3\Delta x-4)\cos(3x+3\Delta x-4)-\sin(3x-4)\cos(3x-4)\)</p>
+        <p>= \(\sin(3x+3\Delta x-4)\cos(3x-4)-\cos(3x+3\Delta x-4)\sin(3x-4)\cos(3x+3\Delta x-4)\cos(3x-4)\)</p>
+        <p>= \(\sin(3x+3\Delta x-4-3x+4)\cos(3x+3\Delta x-4)\cos(3x-4)\)</p>
+        <p>Or, \(\frac{\Delta y}{\Delta x} = \frac{\sin(3\Delta x)}{3\Delta x}\cos(3x+3\Delta x-4)\cos(3x-4)\)</p>
+        <p>Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{\sin(3\Delta x)}{3\Delta x} \times 3 \times 1 \cos(3x+3\Delta x-4)\cos(3x-4)\)</p>
+        <p>Or, \(\frac{dy}{dx} = 1 \times 3 \cos(3x-4)\cos(3x-4) = 3\sec^2(3x - 4)\).</p>
+      
+        <p><strong>(iv)</strong></p>
+        <p><strong>Solution:</strong></p>
+        <p>Let \(y = \sin\left(\frac{3x}{2}\right)\).</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,</p>
+        <p>Or, \(y + \Delta y = \sin\left(\frac{3(x+\Delta x)}{2}\right)\)</p>
+        <p>Or, \(\Delta y = \sin\left(\frac{3(x+\Delta x)}{2}\right) - y\)</p>
+        <p>= \(\sin\left(\frac{3x+3\Delta x}{2}\right) - \sin\left(\frac{3x}{2}\right)\)</p>
+        <p>= \(2\cos\left(\frac{3x+3\Delta x+3x}{4}\right)\sin\left(\frac{3x+3\Delta x-3x}{4}\right)\)</p>
+        <p>= \(2\cos\left(\frac{3x+3\Delta x}{2}\right)\sin\left(\frac{3\Delta x}{4}\right)\)</p>
+        <p>Or, \(\frac{\Delta y}{\Delta x} = \frac{2\cos\left(\frac{3x+3\Delta x}{2}\right)\sin\left(\frac{3\Delta x}{4}\right)}{\Delta x}\)</p>
+        <p>Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{2\cos\left(\frac{3x+3\Delta x}{2}\right)\sin\left(\frac{3\Delta x}{4}\right)}{\Delta x} \times \frac{3}{4}\)</p>
+        <h2>(iv)</h2>
+        <p><strong>Solution:</strong></p>
+        <p>Let \(y = \sin(3x^2)\)</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,</p>
+        <p>Or, \(y + \Delta y = \sin(3(x+\Delta x)^2)\)</p>
+        <p>Or, \(\Delta y = \sin(3(x+\Delta x)^2) - y\)</p>
+        <p>\(= \sin(3x+3\Delta x^2) - \sin(3x^2)\)</p>
+        <p>\(= 2\cos\left(\frac{3x+3\Delta x+3x}{4}\right) \sin\left(\frac{3\Delta x}{4}\right)\)</p>
+        <p>Or, \(\frac{\Delta y}{\Delta x} = \frac{2\cos\left(\frac{3x+3\Delta x}{2}\right)\sin\left(\frac{3\Delta x}{4}\right)}{\Delta x}\)</p>
+        <p>Or, \(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \frac{2\cos\left(\frac{3x+3\Delta x}{2}\right)\sin\left(\frac{3\Delta x}{4}\right)}{\Delta x} = \frac{3}{4}\)</p>
+        <p>Or, \(\frac{dy}{dx} = 2\cos\left(\frac{3x}{2}\right)\)</p>
+      
+        <h2>(v)</h2>
+        <p><strong>Solution:</strong></p>
+        <p>Let \(y = \tan(5x^3)\)</p>
+        <p>Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,</p>
+        <p>Or, \(y + \Delta y = \tan(5(x+\Delta x)^3)\)</p>
+        <p>Or, \(\Delta y = \tan(5(x+\Delta x)^3) - y\)</p>
+        <p>\(= \sin(5x+5\Delta x)\cos(5x+5\Delta x) - \sin(5x)\cos(5x)\)</p>
+        <p>\(= \sin(5x+5\Delta x)\cos(5x) - \cos(5x+5\Delta x)\sin(5x)\)</p>
+        <p>\(= \sin(5x+\frac{5\Delta x}{3}-5x)\cos(5x) + \cos(5x+\frac{5\Delta x}{3})\sin(5x)\cos(5x)\)</p>
+        <p>\(= \sin\left(\frac{5\Delta x}{3}\right)\cos(5x) + \cos\left(\frac{5\Delta x}{3}\right)\sin(5x)\cos(5x)\)</p>
+        <p>Or, \(\frac{\Delta y}{\Delta x} = \frac{\sin\left(\frac{5\Delta x}{3}\right)}{\Delta x}\cos(5x) + \cos\left(\frac{5\Delta x}{3}\right)\sin(5x)\cos(5x)\)</p>
+        <p>Or, \(\lim_{{\Delta x \to 0}} \frac{\Delta y}{\Delta x} = \lim_{{\Delta x \to 0}} \left(\frac{\sin\left(\frac{5\Delta x}{3}\right)}{\Delta x}\cos(5x) + \cos\left(\frac{5\Delta x}{3}\right)\sin(5x)\cos(5x)\right)\)</p>
+        <p>Or, \(\frac{dy}{dx} = 5\sin(5x^3)\cos(5x^3) = 5\sec^2(5x^3)\)</p>
+       
+
+
+        
+<h4>(vi)</h4>
+<p>Soln:</p>
+<p>Let \(y = \cos^2 2x = \frac{1}{2}(2\cos^2 2x)\)
+<br>
+= \(\frac{1}{2}(1 + \cos 2x)\)
+<br>
+Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,
+<br>
+\(y + \Delta y = \frac{1}{2}[1 + \cos 2(x + \Delta x)]\)
+<br>
+Or, \(\Delta y = \frac{1}{2}[1 + \cos(2x + 2\Delta x)] - y\)
+<br>
+= \(\frac{1}{2}[1 + \cos(2x + 2\Delta x)] - \frac{1}{2}(1 + \cos 2x)\)
+<br>
+= \(\frac{1}{2}[1 + \cos(2x + 2\Delta x) - 1 - \cos 2x]\)
+<br>
+= \(\frac{1}{2}[1 + \cos(2x + 2\Delta x) - \cos 2x]\)
+<br>
+= \(\frac{1}{2}[2\sin^2 x + 2x + 2\Delta x\sin^2 x - 2x - 2\Delta x\sin^2 x]\)
+<br>
+= \(\sin (2x + \Delta x) \sin (-\Delta x)\)
+<br>
+= \(-\sin(2x + 2\Delta x)\sin \Delta x\)
+<br>
+Or, \(\frac{\Delta y}{\Delta x} = -\sin(2x + \Delta x)\sin \Delta x\)
+<br>
+Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} -\sin(2x + \Delta x)\sin \Delta x\)
+<br>
+Or, \(\frac{dy}{dx} = -\sin(2x + 0) \cdot 1 = -\sin 2x\)</p>
+<h4>(vii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \sin^2 3x = \frac{1}{2}(2\sin^2 3x)\)
+<br>
+= \(\frac{1}{2}(1 - \cos 6x)\)
+<br>
+Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,
+<br>
+\(y + \Delta y = \frac{1}{2}[1 - \cos 6(x + \Delta x)]\)
+<br>
+Or, \(\Delta y = \frac{1}{2}[1 - \cos(6x + 6\Delta x)] - y\)
+<br>
+= \(\frac{1}{2}[1 - \cos(6x + 6\Delta x)] - \frac{1}{2}[1 - \cos 6x]\)
+<br>
+= \(\frac{1}{2}[1 - \cos(6x + 6\Delta x) - 1 + \cos 6x]\)
+<br>
+= \(\frac{1}{2}[\cos 6x - \cos(6x + 6\Delta x)]\)
+<br>
+= \(\frac{1}{2}\left[2\sin^3 3x + 3x + 3\Delta x\sin^3 3x + \frac{3}{2}(6x)^2\sin(6x + 6\Delta x) + \cos^3 3x\right]\)
+<br>
+= \(\sin (6x + 3\Delta x)\sin 3\Delta x\)
+<br>
+Or, \(\frac{\Delta y}{\Delta x} = \sin (6x + 3\Delta x) \cdot \frac{\sin 3\Delta x}{3\Delta x}\)
+<br>
+Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \sin (6x + 3\Delta x) \cdot \frac{\sin 3\Delta x}{3\Delta x}\)
+<br>
+Or, \(\frac{dy}{dx} = \sin (6x + 0) \cdot 1 \cdot 3 = 3\sin 6x\)</p>
+<h4>(viii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \sqrt{\sin 2x}\)
+<br>
+Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,
+<br>
+\(y + \Delta y = \sqrt{\sin^2 (x + \Delta x)}\)
+<br>
+Or, \(\Delta y = \sqrt{\sin^2 (x + \Delta x)} - \sqrt{\sin^2 x}\)
+<br>
+= \(\sqrt{\sin^2 (x + \Delta x)} - \sqrt{\sin^2 x}\)
+<br>
+= \((\sin (x + \Delta x))^{\frac{1}{2}} - (\sin x)^{\frac{1}{2}}\)
+<br>
+= \((\sin (x + \Delta x))^{\frac{1}{2}} - (\sin x)^{\frac{1}{2}} \cdot \frac{(\sin (x + \Delta x))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}{(\sin (x + \Delta x))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{\sin (x + \Delta x) - \sin x}{(\sin (x + \Delta x))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{2\cos (x + \Delta x)\sin \frac{\Delta x}{2}}{(\sin (x + \Delta x))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+Or, \(\frac{\Delta y}{\Delta x} = \frac{2\cos (x + \Delta x)\sin \frac{\Delta x}{2}}{(\sin (x + \Delta x))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{2\cos (x + \Delta x)\sin \frac{\Delta x}{2}}{(\sin (x + \Delta x))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+Or, \(\frac{dy}{dx} = 2\cos (x + 0)\sin (x + 0) \cdot \frac{1}{(\sin (x + 0))^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{2\cos 2x\sin x}{(\sin 2x)^{\frac{1}{2}} + (\sin x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{\cos 2x\sin x}{(\sin 2x)^{\frac{1}{2}}}\)
+<br>
+<h4>(ix)</h4>
+<p>Soln:</p>
+<p>Let \(y = \sqrt{\sec x}\)
+<br>
+Let \(\Delta x\) and \(\Delta y\) be the small increments in \(x\) and \(y\) respectively. Then,
+<br>
+\(y + \Delta y = \sqrt{\sec (x + \Delta x)}\)
+<br>
+Or, \(\Delta y = \sqrt{\sec (x + \Delta x)} - \sqrt{\sec x}\)
+<br>
+= \(\sqrt{\sec (x + \Delta x)} - \sqrt{\sec x}\)
+<br>
+= \((\sec (x + \Delta x))^{\frac{1}{2}} - (\sec x)^{\frac{1}{2}}\)
+<br>
+= \((\sec (x + \Delta x))^{\frac{1}{2}} - (\sec x)^{\frac{1}{2}} \cdot \frac{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{\sec (x + \Delta x) - \sec x}{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{\cos x - \cos (x + \Delta x)}{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+= \(\frac{-2\sin \left(x + \frac{\Delta x}{2}\right)\sin \left(\frac{\Delta x}{2}\right)}{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+Or, \(\frac{\Delta y}{\Delta x} = \frac{-2\sin \left(x + \frac{\Delta x}{2}\right)\sin \left(\frac{\Delta x}{2}\right)}{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+Or, \(\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{-2\sin \left(x + \frac{\Delta x}{2}\right)\sin \left(\frac{\Delta x}{2}\right)}{(\sec (x + \Delta x))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+Or, \(\frac{dy}{dx} = -2\sin \left(x + \frac{0}{2}\right)\sin \left(\frac{0}{2}\right) \cdot \frac{1}{(\sec (x + 0))^{\frac{1}{2}} + (\sec x)^{\frac{1}{2}}}\)
+<br>
+= 0\)
+<br>
+Therefore, 
+�
+�
+�
+�
+=
+0
+dx
+dy
+​
+ =0 for the given function.</p>
+
+
+ <h4>(ii)</h4>
+ <p>
+ Soln:
+ <br>
+ Let \(y = \cos(ax + b)\)
+ <br>
+ Differentiating both sides w.r.t. 'x'.
+ <br>
+ Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} \cos(ax + b)\)
+ <br>
+ = \(\frac{{d\cos(ax + b)}}{{d(ax + b)}} \cdot \frac{{d(ax + b)}}{{dx}}\)
+ <br>
+ = \(-\sin(ax + b) \cdot a\)
+ <br>
+ = \(-a\sin(ax + b)\)
+ </p>
+ <h4>(iii)</h4>
+ <p>
+ Soln:
+ <br>
+ Let \(y = \tan(5x^2 + 6)\)
+ <br>
+ Differentiating both sides w.r.t. 'x'.
+ <br>
+ Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}} \tan(5x^2 + 6)\)
+ <br>
+ = \(\frac{{d\tan(5x^2 + 6)}}{{d(5x^2 + 6)}} \cdot \frac{{d(5x^2 + 6)}}{{dx}}\)
+ <br>
+ = \(\sec^2(5x^2 + 6) \cdot 5 \cdot 2x\)
+ <br>
+ = \(10x \sec^2(5x^2 + 6)\)
+ </p>
+ <h4>(iv)</h4>
+ <p>
+ Soln:
+ <br>
+ Let \(y = \cot(x\sqrt{x})\)
+ <br>
+ Differentiating both sides w.r.t. 'x'.
+ <br>
+ Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\cot(x\sqrt{x}))\)
+ <br>
+ = \(\frac{{d(\cot(x\sqrt{x}))}}{{d(x\sqrt{x})}} \cdot \frac{{d(x\sqrt{x})}}{{dx}}\)
+ <br>
+ = \(-\csc^2x \cdot x\sqrt{x} \cdot \frac{{1}}{{2\sqrt{x}}}\)
+ <br>
+ = \(-\frac{{x}}{{2}}\csc^2x\)
+ </p>
+ <h4>(v)</h4>
+ <p>
+ Soln:
+ <br>
+ Let \(y = \sec^{-1}(x)\)
+ <br>
+ Differentiating both sides w.r.t. 'x'.
+ <br>
+ Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\sec^{-1}(x))\)
+ <br>
+ = \(\frac{{d(\sec^{-1}(x))}}{{d(x)}}\)
+ <br>
+ = \(\sec^{-1}(x) \cdot \tan(\sec^{-1}(x)) \cdot (-1)\)
+ <br>
+ = \(-\tan(\sec^{-1}(x))\)
+ </p>
+ 
+ <h2>(vi)</h2>
+ <p><strong>Solution:</strong></p>
+ <p>Let \(y = \csc(ax^2b)\)</p>
+ <p>Differentiating both sides w.r.t. \(x\).</p>
+ <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\csc(ax^2b)) = \frac{d(\csc(ax^2b))}{d(ax^2b)} \cdot \frac{d(ax^2b)}{dx} = -\csc(ax^2b) \cdot \cot(ax^2b) \cdot ab \cdot 2x = -2abx\csc(ax^2b)\cot(ax^2b)\)</p>
+
+ <h2>(vii)</h2>
+ <p><strong>Solution:</strong></p>
+ <p>Let \(y = \sin^5(ax^2 - c)\)</p>
+ <p>Differentiating both sides w.r.t. \(x\).</p>
+ <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\sin^5(ax^2 - c)) = \frac{d(\sin^5(ax^2 - c))}{d(\sin(ax^2 - c))} \cdot \frac{d(\sin(ax^2 - c))}{d(ax^2 - c)} \cdot \frac{d(ax^2 - c)}{dx} = 5\sin^4(ax^2 - c)\cos(ax^2 - c) \cdot a \cdot 2x = 10ax\sin^4(ax^2 - c)\cos(ax^2 - c)\)</p>
+
+ <h2>(viii)</h2>
+ <p><strong>Solution:</strong></p>
+ <p>Let \(y = \cos^3(2ax - 3b)\)</p>
+ <p>Differentiating both sides w.r.t. \(x\).</p>
+ <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\cos^3(2ax - 3b)) = \frac{d(\cos^3(2ax - 3b))}{d(\cos(2ax - 3b))} \cdot \frac{d(\cos(2ax - 3b))}{d(2ax - 3b)} \cdot \frac{d(2ax - 3b)}{dx} = 3\cos^2(2ax - 3b)(-\sin(2ax - 3b)) \cdot 2a \cdot 1 = -6a\cos^2(2ax - 3b)\sin(2ax - 3b)\)</p>
+
+ <h2>(ix)</h2>
+ <p><strong>Solution:</strong></p>
+ <p>Let \(y = \tan^{-1}(\sqrt{5x - 7}) = \tan^{-1}\left(\frac{1}{2}\sqrt{5x - 7}\right)\)</p>
+ <p>Differentiating both sides w.r.t. \(x\).</p>
+ <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}\left(\tan^{-1}\left(\frac{1}{2}\sqrt{5x - 7}\right)\right) = \frac{d\left(\tan^{-1}\left(\frac{1}{2}\sqrt{5x - 7}\right)\right)}{d\left(\tan\left(\frac{1}{2}\sqrt{5x - 7}\right)\right)} \cdot \frac{d\left(\tan\left(\frac{1}{2}\sqrt{5x - 7}\right)\right)}{d(5x - 7)} \cdot \frac{d(5x - 7)}{dx} = 5a\sec^2(5x - 7)^2\tan(5x - 7)\)</p>
+
+ <h2>(x)</h2>
+ <p><strong>Solution:</strong></p>
+ <p>Let \(y = \sec^5(ax + bc)\)</p>
+ <p>Differentiating both sides w.r.t. \(x\).</p>
+ <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\sec^5(ax + bc)) = \frac{d(\sec^5(ax + bc))}{d(\sec(ax + bc))} \cdot \frac{d(\sec(ax + bc))}{d(ax + bc)} \cdot \frac{d(ax + bc)}{dx} = 5\sec^4(ax + bc)\sec(ax + bc)\tan(ax + bc) \cdot a \cdot 1c = 5ac\sec^5(ax + bc)\tan(ax + bc)\)</p>
+
+
+ 
+<h4>(xi)</h4>
+<p>Soln:</p>
+<p>Let \(y = \csc^n(px^2 - qr)\)</p>
+<p>Differentiating both sides w.r.t. 'x'.</p>
+<p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\csc^n(px^2 - qr))\)</p>
+<p>\(\frac{{d(\csc^n(px^2 - qr))}}{{d(\csc(px^2 - qr))}} \cdot \frac{{d(\csc(px^2 - qr))}}{{d(px^2 - qr)}} \cdot \frac{{d(px^2 - qr)}}{{dx}}\)</p>
+<p>\(= n \cdot \csc^{-1}(px^2 - qr) \cdot (-\csc(px^2 - qr)) \cdot \cot(px^2 - qr) \cdot p \cdot 2x\)</p>
+<p>\(= -2npxr \cdot \csc^n(px^2 - qr) \cdot \cot(px^2 - qr)\)</p>
+<p>3</p>
+<br>
+<h4>(i)</h4>
+<p>Soln:</p>
+<p>Let \(y = \tan(\cos(5x))\)</p>
+<p>Differentiating both sides w.r.t. to \(x\).</p>
+<p>\(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\tan(\cos 5x))\)</p>
+<p>\(\frac{{d(\tan(\cos5x))}}{{d(\cos5x)}} \cdot \frac{{d(\cos5x)}}{{d(5x)}} \cdot \frac{{d(5x)}}{{dx}}\)</p>
+<p>\(= \sec^2(\cos 5x) \cdot (-\sin 5x) \cdot 5\)</p>
+<p>\(= -5\sec^2(\cos 5x)\sin 5x\)</p>
+<br>
+<h4>(ii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \cos(\sin(3x^2 + 2))\)</p>
+<p>Differentiating both sides w.r.t. to \(x\).</p>
+<p>\(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\cos(\sin(3x^2 + 2)))\)</p>
+<p>\(\frac{{d(\cos(\sin(3x^2+2)))}}{{d(\sin(3x^2+2))}} \cdot \frac{{d(\sin(3x^2+2))}}{{d(3x^2+2)}} \cdot \frac{{d(3x^2+2)}}{{dx}}\)</p>
+<p>\(= -\sin(\sin(3x^2 + 2)) \cdot \cos(3x^2 + 2) \cdot 3 \cdot 2x\)</p>
+<p>\(= -6x \sin(\sin 3x^2 + 2)\cos(3x^2 + 2)\)</p>
+<br>
+<h4>(iii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \sin(\tan(ax + b))\)</p>
+<p>Differentiating both sides w.r.t. to \(x\).</p>
+<p>\(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\sin(\tan(ax + b)))\)</p>
+<p>\(\frac{{d(\sin(\tan(ax+b)))}}{{d(\tan(ax+b))}} \cdot \frac{{d(\tan(ax+b))}}{{d(ax+b)}} \cdot \frac{{d(ax+b)}}{{dx}}\)</p>
+<p>\(= \cos(\tan(ax + b)) \cdot \sec^2(ax + b) \cdot a\)</p>
+<p>\(= a \cos(\tan(ax + b)) \sec^2(ax + b)\)</p>
+
+<h2>(iv)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \sec^2(\tan(x\sqrt{x}))\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\sec^2(\tan(x\sqrt{x})))\)</p>
+  <p>= \(\frac{d(\sec^2(\tan(x\sqrt{x})))}{d(\sec(\tan(x\sqrt{x})))} \cdot \frac{d(\sec(\tan(x\sqrt{x})))}{d(\tan(x\sqrt{x}))} \cdot \frac{d(\tan(x\sqrt{x}))}{d(x\sqrt{x})} \cdot \frac{d(x\sqrt{x})}{dx\sqrt{x}}\)</p>
+  <p>= \(2\sec(\tan(x\sqrt{x})) \cdot \sec(\tan(x\sqrt{x})) \cdot \tan(\tan(x\sqrt{x})) \cdot \sec^2(x\sqrt{x}) \cdot \frac{1}{2x\sqrt{x}}\)</p>
+  <p>= \(\frac{1}{x\sqrt{x}} \cdot \sec^2(x\tan(x\sqrt{x})) \cdot \tan(\tan(x\sqrt{x})) \cdot \sec^2(x\sqrt{x})\)</p>
+
+  <h2>(v)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \tan^5(\sin(px - q))\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\tan^5(\sin(px - q)))\)</p>
+  <p>= \(\frac{d(\tan^5(\sin(px - q)))}{d(\tan(\sin(px - q)))} \cdot \frac{d(\tan(\sin(px - q)))}{d(\sin(px - q))} \cdot \frac{d(\sin(px - q))}{d(px - q)} \cdot \frac{d(px - q)}{dx}\)</p>
+  <p>= \(5\tan^4(\sin(px - q)) \cdot \sec^2(\sin(px - q)) \cdot \cos(px - q) \cdot p\)</p>
+  <p>= \(5p\tan^4(\sin(px - q))\sec^2(\sin(px - q))\cos(px - q)\)</p>
+
+  <h2>(vi)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \csc^3(\cot(4x))\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\csc^3(\cot(4x)))\)</p>
+  <p>= \(\frac{d(\csc^3(\cot(4x)))}{d(\csc(\cot(4x)))} \cdot \frac{d(\csc(\cot(4x)))}{d(\cot(4x))} \cdot \frac{d(\cot(4x))}{d(4x)} \cdot \frac{d(4x)}{dx}\)</p>
+  <p>= \(3\csc^2(\cot(4x)) \cdot (-\csc(\cot(4x))) \cdot \cot(\cot(4x)) \cdot (-\csc^2(4x)) \cdot 4\)</p>
+  <p>= \(12\csc^3(\cot(4x)) \cdot \cot(\cot(4x)) \cdot \csc^2(4x)\)</p>
+
+  <h2>(vii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \cot(\tan^3(x\sqrt{x}))\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\cot(\tan^3(x\sqrt{x})))\)</p>
+  <p>= \(\frac{d(\cot(\tan^3(x\sqrt{x})))}{d(\tan^3(x\sqrt{x}))} \cdot \frac{d(\tan^3(x\sqrt{x}))}{d(\tan^3(x))} \cdot \frac{d(\tan^3(x))}{d(3x)} \cdot \frac{d(3x)}{dx}\)</p>
+  <p>= \(-\csc^2(\tan^3(x\sqrt{x})) \cdot \frac{1}{3}(\tan^3(x))^{-1} \cdot \sec^2(3x) \cdot 3\)</p>
+  <p>= \(-3\csc^2(\tan^3(x\sqrt{x}))\sec^2(3x)(\tan^3(x))^{-1}\)</p>
+
+  <h2>(viii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \sin^2(\cos(6x))\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\sin^2(\cos(6x)))\)</p>
+  <p>= \(\frac{d(\sin^2(\cos(6x)))}{d(\sin(\cos(6x)))} \cdot \frac{d(\sin(\cos(6x)))}{d(\cos(6x))} \cdot \frac{d(\cos(6x))}{d(6x)} \cdot \frac{d(6x)}{dx}\)</p>
+  <p>= \(2\sin(\cos(6x)) \cdot \cos(\cos(6x)) \cdot (-\sin(6x)) \cdot 6\)</p>
+  <p>= \(-6(2\sin(\cos(6x))\cos(\cos(6x)))\sin(6x)\)</p>
+  <p>= \(-6\sin(2\cos(6x))\sin(6x)\)</p>
+
+
+  <ol>
+    <li>
+    <p>
+    <b>(i)</b>
+    <br>
+    Soln:
+    Let \(y = (x^2 + 3x)\sin(5x)\).
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}((x^2 + 3x)\sin(5x))\)
+    <br>
+    \(= (x^2+3x)\frac{d}{dx}(\sin(5x)) + \sin(5x)\frac{d}{dx}(x^2+3x)\)
+    <br>
+    \(= (x^2 + 3x)\cos(5x)\cdot 5 + \sin(5x)(2x + 3)\)
+    <br>
+    \(= 5(x^2 + 3x)\cos(5x) + (2x + 3)\sin(5x)\)
+    </p>
+    </li>
+    <li>
+    <p>
+    <b>(ii)</b>
+    <br>
+    Soln:
+    Let \(y = x^3 \tan(2x^3 + 3x)\).
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(x^3 \tan(2x^3 + 3x))\)
+    <br>
+    \(= x^3\frac{d}{dx}(\tan(2x^3 + 3x)) + \tan(2x^3 + 3x)\frac{d}{dx}(x^3)\)
+    <br>
+    \(= x^3\sec^2(2x^3 + 3x)(6x^2 + 3) + \tan(2x^3 + 3x)(3x^2)\)
+    <br>
+    \(= 3x^3(2x^2 + 1)\sec^2(2x^3 + 3x) + 3x^2\tan(2x^3 + 3x)\)
+    </p>
+    </li>
+    <li>
+    <p>
+    <b>(iii)</b>
+    <br>
+    Soln:
+    Let \(y = a\sqrt{x}\cos(ax^2 - b)\).
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(a\sqrt{x}\cos(ax^2 - b))\)
+    <br>
+    \(= a\left(x\sqrt{\frac{d(\cos(ax^2 - b))}{d(\cos(ax^2 - b))}}\cdot\frac{d(\cos(ax^2 - b))}{d(ax^2 - b)}\cdot\frac{d(ax^2 - b)}{dx} + \cos(ax^2 - b)\frac{d}{dx}\left(x\sqrt{\frac{d(ax^2 - b)}{dx}}\right)\right)\)
+    <br>
+    \(= a\left(-x\sqrt{\sin(ax^2 - b)}\cdot a\cdot 2x + \cos(ax^2 - b)\cdot\frac{1}{2\sqrt{x}}\right)\)
+    <br>
+    \(= a2x\sqrt{x}\cos(ax^2 - b) - \frac{2a^2x^2}{2\sqrt{x}}\sin(ax^2 - b)\)
+    <br>
+    \(= a2x\sqrt{x}\cos(ax^2 - b) - a^2x^2\sqrt{x}\sin(ax^2 - b)\)
+    </p>
+    </li>
+    <li>
+    <p>
+    <b>(iv)</b>
+    <br>
+    Soln:
+    Let \(y = (x + \sin^2(x))\sec^3(x^2)\).
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}((x + \sin^2(x))\sec^3(x^2))\)
+    <br>
+    \(= (x + \sin^2(x))\frac{d}{dx}(\sec^3(x^2)) + \sec^3(x^2)\frac{d}{dx}(x + \sin^2(x))\)
+    <br>
+    \(= (x + \sin^2(x))\sec(x^2)\tan(x^2)\cdot 2x + \sec^3(x^2)\left(\frac{d}{dx}(x) + \frac{d}{dx}(\sin^2(x))\right)\)
+    <br>
+    \(= 2x(x + \sin^2(x))\sec^3(x^2)\tan(x^2) + \sec^3(x^2)(1 + 2\cos(x)x)\)
+    </p>
+    </li>
+    </ol>
+
+    <h2>(v)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = ax^3\csc(p - qx)\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = a \cdot \frac{{d}}{{dx}}(x^3\csc(p - qx))\)</p>
+  <p>= \(a \cdot \left(x^3 \cdot \frac{{d(\csc(p - qx))}}{{d(p - qx)}} \cdot \frac{{d(p - qx)}}{{dx}} + \csc(p - qx) \cdot \frac{{d}}{{dx}}(x^3)\right)\)</p>
+  <p>= \(a \cdot \left(x^3 (-\csc(p - qx) \cdot \cot(p - qx) \cdot (-q) \cdot 1) + \csc(p - qx) \cdot 3x^2\right)\)</p>
+  <p>= \(aqx^3\csc(p - qx) \cdot \cot(p - qx) + 3ax^2\csc(p - qx)\)</p>
+
+  <h2>(vi)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \frac{{1}}{{x\sqrt{\sin x}}}\)</p>
+  <p>= \(\sin x \cdot \frac{{1}}{{x\sqrt{x}}}\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}\left(\sin x \cdot \frac{{1}}{{x\sqrt{x}}}\right)\)</p>
+  <p>= \(x\sqrt{\frac{{\sin x}}{}} \cdot \frac{{d(\sin x\sqrt{x})}}{{dx}} \cdot \frac{{d(\sqrt{x})}}{{dx}} - \sin x \cdot \frac{{d}}{{dx}}(x\sqrt{x}) \cdot \left(\frac{{1}}{{x\sqrt{x}}}\right)^2\)</p>
+  <p>= \(x\sqrt{\frac{{\sin x}}{}} \cdot \cos x\sqrt{x} \cdot \frac{{1}}{{2\sqrt{x}}} - \sin x \cdot \frac{{1}}{{2\sqrt{x}}} \cdot x\)</p>
+  <p>= \(\frac{{x\sqrt{\cos x\sqrt{x}} - \sin x}}{{2\sqrt{x}}}\)</p>
+
+  <h2>(vii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = x^2 - 1\cos(4x)\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(x^2 - 1\cos(4x))\)</p>
+  <p>= \(\cos(4x) \cdot \frac{{d}}{{dx}}(x^2 - 1) - (x^2 - 1) \cdot \frac{{d(\cos(4x))}}{{d(4x)}} \cdot \frac{{d(4x)}}{{dx}} \cdot \frac{{d(4x)}}{{dx}}(\cos(4x))^2\)</p>
+  <p>= \(\cos(4x) \cdot 2x - (x^2 - 1) \cdot (-\sin(4x)) \cdot 4 \cdot 1\cos^2(4x)\)</p>
+  <p>= \(2x\cos(4x) + 4(x^2 - 1)\sin(4x)\cos^2(4x)\)</p>
+
+  <h2>(viii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \sec(nx)\cdot(ax - b)\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\sec(nx)\cdot(ax - b))\)</p>
+  <p>= \((ax - b) \cdot \frac{{d(\sec(nx))}}{{d(nx)}} \cdot \frac{{d(nx)}}{{dx}} - \sec(nx) \cdot \frac{{d}}{{dx}}(ax - b) \cdot (ax - b)^2\)</p>
+  <p>= \((ax - b) \cdot \sec(nx) \cdot \tan(nx) \cdot n - \sec(nx) \cdot a \cdot (ax - b)^2\)</p>
+  <p>= \(n(ax - b)\sec(nx)\tan(nx) - a\sec(nx)(ax - b)^2\)</p>
+
+
+  
+<ol>
+    <li>
+    <h4>(i)</h4>
+    <p>Soln:</p>
+    <p>
+    Or, \(y = 1-2\sin^2x \cdot \frac{2}{\cos^2x} = \cos x \cos^2x = \frac{1}{\cos x} = \sec x\)
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(\sec x) = \sec x \tan x\).
+    </p>
+    </li>
+    <li>
+    <h4>(ii)</h4>
+    <p>Soln:</p>
+    <p>
+    Or, \(y = \sin^{2n}x \cdot \cos^{2n}x = 2\sin^n x \cdot \cos^n x \cdot \cos^2x = 2\tan^n x\)
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = 2\frac{d}{dx}(\tan^n x) = 2\left(\frac{d}{dx}(\tan x^n)\right) \cdot \left(\frac{d}{dx}(x^n)\right) = 2n\sec^2 nx\).
+    </p>
+    </li>
+    <li>
+    <h4>(iii)</h4>
+    <p>Soln:</p>
+    <p>
+    Or, \(y = \sin ax - \sin bx \cdot \cos ax + \cos bx = 2\cos ax + bx^2 \cdot \sin ax - bx^2 \cdot 2\cos ax + bx^2 \cdot \cos ax - bx^2\)
+    <br>
+    \(= \tan ax - bx^2 = \tan\left(\frac{a - b}{2}\right) x\)
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}\left(\tan\left(\frac{a - b}{2}\right)x\right) = \sec^2\left(\frac{a - b}{2}\right)x \cdot \frac{a - b}{2}\).
+    </p>
+    </li>
+    <li>
+    <h4>(iv)</h4>
+    <p>Soln:</p>
+    <p>
+    Or, \(y = \frac{1 - \cos x}{1 + \cos x} = \frac{2\sin^2 x}{2\cos^2 x} = \tan^2 x\).
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}(\tan^2 x) = \frac{d}{dx}(\tan x^2) \cdot \frac{d}{dx}(x^2) \cdot \frac{d}{dx}(x^2) = 2\tan x \sec^2 x\).
+    </p>
+    </li>
+    <li>
+    <h4>(v)</h4>
+    <p>Soln:</p>
+    <p>
+    Or, \(y = \frac{1 - \sin x}{1 + \sin x} - \sqrt{\frac{1 - \sin x}{1 - \sin x}} = \frac{(1 - \sin x)^2\cos^2 x}{1 - \sin^2 x} = 1 - \sin x \cos x\)
+    <br>
+    \(= \frac{\cos^2 x}{2} + \frac{\sin^2 x}{2} - 2\sin x^2 \cos x^2 \cdot \frac{\cos^2 x}{2} - \sin^2 x\)
+    <br>
+    \(= (\cos x^2 - \sin x^2)^2(\cos x^2 + \sin x^2)(\cos x^2 - \sin x^2)\)
+    <br>
+    \(= \frac{\cos x^2 - \sin x^2}{\cos x^2 + \sin x^2} = \frac{1 - \tan x^2}{1 + \tan x^2}\) (dividing numerator and denominator by \(\cos x^2\))
+    <br>
+    \(= \tan\left(\frac{\pi}{4} - \frac{x}{2}\)\).
+    <br>
+    Differentiating both sides w.r.t. \(x\).
+    <br>
+    Or, \(\frac{dy}{dx} = \frac{d}{dx}\left(\tan\left(\frac{\pi}{4} - \frac{x}{2}\right)\right) = \sec^2\left(\frac{\pi}{4} - \frac{x}{2}\right) \cdot \left(-\frac{1}{2}\right) = -\frac{1}{2}\sec^2\left(\frac{\pi}{4} - \frac{x}{2}\right)\).
+    </p>
+    </li>
+    </ol>
+
+    <h2>(vi)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(y = \cos^2x + \sin^2x\)</p>
+    <p>= \(2\cos^2x - 1 + \frac{1}{2}\sin x \cdot \cos x\)</p>
+    <p>= \(2\cos^2x \cdot 2\sin x \cdot \cos x\)</p>
+    <p>= \(\cot x\)</p>
+    <p>Differentiating both sides with respect to \(x\).</p>
+    <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\cot x)\)</p>
+    <p>= \(-\csc^2x\)</p>
+  
+    <h2>(vii)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(y = \frac{\cos^2x}{1 - \sin^2x}\)</p>
+    <p>= \(2\cos^2x - \sin^2x + \frac{\sin^2x - 2\sin x \cdot \cos x}{1 - \sin^2x}\)</p>
+    <p>= \((\cos x + \sin x)(\cos x - \sin x)\left(\frac{\cos x - \sin x}{2}\right)\)</p>
+    <p>= \(\frac{1 + \tan x}{1 - \tan x}\) <em>(dividing numerator and denominator by \(\cos x\)</em>)</p>
+    <p>\(y = \tan\left(\frac{\pi}{4} + x\)</p>
+    <p>Differentiating both sides with respect to \(x\).</p>
+    <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}\left(\tan\left(\frac{\pi}{4} + x\right)\right)\)</p>
+    <p>= \(\sec^2\left(\frac{\pi}{4} + x\right)\)
+  
+    <h2>(viii)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(y = \frac{1}{\sec x} - \tan x\)</p>
+    <p>= \(\frac{1}{\sec x} - \tan x \cdot \sec x + \tan x \cdot \sec x + \tan x\)</p>
+    <p>= \((\sec x + \tan x)^2\sec^2x - \tan^2x\)</p>
+    <p>= \((\sec x + \tan x)^2\)</p>
+    <p>Differentiating both sides with respect to \(x\).</p>
+    <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}((\sec x + \tan x)^2)\)</p>
+    <p>= \(\frac{d((\sec x + \tan x)^2)}{d(\sec x + \tan x)} \cdot \frac{d(\sec x + \tan x)}{dx}\)</p>
+    <p>= \(2(\sec x + \tan x)(\sec x \cdot \tan x + \sec^2x) = 2\sec x(\sec x + \tan x)^2\)
+  
+    <h2>(x)</h2>
+    <p><strong>Solution:</strong></p>
+    <p>Or, \(y = \frac{1 + \tan x}{1 - \tan x}\)</p>
+    <p>= \(\tan\left(\frac{\pi}{4} + x\right)\)</p>
+    <p>Differentiating both sides with respect to \(x\).</p>
+    <p>Or, \(\frac{dy}{dx} = \frac{d}{dx}\left(\tan\left(\frac{\pi}{4} + x\right)\right)\)</p>
+    <p>= \(\sec^2\left(\frac{\pi}{4} + x\right)\)
+  
+    <h2>6.</h2>
+    <p>(i)</p>
+    <p><strong>Solution:</strong></p>
+    <p>Let \(y = \sin^6x \cdot \cos^4x = \frac{1}{2}(\sin(6x + 4x) + \sin(6x - 4x)) = \frac{1}{2}(\sin 10x + \sin 2x)\)</p>
+    <p>Differentiating both sides with respect to \(x\)</p>
+    <p>Or, \(\frac{dy}{dx} = \frac{1}{2} \frac{d}{dx}(\sin 10x + \sin 2x)\)</p>
+    <p>= \(\frac{1}{2}(\cos 10x \cdot 10 + \cos 2x \cdot 2) = 5\cos 10x + \cos 2x\)</p>
+
+    
+<h4>(ii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \sin^2(mx) \cdot \sin^2(nx)\)</p>
+<p>= \(\frac{1}{2}(2\sin^2(mx) \cdot \sin^2(nx))\)</p>
+<p>= \(\frac{1}{2}(\cos(2mx-2nx) - \cos(2mx+2nx))\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{1}{2} \cdot \frac{d}{dx}(\cos(2mx-2nx) - \cos(2mx+2nx))\)</p>
+<p>= \(\frac{1}{2}(-\sin(2m-2n)x \cdot (2m-2n) \cdot 1 - (-\sin(2m+2n)x \cdot (2m+2n) \cdot 1)\)</p>
+<p>= \((m + n)\sin((2m + 2n)x) - (m - n)\sin((2m - 2n)x)\)</p>
+<p>= \((m + n)\sin^2((m + n)x) - (m - n)\sin^2((m - n)x)\).</p>
+<h4>(iii)</h4>
+<p>Soln:</p>
+<p>Let \(y = \cos^7(x) \cdot \cos^5(x)\)</p>
+<p>= \(\frac{1}{2}(\cos^7(x) \cdot \cos^5(x))\)</p>
+<p>= \(\frac{1}{2}(\cos(7x+5x) + \cos(7x-5x))\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{1}{2} \cdot \frac{d}{dx}(\cos(7x+5x) + \cos(7x-5x))\)</p>
+<p>= \(\frac{1}{2}(-\sin(12x) \cdot 12 \cdot 1 + (-\sin(2x) \cdot 2 \cdot 1)\)</p>
+<p>= -6\sin(12x) - \sin(2x).</p>
+<h4>(iv)</h4>
+<p>Soln:</p>
+<p>Let \(y = \sin^3(x) \cdot \cos^5(x)\)</p>
+<p>= \(\frac{1}{2}(2\sin^3(x) \cdot \cos^5(x)) = \frac{1}{2}(\sin(3x+5x) + \sin(3x-5x))\)</p>
+<p>= \(\frac{1}{2}(\sin(8x) - \sin(2x))\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{1}{2} \cdot \frac{d}{dx}(\sin(8x) - \sin(2x))\)</p>
+<p>= \(\frac{1}{2}(\cos(8x) \cdot 8 \cdot 1 - \cos(2x) \cdot 2 \cdot 1)\)</p>
+<p>= 4\cos(8x) - \cos(2x).</p>
+<h4>7.</h4>
+<h5>(i)</h5>
+<p>Soln:</p>
+<p>Let \(y = \sin^{-1}(3x - 4)\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\sin^{-1}(3x - 4))\)</p>
+<p>= \(\frac{1}{\sqrt{1 - (3x - 4)^2}} \cdot \frac{d}{dx}(3x - 4)\)</p>
+<p>= \(\frac{1}{\sqrt{1 - (3x - 4)^2}} \cdot 3\)</p>
+<p>= \(\frac{3}{\sqrt{1 - (3x - 4)^2}}\).</p>
+<h5>(ii)</h5>
+<p>Soln:</p>
+<p>Let \(y = \cos^{-1}(3x^2 - 2)\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\cos^{-1}(3x^2 - 2))\)</p>
+<p>= \(\frac{1}{\sqrt{1 - (3x^2 - 2)^2}} \cdot \frac{d}{dx}(3x^2 - 2)\)</p>
+<p>= \(\frac{1}{\sqrt{1 - (3x^2 - 2)^2}} \cdot 6x\)</p>
+<p>= \(\frac{6x}{\sqrt{1 - (3x^2 - 2)^2}}\).</p>
+<h5>(iii)</h5>
+<p>Soln:</p>
+<p>Let \(y = \tan^{-1}(15x - 3)\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}(\tan^{-1}(15x - 3))\)</p>
+<p>= \(\frac{1}{1 + (15x - 3)^2} \cdot \frac{d}{dx}(15x - 3)\)</p>
+<p>= \(\frac{1}{1 + (15x - 3)^2} \cdot 15\)</p>
+<p>= \(\frac{15}{1 + (15x - 3)^2}\).</p>
+
+
+<h2>(iv)</h2>
+<p><strong>Solution:</strong></p>
+<p>Let \(y = \sec^{-1}(\tan x)\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{d}{dx}\{\sec^{-1}(\tan x)\} = \frac{d(\sec^{-1}(\tan x))}{d(\tan x)} \cdot \frac{d(\tan x)}{dx}\)</p>
+<p>\(= \frac{1}{\tan x \cdot \tan^2 x + 1}\cdot (\sec^2 x) = \sec^2 x \cdot \tan x \cdot \tan^2 x - \frac{1}{\sqrt{1 - (\sin^2 x)}}\)</p>
+
+<h2>(v)</h2>
+<p><strong>Solution:</strong></p>
+<p>Let \(y = \sin^{-1}(1 - 2x^2)\)</p>
+<p>Put \(y = \sin \theta\). Then \(y = \sin^{-1}(1 - 2\sin^2 \theta)\)</p>
+<p>\(y = \sin^{-1}(\cos 2\theta) = \sin^{-1}(\sin(\frac{\pi}{2} - 2\theta)) = \frac{\pi}{2} - 2\theta = \frac{\pi}{2} - 2\sin^{-1} x\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>\(\frac{dy}{dx} = \frac{d}{dx}\left(\frac{\pi}{2} - 2\sin^{-1} x\right) = 0 - 2 \cdot \frac{1}{\sqrt{1 - x^2}} = -\frac{2}{\sqrt{1 - x^2}}\)</p>
+
+<h2>(vi)</h2>
+<p><strong>Solution:</strong></p>
+<p>Let \(y = \cos^{-1}(4x^3 - 3x)\)</p>
+<p>Put \(x = \cos \theta\). Then \(y = \cos^{-1}(4\cos^3 \theta - 3\cos \theta)\)</p>
+<p>\(y = \cos^{-1}(\cos 3\theta) = 3\theta = 3\cos^{-1} x\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>\(\frac{dy}{dx} = 3 \cdot \frac{d}{dx}(\cos^{-1} x) = -3 \cdot \frac{1}{\sqrt{1 - x^2}} = -\frac{3}{\sqrt{1 - x^2}}\)</p>
+
+<h2>(vii)</h2>
+<p><strong>Solution:</strong></p>
+<p>Let \(y = \cos^{-1}\left(\frac{1 - x^2}{1 + x^2}\right)\)</p>
+<p>Put \(x = \tan \theta\). Then \(y = \cos^{-1}\left(\frac{1 - \tan^2 \theta}{1 + \tan^2 \theta}\right)\)</p>
+<p>Or, \(y = \cos^{-1}(\cos 2\theta) = 2\theta = 2\tan^{-1} x\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>\(\frac{dy}{dx} = 2 \cdot \frac{d}{dx}(\tan^{-1} x) = 2 \cdot \frac{1}{1 + x^2} = \frac{2}{1 + x^2}\)</p>
+
+<h2>(viii)</h2>
+<p><strong>Solution:</strong></p>
+<p>Let \(y = \tan^{-1}\left(\frac{1 - x^2}{1 + x^2}\right)\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>\(\frac{dy}{dx} = \frac{d}{dx}(\tan^{-1} 1 - x^2) = \frac{d(\tan^{-1} 1 - x^2)}{d(1 - x^2)} \cdot \frac{d(1 - x^2)}{dx}\)</p>
+<p>\(= \frac{1}{(1 - x^2)^2} \cdot (1 - x^2) \cdot 0 - 1 \cdot \frac{-2x}{(1 - x^2)^2} = \frac{2x}{(1 - x^2)^2}\)</p>
+
+<h2>(ix)</h2>
+<p><strong>Solution:</strong></p>
+<p>Let \(y = \tan^{-1}\left(\frac{\sin^2 x}{1 + \cos^2 x}\right) = \tan^{-1}(2\sin x \cos x / 2\cos^2 x)\)</p>
+<p>\(= \tan^{-1}(\tan x) = x\)</p>
+<p>Differentiating both sides w.r.t. \(x\)</p>
+<p>\(\frac{dy}{dx} = \frac{d}{dx}(x) = 1\)</p>
+
+
+<h4>(x)</h4>
+<p>
+Soln:
+<br>
+Let \(y = \sec^{-1}\left(\frac{{1-x^2}}{{\sqrt{1-x^2}}}\right)\)
+<br>
+Put \(x = \sin\theta\), then \(y = \sec^{-1}\left(\frac{{1-\sin^2\theta}}{{\sqrt{1-\sin^2\theta}}}\right)\)
+<br>
+= \(\sec^{-1}\left(\frac{{1-\cos^2\theta}}{{\sqrt{\cos^2\theta}}}\right)\)
+<br>
+\(y = \sec^{-1}(\cos\theta)\)
+<br>
+= \(\theta = \sin^{-1}x\)
+</p>
+<p>
+Differentiating both sides w.r.t. x:
+<br>
+Or, \(\frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\sin^{-1}x) = \frac{{1}}{{\sqrt{1-x^2}}}\)
+</p>
+<h4>(xi)</h4>
+<p>
+Soln:
+<br>
+Let \(y = \tan^{-1}\left(\frac{{2x}}{{1-x^2}}\right)\)
+<br>
+Put \(x = \tan\theta\), then \(y = \tan^{-1}\left(\frac{{2\tan\theta}}{{1-\tan^2\theta}}\right)\)
+<br>
+Or, \(y = \tan^{-1}(\tan 2\theta) = 2\theta = 2\tan^{-1}x\)
+</p>
+<p>
+Differentiating both sides w.r.t. x:
+<br>
+Or, \(\frac{{dy}}{{dx}} = 2\cdot\frac{{d}}{{dx}}(\tan^{-1}x) = \frac{{2}}{{1+x^2}}\)
+</p>
+<h4>8.</h4>
+<h5>(i)</h5>
+<p>
+Soln:
+<br>
+Or, \(x + y = \sin y\).
+<br>
+Differentiating both sides with respect to x:
+<br>
+Or, \(\frac{{d}}{{dx}}(x + y) = \frac{{d}}{{dx}}(\sin y)\)
+<br>
+Or, \(\frac{{d}}{{dx}}(x) + \frac{{dy}}{{dx}} = \cos y \cdot \frac{{dy}}{{dx}}\)
+<br>
+Or, \(1 + \frac{{dy}}{{dx}} = \cos y \cdot \frac{{dy}}{{dx}}\)
+<br>
+Or, \(1 = \cos y \cdot \frac{{dy}}{{dx}} - \frac{{dy}}{{dx}}\)
+<br>
+Or, \(1 = (\cos y - 1) \cdot \frac{{dy}}{{dx}}\)
+<br>
+So, \(\frac{{dy}}{{dx}} = \frac{{1}}{{\cos y - 1}}\)
+</p>
+<h5>(ii)</h5>
+<p>
+Soln:
+<br>
+Or, \(x + y = \cos(x - y)\)
+<br>
+Differentiating both sides with respect to x:
+<br>
+Or, \(\frac{{d}}{{dx}}(x + y) = \frac{{d}}{{dx}}(\cos(x - y))\)
+<br>
+Or, \(\frac{{d}}{{dx}} + \frac{{dy}}{{dx}} = \frac{{d}}{{dx}}(\cos(x - y))\)
+<br>
+Or, \(1 + \frac{{dy}}{{dx}} = -\sin(x - y) \cdot (1 - \frac{{dy}}{{dx}})\)
+<br>
+Or, \(1 + \frac{{dy}}{{dx}} = -\sin(x + y) + \sin(x - y) \cdot \frac{{dy}}{{dx}}\)
+<br>
+Or, \(1 + \sin(x - y) = \sin(x - y) \cdot \frac{{dy}}{{dx}} - \frac{{dy}}{{dx}}\)
+<br>
+Or, \(1 + \sin(x - y) = (\sin(x - y) - 1) \cdot \frac{{dy}}{{dx}}\)
+<br>
+So, \(\frac{{dy}}{{dx}} = \frac{{1 + \sin(x - y)}}{{\sin(x - y) - 1}}\)
+</p>
+<h5>(iii)</h5>
+<p>
+Soln:
+<br>
+Or, \(x - y = \tan(xy)\)
+<br>
+Differentiating both sides with respect to x:
+<br>
+Or, \(\frac{{d}}{{dx}}(x - y) = \frac{{d}}{{dx}}(\tan(xy))\)
+<br>
+Or, \(1 - \frac{{dy}}{{dx}} = \sec^2(xy) \cdot (x \cdot \frac{{dy}}{{dx}} + y \cdot \frac{{dx}}{{dx}})\)
+<br>
+Or, \(1 - \frac{{dy}}{{dx}} = x \sec^2(xy) \cdot \frac{{dy}}{{dx}} + y \sec^2(xy)\)
+<br>
+Or, \(1 - y \sec^2(xy) = (x \sec^2(xy) + 1) \cdot \frac{{dy}}{{dx}}\)
+<br>
+So, \(\frac{{dy}}{{dx}} = \frac{{1 - y \sec^2(xy)}}{{x \sec^2(xy) + 1}}\)
+</p>
+<h5>(iv)</h5>
+<p>
+Soln:
+<br>
+Or, \(x^2y = \sec(xy^2)\)
+<br>
+Differentiating both sides with respect to x:
+<br>
+Or, \(\frac{{d}}{{dx}}(x^2y) = \frac{{d}}{{dx}}(\sec(xy^2))\)
+<br>
+Or, \(x^2 \cdot \frac{{dy}}{{dx}} + y \cdot \frac{{dx}}{{dx}} = \sec^2(xy) \cdot (x \cdot \frac{{dy}}{{dx}} \cdot y^2 + 2y \cdot \frac{{dx}}{{dx}})\)
+<br>
+Or, \(x^2 \cdot \frac{{dy}}{{dx}} + y = \sec^2(xy) \cdot (x \cdot y^2 \cdot \frac{{dy}}{{dx}} + 2y)\)
+<br>
+Or, \(x^2 \cdot \frac{{dy}}{{dx}} + y = x \cdot y^2 \cdot \sec^2(xy) \cdot \frac{{dy}}{{dx}} + 2y \cdot \sec^2(xy)\)
+<br>
+Or, \(2y - y \cdot \sec^2(xy) = (x \cdot y^2 \cdot \sec^2(xy) - x^2) \cdot \frac{{dy}}{{dx}}\)
+<br>
+So, \(\frac{{dy}}{{dx}} = \frac{{2y - y \cdot \sec^2(xy)}}{{x \cdot y^2 \cdot \sec^2(xy) - x^2}}\)
+</p>
+
+
+<h2>(v)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Or, \(x^2y = (ax + by)\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{d}{dx}(x^2y^2) = \frac{d}{dx}(\tan(ax + by))\)</p>
+  <p>Or, \(x^2\frac{dy}{dx} + y^2\frac{d}{dx}(x^2) = \frac{d}{d(ax+by)}(\tan(ax+by))\frac{d(ax+by)}{dx}\)</p>
+  <p>Or, \(x^2\frac{dy}{dx} + y^2\cdot 2x = \sec^2 (ax + by)(a\frac{dx}{dx}+b\frac{dy}{dx})\)</p>
+  <p>Or, \(x^2\frac{dy}{dx} + 2xy^2 = a\sec^2 (ax + b) + b\sec^2(ax + b) \frac{dy}{dx}\)</p>
+  <p>Or, \(2xy^2 - a\sec^2(ax + by) = b\sec^2(ax + b) \frac{dy}{dx} - 2x^2y \frac{dy}{dx}\)</p>
+  <p>Or, \(2xy^2 - a\sec^2(ax + by) = \left(b\sec^2(ax + by) - 2x^2y\right)\frac{dy}{dx}\)</p>
+  <p>So, \(\frac{dy}{dx} = \frac{2xy^2 - a\sec^2(ax+b)}{b\sec^2(ax+b) - 2x^2y}\)</p>
+
+  <h2>(vi)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Or, \(x^2 + y^2 = \sin(xy)\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{d}{dx}(x^2 + y^2) = \frac{d}{dx}(\sin(xy))\)</p>
+  <p>Or, \(2x + \frac{dy}{dx}\cdot 2y = \cos(xy)(x\frac{dy}{dx}+y\frac{dx}{dx})\)</p>
+  <p>Or, \(2x + 2y \frac{dy}{dx} = x\cos(xy) \frac{dy}{dx} + y\cos(xy) \cdot 1\)</p>
+  <p>Or, \(2x - y\cos(xy) = x\cos(xy) \frac{dy}{dx} - 2y \frac{dy}{dx}\)</p>
+  <p>Or, \(2x - y\cos(xy) = (x\cos(xy) - 2y) \frac{dy}{dx}\)</p>
+  <p>So, \(\frac{dy}{dx} = \frac{2x - y\cos(xy)}{x\cos(xy) - 2y}\)</p>
+
+  <h2>(vii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Or, \(x^2y^2 = \tan(xy)\)</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{d}{dx}(x^2y^2) = \frac{d}{dx}(\tan(xy))\)</p>
+  <p>Or, \(x^2\frac{dy}{dx} + y^2\frac{dx^2}{dx} = \frac{d}{d(xy)}(\tan(xy))\frac{d(xy)}{dx}\)</p>
+  <p>Or, \(x^2\frac{dy}{dx} + y^2\cdot 2x = \sec^2(xy)(x\frac{dy}{dx}+y\frac{dx}{dx})\)</p>
+  <p>Or, \(x^2\cdot 2y\frac{dy}{dx} + 2xy^2 = \sec^2(xy)(-x\frac{dy}{dx}) + y\sec^2(xy) \cdot 1\)</p>
+  <p>Or, \(2xy^2 - y\sec^2(xy) = -x\sec^2(xy)\frac{dy}{dx} + y\sec^2(xy) \cdot 1\)</p>
+  <p>Or, \(2xy^2 - y\sec^2(xy) = \left(-x\sec^2(xy) + y\sec^2(xy)\right)\frac{dy}{dx}\)</p>
+  <p>So, \(\frac{dy}{dx} = \frac{2xy^2 - y\sec^2(xy)}{-x\sec^2(xy) + y\sec^2(xy)}\)</p>
+
+  <h2>(viii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Or, \(xy = \sec(x - y)\).</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{d}{dx}(xy) = \frac{d}{dx}(\sec(x-y))\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y\frac{dx}{dx} = \frac{d}{d(x-y)}(\sec(x-y))\frac{d(x-y)}{dx}\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y = \sec(x-y)\tan(x-y) \left(1 - \frac{dy}{dx}\right)\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y = \sec(x-y)\tan(x-y) - \sec(x-y)\tan(x-y) \frac{dy}{dx}\)</p>
+  <p>Or, \((x + \sec(x-y)\tan(x-y))\frac{dy}{dx} = \sec(x-y)\tan(x-y) - y\)</p>
+  <p>So, \(\frac{dy}{dx} = \frac{\sec(x-y)\tan(x-y) - y}{x + \sec(x-y)\tan(x-y)}\)</p>
+
+  <h2>(ix)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>Or, \(xy = \tan(x^2 + y^2)\).</p>
+  <p>Differentiating both sides with respect to \(x\).</p>
+  <p>Or, \(\frac{d}{dx}(xy) = \frac{d}{dx}(\tan(x^2 + y^2))\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y\frac{dx}{dx} = \frac{d}{d(x^2+y^2)}(\tan(x^2+y^2))\frac{d(x^2+y^2)}{dx}\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y = \sec^2(x^2 + y^2)(2x\frac{dx}{dx} + 2y\frac{dy}{dx})\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y = \sec^2(x^2 + y^2)(2x + 2y\frac{dy}{dx})\)</p>
+  <p>Or, \(x\frac{dy}{dx} + y = 2x\sec^2(x^2 + y^2) + 2y\sec^2(x^2 + y^2) \frac{dy}{dx}\)</p>
+  <p>Or, \(y - 2x\sec^2(x^2 + y^2) = (2y\sec^2(x^2 + y^2) - x) \frac{dy}{dx}\)</p>
+  <p>So, \(\frac{dy}{dx} = \frac{y - 2x\sec^2(x^2 + y^2)}{2y\sec^2(x^2 + y^2) - x}\)</p>
+
+
+
+  
+<h4>9.</h4>
+<h5>(i)</h5>
+<p>Soln:</p>
+<p>\(x = a\cos^2\theta\)</p>
+<p>Differentiating both sides w.r.t. \(\theta\),</p>
+<p>Or, \(\frac{dx}{d\theta} = a\cdot\frac{d(\cos^2\theta)}{d(\cos\theta)}\cdot\frac{d(\cos\theta)}{d(\cos\theta)}\cdot\frac{d\theta}{d\theta} = a\cdot2\cos\theta\cdot(-\sin\theta) = -2a\sin\theta\cos\theta\).</p>
+<p>\(y = b\sin^2\theta\)</p>
+<p>or, \(\frac{dy}{dx} = b\cdot\frac{d(\sin^2\theta)}{d(\sin\theta)}\cdot\frac{d(\sin\theta)}{d(\sin\theta)}\cdot\frac{d\theta}{d\theta}\).</p>
+<p>= \(b\cdot2\sin\theta\cdot\cos\theta = 2b\sin\theta\cos\theta\).</p>
+<p>Or, \(\frac{dy}{dx} = \frac{dy}{d\theta}\cdot\frac{d\theta}{dx} = 2b\sin\theta\cos\theta - 2a\sin\theta\cos\theta = -a\).</p>
+<h5>(ii)</h5>
+<p>Soln:</p>
+<p>\(x = 2a\sin t\cos t = a\sin^2t\).</p>
+<p>Differentiating both sides w.r.t. t,</p>
+<p>Or, \(\frac{dx}{dt} = a\cdot\frac{d(\sin^2t)}{dt}\cdot\frac{dt}{dt} = a\cos 2t\cdot2 = 2a\cos 2t\).</p>
+<p>\(y = b\cos 2t.\)</p>
+<p>Differentiating both sides w.r.t. \(\theta\),</p>
+<p>or, \(\frac{dy}{dt} = b\cdot\frac{d(\cos 2t)}{dt}\cdot\frac{dt}{dt} = -2b\sin 2t\).</p>
+<p>Or, \(\frac{dy}{dx} = \frac{dy}{dt}\cdot\frac{dt}{dx} = -2b\sin 2t\cdot\frac{1}{2a\cos 2t} = -\frac{ba}{\cos 2t}.\)</p>
+<h5>(iii)</h5>
+<p>Soln:</p>
+<p>\(x = 2a\tan\theta\)</p>
+<p>Differentiating both sides w.r.t. \(\theta\),</p>
+<p>Or, \(\frac{dx}{d\theta} = 2a\cdot\frac{d(\tan\theta)}{d(\tan\theta)} = 2a\sec^2\theta\).</p>
+<p>\(y = a\sec^2\theta\)</p>
+<p>Differentiating both sides w.r.t. \(\theta\),</p>
+<p>or, \(\frac{dy}{d\theta} = a\cdot\frac{d(\sec^2\theta)}{d(\sec\theta)}\cdot\frac{d(\sec\theta)}{d(\sec\theta)}\cdot\frac{d\theta}{d\theta} = a\cdot2\sec\theta\sec\theta\tan\theta = 2a\sec^2\theta\tan\theta\).</p>
+<p>Or, \(\frac{dy}{dx} = \frac{dy}{d\theta}\cdot\frac{d\theta}{dx} = 2a\sec^2\theta\tan\theta\cdot\frac{1}{2a\sec^2\theta} = \tan\theta\).</p>
+<h5>(iv)</h5>
+<p>Soln:</p>
+<p>\(x = \tan t\)</p>
+<p>Differentiating both sides w.r.t. t,</p>
+<p>Or, \(\frac{dx}{dt} = \frac{d(\tan t)}{dt} = \sec^2t\).</p>
+<p>\(y = \sin t\cos t\)</p>
+<p>Differentiating both sides w.r.t. \(\theta\),</p>
+<p>or, \(\frac{dy}{dt} = \frac{d(\sin t\cos t)}{dt} = \sin t\cdot\frac{d(\cos t)}{dt} + \cos t\cdot\frac{d(\sin t)}{dt} = \sin t(-\sin t) + \cos t\cos t = \cos^2t - \sin^2t\).</p>
+<p>Or, \(\frac{dy}{dx} = \frac{dy}{dt}\cdot\frac{dt}{dx} = (\cos^2t - \sin^2t)\cdot\frac{1}{\sec^2t} = \cos^2t - \sin^2t.\).</p>
+<h5>(v)</h5>
+<p>Soln:</p>
+<p>\(x = a(\cos t + t\sin t)\)</p>
+<p>Differentiating both sides w.r.t. t,</p>
+<p>Or, \(\frac{dx}{dt} = a\cdot\frac{d(\cos t + t\sin t)}{dt} = a(-\sin t + \sin t + t\cos t) = at\cos t.\)</p>
+<p>\(y = a(\sin t - t\cos t)\)</p>
+<p>Differentiating both sides w.r.t. \(\theta\),</p>
+<p>or, \(\frac{dy}{dt} = a\cdot\frac{d(\sin t - t\cos t)}{dt} = a(\cos t - \cos t + t\sin t) = at\sin t.\)</p>
+<p>Or, \(\frac{dy}{dx} = \frac{dy}{dt}\cdot\frac{dt}{dx} = at\sin t\cdot\frac{1}{at\cos t} = \tan t.\)</p>
+
+
+<h2>(vi)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>\(x = a(\tan t - t\sec^2 t)\)</p>
+  <p>Differentiating both sides with respect to \(t\),</p>
+  <p>Or, \(\frac{dx}{dt} = a \cdot \frac{d}{dt}(\tan t - t\sec^2 t)\)</p>
+  <p>\(= a\left[\frac{d}{dt}(\tan t) - \left\{t\left(\frac{d(\sec^2 t)}{dt}\right) + \sec^2 t \cdot \frac{dt}{dt}\right\}\right]\)</p>
+  <p>\(= a(\sec^3 t - (t \cdot 2\sec t \cdot \sec t \cdot \tan t + \sec^2 t))\)</p>
+  <p>\(= a(\sec^2 t - 2t \sec^2 t \tan t - \sec^2 t) = -2at \sec^2 t \tan t\)</p>
+  <p>\(y = a\sec^2 t\)</p>
+  <p>Differentiating both sides with respect to \(t\).</p>
+  <p>Or, \(\frac{dy}{dt} = a \cdot \frac{d}{dt}(\sec^2 t) = a \cdot 2\sec t \cdot \sec t \cdot \tan t = 2a \sec^2 t \tan t\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{dy}{dt} \cdot \frac{dt}{dx} = 2a \sec^2 t \tan t \cdot \frac{1}{-2at \sec^2 t \tan t} = -1\)</p>
+
+  <h2>(vii)</h2>
+  <p><strong>Solution:</strong></p>
+  <p>\(x = a(t + \sin t)\)</p>
+  <p>Differentiating both sides with respect to \(t\),</p>
+  <p>\(\frac{dx}{dt} = a \cdot \frac{d}{dt}(t + \sin t) = a \cdot \left(\frac{d}{dt}t + \frac{d}{dt}\sin t\right) = a(1 + \cos t)\)</p>
+  <p>\(y = a(1 - \cos t)\)</p>
+  <p>Differentiating both sides with respect to \(t\).</p>
+  <p>Or, \(\frac{dy}{dt} = a \cdot \frac{d}{dt}(1 - \cos t) = a \cdot \left(\frac{d}{dt}1 - \frac{d}{dt}\cos t\right) = a(0 - (-\sin t)) = a\sin t\)</p>
+  <p>Or, \(\frac{dy}{dx} = \frac{dy}{dt} \cdot \frac{dt}{dx} = a \sin t \cdot \frac{1}{a(1 + \cos t)} = \frac{\sin t}{1 + \cos t} = \frac{2\sin t \cdot \cos t}{2(1 + \cos t)} = \tan \frac{t}{2}\)</p>
+
+  <h2>10.</h2>
+  <p><strong>(i)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \sin x\).</p>
+  <p>Differentiating both sides with respect to \(\cos x\).</p>
+  <p>Or, \(\frac{dy}{d(\cos x)} = \frac{d(\sin x)}{d(\cos x)} = \frac{d(\sin x)}{dx} \cdot \frac{dx}{d(\cos x)} = \cos x - \sin x\)</p>
+  <p>So, \(\frac{dy}{d(\cos x)} = -\cot x\).</p>
+
+  <p><strong>(ii)</strong></p>
+  <p><strong>Solution:</strong></p>
+  <p>Let \(y = \tan x\).</p>
+  <p>Differentiating both sides with respect to \(\sec x\).</p>
+  <p>Or, \(\frac{dy}{d(\sec x)} = \frac{d(\tan x)}{d(\sec x)} = \frac{d(\tan x)}{dx} \cdot \frac{dx}{d(\sec x)} = \sec^2 x \cdot \sec x \cdot \tan x = \sec x \tan x = \csc x\).</p>
+
+ 
+<ol>
+    <li>
+    <h4>(iii)</h4>
+    <p>
+    Soln:
+    <br>
+    Let \( y = \sec^2x \).
+    <br>
+    Diff. both sides w.r.t. \( \tan x \).
+    <br>
+    Or, \( \frac{{dy}}{{d(\tan x)}} = \frac{{d(\sec^2x)}}{{d(\tan x)}} = \frac{{d(\sec^2x)}}{{dx}} \cdot \frac{{d(\tan x)}}{{d(\tan x)}} \cdot dx
+    <br>
+    = \frac{{d(\sec^2x)}}{{dx}} \cdot \frac{{d(\tan x)}}{{d(\tan x)}} \cdot dx
+    <br>
+    = \frac{{d(\sec^2x)}}{{dx}} \cdot \sec x \cdot \tan x \cdot \sec^2x
+    <br>
+    = 2\sec x \cdot \sec x \cdot \tan x \cdot \sec^2x
+    <br>
+    So, \( \frac{{dy}}{{d(\tan x)}} = 2\tan x \).
+    </p>
+    </li>
+    <li>
+    <h4>(iv)</h4>
+    <p>
+    Soln:
+    <br>
+    Let \( y = \csc x \).
+    <br>
+    Diff. both sides w.r.t. \( \cot x \).
+    <br>
+    Or, \( \frac{{dy}}{{d(\cot x)}} = \frac{{d(\csc x)}}{{d(\cot x)}} = \frac{{d(\csc x)}}{{dx}} \cdot \frac{{d(\cot x)}}{{d(\cot x)}} \cdot dx
+    <br>
+    = \frac{{d(\csc x)}}{{dx}} \cdot \frac{{d(\cot x)}}{{d(\cot x)}} \cdot dx
+    <br>
+    = -\csc x \cdot \cot x - \csc^2x
+    <br>
+    = \cos x
+    <br>
+    So, \( \frac{{dy}}{{d(\cot x)}} = \cos x \).
+    </p>
+    </li>
+    <li>
+    <h4>11.</h4>
+    <ol type="a">
+    <li>
+    <h4>a.</h4>
+    <p>
+    Soln:
+    <br>
+    Let \( y = \cos x^\circ \).
+    <br>
+    Diff. both sides w.r.t. \( 'x' \),
+    <br>
+    Or, \( \frac{{dy}}{{dx}} = \frac{{d(\cos x^\circ)}}{{dx}} = \frac{{d(\cos x^\circ)}}{{dx^\circ}} \cdot \frac{{dx^\circ}}{{dx}}
+    <br>
+    = -\sin x^\circ \cdot \frac{{d(\pi x/180)}}{{dx}}
+    <br>
+    [1° = \pi/180 radians]
+    <br>
+    = -\sin x^\circ \cdot \frac{{\pi}}{{180}}
+    <br>
+    So, \( \frac{{dy}}{{dx}} = -\frac{{\pi}}{{180}} \sin x^\circ \)
+    </p>
+    </li>
+    <li>
+    <h4>b.</h4>
+    <p>
+    Soln:
+    <br>
+    Let \( y = x \sin x^\circ \).
+    <br>
+    Diff. both sides w.r.t. \( 'x' \),
+    <br>
+    Or, \( \frac{{dy}}{{dx}} = \frac{{d(x \sin x^\circ)}}{{dx}} = \frac{{d(\sin x^\circ)}}{{dx^\circ}} \cdot \frac{{dx^\circ}}{{dx}} + x \cdot \frac{{d(\sin x^\circ)}}{{dx}}
+    <br>
+    = 1 \cdot \sin x^\circ + x \cdot \frac{{d(\sin x^\circ)}}{{dx^\circ}} \cdot \frac{{dx^\circ}}{{dx}}
+    <br>
+    = \sin x^\circ + x \cdot \cos x^\circ \cdot \frac{{d(\pi/180)}}{{dx}}
+    <br>
+    = \sin x^\circ + x \cdot \cos x^\circ \cdot \frac{{\pi}}{{180}}
+    <br>
+    So, \( \frac{{dy}}{{dx}} = \sin x^\circ + \frac{{\pi}}{{180}} \cdot x \cdot \cos x^\circ \)
+    </p>
+    </li>
+    </ol>
+    </li>
+    </ol>
+ 
+
+    </div>
+  
+    <div id="videos-container" class="container" style="display:none">
+    
+    </div>
+
+    <div id="remnant-container" class="container" style="display:none">
+    
+    </div>
+    
+ 
+    
+   <script src="/script/bookscript.js"></script>
+   
+   <footer>
+      <p>&copy; 2023 GameChanger</p>
+      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+    </footer>
+  
+  </body>
+</html>
