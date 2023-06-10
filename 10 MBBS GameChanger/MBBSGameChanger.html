@@ -7,6 +7,19 @@
     <script src="https://kit.fontawesome.com/920bcd065f.js" crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        // Retrieve user data from local storage
+const user = getUserData();
+if (user) {
+  // User is signed in, you can access the user's information
+  console.log(`Signed in as: ${user.email}`);
+} else {
+  // User is not signed in
+  console.log('User not signed in.');
+}
+
+    </script>
 </head>
 
 <body>

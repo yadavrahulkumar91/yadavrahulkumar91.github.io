@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign in</title>
+  <style>
+    /* CSS styles for the sign-in page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form class="sign-in">
+    <h1>Sign in</h1>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <button type="submit" id="signin-btn">Sign in</button><br>
+    <button onclick="window.location.href='resetPassword.html'">Forget password</button><br>
+    <button class="sign-up-button" onclick="window.location.href='signupform.html'">Sign Up</button>
+
+    <div class="error" id="error-message"></div>
+  </form>
+  <!-- Include Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase app
+    const firebaseConfig = {
+      apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
+      authDomain: "gamechanger-f5da7.firebaseapp.com",
+      databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
+      projectId: "gamechanger-f5da7",
+      storageBucket: "gamechanger-f5da7.appspot.com",
+      messagingSenderId: "358268649157",
+      appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
+      measurementId: "G-QBH1QYTY8V"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the auth service
+    const auth = firebase.auth();
+
+    const errorMessage = document.getElementById('error-message');
+    // Add sign in event listener
+    const signinBtn = document.getElementById('signin-btn');
+    signinBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Sign in with email and password
+      auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Check if user email is verified
+          if (userCredential.user.emailVerified) {
+            // User signed in successfully
+            const user = userCredential.user;
+            console.log(`User ${user.email} signed in successfully.`);
+            window.location.href = "index.html";
+          } else {
+            // Email not verified, display error message
+            const errorMessageText = 'Please verify your email before signing in.';
+            console.error(errorMessageText);
+            errorMessage.textContent = errorMessageText;
+          }
+        })
+        .catch((error) => {
+          // Handle errors
+          const errorCode = error.code;
+          const errorMessageText = error.message;
+          console.error(`Error: ${errorCode} - ${errorMessageText}`);
+          errorMessage.textContent = `Error: ${errorCode} - ${errorMessageText}`;
+        });
+    });
+  </script>
+</body>
+
+</html>

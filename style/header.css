@@ -6,8 +6,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: #692323;
-    color: #fff;
-    z-index: 100;
+   
+    
 }
 
 .title-wrapper {
@@ -25,35 +25,6 @@
     color: #ccc;
 }
 
-.forms {
-    display: absolute;
-    align-items:
-}
-
-.sign-in,
-.sign-up {
-    position: relative;
-}
-
-.sign-in-form,
-.sign-up-form {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 20%;
-    padding: 10px;
-    background-color: #f1f1f1;
-    z-index: 100;
-}
-
-.forms .sign-up {
-    margin-right: 10px;
-}
-
-.sign-in:hover .sign-in-form,
-.sign-up:hover .sign-up-form {
-    display: block;
-}
 
 header .logo img {
     float: left;
