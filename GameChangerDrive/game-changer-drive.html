@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GameChanger Drive</title>
+  <link rel="stylesheet" href="game-changer-drive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="menu-toggle-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar">
+      <div class="menu">
+        <div class="menu-item">
+          <i class="fas fa-user"></i>
+          <span>User Profile</span>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-language"></i>
+          <span>Language</span>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-life-ring"></i>
+          <span>Support</span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Welcome to GameChanger Drive</h1>
+      <div id="map"></div>
+      <div class="mode-selection">
+        <button id="passenger-mode">Passenger Mode</button>
+        <button id="driver-mode">Driver Mode</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js"></script>
+  <script src="game-changer-drive.js"></script>
+</body>
+</html>

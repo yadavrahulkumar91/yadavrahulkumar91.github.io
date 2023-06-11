@@ -1,0 +1,184 @@
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.close-button {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    color: black;
+}
+
+.modal h1 {
+    text-align: center;
+    color: black;
+}
+
+.modal form {
+    width: 100%;
+}
+
+.modal label,
+.modal input,
+.modal button {
+
+    margin-bottom: 10px;
+    color: black;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    /* Replace 'Open Sans' with your desired Google Font */
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    /* Replace 'Open Sans' with your desired Google Font */
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0066ff;
+    /* Customize the focus color as needed */
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    /* Replace 'Open Sans' with your desired Google Font */
+}
+
+.button:hover {
+    background-color: #23527c;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    background-color: #1d466b;
+}
+
+
+
+.error,
+.message {
+    color: red;
+    margin-top: 10px;
+}
+
+.sign-up-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.sign-up-link span {
+    margin-right: 5px;
+}
+
+.link-label {
+    display: inline-block;
+    color: #337ab7;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.link-label:hover {
+    color: #23527c;
+}
+
+.link-label:focus {
+    outline: none;
+    text-decoration: underline;
+}
+
+.link-label:active {
+    color: #1d466b;
+}
+
+
+
+
+.link {
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #337ab7;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #337ab7;
+}
+
+.link:hover {
+    background-color: #f0f0f0;
+}
+
+.link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(51, 122, 183, 0.3);
+}
+
+.link:active {
+    background-color: #e6e6e6;
+}
+
+
+#sign-up-id {
+    display: none;
+}
+
+#reset-password-id {
+    display: none;
+}
+
+#change-password-id {
+    display: none;
+}
