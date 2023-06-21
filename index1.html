@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>GameChanger - Change the game of your field</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/style/index.css">
+	<link rel="stylesheet" type="text/css" href="/style/user-profile.css">
+	<link rel="icon" type="image/x-icon" href="GCround.png">
+	<link rel="stylesheet" type="text/css" href="/style/header.css">
+	<script src="/script/user-profile1.js"></script>
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<!-- Add the Firebase Storage library -->
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> 
+
+	
+	<script src="/script/firebase-config.js"></script>
+
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="logo">
+			<img src="/image/GCround.png" alt="Logo">
+		</div>
+		<div class="title-wrapper">
+			<h1 class="title">GameChanger Academy</h1>
+			<p class="subtitle">Transforming Education</p>
+		</div>
+
+
+		<div id="user-profile" style="display: none;" onclick="showUserSection(event)">
+			<span id="user-email"></span><br>
+			<span id="user-display-name"></span>
+			<span id="user-date-of-birth">Hi</span>
+			<span id="user-phone-number">Hi</span>
+			<span>I am here</span>
+			<!--
+		  <img id="profilePic" src="" alt="User Profile Picture">
+		  <span id="username"></span>
+		  -->
+		</div>
+
+		<div class="sign-in-button" id="sign-in-sign-up" onclick="openSignIn(event)">LOGIN/ SIGNUP</div>
+	</header>
+
+	<div class="modal-bg" id="modal-bg">
+		<div class="modal">
+			<div class="close-button" onclick="closeSignIn(event)">&times;</div>
+			<form class="sign-in-form" id="sign-in-id">
+				<h1>Sign in</h1>
+				<label class="form-label" for="email">Email:</label>
+				<input class="form-input" type="email" id="sign-in-email" name="email" required><br>
+				<label class="form-label" for="password">Password:</label>
+				<input class="form-input" type="password" id="sign-in-password" name="password" required><br>
+				<button class="button" type="submit" id="signin-btn">Sign in</button><br>
+
+				<div class="sign-up-link" onclick="showResetPassword(event)">
+					<span class="link-label">Forgot password!</span>
+				</div>
+				<div class="sign-up-link" onclick="showSignUp(event)">
+					<span class="link-label">Don’t have an account?</span>
+				</div>
+
+				<div class="error" id="sign-in-message"></div>
+			</form>
+
+			<form class="sign-up-form" id="sign-up-id">
+				<h1>Sign Up</h1>
+				<div id="form">
+				  <label class="form-label" for="email">Email:</label>
+				  <input class="form-input" type="email" id="sign-up-email" name="email" required><br>
+				  
+				  <label class="form-label" for="password">Password:</label>
+				  <input class="form-input" type="password" id="sign-up-password" name="password" required><br>
+				  
+				  <label class="form-label" for="first-name">First Name:</label>
+				  <input class="form-input" type="text" id="first-name" name="first-name" required><br>
+				  
+				  <label class="form-label" for="last-name">Last Name:</label>
+				  <input class="form-input" type="text" id="last-name" name="last-name" required><br>
+				  
+				  <label class="form-label" for="middle-name">Middle Name:</label>
+				  <input class="form-input" type="text" id="middle-name" name="middle-name"><br>
+				  
+				  <label class="form-label" for="phone-number">Phone Number:</label>
+				  <input class="form-input" type="tel" id="phone-number" name="phone-number"><br>
+				  
+				  <label class="form-label" for="photo">Photo:</label>
+				  <input class="form-input" type="file" id="photo" name="photo"><br>
+				  
+				  <label class="form-label" for="date-of-birth">Date of Birth:</label>
+				  <input class="form-input" type="date" id="date-of-birth" name="date-of-birth"><br>
+				  
+				  <div class="message" id="sign-up-message"></div>
+				  
+				  <button class="button" type="submit" id="signup-btn">Sign Up</button>
+				  
+				  <div class="sign-up-link" onclick="showSignIn(event)">
+					<span class="link-label">Already have an account.</span>
+				  </div>
+				</div>
+			  </form>
+			  
+
+
+			<div class="reset-password-form" id="reset-password-id">
+				<h1>Password Reset</h1>
+				<label class="form-label" for="email">Email:</label>
+				<input class="form-input" type="email" id="reset-password-email" name="email" required><br>
+				<button class="button" id="reset-password-button">Send Password Reset Email</button>
+				<div class="message" id="reset-password-message"></div>
+
+				<div class="sign-up-link" onclick="showSignIn(event)">
+					<span class="link-label">Password reminded!</span>
+				</div>
+
+			</div>
+
+			<div class="user-section" id="user-section-id">
+				<h2>User Section</h2>
+				<p>You are signed in as: <span class="user-email"></span></p>
+				<button class="button" onclick="signOut()">Sign Out</button>
+				<button class="button" onclick="showChangePassword(event)">Change Password</button>
+			</div>
+
+			<form class="change-password" id="change-password-id">
+				<h2>Change Password</h2>
+				
+				<label for="email" class="form-label">Email:</label>
+				<input type="email" id="change-password-email" name="email" class="form-input" required><br>
+				<label for="current-password" class="form-label">Current Password:</label>
+				<input type="password" id="current-password" name="current-password" class="form-input" required><br>
+				<label for="new-password" class="form-label">New Password:</label>
+				<input type="password" id="new-password" name="new-password" class="form-input" required><br>
+				<div id="error-message" class="error-message"></div>
+				<button type="submit" class="button">Change Password</button>
+			</form>
+
+
+
+
+
+		</div>
+
+	</div>
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<main>
+
+		<!-- Sector options section -->
+		<section class="sector">
+			<h2>Choose Your Sector</h2>
+			<div class="row">
+				<div class="sector-option">
+					<a href="1 Kindergarten GameChanger/kindergartenGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/sector/kindergarten.jpeg" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>Kindergarten</h2>
+								<p class="classes">Playgroup, Nursery, LKG, UKG</p>
+								<p class="description">Preparing your child for the future</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+				<div class="sector-option">
+					<a href="2 Primary schooling - Class 1 to 5 GameGhanger/primarySchoolingGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/sector/primarySchoolingCopy.jpg" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>Primary schooling</h2>
+								<p class="classes">Class 1 to 5</p>
+								<p class="description">Empowering young minds</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+				<div class="sector-option">
+					<a
+						href="3 Upper primary schooling - Class 6 to 8 GameChanger/upperPrimarySchoolingGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/sector/upperPrimarySchooling.jpeg" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>Upper primary schooling </h2>
+								<p class="classes">Class 6 to 8</p>
+								<p class="description">Preparing for success</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+				<div class="sector-option">
+					<a href="4 Secondary schooling - Class 9 and 10 GameChanger/secondarySchoolingGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/sector/secondarySchooling.png" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>Secondary schooling</h2>
+								<p class="classes">Class 9 and 10 </p>
+								<p class="description">Achieving excellence</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+				<div class="sector-option">
+					<a href="5 +2 Entrance Exams GameChanger/+2entranceGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/+2managemententrance.jpg" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>+2 Entrance preparation</h2>
+								<p class="classes">Preparation for St. Xavier's College and Other Top college</p>
+								<p class="description">Opening doors to success</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+
+				<div class="sector-option">
+					<a href="6 NEB GameChanger/NEBGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/sector/NEB.jpeg" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>NEB Board </h2>
+								<p class="classes">Class 11 and 12 of Science faculty</p>
+								<p class="description">Empowering students for success</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+				<div class="sector-option">
+					<a href="9 IOE Entrance preparation GameChanger/ioeEntranceGamechanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="/image/sector/science.gif" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>IOE Entrance preparation GameChanger</h2>
+								<p class="classes">Preparation for IOE, KU and Other top engineering universities</p>
+								<p class="description">Achieve your engineering dreams</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+
+				<div class="sector-option">
+					<a href="7 CEE Medical GameChanger/ceeGamechanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="image/sector/cee.jpeg" alt="your-image-description">
+							</div>
+							<div class="text-container">
+								<h2>CEE preparation</h2>
+								<p class="classes">Preparatio for IOM, BPKIHS, PAHS, NAIHS and Other top medical
+									colleges.</p>
+								<p class="description">Shape your medical career</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+				<!--
+					
+						<div class="sector-option">
+							<a href="cee-paramedical.html">
+								<div class="container">
+									<div class="image-container">
+										<img src="image/mecmedical.jpg" alt="your-image-description">
+									</div>
+									<div class="text-container">
+										<h2>CEE Paramedical GameChanger</h2>
+										<p class="classes">Pave the way for your paramedical career</p>
+										<p class="description">Our CEE paramedical program is designed to help students
+											prepare for the Common Entrance Examination for paramedical courses. With
+											expert guidance and study materials, we help students crack the CEE exams
+											and achieve their dream of pursuing a career in the paramedical field.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+		
+					-->
+
+				<div class="sector-option">
+					<a href="/10 MBBS GameChanger/MBBSGameChanger.html">
+						<div class="container">
+							<div class="image-container">
+								<img src="/image/sector/mbbs.jpeg" alt="MBBS courses">
+							</div>
+							<div class="text-container">
+								<h2>MBBS </h2>
+								<p class="classes">TU, KU</p>
+								<p class="description">Ace your MBBS exams with our expert guidance</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+
+
+
+			</div>
+		</section>
+		</div>
+	</main>
+	<a href="GameChangerDrive/game-changer-drive.html">GameChanger Drive</a>
+
+
+	<!--
+	<main>
+		<h2>Our Services</h2>
+
+		<section class="services">
+			<div class="service-item" onclick="location.href='Books/books.html';">
+				<div class="service-icon">
+					<i class="fas fa-code"></i>
+				</div>
+				<div class="service-content">
+					<h3>Books</h3>
+					<p>We offer a wide range of educational books in both ebook and hardcopy formats. Our books cover
+						various subjects and are designed to help students learn effectively and achieve their academic
+						goals.</p>
+				</div>
+			</div>
+
+			<div class="service-item" onclick="location.href='web-dev.html';">
+				<div class="service-icon">
+					<i class="fas fa-mobile-alt"></i>
+				</div>
+				<div class="service-content">
+					<h3>Physical Coaching Classes</h3>
+					<p>Our physical tuition classes provide personalized and effective academic support for students of
+						all levels from class 1 to 12. We believe that every student has unique needs and learning
+						styles, and we tailor our teaching approach accordingly to help them achieve their full pot.</p>
+				</div>
+			</div>
+
+			<div class="service-item" onclick="location.href='web-dev.html';">
+				<div class="service-icon">
+					<i class="fas fa-database"></i>
+				</div>
+				<div class="service-content">
+					<h3>Online Coaching Classes</h3>
+					<p>Our online classes provide a flexible learning experience for students who prefer to study from
+						the comfort of their homes. Our classes are conducted by expert teachers and cover all levels
+						from playgroup to 12, as well as entrance preparations.</p>
+				</div>
+			</div>
+
+			<div class="service-item" onclick="location.href='web-dev.html';">
+				<div class="service-icon">
+					<i class="fas fa-code"></i>
+				</div>
+				<div class="service-content">
+					<h3>Home tutors</h3>
+					<p>Our home tutor service provides personalized one-on-one tutoring to help students achieve their
+						academic goals. We offer tutoring services for all levels from playgroup to 12, covering a wide
+						range of subjects.</p>
+				</div>
+			</div>
+
+			<div class="service-item" onclick="location.href='web-dev.html';">
+				<div class="service-icon">
+					<i class="fas fa-mobile-alt"></i>
+				</div>
+				<div class="service-content">
+					<h3>Entrance Preparations</h3>
+					<p>We provide preparation classes for various entrance exams, including St. Xavier's Entrance
+						preparation, CEE Medical, CEE Paramedical preparation, and IOE Entrance Preparation. Our classes
+						are designed to help students prepare effectively for these exams and increase their chances of
+						success.</p>
+				</div>
+			</div>
+	</main>
+
+	<main>
+		<section id="features">
+			<h2>Key Features</h2>
+			<div class="feature">
+				<img src="feature-1.png" alt="Cutting-Edge Curriculum">
+				<h3>Cutting-Edge Curriculum</h3>
+				<p>GameChanger Academy offers a cutting-edge curriculum that is designed to provide students with the
+					skills and knowledge needed to excel in today's rapidly evolving world. The Academy focuses on
+					innovative and industry-relevant courses that combine theoretical concepts with practical
+					applications. The curriculum is regularly updated to stay up-to-date with the latest advancements in
+					various fields, ensuring that students receive a top-notch education.</p>
+			</div>
+			<div class="feature">
+				<img src="feature-2.png" alt="Experiential Learning:">
+				<h3>Experiential Learning:</h3>
+				<p>At GameChanger Academy, experiential learning is a key component of the educational approach. The
+					Academy believes in the power of hands-on experiences and real-world applications to enhance
+					learning outcomes. Students are actively involved in projects, case studies, simulations, and
+					internships, allowing them to apply their knowledge in practical settings. This approach not only
+					fosters critical thinking and problem-solving skills but also prepares students to confidently enter
+					the workforce.</p>
+			</div>
+			<div class="feature">
+				<img src="feature-3.png" alt="Feature 3">
+				<h3>Personalized Mentorship:</h3>
+				<p>GameChanger Academy recognizes the importance of personalized mentorship in nurturing the potential
+					of each student. The Academy maintains a low student-to-faculty ratio, ensuring that students
+					receive individual attention and guidance from experienced mentors. These mentors are industry
+					professionals or subject matter experts who provide personalized support, career advice, and
+					mentorship throughout the students' educational journey. The mentorship program helps students
+					identify their strengths, set goals, and make informed decisions about their academic and career
+					paths.</p>
+			</div>
+		</section>
+
+		<section id="success-stories">
+			<h2>Customer Success Stories</h2>
+			<div class="story">
+				<div>
+					<img src="/image/story-1.png" alt="Riwan Sherpa">
+					<h3>Riwan Sherpa</h3>
+				</div>
+				<p>Riwan Sherpa, an exceptional student at Trinity International College of Baghbazar, excelled in the
+					NEB +2 Physical Science program. With a strong passion for science and a determined work ethic,
+					Riwan consistently demonstrated outstanding academic performance. His dedication to his studies,
+					coupled with the guidance and support of Trinity's experienced faculty, allowed him to grasp complex
+					scientific concepts with ease. Riwan actively engaged in practical experiments, research projects,
+					and scientific competitions, honing his analytical and problem-solving skills. As a result of his
+					exemplary academic record, Riwan was admitted to a prestigious engineering program at a renowned
+					university, where he continues to thrive.</p>
+
+			</div>
+			<div class="story">
+				<div>
+					<img src="/image/story-2.png" alt="Dheeraj Danjol">
+					<h3>Dheeraj Danjol</h3>
+				</div>
+				<p>Dheeraj Danjol, another remarkable student at Trinity International College of Baghbazar, showcased
+					his talent and dedication in the NEB +2 Physical Science program. With a strong inclination towards
+					mathematics and physics, Dheeraj consistently topped his class and demonstrated exceptional
+					problem-solving skills. Trinity's supportive learning environment and expert faculty nurtured
+					Dheeraj's talents and provided him with ample opportunities to participate in national-level science
+					competitions and research projects. Dheeraj's passion for innovation and his ability to think
+					critically propelled him to secure admission in a prestigious engineering program at a top-tier
+					university, setting the stage for a successful career in the field of science and technology.</p>
+			</div>
+			<div class="story">
+				<div>
+					<img src="/image/story-3.png" alt="Neha Mandal">
+					<h3>Neha Mandal</h3>
+				</div>
+				<p>Neha Mandal, a bright and determined student, successfully cleared the highly competitive CEE
+					Entrance Exam and gained admission to the prestigious KUSMS (Kathmandu University School of Medical
+					Sciences) college. Neha's journey of academic excellence began at Trinity International College of
+					Baghbazar, where she displayed exceptional aptitude in the field of biology and a deep-rooted
+					passion for medicine. Trinity's comprehensive and rigorous academic program, combined with its
+					dedicated faculty, provided Neha with a solid foundation in the sciences and prepared her thoroughly
+					for the entrance exam. Neha's hard work, coupled with the guidance and mentorship she received at
+					Trinity, enabled her to achieve an outstanding score in the CEE Entrance Exam. Today, Neha is
+					pursuing her dream of becoming a doctor at KUSMS, where she continues to excel in her medical
+					studies, driven by her determination to make a positive impact in the field of healthcare.</p>
+			</div>
+		</section>
+
+		<section id="how-it-works">
+			<h2>How It Works</h2>
+			<div class="step">
+				<h3>Step 1: Enrollment and Assessment</h3>
+				<p>The first step in the process is the enrollment of students at GameChanger Academy. Prospective
+					students go through an application and assessment process, where their academic background,
+					interests, and career goals are evaluated. This helps the Academy understand the unique needs and
+					aspirations of each student.</p>
+			</div>
+			<div class="step">
+				<h3>Step 2: Personalized Program Design</h3>
+				<p>Once enrolled, each student is assigned a dedicated advisor who works closely with them to design a
+					personalized program. Taking into account the student's interests, strengths, and career objectives,
+					the advisor helps the student select the most relevant courses and educational pathways. The program
+					is tailored to ensure a comprehensive and balanced learning experience.</p>
+			</div>
+			<div class="step">
+				<h3>Step 3: Engaging Learning Experience</h3>
+				<p>GameChanger Academy offers a dynamic and engaging learning environment. Students have access to
+					cutting-edge curriculum, industry-relevant resources, and state-of-the-art facilities. The Academy
+					employs innovative teaching methods, such as experiential learning, hands-on projects, and
+					interactive discussions. Students actively participate in practical assignments, case studies,
+					simulations, and internships, which bridge the gap between theory and real-world application.</p>
+			</div>
+			<div class="step">
+				<h3>Step 4: Mentorship and Support</h3>
+				<p>GameChanger Academy places great emphasis on mentorship and support for each student. Dedicated
+					mentors, who are experts in their respective fields, guide and motivate students throughout their
+					educational journey. They provide individualized attention, offer career advice, and assist students
+					in setting and achieving their academic and professional goals. The mentorship program fosters
+					personal growth, builds confidence, and helps students navigate challenges and make informed
+					decisions.</p>
+			</div>
+			<div>
+				<p>Overall, GameChanger Academy works by providing a holistic and personalized educational experience,
+					combining a rigorous curriculum, practical learning opportunities, and individualized mentorship to
+					empower students to thrive academically and prepare them for successful careers in their chosen
+					fields.</p>
+			</div>
+		</section>
+	</main>
+-->
+
+	<footer id="footer">
+		<script>
+			fetch('/html/footer.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('footer').innerHTML = data;
+				});
+		</script>
+
+	</footer>
+	<script src="/script/user-profile-firebase1.js"></script>
+
+</body>
+
+</html>

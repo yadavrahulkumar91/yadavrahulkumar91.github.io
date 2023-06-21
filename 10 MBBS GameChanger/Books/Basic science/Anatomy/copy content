@@ -1,0 +1,11 @@
+$sourceFile = "D:\Users\OneDrive - Tribhuvan University\Desktop\GitHub1\yadavrahulkumar91.github.io\10 MBBS GameChanger\Books\Basic science\Anatomy\Algae copy.html"  # Replace with the path to the source file
+$destinationDirectory = "D:\Users\OneDrive - Tribhuvan University\Desktop\GitHub1\yadavrahulkumar91.github.io\10 MBBS GameChanger\Books\Basic science\Pathology\Robbins_pathology"  # Replace with the path to the destination directory
+
+$sourceContent = Get-Content $sourceFile
+
+$destinationFiles = Get-ChildItem $destinationDirectory -Filter "*.html" -File
+
+foreach ($file in $destinationFiles) {
+    $destinationPath = Join-Path -Path $destinationDirectory -ChildPath $file.Name
+    Set-Content -Path $destinationPath -Value $sourceContent
+}

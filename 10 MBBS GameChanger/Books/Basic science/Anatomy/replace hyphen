@@ -1,0 +1,29 @@
+$directory = "D:\Users\OneDrive - Tribhuvan University\Desktop\GitHub1\yadavrahulkumar91.github.io\10 MBBS GameChanger\Books\Basic science\Pathology\Robbins_pathology"  # Replace with the path to the directory containing the files
+
+$files = Get-ChildItem $directory -Filter "*.html" -File
+
+foreach ($file in $files) {
+    $filePath = $file.FullName
+    $fileName = $file.BaseName  # Get the file name without the extension
+
+    # Replace hyphens with spaces in the file name
+    $updatedFileName = $fileName -replace "-", " "
+
+    # Update the <title> tag
+    (Get-Content -Path $filePath) | ForEach-Object {
+        if ($_ -match "<title>(.*?)<\/title>") {
+            $_ -replace "(<title>)(.*?)(<\/title>)", "`$1$updatedFileName`$3"
+        } else {
+            $_
+        }
+    } | Set-Content -Path $filePath
+
+    # Update the <h1> tag
+    (Get-Content -Path $filePath) | ForEach-Object {
+        if ($_ -match "<h1>(.*?)<\/h1>") {
+            $_ -replace "(<h1>)(.*?)(<\/h1>)", "`$1$updatedFileName`$3"
+        } else {
+            $_
+        }
+    } | Set-Content -Path $filePath
+}

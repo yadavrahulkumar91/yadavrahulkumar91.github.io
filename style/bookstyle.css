@@ -13,7 +13,21 @@ header {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+
+
+/* Style for main content section */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 30px;
+   background-color: #fff; 
+  box-shadow: 0px 0px 10px #ccc;
+  float: center;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
   header {
     padding: 2px; /* Reduce the padding for small screens */
   }
@@ -21,19 +35,14 @@ header {
     font-size:x-large;
   }
   .container{
-    
-  
+    padding: 15px;
   }
 }
-
-/* Style for main content section */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px #ccc;
+@media screen and (max-width: 950px) {
+  .container {
+    max-width:80%;
   
+  }
 }
 
 /* Style for heading of main content */
@@ -41,26 +50,30 @@ header {
   font-size: 36px;
   margin-bottom: 20px;
   color: #333;
+  background-color: #d0d0d0; 
+  text-transform: uppercase;
 }
 .container h2 {
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 10px;
   color: #1abc9c;
+  background-color: #f2f2f2; 
   }
   
   .container h3 {
   font-size: 20px;
   margin-top: 25px;
   margin-bottom: 5px;
-  color: #333;
+  color: #8d1515;
+ 
   }
   
   .container h4 {
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 5px;
-  color: #666;
+  color: #1010db;
   }
   
   .container h5 {
@@ -81,8 +94,9 @@ header {
 .container p {
   font-size: 18px;
   line-height: 1.5;
-  color: #666;
+  color: #000000;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 /* Style for image in main content */
@@ -125,7 +139,7 @@ table {
   }
 
   th {
-  background-color: #f2f2f2;
+  background-color: #c2c2c2;
   font-weight: bold;
   text-align: center;
   }
@@ -152,21 +166,7 @@ margin: 10px 0;
 }
 
 /* CSS for the container boxes */
-.container {
-width: 100%;
-float: center;
-box-sizing: border-box;
-padding: 20px;
-height: 100vh;
-overflow-y: auto;
-
-max-width: 800px;
-margin: 0 auto;
-padding: 30px;
-background-color: #fff;
-box-shadow: 0px 0px 10px #ccc;
-}
-    
+  
 /* CSS for the active and inactive tabs */
 .tab {
 display: inline-block;
@@ -190,15 +190,7 @@ background-color: white;
 
 
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  /* border: 1px solid #ddd; */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
-}
 
 
 .questions {
@@ -586,7 +578,7 @@ border-radius: 5px;
   background-image: linear-gradient(to left, #a1a1a1, #ffffff);
   border: none;
   border-top-left-radius: 10%;
-  boder-top-right-radius: 10%;
+  border-top-right-radius: 10%;
   outline:brown;
   color: #0a0707;
   font-size: 15%;
@@ -614,6 +606,191 @@ border-radius: 5px;
 
 
 
+
+
+
+
+
+
+
+
+
+/* Anatomy CSS */
+
+
+
+
+
+/* Bone */
+.bone {
+  color: #000000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Cartilage */
+.cartilage {
+  color: #808080;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Joint */
+.joint {
+  color: #0000FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+/* Fissure */
+.fissure {
+  color: #800000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Sulcus */
+.sulcus {
+  color: #008000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Canal */
+.canal {
+  color: #FF00FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+/* Foramen */
+.foramen {
+  color: #800080;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fossa {
+  color: #800000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+
+/* Bone Process */
+.bone-process {
+  color: #000000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Lobe */
+.lobe {
+  color: #FF4500;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Gyri */
+.gyri {
+  color: #FFA500;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Muscle */
+.muscle {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Ligament */
+.ligament {
+  color: #008000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Tendon */
+.tendon {
+  color: #FFA500;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Fascia */
+.fascia {
+  color: #A52A2A;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.bursae {
+  color: #1bae14;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+/* Nerve */
+.nerve {
+  color: #FF00FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Artery */
+.artery {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Vein */
+.vein {
+  color: #0000FF;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Blood Component */
+.blood-component {
+  color: #800080;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Organ */
+.organ {
+  color: #800000;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Gland */
+.gland {
+  color: #FF1493;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Anatomical terminologies  */
+
+.plane {
+  color: #0a0b0b;
+  font-weight: bold;
+  font-style: normal;
+}
 
 
 

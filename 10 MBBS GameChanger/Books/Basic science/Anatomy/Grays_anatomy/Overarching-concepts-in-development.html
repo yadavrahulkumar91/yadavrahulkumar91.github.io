@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Overarching concepts in development</title>
+    <link rel="stylesheet" type="text/css" href="/style/bookstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/script/otherSources.js"></script>
+
+  </head>
+  <body>
+    
+    <header>
+      <h1>Overarching concepts in development</h1>
+      <p></p>
+    </header>
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div></center>
+        
+    <div id="home-container" class="container">    
+      <h1>Genes in Development</h1>
+      <p>The study of secondary oocytes before and after fertilization and the selection of embryos for implantation after in vitro fertilization has revealed the range of maternal genes involved in cleavage, morula, and blastocyst formation. The activation of the embryonic genome occurs at the 4-8 cell stage when embryonic cells express polarity genes, initiating cell-cell interaction. By 6 days post-fertilization, the hatched blastocyst can interact with maternal tissue. Early developmental processes can be understood as a series of binary choices.</p>
+      <img src="figure_8_1.jpg" alt="Figure 8.1: Binary Choices in Early Development">
+      <p>During cleavage and early compaction, two cell phenotypes, epithelial and non-epithelial cells, are specified within the zona pellucida. Three lineages are established at this time: trophoblast, hypoblast (primitive endoderm), and epiblast. Cells respond locally to their environment and interact with neighboring cells. The genes operating at these early stages in mouse embryos are listed in Takaoka and Hamada (2012). The implanting blastocyst communicates with the maternal endometrium through the secretion of miRNAs, which are involved in post-translational gene expression.</p>
+      <p>Two important themes have emerged from developmental studies. Firstly, the control of embryonic morphology is highly conserved among vertebrates and invertebrates, and homeobox genes are believed to play a role in the origin of the embryonic body plan. Secondly, various gene families, such as the T-box family, Sox genes, and signaling factors like TGF-β, BMPs, FGF, Wnt, and Hedgehog molecules, are required for normal development. Cell receptor molecules are also essential.</p>
+      <p>Techniques such as culturing embryonic stem cells, single-cell RNA sequencing, and analysis of expressed proteins, transcription factors, and metabolites have provided extensive data on early genes and their sequential expression in diverging cell phenotypes.</p>
+      <h3>Signaling between Embryonic Cells and Tissues</h3>
+      <p>The position of cells within the developing blastocyst leads to epigenetic changes. Cell polarity is crucial for specifying cell domains, surface specializations, organelle positioning, and cell-cell junctions. Cell junctional complexes are formed between the outer cells of the morula within the zona pellucida, initiating the earliest embryonic cell interactions. Signaling between cells and tissues occurs through various mechanisms, including direct cell-cell contact, cell adhesion molecules and their receptors, extracellular matrix molecules and their receptors, and growth factors and their receptors. Epithelial cells produce a basal lamina that interacts with the extracellular matrix synthesized by mesenchyme cells, contributing to developmental interactions.</p>
+      <img src="figure_11_1.jpg" alt="Figure 11.1: Reciprocal Signaling between Cells and Tissues">
+      <p>The disruption of these signaling pathways can result in developmental abnormalities. Matrix stiffness affects cell fate, with stiff matrices promoting osteoblastic development and soft matrices leading to adipocyte lineage. Endogenous electrical fields are also believed to play a role in cell-cell communication. The distribution of cell adhesion molecules in the early embryo correlates with morphogenetic events involving cell aggregation or disaggregation.</p>
+      <p>It's important to note that while studies on laboratory species and in vitro animal tissues provide insights into developmental factors, the spatial and temporal expression of these factors in human embryos may differ. Differences in heterochrony (timing of gene expression and structural development) exist between species, and caution should be exercised when extrapolating animal developmental sequences to human development. Further investigation is needed to understand how embryonic cells and tissues perceive time and to analyze specific interspecies heterochronic differences at the molecular level.</p>
+      <img src="figure_8_2.jpg" alt="Figure 8.2: Temporal Differences in External Features">
+
+
+      <h2>Induction and Interactions</h2>
+      <p>All cell signaling events play a role in induction and cell-cell/tissue interactions. The sequential consequences of induction can be described using specific terminology.</p>
+      <h3>Competence and Restriction</h3>
+      <p>Competence refers to the ability of a cell population or tissue to respond to an inductive signal and alter its behavior accordingly. Once a cell population has been induced to develop along a specific pathway, it loses competence and becomes restricted. Restricted cells are set on a particular developmental pathway and are determined after a series of binary choices. Determined cells are programmed to undergo further development leading to differentiation. Determination is a heritable characteristic, and once cells are determined, they will progress towards differentiation if the environmental conditions are suitable.</p>
+      <h3>Differentiation and Protein Production</h3>
+      <p>The process of determination and differentiation in embryonic cell populations is accompanied by the production of specific proteins. Primary proteins, also known as housekeeping proteins, are essential for cellular metabolism. Secondary proteins, synthesized by determined cells, are specific to the state of determination. For example, liver and kidney cells produce arginase, while muscle cells do not. Fully differentiated cells produce tertiary proteins that are unique to their specific cell line. An example is the production of hemoglobin in erythrocytes. The Human Protein Atlas provides information on the range of housekeeping, regulatory, and tissue-specific proteomes in adult cells (<a href="www.protein-atlas.org">www.protein-atlas.org</a>).</p>
+
+
+      <h2>Permissive and Instructive Tissue Interactions</h2>
+      <p>Classically, two types of cell and tissue interactions have been described: permissive and instructive (Wessells 1977).</p>
+      <h3>Permissive Interactions</h3>
+      <p>In permissive interactions, a signal from an adjacent tissue is necessary for the successful self-differentiation of the responding tissue. This means that a particular cell population or the matrix molecules secreted by the cells it contains will maintain mitotic activity in an adjacent cell population. Permissive interactions do not involve specific instructions or signals that limit the developmental options of the responding tissue, nor do they influence the selected developmental pathway or impose restriction. The responding tissue has the intrinsic capacity to develop and only requires appropriate environmental conditions to express this capacity. Permissive interactions often occur later in development when a tissue whose fate has already been determined is maintained and stabilized by another.</p>
+      <h3>Instructive Interactions</h3>
+      <p>In instructive (directive) interactions, the cell type of the responding tissue is changed, leading to restriction. Wessells (1977) proposed four general principles for most instructive interactions:</p>
+      <ol>
+        <li>In the presence of tissue A, responding tissue B develops in a certain way.</li>
+        <li>In the absence of tissue A, responding tissue B does not develop in that way.</li>
+        <li>In the absence of tissue A, but in the presence of tissue C, tissue B does not develop in that way.</li>
+        <li>In the presence of tissue A, tissue D, which would normally develop differently, is changed to develop like tissue B.</li>
+      </ol>
+      <p>An example of instructive interactions can be observed during the induction of the lens vesicle by the optic cup (see Fig. 15.1). Another example is the experimental association of chicken flank ectoderm with mouse mammary mesenchyme, resulting in the morphogenesis of mammary gland-like structures, even though chickens do not normally develop mammary glands (Wessells 1977).</p>
+      <h3>Tissue Interactions in Adult Life</h3>
+      <p>Tissue interactions continue throughout adult life and likely contribute to maintaining the functional heterogeneity of adult tissues and organs. This is evident in the complex tissue heterogeneity, with sharply compartmentalized boundaries, found in the oral cavity. The boundaries between the mucosa of the vestibule and the lip, and between the vermillion border and the facial skin, represent distinct boundaries of specific epithelial and mesenchymal differentiation, which are likely maintained by ongoing epithelial-mesenchymal interactions in adult life. Perturbations of these interactions throughout the body can potentially underlie a wide variety of adult diseases, including susceptibility to cancer and proliferative disorders.</p>
+      <h3>Cell Fates and Stem Cells</h3>
+      <p>As cell populations become progressively determined, they can be described within a hierarchy of cellular development:</p>
+      <ul>
+        <li><strong>Stem Cells:</strong> The definition of a stem cell has evolved with advancements in in vitro methods for their production. In an embryo, the earliest cells are totipotent and become progressively restricted during development. In adults, stem cell populations exist in most tissues, allowing replenishment of senescent cells and response to environmental changes through asymmetric division, where one daughter cell remains a stem cell while the other follows a differentiation pathway. Stem cells have been derived from various embryonic, fetal, and adult cells and are extensively used in in vitro culture for studying their properties and reactions to potential therapeutic agents.</li>
+        <li><strong>Progenitor Cells:</strong> Progenitor cells are already determined along a specific pathway. They may individually follow that differentiation pathway or proliferate to produce a large number of similarly determined progenitor cells, which subsequently differentiate. Examples of progenitor cells include neuroblasts and myoblasts.</li>
+        <li><strong>Terminally Differentiated Cells:</strong> Terminally differentiated cells, due to their extreme specialization, are no longer capable of dividing. Examples include erythrocytes and neurons. Apoptosis, a form of terminal differentiation, leads to the death of individual cells or cell populations. It occurs in the developing limb, where cells die along the pre- and postaxial limits of the apical ectodermal ridge, limiting its extent, and between the digits, allowing their separation (see Ch. 19).</li>
+      </ul>
+
+
+      <h1>Morphogenesis and Pattern Formation</h1>
+      <p>The process of embryonic development involves the expression of specific genes and transcription factors, resulting in the synthesis of proteins and movements of cells or cell populations. These processes occur in different locations and at different times within the embryo. Interactions between cells play a crucial role in development, leading to changes such as mitosis, apoptosis, differentiation, and alterations in cellular receptors. The outcomes of these interactions can be determined by considering the spatial arrangement, temporal state, and level of restriction or determination of the cells involved.</p>
+      <p>Interactions between cells can result in movements of cell populations, leading to changes in the shape of the embryo. This overall process is known as morphogenesis, which involves the assumption and alteration of form by the developing embryo. Morphogenesis can be observed during gastrulation in the entire embryo and in local cell population movements during branching morphogenesis in organs such as the lungs, kidneys, and glandular organs.</p>
+      <p>The development of branches from a tubular duct occurs through reciprocal interactions between the proliferating epithelium of the duct and its surrounding mesenchyme and extracellular matrix. These interactions result in the formation of clefts that generate a characteristic branching pattern. The mesenchyme produces collagen III fibrils within the clefts, initiating cleft formation. Hyaluronidase secreted by the mesenchymal cells breaks down the basal laminae produced by the epithelial cells, promoting epithelial mitoses and the expansion of the acinus. Branching occurs as two branches develop from the region of rapid mitoses at the tip of the acinus.</p>
+      <h2>Experimental Approaches to Embryology</h2>
+      <p>Chimeric embryo experiments, where portions of an embryo are replaced with similar portions from a different species, have provided valuable insights into conserved genes and interactive pathways. These experiments have confirmed the reciprocal interaction between embryonic species. Targeted gene studies, knock-out and knock-in experiments, have also contributed to understanding gene actions and the effects of their perturbation. Embryos, embryonic tissues, and cells can be cultured to investigate cell metabolism, proteomics, metabolomics, and secretomics.</p>
+      <p>Advancements in stem cell research, particularly the production of human induced pluripotent stem cells, have expanded the possibilities of embryonic research. These cells can be directed toward specific developmental pathways, allowing the formation of organoids for studying interactive developmental sequences, testing in vivo growth potential, or generating portions of organs for transplantation.</p>
+      <p>It is important to note that ethical considerations and guidelines regulate embryonic research. The culture of human embryos in vitro is limited to 14 days after fertilization. However, the development of synthetic human entities with embryo-like features (SHEEFs) and multi-phenotype self-organizing gastruloids/organoids raises ethical concerns and requires careful regulation.</p>
+      <h2>Development of Hierarchical Ontologies and Computer Modeling</h2>
+      <p>Bioinformatic databases utilize embryological ontologies to trace the lineage of organs and tissues from early stages and provide a temporal and spatial framework for studying gene activation and changes in cell and tissue morphology. These databases facilitate the correlation of embryological information and the linking of embryonic events to adult tissue types. Computer models have been developed to simulate various aspects of embryonic development, such as cell position, movement, and forces transmitted through layers. These models contribute to understanding epithelial cell populations but may require further refinement for mesenchymal populations.</p>
+      <p>Analyzing genomic data from different animal species, including humans, has been greatly facilitated by ontologies and powerful computing algorithms. Online databases offer extensive information on genomes, gene expressions, metabolomes, and secretomes throughout the development of various species. These resources aid in embryological research, highlight similarities in developmental processes between species, and contribute to the taxonomy of vertebrate evolution.</p>
+      <p>Caution should be exercised when interpreting the outcomes of studies based on big data in embryological research. The quality and clarity of input data and underlying concepts are crucial for obtaining meaningful and accurate results.</p>
+
+
+
+
+
+
+
+    </div>
+
+    <div id="questions-container" class="container" style="display:none">
+    
+    
+    </div>
+  
+    <div id="videos-container" class="container" style="display:none">
+    
+    </div>
+
+    <div id="remnant-container" class="container" style="display:none">
+    
+    </div>
+    
+ 
+    
+   
+   <footer>
+      <p>&copy; 2023 GameChanger</p>
+    </footer>
+    <script src="/script/bookscript.js"></script>
+  </body>
+</html>
