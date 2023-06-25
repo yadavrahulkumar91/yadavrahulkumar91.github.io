@@ -6,23 +6,52 @@
   <link rel="stylesheet" type="text/css" href="/style/bookstyle.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/script/otherSources.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
 
 </head>
 
 <body>
 
   <header>
-    <h1>Cellular Responses to Stress and Toxic Insults</h1>
-    <p></p>
-  </header>
-  <center>
-    <div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    <div class="left-box-container">
+      <div>
+        <div class="unit-left-lesson">
+          <div class="unit-left"></div>
+          <div class="lesson-no-box">
+            <h1 id="lesson-no-id"></h1>
+          </div>
+        </div>
+        <div class="unit-name">I. General pathology</div>
+      </div>
     </div>
-  </center>
+
+    <div class="header-center">
+      <div class="lesson-title">
+        <h1 id="lesson-name-id"></h1>
+      </div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+
+
+
+    </div>
+  </header>
+
+
+  <div class="menu-toggle-btn" id="menu-toggle-btn-id">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <main>
+  <div class="sidebar" id="sidebar-id">
+
+  </div>
+
+
 
   <div id="home-container" class="container">
     <h1>Introduction to Pathology</h1>
@@ -281,11 +310,63 @@
     <p>Reversible injury refers to cellular changes that can be restored to normal when the injurious stimulus is
       removed. These changes may include cellular swelling, fatty change (accumulation of lipids), and the formation of
       cellular blebs or vacuoles.</p>
+
+
+
     <h3>Necrosis</h3>
     <p>Necrosis is the term used to describe cell death resulting from irreversible injury. It involves the breakdown of
       cellular structures, loss of cell integrity, and the release of cellular contents into the surrounding tissue.
       Different patterns of tissue necrosis can occur, including coagulative necrosis, liquefactive necrosis, caseous
       necrosis, fat necrosis, and gangrenous necrosis.</p>
+
+      <table>
+          <caption>Difference between Necrosis and Apoptosis</caption>
+        <tr>
+          <th>Property</th>
+          <th>Necrosis</th>
+          <th>Apoptosis</th>
+        </tr>
+        <tr>
+          <td>Mechanism</td>
+          <td>Passive cell death due to injury or disease</td>
+          <td>Active, programmed cell death</td>
+        </tr>
+        <tr>
+          <td>Cellular Changes</td>
+          <td>Cell swelling, organelle dysfunction, membrane rupture</td>
+          <td>Cell shrinkage, chromatin condensation, membrane blebbing</td>
+        </tr>
+        <tr>
+          <td>Nuclear Changes</td>
+          <td>
+              <ol class="table-listing">
+                <li>Pyknosis (nuclear shrinkage and increased basophilia)</li>
+                <li>Karyorrhexis (fragmentation of nucleus)</li>
+                <li>Karyolysis (dissolution of nuclear chromatin)</li>
+             
+              </ol>
+          </td>
+          <td>Condensation of chromatin into discrete masses</td>
+        </tr>
+        <tr>
+          <td>Inflammatory Response</td>
+          <td>Triggers inflammation and immune response</td>
+          <td>Occurs without eliciting an inflammatory response</td>
+        </tr>
+        <tr>
+          <td>Energy Requirement</td>
+          <td>No energy requirement</td>
+          <td>Energy-dependent process</td>
+        </tr>
+        <tr>
+          <td>Significance</td>
+          <td>Generally pathological, associated with tissue damage</td>
+          <td>Physiological process, important for development and tissue homeostasis</td>
+        </tr>
+      </table>
+
+
+
     <h4>Patterns of Tissue Necrosis</h4>
     <p>- Coagulative necrosis: Occurs in ischemic tissues and is characterized by the preservation of tissue
       architecture, but with loss of nuclei and cytoplasmic eosinophilia.</p>
@@ -297,6 +378,72 @@
       leading to the formation of fatty acids and calcium soaps.</p>
     <p>- Gangrenous necrosis: Usually observed in lower limb ischemia, it involves the coexistence of coagulative and
       liquefactive necrosis, often with superimposed bacterial infection.</p>
+
+
+      <table>
+        <caption>Patterns of Tissue Necrosis</caption>
+        <tr>
+          <th>Pattern of Tissue Necrosis</th>
+          <th>Characteristics</th>
+          <th>Occurrence</th>
+        </tr>
+        <tr>
+          <td>Coagulative Necrosis</td>
+          <td>
+            <ul class="table-listing">
+              <li>Preservation of tissue architecture</li>
+              <li>Loss of nuclei and cytoplasmic eosinophilia</li>
+            </ul>
+          </td>
+          <td>Ischemic tissues</td>
+        </tr>
+        <tr>
+          <td>Liquefactive Necrosis</td>
+          <td>
+            <ul class="table-listing">
+              <li>Digestion of tissue by hydrolytic enzymes</li>
+              <li>Formation of liquid, viscous mass</li>
+            </ul>
+            
+          </td>
+          <td>Infections</td>
+        </tr>
+        <tr>
+          <td>Caseous Necrosis</td>
+          <td>
+            <ul class="table-listing">
+            <li>Combination of coagulative and liquefactive necrosis</li>
+            <li>Cheese-like appearance</li>
+          </ul>
+          </td>
+          <td>Tuberculosis, fungal infections</td>
+        </tr>
+        <tr>
+          <td>Fat Necrosis</td>
+          <td>
+
+            <ul class="table-listing">
+              <li>Action of lipases on triglycerides</li>
+              <li>Formation of fatty acids and calcium soaps</li>
+            </ul>
+            
+          </td>
+          <td>Adipose tissue</td>
+        </tr>
+        <tr>
+          <td>Gangrenous Necrosis</td>
+          <td>
+            <ul class="table-listing">
+              <li>Coexistence of coagulative and liquefactive necrosis</li>
+              <li>Often with superimposed bacterial infection</li>
+            </ul>
+          </td>
+          <td>Lower limb ischemia</td>
+        </tr>
+      </table>
+
+
+
     <h2>Mechanisms of Cell Injury</h2>
     Cell injury can be attributed to several underlying mechanisms that disrupt normal cellular processes and compromise
     cell function. These mechanisms include:
@@ -792,10 +939,14 @@
 
 
 
-
+</main>
   <footer>
     <p>&copy; 2023 GameChanger</p>
   </footer>
+<script>
+    var contentPageLocation = "../contentRobbins.html";
+</script>
+
   <script src="/script/bookscript.js"></script>
 </body>
 

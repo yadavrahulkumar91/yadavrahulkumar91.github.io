@@ -5,20 +5,52 @@
     <link rel="stylesheet" type="text/css" href="/style/bookstyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/script/otherSources.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
 
   </head>
+  
   <body>
-    
+  
     <header>
-      <h1>The Female Genital Tract</h1>
-      <p></p>
+      <div class="left-box-container">
+        <div>
+          <div class="unit-left-lesson">
+            <div class="unit-left"></div>
+            <div class="lesson-no-box">
+              <h1 id="lesson-no-id"></h1>
+            </div>
+          </div>
+          <div class="unit-name">I. General pathology</div>
+        </div>
+      </div>
+  
+      <div class="header-center">
+        <div class="lesson-title">
+          <h1 id="lesson-name-id"></h1>
+        </div>
+        <div class="tab-bar">
+          <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+          <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+          <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+          <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+        </div>
+  
+  
+  
+      </div>
     </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
+  
+  
+    <div class="menu-toggle-btn" id="menu-toggle-btn-id">
+      <i class="fas fa-bars"></i>
+    </div>
+  
+    <main>
+    <div class="sidebar tab " id="sidebar-id">
+  
+    </div>
+  
+  
         
     <div id="home-container" class="container">    
 
@@ -40,10 +72,15 @@
     
  
     
-   
+   </main>
    <footer>
       <p>&copy; 2023 GameChanger</p>
     </footer>
+<script>
+    var contentPageLocation = "../contentRobbins.html";
+</script>
+
     <script src="/script/bookscript.js"></script>
   </body>
 </html>
+

@@ -443,3 +443,156 @@ toggleButtons.forEach(function(button) {
 });
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // File name of the script
+    var fileName = window.location.pathname.split("/").pop();
+
+
+    lessonName = fileName.replace(/-/g, " ").replace(".html", "");
+
+
+
+var fn = document.getElementById("lesson-name-id");
+ fn.textContent=(lessonName);
+
+// Content page location
+// var contentPageLocation = "../contentRobbins.html";
+
+
+
+
+// Regular expression pattern to match the file path within the href attribute
+var pattern = /href="(.*?)\/([^/"]+\.html)"/g;
+
+// Fetch the content of the "contentRobbins.html" file
+fetch(contentPageLocation)
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(content) {
+    // Array to store the extracted file positions
+    var filePositions = [];
+
+    // Extract the file positions using regex pattern matching from the content of "contentRobbins.html"
+    var match;
+    while ((match = pattern.exec(content)) !== null) {
+      var filePath = match[2];
+      filePositions.push(filePath);
+    }
+
+    // Find the position of the file in the content page
+    var filePosition = filePositions.findIndex(function(filePath) {
+      return filePath === fileName;
+    });
+
+    // Check if the file position is found
+    if (filePosition !== -1) {
+      // Set the file position in the <h1> element
+      var h1Element = document.getElementById("lesson-no-id");
+      h1Element.textContent = (filePosition + 1).toString();
+    } else {
+      console.log("File position not found.");
+    }
+  })
+  .catch(function(error) {
+    console.log("Error fetching contentRobbins.html:", error);
+  });
+
+
+
+
+  /*
+
+
+
+  // Get the container element
+const container1 = document.querySelector('.container');
+
+// Get all the section IDs within the container element
+const previewSectionIDs = Array.from(container1.querySelectorAll('[id^="sidebar-heading-"]')).map((element) => element.id);
+
+// Loop through the IDs and add a class to the corresponding elements in the sidebar
+previewSectionIDs.forEach((sectionID) => {
+  const sidebarLink = document.querySelector(`#sidebar-id a[href="#${sectionID}"]`);
+  if (sidebarLink) {
+    sidebarLink.classList.add("focused-section");
+  }
+});
+
+
+
+*/
+
+
+
+/*
+
+// Get the container element
+const container1 = document.querySelector('.container');
+
+// Function to focus on a section
+function focusSection(sectionID) {
+  const section = document.getElementById(sectionID);
+  
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+
+    // Add a class to highlight the focused section
+    section.classList.add('focused-section');
+
+    // Remove the class from other sections
+    const sections = container1.querySelectorAll('[id^="sidebar-heading-"]');
+    sections.forEach((sec) => {
+      if (sec !== section) {
+        sec.classList.remove('focused-section');
+      }
+    });
+  }
+}
+
+// Example: Dynamically add a new section
+function addNewSection() {
+  const newSectionID = 'sidebar-heading-3'; // Example ID for the new section
+  const newSection = document.createElement('div');
+  newSection.id = newSectionID;
+  newSection.textContent = 'New Section';
+
+  container.appendChild(newSection);
+
+  // Focus on the new section
+  focusSection(newSectionID);
+}
+
+// Example: Remove an existing section
+function removeSection() {
+  const sectionToRemoveID = 'sidebar-heading-2'; // Example ID of the section to remove
+  const sectionToRemove = document.getElementById(sectionToRemoveID);
+
+  sectionToRemove.remove();
+
+  // Focus on the previous section if available
+  const sections = container.querySelectorAll('[id^="sidebar-heading-"]');
+  if (sections.length > 0) {
+    const previousSection = sections[sections.length - 1];
+    focusSection(previousSection.id);
+  }
+}
+
+
+*/

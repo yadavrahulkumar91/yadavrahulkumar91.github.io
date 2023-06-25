@@ -18,16 +18,16 @@
         <div class="unit-left-lesson">
           <div class="unit-left"></div>
           <div class="lesson-no-box">
-            <h1>1</h1>
+            <h1 id="lesson-no-id"></h1>
           </div>
         </div>
         <div class="unit-name">I. General pathology</div>
       </div>
-
     </div>
+
     <div class="header-center">
       <div class="lesson-title">
-        <h1>Inflammation and Repair</h1>
+        <h1 id="lesson-name-id"></h1>
       </div>
       <div class="tab-bar">
         <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
@@ -46,9 +46,9 @@
     <i class="fas fa-bars"></i>
   </div>
 
+  <main>
+  <div class="sidebar tab " id="sidebar-id">
 
-  <div class="sidebar" id="sidebar-id">
-   Here
   </div>
 
 
@@ -703,7 +703,6 @@
 
   <div id="questions-container" class="container" style="display:none">
 
-
   </div>
 
   <div id="videos-container" class="container" style="display:none">
@@ -714,13 +713,23 @@
 
   </div>
 
-
+</main>
 
 
   <footer>
     <p>&copy; 2023 GameChanger</p>
   </footer>
+<script>
+    var contentPageLocation = "../contentRobbins.html";
+</script>
+
+  <script>
+
+    var contentPageLocation = "../contentRobbins.html";
+
+  </script>
   <script src="/script/bookscript.js"></script>
+
 </body>
 
 </html>

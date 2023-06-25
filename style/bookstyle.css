@@ -116,7 +116,7 @@ margin-top:-10px;
   cursor: pointer;
   }
   .active-tab {
-  background-color: white;
+  background-color: #ffffff;
   }
     
   
@@ -125,16 +125,26 @@ margin-top:-10px;
 
 /* Style for main content section */
 .container {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  height: 100vh;
+  height: 95vh;
   padding-right: 30px;
   padding-left: 30px;
    background-color: #ffffff; 
-  box-shadow: 0px 0px 10px #ccc;
-  float: center;
+   box-shadow: 10px 0px 10px -5px #ccc, -10px 0px 10px -5px #ccc;
+
+  /* float: center;v*/
   overflow-y: auto;
+
+
+
+
+ 
+ 
+  
 }
+
 
 @media screen and (max-width: 768px) {
   header {
@@ -154,6 +164,10 @@ margin-top:-10px;
   }
 }
 
+main{
+  display:flex;
+}
+
 /* Style for heading of main content */
 .container h1 {
   font-size: 25px;
@@ -162,35 +176,6 @@ margin-top:-10px;
   background-color: #d0d0d0; 
   text-transform: uppercase;
 }
-
-
-
-
-
-.container h1 {
-  counter-increment: h1-counter;
-  margin-left: px;
-  display: flex;
-}
-
-.container h1:before {
-  content: counter(h1-counter, upper-alpha) ".";
-  margin-right: 5px;
-}
-
-
-.container h2 {
-  counter-increment: h2-counter;
-  margin-left: px;
-  display: flex;
-}
-
-.container h2:before {
-  content: counter(h2-counter, upper-roman) ".";
-  margin-right: 5px;
-}
-
-
 
 
 
@@ -290,6 +275,19 @@ table {
     height: 100%; /* take up full height of container */
     overflow: scroll; /* add scrolling functionality */
   }
+
+  .table-listing {
+    margin: 0;
+    padding-left: 15px;
+  
+  }
+
+caption {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
 
   th, td {
     padding: 8px;
@@ -959,17 +957,17 @@ border-radius: 5px;
 }
 
 .sidebar {
-  width: auto;
-  background-color: #f1f1f1;
+  width:0px;
+  background-color: #f9f9f9;
   padding-top: 20px;
-  transform: translateX(-110%);
+  transform: translateX(-100%);
   transition: transform 0.3s ease;
   color:green;
   overflow:scroll;
   display:flexbox;
 
 
-  position: fixed;
+  position: relative;
   height: 95vh; 
   top: 0;
 
@@ -978,6 +976,7 @@ border-radius: 5px;
 .show-sidebar{
   transform: translateX(0);
   color:red;
+  width: 20%;
 }
 
 
@@ -991,61 +990,175 @@ border-radius: 5px;
  
 }
 
-/*
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  margin-left: 20px;
- display:none;
+
+
+
+
+
+.container> h1 {
+  counter-increment: h1-counter;
+  display: flex;
+  counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter;
+  
+
+
 }
 
-.h1.open,
-.h2.open,
-.h3.open,
-.h4.open,
-.h5.open,
-.h6.open {
-  display: block;
-  margin-left: 20px;
+.container> h1:before {
+  content: counter(h1-counter, upper-alpha) ".";
+  margin-right: 5px;
+
+  
 }
 
-.open{
-  display:block;
+
+.container > h2 {
+  counter-increment: h2-counter;
+  display: flex;
+  counter-reset: h3-counter h4-counter h5-counter h6-counter;
+
 }
 
-*/
-.h1 a {
+.container > h2:before {
+  content: counter(h2-counter, upper-roman) ".";
+  margin-right: 5px;
+}
+
+.container> h3 {
+  counter-increment: h3-counter;
+  display: flex;
+  counter-reset: h4-counter h5-counter h6-counter;
+
+
+}
+
+.container> h3:before {
+  content: counter(h3-counter, decimal) ".";
+  margin-right: 5px;
+}
+
+
+.container > h4 {
+  counter-increment: h4-counter;
+  display: flex;
+  counter-reset: h5-counter h6-counter;
+
+
+}
+
+.container > h4:before {
+  content: counter(h4-counter, lower-alpha) ".";
+  margin-right: 5px;
+}
+
+.container> h5 {
+  counter-increment: h5-counter;
+  display: flex;
+  counter-reset: h6-counter;
+
+  
+}
+
+.container> h5:before {
+  content: counter(h5-counter, lower-roman) ".";
+  margin-right: 5px;
+}
+
+
+.container > h6 {
+  counter-increment: h6-counter;
+  display: flex;
+}
+
+.container > h6:before {
+  content: counter(h6-counter, lower-alpha) ")";
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.h1 > a {
   font-size: 20px;
-  color: #006633; /* Dark green */
+  color: #000000; /* Dark green */
+  counter-increment: h1-a-counter;
+  display: inline-flex;
+
 }
 
-.h2 a {
+.h1 > a:before {
+  content: counter(h1-a-counter, upper-alpha) ".";
+  margin-right: 5px;
+}
+
+.h2 >a {
   font-size: 18px;
   color: #008040; /* Medium green */
+  counter-increment: h2-a-counter;
+  display: inline-flex;
 }
 
-.h3 a {
+.h2 > a:before {
+  content: counter(h2-a-counter, upper-roman) ".";
+  margin-right: 5px;
+}
+
+
+.h3 > a {
   font-size: 16px;
   color: #00994d; /* Light green */
+  counter-increment: h3-a-counter;
+  display: inline-flex;
 }
 
-.h4 a {
+.h3 > a:before {
+  content: counter(h3-a-counter, decimal) ".";
+  margin-right: 5px;
+}
+
+
+.h4 > a {
   font-size: 14px;
   color: #00b366; /* Bright green */
+  counter-increment: h4-a-counter;
+  display: inline-flex;
 }
 
-.h5 a {
+.h4 > a:before {
+  content: counter(h4-a-counter, lower-alpha) ".";
+  margin-right: 5px;
+}
+
+.h5 > a {
   font-size: 12px;
   color: #00cc7a; /* Lighter green */
+  counter-increment: h5-a-counter;
+  display: inline-flex;
 }
 
-.h6 a {
+.h5 > a:before {
+  content: counter(h5-a-counter, lower-roman) ".";
+  margin-right: 5px;
+}
+
+.h6 > a {
   font-size: 10px;
   color: #00e68a; /* Pale green */
+  counter-increment: h6-a-counter;
+  display: inline-flex;
 }
+
+.h6 > a:before {
+  content: counter(h6-a-counter, lower-alpha) ")";
+  margin-right: 5px;
+}
+
 
 
 a {
@@ -1061,3 +1174,8 @@ a:hover {
 
 
 
+.focused-section {
+  font-weight: bold;
+  color: blue;
+  font-size: 50px;
+}
