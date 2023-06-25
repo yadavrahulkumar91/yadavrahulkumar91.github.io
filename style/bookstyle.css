@@ -8,11 +8,119 @@ body {
 /* Style for page header */
 header {
   background-color: #1abc9c;
-  padding: 5px;
-  color: white;
+ padding-top:5px;
+
   text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+.left-box-container{
+  margin-left:-80px;
 }
 
+
+
+header .lesson-no-box h1{
+  color:#000000;
+  font-size: 50px;
+  
+}
+.lesson-no-box {
+
+  background-color: rgb(189, 145, 63); /* Adjust the color as desired */
+  padding-bottom:5px;
+  padding-top:5px;
+  margin-top:20px;
+  
+  border-top-right-radius: 10px; 
+
+  
+
+
+  
+  height: 45px;
+  width:55px;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-center {
+  align-self: center;
+  margin-left:-25px;
+}
+
+.unit-left-lesson{
+  display:flex;
+}
+
+
+.unit-left{
+  background-color: orange;
+  width:19px;
+  height:75px;
+  border-top-right-radius: 10px; 
+}
+
+.unit-name{
+
+
+ 
+  background-color:orange;
+ color:#000000;
+ font-weight: bo;
+ 
+  width: 150px;
+ padding-left:5px;
+ padding-right:5px;
+ 
+ border-top-right-radius: 10px;
+ 
+
+ 
+}
+
+.lesson-title{
+  padding-left: 10px;
+  padding-right:10px;
+ margin-top:30px;
+ background-color: orange;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+
+}
+
+.lesson-title h1{
+  color: black;
+  text-transform: uppercase;
+  text-shadow: 5px;
+  
+}
+
+
+.tab-bar{
+margin-top:-10px;
+}
+
+/* CSS for the active and inactive tabs */
+.tab {
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: lightgray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  }
+  .active-tab {
+  background-color: white;
+  }
+    
+  
+  
 
 
 /* Style for main content section */
@@ -20,8 +128,9 @@ header {
   max-width: 800px;
   margin: 0 auto;
   height: 100vh;
-  padding: 30px;
-   background-color: #fff; 
+  padding-right: 30px;
+  padding-left: 30px;
+   background-color: #ffffff; 
   box-shadow: 0px 0px 10px #ccc;
   float: center;
   overflow-y: auto;
@@ -47,16 +156,51 @@ header {
 
 /* Style for heading of main content */
 .container h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 25px;
+  margin-bottom: 0px;
+  color: black;
   background-color: #d0d0d0; 
   text-transform: uppercase;
 }
+
+
+
+
+
+.container h1 {
+  counter-increment: h1-counter;
+  margin-left: px;
+  display: flex;
+}
+
+.container h1:before {
+  content: counter(h1-counter, upper-alpha) ".";
+  margin-right: 5px;
+}
+
+
+.container h2 {
+  counter-increment: h2-counter;
+  margin-left: px;
+  display: flex;
+}
+
+.container h2:before {
+  content: counter(h2-counter, upper-roman) ".";
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
 .container h2 {
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 10px;
+  margin-left: 20px;
   color: #1abc9c;
   background-color: #f2f2f2; 
   }
@@ -66,6 +210,9 @@ header {
   margin-top: 25px;
   margin-bottom: 5px;
   color: #8d1515;
+
+
+  margin-left: 20px;
  
   }
   
@@ -74,6 +221,9 @@ header {
   margin-top: 20px;
   margin-bottom: 5px;
   color: #1010db;
+
+
+  margin-left: 20px;
   }
   
   .container h5 {
@@ -81,6 +231,8 @@ header {
   margin-top: 15px;
   margin-bottom: 5px;
   color: #999;
+
+  margin-left: 20px;
   }
   
   .container h6 {
@@ -88,6 +240,9 @@ header {
   margin-top: 10px;
   margin-bottom: 5px;
   color: #ccc;
+
+
+  margin-left: 20px;
   }
 
 /* Style for paragraph text of main content */
@@ -97,6 +252,10 @@ header {
   color: #000000;
   margin-bottom: 20px;
   text-align: justify;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  margin-left:30px;
 }
 
 /* Style for image in main content */
@@ -167,18 +326,6 @@ margin: 10px 0;
 
 /* CSS for the container boxes */
   
-/* CSS for the active and inactive tabs */
-.tab {
-display: inline-block;
-padding: 10px;
-background-color: lightgray;
-cursor: pointer;
-}
-.active-tab {
-background-color: white;
-}
-  
-
 
 
 
@@ -381,7 +528,7 @@ border-radius: 5px;
 .qa-question::before {
   content: "Q.";
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 2px;
 }
 .qa-q{
   margin:0%;
@@ -393,7 +540,7 @@ border-radius: 5px;
   margin-top:0%;
 }
 .qa-answer::before {
-  content: "Ans:";
+  content: "➾";
   font-weight: bold;
   margin-right: 5px;
 }
@@ -790,6 +937,126 @@ border-radius: 5px;
   color: #0a0b0b;
   font-weight: bold;
   font-style: normal;
+}
+
+
+
+
+
+/* Sidebar */
+
+.menu-toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.menu-toggle-btn i {
+  font-size: 20px;
+  color: #333;
+}
+
+.sidebar {
+  width: auto;
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+  color:green;
+  overflow:scroll;
+  display:flexbox;
+
+
+  position: fixed;
+  height: 95vh; 
+  top: 0;
+
+}
+
+.show-sidebar{
+  transform: translateX(0);
+  color:red;
+}
+
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-left: 20px;
+ 
+}
+
+/*
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-left: 20px;
+ display:none;
+}
+
+.h1.open,
+.h2.open,
+.h3.open,
+.h4.open,
+.h5.open,
+.h6.open {
+  display: block;
+  margin-left: 20px;
+}
+
+.open{
+  display:block;
+}
+
+*/
+.h1 a {
+  font-size: 20px;
+  color: #006633; /* Dark green */
+}
+
+.h2 a {
+  font-size: 18px;
+  color: #008040; /* Medium green */
+}
+
+.h3 a {
+  font-size: 16px;
+  color: #00994d; /* Light green */
+}
+
+.h4 a {
+  font-size: 14px;
+  color: #00b366; /* Bright green */
+}
+
+.h5 a {
+  font-size: 12px;
+  color: #00cc7a; /* Lighter green */
+}
+
+.h6 a {
+  font-size: 10px;
+  color: #00e68a; /* Pale green */
+}
+
+
+a {
+  color: #3366cc; /* Sets the text color to a nice blue */
+  text-decoration: none; /* Removes the default underline */
+  transition: color 0.3s ease; /* Adds a smooth transition effect for color change */
+}
+
+a:hover {
+  color: #ff3366; /* Changes the text color to a vibrant pink on hover */
+  text-decoration: underline; /* Adds an underline on hover */
 }
 
 
