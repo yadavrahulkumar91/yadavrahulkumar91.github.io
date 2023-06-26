@@ -5,6 +5,37 @@ body {
   background-color: #f1f1f1;
 }
 
+
+body {
+  /* Add your desired styles for the body here */
+  /* ... */
+  /* Set a specific height and overflow for the scrollbar to appear */
+  height: 100vh; /* Adjust the height as needed */
+  overflow: auto;
+}
+
+/* Customize the scrollbar for the body */
+body::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #999; /* Change the color of the scrollbar thumb */
+  border-radius: 4px; /* Adjust the border radius as needed */
+  transition: background-color 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the color of the scrollbar thumb on hover */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #111; /* Change the color of the scrollbar thumb on focus */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Change the color of the scrollbar track */
+}
 /* Style for page header */
 header {
   background-color: #1abc9c;
@@ -31,6 +62,8 @@ header .lesson-no-box h1{
   background-color: rgb(189, 145, 63); /* Adjust the color as desired */
   padding-bottom:5px;
   padding-top:5px;
+  padding-left:3px;
+  padding-right:3px;
   margin-top:20px;
   
   border-top-right-radius: 10px; 
@@ -40,7 +73,7 @@ header .lesson-no-box h1{
 
   
   height: 45px;
-  width:55px;
+  width:auto;
 
   display: flex;
     justify-content: center;
@@ -137,25 +170,82 @@ margin-top:-10px;
   /* float: center;v*/
   overflow-y: auto;
 
-
-
-
- 
- 
   
 }
+
+
+  /* Customize the scrollbar for the container */
+  .container::-webkit-scrollbar {
+    width: 8px; /* Adjust the width as needed */
+    
+  }
+
+ 
+
+  .container::-webkit-scrollbar-thumb {
+    background-color: #333; /* Change the color of the scrollbar thumb */
+    border-radius: 4px; /* Adjust the border radius as needed */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+
+  .container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the color of the scrollbar thumb on hover */
+
+  
+    
+  }
+
+  .container::-webkit-scrollbar-thumb:focus {
+    background-color: #555; /* Change the color of the scrollbar thumb on hover */
+   
+  }
+  
+  .container::-webkit-scrollbar-thumb:active {
+    background-color: #111; /* Change the color of the scrollbar thumb on focus */
+  }
+  
+
+  
+  .container::-webkit-scrollbar-thumb:hover,
+  .container::-webkit-scrollbar-thumb:focus,
+  .container::-webkit-scrollbar-thumb:active {
+    transform: scaleX(1.5); /* Scale the scrollbar thumb horizontally */
+  }
+
+
+
+
+
+
+
+  .container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Change the color of the scrollbar track */
+  }
+
+
+
 
 
 @media screen and (max-width: 768px) {
   header {
     padding: 2px; /* Reduce the padding for small screens */
+    font-size:smaller;
   }
+  /*
   header h1{
     font-size:x-large;
   }
   .container{
     padding: 15px;
   }
+  .tab-bar{
+    font-size: smaller;
+  }
+  */
+  .lesson-title{
+    margin-left:0px;
+  }
+  .
 }
 @media screen and (max-width: 950px) {
   .container {
@@ -966,7 +1056,7 @@ border-radius: 5px;
   overflow:scroll;
   display:flexbox;
 
-
+ 
   position: relative;
   height: 95vh; 
   top: 0;
@@ -980,6 +1070,30 @@ border-radius: 5px;
 }
 
 
+  /* Customize the scrollbar */
+  .sidebar::-webkit-scrollbar {
+    width: 8px; /* Adjust the width as needed */
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Change the color of the scrollbar thumb */
+    border-radius: 4px; /* Adjust the border radius as needed */
+  }
+
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the color of the scrollbar thumb on hover */
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:active {
+    background-color: #111; /* Change the color of the scrollbar thumb on focus */
+  }
+  
+
+  .sidebar::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Change the color of the scrollbar track */
+  }
+
+
 .h1,
 .h2,
 .h3,
@@ -990,7 +1104,15 @@ border-radius: 5px;
  
 }
 
-
+@media screen  and (max-width: 768px){
+  .sidebar{
+    display:fixed;
+    position:absolute;
+    height:100hv;
+    margin-top:95px;
+    width:80%;
+  }
+}
 
 
 
@@ -1179,3 +1301,41 @@ a:hover {
   color: blue;
   font-size: 50px;
 }
+
+
+
+/* Add a transition effect to internal links */
+a[href^="#"] {
+  transition: all 0.3s ease;
+}
+
+/* Apply different transitional effects based on the direction */
+a[href^="#"]:hover {
+  transform: translateY(-3px); /* Move up */
+}
+
+a[href^="#"]:active {
+  transform: translateY(3px); /* Move down */
+}
+
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a transition effect to the body */
+body {
+  transition: transform 0.3s ease;
+}
+
+/* Apply different transitional effects based on the direction */
+body.move-up {
+  transform: translateY(-20px); /* Move body up */
+}
+
+body.move-down {
+  transform: translateY(20px); /* Move body down */
+}
+
+

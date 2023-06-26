@@ -596,3 +596,37 @@ function removeSection() {
 
 
 */
+
+
+
+
+
+ // JavaScript code to handle link clicks
+  document.addEventListener('DOMContentLoaded', function() {
+    var internalLinks = document.querySelectorAll('a[href^="#"]');
+    for (var i = 0; i < internalLinks.length; i++) {
+      internalLinks[i].addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        var target = this.getAttribute('href');
+        animateBody(target);
+        // Scroll to the target element with smooth behavior
+        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+
+  // Function to animate the body based on the target link
+  function animateBody(target) {
+    var body = document.querySelector('body');
+    if (target === '#top') {
+      body.classList.add('move-up');
+      setTimeout(function() {
+        body.classList.remove('move-up');
+      }, 300);
+    } else if (target === '#bottom') {
+      body.classList.add('move-down');
+      setTimeout(function() {
+        body.classList.remove('move-down');
+      }, 300);
+    }
+  }
