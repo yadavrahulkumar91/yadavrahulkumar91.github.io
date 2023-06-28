@@ -124,6 +124,7 @@ header .lesson-no-box h1{
  border-top-right-radius: 10px;
  border-top-left-radius: 10px;
 
+ min-width:420px;
 }
 
 .lesson-title h1{
@@ -162,8 +163,8 @@ margin-top:-10px;
   max-width: 800px;
   margin: 0 auto;
   height: 95vh;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 10px;
+  padding-left: 0px;
    background-color: #ffffff; 
    box-shadow: 10px 0px 10px -5px #ccc, -10px 0px 10px -5px #ccc;
 
@@ -244,8 +245,9 @@ margin-top:-10px;
   */
   .lesson-title{
     margin-left:0px;
+    
   }
-  .
+  
 }
 @media screen and (max-width: 950px) {
   .container {
@@ -275,7 +277,7 @@ main{
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 10px;
-  margin-left: 20px;
+
   color: #1abc9c;
   background-color: #f2f2f2; 
   }
@@ -287,7 +289,7 @@ main{
   color: #8d1515;
 
 
-  margin-left: 20px;
+
  
   }
   
@@ -298,7 +300,6 @@ main{
   color: #1010db;
 
 
-  margin-left: 20px;
   }
   
   .container h5 {
@@ -307,7 +308,7 @@ main{
   margin-bottom: 5px;
   color: #999;
 
-  margin-left: 20px;
+ 
   }
   
   .container h6 {
@@ -317,7 +318,6 @@ main{
   color: #ccc;
 
 
-  margin-left: 20px;
   }
 
 /* Style for paragraph text of main content */
@@ -330,7 +330,7 @@ main{
   word-wrap: break-word;
   hyphens: auto;
 
-  margin-left:30px;
+  margin-left:15px;
 }
 
 /* Style for image in main content */
@@ -1117,7 +1117,7 @@ border-radius: 5px;
 
 
 
-.container> h1 {
+.hh1> h1 {
   counter-increment: h1-counter;
   display: flex;
   counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter;
@@ -1126,7 +1126,7 @@ border-radius: 5px;
 
 }
 
-.container> h1:before {
+.hh1> h1:before {
   content: counter(h1-counter, upper-alpha) ".";
   margin-right: 5px;
 
@@ -1134,19 +1134,19 @@ border-radius: 5px;
 }
 
 
-.container > h2 {
+.hh2>  h2 {
   counter-increment: h2-counter;
   display: flex;
   counter-reset: h3-counter h4-counter h5-counter h6-counter;
 
 }
 
-.container > h2:before {
+.hh2> h2:before {
   content: counter(h2-counter, upper-roman) ".";
   margin-right: 5px;
 }
 
-.container> h3 {
+.hh3> h3 {
   counter-increment: h3-counter;
   display: flex;
   counter-reset: h4-counter h5-counter h6-counter;
@@ -1154,13 +1154,13 @@ border-radius: 5px;
 
 }
 
-.container> h3:before {
+.hh3>  h3:before {
   content: counter(h3-counter, decimal) ".";
   margin-right: 5px;
 }
 
 
-.container > h4 {
+.hh4>  h4 {
   counter-increment: h4-counter;
   display: flex;
   counter-reset: h5-counter h6-counter;
@@ -1168,12 +1168,12 @@ border-radius: 5px;
 
 }
 
-.container > h4:before {
+.hh4>  h4:before {
   content: counter(h4-counter, lower-alpha) ".";
   margin-right: 5px;
 }
 
-.container> h5 {
+.hh5>  h5 {
   counter-increment: h5-counter;
   display: flex;
   counter-reset: h6-counter;
@@ -1181,18 +1181,18 @@ border-radius: 5px;
   
 }
 
-.container> h5:before {
+.hh5>  h5:before {
   content: counter(h5-counter, lower-roman) ".";
   margin-right: 5px;
 }
 
 
-.container > h6 {
+.hh6>  h6 {
   counter-increment: h6-counter;
   display: flex;
 }
 
-.container > h6:before {
+.hh6>  h6:before {
   content: counter(h6-counter, lower-alpha) ")";
   margin-right: 5px;
 }
@@ -1339,3 +1339,11 @@ body.move-down {
 }
 
 
+.hh1,
+.hh2,
+.hh3,
+.hh4,
+.hh5,
+.hh6 {
+  margin-left: 25px;
+}
