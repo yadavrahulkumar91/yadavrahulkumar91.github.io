@@ -159,6 +159,7 @@ header .lesson-no-box h1{
  border-top-left-radius: 10px;
 
  /* min-width:420px; */
+ min-width:80%;
  max-width:80%;
  align-self: center;
 
@@ -263,34 +264,6 @@ header .lesson-no-box h1{
 
 
 
-@media screen and (max-width: 768px) {
-  header {
-    padding: 2px; /* Reduce the padding for small screens */
-    font-size:smaller;
-  }
-  /*
-  header h1{
-    font-size:x-large;
-  }
-  .container{
-    padding: 15px;
-  }
-  .tab-bar{
-    font-size: smaller;
-  }
-  */
-  .lesson-title{
-    margin-left:0px;
-    
-  }
-  
-}
-@media screen and (max-width: 950px) {
-  .container {
-    max-width:90%;
-  
-  }
-}
 
 main{
   display:flex;
@@ -1397,4 +1370,56 @@ body.move-down {
 .hh5,
 .hh6 {
   margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 2px; /* Reduce the padding for small screens */
+    font-size:smaller;
+  }
+  /*
+  header h1{
+    font-size:x-large;
+  }
+  .container{
+    padding: 15px;
+  }
+  .tab-bar{
+    font-size: smaller;
+  }
+  */
+  .lesson-name{
+    margin-left:0px;
+    
+    min-width: none;
+    
+  }
+
+  .tab-bar{
+    max-width: 60%;
+    }
+  
+}
+
+
+@media screen and (max-width: 950px) {
+  .container {
+    max-width:90%;
+  
+  }
 }
