@@ -35,32 +35,17 @@ document.head.appendChild(script2);
 
 
 
-/*
 
 
-// Script 3: MathJax Configuration
-var script3 = document.createElement('script');
-script3.type = 'text/x-mathjax-config';
-script3.innerHTML = `
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$', '$']],
-            processEscapes: true
-        },
-        "HTML-CSS": {
-            scale: 90
-        }
-    });
-`;
-document.head.appendChild(script3);
-MathJax.Hub.Queue(["Typeset", MathJax.Hub, "equation"]);
 
-// Script 4: MathJax
-var script4 = document.createElement('script');
-script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML';
-document.head.appendChild(script4);
 
-*/
+
+
+
+
+
+
+
 
 
 
@@ -325,6 +310,34 @@ function showNextMedia() {
 
 
 
+// Create a div element
+var divElement = document.createElement('div');
+divElement.classList.add('menu-toggle-btn');
+divElement.id = 'menu-toggle-btn-id';
+
+// Create an i element for the font-awesome icon
+var iconElement = document.createElement('i');
+iconElement.classList.add('fas', 'fa-bars');
+
+// Append the icon element to the div element
+divElement.appendChild(iconElement);
+
+// Append the div element to the header section of the document
+var headerElement = document.getElementsByTagName('header')[0];
+headerElement.appendChild(divElement);
+
+
+
+// Create a div element
+var divElement = document.createElement('div');
+divElement.classList.add('sidebar');
+divElement.id = 'sidebar-id';
+
+// Get the reference to the main section
+var mainElement = document.getElementsByTagName('main')[0];
+
+// Insert the div element at the beginning of the main section
+mainElement.insertBefore(divElement, mainElement.firstChild);
 
 
 
@@ -484,8 +497,11 @@ lessonName = fileName.replace(/-/g, " ").replace(/_/g, " ").replace(".html", "")
 
 
 
-var fn = document.getElementById("lesson-name-id");
-fn.textContent = (lessonName);
+var lessonNameID = document.getElementById("lesson-name-id");
+lessonNameID.textContent = (lessonName);
+
+
+
 
 
 // Retrieve the title element
@@ -529,8 +545,8 @@ fetch(contentPageLocation)
     // Check if the file position is found
     if (filePosition !== -1) {
       // Set the file position in the <h1> element
-      var h1Element = document.getElementById("lesson-no-id");
-      h1Element.textContent = (filePosition + 1).toString();
+      var lessonNoID = document.getElementById("lesson-no-id");
+      lessonNoID.textContent = (filePosition + 1).toString();
     } else {
       console.log("File position not found.");
     }
@@ -578,90 +594,203 @@ function animateBody(target) {
 
 
 
-
-
 /*
+var contentPageLocation = "../contentRobbins.html";
+var unitName = '';
 
+// Fetch the content of the current page
+fetch(contentPageLocation)
+  .then(response => response.text())
+  .then(data => {
+    // Create a temporary element to parse the fetched HTML content
+    var tempElement = document.createElement('html');
+    tempElement.innerHTML = data;
 
-
-// Get the container element
-const container1 = document.querySelector('.container');
-
-// Get all the section IDs within the container element
-const previewSectionIDs = Array.from(container1.querySelectorAll('[id^="sidebar-heading-"]')).map((element) => element.id);
-
-// Loop through the IDs and add a class to the corresponding elements in the sidebar
-previewSectionIDs.forEach((sectionID) => {
-const sidebarLink = document.querySelector(`#sidebar-id a[href="#${sectionID}"]`);
-if (sidebarLink) {
-  sidebarLink.classList.add("focused-section");
-}
-});
-
-
-
-*/
-
-
-
-/*
-
-// Get the container element
-const container1 = document.querySelector('.container');
-
-// Function to focus on a section
-function focusSection(sectionID) {
-  const section = document.getElementById(sectionID);
-  
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-
-    // Add a class to highlight the focused section
-    section.classList.add('focused-section');
-
-    // Remove the class from other sections
-    const sections = container1.querySelectorAll('[id^="sidebar-heading-"]');
-    sections.forEach((sec) => {
-      if (sec !== section) {
-        sec.classList.remove('focused-section');
+    // Find the unit name based on the file name
+    var units = tempElement.getElementsByClassName("unit");
+    for (var i = 0; i < units.length; i++) {
+      var unit = units[i];
+      var nextSibling = unit.nextElementSibling;
+      while (nextSibling) {
+        if (nextSibling.tagName === 'A' && nextSibling.href.endsWith(fileName)) {
+          unitName = unit.textContent.trim();
+          break;
+        }
+        nextSibling = nextSibling.nextElementSibling;
       }
-    });
-  }
-}
+      if (unitName !== '') {
+        break;
+      }
+    }
 
-// Example: Dynamically add a new section
-function addNewSection() {
-  const newSectionID = 'sidebar-heading-3'; // Example ID for the new section
-  const newSection = document.createElement('div');
-  newSection.id = newSectionID;
-  newSection.textContent = 'New Section';
+    console.log("Unit Name:", unitName);
 
-  container.appendChild(newSection);
-
-  // Focus on the new section
-  focusSection(newSectionID);
-}
-
-// Example: Remove an existing section
-function removeSection() {
-  const sectionToRemoveID = 'sidebar-heading-2'; // Example ID of the section to remove
-  const sectionToRemove = document.getElementById(sectionToRemoveID);
-
-  sectionToRemove.remove();
-
-  // Focus on the previous section if available
-  const sections = container.querySelectorAll('[id^="sidebar-heading-"]');
-  if (sections.length > 0) {
-    const previousSection = sections[sections.length - 1];
-    focusSection(previousSection.id);
-  }
-}
-
+    // Assign unit name to the element with ID "unit-name-id"
+    var unitNameID = document.getElementById("unit-name-id");
+    unitNameID.textContent = unitName;
+  })
+  .catch(error => {
+    console.error('Error fetching page:', error);
+  });
 
 */
 
 
 
+/*
+var unitName = '';
+
+// Extract the file name from the current page URL
+var fileName = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+
+// Fetch the content of the current page
+fetch(contentPageLocation)
+  .then(response => response.text())
+  .then(data => {
+    // Create a temporary element to parse the fetched HTML content
+    var tempElement = document.createElement('html');
+    tempElement.innerHTML = data;
+
+    // Find the unit name based on the file name
+    var units = tempElement.getElementsByClassName("unit");
+    for (var i = 0; i < units.length; i++) {
+      var unit = units[i];
+      var nextSibling = unit.nextElementSibling;
+      while (nextSibling) {
+        if (nextSibling.tagName === 'A' && nextSibling.href.endsWith(fileName)) {
+          unitName = unit.textContent.trim();
+          break;
+        }
+        nextSibling = nextSibling.nextElementSibling;
+      }
+      if (unitName !== '') {
+        break;
+      }
+    }
+
+    console.log("Unit Name:", unitName);
+
+    // Assign unit name to the element with ID "unit-name-id"
+    var unitNameID = document.getElementById("unit-name-id");
+    unitNameID.textContent = unitName;
+  })
+  .catch(error => {
+    console.error('Error fetching page:', error);
+  });
+
+*/
+
+
+
+/*
+// var contentPageLocation = "../contentRobbins.html";
+var unitName = '';
+
+// Fetch the content of the content page
+fetch(contentPageLocation)
+  .then(response => response.text())
+  .then(data => {
+    // Create a temporary element to parse the fetched HTML content
+    var tempElement = document.createElement('html');
+    tempElement.innerHTML = data;
+
+    // Find the unit name based on the file name
+    var units = tempElement.querySelectorAll(".unit");
+    var fileName1 = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+    for (var i = 0; i < units.length; i++) {
+      var unit = units[i];
+      var lessonLinks = unit.nextElementSibling.querySelectorAll("a.lesson");
+      for (var j = 0; j < lessonLinks.length; j++) {
+        var lessonLink = lessonLinks[j];
+        if (lessonLink.href.endsWith(fileName1)) {
+          unitName = unit.textContent.trim();
+          break;
+        }
+      }
+      if (unitName !== '') {
+        break;
+      }
+    }
+
+    console.log("Unit Name:", unitName);
+
+    // Assign unit name to the element with ID "unit-name-id"
+    var unitNameID = document.getElementById("unit-name-id");
+    unitNameID.textContent = unitName;
+  })
+  .catch(error => {
+    console.error('Error fetching content page:', error);
+  });
+*/
+
+// var contentPageLocation = "../contentRobbins.html";
+var unitName = '';
+
+// Get the current file name
+var fileName = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+
+// Fetch the content of the content page
+fetch(contentPageLocation)
+  .then(response => response.text())
+  .then(data => {
+    // Create a temporary element to parse the fetched HTML content
+    var tempElement = document.createElement('html');
+    tempElement.innerHTML = data;
+
+    // Get all elements from class "container" in the content page
+    var containers = tempElement.getElementsByClassName("container");
+
+    // Loop through each container element
+    for (var i = 0; i < containers.length; i++) {
+      var elements = containers[i].children;
+
+      // Loop through each element within the container
+      for (var j = 0; j < elements.length; j++) {
+        var element = elements[j];
+
+        // Check if the element belongs to class "unit"
+        if (element.classList.contains("unit")) {
+          unitName = element.textContent.trim();
+        } else if (element.tagName === "A" && element.classList.contains("lesson")) {
+          // Check if the element belongs to class "lesson" and match its href with the fileName
+          if (element.href.endsWith(fileName)) {
+            // Stop the loop and assign the unit name
+            break;
+          }
+        }
+      }
+
+      // Check if the unit name is found, and exit the loop
+      if (unitName !== '') {
+        break;
+      }
+    }
+
+    console.log("Unit Name:", unitName);
+
+    // Assign unit name to the element with ID "unit-name-id"
+    var unitNameID = document.getElementById("unit-name-id");
+    unitNameID.textContent = unitName;
+  })
+  .catch(error => {
+    console.error('Error fetching content page:', error);
+  });
+
+
+
+
+
+
+
+
+
+  // Create a link element
+var linkElement = document.createElement('link');
+linkElement.rel = 'stylesheet';
+linkElement.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css';
+
+// Append the link element to the head section of the document
+document.head.appendChild(linkElement);
 
 
 

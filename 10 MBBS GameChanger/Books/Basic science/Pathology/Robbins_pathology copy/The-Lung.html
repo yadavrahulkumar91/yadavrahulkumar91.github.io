@@ -9,10 +9,27 @@
   </head>
   <body>
     
-    <header>
-      <h1>The Lung</h1>
-      <p></p>
-    </header>
+    <div class="left-box-container">
+    <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+    </div>
+    <div class="unit-name-box" id="unit-name-id"></div>
+</div>
+
+<div class="header-center">
+    <div class="lesson-name" id="lesson-name-id"></div>
+    <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div>
+</div>
+
+<script>
+    var contentPageLocation = "../contentRobbins.html";
+</script>
     <center><div>
       <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
       <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
@@ -47,3 +64,6 @@
     <script src="/script/bookscript.js"></script>
   </body>
 </html>
+
+
+

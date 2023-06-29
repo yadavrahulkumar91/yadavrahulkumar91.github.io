@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Three.js STL Viewer</title>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <script src="three.js"></script>
+    <script src="STLLoader.js"></script>
+    <script>
+      // Create a scene
+      const scene = new THREE.Scene();
+
+      // Create a camera
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 5;
+
+      // Create a renderer
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // Create a loader for the STL file
+      const loader = new THREE.STLLoader();
+      
+      // Load the STL file
+      loader.load('rods.STL', function(geometry) {
+        // Create a material
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ffdd });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+      });
+
+      // Render the scene
+      function render() {
+        requestAnimationFrame(render);
+        renderer.render(scene, camera);
+      }
+      render();
+    </script>
+  </body>
+</html>
