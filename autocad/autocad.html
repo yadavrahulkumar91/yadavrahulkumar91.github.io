@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Autodesk Forge Viewer Example</title>
+  <style>
+    /* Set the dimensions of the viewer container */
+    #forgeViewer {
+      width: 100%;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for the Forge Viewer -->
+  <div id="forgeViewer"></div>
+
+  <!-- Include the Forge Viewer JavaScript library -->
+  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+
+  <!-- Initialize the Forge Viewer -->
+  <script>
+    var viewer;
+
+    function initializeViewer() {
+  var options = {
+    env: 'AutodeskProduction',
+    api: 'https://developer.api.autodesk.com',
+    getAccessToken: function(onTokenReady) {
+      var accessToken = 'eyJhbGciOiJSUzI1NiIsImtpZCI6IlU3c0dGRldUTzlBekNhSzBqZURRM2dQZXBURVdWN2VhIiwicGkuYXRtIjoiN3ozaCJ9.eyJzY29wZSI6WyJkYXRhOnJlYWQiXSwiY2xpZW50X2lkIjoiY0VvSTRvZVVMTU5sRzF1R0c2U3FEQWJReWpXb1VhRDIiLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvYWp3dGV4cDYwIiwianRpIjoiZHY4MnhlOGN1SzFDcXVDbGxrcVhPSHA3ODNmcFJRTjlSc1NUaXdlMWJLTDVjQkN1V293b1M2WjBIcXVSVGFzTSIsImV4cCI6MTY4ODA4NzcwNX0.Hyig3snwURRoic9ZY-zX7lIbwr_l9sWtFe2ltdgp-dtyakIxCHB6HQhAmNoQ5rYiFx6x8fpTc0WMWfnQzBF8L8kijuM4CWMP7nzp1NnfU-Fsr1Il6HD8DmtznhTHe1WOnnAf-Wu99JVsclhafAksX3kgkfUELc2TpNvWPVjhdkROzbWdsarZl_F5LvwNVE-zLSXIZj3h-yTaAt3dJrt0vqdqJkQg0PMlHVvRnichmOgB6ToR7V72tNxSMc972g1p5CRJ7A1TUPi2MIlsIPNW0GjCZ-tEr7lVo3C6r9IfkbOVlX09xM3YMwPCXfqLEqZ6HJzWZtsl3YA-uDJPUdcnEg'; 
+// Replace with your actual access token valu
+      var expiresIn = 3599; // Replace with the expiration time in seconds
+
+      var expiration = new Date().getTime() + expiresIn * 1000;
+      onTokenReady(accessToken, expiration);
+    }
+  };
+
+      var documentId = 'YOUR_DOCUMENT_ID'; // Replace with your document ID or URN
+
+      Autodesk.Viewing.Initializer(options, function() {
+        viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'));
+        viewer.start();
+        viewer.loadDocument('urn:' + documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+      });
+    }
+
+    function onDocumentLoadSuccess(doc) {
+      // Document loaded successfully
+      // You can perform additional operations here if needed
+    }
+
+    function onDocumentLoadFailure(viewerErrorCode) {
+      // Document failed to load
+      console.error('Error loading document. Viewer error code: ' + viewerErrorCode);
+    }
+
+    initializeViewer();
+  </script>
+</body>
+</html>
