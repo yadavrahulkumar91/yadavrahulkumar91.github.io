@@ -210,6 +210,51 @@ header .lesson-no-box h1{
 
   
 }
+/* 
+.text-and-image{
+  display: flex;
+  align-items: flex-start;
+}
+.text{
+  flex: 1;
+}
+
+.image {
+  margin-left: 20px;
+  display:grid;
+} */
+
+
+.text-and-image {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  flex: 1;
+}
+
+.image {
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.image-left{
+  float:right;
+  margin: 5px;
+}
+
+.image-right{
+ 
+   
+    float: right; 
+    margin: 5px;
+   
+ 
+}
+
+
 
 
   /* Customize the scrollbar for the container */
@@ -217,6 +262,8 @@ header .lesson-no-box h1{
     width: 8px; /* Adjust the width as needed */
     
   }
+
+
 
  
 
@@ -644,6 +691,7 @@ border-radius: 5px;
   font-size: 18px;
   line-height: 1.5;
   display: flex;
+ 
   margin-top:0%;
 }
 .qa-answer::before {
@@ -666,6 +714,7 @@ border-radius: 5px;
 
 .qa-a{
   margin:0%;
+  
 }
 .question-number {
   font-size: 20px;
