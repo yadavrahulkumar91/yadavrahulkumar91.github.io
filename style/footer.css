@@ -2,8 +2,8 @@
     /* Footer Section */
 
     footer {
-        display: flex;
-        background-color: #383333;
+        display: block;
+        background-color: #5c42f0;
         color: #ffffff;
         font-size: 14px;
         padding: ;
@@ -25,13 +25,14 @@
         margin-bottom: 5px;
       }
   
-      .container {
-        align-items: center;
+     
+      .footer-row{
+        display:block;
       }
-  
-      .a {
-        align-items: center;
-        text-align: center;
+
+      .footer-column{
+        display:flex;
+        justify-content: center;
       }
   
   

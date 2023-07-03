@@ -231,7 +231,7 @@ header .lesson-no-box h1{
 }
 
 .text {
-  flex: 1;
+  flex: 1; 
 }
 
 .image {
@@ -241,8 +241,9 @@ header .lesson-no-box h1{
 }
 
 .image-left{
-  float:right;
+  float:left;
   margin: 5px;
+  border:solid 1px;
 }
 
 .image-right{
@@ -250,6 +251,7 @@ header .lesson-no-box h1{
    
     float: right; 
     margin: 5px;
+    border:solid 1px;
    
  
 }
@@ -677,7 +679,8 @@ border-radius: 5px;
   font-weight: bold;
   margin-bottom: 0%;
   display:flex;
-  
+ 
+    background-color: bisque;
 }
 .qa-question::before {
   content: "Q.";
@@ -714,7 +717,7 @@ border-radius: 5px;
 
 .qa-a{
   margin:0%;
-  
+  text-align: justify;
 }
 .question-number {
   font-size: 20px;

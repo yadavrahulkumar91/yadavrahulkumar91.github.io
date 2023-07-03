@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letter Matching Game</title>
+  <style>
+    .column {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      padding: 10px;
+    }
+    
+    .letter-box {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      text-align: center;
+      font-size: 24px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    
+    .matched {
+      background-color: green;
+      color: #fff;
+    }
+    
+    .incorrect {
+      background-color: red;
+      color: #fff;
+    }
+  </style>
+  <script>
+    var selectedLetter = null;
+    
+    function selectLetter(letter) {
+      if (selectedLetter === null) {
+        selectedLetter = letter;
+      } else {
+        var selectedElement = document.getElementById(selectedLetter);
+        var currentElement = document.getElementById(letter);
+        
+        if (selectedElement.getAttribute('data-match') === currentElement.getAttribute('data-match')) {
+          selectedElement.classList.add('matched');
+          currentElement.classList.add('matched');
+        } else {
+          selectedElement.classList.add('incorrect');
+          currentElement.classList.add('incorrect');
+        }
+        
+        selectedLetter = null;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Letter Matching Game</h1>
+  
+  <div class="column">
+    <h2>Column 1</h2>
+    <div class="letter-box" id="A" onclick="selectLetter('A')" data-match="apple">A</div>
+    <div class="letter-box" id="B" onclick="selectLetter('B')" data-match="banana">B</div>
+    <div class="letter-box" id="C" onclick="selectLetter('C')" data-match="cat">C</div>
+    <div class="letter-box" id="D" onclick="selectLetter('D')" data-match="dog">D</div>
+    <div class="letter-box" id="E" onclick="selectLetter('E')" data-match="elephant">E</div>
+  </div>
+  
+  <div class="column">
+    <h2>Column 2</h2>
+    <div class="letter-box" id="apple" onclick="selectLetter('apple')" data-match="A">Apple</div>
+    <div class="letter-box" id="banana" onclick="selectLetter('banana')" data-match="B">Banana</div>
+    <div class="letter-box" id="cat" onclick="selectLetter('cat')" data-match="C">Cat</div>
+    <div class="letter-box" id="dog" onclick="selectLetter('dog')" data-match="D">Dog</div>
+    <div class="letter-box" id="elephant" onclick="selectLetter('elephant')" data-match="E">Elephant</div>
+  </div>
+</body>
+</html>

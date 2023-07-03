@@ -9,12 +9,21 @@
         .container {
             padding-left: 5px;
         }
+
+        .container h2,
+        .container h3,
+        .container h4,
+        .container h5,
+        .container h6 {
+            background-color: white;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>TU MBBS Paper-IV (Integrated Basic Medical Science-I) Super Fast Track</h1>
+        <button id="print-button">Print</button>
     </header>
     <center>
         <div class="tab active-tab" onclick="openContainer(event, 'home')">General Concept<br>
@@ -42,6 +51,7 @@
         </div>
         <div class="tab" onclick="openContainer(event, 'remnant')">Videos</div>
     </center>
+    <main>
     <div id="home-container" class="container">
         <div>
             <h1 id="Anatomy">Anatomy 🧠</h1>
@@ -259,8 +269,11 @@
                 <div class="qa-answer">
                     <div class="qa-a">
                         <div class="image">
-                            <a title="SEER, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Illu_compact_spongy_bone.jpg"><img width="512" alt="Illu compact spongy bone" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Illu_compact_spongy_bone.jpg"></a>
-                            
+                            <a title="SEER, Public domain, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Illu_compact_spongy_bone.jpg"><img
+                                    width="512" alt="Illu compact spongy bone"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/3/34/Illu_compact_spongy_bone.jpg"></a>
+
 
                         </div>
                         <div class="text-and-image">
@@ -282,7 +295,7 @@
                     </div>
                 </div>
             </div>
-           
+
             <div class="qa-block">
                 <div class="qa-question">
                     <div class="qa-q"> Give classification of muscle with example of each type. Write in brief about
@@ -308,16 +321,102 @@
                     <div class="qa-q"> Classify epithelium with appropriate example.</div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a">Epithelial tissues are classified into simple and stratified based on the
-                        number
-                        of cell layers and squamous, cuboidal, and columnar based on the shape of cells. Simple
-                        squamous
-                        epithelium lines the air sacs in the lungs, while simple cuboidal epithelium forms the
-                        lining of
-                        kidney tubules. Stratified squamous epithelium forms the outer layer of skin, while
-                        stratified
-                        columnar epithelium lines the male urethra. Pseudostratified columnar epithelium lines the
-                        respiratory tract.</div>
+                    <div class="qa-a">
+                        <h2>Epithelial Tissues</h2>
+                        <p>Epithelial tissues are one of the four main types of tissues in the human body. They line the
+                            surfaces of organs, cavities, and passageways, and also form glands. Epithelial tissues are
+                            classified based on their structure, function, and cellular arrangement.</p>
+                        <h3>Classification Based on Shape</h3>
+                        <p>Epithelial cells can be classified based on their shape, which can be squamous, cuboidal, or
+                            columnar.</p>
+                        <div class="image-right">
+                            <a title="US Government, Public domain, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Illu_epithelium.jpg"><img width="512"
+                                    alt="Illu epithelium"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Illu_epithelium.jpg"></a>
+                        </div>
+                        <ul>
+                            <li>
+                                Squamous Epithelium
+                                <ul>
+                                    <li>Flattened and scale-like cells</li>
+                                    <li>Found in structures such as the lining of blood vessels (endothelium), alveoli
+                                        of lungs, and the outer layer of the skin (epidermis)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Cuboidal Epithelium
+                                <ul>
+                                    <li>Cube-shaped cells with equal height and width</li>
+                                    <li>Present in kidney tubules, various glands, and the surface of the ovary</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Columnar Epithelium
+                                <ul>
+                                    <li>Tall, elongated cells with nuclei usually located towards the base</li>
+                                    <li>Found in the lining of the digestive tract (intestinal epithelium), respiratory
+                                        tract, and the uterine lining (endometrium)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Classification Based on Layer Arrangement</h3>
+                        <p>Epithelial tissues can also be classified based on the number of cell layers present.</p>
+                        <ul>
+                            <li>
+                                Simple Epithelium
+                                <ul>
+                                    <li>Consists of a single layer of cells</li>
+                                    <li>Functions in absorption, secretion, and diffusion</li>
+                                    <li>Examples include the lining of blood vessels (simple squamous epithelium),
+                                        kidney tubules (simple cuboidal epithelium), and the intestines (simple columnar
+                                        epithelium)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Stratified Epithelium
+                                <ul>
+                                    <li>Composed of multiple layers of cells</li>
+                                    <li>Provides protection and is more durable</li>
+                                    <li>Examples include the epidermis of the skin (stratified squamous epithelium), the
+                                        lining of the esophagus, and the urinary bladder</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Classification Based on Specializations</h3>
+                        <p>Epithelial tissues can also be classified based on specialized features and functions.</p>
+                        <ul>
+                            <li>
+                                Ciliated Epithelium
+                                <ul>
+                                    <li>Contains cilia on the apical surface of cells</li>
+                                    <li>Found in the respiratory tract, fallopian tubes, and parts of the reproductive
+                                        system</li>
+                                    <li>The cilia help move mucus, debris, or ovum through the tubes</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Transitional Epithelium
+                                <ul>
+                                    <li>Found in organs that undergo stretching, such as the urinary bladder</li>
+                                    <li>Allows for expansion and recoil without damaging the tissue</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Glandular Epithelium
+                                <ul>
+                                    <li>Specialized for secretion</li>
+                                    <li>Forms glands that produce substances such as hormones, enzymes, and sweat</li>
+                                    <li>Examples include the salivary glands, sweat glands, and endocrine glands</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="qa-block">
@@ -356,16 +455,60 @@
                     <div class="qa-q"> What is fertilization? Write short notes on result of fertilization.</div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a">Fertilization is the process by which a sperm cell from a male fuses with an
+                    <div class="qa-a">
+                        <div class="image-right">
+                            <a title="LadyofHats, Public domain, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Acrosome_reaction_diagram_en.svg"><img
+                                    width="312" alt="Acrosome reaction diagram en"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Acrosome_reaction_diagram_en.svg/512px-Acrosome_reaction_diagram_en.svg.png"></a>
+                        </div>
+                        Fertilization is the process by which a sperm cell from a male fuses with an
                         egg
-                        cell from a female to form a zygote, which is the first cell of a new organism. During
-                        fertilization, the genetic material from the sperm and the egg combine to create a unique
-                        genetic makeup for the zygote. This genetic information determines the physical and
-                        biological
-                        characteristics of the organism that develops from the zygote. The result of fertilization
-                        is
-                        the formation of a zygote that undergoes cell division and eventually develops into an
-                        embryo.
+                        cell from a female to form a zygote, which is the first cell of a new organism.
+                        <h2>Result of Fertilization</h2>
+
+                        <h3>Fertilized Egg or Zygote</h3>
+                        <p>The result of fertilization is the formation of a fertilized egg or zygote. The zygote
+                            contains a unique combination of genetic material from both the mother (egg) and father
+                            (sperm). It is the starting point of embryonic development.</p>
+
+                        <h3>Genetic Material Combination</h3>
+                        <p>During fertilization, the genetic material from the sperm and egg combines, resulting in a
+                            unique combination of chromosomes. This combination determines various traits and
+                            characteristics of the developing individual, including physical appearance, sex, and
+                            inherited traits.</p>
+
+                        <h3>Inheritance of Traits</h3>
+                        <p>Fertilization ensures the inheritance of genetic traits from both parents. The genetic
+                            material carried by the zygote determines characteristics such as eye color, hair color,
+                            height, and predisposition to certain diseases or conditions.</p>
+
+
+                        <h3>Initiation of Embryonic Development</h3>
+                        <p>Fertilization marks the initiation of embryonic development. The zygote undergoes rapid cell
+                            divisions, forming an embryo. Through cell division and differentiation, the embryo develops
+                            into various tissues, organs, and body systems.</p>
+
+                        <h3>Implantation</h3>
+                        <p>After fertilization, the zygote travels down the fallopian tube and reaches the uterus. It
+                            then implants into the uterine lining, where it receives nourishment and support for further
+                            growth and development during pregnancy.</p>
+
+                        <h3>Pregnancy</h3>
+                        <p>Successful fertilization leads to the establishment of pregnancy. The presence of a
+                            fertilized egg and its implantation in the uterus triggers hormonal changes that sustain and
+                            support the growth of the developing embryo and fetus.</p>
+
+                        <h3>Development of an Organism</h3>
+                        <p>The ultimate result of fertilization is the development of a complete organism. The zygote
+                            undergoes continuous cell division, differentiation, and growth, eventually forming a fully
+                            developed individual with distinct physical and genetic characteristics.</p>
+
+
+                        <h3>Continuation of the Life Cycle</h3>
+                        <p>Fertilization is a crucial step in the life cycle of sexually reproducing organisms. It
+                            allows for the transmission of genetic material from one generation to the next, ensuring
+                            the continuity of the species.</p>
                     </div>
                 </div>
             </div>
@@ -374,15 +517,44 @@
                     <div class="qa-q"> Describe briefly on formation of blastocyst.</div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a">The blastocyst is a structure that forms during the early stages of embryonic
-                        development, typically around five to six days after fertilization. It is formed when the
-                        zygote
-                        undergoes multiple rounds of cell division to form a hollow ball of cells with an inner cell
-                        mass and an outer layer of cells called the trophoblast. The inner cell mass will eventually
-                        develop into the embryo, while the trophoblast will form the placenta and other supportive
-                        structures. The blastocyst is an important stage in embryonic development because it is the
-                        stage at which the embryo implants into the uterus and begins to receive nutrients from the
-                        mother. </div>
+                    <div class="qa-a">
+                        <div class="image-right">
+                            <a title="OpenStax College, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:2904_Preembryonic_Development-02.jpg"><img
+                                    width="412" alt="2904 Preembryonic Development-02"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/2904_Preembryonic_Development-02.jpg/512px-2904_Preembryonic_Development-02.jpg"></a>
+                        </div>
+                        <ol>
+                            <li>
+                                <h2>Fertilization</h2>
+                                <p>The formation of a blastocyst begins with the process of fertilization. It occurs
+                                    when a sperm cell penetrates and fertilizes an egg cell in the fallopian tube. This
+                                    results in the formation of a fertilized egg, also known as a zygote.</p>
+                            </li>
+
+                            <li>
+                                <h2>Cleavage</h2>
+                                <p>After fertilization, the zygote undergoes a series of rapid cell divisions called
+                                    cleavage. During cleavage, the zygote divides into multiple smaller cells called
+                                    blastomeres. The division occurs without an increase in the overall size of the
+                                    embryo.</p>
+                            </li>
+
+                            <li>
+                                <h2>Morula Formation</h2>
+                                <p>As cleavage continues, the blastomeres compact and form a solid ball of cells known
+                                    as a morula. The morula consists of approximately 16 to 32 cells and resembles a
+                                    mulberry in appearance.</p>
+                            </li>
+
+                            <li>
+                                <h2>Blastocyst Formation</h2>
+                                <p>Further cell division leads to the formation of a blastocyst. The blastocyst is a
+                                    hollow ball of cells with two distinct components: the inner cell mass (ICM) and the
+                                    outer cell layer called the trophoblast.</p>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
             <div class="qa-block">
@@ -390,15 +562,52 @@
                     <div class="qa-q"> Short notes on Intraembryonic mesoderm and its derivatives.</div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a">The intraembryonic mesoderm is a layer of cells that forms during gastrulation
-                        between the endoderm and ectoderm. It gives rise to various structures and tissues in the
-                        developing embryo, including the notochord, somites, and mesodermal derivatives such as the
-                        heart, blood vessels, and kidneys. The somites further differentiate into sclerotome (gives
-                        rise
-                        to vertebrae and ribs), myotome (gives rise to muscles), and dermatome (gives rise to dermis
-                        of
-                        the skin). The intraembryonic mesoderm also contributes to the formation of the body wall,
-                        limbs, and connective tissue.</div>
+                    <div class="qa-a">
+
+                        <p>The intraembryonic mesoderm is a layer of embryonic tissue that develops from the mesodermal
+                            germ layer during early embryogenesis. </p>
+                        <h3>Formation and Location</h3>
+                        <p>The intraembryonic mesoderm arises from the middle layer of the trilaminar embryonic disc
+                            during gastrulation. It is located between the ectoderm (outer layer) and endoderm (inner
+                            layer) of the embryo.</p>
+                        <h3>Derivatives</h3>
+                        <p>The intraembryonic mesoderm gives rise to various structures and tissues throughout the
+                            developing embryo. These derivatives include:</p>
+                        <div class="image-right">
+                            <a title="Jessica Xu, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Intermediate_mesoderm.png"><img
+                                    width="256" alt="Intermediate mesoderm"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Intermediate_mesoderm.png"></a>
+                        </div>
+                        <ol>
+                            <li>
+                                <h4>Paraxial Mesoderm</h4>
+                                <ul>
+                                    <li>Somites: Segmented blocks of mesoderm that give rise to the vertebrae, ribs,
+                                        muscles, and dermis of the back.</li>
+                                    <li>Sclerotome: Part of the somite that forms the axial skeleton, including the
+                                        vertebral column.</li>
+                                    <li>Dermomyotome: Gives rise to the dermis of the skin and skeletal muscle.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Intermediate Mesoderm</h4>
+                                <ul>
+                                    <li>Urogenital System: Differentiates into the kidneys, ureters, gonads, and
+                                        reproductive ducts.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Lateral Plate Mesoderm</h4>
+                                <ul>
+                                    <li>Somatic Mesoderm: Forms the dermis of the ventral body wall, bones, and
+                                        connective tissues of the limbs.</li>
+                                    <li>Splanchnic Mesoderm: Gives rise to the heart, blood vessels, smooth muscle of
+                                        the gut, and connective tissues associated with organs.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
             <div class="qa-block">
@@ -406,15 +615,59 @@
                     <div class="qa-q"> List the derivatives of ectoderm.</div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a">The ectoderm is one of the three germ layers that form during gastrulation in
-                        the
-                        developing embryo. It gives rise to various structures and tissues, including the skin,
-                        hair,
-                        nails, nervous system, and sensory organs. The derivatives of ectoderm include the
-                        epidermis,
-                        hair, nails, sweat glands, mammary glands, enamel of teeth, neural tube (forms the brain and
-                        spinal cord), neural crest cells (give rise to various tissues including sensory ganglia,
-                        adrenal medulla, and pigment cells), and sensory organs such as the eye and ear. </div>
+                    <div class="qa-a">
+                        <ul>
+                            <li>
+                                Neural Tube
+                                <ul>
+                                    <li>Central Nervous System (CNS)</li>
+                                    <ul>
+                                        <li>Brain</li>
+                                        <li>Spinal cord</li>
+                                    </ul>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Neural Crest Cells
+                                <ul>
+                                    <li>Peripheral Nervous System (PNS)</li>
+                                    <ul>
+                                        <li>Sensory neurons</li>
+                                        <li>Motor neurons</li>
+                                        <li>Autonomic ganglia</li>
+                                        <li>Schwann cells</li>
+                                    </ul>
+                                    <li>Melanocytes</li>
+                                    <li>Craniofacial Structures</li>
+                                    <ul>
+                                        <li>Facial bones</li>
+                                        <li>Cartilage</li>
+                                    </ul>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Surface Ectoderm
+                                <ul>
+                                    <li>Epidermis</li>
+                                    <li>Hair follicles</li>
+                                    <li>Nails</li>
+                                    <li>Sweat glands</li>
+                                    <li>Mammary glands</li>
+                                    <li>Lens of the eye</li>
+                                    <li>Enamel of teeth</li>
+                                    <li>Inner ear structures</li>
+                                    <ul>
+                                        <li>Cochlea</li>
+                                        <li>Vestibular system</li>
+                                    </ul>
+                                    <li>Olfactory epithelium</li>
+                                    <li>Salivary glands</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="qa-block">
@@ -456,41 +709,48 @@
                         the craniofacial skeleton, and the cardiovascular system.</div>
                 </div>
             </div>
-             <div class="qa-block">
+            <div class="qa-block">
                 <div class="qa-question">
                     <div class="qa-q"> Write short notes on features of mature placenta.</div>
                 </div>
                 <div class="qa-answer">
                     <div class="qa-a">
-                        <div class="text-and-image">
-                            <div class="text">
+                        <div class="image-right">
+
+                            <a title="Gray38.png: User Magnus Manske on en.wikipedia
+                                    derivative work: Amada44  talk to me, Public domain, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Placenta.svg"><img width="212"
+                                    alt="Placenta"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Placenta.svg/512px-Placenta.svg.png"></a>
+
+                        </div>
+
                         The mature placenta is an organ that connects the developing fetus to the
                         uterine
                         wall, allowing for the exchange of nutrients, oxygen, and waste products between the
                         maternal
-                        and fetal circulatory systems. It consists of two main layers: the maternal side, which is
-                        formed by the uterine wall, and the fetal side, which is formed by the chorionic plate. The
+                        and fetal circulatory systems. It consists of two main layers: the maternal side, which
+                        is
+                        formed by the uterine wall, and the fetal side, which is formed by the chorionic plate.
+                        The
                         placenta also contains various structures such as chorionic villi, which increase the
                         surface
-                        area available for exchange between maternal and fetal blood. Features of mature placenta
+                        area available for exchange between maternal and fetal blood. Features of mature
+                        placenta
                         include: It is a disc-shaped organ that is about 20cm in diameter and 2-3cm thick. It is
                         made up
                         of about 15-20 lobes, each with its own blood supply. The maternal side is smooth and
                         divided
                         into lobes, while the fetal side is covered with chorionic villi. The placenta secretes
                         hormones
-                        such as human chorionic gonadotropin (hCG), estrogen, and progesterone, which help maintain
+                        such as human chorionic gonadotropin (hCG), estrogen, and progesterone, which help
+                        maintain
                         the
                         pregnancy and prepare the mother's body for delivery.
-                        </div>
-                                <div class="image">
-                                     
-                                        <a title="Gray38.png: User Magnus Manske on en.wikipedia
-                                        derivative work: Amada44  talk to me, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Placenta.svg"><img width="212" alt="Placenta" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Placenta.svg/512px-Placenta.svg.png"></a>
-                                      
-                                </div>
-                        </div>
-                        
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -502,72 +762,98 @@
                 </div>
                 <div class="qa-answer">
                     <div class="qa-a">
-                        <h2>Overview</h2>
-                        <p>The placenta is a temporary organ that develops during pregnancy to provide oxygen and nutrients to the fetus and remove waste products. It acts as a barrier between the mother and fetus, allowing exchange of substances while preventing direct mixing of blood. The structure of the mature placenta consists of several layers and components.</p>
+
+                        <p>The placenta is a temporary organ that develops during pregnancy to provide oxygen and
+                            nutrients to the fetus and remove waste products.</p>
                         <h2>Structure</h2>
-                        <div class="text-and-image">
-                            <div class="text">
+
                         <p>The mature placenta is composed of the following structures:</p>
+                        <div class="image-right">
+                            <a title="Henry Vandyke Carter
+                    , Public domain, via Wikimedia Commons"
+                                href="https://commons.wikimedia.org/wiki/File:Gray39.png"><img width="256" alt="Gray39"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Gray39.png"></a>
+
+                        </div>
                         <ul>
-                            <li><strong>Decidua basalis: </strong>The maternal side of the placenta, formed by the endometrium of the uterus.</li>
-                            <li><strong>Chorionic villi: </strong>Finger-like projections that extend from the chorionic membrane into the maternal blood-filled spaces called intervillous spaces. They increase the surface area for nutrient and gas exchange.</li>
-                            <li><strong>Chorionic plate: </strong>The fetal side of the placenta where the chorionic villi originate.</li>
-                            <li><strong>Amniotic membrane:</strong> Surrounds the fetus and contains amniotic fluid.</li>
-                            <li><strong>Umbilical cord: </strong>Connects the fetus to the placenta and contains blood vessels.</li>
+                            <li><strong>Decidua basalis: </strong>The maternal side of the placenta, formed by
+                                the endometrium of the uterus.</li>
+                            <li><strong>Chorionic villi: </strong>Finger-like projections that extend from the
+                                chorionic membrane into the maternal blood-filled spaces called intervillous
+                                spaces. They increase the surface area for nutrient and gas exchange.</li>
+                            <li><strong>Chorionic plate: </strong>The fetal side of the placenta where the
+                                chorionic villi originate.</li>
+                            <li><strong>Amniotic membrane:</strong> Surrounds the fetus and contains amniotic
+                                fluid.</li>
+                            <li><strong>Umbilical cord: </strong>Connects the fetus to the placenta and contains
+                                blood vessels.</li>
                         </ul>
-                    </div>
-                    <div class="image">
-                        <a title="Henry Vandyke Carter
-                        , Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Gray39.png"><img width="256" alt="Gray39" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Gray39.png"></a>
+
+
+
+                        <h2>Types of Abnormal Placenta</h2>
+
+                        <p>There are several types of abnormal placenta that can occur during pregnancy. These
+                            include:</p>
+                        <div class="image-right">
+                            <img width="256" alt="Types of abnormal placenta"
+                                src="https://cdn.lecturio.com/assets/Types-of-placental-invasion.png">
+                        </div>
+                        <ul>
+                            <li><strong>Placenta Previa</strong></li>
+                            <p>In placenta previa, the placenta partially or completely covers the cervix, leading
+                                to bleeding during pregnancy. It can obstruct the birth canal and may require a
+                                cesarean delivery.</p>
+                            <li><strong>Placenta Accreta</strong></li>
+                            <p>Placenta accreta occurs when the placenta attaches too deeply to the uterine wall. It
+                                does not separate easily during delivery, leading to the risk of severe bleeding
+                                after childbirth.</p>
+                            <li><strong>Placenta Increta</strong></li>
+                            <p>In placenta increta, the placenta invades the uterine wall even further, potentially
+                                reaching the muscle layers of the uterus. This can result in difficulties during
+                                delivery and an increased risk of bleeding.</p>
+                            <li><strong>Placenta Percreta</strong></li>
+                            <p>Placenta percreta is the most severe form of placenta attachment abnormality. The
+                                placenta penetrates through the uterine wall and may even invade nearby organs, such
+                                as the bladder. It carries a high risk of complications and may require surgical
+                                interventions.</p>
+                        </ul>
 
                     </div>
                 </div>
-                        <h2>Types of Abnormal Placenta</h2>
-                        <div class="text-and-image">
-                            <div class="text">
-                                <p>There are several types of abnormal placenta that can occur during pregnancy. These include:</p>
-                                <h3>Placenta Previa</h3>
-                                <p>In placenta previa, the placenta partially or completely covers the cervix, leading to bleeding during pregnancy. It can obstruct the birth canal and may require a cesarean delivery.</p>
-                                <h3>Placenta Accreta</h3>
-                                <p>Placenta accreta occurs when the placenta attaches too deeply to the uterine wall. It does not separate easily during delivery, leading to the risk of severe bleeding after childbirth.</p>
-                                <h3>Placenta Increta</h3>
-                                <p>In placenta increta, the placenta invades the uterine wall even further, potentially reaching the muscle layers of the uterus. This can result in difficulties during delivery and an increased risk of bleeding.</p>
-                                <h3>Placenta Percreta</h3>
-                                <p>Placenta percreta is the most severe form of placenta attachment abnormality. The placenta penetrates through the uterine wall and may even invade nearby organs, such as the bladder. It carries a high risk of complications and may require surgical interventions.</p>
-                            </div>
-                            <div class="image">
-                                    <img width="256" alt="Types of abnormal placenta" src="https://cdn.lecturio.com/assets/Types-of-placental-invasion.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-           
+
             <div class="qa-block">
                 <div class="qa-question">
                     <div class="qa-q"> Write short notes on Trophoblastic villi.</div>
                 </div>
                 <div class="qa-answer">
                     <div class="qa-a">
-                        <div class="text-and-image">
-                            <div class="text">
-                        Trophoblastic villi or chorionic villi are finger-like projections that extend from the chorion
+                        <div class="image-right">
+                            <a title="Henry Vandyke Carter
+, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Gray36.png"><img width="256"
+                                    alt="Gray36"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Gray36.png"></a>
+                        </div>
+
+                        Trophoblastic villi or chorionic villi are finger-like projections that extend from the
+                        chorion
                         into
-                        the uterine wall during pregnancy. These villi are responsible for the exchange of nutrients
+                        the uterine wall during pregnancy. These villi are responsible for the exchange of
+                        nutrients
                         and
-                        gases between the mother and the developing fetus. They play a crucial role in the formation
+                        gases between the mother and the developing fetus. They play a crucial role in the
+                        formation
                         of
                         the placenta and provide a large surface area for the exchange of materials. The
                         trophoblastic
-                        villi also produce hormones such as human chorionic gonadotropin (hCG), which is responsible
+                        villi also produce hormones such as human chorionic gonadotropin (hCG), which is
+                        responsible
                         for
-                        maintaining the pregnancy. 
-                        </div>
-                        <div class="image">
-                            <a title="Henry Vandyke Carter
-, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Gray36.png"><img width="256" alt="Gray36" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Gray36.png"></a>
-                        </div>
-                        </div>
+                        maintaining the pregnancy.
+
+
+
                     </div>
                 </div>
             </div>
@@ -5928,7 +6214,24 @@
                         about those movements. [2+3 = 5] </div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a"> The movements that occur at the shoulder joint are:<br>
+                    <div class="qa-a">
+                        <div class="image-right">
+                        <div>
+                            <figure>
+                                <a title="National Institute Of Arthritis And Musculoskeletal And Skin Diseases (NIAMS); SVG version by Angelito7, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Shoulder_joint.svg"><img width="256" alt="Shoulder joint" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Shoulder_joint.svg/256px-Shoulder_joint.svg.png">
+                                <figcaption>Anterior view of Shoulder joint</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure >
+                                <a title="Jmarchn, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Shoulder_joint_back-en.svg"><img width="256" alt="Shoulder joint back-en" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Shoulder_joint_back-en.svg/256px-Shoulder_joint_back-en.svg.png">                                <figcaption>Posterior view of Shoulder joint</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        </div>
+                         The movements that occur at the shoulder joint are:<br>
+                       
                         <ol>
                             <li> <strong>Extension:</strong>
                                 <ul>
@@ -5982,18 +6285,44 @@
                     <div class="qa-a">
                         <p> The axilla, or armpit, is a pyramidal space located between the upper part of the arm
                             and
-                            the side of the thorax. </p> The boundaries of the axilla are as follows: <ol>
-                            <li> Anterior boundary: Clavicle (superiorly) and Subclavius muscle (inferiorly) </li>
-                            <li> Posterior boundary: Scapula (medial border) and Subscapularis muscle (lateral
-                                border)
-                            </li>
-                            <li> Lateral boundary: Humerus (lateral side) </li>
-                            <li> Medial boundary: Upper ribs (first and second ribs) and Serratus anterior muscle
-                            </li>
-                            <li> Apex (or Superior boundary): Formed by the clavicle, superior scapula, and the
-                                first
-                                rib </li>
-                        </ol> The contents of the axilla include: <ul>
+                            the side of the thorax. </p> 
+                            <div class="image-right">
+                                <img width="356" src="https://teachmeanatomy.info/wp-content/uploads/Transverse-View-of-the-Borders-of-the-Axilla.jpg.webp">
+                            </div>
+                            The boundaries of the axilla are as follows: 
+                            <ol>
+                                <li><strong>Anterior boundary:</strong>
+                                    <ul>
+                                        <li>Clavicle (superiorly)</li>
+                                        <li>Pectoralis major</li>
+                                        <li>Pectoralis minor</li>
+                                        <li>Subclavius muscle (inferiorly)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Posterior boundary:</strong>
+                                    <ul>
+                                        <li>Scapula (medial border)</li>
+                                        <li>Subscapularis muscle (lateral border)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Lateral boundary:</strong>
+                                    <ul>
+                                        <li>Humerus (lateral side)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Medial boundary:</strong>
+                                    <ul>
+                                        <li>Upper ribs (first and second ribs)</li>
+                                        <li>Serratus anterior muscle</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Apex (or Superior boundary):</strong>
+                                    <ul>
+                                        <li>Formed by the clavicle, superior scapula, and the first rib</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            The contents of the axilla include: <ul>
                             <li> Axillary artery (located on the medial side of the axilla) </li>
                             <li> Axillary vein (located adjacent to the axillary artery) </li>
                             <li> Axillary lymph nodes (including both superficial and deep lymph nodes) </li>
@@ -6029,6 +6358,9 @@
                 <div class="qa-answer">
                     <div class="qa-a">
                         <div class="qa-a">
+                            <div class="image-right">
+                                <img width="256" src="https://teachmeanatomy.info/wp-content/uploads/Anterior-View-of-the-Forearm-Borders-of-the-Cubital-Fossa.png.webp">
+                            </div>
                             <p> The Cubital Fossa is a triangular depression located on the anterior aspect of the
                                 elbow. It is bound by the following structures: </p>
                             <ol>
@@ -6037,11 +6369,15 @@
                                 <li> <strong>Medial Boundary:</strong> Pronator teres muscle. </li>
                                 <li> <strong>Lateral Boundary:</strong> Brachioradialis muscle. </li>
                                 <li> <strong>Floor:</strong> Brachialis muscle and supinator muscle. </li>
+                                <li><strong>Roof:</strong>Bicipital aponeurosis, fascia, subcutaneous fat and skin.</li>
                             </ol>
                             <p> The contents of the Cubital Fossa include: </p>
                             <ul>
                                 <li> <strong>Brachial artery :</strong> The main artery supplying the arm, which
                                     bifurcates into the radial and ulnar arteries within the Cubital Fossa. </li>
+                                    <div class="image-right">
+                                        <img width="256" src="https://teachmeanatomy.info/wp-content/uploads/Anterior-view-of-Deep-Forearm-Contents-of-the-Cubital-Fossa.png.webp">
+                                    </div>
                                 <li> <strong>Median nerve :</strong> A major nerve of the upper limb that runs
                                     through
                                     the Cubital Fossa. </li>
@@ -6070,10 +6406,31 @@
                     <div class="qa-q"> Mention the boundaries and contents of Anatomical Snuff Box </div>
                 </div>
                 <div class="qa-answer">
-                    <div class="qa-a"> The boundaries of the anatomical snuff box are formed by the tendons of the
-                        extensor pollicis longus, extensor pollicis brevis, and abductor pollicis longus muscles.
-                        The
-                        contents of the anatomical snuff box are the radial artery and the radial nerve. </div>
+                    <div class="qa-a">
+                        <div class="image-right">
+                            <img width="256" src="https://teachmeanatomy.info/wp-content/uploads/Labelled-Tendons-of-the-Anatomical-Snuffbox-Hand-TeachMeAnatomy.png.webp">
+                        </div>
+                        <h2>Boundaries</h2>
+                        <p>The anatomical snuff box is a triangular-shaped depression located on the radial aspect (thumb side) of the dorsum of the hand.</p>
+                        <ul>
+                          <li>Medial Border: Extensor pollicis longus tendon</li>
+                          <li>Lateral Border: Extensor pollicis brevis tendon and abductor pollicis longus tendon</li>
+                          <li>Proximal Border: Styloid process of the radius</li>
+                          <li>Distal Border: Base of the first metacarpal bone and the trapezium bone</li>
+                        </ul>
+                        <div class="image-right">
+                            <img width="256" src="https://teachmeanatomy.info/wp-content/uploads/Cephalic-Vein-Crossing-the-Anatomical-Snuffbox.jpg.webp">
+                        </div>
+                        <h2>Contents</h2>
+                        <p>The anatomical snuff box contains several important structures:</p>
+                        <ul>
+                          <li>Radial Artery: The radial artery traverses the anatomical snuff box, providing the main arterial blood supply to the hand.</li>
+                          <li>Scaphoid Bone: The scaphoid bone is one of the carpal bones located in the wrist region. Its tubercle is palpable at the floor of the snuff box.</li>
+                          <li>Tendon of Extensor Pollicis Longus: The tendon of the extensor pollicis longus muscle runs along the floor of the snuff box.</li>
+                          <li>Tendon of Extensor Pollicis Brevis and Abductor Pollicis Longus: These tendons form the lateral border of the snuff box and are responsible for thumb movement.</li>
+                          <li>Superficial Radial Nerve: The superficial branch of the radial nerve may be located within or adjacent to the anatomical snuff box.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="qa-block">
@@ -6120,6 +6477,12 @@
                         </li>
                         <li>
                             <h3> b) Movement of muscles causing those movements </h3>
+                            <div class="image-right" style="display: block;">
+                                <img width="226" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Posterior_Hip_Muscles_3.PNG"><br>
+                                <img width="226" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Posterior_Hip_Muscles_1.PNG"><br>
+                                <img width="226" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Anterior_Hip_Muscles_2.PNG">
+
+                            </div>
                             <p> The movements at the hip joint include: </p>
                             <ul>
                                 <li> Extension: <ul>
@@ -12798,7 +13161,7 @@
         </div>
     </div>
     <div id="remnant-container" class="container" style="display:none"> </div>
-    </div>
+</main>
     <footer>
         <div> &copy; 2023 GameChanger </div>
     </footer>

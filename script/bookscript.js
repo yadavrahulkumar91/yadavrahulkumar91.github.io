@@ -798,6 +798,12 @@ document.head.appendChild(linkElement);
 
 
 
+// var printButton = document.getElementById('print-button');
+// printButton.addEventListener('click', printPage);
+
+// function printPage() {
+//   window.print();
+// }
 
 
 

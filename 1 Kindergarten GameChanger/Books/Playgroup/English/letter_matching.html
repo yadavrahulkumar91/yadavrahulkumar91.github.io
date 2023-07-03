@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letter Matching Playgroup</title>
+  <style>
+    .letter-box {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      text-align: center;
+      font-size: 24px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    
+    .matched {
+      background-color: green;
+      color: #fff;
+    }
+  </style>
+  <script>
+    function matchLetter(letter) {
+      var letterBox = document.getElementById(letter);
+      letterBox.classList.add('matched');
+    }
+  </script>
+</head>
+<body>
+  <h1>Letter Matching Playgroup</h1>
+  
+  <p>Select the matching letter:</p>
+  
+  <div class="letter-box" id="A" onclick="matchLetter('A')">A</div>
+  <div class="letter-box" id="B" onclick="matchLetter('B')">B</div>
+  <div class="letter-box" id="C" onclick="matchLetter('C')">C</div>
+  <div class="letter-box" id="D" onclick="matchLetter('D')">D</div>
+  
+  <div class="letter-box" id="E" onclick="matchLetter('E')">E</div>
+  <div class="letter-box" id="F" onclick="matchLetter('F')">F</div>
+  <div class="letter-box" id="G" onclick="matchLetter('G')">G</div>
+  <div class="letter-box" id="H" onclick="matchLetter('H')">H</div>
+  
+  <div class="letter-box" id="I" onclick="matchLetter('I')">I</div>
+  <div class="letter-box" id="J" onclick="matchLetter('J')">J</div>
+  <div class="letter-box" id="K" onclick="matchLetter('K')">K</div>
+  <div class="letter-box" id="L" onclick="matchLetter('L')">L</div>
+  
+  <div class="letter-box" id="M" onclick="matchLetter('M')">M</div>
+  <div class="letter-box" id="N" onclick="matchLetter('N')">N</div>
+  <div class="letter-box" id="O" onclick="matchLetter('O')">O</div>
+  <div class="letter-box" id="P" onclick="matchLetter('P')">P</div>
+  
+  <div class="letter-box" id="Q" onclick="matchLetter('Q')">Q</div>
+  <div class="letter-box" id="R" onclick="matchLetter('R')">R</div>
+  <div class="letter-box" id="S" onclick="matchLetter('S')">S</div>
+  <div class="letter-box" id="T" onclick="matchLetter('T')">T</div>
+  
+  <div class="letter-box" id="U" onclick="matchLetter('U')">U</div>
+  <div class="letter-box" id="V" onclick="matchLetter('V')">V</div>
+  <div class="letter-box" id="W" onclick="matchLetter('W')">W</div>
+  <div class="letter-box" id="X" onclick="matchLetter('X')">X</div>
+  
+  <div class="letter-box" id="Y" onclick="matchLetter('Y')">Y</div>
+  <div class="letter-box" id="Z" onclick="matchLetter('Z')">Z</div>
+</body>
+</html>
