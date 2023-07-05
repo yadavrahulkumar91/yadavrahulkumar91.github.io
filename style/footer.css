@@ -6,8 +6,7 @@
         background-color: #5c42f0;
         color: #ffffff;
         font-size: 14px;
-        padding: ;
-        
+    
         justify-content: center;
       }
   
@@ -28,6 +27,8 @@
      
       .footer-row{
         display:block;
+        justify-content: center;
+        text-align: center;
       }
 
       .footer-column{

@@ -40,7 +40,7 @@ body::-webkit-scrollbar-track {
 header {
   background-color: #1abc9c;
  padding-top:5px;
-
+height: 10vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@ header {
 
 header .lesson-no-box h1{
   color:#000000;
-  font-size: 50px;
+  font-size: 20px;
   
 }
 .lesson-no-box {
@@ -74,7 +74,7 @@ header .lesson-no-box h1{
 
 
   
-  height: 45px;
+  height: 30px;
   width:auto;
 
   display: flex;
@@ -83,7 +83,7 @@ header .lesson-no-box h1{
 
 
     color:#000000;
-    font-size: 50px;
+    font-size: 30px;
     font-weight:600;
 }
 
@@ -103,7 +103,7 @@ header .lesson-no-box h1{
 .unit-left{
   background-color: orange;
   width:19px;
-  height:75px;
+  height:55px;
   border-top-right-radius: 10px; 
 }
 
@@ -196,10 +196,11 @@ header .lesson-no-box h1{
 
 /* Style for main content section */
 .container {
-  width: 100%;
+  width: 60%;
   max-width: 800px;
   margin: 0 auto;
-  height: 100vh;
+  margin-bottom:0;
+  height: 85vh;
   padding-right: 10px;
   padding-left: 0px;
    background-color: #ffffff; 
@@ -270,7 +271,7 @@ header .lesson-no-box h1{
  
 
   .container::-webkit-scrollbar-thumb {
-    background-color: #333; /* Change the color of the scrollbar thumb */
+    background-color: #ccc; /* Change the color of the scrollbar thumb */
     border-radius: 4px; /* Adjust the border radius as needed */
     transition: background-color 0.3s ease, transform 0.3s ease; 
   }
@@ -410,10 +411,11 @@ main{
 
 /* Style for footer */
 footer {
-  background-color: #333;
-  padding: 20px;
+  background-color: #1abc9c;
+  padding: 0px;
   color: white;
   text-align: center;
+  height: 3vh;
 }
 
 /* Style for links in footer */
@@ -1129,7 +1131,7 @@ border-radius: 5px;
 
  
   position: relative;
-  height: 95vh; 
+  height: 83vh; 
   top: 0;
 
 }
@@ -1187,6 +1189,82 @@ border-radius: 5px;
     width:80%;
   }
 }
+
+
+
+.activity-toggle-btn {
+  /* position: absolute; */
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.activity-toggle-btn i {
+  font-size: 20px;
+  color: #333;
+}
+
+.activity-section {
+  width:0px;
+  background-color: #f9f9f9;
+  padding-top: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  /* color:green; */
+  overflow:scroll;
+  display:flexbox;
+
+ 
+  position: relative;
+  height: 83vh; 
+  top: 0;
+}
+
+.show-activity-section {
+  transform: translateX(-0%);
+  /* color:red; */
+  width:40%;
+}
+
+.activity-section::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+  
+}
+
+
+.activity-section::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Change the color of the scrollbar thumb */
+  border-radius: 4px; /* Adjust the border radius as needed */
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.activity-section::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the color of the scrollbar thumb on hover */
+
+
+  
+}
+
+.activity-section::-webkit-scrollbar-thumb:focus {
+  background-color: #555; /* Change the color of the scrollbar thumb on hover */
+ 
+}
+
+.activity-section::-webkit-scrollbar-thumb:active {
+  background-color: #111; /* Change the color of the scrollbar thumb on focus */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

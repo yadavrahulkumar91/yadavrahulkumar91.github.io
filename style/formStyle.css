@@ -84,15 +84,15 @@ h1 {
 .choices {
     margin-left: 20px;
     font-size: 18px;
-    /*
-            display:inline-block;
-            position:absolute;
-            */
+    
+            display:block;
+            /* position:absolute; */
+           
 }
 
 .choice {
     margin-bottom: 10px;
-    display: flex;
+    display: block;
     align-items: center;
 }
 
@@ -104,10 +104,11 @@ h1 {
     appearance: none;
     border: 2px solid #ddd;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     margin: 0;
     margin-right: 10px;
+    margin-left: -22px;
     position: relative;
     top: 5px;
     transition: border-color 0.3s ease-in-out;
@@ -257,3 +258,43 @@ h1 {
             }
             */
 }
+
+
+
+
+/* .questions>.question {
+   
+    counter-increment: question-counter;
+    display: inline-flex;
+  }
+  
+  .questions>.question:before {
+    content: counter(question-counter, decimal) ".";
+    margin-right: 5px;
+  } */
+
+  .MCQ-container {
+    counter-reset: question-counter;
+  }
+  
+  .questions > .question {
+    counter-increment: question-counter;
+    display: inline-flex;
+  }
+  
+  .questions > .question:before {
+    content: counter(question-counter, decimal) ".";
+    margin-right: 5px;
+  }
+  
+
+  .choice {
+    
+    counter-increment: h4-a-counter;
+    /* display: inline-flex; */
+  }
+  
+  .choice:before {
+    content: counter(h4-a-counter, lower-alpha) "";
+    margin-right: 5px;
+  }

@@ -51,6 +51,69 @@ document.head.appendChild(script2);
 
 
 //form
+
+// Get all elements with the class "choices"
+const choicesElements = document.querySelectorAll('.choices');
+
+// Loop through each element and attach the new div
+choicesElements.forEach(element => {
+  // Create a new div element with the class "answer"
+  const div1 = document.createElement('div');
+  div1.className = 'answer';
+
+  // Insert the new div element after the current element
+  element.insertAdjacentElement('afterend', div1);
+});
+
+
+
+
+// Get all elements with the class "answer"
+const answerElements = document.querySelectorAll('.solution');
+
+// Loop through each element and attach the new button
+answerElements.forEach(element => {
+  // Create a new button element with the class "check-button" and onclick event handler
+  const button = document.createElement('button');
+  button.className = 'check-button';
+  button.textContent = 'Check';
+  button.onclick = function () {
+    checkAnswer(this); // Call the checkAnswer function with the clicked button as an argument
+  };
+
+  // Insert the new button element after the current element
+  element.insertAdjacentElement('afterend', button);
+});
+
+
+
+// Get all elements with the class "choices"
+const choicesElements1 = document.querySelectorAll('.choices');
+
+// Loop through each choices element
+choicesElements1.forEach((choicesElement, index) => {
+  // Get all elements with the class "choice" within the current choices element
+  const choiceElements = choicesElement.querySelectorAll('.choice');
+
+  // Loop through each choice element and insert the input
+  choiceElements.forEach((choiceElement, choiceIndex) => {
+    // Create a new input element with the given attributes
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'q' + (index + 1);
+    input.value = String.fromCharCode(97 + choiceIndex); // 'a' for the first choice, 'b' for the second, and so on
+
+    // Insert the input element into the current choice element
+    choiceElement.insertBefore(input, choiceElement.firstChild);
+  });
+});
+
+
+
+
+
+
+
 function checkAnswer(button) {
   // Get the question div and the selected radio button
   var questionDiv = button.closest('.questions');
@@ -310,34 +373,50 @@ function showNextMedia() {
 
 
 
-// Create a div element
-var divElement = document.createElement('div');
-divElement.classList.add('menu-toggle-btn');
-divElement.id = 'menu-toggle-btn-id';
 
-// Create an i element for the font-awesome icon
-var iconElement = document.createElement('i');
-iconElement.classList.add('fas', 'fa-bars');
 
-// Append the icon element to the div element
-divElement.appendChild(iconElement);
+
+
+
+
+
 
 // Append the div element to the header section of the document
 var headerElement = document.getElementsByTagName('header')[0];
-headerElement.appendChild(divElement);
-
-
-
-// Create a div element
-var divElement = document.createElement('div');
-divElement.classList.add('sidebar');
-divElement.id = 'sidebar-id';
 
 // Get the reference to the main section
 var mainElement = document.getElementsByTagName('main')[0];
 
+
+
+
+
+
+// Create a sidebar Menu button element
+var sidebarMenuButton = document.createElement('div');
+sidebarMenuButton.classList.add('menu-toggle-btn');
+sidebarMenuButton.id = 'menu-toggle-btn-id';
+
+// Create an i element for the font-awesome icon
+var sidebarIconElement = document.createElement('i');
+sidebarIconElement.classList.add('fas', 'fa-bars');
+
+// Append the icon element to the div element
+sidebarMenuButton.appendChild(sidebarIconElement);
+headerElement.appendChild(sidebarMenuButton);
+
+
+// Create a Sidebar menu element
+var sidebarMenu = document.createElement('div');
+sidebarMenu.classList.add('sidebar');
+sidebarMenu.id = 'sidebar-id';
+
 // Insert the div element at the beginning of the main section
-mainElement.insertBefore(divElement, mainElement.firstChild);
+mainElement.insertBefore(sidebarMenu, mainElement.firstChild);
+
+sidebarMenuButton.addEventListener('click', () => {
+  sidebarMenu.classList.toggle('show-sidebar');
+});
 
 
 
@@ -345,13 +424,32 @@ mainElement.insertBefore(divElement, mainElement.firstChild);
 
 
 
+// Create an activity menu button element
+var activitySectionButton = document.createElement('div');
+activitySectionButton.classList.add('activity-toggle-btn');
+activitySectionButton.id = 'activity-toggle-btn-id';
 
-const menuToggleBtn = document.getElementById('menu-toggle-btn-id');
-const sideBar = document.querySelector('.sidebar');
+// Create an i element for the font-awesome icon
+var activityIconElement = document.createElement('i');
+activityIconElement.classList.add('fas', 'fa-cog');
 
-menuToggleBtn.addEventListener('click', () => {
-  sideBar.classList.toggle('show-sidebar');
+// Append the icon element to the div element
+activitySectionButton.appendChild(activityIconElement);
+headerElement.appendChild(activitySectionButton);
 
+
+// Create an activity section element
+var activitySection = document.createElement('div');
+activitySection.classList.add('activity-section');
+activitySection.id = 'activity-section-id';
+
+// Insert the div element at the beginning of the main section
+// mainElement.insertBefore(activitySection, mainElement.firstChild);
+mainElement.appendChild(activitySection);
+
+
+activitySectionButton.addEventListener('click', () => {
+  activitySection.classList.toggle('show-activity-section');
 });
 
 
@@ -361,90 +459,88 @@ menuToggleBtn.addEventListener('click', () => {
 
 
 
-// Get the sidebar container
-var sidebar = document.getElementById('sidebar-id');
+
+
 
 // Get all heading elements
 var homeContainer = document.querySelector('.container');
 var homeContainerElements = Array.from(homeContainer.querySelectorAll('.container > *'));
-var headings = homeContainer.querySelectorAll('h1, h2, h3, h4, h5, h6');
+// var headings = homeContainer.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
 
 // Initialize variables to keep track of the parent div and current currentLevel
-var sideBarParentDiv = sidebar;
+var sideBarParentDiv = sidebarMenu;
 var homeParentDiv = homeContainer;
-var homeChildDiv;
+var activityParentDiv = activitySection;
 var previousLevel = 0;
 
 
 for (var j = 0; j < homeContainerElements.length; j++) {
-    var homeContainerElement = homeContainerElements[j];
+  var homeContainerElement = homeContainerElements[j];
+  if (homeContainerElement.tagName.toLowerCase().startsWith('h')) {
+    // Code to execute if it is an <h1> to <h6> element
 
-    if (homeContainerElement.tagName.toLowerCase().startsWith('h')) {
-        // Code to execute if it is an <h1> to <h6> element
+    // Iterate over each heading element
 
+    var heading = homeContainerElement;
+    var currentLevel = parseInt(heading.tagName.charAt(1));
 
+    // Generate a unique ID for the heading element
+    var headingId = 'sidebar-heading-' + j;
 
-
-
-        // Iterate over each heading element
-        
-            var heading = homeContainerElement;
-            var currentLevel = parseInt(heading.tagName.charAt(1));
-
-            // Generate a unique ID for the heading element
-            var headingId = 'sidebar-heading-' + j;
-
-            // Set the generated ID on the heading element
-            heading.setAttribute('id', headingId);
+    // Set the generated ID on the heading element
+    heading.setAttribute('id', headingId);
 
 
-            // Create a new div for the current currentLevel if necessary
-            if (currentLevel > previousLevel) {
-
-                var sideBarChildDiv = document.createElement('div');
-                sideBarChildDiv.className = 'h' + currentLevel;
-                sideBarParentDiv.appendChild(sideBarChildDiv);
-                sideBarParentDiv = sideBarChildDiv;
-
-
-
-
-                homeChildDiv = document.createElement('div');
-                homeChildDiv.className = 'hh' + currentLevel;
-                homeParentDiv.appendChild(homeChildDiv);
-                homeParentDiv = homeChildDiv;
-
-            }
-
-
-            // Move up the hierarchy if necessary
-            else if (currentLevel < previousLevel) {
-
-                while (previousLevel > currentLevel) {
-                    sideBarParentDiv = sideBarParentDiv.parentNode;
-                    homeParentDiv = homeParentDiv.parentNode;
-                    previousLevel--;
-                }
-
-            }
-
-            homeParentDiv.appendChild(homeContainerElement);
-            // Create a link element
-            var link = document.createElement('a');
-            link.textContent = heading.textContent;
-            link.href = '#' + headingId;
-            sideBarParentDiv.appendChild(link);
-            sideBarParentDiv.appendChild(document.createElement('br'));
-            // Update the current currentLevel
-            previousLevel = currentLevel;
-        
+    // Create a new div for the current currentLevel if necessary
+    if (currentLevel > previousLevel) {
+      var sideBarChildDiv = document.createElement('div');
+      sideBarChildDiv.className = 'h' + currentLevel;
+      sideBarParentDiv.appendChild(sideBarChildDiv);
+      sideBarParentDiv = sideBarChildDiv;
+    
+      var homeChildDiv = document.createElement('div');
+      homeChildDiv.className = 'hh' + currentLevel;
+      homeParentDiv.appendChild(homeChildDiv);
+    
+      var activityChildDiv = document.createElement('div');
+      activityChildDiv.className = 'hh' + currentLevel;
+      activityParentDiv.appendChild(activityChildDiv);
+    
+      homeParentDiv = homeChildDiv;
+      activityParentDiv = activityChildDiv;
+    }
+    
+    // Move up the hierarchy if necessary
+    else if (currentLevel < previousLevel) {
+      while (previousLevel > currentLevel) {
+        sideBarParentDiv = sideBarParentDiv.parentNode;
+        homeParentDiv = homeParentDiv.parentNode;
+          activityParentDiv = activityParentDiv.parentNode;
+        previousLevel--;
+      }
     }
 
-    else{
-        homeParentDiv.appendChild(homeContainerElement);
-    }
+    homeParentDiv.appendChild(homeContainerElement);
+    activityParentDiv.appendChild(homeContainerElement.cloneNode(true));
+    // Create a link element
+    var link = document.createElement('a');
+    link.textContent = heading.textContent;
+    link.href = '#' + headingId;
+    sideBarParentDiv.appendChild(link);
+    sideBarParentDiv.appendChild(document.createElement('br'));
+    // Update the current currentLevel
+    previousLevel = currentLevel;
+  }
+  else {
+    homeParentDiv.appendChild(homeContainerElement);
 
+    if (homeContainerElement.classList.contains('MCQ-container')) {
+      activityParentDiv.appendChild(homeContainerElement);
+    }
+    
+    
+  }
 }
 
 
@@ -492,7 +588,7 @@ toggleButtons.forEach(function(button) {
 var fileName = window.location.pathname.split("/").pop();
 
 
-lessonName = fileName.replace(/-/g, " ").replace(/_/g, " ").replace(".html", "");
+var lessonName = fileName.replace(/-/g, " ").replace(/_/g, " ").replace(".html", "");
 
 
 
@@ -560,6 +656,53 @@ fetch(contentPageLocation)
 
 
 
+// // JavaScript code to handle link clicks
+// document.addEventListener('DOMContentLoaded', function () {
+//   var internalLinks = document.querySelectorAll('a[href^="#"]');
+//   for (var i = 0; i < internalLinks.length; i++) {
+//     internalLinks[i].addEventListener('click', function (event) {
+//       event.preventDefault(); // Prevent the default link behavior
+//       var target = this.getAttribute('href');
+//       animateBody(target);
+//       // Scroll to the target element with smooth behavior
+//       document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+//     });
+//   }
+// });
+
+// // Function to animate the body based on the target link
+// function animateBody(target) {
+//   var body = document.querySelector('body');
+//   if (target === '#top') {
+//     body.classList.add('move-up');
+//     setTimeout(function () {
+//       body.classList.remove('move-up');
+//     }, 300);
+//   } else if (target === '#bottom') {
+//     body.classList.add('move-down');
+//     setTimeout(function () {
+//       body.classList.remove('move-down');
+//     }, 300);
+//   }
+// }
+
+
+// // JavaScript code to handle link clicks
+// document.addEventListener('DOMContentLoaded', function () {
+//   var internalLinks = document.querySelectorAll('a[href^="#"]');
+//   for (var i = 0; i < internalLinks.length; i++) {
+//     internalLinks[i].addEventListener('click', function (event) {
+//       event.preventDefault(); // Prevent the default link behavior
+//       var target = this.getAttribute('href');
+//       var targetElements = document.querySelectorAll(target);
+
+//       targetElements.forEach(function (element) {
+//         element.scrollIntoView({ behavior: 'instant'});
+//       });
+//     });
+//   }
+// });
+
 // JavaScript code to handle link clicks
 document.addEventListener('DOMContentLoaded', function () {
   var internalLinks = document.querySelectorAll('a[href^="#"]');
@@ -567,29 +710,16 @@ document.addEventListener('DOMContentLoaded', function () {
     internalLinks[i].addEventListener('click', function (event) {
       event.preventDefault(); // Prevent the default link behavior
       var target = this.getAttribute('href');
-      animateBody(target);
-      // Scroll to the target element with smooth behavior
-      document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+      var targetElements = document.querySelectorAll(target);
+
+      targetElements.forEach(function (element, index) {
+        setTimeout(function () {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, index * 600); // Delay each scroll by 500 milliseconds (adjust as needed)
+      });
     });
   }
 });
-
-// Function to animate the body based on the target link
-function animateBody(target) {
-  var body = document.querySelector('body');
-  if (target === '#top') {
-    body.classList.add('move-up');
-    setTimeout(function () {
-      body.classList.remove('move-up');
-    }, 300);
-  } else if (target === '#bottom') {
-    body.classList.add('move-down');
-    setTimeout(function () {
-      body.classList.remove('move-down');
-    }, 300);
-  }
-}
-
 
 
 
@@ -784,7 +914,7 @@ fetch(contentPageLocation)
 
 
 
-  // Create a link element
+// Create a link element
 var linkElement = document.createElement('link');
 linkElement.rel = 'stylesheet';
 linkElement.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css';
@@ -804,6 +934,9 @@ document.head.appendChild(linkElement);
 // function printPage() {
 //   window.print();
 // }
+
+
+
 
 
 
