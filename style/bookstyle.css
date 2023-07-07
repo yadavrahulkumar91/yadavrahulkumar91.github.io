@@ -40,7 +40,7 @@ body::-webkit-scrollbar-track {
 header {
   background-color: #1abc9c;
  padding-top:5px;
-height: 10vh;
+/* height: 10vh; */
   text-align: center;
   display: flex;
   justify-content: center;
@@ -189,6 +189,29 @@ header .lesson-no-box h1{
   .active-tab {
   background-color: #ffffff;
   }
+
+
+  .sub-tab {
+    /* display: inline-block; */
+    padding: 2px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sub-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .sub-tab.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
     
   
   

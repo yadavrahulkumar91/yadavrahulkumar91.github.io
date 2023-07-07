@@ -17,40 +17,52 @@
         .container h6 {
             background-color: white;
         }
+        header{
+            display:block;
+        }
+        .lesson-name{
+            margin-left:150px;
+            width:auto;
+            min-width: none;
+            padding:0px;
+            color:#8B00FF;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>TU MBBS Paper-IV (Integrated Basic Medical Science-I) Super Fast Track</h1>
-        <button id="print-button">Print</button>
-    </header>
-    <center>
-        <div class="tab active-tab" onclick="openContainer(event, 'home')">General Concept<br>
-            <a href="#Anatomy">An</a>
-            <a href="#Biochemistry">Bi</a>
-            <a href="#Microbiology">Mi</a>
-            <a href="#Physiology">Ph</a>
-            <a href="#Pathology">Pa</a> <a href="#Pharmacology">Pm</a>
+        <div class="header-center">
+        <div class="lesson-name">TU MBBS Paper-IV (IBMS-I) Super Fast Track</div>
+        <div class="tab-bar">
+            <div class="tab active-tab" onclick="openContainer(event, 'home')">General Concept<br>
+            <a class="sub-tab" href="#Anatomy">An</a>
+            <a class="sub-tab" href="#Biochemistry">Bi</a>
+            <a class="sub-tab" href="#Microbiology">Mi</a>
+            <a class="sub-tab" href="#Physiology">Ph</a>
+            <a class="sub-tab" href="#Pathology">Pa</a> 
+            <a class="sub-tab" href="#Pharmacology">Pm</a>
         </div>
         <div class="tab" onclick="openContainer(event, 'questions')">Musculo-skeletal System<br>
-            <a href="#Anatomy1">An</a>
-            <a href="#Biochemistry1">Bi</a>
-            <a href="#Microbiology1">Mi</a>
-            <a href="#Physiology1">Ph</a>
-            <a href="#Pathology1">Pa</a>
-            <a href="#Pharmacology1">Pm</a>
+            <a class="sub-tab" href="#Anatomy1">An</a>
+            <a class="sub-tab" href="#Biochemistry1">Bi</a>
+            <a class="sub-tab" href="#Microbiology1">Mi</a>
+            <a class="sub-tab" href="#Physiology1">Ph</a>
+            <a class="sub-tab" href="#Pathology1">Pa</a>
+            <a class="sub-tab" href="#Pharmacology1">Pm</a>
         </div>
         <div class="tab" onclick="openContainer(event, 'videos')">Neurosensory System<br>
-            <a href="#Anatomy2">An</a>
-            <a href="#Biochemistry2">Bi</a>
-            <a href="#Microbiology2">Mi</a>
-            <a href="#Physiology2">Ph</a>
-            <a href="#Pathology2">Pa</a>
-            <a href="#Pharmacology2">Pm</a>
+            <a class="sub-tab" href="#Anatomy2">An</a>
+            <a class="sub-tab" href="#Biochemistry2">Bi</a>
+            <a class="sub-tab" href="#Microbiology2">Mi</a>
+            <a class="sub-tab" href="#Physiology2">Ph</a>
+            <a class="sub-tab" href="#Pathology2">Pa</a>
+            <a class="sub-tab" href="#Pharmacology2">Pm</a>
         </div>
-        <div class="tab" onclick="openContainer(event, 'remnant')">Videos</div>
-    </center>
+        <!-- <div class="tab" onclick="openContainer(event, 'remnant')">Videos</div> -->
+  </div>
+    </div>
+</header>
     <main>
         <div id="home-container" class="container">
             <div>
@@ -8824,7 +8836,11 @@
                         <div class="qa-q"> 1) Write short not on inferior peduncle. </div>
                     </div>
                     <div class="qa-answer">
-                        <div class="qa-a">   <h1>Inferior Peduncle</h1>
+                        <div class="qa-a">  
+                             <h1>Inferior Peduncle</h1>
+                             <div class="image-right">
+                                <a title="OpenStax College, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:1612_Cerebellar_Peduncles-02.jpg"><img width="512" alt="1612 Cerebellar Peduncles-02" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/1612_Cerebellar_Peduncles-02.jpg/512px-1612_Cerebellar_Peduncles-02.jpg"></a>
+                             </div>
                             <p>The inferior peduncle, also known as the restiform body, is a major structure located in the brainstem, specifically in the posterior region of the cerebellum. It forms part of the cerebellar peduncles, which are fiber tracts that connect the cerebellum to other regions of the central nervous system.</p>
                             <h2>Anatomy of the Inferior Peduncle</h2>
                             <p>The inferior peduncle consists of various fiber tracts that carry different types of information to and from the cerebellum. These include:</p>
