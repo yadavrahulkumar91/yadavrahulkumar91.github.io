@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <div id="home-container" class="container">
+      <canvas id="myChart"></canvas><br>
+      <canvas id="myChart1"></canvas>
+      <!-- <script>
+        // Get the canvas element
+        var ctx = document.getElementById('myChart').getContext('2d');
+      
+        // Define the data for the chart
+        var data = {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: 'Sample Chart',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        };
+      
+        // Configure the chart options
+        var options = {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        };
+      
+        // Create the chart
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: data,
+          options: options
+        });
+      </script> -->
+      <script>
+        // Get the canvas element
+        var ctx = document.getElementById('myChart1').getContext('2d');
+      
+        // Define the hierarchical data for the chart
+        var data = {
+          labels: ['Anticholinergic Drugs'],
+          datasets: [{
+            label: 'Anticholinergic Drugs',
+            data: [{
+              label: 'Muscarinic Receptor Antagonists',
+              children: [{
+                label: 'Tertiary Amines',
+                children: [
+                  { label: 'Atropine' },
+                  { label: 'Scopolamine' }
+                ]
+              }, {
+                label: 'Quaternary Ammonium Compounds',
+                children: [
+                  { label: 'Ipratropium' },
+                  { label: 'Tiotropium' }
+                ]
+              }]
+            }, {
+              label: 'Nicotinic Receptor Antagonists',
+              children: [
+                { label: 'Hexamethonium' },
+                { label: 'Mecamylamine' }
+              ]
+            }]
+          }]
+        };
+      
+        // Configure the chart options
+        var options = {
+          responsive: true,
+          plugins: {
+            tooltip: {
+              enabled: true
+            },
+            legend: {
+              display: true
+            }
+          }
+        };
+      
+        // Create the chart
+        var myChart = new Chart(ctx, {
+          type: 'tree',
+          data: data,
+          options: options
+        });
+      </script>
+      
+
+    </div>
+    <div id="questions-container" class="container" style="display:none"></div>
+    <div id="videos-container" class="container" style="display:none"></div>
+    <div id="remnant-container" class="container" style="display:none"></div>
+  </main>
+  <footer>
+    <p>&copy; 2023 GameChanger Academy</p>
+  </footer>
+  <script>
+    var contentPageLocation = "../content.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+</body>
+</html>

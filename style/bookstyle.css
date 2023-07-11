@@ -3,16 +3,11 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f1f1f1;
-}
-
-
-body {
-  /* Add your desired styles for the body here */
-  /* ... */
-  /* Set a specific height and overflow for the scrollbar to appear */
   height: 100vh; /* Adjust the height as needed */
   overflow: auto;
 }
+
+
 
 /* Customize the scrollbar for the body */
 body::-webkit-scrollbar {
@@ -40,11 +35,13 @@ body::-webkit-scrollbar-track {
 header {
   background-color: #1abc9c;
  padding-top:5px;
-/* height: 10vh; */
+height: auto;
   text-align: center;
   display: flex;
   justify-content: center;
-  
+  position:sticky;
+  top: 0;
+  z-index:999;
 }
 .left-box-container{
   margin-left:-80px;
@@ -223,14 +220,17 @@ header .lesson-no-box h1{
   max-width: 800px;
   margin: 0 auto;
   margin-bottom:0;
-  height: 85vh;
+  height: 100vh;
   padding-right: 10px;
   padding-left: 0px;
    background-color: #ffffff; 
    box-shadow: 10px 0px 10px -5px #ccc, -10px 0px 10px -5px #ccc;
 
   /* float: center;v*/
+
   overflow-y: auto;
+
+  /* top:100px; */
 
   
 }
@@ -338,8 +338,9 @@ header .lesson-no-box h1{
 
 
 
-main{
+main {
   display:flex;
+ 
 }
 
 /* Style for heading of main content */
@@ -438,7 +439,8 @@ footer {
   padding: 0px;
   color: white;
   text-align: center;
-  height: 3vh;
+  position:sticky;
+  bottom: 0;
 }
 
 /* Style for links in footer */
@@ -1153,9 +1155,10 @@ border-radius: 5px;
   display:flexbox;
 
  
-  position: relative;
-  height: 83vh; 
+  /* position: relative; */
+  height: 100vh; 
   top: 0;
+
 
 }
 
@@ -1240,7 +1243,7 @@ border-radius: 5px;
 
  
   position: relative;
-  height: 83vh; 
+  height: 100vh; 
   top: 0;
 }
 
@@ -1575,4 +1578,46 @@ body.move-down {
     max-width:90%;
   
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.node {
+  fill: #faaaaa; /* Customize the fill color of nodes */
+  stroke: #c11cb6; /* Customize the stroke color of nodes */
+  stroke-width: 10px; /* Customize the stroke width of nodes */
+  background-color: #2196f3; /* Customize the background color of nodes */
+  color: #ffffff; /* Customize the text color of nodes */
+  border-radius: 8px; /* Customize the border radius of nodes */
+  border: 2px solid #12da16; /* Customize the border of nodes */
+
+}
+
+.selected-node {
+  fill: #ff9800; /* Customize the fill color of selected nodes */
+  stroke: #ffffff; /* Customize the stroke color of selected nodes */
+  stroke-width: 10px; /* Customize the stroke width of selected nodes */
+  background-color: #ff9800; /* Customize the background color of selected nodes */
+  color: #ffffff; /* Customize the text color of selected nodes */
+  border: 2px solid #a70606; /* Customize the border of selected nodes */
+  border-radius: 8px; /* Customize the border radius of selected nodes */
+
+}
+
+.link {
+  fill: none; /* Remove the fill color of links */
+  stroke: #bdbdbd; /* Customize the stroke color of links */
+  stroke-width: 1px; /* Customize the stroke width of links */
+  stroke-dasharray: 2 2; /* Add dashed line effect to links */
+  marker-end: url(#arrowMarker); /* Customize the arrow marker for links */
 }

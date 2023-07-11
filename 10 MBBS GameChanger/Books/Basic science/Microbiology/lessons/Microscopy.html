@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+ #chart {
+    background-color: #f1f1f1; /* Customize the background color of the chart */
+  }
+  #chart_div {
+    background-color: #f1f1f1; /* Customize the background color of the chart */
+  }
+</style>
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <div id="home-container" class="container">
+       <div id="chart_div"></div> 
+      <svg id="chart" width="600" height="auto"></svg> 
+
+
+      <!-- <script type="text/javascript">
+        // Load the Google Charts library
+        google.charts.load('current', { 'packages': ['treemap'] });
+        
+        // Set a callback function to execute when the library is loaded
+        google.charts.setOnLoadCallback(drawChart);
+      
+        // Define the data for the chart
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Anticholinergic Drugs');
+          data.addColumn('string', 'Parent');
+          data.addColumn('number', 'Size');
+          data.addRows([
+            ['Anticholinergic Drugs', null, 0],
+            ['Muscarinic Receptor Antagonists', 'Anticholinergic Drugs', 0],
+            ['Tertiary Amines', 'Muscarinic Receptor Antagonists', 2],
+            ['Atropine', 'Tertiary Amines', 1],
+            ['Scopolamine', 'Tertiary Amines', 1],
+            ['Quaternary Ammonium Compounds', 'Muscarinic Receptor Antagonists', 2],
+            ['Ipratropium', 'Quaternary Ammonium Compounds', 1],
+            ['Tiotropium', 'Quaternary Ammonium Compounds', 1],
+            ['Nicotinic Receptor Antagonists', 'Anticholinergic Drugs', 0],
+            ['Hexamethonium', 'Nicotinic Receptor Antagonists', 1],
+            ['Mecamylamine', 'Nicotinic Receptor Antagonists', 1]
+          ]);
+      
+          // Set chart options
+          var options = {
+            minColor: '#f00',
+            midColor: '#ddd',
+            maxColor: '#0d0',
+            headerHeight: 15,
+            fontColor: 'black',
+            showScale: true
+          };
+      
+          // Instantiate and draw the chart
+          var chart = new google.visualization.TreeMap(document.getElementById('chart_div'));
+          chart.draw(data, options);
+        }
+      </script> -->
+<!--       
+      <script>
+        // Define the hierarchical data for the chart
+        var data = {
+          name: 'Anticholinergic Drugs',
+          children: [
+            {
+              name: 'Muscarinic Receptor Antagonists',
+              children: [
+                {
+                  name: 'Tertiary Amines',
+                  children: [
+                    { name: 'Atropine' },
+                    { name: 'Scopolamine' }
+                  ]
+                },
+                {
+                  name: 'Quaternary Ammonium Compounds',
+                  children: [
+                    { name: 'Ipratropium' },
+                    { name: 'Tiotropium' }
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'Nicotinic Receptor Antagonists',
+              children: [
+                { name: 'Hexamethonium' },
+                { name: 'Mecamylamine' }
+              ]
+            }
+          ]
+        };
+      
+        // Create the tree layout
+        var treeLayout = d3.tree().size([400, 400]);
+      
+        // Create a hierarchy from the data
+        var hierarchy = d3.hierarchy(data);
+      
+        // Assign positions to each node
+        var treeData = treeLayout(hierarchy);
+      
+        // Create an SVG group for the chart
+        var svg = d3.select('#chart');
+      
+        // Create links between nodes
+        var links = svg
+          .selectAll('.link')
+          .data(treeData.links())
+          .enter()
+          .append('path')
+          .attr('class', 'link')
+          .attr('d', d3.linkVertical().x(d => d.x).y(d => d.y));
+      
+        // Create nodes
+        var nodes = svg
+          .selectAll('.node')
+          .data(treeData.descendants())
+          .enter()
+          .append('g')
+          .attr('class', 'node')
+          .attr('transform', d => `translate(${d.x}, ${d.y})`);
+      
+        // Draw circles for nodes
+        nodes.append('circle').attr('r', 5);
+      
+        // Add labels to nodes
+        nodes
+          .append('text')
+          .attr('dy', '0.31em')
+          .attr('x', d => (d.children ? -10 : 10))
+          .attr('text-anchor', d => (d.children ? 'end' : 'start'))
+          .text(d => d.data.name);
+      </script>
+       -->
+
+       <!-- <script>
+        // Define the hierarchical data for the chart
+        var data = {
+          name: 'Anticholinergic Drugs',
+          children: [
+            {
+              name: 'Muscarinic Receptor Antagonists',
+              children: [
+                {
+                  name: 'Tertiary Amines',
+                  children: [
+                    { name: 'Atropine' },
+                    { name: 'Scopolamine' }
+                  ]
+                },
+                {
+                  name: 'Quaternary Ammonium Compounds',
+                  children: [
+                    { name: 'Ipratropium' },
+                    { name: 'Tiotropium' }
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'Nicotinic Receptor Antagonists',
+              children: [
+                { name: 'Hexamethonium' },
+                { name: 'Mecamylamine' }
+              ]
+            }
+          ]
+        };
+      
+        // Create the tree layout
+        var treeLayout = d3.tree().size([400, 400]);
+      
+        // Create a hierarchy from the data
+        var hierarchy = d3.hierarchy(data);
+      
+        // Assign positions to each node
+        var treeData = treeLayout(hierarchy);
+      
+        // Create an SVG group for the chart
+        var svg = d3.select('#chart');
+      
+        // Create links between nodes
+        var links = svg
+          .selectAll('.link')
+          .data(treeData.links())
+          .enter()
+          .append('path')
+          .attr('class', 'link')
+          .attr('d', d => {
+            return `
+              M${d.source.x},${d.source.y}
+              V${d.target.y - 20}
+              H${d.target.x}
+              V${d.target.y}
+            `;
+          });
+      
+        // Create nodes
+        var nodes = svg
+          .selectAll('.node')
+          .data(treeData.descendants())
+          .enter()
+          .append('g')
+          .attr('class', 'node')
+          .attr('transform', d => `translate(${d.x},${d.y})`);
+      
+        // Draw circles for nodes
+        nodes.append('circle').attr('r', 10);
+      
+        // Add labels to nodes
+        nodes
+          .append('text')
+          .attr('dy', '0.35em')
+          .attr('x', 0)
+          .attr('y', -20)
+          .attr('text-anchor', 'middle')
+          .text(d => d.data.name);
+      </script>
+       -->
+    
+<!-- 
+       <script>
+        // Define the hierarchical data for the chart
+        var data = {
+          name: 'Anticholinergic Drugs',
+          children: [
+            {
+              name: 'Muscarinic Receptor Antagonists',
+              children: [
+                {
+                  name: 'Tertiary Amines',
+                  children: [
+                    { name: 'Atropine' },
+                    { name: 'Scopolamine' }
+                  ]
+                },
+                {
+                  name: 'Quaternary Ammonium Compounds',
+                  children: [
+                    { name: 'Ipratropium' },
+                    { name: 'Tiotropium' }
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'Nicotinic Receptor Antagonists',
+              children: [
+                { name: 'Hexamethonium' },
+                { name: 'Mecamylamine' }
+              ]
+            }
+          ]
+        };
+      
+        // Create the tree layout
+        var treeLayout = d3.tree().size([400, 400]);
+      
+        // Create a hierarchy from the data
+        var hierarchy = d3.hierarchy(data);
+      
+        // Assign positions to each node
+        var treeData = treeLayout(hierarchy);
+      
+        // Create an SVG group for the chart
+        var svg = d3.select('#chart');
+      
+        // Create links between nodes
+        var links = svg
+          .selectAll('.link')
+          .data(treeData.links())
+          .enter()
+          .append('path')
+          .attr('class', 'link')
+          .attr('d', d => {
+            return `
+              M${d.source.x},${d.source.y}
+              V${d.target.y - 20}
+              H${d.target.x}
+            `;
+          });
+      
+        // Create arrowheads for links
+        svg
+          .append('defs')
+          .selectAll('marker')
+          .data(treeData.links())
+          .enter()
+          .append('marker')
+          .attr('id', (d, i) => `marker${i}`)
+          .attr('viewBox', '0 -5 10 10')
+          .attr('refX', 7)
+          .attr('refY', 0)
+          .attr('markerWidth', 6)
+          .attr('markerHeight', 6)
+          .attr('orient', 'auto')
+          .append('path')
+          .attr('d', 'M0,-5L10,0L0,5');
+      
+        // Create nodes
+        var nodes = svg
+          .selectAll('.node')
+          .data(treeData.descendants())
+          .enter()
+          .append('g')
+          .attr('class', 'node')
+          .attr('transform', d => `translate(${d.x},${d.y})`);
+      
+        // Draw circles for nodes
+        nodes.append('circle').attr('r', 10);
+      
+        // Add labels to nodes
+        nodes
+          .append('text')
+          .attr('dy', '0.35em')
+          .attr('x', 0)
+          .attr('y', -20)
+          .attr('text-anchor', 'middle')
+          .text(d => d.data.name);
+      
+        // Apply arrowheads to links
+        links.attr('marker-end', (d, i) => `url(#marker${i})`);
+      </script>
+       -->
+    
+        <script type="text/javascript">
+        // Load the Google Charts library
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        
+        // Set a callback function to execute when the library is loaded
+        google.charts.setOnLoadCallback(drawChart);
+      
+        // Define the data for the chart
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+          data.addRows([
+            ['Anticholinergic Drugs', '', ''],
+            ['Muscarinic Receptor Antagonists', 'Anticholinergic Drugs', ''],
+            ['Tertiary Amines', 'Muscarinic Receptor Antagonists', ''],
+            ['Atropine', 'Tertiary Amines', ''],
+            ['Scopolamine', 'Tertiary Amines', ''],
+            ['Quaternary Ammonium Compounds', 'Muscarinic Receptor Antagonists', ''],
+            ['Ipratropium', 'Quaternary Ammonium Compounds', ''],
+            ['Tiotropium', 'Quaternary Ammonium Compounds', ''],
+            ['Nicotinic Receptor Antagonists', 'Anticholinergic Drugs', ''],
+            ['Hexamethonium', 'Nicotinic Receptor Antagonists', ''],
+            ['Mecamylamine', 'Nicotinic Receptor Antagonists', ''],
+            ['Dicyclovir', 'Nicotinic Receptor Antagonists', ''],
+            ['Hi', 'Tiotropium', '']
+          ]);
+      
+          // Create the chart
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+      
+          // Configure the chart options
+          // var options = {
+          //   allowHtml: true,
+          //   size: 'medium',
+          //   nodeClass: 'node',
+          //   selectedNodeClass: 'selected-node',
+          //   arrows: { format: 'arrow' }
+          // };
+
+          var options = {
+  allowHtml: true,
+  size: 'medium',
+  nodeClass: 'node', // Change the CSS class for nodes
+  selectedNodeClass: 'selected-node', // Change the CSS class for selected nodes
+  arrows: { format: 'triangle' }, // Change the arrow formatting, options: 'arrow', 'circle', 'triangle'
+  // Add or modify other options as needed
+};
+
+
+
+      
+          // Draw the chart
+          chart.draw(data, options);
+        }
+      </script> 
+      
+<!-- 
+      <style>
+        .node {
+          fill: #2196f3;
+          stroke: #ffffff;
+          stroke-width: 2px;
+        }
+      
+        .highlighted {
+          fill: #ff9800;
+          stroke: #ffffff;
+          stroke-width: 2px;
+        }
+      </style>
+      
+      <svg id="chart" width="600" height=""></svg>
+      
+      <script>
+        var data = {
+          name: 'Anticholinergic Drugs',
+          children: [
+            {
+              name: 'Muscarinic Receptor Antagonists',
+              children: [
+                {
+                  name: 'Tertiary Amines',
+                  children: [
+                    { name: 'Atropine' },
+                    { name: 'Scopolamine' }
+                  ]
+                },
+                {
+                  name: 'Quaternary Ammonium Compounds',
+                  children: [
+                    { name: 'Ipratropium' },
+                    { name: 'Tiotropium' }
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'Nicotinic Receptor Antagonists',
+              children: [
+                { name: 'Hexamethonium' },
+                { name: 'Mecamylamine' }
+              ]
+            }
+          ]
+        };
+      
+        var treeLayout = d3.tree().size([400, 400]);
+        var hierarchy = d3.hierarchy(data);
+        var treeData = treeLayout(hierarchy);
+      
+        var svg = d3.select('#chart');
+      
+        var links = svg
+          .selectAll('.link')
+          .data(treeData.links())
+          .enter()
+          .append('path')
+          .attr('class', 'link')
+          .attr('d', d => {
+            return `
+              M${d.source.x},${d.source.y}
+              V${d.target.y - 20}
+              H${d.target.x}
+            `;
+          });
+      
+        var nodes = svg
+          .selectAll('.node')
+          .data(treeData.descendants())
+          .enter()
+          .append('g')
+          .attr('class', 'node')
+          .attr('transform', d => `translate(${d.x},${d.y})`);
+      
+        nodes.append('circle').attr('r', 10);
+      
+        nodes
+          .append('text')
+          .attr('dy', '0.35em')
+          .attr('x', 0)
+          .attr('y', -20)
+          .attr('text-anchor', 'middle')
+          .text(d => d.data.name);
+      
+        // Apply different styles to specific nodes
+        var highlightedNodes = svg.selectAll('.node').filter(function (d) {
+          // Filter nodes based on specific conditions
+          return d.data.name === 'Tertiary Amines' || d.data.name === 'Hexamethonium';
+        });
+      
+        highlightedNodes.classed('highlighted', true);
+      </script> -->
+
+
+
+      </div>
+    <div id="questions-container" class="container" style="display:none"></div>
+    <div id="videos-container" class="container" style="display:none"></div>
+    <div id="remnant-container" class="container" style="display:none"></div>
+  </main>
+  <footer>
+    <p>&copy; 2023 GameChanger Academy</p>
+  </footer>
+  <script>
+    var contentPageLocation = "../content.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+</body>
+</html>
