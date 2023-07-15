@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typeshalla Online</title>
+  <style>
+    #editor {
+      font-size: 16px;
+      font-family: monospace;
+      color: white;
+      background-color: #e6a4a4;
+      height: 300px;
+      width: 400px;
+    }
+
+    #editor1{
+        font-size: 16px;
+      font-family: monospace;
+      color: white;
+      background-color: #e6a4a4;
+      height: 300px;
+      width: 400px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div id="editor" contenteditable="true"></div>
+
+    <input  id="editor1" contenteditable="true"></input>
+
+  <script>
+    // Get the editor element
+    const editor = document.getElementById('editor');
+
+    // Add event listener for input changes
+    editor.addEventListener('input', () => {
+      const text = editor.innerText;
+    //   if (text === rahul){
+
+            const highlightedText = '<span style="color: green;">' + text + '</span>';
+            editor.innerHTML = highlightedText;
+    //   }
+    });
+
+
+    const editor1 = document.getElementById('editor1');
+    const text1 = editor1.innerText;
+    //   if (text === rahul){
+
+        // editor1.addEventListener(){
+        //     const highlightedText1 = '<span style="color: green;">' + text1 + '</span>';
+        //     editor1.innerHTML = highlightedText1;
+        // };
+
+  </script>
+</body>
+</html>

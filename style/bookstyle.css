@@ -220,7 +220,7 @@ header .lesson-no-box h1{
   max-width: 800px;
   margin: 0 auto;
   margin-bottom:0;
-  height: 100vh;
+  /* height: 100vh; */
   padding-right: 10px;
   padding-left: 0px;
    background-color: #ffffff; 
@@ -698,6 +698,7 @@ border-radius: 5px;
 
 .qa-block {
   margin: 20px 0;
+  counter-reset: qa-subquestion-counter;
   
 }
 
@@ -1620,4 +1621,96 @@ body.move-down {
   stroke-width: 1px; /* Customize the stroke width of links */
   stroke-dasharray: 2 2; /* Add dashed line effect to links */
   marker-end: url(#arrowMarker); /* Customize the arrow marker for links */
+}
+
+
+
+
+.qa-a h1 {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #333; */
+  /* margin-bottom: 10px; */
+  background-color: white;
+}
+
+.qa-a h2 {
+  font-size: 16px;
+  font-weight: bold;
+  /* color: #555; */
+  /* margin-bottom: 8px; */
+  background-color: white;
+}
+
+.qa-a h3 {
+  font-size: 14px;
+  font-weight: bold;
+  /* color: #777; */
+  /* margin-bottom: 6px; */
+}
+
+.qa-a h4 {
+  font-size: 12px;
+  font-weight: bold;
+  /* color: #888; */
+  /* margin-bottom: 4px; */
+}
+
+.qa-a h5 {
+  font-size: 10px;
+  font-weight: bold;
+  /* color: #999; */
+  /* margin-bottom: 2px; */
+}
+
+.qa-a h6 {
+  font-size: 8px;
+  font-weight: bold;
+  /* color: #aaa; */
+  /* margin-bottom: 1px; */
+}
+
+
+.qa-subquestion {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #555; */
+  /* margin-bottom: 8px; */
+  margin-left:5px;
+}
+
+
+.qa-subquestion {
+  counter-increment: qa-subquestion-counter;
+  display: flex;
+  
+
+
+}
+
+.qa-subquestion:before {
+  content: counter(qa-subquestion-counter, lower-alpha) ")";
+  margin-right: 5px;
+
+  
+}
+
+
+@page {
+  /* Set the background color for the printing header and footer */
+  @top-left {
+    content: "";
+    background-color: #f2f2f2;
+  }
+
+  /* Add page number to the printing header */
+  @top-right {
+    content: "Page " counter(page);
+  }
+
+  /* Set the background color for the printing footer */
+  @bottom-center {
+    content: "";
+    background-color: #f2f2f2;
+  }
 }
