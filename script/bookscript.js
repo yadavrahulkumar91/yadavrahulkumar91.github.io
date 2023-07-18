@@ -465,7 +465,6 @@ activitySectionButton.addEventListener('click', () => {
 // Get all heading elements
 var homeContainer = document.querySelector('.container');
 var homeContainerElements = Array.from(homeContainer.querySelectorAll('.container > *'));
-// var headings = homeContainer.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
 
 // Initialize variables to keep track of the parent div and current currentLevel

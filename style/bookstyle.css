@@ -220,7 +220,7 @@ header .lesson-no-box h1{
   max-width: 800px;
   margin: 0 auto;
   margin-bottom:0;
-  /* height: 100vh; */
+  height: 100vh;
   padding-right: 10px;
   padding-left: 0px;
    background-color: #ffffff; 
@@ -439,7 +439,7 @@ footer {
   padding: 0px;
   color: white;
   text-align: center;
-  position:sticky;
+  /* position:sticky; */
   bottom: 0;
 }
 
