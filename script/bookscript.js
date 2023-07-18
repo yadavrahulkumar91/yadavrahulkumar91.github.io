@@ -438,13 +438,10 @@ activitySectionButton.appendChild(activityIconElement);
 headerElement.appendChild(activitySectionButton);
 
 
-// Create an activity section element
+// Create an activity section element and append at last of main section
 var activitySection = document.createElement('div');
 activitySection.classList.add('activity-section');
 activitySection.id = 'activity-section-id';
-
-// Insert the div element at the beginning of the main section
-// mainElement.insertBefore(activitySection, mainElement.firstChild);
 mainElement.appendChild(activitySection);
 
 
@@ -462,87 +459,88 @@ activitySectionButton.addEventListener('click', () => {
 
 
 
-// Get all heading elements
-var homeContainer = document.querySelector('.container');
-var homeContainerElements = Array.from(homeContainer.querySelectorAll('.container > *'));
+var homeContainer = document.querySelectorAll('.container');
+for (var i = 0; i < homeContainer.length; i++) {
+
+  var homeContainerElements = Array.from(homeContainer[i].querySelectorAll('.container > *'));
 
 
-// Initialize variables to keep track of the parent div and current currentLevel
-var sideBarParentDiv = sidebarMenu;
-var homeParentDiv = homeContainer;
-var activityParentDiv = activitySection;
-var previousLevel = 0;
+  // Initialize variables to keep track of the parent div and current currentLevel
+  var sideBarParentDiv = sidebarMenu;
+  var homeParentDiv = homeContainer[i];
+  var activityParentDiv = activitySection;
+  var previousLevel = 0;
 
 
-for (var j = 0; j < homeContainerElements.length; j++) {
-  var homeContainerElement = homeContainerElements[j];
-  if (homeContainerElement.tagName.toLowerCase().startsWith('h')) {
-    // Code to execute if it is an <h1> to <h6> element
+  for (var j = 0; j < homeContainerElements.length; j++) {
+    var homeContainerElement = homeContainerElements[j];
+    if (homeContainerElement.tagName.toLowerCase().startsWith('h')) {
+      // Code to execute if it is an <h1> to <h6> element
 
-    // Iterate over each heading element
+      // Iterate over each heading element
 
-    var heading = homeContainerElement;
-    var currentLevel = parseInt(heading.tagName.charAt(1));
+      var heading = homeContainerElement;
+      var currentLevel = parseInt(heading.tagName.charAt(1));
 
-    // Generate a unique ID for the heading element
-    var headingId = 'sidebar-heading-' + j;
+      // Generate a unique ID for the heading element
+      var headingId = 'sidebar-heading-' + j;
 
-    // Set the generated ID on the heading element
-    heading.setAttribute('id', headingId);
+      // Set the generated ID on the heading element
+      heading.setAttribute('id', headingId);
 
 
-    // Create a new div for the current currentLevel if necessary
-    if (currentLevel > previousLevel) {
-      var sideBarChildDiv = document.createElement('div');
-      sideBarChildDiv.className = 'h' + currentLevel;
-      sideBarParentDiv.appendChild(sideBarChildDiv);
-      sideBarParentDiv = sideBarChildDiv;
-    
-      var homeChildDiv = document.createElement('div');
-      homeChildDiv.className = 'hh' + currentLevel;
-      homeParentDiv.appendChild(homeChildDiv);
-    
-      var activityChildDiv = document.createElement('div');
-      activityChildDiv.className = 'hh' + currentLevel;
-      activityParentDiv.appendChild(activityChildDiv);
-    
-      homeParentDiv = homeChildDiv;
-      activityParentDiv = activityChildDiv;
-    }
-    
-    // Move up the hierarchy if necessary
-    else if (currentLevel < previousLevel) {
-      while (previousLevel > currentLevel) {
-        sideBarParentDiv = sideBarParentDiv.parentNode;
-        homeParentDiv = homeParentDiv.parentNode;
-          activityParentDiv = activityParentDiv.parentNode;
-        previousLevel--;
+      // Create a new div for the current currentLevel if necessary
+      if (currentLevel > previousLevel) {
+        var sideBarChildDiv = document.createElement('div');
+        sideBarChildDiv.className = 'h' + currentLevel;
+        sideBarParentDiv.appendChild(sideBarChildDiv);
+        sideBarParentDiv = sideBarChildDiv;
+
+        var homeChildDiv = document.createElement('div');
+        homeChildDiv.className = 'hh' + currentLevel;
+        homeParentDiv.appendChild(homeChildDiv);
+
+        var activityChildDiv = document.createElement('div');
+        activityChildDiv.className = 'hh' + currentLevel;
+        activityParentDiv.appendChild(activityChildDiv);
+
+        homeParentDiv = homeChildDiv;
+        activityParentDiv = activityChildDiv;
       }
-    }
 
-    homeParentDiv.appendChild(homeContainerElement);
-    activityParentDiv.appendChild(homeContainerElement.cloneNode(true));
-    // Create a link element
-    var link = document.createElement('a');
-    link.textContent = heading.textContent;
-    link.href = '#' + headingId;
-    sideBarParentDiv.appendChild(link);
-    sideBarParentDiv.appendChild(document.createElement('br'));
-    // Update the current currentLevel
-    previousLevel = currentLevel;
-  }
-  else {
-    homeParentDiv.appendChild(homeContainerElement);
+      // Move up the hierarchy if necessary
+      else if (currentLevel < previousLevel) {
+        while (previousLevel > currentLevel) {
+          sideBarParentDiv = sideBarParentDiv.parentNode;
+          homeParentDiv = homeParentDiv.parentNode;
+          activityParentDiv = activityParentDiv.parentNode;
+          previousLevel--;
+        }
+      }
 
-    if (homeContainerElement.classList.contains('MCQ-container')) {
-      activityParentDiv.appendChild(homeContainerElement);
+      homeParentDiv.appendChild(homeContainerElement);
+      activityParentDiv.appendChild(homeContainerElement.cloneNode(true));
+      // Create a link element
+      var link = document.createElement('a');
+      link.textContent = heading.textContent;
+      link.href = '#' + headingId;
+      sideBarParentDiv.appendChild(link);
+      sideBarParentDiv.appendChild(document.createElement('br'));
+      // Update the current currentLevel
+      previousLevel = currentLevel;
     }
-    
-    
+    else {
+      homeParentDiv.appendChild(homeContainerElement);
+
+      if (homeContainerElement.classList.contains('MCQ-container')) {
+        activityParentDiv.appendChild(homeContainerElement);
+      }
+
+
+    }
   }
+
 }
-
-
 
 
 
