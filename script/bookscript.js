@@ -1,16 +1,3 @@
-function openContainer(evt, containerName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("container");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tab");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
-  }
-  document.getElementById(containerName + "-container").style.display = "block";
-  evt.currentTarget.className += " active-tab";
-}
 
 
 
@@ -406,24 +393,6 @@ sidebarMenuButton.appendChild(sidebarIconElement);
 headerElement.appendChild(sidebarMenuButton);
 
 
-// Create a Sidebar menu element
-var sidebarMenu = document.createElement('div');
-sidebarMenu.classList.add('sidebar');
-sidebarMenu.id = 'sidebar-id';
-
-// Insert the div element at the beginning of the main section
-mainElement.insertBefore(sidebarMenu, mainElement.firstChild);
-
-sidebarMenuButton.addEventListener('click', () => {
-  sidebarMenu.classList.toggle('show-sidebar');
-});
-
-
-
-
-
-
-
 // Create an activity menu button element
 var activitySectionButton = document.createElement('div');
 activitySectionButton.classList.add('activity-toggle-btn');
@@ -438,6 +407,19 @@ activitySectionButton.appendChild(activityIconElement);
 headerElement.appendChild(activitySectionButton);
 
 
+
+
+
+
+// Create a Sidebar menu element
+var sidebarMenu = document.createElement('div');
+sidebarMenu.classList.add('sidebar');
+sidebarMenu.id = 'sidebar-id';
+// Insert the div element at the beginning of the main section
+mainElement.insertBefore(sidebarMenu, mainElement.firstChild);
+
+
+
 // Create an activity section element and append at last of main section
 var activitySection = document.createElement('div');
 activitySection.classList.add('activity-section');
@@ -445,34 +427,45 @@ activitySection.id = 'activity-section-id';
 mainElement.appendChild(activitySection);
 
 
-activitySectionButton.addEventListener('click', () => {
-  activitySection.classList.toggle('show-activity-section');
-});
-
-
-
-
-
-
-
 
 
 
 
 var homeContainer = document.querySelectorAll('.container');
+
+var sidebarDiv = [];
+var activitySectionDiv = [];
+var a = 0;
+
 for (var i = 0; i < homeContainer.length; i++) {
+ // Get the ID from the corresponding container
+ var containerId = homeContainer[i].id;
+
+  
+
+  // Create a Sidebar menu element
+sidebarDiv[i]= document.createElement('div');
+sidebarDiv[i].classList.add('sidebar-div');
+ sidebarDiv[i].id = "sidebarDiv" + containerId;
+
+
+ activitySectionDiv[i] = document.createElement('div');
+activitySectionDiv[i].classList.add('activity-section-div');
+activitySectionDiv[i].id = "activitySectionDiv" + containerId;
+
+
 
   var homeContainerElements = Array.from(homeContainer[i].querySelectorAll('.container > *'));
 
 
   // Initialize variables to keep track of the parent div and current currentLevel
-  var sideBarParentDiv = sidebarMenu;
+  var sideBarParentDiv = sidebarDiv[i];
   var homeParentDiv = homeContainer[i];
-  var activityParentDiv = activitySection;
+  var activityParentDiv = activitySectionDiv[i];
   var previousLevel = 0;
 
 
-  for (var j = 0; j < homeContainerElements.length; j++) {
+  for (j=0; j < homeContainerElements.length; j++, a++) {
     var homeContainerElement = homeContainerElements[j];
     if (homeContainerElement.tagName.toLowerCase().startsWith('h')) {
       // Code to execute if it is an <h1> to <h6> element
@@ -483,7 +476,7 @@ for (var i = 0; i < homeContainer.length; i++) {
       var currentLevel = parseInt(heading.tagName.charAt(1));
 
       // Generate a unique ID for the heading element
-      var headingId = 'sidebar-heading-' + j;
+      var headingId = 'sidebar-heading-' + a;
 
       // Set the generated ID on the heading element
       heading.setAttribute('id', headingId);
@@ -539,8 +532,20 @@ for (var i = 0; i < homeContainer.length; i++) {
 
     }
   }
-
+  sidebarMenu.appendChild(sidebarDiv[i]);
+  activitySection.appendChild(activitySectionDiv[i]);
 }
+
+
+
+sidebarMenuButton.addEventListener('click', () => {
+  sidebarMenu.classList.toggle('show-sidebar');
+});
+
+activitySectionButton.addEventListener('click', () => {
+  activitySection.classList.toggle('show-activity-section');
+});
+
 
 
 
@@ -936,4 +941,31 @@ document.head.appendChild(linkElement);
 
 
 
+function openContainer(evt, containerName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("container");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+
+  for (var i = 0; i < sidebarDiv.length; i++) {
+    sidebarDiv[i].style.display = "none";
+  }
+
+  for (var i = 0; i < sidebarDiv.length; i++) {
+    activitySectionDiv[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+  }
+  
+  document.getElementById(containerName + "-container").style.display = "block";
+  document.getElementById("sidebarDiv" + containerName + "-container").style.display = "block";
+  document.getElementById("activitySectionDiv" + containerName + "-container").style.display = "block";
+
+  evt.currentTarget.className += " active-tab";
+}
 

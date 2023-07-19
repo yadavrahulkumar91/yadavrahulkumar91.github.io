@@ -12,17 +12,28 @@
 <body>
 
   <header>
-    <h1>Paper-II: Community Medicine-II | Super Fast Track</h1>
-    <p></p>
-  </header>
-  <center>
-    <div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Health Promotion and Education</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Medical Sociology and Anthropology</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Environmental and Occupational health</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Family Health</div>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
     </div>
-  </center>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+ 
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Health Promotion and Education</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Medical Sociology and Anthropology</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Environmental and Occupational health</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Family Health</div>
+      
+      </div>
+    </div>
+  </header>
+  <main>
+
 
   <div id="home-container" class="container">
 
@@ -8262,13 +8273,18 @@
 
 
 
-      <script src="/script/bookscript.js"></script>
+</main>
+<script>
+  var contentPageLocation = "Paper content.html";
+</script>
 
-      <footer>
-        <p>&copy; 2023 GameChanger</p>
-        <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-      </footer>
 
+  <script src="/script/bookscript.js"></script>
+
+  <footer>
+    &copy; 2023 GameChanger</p>
+    <a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+</footer>
 </body>
 
 </html>
