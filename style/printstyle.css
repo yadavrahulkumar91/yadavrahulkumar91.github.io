@@ -1,0 +1,14 @@
+.container p {
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000000;
+    margin-top: 0.5em; /* Margin above the paragraph is equal to the font size (16px in this case) */
+    margin-bottom: 0.5em; /* Margin before the paragraph is 1.5 times the font size (24px in this case) */
+  
+    text-align: justify;
+    word-wrap: break-word;
+    hyphens: auto;
+  
+    margin-left:2%;
+  }
+  

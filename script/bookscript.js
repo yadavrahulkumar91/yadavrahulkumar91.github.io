@@ -467,6 +467,15 @@ activitySectionDiv[i].id = "activitySectionDiv" + containerId;
 
   for (j=0; j < homeContainerElements.length; j++, a++) {
     var homeContainerElement = homeContainerElements[j];
+
+    if (homeContainerElement.tagName === 'TABLE') {
+      var overflowScroll = document.createElement('div');
+      overflowScroll.classList.add('overflow-scroll');
+      overflowScroll.appendChild(homeContainerElement);
+      homeContainerElement = overflowScroll;
+    }
+
+
     if (homeContainerElement.tagName.toLowerCase().startsWith('h')) {
       // Code to execute if it is an <h1> to <h6> element
 

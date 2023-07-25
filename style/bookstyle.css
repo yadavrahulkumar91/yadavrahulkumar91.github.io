@@ -220,7 +220,7 @@ header .lesson-no-box h1{
   max-width: 800px;
   margin: 0 auto;
   margin-bottom:0;
-  height: 100vh;
+  /* height: 100vh; */
   padding-right: 10px;
   padding-left: 0px;
    background-color: #ffffff; 
@@ -452,13 +452,17 @@ footer a {
 /* Table formatting */
 table {
   border-collapse: collapse;
-  width: 100%;
+  /* width: 100%; */
   margin-bottom: 20px;
 }
 
   .table-wrapper {
-    height: 100%; /* take up full height of container */
+    height: auto; /* take up full height of container */
     overflow: scroll; /* add scrolling functionality */
+  }
+  .overflow-scroll{
+    height: 100%; /* take up full height of container */
+    overflow-x: auto; /* add scrolling functionality */
   }
 
   .table-listing {
@@ -1713,4 +1717,26 @@ body.move-down {
     content: "";
     background-color: #f2f2f2;
   }
+}
+
+
+
+
+.definition {
+  font-weight: bold; /* Make the text bold */
+  color: #000000; /* Set the text color to a blue shade (adjust to your preference) */
+  font-style: italic; /* Italicize the text */
+  /* Add more styles as per your requirement */
+}
+
+/* Apply general styling to blockquote */
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  border-left: 4px solid #ccc; /* Add a left border for emphasis */
+  padding-left: 15px; /* Space between the border and the text */
+  margin: 20px 0; /* Vertical margin (top and bottom) */
+  margin-top: 5px; /* Decrease top margin */
+  margin-bottom: 10px; /* Decrease bottom margin */
 }
