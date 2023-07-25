@@ -39,18 +39,18 @@ body {
 
 
 /* Enlarged view on hover */
-.gallery .image-preview:hover {
+/* .gallery .image-preview:hover {
   width: 300px;
   height: 300px;
   margin: 2px;
   border-radius: 2%;
   cursor: pointer;
   z-index: 1;
-}
+} */
 
-.gallery .image-preview:hover img {
+/* .gallery .image-preview:hover img {
   transform: scale(1.2);
-}
+} */
 
 
 
