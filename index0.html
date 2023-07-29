@@ -8,17 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="/style/user-profile.css">
 	<link rel="icon" type="image/x-icon" href="GCround.png">
 	<link rel="stylesheet" type="text/css" href="/style/header.css">
-	<script src="/script/user-profile1.js"></script>
-	
-	
-	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
-	<!-- Add the Firebase Storage library -->
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> 
+	<link rel="stylesheet" type="text/css" href="/style/footer.css">
 
-	
-	<script src="/script/firebase-config.js"></script>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
@@ -34,18 +26,14 @@
 
 
 		<div id="user-profile" style="display: none;" onclick="showUserSection(event)">
-			<span id="user-email"></span><br>
-			<span id="user-display-name"></span>
-			<span id="user-date-of-birth">Hi</span>
-			<span id="user-phone-number">Hi</span>
-			<span>I am here</span>
+			<span id="user-email"></span>
 			<!--
 		  <img id="profilePic" src="" alt="User Profile Picture">
 		  <span id="username"></span>
 		  -->
 		</div>
 
-		<div class="sign-in-button" id="sign-in-sign-up" onclick="openSignIn(event)">LOGIN/ SIGNUP</div>
+		<div class="sign-in-button" id="sign-in-sign-up" onclick="openSignIn(event)"><i class="fas fa-user"></i></div>
 	</header>
 
 	<div class="modal-bg" id="modal-bg">
@@ -72,40 +60,19 @@
 			<form class="sign-up-form" id="sign-up-id">
 				<h1>Sign Up</h1>
 				<div id="form">
-				  <label class="form-label" for="email">Email:</label>
-				  <input class="form-input" type="email" id="sign-up-email" name="email" required><br>
-				  
-				  <label class="form-label" for="password">Password:</label>
-				  <input class="form-input" type="password" id="sign-up-password" name="password" required><br>
-				  
-				  <label class="form-label" for="first-name">First Name:</label>
-				  <input class="form-input" type="text" id="first-name" name="first-name" required><br>
-				  
-				  <label class="form-label" for="last-name">Last Name:</label>
-				  <input class="form-input" type="text" id="last-name" name="last-name" required><br>
-				  
-				  <label class="form-label" for="middle-name">Middle Name:</label>
-				  <input class="form-input" type="text" id="middle-name" name="middle-name"><br>
-				  
-				  <label class="form-label" for="phone-number">Phone Number:</label>
-				  <input class="form-input" type="tel" id="phone-number" name="phone-number"><br>
-				  
-				  <label class="form-label" for="photo">Photo:</label>
-				  <input class="form-input" type="file" id="photo" name="photo"><br>
-				  
-				  <label class="form-label" for="date-of-birth">Date of Birth:</label>
-				  <input class="form-input" type="date" id="date-of-birth" name="date-of-birth"><br>
-				  
-				  <div class="message" id="sign-up-message"></div>
-				  
-				  <button class="button" type="submit" id="signup-btn">Sign Up</button>
-				  
-				  <div class="sign-up-link" onclick="showSignIn(event)">
-					<span class="link-label">Already have an account.</span>
-				  </div>
+					<label class="form-label" for="email">Email:</label>
+					<input class="form-input" type="email" id="sign-up-email" name="email" required><br>
+					<label class="form-label" for="password">Password:</label>
+					<input class="form-input" type="password" id="sign-up-password" name="password" required><br>
+					<div class="message" id="sign-up-message"></div>
+					<button class="button" type="submit" id="signup-btn">Sign up</button>
+
+					<div class="sign-up-link" onclick="showSignIn(event)">
+						<span class="link-label">Already have an account.</span>
+					</div>
+
 				</div>
-			  </form>
-			  
+			</form>
 
 
 			<div class="reset-password-form" id="reset-password-id">
@@ -125,23 +92,8 @@
 				<h2>User Section</h2>
 				<p>You are signed in as: <span class="user-email"></span></p>
 				<button class="button" onclick="signOut()">Sign Out</button>
-				<button class="button" onclick="showChangePassword(event)">Change Password</button>
+				<button class="button" onclick="window.location.href='changePassword.html'">Change Password</button>
 			</div>
-
-			<form class="change-password" id="change-password-id">
-				<h2>Change Password</h2>
-				
-				<label for="email" class="form-label">Email:</label>
-				<input type="email" id="change-password-email" name="email" class="form-input" required><br>
-				<label for="current-password" class="form-label">Current Password:</label>
-				<input type="password" id="current-password" name="current-password" class="form-input" required><br>
-				<label for="new-password" class="form-label">New Password:</label>
-				<input type="password" id="new-password" name="new-password" class="form-input" required><br>
-				<div id="error-message" class="error-message"></div>
-				<button type="submit" class="button">Change Password</button>
-			</form>
-
-
 
 
 
@@ -149,9 +101,358 @@
 
 	</div>
 
-	
 
-	
+
+
+
+
+	<script>
+
+
+
+		function openSignIn(event) {
+			event.preventDefault(); // Prevent the default form submission behavior or link navigation
+			var modalBg = document.getElementById("modal-bg");
+			modalBg.style.display = "flex";
+
+			var signIn = document.getElementById("sign-in-id");
+			signIn.style.display = 'block';
+
+			var signUp = document.getElementById("sign-up-id");
+			signUp.style.display = 'none';
+
+			var resetPassword = document.getElementById("reset-password-id");
+			resetPassword.style.display = 'none';
+
+			var userSection = document.getElementById("user-section-id");
+			userSection.style.display = 'none';
+
+
+		}
+
+		function closeSignIn(event) {
+			event.preventDefault(); // Prevent the default form submission behavior or link navigation
+			var modalBg = document.getElementById("modal-bg");
+			modalBg.style.display = "none";
+		}
+
+		function showUserSection(event) {
+			event.preventDefault(); // Prevent the default form submission behavior or link navigation
+			var modalBg = document.getElementById("modal-bg");
+			modalBg.style.display = "flex";
+
+			var signIn = document.getElementById("sign-in-id");
+			signIn.style.display = 'none';
+
+			var signUp = document.getElementById("sign-up-id");
+			signUp.style.display = 'none';
+
+			var resetPassword = document.getElementById("reset-password-id");
+			resetPassword.style.display = 'none';
+
+			var userSection = document.getElementById("user-section-id");
+			userSection.style.display = 'block';
+
+
+		}
+
+		function showSignIn(event) {
+			event.preventDefault();
+
+			var signIn = document.getElementById("sign-in-id");
+			signIn.style.display = 'block';
+
+			var signUp = document.getElementById("sign-up-id");
+			signUp.style.display = 'none';
+
+			var resetPassword = document.getElementById("reset-password-id");
+			resetPassword.style.display = 'none';
+
+			var userSection = document.getElementById("user-section-id");
+			userSection.style.display = 'none';
+
+			console.log("Sign in button clicked!");
+		}
+
+		function showSignUp(event) {
+			event.preventDefault();
+
+			var signIn = document.getElementById("sign-in-id");
+			signIn.style.display = 'none';
+
+			var signUp = document.getElementById("sign-up-id");
+			signUp.style.display = 'block';
+
+			var resetPassword = document.getElementById("reset-password-id");
+			resetPassword.style.display = 'none';
+
+			var userSection = document.getElementById("user-section-id");
+			userSection.style.display = 'none';
+
+			console.log("Sign up button clicked!");
+		}
+
+		function showResetPassword(event) {
+			event.preventDefault();
+
+			var signIn = document.getElementById("sign-in-id");
+			signIn.style.display = 'none';
+
+			var signUp = document.getElementById("sign-up-id");
+			signUp.style.display = 'none';
+
+			var resetPassword = document.getElementById("reset-password-id");
+			resetPassword.style.display = 'block';
+
+			var userSection = document.getElementById("user-section-id");
+			userSection.style.display = 'none';
+
+
+			console.log("Reset Password button clicked!");
+		}
+
+
+
+
+
+	</script>
+
+
+
+
+	<!-- Include Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script>
+		// Initialize Firebase app
+		const firebaseConfig = {
+			apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
+			authDomain: "gamechanger-f5da7.firebaseapp.com",
+			databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
+			projectId: "gamechanger-f5da7",
+			storageBucket: "gamechanger-f5da7.appspot.com",
+			messagingSenderId: "358268649157",
+			appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
+			measurementId: "G-QBH1QYTY8V"
+		};
+
+		firebase.initializeApp(firebaseConfig);
+
+		// Get a reference to the auth service
+		const auth = firebase.auth();
+
+		const errorMessage = document.getElementById('sign-in-message');
+		// Add sign in event listener
+		const signinBtn = document.getElementById('signin-btn');
+		signinBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			const email = document.getElementById('sign-in-email').value;
+			const password = document.getElementById('sign-in-password').value;
+
+			// Sign in with email and password
+			auth.signInWithEmailAndPassword(email, password)
+				.then((userCredential) => {
+					// Check if user email is verified
+					if (userCredential.user.emailVerified) {
+						// User signed in successfully
+						const user = userCredential.user;
+						console.log(`User ${user.email} signed in successfully.`);
+						displayUserProfile(user);
+						closeSignIn(event);
+						storeUserData(user);
+					} else {
+						// Email not verified, display error message
+						const errorMessageText = 'Please verify your email before signing in.';
+						console.error(errorMessageText);
+						errorMessage.textContent = errorMessageText;
+					}
+				})
+				.catch((error) => {
+					// Handle errors
+					const errorCode = error.code;
+					const errorMessageText = error.message;
+					console.error(`Error: ${errorCode} - ${errorMessageText}`);
+					errorMessage.textContent = `Error: ${errorCode} - ${errorMessageText}`;
+				});
+		});
+
+		// Store user information in local storage
+		function storeUserData(user) {
+			localStorage.setItem('user', JSON.stringify(user));
+		}
+
+		// Retrieve user information from local storage
+		function getUserData() {
+			const userData = localStorage.getItem('user');
+			return userData ? JSON.parse(userData) : null;
+		}
+
+		// Function to sign out the user and remove stored data
+		function signOut() {
+			// Sign out the user from Firebase
+			auth.signOut()
+				.then(() => {
+					// Remove the stored user data from local storage
+					localStorage.removeItem('user');
+					console.log('User signed out successfully.');
+					closeSignIn(event);
+					closeUserProfile();
+				})
+				.catch((error) => {
+					console.error('Error occurred while signing out:', error);
+				});
+		}
+
+		function closeUserProfile() {
+			userProfile = document.getElementById("user-profile");
+			userProfile.style.display = "none";
+
+			signInSignUp = document.getElementById("sign-in-sign-up");
+			signInSignUp.style.display = "block";
+
+		}
+
+
+		function displayUserProfile(user) {
+			// Hide sign-in button
+			//  signInButton.style.display = "none";
+
+			// Update user profile details
+			/*
+			profilePic.src = user.photoURL;
+			profilePic.style.display = "block";
+			username.textContent = user.displayName;
+			username.style.display = "block";
+			*/
+			// Show user profile
+			userProfile = document.getElementById("user-profile");
+			userProfile.style.display = "block";
+
+			signInSignUp = document.getElementById("sign-in-sign-up");
+			signInSignUp.style.display = "none";
+
+			userEmail = document.getElementById("user-email");
+			userEmail.textContent = user.email;
+			//	localStorage.setItem(userEmail);
+			const userEmailElements = document.getElementsByClassName("user-email");
+
+			for (let i = 0; i < userEmailElements.length; i++) {
+				userEmailElements[i].textContent = user.email;
+			}
+
+		}
+
+		const user = getUserData();
+		if (user) {
+			// User is signed in, you can access the user's information
+			console.log(`Signed in as: ${user.email}`);
+			displayUserProfile(user);
+
+		} else {
+			// User is not signed in
+			console.log('User not signed in.');
+		}
+
+
+
+	</script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+
+
+
+
+	<script>
+
+
+
+		firebase.initializeApp(firebaseConfig);
+
+
+
+		// Add sign up event listener
+		const signUpBtn = document.getElementById('signup-btn');
+		signUpBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			const email = document.getElementById('sign-up-email').value;
+			const password = document.getElementById('sign-up-password').value;
+
+			// Password validation
+			if (password.length < 6) {
+				document.getElementById('sign-up-message').textContent = 'Password should be at least 6 characters long.';
+				return;
+			}
+
+			// Sign up with email and password
+			auth.createUserWithEmailAndPassword(email, password)
+				.then((userCredential) => {
+					// User signed up successfully
+					const user = userCredential.user;
+					console.log(`User ${user.email} signed up successfully.`);
+
+					// Send email verification
+					user.sendEmailVerification()
+						.then(() => {
+							// Email verification sent
+							console.log("Email verification sent.");
+							document.getElementById('sign-up-id').textContent = `Email verification sent. Verify your email and signin.`;
+							setTimeout(() => {
+								showSignIn(event);
+							}, 5000); // Redirect after 3 seconds (adjust the delay as needed)
+							// You can redirect the user to a different page here
+						})
+						.catch((error) => {
+							// Handle errors
+							const errorCode = error.code;
+							const errorMessage = error.message;
+							console.error(`Error: ${errorCode} - ${errorMessage}`);
+						});
+				})
+				.catch((error) => {
+					// Handle errors
+					const errorCode = error.code;
+					const errorMessage = error.message;
+					document.getElementById('sign-up-message').textContent = `Error: ${errorCode} - ${errorMessage}`;
+				});
+		});
+
+
+	</script>
+
+
+	<script>
+
+		// Password reset email form
+		const resetEmailForm = document.getElementById('reset-password-id');
+		const resetEmailButton = document.getElementById('reset-password-button');
+
+		const resetEmailMessage = document.getElementById('reset-password-message');
+
+		resetEmailForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const email = document.getElementById('reset-password-email').value;
+
+			// Send password reset email
+			auth.sendPasswordResetEmail(email)
+				.then(() => {
+					// Password reset email sent
+					//  resetEmailForm.style.display = 'none';
+					resetEmailMessage.textContent = 'Password reset email sent. Reset the password from email link and sign-in again';
+					// document.getElementById('reset-password-id').classList.remove('dden');
+				})
+				.catch((error) => {
+					// Handle errors
+					const errorCode = error.code;
+					const errorMessage = error.message;
+					resetEmailMessage.textContent = `Error: ${errorCode} - ${errorMessage}`;
+				});
+		});
+		resetEmailButton.addEventListener('click', () => {
+			resetEmailForm.dispatchEvent(new Event('submit'));
+		});
+	</script>
 
 
 
@@ -387,8 +688,7 @@
 		</section>
 		</div>
 	</main>
-	<a href="GameChangerDrive/game-changer-drive.html">GameChanger Drive</a>
-
+	
 
 	<!--
 	<main>
@@ -585,16 +885,55 @@
 -->
 
 	<footer id="footer">
-		<script>
-			fetch('/html/footer.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('footer').innerHTML = data;
-				});
-		</script>
+
+		<div class="footer-row">
+
+			<h4>&copy; 2023 GameChanger</h4>
+			<div>Maharajgunj (Behind Teaching Hospital), Kathmandu, Nepal</div>
+			<div><a href="tel:+9779808305830">+977 9808305830</a></div>
+			<div><a href="mailto:gamechanger.com.np@gmail.com">gamechanger.com.np@gmail.com</a></div>
+		</div>
+		<h4 style="text-align: center;">Connect with us</h4>
+		<div class="footer-column">
+
+			<div class="social-icons">
+				<a href="https://www.youtube.com/@gamechangerrky"><img
+							src="https://img.icons8.com/color/48/000000/youtube-play.png" /></a>
+				<a href="https://www.facebook.com/profile.php?id=100091780968711"><img
+							src="https://img.icons8.com/color/48/000000/facebook-new.png" /></a>
+				<a href="https://www.instagram.com"><img
+							src="https://img.icons8.com/color/48/000000/instagram-new.png" /></a>
+				<a href="https://www.twitter.com/GameChangerNp"><img
+							src="https://img.icons8.com/color/48/000000/twitter--v1.png" /></a>
+				<a href="https://www.linkedin.com/in/gamechanger-company-59b029273"><img
+							src="https://img.icons8.com/color/48/000000/linkedin.png" /></a>
+				</div>
+		</div>
+		<h4 style="text-align: center;">Chat with us</h4>
+		<div class="footer-column">
+			<div class="social-icons">
+			<a href="fb-messenger://user-thread/rahulkumar.yadav.98622733">
+				<img src="https://img.icons8.com/color/48/000000/facebook-messenger--v3.png
+				" alt="Messenger Icon" />
+			  </a>
+			
+			<a href="https://wa.me/+9779808305830">
+				<img src="https://img.icons8.com/color/48/000000/whatsapp--v3.png
+				" alt="WhatsApp Icon" />
+			  </a>
+			
+			  <a href="viber://chat?number=+9779808305830">
+				<img src="https://img.icons8.com/color/48/000000/viber.png
+				" alt="Viber Icon" />
+			  </a>
+	
+			  </div>
+
+		</div>
+
 
 	</footer>
-	<script src="/script/user-profile-firebase1.js"></script>
+
 
 </body>
 

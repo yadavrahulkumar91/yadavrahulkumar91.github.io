@@ -38,16 +38,13 @@
   
   
   
-      .social-icons li {
-        display: inline-block;
+      .social-icons {
+        display: flex;
         margin-right: 5px;
         margin-left: 5px;
         
       }
   
-      .social-icons li:last-child {
-        margin-right: 0;
-      }
   
       .social-icons a {
         color: #ffffff;
@@ -59,10 +56,11 @@
         line-height: 40px;
         border-radius: 50%;
         transition: all 0.3s ease-in-out;
+        margin:5px;
       }
   
       .social-icons a:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
   
       .fb-messengermessageus {
