@@ -25,3 +25,20 @@ function closeFullscreen() {
       imageDetails.style.display = 'none';
   });
 }
+
+
+
+document.getElementById("myButton").addEventListener("click", function () {
+  const imageDetailContainers = document.querySelectorAll(".image-detail");
+  for (const container of imageDetailContainers) {
+    const h3Elements = container.querySelectorAll("h3");
+    for (const h3Element of h3Elements) {
+      // Toggle the visibility of the h3 elements within the container
+      if (h3Element.style.display === "none") {
+        h3Element.style.display = "block";
+      } else {
+        h3Element.style.display = "none";
+      }
+    }
+  }
+});
