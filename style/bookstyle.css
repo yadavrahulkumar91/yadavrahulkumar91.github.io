@@ -980,12 +980,13 @@ border-radius: 5px;
 
 .media-source {
   display:flex;
+  height:50%;
 }
 .media-source img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
   width:auto;
-  max-height: 50hv;
+
 }
 
 .media-details {
