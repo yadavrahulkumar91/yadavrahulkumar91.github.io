@@ -622,8 +622,9 @@ ol {
 /* Style for list items */
 ol li {
   margin-bottom: 10px;
-  padding-left: 30px;
-  line-height: 1.6;
+  margin-left:-15px;
+  padding-left: -10px;
+  line-height: 1;
   /* color: #333;  */
 }
 
@@ -977,6 +978,9 @@ border-radius: 5px;
   cursor: pointer;
 }
 
+.media-source {
+  display:flex;
+}
 .media-source img {
   max-width: 100%;
   height: auto;
