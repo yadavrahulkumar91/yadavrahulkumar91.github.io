@@ -4,15 +4,28 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="/style/bookstyle.css">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <style>
-        .media-container {
-            max-width: 300px;
-            height: auto;
-        }
 
-    
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mediaContainers = document.querySelectorAll('.media-container');
+
+            mediaContainers.forEach(container => {
+                const images = container.querySelectorAll('img');
+                if (images.length >= 2) {
+                    images.forEach(img => {
+                        img.style.width = '100%';
+                    });
+                } else if (images.length === 1) {
+                    images[0].style.width = '50%';
+                }
+            });
+        });
+    </script>
 
 </head>
 
@@ -39,326 +52,409 @@
 
 
         <div id="home-container" class="container" style="display:block;">
-            <div class="gallery">
-                <h2>Culture Media</h2>
+          
 
-                <div class="media-container">
-                    <div class="media-source">
+            <h2>Culture Media</h2>
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+                    <img src="/image/Microbiology2/Nutrient-agar.jpg" alt="Image 1">
+                    <figcaption></figcaption>
+                    </picture>
+                </div>
+                <div class="media-details">
+                    <h3>Nutrient Agar</h3>
+                    <div>
+                        <h4>Constituents</h4>
+                        <ol>
+                            <li>Peptones</li>
+                            <li>Distilled water</li>
+                            <li>Beef extract</li>
+                            <li>NaCl</li>
+                        </ol>
+                        <h4>Uses</h4>
+                        <ol>
+                            <li>To obtain bacteria in pure form</li>
+                            <li>To prepare bacteria for biochemical test</li>
+                            <li>To study pigmentation produced by bacteria and identify the bacteria</li>
+                            <ul>
+                                <li><i>Staphylococcus aureus</i>$\rightarrow$ Golden yellow, Non-diffusible</li>
+                                <li><i>Pseudomona</i>$\rightarrow$ Green, Diffusible</li>
+
+                            </ul>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
                         <img src="/image/Microbiology2/Blood-agar.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Blood Agar (Solid media)</h3>
-                        <div>
-                            <ol>
-                                <li>Use</li>
-                                <ol>
-                                    <li>General Culture</li>
 
-
-                                </ol>
-
-
-                                <li>Example of Bacteria</li>
-                                <ol>
-                                    <li><i>Staphylococcus aureus</i> (β-haemolysis)</li>
-                                    <li>Streptococcus</li>
-                                </ol>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="media-container">
-                    <div class="media-source">
+                        <figcaption></figcaption>
+                    </picture>
+                    <picture>
                         <img src="/image/Microbiology2/Blood-agar (2).jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Blood Agar</h3>
-                        <div>
+                        <figcaption>Haemolysis seen here</figcaption>
+                    </picture>
+                </div>
+                <div class="media-details">
+                    <h3>Blood Agar (Solid media)</h3>
+                    <div>
+                        <h4>Constituents</h4>
+                        <ol>
+                            <li>Nutrient agar</li>
+                            <li>$5-10%$ sheep or horse blood</li>
+                        </ol>
+                        <h4>Uses</h4>
+                        <ol>
+                            <li>To grow fastidious organism</li>
                             <ol>
+                                <li><i>Streptococcus pneumonia</i></li>
+                                <li><i>Streptococcus pyogenes</i></li>
+                            </ol>
+                            <li>To see the pigmentation produced by bacteria</li>
+                            <li>To study satellitism phenomenon</li>
+                            <li>To see the hemolytic reaction</li>
+                            <ol>
+                                <li>α-hemolysis (Parital hemolysis): Greenish discoloration around the colonies.</li>
+                                <ol>
+                                    <li><i>Streptococcus pneumonia</i></li>
+                                </ol>
+                                <li>β-hemolysis (Complete hemolysis): Clear halo around the colonies.</li>
+                                <ol>
+                                    <li><i>Streptococcus pyogenes</i></li>
+                                </ol>
+                                <li>γ-hemolysis (No hemolysis):</li>
+                                <ol>
+                                    <il><i>Enterococcus faecalis</i></il>
+                                </ol>
 
                             </ol>
-                        </div>
+                        </ol>
+
+                        <ol>
+                            <li>Use</li>
+                            <ol>
+                                <li>General Culture</li>
+
+
+                            </ol>
+
+
+                            <li>Example of Bacteria</li>
+                            <ol>
+                                <li><i>Staphylococcus aureus</i> (β-haemolysis)</li>
+                                <li>Streptococcus</li>
+                            </ol>
+
+                        </ol>
                     </div>
                 </div>
+            </div>
 
-                <div class="media-container">
-                    <div class="media-source">
+
+
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
                         <img src="/image/Microbiology2/Chocolate-agar.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Chocolate Agar (Solid media- Enriched)</h3>
-                        <div>
-                            <ol>
-                                <ol>
-                                    <li>Use</li>
-                                    <ol>
-                                        <li>Culture for <i>H. influenza, N. gonorreae</i></li>
-                                    </ol>
-
-                                </ol>
-                            </ol>
-                        </div>
-                    </div>
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <img src="/image/Microbiology2/MaC-Conkey-Agar-Lacotse-Fermenter.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Mac Conkey Agar Lactose Fermenter</h3>
-                        <div>
+                <div class="media-details">
+                    <h3>Chocolate Agar (Solid media- Enriched)</h3>
+                    <div>
+                        <h4>Constituents</h4>
+                        <ol>
+                            <li>Heated blood agar (70$^\circ $ C)</li>
+
+                        </ol>
+                        <h4>Uses</h4>
+                        <ol>
+                            <li>To grow fastidious organisms</li>
                             <ol>
-
+                                <li><i>Haemophilus influenzae</i></li>
+                                <li><i>Neisseria gonorrhoeae</i></li>
                             </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <img src="/image/Microbiology2/Mac-Conkey-Non-lactose-fermenter.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Mac Conkey Agar Non-Lactose Fermenter</h3>
-                        <div>
-                            <ol>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <img src="/image/Microbiology2/CLED.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3> CLED (cysteine-, lactose- and electrolyte-deficient) Agar</h3>
-                        <div>
-                            <ol>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <img src="/image/Microbiology2/CLED-Left(Lactose-fermenter)-Right(Lactose-Non-fermenter).jpg"
-                            alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3> CLED (cysteine-, lactose- and electrolyte-deficient) Agar</h3>
-                        <div>
-                            <ol>
-                                <li>Left $\rightarrow$ Lactose Fermenter</li>
-                                <li>Right $\rightarrow$ Non-lactose Fermenter</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <img src="/image/Microbiology2/Muller-Hinton-agar-with-AST.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Mueller–Hinton agar</h3>
-                        <div>
-                            <ol>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <img src="/image/Microbiology2/Nutrient-agar.jpg" alt="Image 1">
-                    </div>
-                    <div class="media-details">
-                        <h3>Nutrient Agar</h3>
-                        <div>
-                            <ol>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
+                            <li></li>
+                        </ol>
 
 
-
-
-
-                <div class="media-container">
-                    <div class="media-source">
-                        <picture>
-
-                            <img src="/image/Microbiology2/Indole-H2S.jpg" alt="Image 1">
-                            <figcaption>
-                                <ol>
-                                    <li>Sulphide positive</li>
-                                    <li>Indole negative</li>
-                                    <li>Motility positive</li>
-
-                                </ol>
-
-
-                            </figcaption>
-                        </picture>
-
-                        <picture>
-
-                            <img src="/image/Microbiology2/Indole-positive.jpg" alt="Image 1">
-                            <figcaption>
-                                <ol>
-                                    <li>Sulphide negative</li>
-                                    <li>Indole negative</li>
-                                    <li>Motility negative</li>
-
-                                </ol>
-
-
-                            </figcaption>
-                        </picture>
-                        <picture>
-                            <img src="/image/Microbiology2/Indole.jpg" alt="Image 1">
-                            <figcaption>
-                                <ol>
-                                    <li>Sulphide negative</li>
-                                    <li>Indole negative</li>
-                                    <li>Motility negative</li>
-
-                                </ol>
-
-
-                            </figcaption>
-                        </picture>
-
-                    </div>
-                    <div class="media-details">
-                        <h3>Sulfide Indole Motility (SIM) Medium Positive</h3>
-                        <div>
-                            <ol>
-                                <li>Tests following things</li>
-                                <ol>
-                                    <li>Sulphide ($H_2S$) $\rightarrow$ Dark color </li>
-                                    <li>Indole $\rightarrow$ Red ring at top</li>
-                                    <li>Motility test $\rightarrow$ Turbid is due to motility</li>
-                                </ol>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <picture>
-
-                            <img src="/image/Microbiology2/TSA.jpg" alt="Image 1">
-                            <figcaption>
-                                $A/A$, <br>
-                                (No gas), <br>
-                                No $H_2S$
-
-
-                            </figcaption>
-                        </picture>
-
-                        <picture>
-
-                            <img src="/image/Microbiology2/TSA1.jpg" alt="Image 1">
-                            <figcaption>
-                                $K/A$, <br>
-                                (Gas present), <br>
-                                No $H_2S$
-
-
-                            </figcaption>
-                        </picture>
-                        <picture>
-                            <img src="/image/Microbiology2/TSA2.jpg" alt="Image 1">
-                            <figcaption>
-                                $A/A$, <br>
-                                (No gas), <br>
-                                No $H_2S$
-
-
-                            </figcaption>
-                        </picture>
-
-                    </div>
-                    <div class="media-details">
-                        <h3>Triple Sugar Iron Test</h3>
-                        <div>
-                            <ol>
-                                <li>Normal color (No bacterial growth) $\rightarrow $ Red (Alkaline)</li>
-                                <li>Three things is tested</li>
-                                <ol>
-                                    <li>Fermentation</li>
-                                    <ol>
-                                        <li>Slant $\rightarrow $ Acid(A) or Alkaline(K) </li>
-                                        <li>Butt $\rightarrow $ Acid(A) or Alkaline(K)</li>
-                                    </ol>
-                                    <li>Gas production</li>
-                                    <li>$H_2S$ production</li>
-                                </ol>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="media-container">
-                    <div class="media-source">
-                        <picture>
-
-                            <img height="30" src="/image/Microbiology2/Citrata-Utilization-Test-Positive.jpg"
-                                alt="Image 1">
-                            <figcaption>Citrate positive</figcaption>
-                        </picture>
-                        <picture>
-                            <img src="/image/Microbiology2/Citrata-Utilization-Test-Negative.jpg" alt="Image 1">
-
-                            <figcaption>Citrate negative</figcaption>
-                        </picture>
-                    </div>
-                    <div class="media-details">
-                        <h3>Citrate Utilization Test</h3>
-                        <div>
-                            <ol>
-                                <li>Normal Dark green</li>
-                                <li> Bacteria utilizes citrate to convert into Red</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="media-container">
-                    <div class="media-source">
-                        <picture>
-
-                            <img src="/image/Microbiology2/Urea-hydrolysis-test-positive.jpg" alt="Image 1">
-                            <figcaption>Urease positive</figcaption>
-                        </picture>
-                        <picture>
-
-                            <img src="/image/Microbiology2/Urea-hydrolysis-test-negative.jpg" alt="Image 1">
-                            <figcaption>Urease negative</figcaption>
-                        </picture>
-
-                    </div>
-                    <div class="media-details">
-                        <h3>Urea Hydrolysis Test (Positive)</h3>
-                        <div>
-                            <ol>
-                                <li>Normal is Yellow which is negative</li>
-                                <li>Urea is utilized to convert into $NH_3$ and $CO_2$ which converts into Pink Color
-                                </li>
-                            </ol>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/LJ-media.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/MaC-Conkey-Agar-Lacotse-Fermenter.jpg" alt="Image 1">
+
+                        <figcaption>Lacotse Fermenter</figcaption>
+                    </picture>
+                    <picture>
+                        <img src="/image/Microbiology2/Mac-Conkey-Non-lactose-fermenter.jpg" alt="Image 1">
+                        <figcaption>Non-lactose Fermenter</figcaption>
+                    </picture>
+                </div>
+                <div class="media-details">
+                    <h3>Mac Conkey Agar Lactose Fermenter</h3>
+                    <div>
+                        <h4>Constituents</h4>
+                        <ol>
+                            <li>Basal media</li>
+                            <li>Neutral red</li>
+                            <li>Crystal violet</li>
+                            <li>Bile salt</li>
+                            <li>Lacotse</li>
+                        </ol>
+                        <h4>Uses</h4>
+                        <ol>
+                            <li>Used as Indicator medium (Contain indicator: Neutral red)</li>
+                            <li>Used as Selective medium (Bile salt inhibit growth of Gram +ve bacteria and allow the
+                                growh of gram -ve bacteria)</li>
+                            <li>Used as Differential medium: Differentiate bacteria in 2 grops</li>
+                            <ol>
+                                <li>Lactose fermenting $\rightarrow$ form Pink colonies</li>
+                                <ol>
+                                    <li><i>E. coli</i></li>
+                                    <li><i>Klebsiella</i></li>
+                                </ol>
+                                <li>Non-lactose fermenter</li>
+                                <ol>
+                                    <li>Salmonells</li>
+                                    <li>Shigella</li>
+                                </ol>
+                            </ol>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+                        <img src="/image/Microbiology2/CLED.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
+                    <picture>
+                        <img src="/image/Microbiology2/CLED-Left(Lactose-fermenter)-Right(Lactose-Non-fermenter).jpg"
+                            alt="Image 1">
+                        <figcaption>
+                            <ol>
+                                <li>Left $\rightarrow$ Lactose Fermenter</li>
+                                <li>Right $\rightarrow$ Non-lactose Fermenter</li>
+                            </ol>
+                        </figcaption>
+                    </picture>
+                </div>
+                <div class="media-details">
+                    <h3> CLED (cysteine-, lactose- and electrolyte-deficient) Agar</h3>
+                    <div>
+                        <ol>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+                        <img src="/image/Microbiology2/Muller-Hinton-agar-with-AST.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
+                </div>
+                <div class="media-details">
+                    <h3>Mueller–Hinton agar</h3>
+                    <div>
+                        <h4>Features</h4>
+                        <ol>
+                            <li>Constituents of medium are well-defined.</li>
+                            <li>No enrichment or selective components are included.</li>
+                            <li>Supports the growth of all types of pathogens.</li>
+                            <li>Appropriate for adding blood and serum.</li>
+                            <li>As a result, Muller Hinton agar is preferred over nutrient agar for Antibiotic Sensitivity tests (AST).</li>
+                        </ol>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+
+                        <img src="/image/Microbiology2/Indole-H2S.jpg" alt="Image 1">
+                        <figcaption>
+                            <ol>
+                                <li>Sulphide positive</li>
+                                <li>Indole negative</li>
+                                <li>Motility positive</li>
+
+                            </ol>
+
+
+                        </figcaption>
+                    </picture>
+
+                    <picture>
+
+                        <img src="/image/Microbiology2/Indole-positive.jpg" alt="Image 1">
+                        <figcaption>
+                            <ol>
+                                <li>Sulphide negative</li>
+                                <li>Indole negative</li>
+                                <li>Motility negative</li>
+
+                            </ol>
+
+
+                        </figcaption>
+                    </picture>
+                    <picture>
+                        <img src="/image/Microbiology2/Indole.jpg" alt="Image 1">
+                        <figcaption>
+                            <ol>
+                                <li>Sulphide negative</li>
+                                <li>Indole negative</li>
+                                <li>Motility negative</li>
+
+                            </ol>
+
+
+                        </figcaption>
+                    </picture>
+
+                </div>
+                <div class="media-details">
+                    <h3>Sulfide Indole Motility (SIM) Medium Positive</h3>
+                    <div>
+                        <ol>
+                            <li>Tests following things</li>
+                            <ol>
+                                <li>Sulphide ($H_2S$) $\rightarrow$ Dark color </li>
+                                <li>Indole $\rightarrow$ Red ring at top</li>
+                                <li>Motility test $\rightarrow$ Turbid is due to motility</li>
+                            </ol>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+
+                        <img src="/image/Microbiology2/TSA.jpg" alt="Image 1">
+                        <figcaption>
+                            $A/A$, <br>
+                            (No gas), <br>
+                            No $H_2S$
+
+
+                        </figcaption>
+                    </picture>
+
+                    <picture>
+
+                        <img src="/image/Microbiology2/TSA1.jpg" alt="Image 1">
+                        <figcaption>
+                            $K/A$, <br>
+                            (Gas present), <br>
+                            No $H_2S$
+
+
+                        </figcaption>
+                    </picture>
+                    <picture>
+                        <img src="/image/Microbiology2/TSA2.jpg" alt="Image 1">
+                        <figcaption>
+                            $A/A$, <br>
+                            (No gas), <br>
+                            No $H_2S$
+
+
+                        </figcaption>
+                    </picture>
+
+                </div>
+                <div class="media-details">
+                    <h3>Triple Sugar Iron Test</h3>
+                    <div>
+                        <ol>
+                            <li>Normal color (No bacterial growth) $\rightarrow $ Red (Alkaline)</li>
+                            <li>Three things is tested</li>
+                            <ol>
+                                <li>Fermentation</li>
+                                <ol>
+                                    <li>Slant $\rightarrow $ Acid(A) or Alkaline(K) </li>
+                                    <li>Butt $\rightarrow $ Acid(A) or Alkaline(K)</li>
+                                </ol>
+                                <li>Gas production</li>
+                                <li>$H_2S$ production</li>
+                            </ol>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+
+                        <img height="30" src="/image/Microbiology2/Citrata-Utilization-Test-Positive.jpg" alt="Image 1">
+                        <figcaption>Citrate positive</figcaption>
+                    </picture>
+                    <picture>
+                        <img src="/image/Microbiology2/Citrata-Utilization-Test-Negative.jpg" alt="Image 1">
+
+                        <figcaption>Citrate negative</figcaption>
+                    </picture>
+                </div>
+                <div class="media-details">
+                    <h3>Citrate Utilization Test</h3>
+                    <div>
+                        <ol>
+                            <li>Normal Dark green</li>
+                            <li> Bacteria utilizes citrate to convert into Red</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+
+                        <img src="/image/Microbiology2/Urea-hydrolysis-test-positive.jpg" alt="Image 1">
+                        <figcaption>Urease positive</figcaption>
+                    </picture>
+                    <picture>
+
+                        <img src="/image/Microbiology2/Urea-hydrolysis-test-negative.jpg" alt="Image 1">
+                        <figcaption>Urease negative</figcaption>
+                    </picture>
+
+                </div>
+                <div class="media-details">
+                    <h3>Urea Hydrolysis Test (Positive)</h3>
+                    <div>
+                        <ol>
+                            <li>Normal is Yellow which is negative</li>
+                            <li>Urea is utilized to convert into $NH_3$ and $CO_2$ which converts into Pink Color
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-container">
+                <div class="media-source">
+                    <picture>
+                        <img src="/image/Microbiology2/LJ-media.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Löwenstein-Jensen (LJ) agar</h3>
@@ -371,20 +467,43 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/RCM media.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/RCM media.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Robertson's Cooked Meat (RCM) Medium</h3>
                     <div>
+                        <h4>Constituents</h4>
                         <ol>
-
+                            <li>Heart muscle</li>
+                            <li>Peptone</li>
+                            <li>NaCl</li>
+                            <li>Glucose</li>
+                            <li>Water</li>
+                        </ol>
+                        <h4>Uses</h4>
+                        <ol>
+                            <li>To culture of <b>anaerobic</b> bacteria. Examples</li>
+                            <ol>
+                                <li><i>Clostridium perfringnes</i></li>
+                            </ol>
+                            <li>As transfer medium</li>
+                            <li>To see whether the bacteria is proteolytic or not</li>
+                            <ul>
+                                <li><i>Clostridia</i> produce proteolysis $\rightarrow$ Black coloured meat</li>
+                            </ul>
                         </ol>
                     </div>
                 </div>
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Brain-heart-infusion-liquid.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Brain-heart-infusion-liquid.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Brain Heart Infusion Broth</h3>
@@ -398,7 +517,10 @@
 
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/SDA.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/SDA.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Sabouraud dextrose agar (SDA)</h3>
@@ -412,7 +534,10 @@
 
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Bactec.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Bactec.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Bactec Automated Blood Culture System</h3>
@@ -425,7 +550,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/10KOH.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/10KOH.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>$ 10% $ KOH solution</h3>
@@ -440,7 +568,10 @@
 
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Indian-ink.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Indian-ink.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Indian-ink</h3>
@@ -453,7 +584,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Oxidase-test.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Oxidase-test.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Oxidase test</h3>
@@ -466,7 +600,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/H2O2.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/H2O2.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>$ H_2O_2 $</h3>
@@ -479,7 +616,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/LPCB.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/LPCB.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Lactophenol Cotton Blue (LPCB)</h3>
@@ -492,7 +632,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Culture-plate.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Culture-plate.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Culture Plate</h3>
@@ -506,7 +649,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Rapid-kit.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Rapid-kit.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Rapid Kit Test</h3>
@@ -519,7 +665,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Rapid-kit1.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Rapid-kit1.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Rapit Kit</h3>
@@ -540,7 +689,10 @@
             <h2>Instruments</h2>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Autoclave.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Autoclave.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Autoclave</h3>
@@ -553,7 +705,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Centrifuge.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Centrifuge.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Centrifuge</h3>
@@ -566,7 +721,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Hot-air-oven.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Hot-air-oven.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Hot Air Oven</h3>
@@ -579,7 +737,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Water-bath.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Water-bath.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Water Bath</h3>
@@ -592,7 +753,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Incubator.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Incubator.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Incubator</h3>
@@ -607,7 +771,10 @@
 
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Candle-jar.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Candle-jar.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Candle Jar</h3>
@@ -620,7 +787,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Bacteriophage.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Bacteriophage.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Bacteriophage</h3>
@@ -634,7 +804,10 @@
 
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Microscope</h3>
@@ -647,7 +820,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Inoculating-loop.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Inoculating-loop.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Inoculating loop</h3>
@@ -660,7 +836,10 @@
             </div>
             <div class="media-container">
                 <div class="media-source">
-                    <img src="/image/Microbiology2/Inoculating-wire.jpg" alt="Image 1">
+                    <picture>
+                        <img src="/image/Microbiology2/Inoculating-wire.jpg" alt="Image 1">
+                        <figcaption></figcaption>
+                    </picture>
                 </div>
                 <div class="media-details">
                     <h3>Inoculating wire</h3>
@@ -675,7 +854,7 @@
 
         </div>
 
-       
+
 
 
 
