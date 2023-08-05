@@ -492,7 +492,7 @@ caption {
 
 
 /* Apply basic styling to the table */
-table {
+.overflow-scroll table {
  /* border: 1.5px solid black; */
   border-collapse:collapse;  
   width: 100%;
@@ -509,34 +509,34 @@ table caption {
   /* color: #fff; */
 }
 
-/* Add Table No counter to the table caption */
+
 table caption::before {
   content: "Table No " counter(table-counter) ": ";
 }
 
-table thead {
+.overflow-scroll table thead {
   background-color: #999;
   color: #ffffff;
 }
 
-table thead  tr{
+.overflow-scroll table thead  tr{
   background-color: #999;
   color: #fff;
   border-bottom: 2px solid #000000;
 }
 
-table thead th {
+.overflow-scroll table thead th {
   text-align: center;
 }
 
-table th {
+.overflow-scroll table th {
   padding: 12px;
   text-align: left;
   font-weight: bold;
   border-bottom: 2px solid #fff;
 }
 
-table td {
+.overflow-scroll table td {
   padding: 12px;
   text-align: left;
   border: 1px solid #ddd;
@@ -544,26 +544,24 @@ table td {
 
 
 
-table tbody tr {
-  /* background-color: #f; */
+.overflow-scroll table tbody tr {
+
   transition: background-color 0.2s ease-in-out;
   border: 2px solid #ddd;
 }
 
-/* table tbody tr:hover {
-  background-color: #ccc;
-} */
 
-tr:nth-child(even) {
+
+.overflow-scroll tr:nth-child(even) {
   background-color: #f2f2f2;
   }
 
-table tfoot {
+  .overflow-scroll table tfoot {
   background-color: #007BFF;
   color: #fff;
 }
 
-table tfoot td {
+.overflow-scroll table tfoot td {
   font-weight: bold;
 }
 
@@ -609,10 +607,6 @@ table tfoot td {
 
 
 
-
-
-
-
 /* Custom style for the ordered list */
 ol {
   /* margin-left: 30px;
@@ -628,11 +622,7 @@ ol li {
   /* color: #333;  */
 }
 
-/* Add a little animation on hover for fun */
-ol li:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-}
+
 
 /* Optional: If you want to change the number color */
 ol li::marker {
@@ -1933,3 +1923,35 @@ blockquote {
 }
 
 
+.chart-heading {
+  color: black;
+  font-weight: bold;
+  /* border: 1px solid rgb(4, 200, 239);
+  background-color: rgb(112, 242, 244); */
+  /* text-decoration: underline; */
+  font-size: 18px;
+  margin: 5px;
+  padding:-10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /* text-transform: uppercase; */
+}
+.chart-class-heading{
+  font-weight: bold;
+  margin:0px;
+}
+
+.chart-list>ol {
+  padding-left: 10px; 
+  text-align: left;
+  padding-left:15px;
+  margin:0px;
+}
+
+.chart{
+  border: 1px solid black;
+  margin:10px;
+  padding:10px;
+  border-radius:5px;
+  overflow-x: auto;
+}

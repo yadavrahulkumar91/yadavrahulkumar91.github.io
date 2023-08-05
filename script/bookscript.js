@@ -20,9 +20,10 @@ var script2 = document.createElement('script');
 script2.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
 document.head.appendChild(script2);
 
-
-
-
+var script3 = document.createElement('script');
+script3.type = 'text/javascript';
+script3.src = 'https://www.gstatic.com/charts/loader.js';
+document.head.appendChild(script3);
 
 
 

@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <style>
+        .chart-heading {
+            color: black;
+            font-weight: bold;
+            /* border: 1px solid rgb(4, 200, 239);
+            background-color: rgb(112, 242, 244); */
+            /* text-decoration: underline; */
+            font-size: 18px;
+            margin: 5px;
+            padding:-10px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            /* text-transform: uppercase; */
+        }
+        .chart-class-heading{
+            font-weight: bold;
+            margin:0px;
+        }
+       
+        .chart-list>ol {
+            padding-left: 10px; 
+            text-align: left;
+            padding-left:15px;
+            margin:0px;
+        }
+
+        
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ["orgchart"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+          
+
+            // For each orgchart box, provide the name, manager, and tooltip to show.
+            data.addRows([
+            [{'v': '1', 'f': '<div class="chart-heading">β-Lactam antibiotics</div>' }, '', ''],
+            [{'v':'1.1', 'f':'<div class="chart-class-heading">Penicillin</div><div class="chart-list"><ol><li>Penicillin-G </li><li>Penicillin-D</ol></div>'}, '1', ''],
+            [{'v':'1.2', 'f':''}, '1', ''],
+
+            ]);
+
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+                // nodeClass:"drugs",
+                // selectedNodeClass:"drugs",
+              
+            };           
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="chart_div"></div>
+</body>
+
+</html>
