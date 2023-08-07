@@ -44,7 +44,7 @@
 
 
       <h1>Classification of Drugs</h1>
-      <h2>Chemical structure</h2>
+      <!-- <h2>Chemical structure</h2>
       <ol>
         <li>Azole derivatives
           <ol>
@@ -173,7 +173,7 @@
             <li>Clofazimine</li>
           </ol>
         </li>
-      </ol>
+      </ol> -->
       <!-- <script type="text/javascript">
         google.charts.setOnLoadCallback(drawChart);
        
@@ -589,147 +589,7 @@
                   chart.draw(data, options);
               }
           </script>
-             <div class="chart" id="chart_div11"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR COUGH</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pharyngeal demulcents</div><div class="chart-list"><ol><li>Lozenges</li><li>Syrups</li><li>Glycerine</li><li>Liquorice</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Expectorants (Mucokinetics)</div><div class="chart-list"><ol><li>Secretion enhancers</li><li>Mucolytics</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Secretion enhancers</div><div class="chart-list"><ol><li>Pot. citrate</li><li>Pot. iodide</li><li>Guaiphenesin</li><li>Tolu balsam</li><li>Vasaka</li><li>Ammon. chloride</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Mucolytics</div><div class="chart-list"><ol><li>Bromhexine</li><li>Ambroxol</li><li>Acetyl cysteine</li><li>Carbocisteine</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antitussives (Cough centre suppressants)</div><div class="chart-list"><ol><li>Opioids</li><li>Nonopioids</li><li>Antihistaminics</li><li>Pulmonary receptor desensitizer</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Opioids</div><div class="chart-list"><ol><li>Codeine</li><li>Ethylmorphine</li><li>Pholcodine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Nonopioids</div><div class="chart-list"><ol><li>Noscapine</li><li>Dextromethorphan</li><li>Chlophedianol</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Antihistaminics</div><div class="chart-list"><ol><li>Chlorpheniramine</li><li>Diphenhydramine</li><li>Promethazine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Pulmonary receptor desensitizer</div><div class="chart-list"><ol><li>Prenoxdiazine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Adjuvant antitussives (Bronchodilators)</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div12'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div12"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR BRONCHIAL ASTHMA</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Leukotriene antagonists</div><div class="chart-list"><ol><li>Montelukast</li><li>Zafirlukast</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Mast cell stabilizers</div><div class="chart-list"><ol><li>Sod. cromoglycate</li><li>Ketotifen</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Corticosteroids</div><div class="chart-list"><ol><li>Systemic</li><li>Inhalational</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Systemic</div><div class="chart-list"><ol><li>Hydrocortisone</li><li>Prednisolone</li><li>Other glucocorticoids</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Inhalational</div><div class="chart-list"><ol><li>Beclomethasone dipropionate</li><li>Budesonide</li><li>Fluticasone propionate</li><li>Flunisolide</li><li>Ciclesonide</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Anti-IgE antibody</div><div class="chart-list"><ol><li>Omalizumab</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>B2 Sympathomimetics</li><li>Methylxanthines</li><li>Anticholinergics</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.5.1', 'f': '<div class="chart-class-heading">B2 Sympathomimetics</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li><li>Bambuterol</li><li>Salmeterol</li><li>Formoterol</li></ol></div>' }, '1.5', ''],
-                      [{ 'v': '1.5.2', 'f': '<div class="chart-class-heading">Methylxanthines</div><div class="chart-list"><ol><li>Theophylline</li><li>Aminophylline</li><li>Choline theophyllinate</li><li>Hydroxyethyl theophylline</li><li>Doxophylline</li></ol></div>' }, '1.5', ''],
-                      [{ 'v': '1.5.3', 'f': '<div class="chart-class-heading">Anticholinergics</div><div class="chart-list"><ol><li>Ipratropium Br.</li><li>Tiotropium Br.</li></ol></div>' }, '1.5', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div13'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div13"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">THYROID INHIBITORS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Inhibit hormone synthesis (Antithyroid drugs)</div><div class="chart-list"><ol><li>Propylthiouracil</li><li>Methimazole</li><li>Carbimazole</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Inhibit iodide trapping (Ionic inhibitors)</div><div class="chart-list"><ol><li>Thiocyanates (-SCN)</li><li>Perchlorates (-CIO4)</li><li>Nitrates (-NO3)</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Inhibit hormone release</div><div class="chart-list"><ol><li>Iodine</li><li>Iodides of Na, K</li><li>Organic iodide</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Destroy thyroid tissue</div><div class="chart-list"><ol><li>Radioactive iodine 131 I</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div14'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div14"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">ORAL ANTIDIABETIC DRUGS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Enhance insulin secretion</div><div class="chart-list"><ol><li>KATP channel blockers</li><li>Meglitinide/Phenylalanine analogues</li><li>Dipeptidyl peptidase-4 (DPP-4) inhibitors</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">KATP channel blockers (Sulfonylureas)</div><div class="chart-list"><ol><li>Tolbutamide</li><li>Glibenclamide</li><li>Glipizide</li><li>Gliclazide</li><li>Glimepiride</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Meglitinide/Phenylalanine analogues</div><div class="chart-list"><ol><li>Repaglinide</li><li>Nateglinide</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Dipeptidyl peptidase-4 (DPP-4) inhibitors</div><div class="chart-list"><ol><li>Sitagliptin</li><li>Vildagliptin</li><li>Saxagliptin</li><li>Linagliptin</li><li>Alogliptin</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Overcome insulin resistance</div><div class="chart-list"><ol><li>Biguanide (AMPK activator)</li><li>Thiazolidinedione (PPAR activator)</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Biguanide (AMPK activator)</div><div class="chart-list"><ol><li>Metformin</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Thiazolidinedione (PPAR activator)</div><div class="chart-list"><ol><li>Pioglitazone</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Miscellaneous drugs</div><div class="chart-list"><ol><li>a-Glucosidase inhibitors</li><li>Amylin analogue</li><li>Dopamine D2 agonist</li><li>Sod-glucose cotransport-2 (SGLT-2) inhibitor</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">a-Glucosidase inhibitors</div><div class="chart-list"><ol><li>Acarbose</li><li>Miglitol</li><li>Voglibose</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Amylin analogue</div><div class="chart-list"><ol><li>Pramlintide</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Dopamine D2 agonist</div><div class="chart-list"><ol><li>Bromocriptine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Sod-glucose cotransport-2 (SGLT-2) inhibitor</div><div class="chart-list"><ol><li>Dapagliflozin</li></ol></div>' }, '1.3', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div15'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div15"></div>
+            
              <script type="text/javascript">
               google.charts.load('current', { 'packages': ['orgchart'] });
               google.charts.setOnLoadCallback(drawChart);
@@ -1116,6 +976,147 @@
                     chart.draw(data, options);
                 }
             </script>
+             <div class="chart" id="chart_div11"></div>
+             <script type="text/javascript">
+              google.charts.load('current', { 'packages': ['orgchart'] });
+              google.charts.setOnLoadCallback(drawChart);
+      
+              function drawChart() {
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'Name');
+                  data.addColumn('string', 'Manager');
+                  data.addColumn('string', 'ToolTip');
+      
+                  data.addRows([
+                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR COUGH</div>' }, '', ''],
+                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pharyngeal demulcents</div><div class="chart-list"><ol><li>Lozenges</li><li>Syrups</li><li>Glycerine</li><li>Liquorice</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Expectorants (Mucokinetics)</div><div class="chart-list"><ol><li>Secretion enhancers</li><li>Mucolytics</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Secretion enhancers</div><div class="chart-list"><ol><li>Pot. citrate</li><li>Pot. iodide</li><li>Guaiphenesin</li><li>Tolu balsam</li><li>Vasaka</li><li>Ammon. chloride</li></ol></div>' }, '1.2', ''],
+                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Mucolytics</div><div class="chart-list"><ol><li>Bromhexine</li><li>Ambroxol</li><li>Acetyl cysteine</li><li>Carbocisteine</li></ol></div>' }, '1.2', ''],
+                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antitussives (Cough centre suppressants)</div><div class="chart-list"><ol><li>Opioids</li><li>Nonopioids</li><li>Antihistaminics</li><li>Pulmonary receptor desensitizer</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Opioids</div><div class="chart-list"><ol><li>Codeine</li><li>Ethylmorphine</li><li>Pholcodine</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Nonopioids</div><div class="chart-list"><ol><li>Noscapine</li><li>Dextromethorphan</li><li>Chlophedianol</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Antihistaminics</div><div class="chart-list"><ol><li>Chlorpheniramine</li><li>Diphenhydramine</li><li>Promethazine</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Pulmonary receptor desensitizer</div><div class="chart-list"><ol><li>Prenoxdiazine</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Adjuvant antitussives (Bronchodilators)</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
+                  ]);
+      
+                  var options = {
+                      allowHtml: true,
+                      size: 'medium',
+                      nodeSpacing: 40,
+                      allowCollapse: true,
+                      compactRows: true,
+                  };
+                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div12'));
+                  chart.draw(data, options);
+              }
+          </script>
+             <div class="chart" id="chart_div12"></div>
+             <script type="text/javascript">
+              google.charts.load('current', { 'packages': ['orgchart'] });
+              google.charts.setOnLoadCallback(drawChart);
+      
+              function drawChart() {
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'Name');
+                  data.addColumn('string', 'Manager');
+                  data.addColumn('string', 'ToolTip');
+      
+                  data.addRows([
+                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR BRONCHIAL ASTHMA</div>' }, '', ''],
+                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Leukotriene antagonists</div><div class="chart-list"><ol><li>Montelukast</li><li>Zafirlukast</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Mast cell stabilizers</div><div class="chart-list"><ol><li>Sod. cromoglycate</li><li>Ketotifen</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Corticosteroids</div><div class="chart-list"><ol><li>Systemic</li><li>Inhalational</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Systemic</div><div class="chart-list"><ol><li>Hydrocortisone</li><li>Prednisolone</li><li>Other glucocorticoids</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Inhalational</div><div class="chart-list"><ol><li>Beclomethasone dipropionate</li><li>Budesonide</li><li>Fluticasone propionate</li><li>Flunisolide</li><li>Ciclesonide</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Anti-IgE antibody</div><div class="chart-list"><ol><li>Omalizumab</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>B2 Sympathomimetics</li><li>Methylxanthines</li><li>Anticholinergics</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.5.1', 'f': '<div class="chart-class-heading">B2 Sympathomimetics</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li><li>Bambuterol</li><li>Salmeterol</li><li>Formoterol</li></ol></div>' }, '1.5', ''],
+                      [{ 'v': '1.5.2', 'f': '<div class="chart-class-heading">Methylxanthines</div><div class="chart-list"><ol><li>Theophylline</li><li>Aminophylline</li><li>Choline theophyllinate</li><li>Hydroxyethyl theophylline</li><li>Doxophylline</li></ol></div>' }, '1.5', ''],
+                      [{ 'v': '1.5.3', 'f': '<div class="chart-class-heading">Anticholinergics</div><div class="chart-list"><ol><li>Ipratropium Br.</li><li>Tiotropium Br.</li></ol></div>' }, '1.5', ''],
+                  ]);
+      
+                  var options = {
+                      allowHtml: true,
+                      size: 'medium',
+                      nodeSpacing: 40,
+                      allowCollapse: true,
+                      compactRows: true,
+                  };
+                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div13'));
+                  chart.draw(data, options);
+              }
+          </script>
+             <div class="chart" id="chart_div13"></div>
+             <script type="text/javascript">
+              google.charts.load('current', { 'packages': ['orgchart'] });
+              google.charts.setOnLoadCallback(drawChart);
+      
+              function drawChart() {
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'Name');
+                  data.addColumn('string', 'Manager');
+                  data.addColumn('string', 'ToolTip');
+      
+                  data.addRows([
+                      [{ 'v': '1', 'f': '<div class="chart-heading">THYROID INHIBITORS</div>' }, '', ''],
+                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Inhibit hormone synthesis (Antithyroid drugs)</div><div class="chart-list"><ol><li>Propylthiouracil</li><li>Methimazole</li><li>Carbimazole</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Inhibit iodide trapping (Ionic inhibitors)</div><div class="chart-list"><ol><li>Thiocyanates (-SCN)</li><li>Perchlorates (-CIO4)</li><li>Nitrates (-NO3)</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Inhibit hormone release</div><div class="chart-list"><ol><li>Iodine</li><li>Iodides of Na, K</li><li>Organic iodide</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Destroy thyroid tissue</div><div class="chart-list"><ol><li>Radioactive iodine 131 I</li></ol></div>' }, '1', ''],
+                  ]);
+      
+                  var options = {
+                      allowHtml: true,
+                      size: 'medium',
+                      nodeSpacing: 40,
+                      allowCollapse: true,
+                      compactRows: true,
+                  };
+                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div14'));
+                  chart.draw(data, options);
+              }
+          </script>
+             <div class="chart" id="chart_div14"></div>
+             <script type="text/javascript">
+              google.charts.load('current', { 'packages': ['orgchart'] });
+              google.charts.setOnLoadCallback(drawChart);
+      
+              function drawChart() {
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'Name');
+                  data.addColumn('string', 'Manager');
+                  data.addColumn('string', 'ToolTip');
+      
+                  data.addRows([
+                      [{ 'v': '1', 'f': '<div class="chart-heading">ORAL ANTIDIABETIC DRUGS</div>' }, '', ''],
+                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Enhance insulin secretion</div><div class="chart-list"><ol><li>KATP channel blockers</li><li>Meglitinide/Phenylalanine analogues</li><li>Dipeptidyl peptidase-4 (DPP-4) inhibitors</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">KATP channel blockers (Sulfonylureas)</div><div class="chart-list"><ol><li>Tolbutamide</li><li>Glibenclamide</li><li>Glipizide</li><li>Gliclazide</li><li>Glimepiride</li></ol></div>' }, '1.1', ''],
+                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Meglitinide/Phenylalanine analogues</div><div class="chart-list"><ol><li>Repaglinide</li><li>Nateglinide</li></ol></div>' }, '1.1', ''],
+                      [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Dipeptidyl peptidase-4 (DPP-4) inhibitors</div><div class="chart-list"><ol><li>Sitagliptin</li><li>Vildagliptin</li><li>Saxagliptin</li><li>Linagliptin</li><li>Alogliptin</li></ol></div>' }, '1.1', ''],
+                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Overcome insulin resistance</div><div class="chart-list"><ol><li>Biguanide (AMPK activator)</li><li>Thiazolidinedione (PPAR activator)</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Biguanide (AMPK activator)</div><div class="chart-list"><ol><li>Metformin</li></ol></div>' }, '1.2', ''],
+                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Thiazolidinedione (PPAR activator)</div><div class="chart-list"><ol><li>Pioglitazone</li></ol></div>' }, '1.2', ''],
+                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Miscellaneous drugs</div><div class="chart-list"><ol><li>a-Glucosidase inhibitors</li><li>Amylin analogue</li><li>Dopamine D2 agonist</li><li>Sod-glucose cotransport-2 (SGLT-2) inhibitor</li></ol></div>' }, '1', ''],
+                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">a-Glucosidase inhibitors</div><div class="chart-list"><ol><li>Acarbose</li><li>Miglitol</li><li>Voglibose</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Amylin analogue</div><div class="chart-list"><ol><li>Pramlintide</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Dopamine D2 agonist</div><div class="chart-list"><ol><li>Bromocriptine</li></ol></div>' }, '1.3', ''],
+                      [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Sod-glucose cotransport-2 (SGLT-2) inhibitor</div><div class="chart-list"><ol><li>Dapagliflozin</li></ol></div>' }, '1.3', ''],
+                  ]);
+      
+                  var options = {
+                      allowHtml: true,
+                      size: 'medium',
+                      nodeSpacing: 40,
+                      allowCollapse: true,
+                      compactRows: true,
+                  };
+                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div15'));
+                  chart.draw(data, options);
+              }
+          </script>
+             <div class="chart" id="chart_div15"></div>
               <div class="chart" id="chart_div27"></div>
               <div class="chart" id="chart_div28"></div>
               <div class="chart" id="chart_div29"></div>
