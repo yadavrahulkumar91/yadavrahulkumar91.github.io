@@ -1935,11 +1935,23 @@ blockquote {
   padding:-10px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
+}
+
+.lowercase{
+  text-transform: lowercase;
 }
 .chart-class-heading{
   font-weight: bold;
+  font-size: 16px;
   margin:0px;
+  /* text-transform: lowercase;
+  text-transform:capitalize; */
+}
+
+.chart-subclass-heading{
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .chart-list>ol {

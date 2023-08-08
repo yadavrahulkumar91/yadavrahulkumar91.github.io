@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-      google.charts.load('current', { packages: ["orgchart"] });
+  <script type="text/javascript">
+    google.charts.load('current', { packages: ["orgchart"] });
       // google.charts.setOnLoadCallback(drawChart);
-</script>
-<style>
-  .container{
-    width:100%;
-    max-width:100%;
-  }
-</style>
+  </script>
+  <style>
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -250,8 +250,890 @@
         
            }
          </script> -->
+
+      <!-- <div class="chart" id="chart_div1"></div> -->
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '0', 'f': '<div class="chart-heading">Cholinergic Drugs</div>' }, '', ''],
+
+            [{ 'v': '1', 'f': '<div class="chart-heading">Cholinergic agonists</div>' }, '0', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Choline esters</div><div class="chart-list"><ol><li>Acetylcholine</li><li>Methacholine</li><li>Carbachol</li><li>Bethanechol</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Alkaloids</div><div class="chart-list"><ol><li>Muscarine</li><li>Pilocarpine</li><li>Arecoline</li></ol></div>' }, '1', ''],
+            [{ 'v': '2', 'f': '<div class="chart-heading">Anticholinesterases</div>' }, '0', ''],
+            [{ 'v': '2.1', 'f': '<div class="chart-heading">Reversible</div>' }, '2', ''],
+
+            [{ 'v': '2.11', 'f': '<div class="chart-class-heading">Carbamates</div><div class="chart-list"><ol><li>Physostigmine (Eserine)</li><li>Neostigmine</li><li>Pyridostigmine</li><li>Edrophonium</li><li>Rivastigmine</li><li>Donepezil</li><li>Galantamine</li></ol></div>' }, '2.1', ''],
+            [{ 'v': '2.2', 'f': '<div class="chart-class-heading">Acridine</div><div class="chart-list"><ol><li>Tacrine</li></ol></div>' }, '2.1', ''],
+            [{ 'v': '3', 'f': '<div class="chart-heading">Irreversible</div>' }, '2', ''],
+            [{ 'v': '3.1', 'f': '<div class="chart-class-heading">Carbamates</div><div class="chart-list"><ol><li>Carbaryl (Sevin)</li><li>Propoxur (Baygon)</li></ol></div>' }, '3', ''],
+            [{ 'v': '3.2', 'f': '<div class="chart-class-heading">Organophosphates</div><div class="chart-list"><ol><li>Dyflos (DFP)</li><li>Echothiophate</li><li>Malathion</li><li>Diazinon</li><li>Tabun</li><li>Sarin</li><li>Soman</li></ol></div>' }, '3', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div2'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div2"></div>
+
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ANTICHOLINERGIC DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural alkaloids</div><div class="chart-list"><ol><li>Atropine</li><li>Hyoscine (Scopolamine)</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Semisynthetic derivatives</div><div class="chart-list"><ol><li>Atropine methonitrate</li><li>Homatropine</li><li>Hyoscine butyl bromide</li><li>Ipratropium bromide</li><li>Tiotropium bromide</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Synthetic compounds</div><div class="chart-list"><ol><li>Mydriatics</li><li>Vasicoselective</li><li>Antiparkinsonian</li><li>Antisecretory-antispasmodics</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Mydriatics</div><div class="chart-list"><ol><li>Cyclopentolate</li><li>Tropicamide</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Vasicoselective</div><div class="chart-list"><ol><li>Oxybutynin</li><li>Flavoxate</li><li>Tolterodine</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Antiparkinsonian</div><div class="chart-list"><ol><li>Trihexyphenidyl (Benzhexol)</li><li>Procyclidine</li><li>Biperiden</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Antisecretory-antispasmodics</div><div class="chart-list"><ol><li>Quaternary comps.</li><li>Tertiary amines</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.4.1', 'f': '<div class="chart-class-heading">Quaternary comps.</div><div class="chart-list"><ol><li>Propantheline</li><li>Oxyphenonium</li><li>Clidinium</li><li>Pipenzolate methyl bromide</li><li>Isopropamide</li><li>Glycopyrrolate</li></ol></div>' }, '1.3.4', ''],
+            [{ 'v': '1.3.4.2', 'f': '<div class="chart-class-heading">Tertiary amines</div><div class="chart-list"><ol><li>Dicyclomine</li><li>Valethamate</li><li>Pirenzepine</li></ol></div>' }, '1.3.4', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div3'));
+          chart.draw(data, options);
+        }
+
+      </script>
+      <div class="chart" id="chart_div3"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ADRENERGIC DRUGS (Sympathomimetics)</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pressor agents</div><div class="chart-list"><ol><li>Noradrenaline (Norepinephrine)</li><li>Ephedrine</li><li>Dopamine</li><li>Phenylephrine</li><li>Mephentermine</li><li>Methoxamine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>Salbutamol (Albuterol)</li><li>Isoprenaline</li><li>Terbutaline</li><li>Salmeterol</li><li>Formoterol</li><li>Bambuterol</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">CNS stimulants</div><div class="chart-list"><ol><li>Amphetamine</li><li>Dexamphetamine</li><li>Methamphetamine</li><li>Methylphenidate</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Uterine relaxants</div><div class="chart-list"><ol><li>Ritodrine</li><li>Isoxsuprine</li><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Cardiac stimulants</div><div class="chart-list"><ol><li>Adrenaline</li><li>Isoprenaline</li><li>Dobutamine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.6', 'f': '<div class="chart-class-heading">Nasal decongestants</div><div class="chart-list"><ol><li>Xylometazoline</li><li>Oxymetazoline</li><li>Naphazoline</li><li>Phenylephrine</li><li>Phenylpropanolamine</li><li>Pseudoephedrine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.7', 'f': '<div class="chart-class-heading">Anorectics</div><div class="chart-list"><ol><li>Amphetamine</li><li>Fenfluramine</li><li>Dexfenfluramine</li><li>Sibutramine</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div7'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div7"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">Alpha(<span class="lowercase">α</span>)- ADRENERGIC BLOCKING DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Non equilibrium type</div><div class="chart-list"><ol><li>B-haloalkylamine</li><li>Phenoxybenzamine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Equilibrium type (Competitive antagonists)</div><div class="chart-list"><ol><li>Non selective</li><li>α.1 Selective</li><li>α.2 Selective</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Non selective</div><div class="chart-list"><ol><li>Ergot alkaloids</li><li>Imidazoline</li><li>Chlorpromazine</li><li>Hydrogenated ergot alkaloids</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.1.1', 'f': '<div class="chart-class-heading">Ergot alkaloids</div><div class="chart-list"><ol><li>Ergotamine</li><li>Ergotoxine</li></ol></div>' }, '1.2.1', ''],
+            [{ 'v': '1.2.1.2', 'f': '<div class="chart-class-heading">Imidazoline</div><div class="chart-list"><ol><li>Phentolamine</li></ol></div>' }, '1.2.1', ''],
+            [{ 'v': '1.2.1.3', 'f': '<div class="chart-class-heading">Chlorpromazine</div><div class="chart-list"><ol><li>Chlorpromazine</li></ol></div>' }, '1.2.1', ''],
+            [{ 'v': '1.2.1.4', 'f': '<div class="chart-class-heading">Hydrogenated ergot alkaloids</div><div class="chart-list"><ol><li>Dihydroergotamine (DHE)</li><li>Dihydroergotoxine (Codergocrine)</li></ol></div>' }, '1.2.1', ''],
+            [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">α.1 Selective</div><div class="chart-list"><ol><li>Prazosin</li><li>Terazosin</li><li>Alfuzosin</li><li>Doxazosin</li><li>Tamsulosin</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.3', 'f': '<div class="chart-class-heading">α.2 Selective</div><div class="chart-list"><ol><li>Yohimbine</li></ol></div>' }, '1.2', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div4'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div4"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">Beta<span class="lowercase">(β)</span>-ADRENERGIC BLOCKING DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Non selective (β₁ + β₂)</div><div class="chart-list"><ol><li>Without ISA</li><li>With ISA</li><li>With α blocking property</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Without ISA</div><div class="chart-list"><ol><li>Propranolol</li><li>Sotalol</li><li>Timolol</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">With ISA</div><div class="chart-list"><ol><li>Pindolol</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">With α blocking property</div><div class="chart-list"><ol><li>Labetalol</li><li>Carvedilol</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Cardioselective (β₁)</div><div class="chart-list"><ol><li>Metoprolol</li><li>Atenolol</li><li>Acebutolol</li><li>Bisoprolol</li><li>Esmolol</li><li>Betaxolol</li><li>Celiprolol</li><li>Nebivolol</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div5'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div5"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">Beta<span class="lowercase">(β)</span>-ADRENERGIC BLOCKING DRUGS (Generation wise)</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">First generation (Older, nonselective)</div><div class="chart-list"><ol><li>Propranolol</li><li>Timolol</li><li>Sotalol</li><li>Pindolol</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Second generation (β₁ or Cardioselective)</div><div class="chart-list"><ol><li>Metoprolol</li><li>Atenolol</li><li>Acebutolol</li><li>Bisoprolol</li><li>Esmolol</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Third generation (With α blocking and/or vasodilator property)</div><div class="chart-list"><ol><li>Labetalol</li><li>Carvedilol</li><li>Celiprolol</li><li>Nebivolol</li><li>Betaxolol</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div6'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div6"></div>
+     
+     
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">NONSTEROIDAL ANTIINFLAMMATORY DRUGS/ANTIPYRETIC-ANALGESICS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Nonselective COX inhibitors</div><div class="chart-list"><ol><li>Salicylates</li><li>Propionic acid derivatives</li><li>Fenamate</li><li>Enolic acid derivatives</li><li>Acetic acid derivatives</li><li>Pyrazolone derivatives</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Salicylates</div><div class="chart-list"><ol><li>Aspirin</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Propionic acid derivatives</div><div class="chart-list"><ol><li>Ibuprofen</li><li>Naproxen</li><li>Ketoprofen</li><li>Flurbiprofen</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Fenamate</div><div class="chart-list"><ol><li>Mephenamic acid</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.4', 'f': '<div class="chart-class-heading">Enolic acid derivatives</div><div class="chart-list"><ol><li>Piroxicam</li><li>Tenoxicam</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.5', 'f': '<div class="chart-class-heading">Acetic acid derivatives</div><div class="chart-list"><ol><li>Ketorolac</li><li>Indomethacin</li><li>Nabumetone</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.6', 'f': '<div class="chart-class-heading">Pyrazolone derivatives</div><div class="chart-list"><ol><li>Phenylbutazone</li><li>Oxyphenbutazone</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Preferential COX-2 inhibitors</div><div class="chart-list"><ol><li>Nimesulide</li><li>Diclofenac</li><li>Aceclofenac</li><li>Meloxicam</li><li>Etodolac</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Selective COX-2 inhibitors</div><div class="chart-list"><ol><li>Celecoxib</li><li>Etoricoxib</li><li>Parecoxib</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Analgesic-antipyretics with poor antiinflammatory action</div><div class="chart-list"><ol><li>Para aminophenol derivative</li><li>Pyrazolone derivatives</li><li>Benzoxazocine derivative</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4.1', 'f': '<div class="chart-class-heading">Para aminophenol derivative</div><div class="chart-list"><ol><li>Paracetamol (Acetaminophen)</li></ol></div>' }, '1.4', ''],
+            [{ 'v': '1.4.2', 'f': '<div class="chart-class-heading">Pyrazolone derivatives</div><div class="chart-list"><ol><li>Metamizol (Dipyrone)</li><li>Propiphenazone</li></ol></div>' }, '1.4', ''],
+            [{ 'v': '1.4.3', 'f': '<div class="chart-class-heading">Benzoxazocine derivative</div><div class="chart-list"><ol><li>Nefopam</li></ol></div>' }, '1.4', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div8'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div8"></div>
+
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ANTIRHEUMATOID DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Disease modifying anti-rheumatoid drugs (DMARDs)</div><div class="chart-list"><ol><li>Nonbiological drugs</li><li>Biological agents</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Nonbiological drugs</div><div class="chart-list"><ol><li>Immuno-suppressants</li><li>Sulfasalazine</li><li>Chloroquine Hydroxychloroquine</li><li>Leflunomide</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.1.1', 'f': '<div class="chart-class-heading">Immuno-suppressants</div><div class="chart-list"><ol><li>Methotrexate</li><li>Azathioprine</li><li>Cyclosporine</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Sulfasalazine</div><div class="chart-list"><ol><li>Sulfasalazine</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Chloroquine Hydroxychloroquine</div><div class="chart-list"><ol><li>Chloroquine Hydroxychloroquine</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.4', 'f': '<div class="chart-class-heading">Leflunomide</div><div class="chart-list"><ol><li>Leflunomide</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Biological agents</div><div class="chart-list"><ol><li>TNF a-inhibitors</li><li>IL-1 antagonist</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.2.1', 'f': '<div class="chart-class-heading">TNF a-inhibitors</div><div class="chart-list"><ol><li>Etanercept</li><li>Infliximab</li><li>Adalimumab</li></ol></div>' }, '1.1.2', ''],
+            [{ 'v': '1.1.2.2', 'f': '<div class="chart-class-heading">IL-1 antagonist</div><div class="chart-list"><ol><li>Anakinra</li></ol></div>' }, '1.1.2', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Adjuvant drugs</div><div class="chart-list"><ol><li>Prednisolone and other glucocorticoids</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div9'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div9"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR GOUT</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Acute gout</div><div class="chart-list"><ol><li>NSAIDs</li><li>Colchicine</li><li>Glucocorticoids</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Chronic gout/Hyperuricaemia</div><div class="chart-list"><ol><li>Uricosurics</li><li>Synthesis inhibitors</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Uricosurics</div><div class="chart-list"><ol><li>Probenecid</li><li>Sulfinpyrazone</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Synthesis inhibitors</div><div class="chart-list"><ol><li>Allopurinol</li><li>Febuxostat</li></ol></div>' }, '1.2', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div10'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div10"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">Prostaglandins (PGs)</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural PGs</div><div class="chart-list"><ol><li>Dinoprostone (PGE₂)</li><li>Gemeprost</li><li>Dinoprost (PGF₂₀)</li><li>Alprostadil (PGE₁)</li><li>Prostacyclin (PGI₂) (Epoprostenol)</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Prostaglandin analogues</div><div class="chart-list"><ol><li>Carboprost (15-methyl PGF₂α)</li><li>Misoprostol (methyl PGE ester)</li><li>Latanoprost (PGE₂ analogue)</li><li>Travoprost</li><li>Bimatoprost</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div11'));
+          chart.draw(data, options);
+        }
+      </script>
+
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">PENICILLINS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural Penicillin</div><div class="chart-list"><ol><li>Benzyl Penicillin (Penicillin G)</li><li>Phenoxymethyl Penicillin (Penicillin V)</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Semisynthetic Penicillins</div><div class="chart-list"><ol><li>Acid-resistant alternative to Penicillin G</li><li>Penicillinase Resistant Penicillins</li><li>Extended Spectrum Penicillins</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Acid-resistant alternative to Penicillin G</div><div class="chart-list"><ol><li>Phenoxymethyl penicillin (Penicillin V)</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Penicillinase Resistant Penicillins</div><div class="chart-list"><ol><li>Methicillin</li><li>Cloxacillin</li><li>Dicloxacillin</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.3', 'f': '<div class="chart-class-heading">Extended Spectrum Penicillins</div><div class="chart-list"><ol><li>Amino-Penicillins</li><li>Ureido-Penicillins</li><li>Carboxy-Penicillin</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.3.1', 'f': '<div class="chart-class-heading">Amino-Penicillins</div><div class="chart-list"><ol><li>Ampicillin</li><li>Bacampicillin</li><li>Amoxicillin</li></ol></div>' }, '1.2.3', ''],
+            [{ 'v': '1.2.3.2', 'f': '<div class="chart-class-heading">Ureido-Penicillins</div><div class="chart-list"><ol><li>Piperacillin</li><li>Mezlocillin</li></ol></div>' }, '1.2.3', ''],
+            [{ 'v': '1.2.3.3', 'f': '<div class="chart-class-heading">Carboxy-Penicillin</div><div class="chart-list"><ol><li>Carbenicillin</li></ol></div>' }, '1.2.3', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">β-Lactamase Inhibitors</div><div class="chart-list"><ol><li>Clavulanic Acid</li><li>Sulbactam</li><li>Tazobactam</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div16'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div16"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">CEPHALOSPORINS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">First generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li><li>Oral</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefazolin</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Oral</div><div class="chart-list"><ol><li>Cephalexin</li><li>Cefadroxil</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Second generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li><li>Oral</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefuroxime</li><li>Cefoxitin*</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Oral</div><div class="chart-list"><ol><li>Cefaclor</li><li>Cefuroxime axetil</li><li>Cefprozil</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Third generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li><li>Oral</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefotaxime</li><li>Ceftizoxime</li><li>Ceftriaxone</li><li>Ceftazidime</li><li>Cefoperazone</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Oral</div><div class="chart-list"><ol><li>Cefixime</li><li>Cefpodoxime proxetil</li><li>Cefdinir</li><li>Ceftibuten</li><li>Ceftamet pivoxil</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Fourth generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefepime</li><li>Cefpirome</li></ol></div>' }, '1.4', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Fifth generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Ceftaroline fosamil</li><li>Ceftobiprole medocaril</li></ol></div>' }, '1.5', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div17'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div17"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">AMINOGLYCOSIDES</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Systemic aminoglycosides</div><div class="chart-list"><ol><li>Streptomycin</li><li>Amikacin</li><li>Gentamicin</li><li>Sisomicin</li><li>Kanamycin</li><li>Netilmicin</li><li>Tobramycin</li><li>Paromomycin</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Topical aminoglycosides</div><div class="chart-list"><ol><li>Neomycin</li><li>Framycetin</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div18'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div18"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ANTIDEPRESSANTS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Reversible Inhibitors of MAO-A (RIMAs)</div><div class="chart-list"><ol><li>Moclobemide</li><li>Clorgyline</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Selective Serotonin Reuptake Inhibitors (SSRIs)</div><div class="chart-list"><ol><li>Fluoxetine</li><li>Fluvoxamine</li><li>Paroxetine</li><li>Sertraline</li><li>Citalopram</li><li>Escitalopram</li><li>Dapoxetine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Atypical Antidepressants</div><div class="chart-list"><ol><li>Trazodone</li><li>Mianserin</li><li>Mirtazapine</li><li>Bupropion</li><li>Amoxapine</li><li>Tianeptine</li><li>Amineptine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Tricyclic Antidepressants (TCAs)</div><div class="chart-list"><ol><li>NA + 5-HT Reuptake Inhibitors</li><li>Predominantly NA Reuptake Inhibitors</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4.1', 'f': '<div class="chart-class-heading">NA + 5-HT Reuptake Inhibitors</div><div class="chart-list"><ol><li>Imipramine</li><li>Amitriptyline</li><li>Trimipramine</li><li>Doxepin</li><li>Dothiepin</li><li>Clomipramine</li></ol></div>' }, '1.4', ''],
+            [{ 'v': '1.4.2', 'f': '<div class="chart-class-heading">Predominantly NA Reuptake Inhibitors</div><div class="chart-list"><ol><li>Desipramine</li><li>Nortriptyline</li><li>Reboxetine</li></ol></div>' }, '1.4', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Serotonin and Noradrenaline Reuptake Inhibitors (SNRIs)</div><div class="chart-list"><ol><li>Venlafaxine</li><li>Desvenlafaxine</li><li>Duloxetine</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div19'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div19"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '0', 'f': '<div class="chart-heading">MUSCLE RELAXANTS</div>' }, '', ''],
+            [{ 'v': '1', 'f': '<div class="chart-heading">Peripherally Acting Skeletal Muscle Relaxants</div>' }, '0', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Neuromuscular Blocking Agents</div></div>' }, '1', ''],
+            [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Nondepolarizing (Competitive) Blockers</div>' }, '1.1', ''],
+            [{ 'v': '1.1.1.1', 'f': '<div class="chart-class-heading">Long Acting</div><div class="chart-list"><ol><li>ö-Tubocurarine</li><li>Pancuronium</li><li>Doxacurium</li><li>Pipecuronium</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.1.2', 'f': '<div class="chart-class-heading">Intermediate Acting</div><div class="chart-list"><ol><li>Vecuronium</li><li>Atracurium</li><li>Cisatracurium</li><li>Rocuronium</li><li>Ra acuronium</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.2.1', 'f': '<div class="chart-class-heading">Short Acting</div><div class="chart-list"><ol><li>Mivacurium</li></ol></div>' }, '1.1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Depolarizing Blockers</div><div class="chart-list"><ol><li>Succinyl Choline (Suxamethonium)</li><li>Decamethonium</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Directly Acting Agents</div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Dantrolene Sodium</li><li>Quinine</li></ol></div>' }, '1.2', ''],
+      
+            [{ 'v': '1.c', 'f': '<div class="chart-class-heading">CENTRALLY ACTING SKELETAL MUSCLE RELAXANTS</div>' }, '0', ''],
+                [{ 'v': '1.1.c', 'f': '<div class="chart-class-heading">Mephenesin congeners</div>' }, '1.c', ''],
+                [{ 'v': '1.1.1.c', 'f': '<div class="chart-list"><ol><li>Carisoprodol</li><li>Chlorzoxazone</li><li>Chlormezanone</li><li>Methocarbamol</li></ol></div>' }, '1.1.c', ''],
+                [{ 'v': '1.2.c', 'f': '<div class="chart-class-heading">Benzodiazepines</div>' }, '1.c', ''],
+                [{ 'v': '1.2.1.c', 'f': '<div class="chart-list"><ol><li>Diazepam, etc.</li></ol></div>' }, '1.2.c', ''],
+                [{ 'v': '1.3.c', 'f': '<div class="chart-class-heading">GABA mimetic</div>' }, '1.c', ''],
+                [{ 'v': '1.3.1.c', 'f': '<div class="chart-list"><ol><li>Baclofen</li><li>Thiocolchicoside</li></ol></div>' }, '1.3.c', ''],
+                [{ 'v': '1.4.c', 'f': '<div class="chart-class-heading">Central α2 agonist</div>' }, '1.c', ''],
+                [{ 'v': '1.4.1.c', 'f': '<div class="chart-list"><ol><li>Tizanidine</li></ol></div>' }, '1.4.c', ''],
+           
          
-      <div class="chart" id="chart_div1"></div>
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div20'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div20"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ANTILEPROTIC DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Sulfone</div><div class="chart-list"><ol><li>Dapsone</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Phenazine derivative</div><div class="chart-list"><ol><li>Clofazimine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antitubercular drugs</div><div class="chart-list"><ol><li>Rifampin</li><li>Ethionamide</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Other antibiotics</div><div class="chart-list"><ol><li>Ofloxacin</li><li>Moxifloxacin</li><li>Minocycline</li><li>Clarithromycin</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div21'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div21"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ADRENERGIC DRUGS (Sympathomimetics)</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pressor Agents</div><div class="chart-list"><ol><li>Noradrenaline (Norepinephrine)</li><li>Ephedrine</li><li>Dopamine</li><li>Phenylephrine</li><li>Methoxamine</li><li>Mephentermine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>Isoprenaline</li><li>Salbutamol (Albuterol)</li><li>Terbutaline</li><li>Salmeterol</li><li>Formoterol</li><li>Bambuterol</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">CNS Stimulants</div><div class="chart-list"><ol><li>Amphetamine</li><li>Dexamphetamine</li><li>Methamphetamine</li><li>Methylphenidate</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Uterine Relaxants</div><div class="chart-list"><ol><li>Ritodrine</li><li>Isoxsuprine</li><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Cardiac Stimulants</div><div class="chart-list"><ol><li>Adrenaline</li><li>Isoprenaline</li><li>Dobutamine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.6', 'f': '<div class="chart-class-heading">Nasal Decongestants</div><div class="chart-list"><ol><li>Xylometazoline</li><li>Oxymetazoline</li><li>Naphazoline</li><li>Phenylephrine</li><li>Pseudoephedrine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.7', 'f': '<div class="chart-class-heading">Anorectics</div><div class="chart-list"><ol><li>Amphetamine</li><li>Fenfluramine</li><li>Sibutramine</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div22'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div22"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">OPIOIDS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural Opium Alkaloids</div><div class="chart-list"><ol><li>Morphine</li><li>Codeine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Semi-Synthetic Opioids</div><div class="chart-list"><ol><li>Diacetylmorphine (Heroin)</li><li>Pholcodine</li><li>Ethylmorphine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Synthetic Opioids</div><div class="chart-list"><ol><li>Pethidine (Meperidine)</li><li>Methadone</li><li>Fentanyl</li><li>Remifentanil</li><li>Tramadol</li><li>Tapentadol</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div23'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div23"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ANTIPSYCHOTIC DRUGS (Neuroleptic Drugs)</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Phenothiazines</div><div class="chart-list"><ol><li>Aliphatic Side Chain<ul><li>Chlorpromazine</li><li>Triflupromazine</li></ul></li><li>Piperidine Side Chain<ul><li>Thioridazine</li></ul></li><li>Piperazine Side Chain<ul><li>Trifluoperazine</li><li>Fluphenazine</li></ul></li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Atypical Antipsychotics</div><div class="chart-list"><ol><li>Clozapine</li><li>Risperidone</li><li>Olanzapine</li><li>Quetiapine</li><li>Aripiprazole</li><li>Ziprasidone</li><li>Amisulpiride</li><li>Zotepine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Butyrophenones</div><div class="chart-list"><ol><li>Haloperidol</li><li>Trifluperidol</li><li>Penfluridol</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Other Heterocyclic Compounds</div><div class="chart-list"><ol><li>Pimozide</li><li>Loxapine</li><li>Levosulpiride</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Thioxanthine</div><div class="chart-list"><ol><li>Flupenthixol</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div24'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div24"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ANTIEPILEPTIC DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Barbiturate</div><div class="chart-list"><ol><li>Phenobarbitone</li><li>Deoxybarbiturate<ul><li>Primidone</li></ul></li></ol></div>' }, '1', ''],
+            [{ 'v': '1.10', 'f': '<div class="chart-class-heading">Deoxybarbiturate</div><div class="chart-list"><ol><li>Primidone</li></ol></div>' }, '1', ''],
+
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Hydantoin</div><div class="chart-list"><ol><li>Phenytoin</li><li>Fosphenytoin</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Iminostilbene</div><div class="chart-list"><ol><li>Carbamazepine</li><li>Oxcarbazepine</li><li>Eslicarbazepine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Succinimide</div><div class="chart-list"><ol><li>Ethosuximide</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Aliphatic Carboxylic Acid</div><div class="chart-list"><ol><li>Valproate Sodium (Valproic Acid)</li><li>Divalproex</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.6', 'f': '<div class="chart-class-heading">Benzodiazepines</div><div class="chart-list"><ol><li>Clonazepam</li><li>Diazepam</li><li>Lorazepam</li><li>Clobazam</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.7', 'f': '<div class="chart-class-heading">Phenyltriazine</div><div class="chart-list"><ol><li>Lamotrigine</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.8', 'f': '<div class="chart-class-heading">Newer Drugs</div><div class="chart-list"><ol><li>Topiramate</li><li>Levetiracetam</li><li>Zonisamide</li><li>Vigabatrin</li><li>Tiagabine</li><li>Lacosamide</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.9', 'f': '<div class="chart-class-heading">Cyclic GABA Analogues</div><div class="chart-list"><ol><li>Gabapentin</li><li>Pregabalin</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div25'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div25"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">LOCAL ANESTHETICS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Injectable Anesthetic</div><div class="chart-list"><ol><li>Low Potency, Short Duration<ul><li>Procaine</li><li>Chloroprocaine</li></ul></li><li>Intermediate Potency and Duration<ul><li>Lidocaine (Lignocaine)</li><li>Prilocaine</li></ul></li><li>High Potency, Long Duration<ul><li>Tetracaine</li><li>Bupivacaine</li><li>Ropivacaine</li><li>Dibucaine</li></ul></li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Surface Anesthetic</div><div class="chart-list"><ol><li>Soluble<ul><li>Cocaine</li><li>Lidocaine</li><li>Tetracaine</li><li>Proparacaine</li></ul></li><li>Insoluble<ul><li>Benzocaine</li><li>Butylamino-benzoate</li><li>Oxethazaine</li></ul></li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div26'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div26"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">GENERAL ANESTHETICS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Inhalational</div>' }, '1', ''],
+            [{ 'v': '2.1', 'f': '<div class="chart-class-heading">Gas</div><div class="chart-list"><ol><li>Nitrous Oxide</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '2.2', 'f': '<div class="chart-class-heading">Volatile Liquids</div><div class="chart-list"><ol><li>Ether</li><li>Halothane</li><li>Isoflurane</li><li>Desflurane</li><li>Sevoflurane</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Intravenous</div>' }, '1', ''],
+            [{ 'v': '2.3', 'f': '<div class="chart-class-heading">Fast Acting Drugs</div><div class="chart-list"><ol><li>Thiopentone Sodium</li><li>Methohexitone Sodium</li><li>Propofol</li><li>Etomidate</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '2.4', 'f': '<div class="chart-class-heading">Slower Acting Drugs</div><div class="chart-list"><ol><li>Benzodiazepines<ul><li>Diazepam</li><li>Lorazepam</li><li>Midazolam</li></ul></li><li>Opioid Analgesic<ul><li>Fentanyl</li><li>Remifentanil</li></ul></li></ol></div>' }, '1.2', ''],
+            [{ 'v': '2.5', 'f': '<div class="chart-class-heading">Dissociative Anesthetic</div><div class="chart-list"><ol><li>Ketamine</li></ol></div>' }, '1.2', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div27'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div11"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR COUGH</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pharyngeal demulcents</div><div class="chart-list"><ol><li>Lozenges</li><li>Syrups</li><li>Glycerine</li><li>Liquorice</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Expectorants (Mucokinetics)</div><div class="chart-list"><ol><li>Secretion enhancers</li><li>Mucolytics</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Secretion enhancers</div><div class="chart-list"><ol><li>Pot. citrate</li><li>Pot. iodide</li><li>Guaiphenesin</li><li>Tolu balsam</li><li>Vasaka</li><li>Ammon. chloride</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Mucolytics</div><div class="chart-list"><ol><li>Bromhexine</li><li>Ambroxol</li><li>Acetyl cysteine</li><li>Carbocisteine</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antitussives (Cough centre suppressants)</div><div class="chart-list"><ol><li>Opioids</li><li>Nonopioids</li><li>Antihistaminics</li><li>Pulmonary receptor desensitizer</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Opioids</div><div class="chart-list"><ol><li>Codeine</li><li>Ethylmorphine</li><li>Pholcodine</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Nonopioids</div><div class="chart-list"><ol><li>Noscapine</li><li>Dextromethorphan</li><li>Chlophedianol</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Antihistaminics</div><div class="chart-list"><ol><li>Chlorpheniramine</li><li>Diphenhydramine</li><li>Promethazine</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Pulmonary receptor desensitizer</div><div class="chart-list"><ol><li>Prenoxdiazine</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Adjuvant antitussives (Bronchodilators)</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div12'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div12"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR BRONCHIAL ASTHMA</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Leukotriene antagonists</div><div class="chart-list"><ol><li>Montelukast</li><li>Zafirlukast</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Mast cell stabilizers</div><div class="chart-list"><ol><li>Sod. cromoglycate</li><li>Ketotifen</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Corticosteroids</div><div class="chart-list"><ol><li>Systemic</li><li>Inhalational</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Systemic</div><div class="chart-list"><ol><li>Hydrocortisone</li><li>Prednisolone</li><li>Other glucocorticoids</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Inhalational</div><div class="chart-list"><ol><li>Beclomethasone dipropionate</li><li>Budesonide</li><li>Fluticasone propionate</li><li>Flunisolide</li><li>Ciclesonide</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Anti-IgE antibody</div><div class="chart-list"><ol><li>Omalizumab</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>B2 Sympathomimetics</li><li>Methylxanthines</li><li>Anticholinergics</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.5.1', 'f': '<div class="chart-class-heading">B2 Sympathomimetics</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li><li>Bambuterol</li><li>Salmeterol</li><li>Formoterol</li></ol></div>' }, '1.5', ''],
+            [{ 'v': '1.5.2', 'f': '<div class="chart-class-heading">Methylxanthines</div><div class="chart-list"><ol><li>Theophylline</li><li>Aminophylline</li><li>Choline theophyllinate</li><li>Hydroxyethyl theophylline</li><li>Doxophylline</li></ol></div>' }, '1.5', ''],
+            [{ 'v': '1.5.3', 'f': '<div class="chart-class-heading">Anticholinergics</div><div class="chart-list"><ol><li>Ipratropium Br.</li><li>Tiotropium Br.</li></ol></div>' }, '1.5', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div13'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div13"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">THYROID INHIBITORS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Inhibit hormone synthesis (Antithyroid drugs)</div><div class="chart-list"><ol><li>Propylthiouracil</li><li>Methimazole</li><li>Carbimazole</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Inhibit iodide trapping (Ionic inhibitors)</div><div class="chart-list"><ol><li>Thiocyanates (-SCN)</li><li>Perchlorates (-CIO4)</li><li>Nitrates (-NO3)</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Inhibit hormone release</div><div class="chart-list"><ol><li>Iodine</li><li>Iodides of Na, K</li><li>Organic iodide</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Destroy thyroid tissue</div><div class="chart-list"><ol><li>Radioactive iodine 131 I</li></ol></div>' }, '1', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div14'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div14"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+            [{ 'v': '1', 'f': '<div class="chart-heading">ORAL ANTIDIABETIC DRUGS</div>' }, '', ''],
+            [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Enhance insulin secretion</div><div class="chart-list"><ol><li>KATP channel blockers</li><li>Meglitinide/Phenylalanine analogues</li><li>Dipeptidyl peptidase-4 (DPP-4) inhibitors</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">KATP channel blockers (Sulfonylureas)</div><div class="chart-list"><ol><li>Tolbutamide</li><li>Glibenclamide</li><li>Glipizide</li><li>Gliclazide</li><li>Glimepiride</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Meglitinide/Phenylalanine analogues</div><div class="chart-list"><ol><li>Repaglinide</li><li>Nateglinide</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Dipeptidyl peptidase-4 (DPP-4) inhibitors</div><div class="chart-list"><ol><li>Sitagliptin</li><li>Vildagliptin</li><li>Saxagliptin</li><li>Linagliptin</li><li>Alogliptin</li></ol></div>' }, '1.1', ''],
+            [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Overcome insulin resistance</div><div class="chart-list"><ol><li>Biguanide (AMPK activator)</li><li>Thiazolidinedione (PPAR activator)</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Biguanide (AMPK activator)</div><div class="chart-list"><ol><li>Metformin</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Thiazolidinedione (PPAR activator)</div><div class="chart-list"><ol><li>Pioglitazone</li></ol></div>' }, '1.2', ''],
+            [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Miscellaneous drugs</div><div class="chart-list"><ol><li>a-Glucosidase inhibitors</li><li>Amylin analogue</li><li>Dopamine D2 agonist</li><li>Sod-glucose cotransport-2 (SGLT-2) inhibitor</li></ol></div>' }, '1', ''],
+            [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">a-Glucosidase inhibitors</div><div class="chart-list"><ol><li>Acarbose</li><li>Miglitol</li><li>Voglibose</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Amylin analogue</div><div class="chart-list"><ol><li>Pramlintide</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Dopamine D2 agonist</div><div class="chart-list"><ol><li>Bromocriptine</li></ol></div>' }, '1.3', ''],
+            [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Sod-glucose cotransport-2 (SGLT-2) inhibitor</div><div class="chart-list"><ol><li>Dapagliflozin</li></ol></div>' }, '1.3', ''],
+          ]);
+
+          var options = {
+            allowHtml: true,
+            size: 'medium',
+            nodeSpacing: 40,
+            allowCollapse: true,
+            compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div15'));
+          chart.draw(data, options);
+        }
+      </script>
+      <div class="chart" id="chart_div15"></div>
       <script type="text/javascript">
         google.charts.load('current', { 'packages': ['orgchart'] });
         google.charts.setOnLoadCallback(drawChart);
@@ -263,19 +1145,14 @@
             data.addColumn('string', 'ToolTip');
 
             data.addRows([
-            [{ 'v': '0', 'f': '<div class="chart-heading">Cholinergic Drugs</div>' }, '', ''],
-
-                [{ 'v': '1', 'f': '<div class="chart-heading">Cholinergic agonists</div>' }, '0', ''],
-                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Choline esters</div><div class="chart-list"><ol><li>Acetylcholine</li><li>Methacholine</li><li>Carbachol</li><li>Bethanechol</li></ol></div>' }, '1', ''],
-                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Alkaloids</div><div class="chart-list"><ol><li>Muscarine</li><li>Pilocarpine</li><li>Arecoline</li></ol></div>' }, '1', ''],
-                [{ 'v': '2', 'f': '<div class="chart-heading">Anticholinesterases</div>' }, '0', ''],
-                [{ 'v': '2.1', 'f': '<div class="chart-heading">Reversible</div>' }, '2', ''],
-
-                [{ 'v': '2.11', 'f': '<div class="chart-class-heading">Carbamates</div><div class="chart-list"><ol><li>Physostigmine (Eserine)</li><li>Neostigmine</li><li>Pyridostigmine</li><li>Edrophonium</li><li>Rivastigmine</li><li>Donepezil</li><li>Galantamine</li></ol></div>' }, '2.1', ''],
-                [{ 'v': '2.2', 'f': '<div class="chart-class-heading">Acridine</div><div class="chart-list"><ol><li>Tacrine</li></ol></div>' }, '2.1', ''],
-                [{ 'v': '3', 'f': '<div class="chart-heading">Irreversible</div>' }, '2', ''],
-                [{ 'v': '3.1', 'f': '<div class="chart-class-heading">Carbamates</div><div class="chart-list"><ol><li>Carbaryl (Sevin)</li><li>Propoxur (Baygon)</li></ol></div>' }, '3', ''],
-                [{ 'v': '3.2', 'f': '<div class="chart-class-heading">Organophosphates</div><div class="chart-list"><ol><li>Dyflos (DFP)</li><li>Echothiophate</li><li>Malathion</li><li>Diazinon</li><li>Tabun</li><li>Sarin</li><li>Soman</li></ol></div>' }, '3', ''],
+                [{ 'v': '1', 'f': '<div class="chart-heading">ANTIHISTAMINICS</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">FIRST GENERATION ANTIHISTAMINICS</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">HIGHLY SEDATIVE</div><div class="chart-list"><ol><li>Diphenhydramine</li><li>Dimenhydrinate</li><li>Promethazine</li><li>Hydroxyzine</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">MODERATELY SEDATIVE</div><div class="chart-list"><ol><li>Pheniramine</li><li>Cyproheptadine</li><li>Meclozine (Meclizine)</li><li>Cinnarizine</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">MILD SEDATIVE</div><div class="chart-list"><ol><li>Chlorpheniramine</li><li>Dexchlorpheniramine</li><li>Triprolidine</li><li>Clemastine</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">SECOND GENERATION ANTIHISTAMINICS</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><table><tr><td><li>Fexofenadine</li><li>Loratadine</li><li>Desloratadine</li><li>Cetirizine</li><li>Levocetirizine</li></td><td><li>Azelastine</li><li>Mizolastine</li><li>Ebastine</li><li>Rupatadine</li></td></tr></table></ol></div>' }, '1.2', ''],
+               
             ]);
 
             var options = {
@@ -285,49 +1162,12 @@
                 allowCollapse: true,
                 compactRows: true,
             };
-            var chart = new google.visualization.OrgChart(document.getElementById('chart_div2'));
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div27'));
             chart.draw(data, options);
         }
     </script>
-     <div class="chart" id="chart_div2"></div>
-
-     <script type="text/javascript">
-      google.charts.load('current', { 'packages': ['orgchart'] });
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var data = new google.visualization.DataTable();
-          data.addColumn('string', 'Name');
-          data.addColumn('string', 'Manager');
-          data.addColumn('string', 'ToolTip');
-
-          data.addRows([
-              [{ 'v': '1', 'f': '<div class="chart-heading">ANTICHOLINERGIC DRUGS</div>' }, '', ''],
-              [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural alkaloids</div><div class="chart-list"><ol><li>Atropine</li><li>Hyoscine (Scopolamine)</li></ol></div>' }, '1', ''],
-              [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Semisynthetic derivatives</div><div class="chart-list"><ol><li>Atropine methonitrate</li><li>Homatropine</li><li>Hyoscine butyl bromide</li><li>Ipratropium bromide</li><li>Tiotropium bromide</li></ol></div>' }, '1', ''],
-              [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Synthetic compounds</div><div class="chart-list"><ol><li>Mydriatics</li><li>Vasicoselective</li><li>Antiparkinsonian</li><li>Antisecretory-antispasmodics</li></ol></div>' }, '1', ''],
-              [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Mydriatics</div><div class="chart-list"><ol><li>Cyclopentolate</li><li>Tropicamide</li></ol></div>' }, '1.3', ''],
-              [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Vasicoselective</div><div class="chart-list"><ol><li>Oxybutynin</li><li>Flavoxate</li><li>Tolterodine</li></ol></div>' }, '1.3', ''],
-              [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Antiparkinsonian</div><div class="chart-list"><ol><li>Trihexyphenidyl (Benzhexol)</li><li>Procyclidine</li><li>Biperiden</li></ol></div>' }, '1.3', ''],
-              [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Antisecretory-antispasmodics</div><div class="chart-list"><ol><li>Quaternary comps.</li><li>Tertiary amines</li></ol></div>' }, '1.3', ''],
-              [{ 'v': '1.3.4.1', 'f': '<div class="chart-class-heading">Quaternary comps.</div><div class="chart-list"><ol><li>Propantheline</li><li>Oxyphenonium</li><li>Clidinium</li><li>Pipenzolate methyl bromide</li><li>Isopropamide</li><li>Glycopyrrolate</li></ol></div>' }, '1.3.4', ''],
-              [{ 'v': '1.3.4.2', 'f': '<div class="chart-class-heading">Tertiary amines</div><div class="chart-list"><ol><li>Dicyclomine</li><li>Valethamate</li><li>Pirenzepine</li></ol></div>' }, '1.3.4', ''],
-          ]);
-
-          var options = {
-              allowHtml: true,
-              size: 'medium',
-              nodeSpacing: 40,
-              allowCollapse: true,
-              compactRows: true,
-          };
-          var chart = new google.visualization.OrgChart(document.getElementById('chart_div3'));
-          chart.draw(data, options);
-      }
-      
-  </script>
-       <div class="chart" id="chart_div3"></div>
-       <script type="text/javascript">
+      <div class="chart" id="chart_div27"></div>
+      <script type="text/javascript">
         google.charts.load('current', { 'packages': ['orgchart'] });
         google.charts.setOnLoadCallback(drawChart);
 
@@ -338,16 +1178,14 @@
             data.addColumn('string', 'ToolTip');
 
             data.addRows([
-                [{ 'v': '1', 'f': '<div class="chart-heading">(α)Alpha ADRENERGIC BLOCKING DRUGS</div>' }, '', ''],
-                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Non equilibrium type</div><div class="chart-list"><ol><li>B-haloalkylamine</li><li>Phenoxybenzamine</li></ol></div>' }, '1', ''],
-                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Equilibrium type (Competitive antagonists)</div><div class="chart-list"><ol><li>Non selective</li><li>α.1 Selective</li><li>α.2 Selective</li></ol></div>' }, '1', ''],
-                [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Non selective</div><div class="chart-list"><ol><li>Ergot alkaloids</li><li>Imidazoline</li><li>Chlorpromazine</li><li>Hydrogenated ergot alkaloids</li></ol></div>' }, '1.2', ''],
-                [{ 'v': '1.2.1.1', 'f': '<div class="chart-class-heading">Ergot alkaloids</div><div class="chart-list"><ol><li>Ergotamine</li><li>Ergotoxine</li></ol></div>' }, '1.2.1', ''],
-                [{ 'v': '1.2.1.2', 'f': '<div class="chart-class-heading">Imidazoline</div><div class="chart-list"><ol><li>Phentolamine</li></ol></div>' }, '1.2.1', ''],
-                [{ 'v': '1.2.1.3', 'f': '<div class="chart-class-heading">Chlorpromazine</div><div class="chart-list"><ol><li>Chlorpromazine</li></ol></div>' }, '1.2.1', ''],
-                [{ 'v': '1.2.1.4', 'f': '<div class="chart-class-heading">Hydrogenated ergot alkaloids</div><div class="chart-list"><ol><li>Dihydroergotamine (DHE)</li><li>Dihydroergotoxine (Codergocrine)</li></ol></div>' }, '1.2.1', ''],
-                [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">α.1 Selective</div><div class="chart-list"><ol><li>Prazosin</li><li>Terazosin</li><li>Alfuzosin</li><li>Doxazosin</li><li>Tamsulosin</li></ol></div>' }, '1.2', ''],
-                [{ 'v': '1.2.3', 'f': '<div class="chart-class-heading">α.2 Selective</div><div class="chart-list"><ol><li>Yohimbine</li></ol></div>' }, '1.2', ''],
+                [{ 'v': '1', 'f': '<div class="chart-heading">CORTICOSTEROIDS</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Glucocorticoids</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-subclass-heading">Short acting</div><div class="chart-list"><ol><li>Hydrocortisone (Cortisol)</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.1.2', 'f': '<div class="chart-subclass-heading">Intermediate acting</div><div class="chart-list"><ol><li>Prednisolone</li><li>Methyl prednisolone</li><li>Triamcinolone</li><li>Deflazacort</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.1.3', 'f': '<div class="chart-subclass-heading">Long acting</div><div class="chart-list"><ol><li>Dexamethasone</li><li>Betamethasone</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Mineralocorticoids</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Desoxycorticosterone acetate (DOCA)</li><li>Fludrocortisone</li><li>Aldosterone</li></ol></div>' }, '1.2', ''],
+         
             ]);
 
             var options = {
@@ -357,770 +1195,304 @@
                 allowCollapse: true,
                 compactRows: true,
             };
-            var chart = new google.visualization.OrgChart(document.getElementById('chart_div4'));
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div28'));
             chart.draw(data, options);
         }
     </script>
-         <div class="chart" id="chart_div4"></div>
-         <script type="text/javascript">
-          google.charts.load('current', { 'packages': ['orgchart'] });
-          google.charts.setOnLoadCallback(drawChart);
-  
-          function drawChart() {
-              var data = new google.visualization.DataTable();
-              data.addColumn('string', 'Name');
-              data.addColumn('string', 'Manager');
-              data.addColumn('string', 'ToolTip');
-  
-              data.addRows([
-                  [{ 'v': '1', 'f': '<div class="chart-heading">β)Beta-ADRENERGIC BLOCKING DRUGS</div>' }, '', ''],
-                  [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Non selective (β₁ + β₂)</div><div class="chart-list"><ol><li>Without ISA</li><li>With ISA</li><li>With α blocking property</li></ol></div>' }, '1', ''],
-                  [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Without ISA</div><div class="chart-list"><ol><li>Propranolol</li><li>Sotalol</li><li>Timolol</li></ol></div>' }, '1.1', ''],
-                  [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">With ISA</div><div class="chart-list"><ol><li>Pindolol</li></ol></div>' }, '1.1', ''],
-                  [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">With α blocking property</div><div class="chart-list"><ol><li>Labetalol</li><li>Carvedilol</li></ol></div>' }, '1.1', ''],
-                  [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Cardioselective (β₁)</div><div class="chart-list"><ol><li>Metoprolol</li><li>Atenolol</li><li>Acebutolol</li><li>Bisoprolol</li><li>Esmolol</li><li>Betaxolol</li><li>Celiprolol</li><li>Nebivolol</li></ol></div>' }, '1', ''],
-              ]);
-  
-              var options = {
-                  allowHtml: true,
-                  size: 'medium',
-                  nodeSpacing: 40,
-                  allowCollapse: true,
-                  compactRows: true,
-              };
-              var chart = new google.visualization.OrgChart(document.getElementById('chart_div5'));
-              chart.draw(data, options);
-          }
-      </script>
-           <div class="chart" id="chart_div5"></div>
-           <script type="text/javascript">
-            google.charts.load('current', { 'packages': ['orgchart'] });
-            google.charts.setOnLoadCallback(drawChart);
-    
-            function drawChart() {
-                var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Name');
-                data.addColumn('string', 'Manager');
-                data.addColumn('string', 'ToolTip');
-    
-                data.addRows([
-                    [{ 'v': '1', 'f': '<div class="chart-heading">(β)Beta-ADRENERGIC BLOCKING DRUGS (Generation wise)</div>' }, '', ''],
-                    [{ 'v': '1.1', 'f': '<div class="chart-class-heading">First generation (Older, nonselective)</div><div class="chart-list"><ol><li>Propranolol</li><li>Timolol</li><li>Sotalol</li><li>Pindolol</li></ol></div>' }, '1', ''],
-                    [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Second generation (β₁ or Cardioselective)</div><div class="chart-list"><ol><li>Metoprolol</li><li>Atenolol</li><li>Acebutolol</li><li>Bisoprolol</li><li>Esmolol</li></ol></div>' }, '1', ''],
-                    [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Third generation (With α blocking and/or vasodilator property)</div><div class="chart-list"><ol><li>Labetalol</li><li>Carvedilol</li><li>Celiprolol</li><li>Nebivolol</li><li>Betaxolol</li></ol></div>' }, '1', ''],
-                ]);
-    
-                var options = {
-                    allowHtml: true,
-                    size: 'medium',
-                    nodeSpacing: 40,
-                    allowCollapse: true,
-                    compactRows: true,
-                };
-                var chart = new google.visualization.OrgChart(document.getElementById('chart_div6'));
-                chart.draw(data, options);
-            }
-        </script>
-             <div class="chart" id="chart_div6"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">ADRENERGIC DRUGS (Sympathomimetics)</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pressor agents</div><div class="chart-list"><ol><li>Noradrenaline (Norepinephrine)</li><li>Ephedrine</li><li>Dopamine</li><li>Phenylephrine</li><li>Mephentermine</li><li>Methoxamine</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>Salbutamol (Albuterol)</li><li>Isoprenaline</li><li>Terbutaline</li><li>Salmeterol</li><li>Formoterol</li><li>Bambuterol</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">CNS stimulants</div><div class="chart-list"><ol><li>Amphetamine</li><li>Dexamphetamine</li><li>Methamphetamine</li><li>Methylphenidate</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Uterine relaxants</div><div class="chart-list"><ol><li>Ritodrine</li><li>Isoxsuprine</li><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Cardiac stimulants</div><div class="chart-list"><ol><li>Adrenaline</li><li>Isoprenaline</li><li>Dobutamine</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.6', 'f': '<div class="chart-class-heading">Nasal decongestants</div><div class="chart-list"><ol><li>Xylometazoline</li><li>Oxymetazoline</li><li>Naphazoline</li><li>Phenylephrine</li><li>Phenylpropanolamine</li><li>Pseudoephedrine</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.7', 'f': '<div class="chart-class-heading">Anorectics</div><div class="chart-list"><ol><li>Amphetamine</li><li>Fenfluramine</li><li>Dexfenfluramine</li><li>Sibutramine</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div7'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div7"></div>
-                          <div class="chart" id="chart_div7"></div>
-                          <script type="text/javascript">
-                            google.charts.load('current', { 'packages': ['orgchart'] });
-                            google.charts.setOnLoadCallback(drawChart);
-                    
-                            function drawChart() {
-                                var data = new google.visualization.DataTable();
-                                data.addColumn('string', 'Name');
-                                data.addColumn('string', 'Manager');
-                                data.addColumn('string', 'ToolTip');
-                    
-                                data.addRows([
-                                    [{ 'v': '1', 'f': '<div class="chart-heading">NONSTEROIDAL ANTIINFLAMMATORY DRUGS/ANTIPYRETIC-ANALGESICS</div>' }, '', ''],
-                                    [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Nonselective COX inhibitors</div><div class="chart-list"><ol><li>Salicylates</li><li>Propionic acid derivatives</li><li>Fenamate</li><li>Enolic acid derivatives</li><li>Acetic acid derivatives</li><li>Pyrazolone derivatives</li></ol></div>' }, '1', ''],
-                                    [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Salicylates</div><div class="chart-list"><ol><li>Aspirin</li></ol></div>' }, '1.1', ''],
-                                    [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Propionic acid derivatives</div><div class="chart-list"><ol><li>Ibuprofen</li><li>Naproxen</li><li>Ketoprofen</li><li>Flurbiprofen</li></ol></div>' }, '1.1', ''],
-                                    [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Fenamate</div><div class="chart-list"><ol><li>Mephenamic acid</li></ol></div>' }, '1.1', ''],
-                                    [{ 'v': '1.1.4', 'f': '<div class="chart-class-heading">Enolic acid derivatives</div><div class="chart-list"><ol><li>Piroxicam</li><li>Tenoxicam</li></ol></div>' }, '1.1', ''],
-                                    [{ 'v': '1.1.5', 'f': '<div class="chart-class-heading">Acetic acid derivatives</div><div class="chart-list"><ol><li>Ketorolac</li><li>Indomethacin</li><li>Nabumetone</li></ol></div>' }, '1.1', ''],
-                                    [{ 'v': '1.1.6', 'f': '<div class="chart-class-heading">Pyrazolone derivatives</div><div class="chart-list"><ol><li>Phenylbutazone</li><li>Oxyphenbutazone</li></ol></div>' }, '1.1', ''],
-                                    [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Preferential COX-2 inhibitors</div><div class="chart-list"><ol><li>Nimesulide</li><li>Diclofenac</li><li>Aceclofenac</li><li>Meloxicam</li><li>Etodolac</li></ol></div>' }, '1', ''],
-                                    [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Selective COX-2 inhibitors</div><div class="chart-list"><ol><li>Celecoxib</li><li>Etoricoxib</li><li>Parecoxib</li></ol></div>' }, '1', ''],
-                                    [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Analgesic-antipyretics with poor antiinflammatory action</div><div class="chart-list"><ol><li>Para aminophenol derivative</li><li>Pyrazolone derivatives</li><li>Benzoxazocine derivative</li></ol></div>' }, '1', ''],
-                                    [{ 'v': '1.4.1', 'f': '<div class="chart-class-heading">Para aminophenol derivative</div><div class="chart-list"><ol><li>Paracetamol (Acetaminophen)</li></ol></div>' }, '1.4', ''],
-                                    [{ 'v': '1.4.2', 'f': '<div class="chart-class-heading">Pyrazolone derivatives</div><div class="chart-list"><ol><li>Metamizol (Dipyrone)</li><li>Propiphenazone</li></ol></div>' }, '1.4', ''],
-                                    [{ 'v': '1.4.3', 'f': '<div class="chart-class-heading">Benzoxazocine derivative</div><div class="chart-list"><ol><li>Nefopam</li></ol></div>' }, '1.4', ''],
-                                ]);
-                    
-                                var options = {
-                                    allowHtml: true,
-                                    size: 'medium',
-                                    nodeSpacing: 40,
-                                    allowCollapse: true,
-                                    compactRows: true,
-                                };
-                                var chart = new google.visualization.OrgChart(document.getElementById('chart_div8'));
-                                chart.draw(data, options);
-                            }
-                        </script>
-             <div class="chart" id="chart_div8"></div>
+      <div class="chart" id="chart_div28"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
 
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">ANTIRHEUMATOID DRUGS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Disease modifying anti-rheumatoid drugs (DMARDs)</div><div class="chart-list"><ol><li>Nonbiological drugs</li><li>Biological agents</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Nonbiological drugs</div><div class="chart-list"><ol><li>Immuno-suppressants</li><li>Sulfasalazine</li><li>Chloroquine Hydroxychloroquine</li><li>Leflunomide</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.1.1', 'f': '<div class="chart-class-heading">Immuno-suppressants</div><div class="chart-list"><ol><li>Methotrexate</li><li>Azathioprine</li><li>Cyclosporine</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Sulfasalazine</div><div class="chart-list"><ol><li>Sulfasalazine</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Chloroquine Hydroxychloroquine</div><div class="chart-list"><ol><li>Chloroquine Hydroxychloroquine</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.4', 'f': '<div class="chart-class-heading">Leflunomide</div><div class="chart-list"><ol><li>Leflunomide</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Biological agents</div><div class="chart-list"><ol><li>TNF a-inhibitors</li><li>IL-1 antagonist</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.2.1', 'f': '<div class="chart-class-heading">TNF a-inhibitors</div><div class="chart-list"><ol><li>Etanercept</li><li>Infliximab</li><li>Adalimumab</li></ol></div>' }, '1.1.2', ''],
-                      [{ 'v': '1.1.2.2', 'f': '<div class="chart-class-heading">IL-1 antagonist</div><div class="chart-list"><ol><li>Anakinra</li></ol></div>' }, '1.1.2', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Adjuvant drugs</div><div class="chart-list"><ol><li>Prednisolone and other glucocorticoids</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div9'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div9"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR GOUT</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Acute gout</div><div class="chart-list"><ol><li>NSAIDs</li><li>Colchicine</li><li>Glucocorticoids</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Chronic gout/Hyperuricaemia</div><div class="chart-list"><ol><li>Uricosurics</li><li>Synthesis inhibitors</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Uricosurics</div><div class="chart-list"><ol><li>Probenecid</li><li>Sulfinpyrazone</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Synthesis inhibitors</div><div class="chart-list"><ol><li>Allopurinol</li><li>Febuxostat</li></ol></div>' }, '1.2', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div10'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div10"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">Prostaglandins (PGs)</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural PGs</div><div class="chart-list"><ol><li>Dinoprostone (PGE₂)</li><li>Gemeprost</li><li>Dinoprost (PGF₂₀)</li><li>Alprostadil (PGE₁)</li><li>Prostacyclin (PGI₂) (Epoprostenol)</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Prostaglandin analogues</div><div class="chart-list"><ol><li>Carboprost (15-methyl PGF₂α)</li><li>Misoprostol (methyl PGE ester)</li><li>Latanoprost (PGE₂ analogue)</li><li>Travoprost</li><li>Bimatoprost</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div11'));
-                  chart.draw(data, options);
-              }
-          </script>
-            
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">PENICILLINS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural Penicillin</div><div class="chart-list"><ol><li>Benzyl Penicillin (Penicillin G)</li><li>Phenoxymethyl Penicillin (Penicillin V)</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Semisynthetic Penicillins</div><div class="chart-list"><ol><li>Acid-resistant alternative to Penicillin G</li><li>Penicillinase Resistant Penicillins</li><li>Extended Spectrum Penicillins</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Acid-resistant alternative to Penicillin G</div><div class="chart-list"><ol><li>Phenoxymethyl penicillin (Penicillin V)</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Penicillinase Resistant Penicillins</div><div class="chart-list"><ol><li>Methicillin</li><li>Cloxacillin</li><li>Dicloxacillin</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.3', 'f': '<div class="chart-class-heading">Extended Spectrum Penicillins</div><div class="chart-list"><ol><li>Amino-Penicillins</li><li>Ureido-Penicillins</li><li>Carboxy-Penicillin</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.3.1', 'f': '<div class="chart-class-heading">Amino-Penicillins</div><div class="chart-list"><ol><li>Ampicillin</li><li>Bacampicillin</li><li>Amoxicillin</li></ol></div>' }, '1.2.3', ''],
-                      [{ 'v': '1.2.3.2', 'f': '<div class="chart-class-heading">Ureido-Penicillins</div><div class="chart-list"><ol><li>Piperacillin</li><li>Mezlocillin</li></ol></div>' }, '1.2.3', ''],
-                      [{ 'v': '1.2.3.3', 'f': '<div class="chart-class-heading">Carboxy-Penicillin</div><div class="chart-list"><ol><li>Carbenicillin</li></ol></div>' }, '1.2.3', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">β-Lactamase Inhibitors</div><div class="chart-list"><ol><li>Clavulanic Acid</li><li>Sulbactam</li><li>Tazobactam</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div16'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div16"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">CEPHALOSPORINS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">First generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li><li>Oral</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefazolin</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Oral</div><div class="chart-list"><ol><li>Cephalexin</li><li>Cefadroxil</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Second generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li><li>Oral</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefuroxime</li><li>Cefoxitin*</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Oral</div><div class="chart-list"><ol><li>Cefaclor</li><li>Cefuroxime axetil</li><li>Cefprozil</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Third generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li><li>Oral</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefotaxime</li><li>Ceftizoxime</li><li>Ceftriaxone</li><li>Ceftazidime</li><li>Cefoperazone</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Oral</div><div class="chart-list"><ol><li>Cefixime</li><li>Cefpodoxime proxetil</li><li>Cefdinir</li><li>Ceftibuten</li><li>Ceftamet pivoxil</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Fourth generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Cefepime</li><li>Cefpirome</li></ol></div>' }, '1.4', ''],
-                      [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Fifth generation cephalosporins</div><div class="chart-list"><ol><li>Parenteral</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.5.1', 'f': '<div class="chart-class-heading">Parenteral</div><div class="chart-list"><ol><li>Ceftaroline fosamil</li><li>Ceftobiprole medocaril</li></ol></div>' }, '1.5', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div17'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div17"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">AMINOGLYCOSIDES</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Systemic aminoglycosides</div><div class="chart-list"><ol><li>Streptomycin</li><li>Amikacin</li><li>Gentamicin</li><li>Sisomicin</li><li>Kanamycin</li><li>Netilmicin</li><li>Tobramycin</li><li>Paromomycin</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Topical aminoglycosides</div><div class="chart-list"><ol><li>Neomycin</li><li>Framycetin</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div18'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div18"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">ANTIDEPRESSANTS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Reversible Inhibitors of MAO-A (RIMAs)</div><div class="chart-list"><ol><li>Moclobemide</li><li>Clorgyline</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Selective Serotonin Reuptake Inhibitors (SSRIs)</div><div class="chart-list"><ol><li>Fluoxetine</li><li>Fluvoxamine</li><li>Paroxetine</li><li>Sertraline</li><li>Citalopram</li><li>Escitalopram</li><li>Dapoxetine</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Atypical Antidepressants</div><div class="chart-list"><ol><li>Trazodone</li><li>Mianserin</li><li>Mirtazapine</li><li>Bupropion</li><li>Amoxapine</li><li>Tianeptine</li><li>Amineptine</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Tricyclic Antidepressants (TCAs)</div><div class="chart-list"><ol><li>NA + 5-HT Reuptake Inhibitors</li><li>Predominantly NA Reuptake Inhibitors</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4.1', 'f': '<div class="chart-class-heading">NA + 5-HT Reuptake Inhibitors</div><div class="chart-list"><ol><li>Imipramine</li><li>Amitriptyline</li><li>Trimipramine</li><li>Doxepin</li><li>Dothiepin</li><li>Clomipramine</li></ol></div>' }, '1.4', ''],
-                      [{ 'v': '1.4.2', 'f': '<div class="chart-class-heading">Predominantly NA Reuptake Inhibitors</div><div class="chart-list"><ol><li>Desipramine</li><li>Nortriptyline</li><li>Reboxetine</li></ol></div>' }, '1.4', ''],
-                      [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Serotonin and Noradrenaline Reuptake Inhibitors (SNRIs)</div><div class="chart-list"><ol><li>Venlafaxine</li><li>Desvenlafaxine</li><li>Duloxetine</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div19'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div19"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">NEUROMUSCULAR BLOCKING AGENTS AND MUSCLE RELAXANTS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Peripherally Acting Skeletal Neuromuscular Blocking Agents</div><div class="chart-list"><ol><li>Nondepolarizing (Competitive) Blockers</li><li>Depolarizing Blockers</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">Nondepolarizing (Competitive) Blockers</div><div class="chart-list"><ol><li>Long Acting</li><li>Intermediate Acting</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.1.1', 'f': '<div class="chart-class-heading">Long Acting</div><div class="chart-list"><ol><li>ö-Tubocurarine</li><li>Pancuronium</li><li>Doxacurium</li><li>Pipecuronium</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.1.2', 'f': '<div class="chart-class-heading">Intermediate Acting</div><div class="chart-list"><ol><li>Vecuronium</li><li>Atracurium</li><li>Cisatracurium</li><li>Rocuronium</li><li>Ra acuronium</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.2.1', 'f': '<div class="chart-class-heading">Short Acting</div><div class="chart-list"><ol><li>Mivacurium</li></ol></div>' }, '1.1.1', ''],
-                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Depolarizing Blockers</div><div class="chart-list"><ol><li>Succinyl Choline (Suxamethonium)</li><li>Decamethonium</li><li>Short Acting</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Directly Acting Agents</div><div class="chart-list"><ol><li>Dantrolene Sodium</li><li>Quinine</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div20'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div20"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">ANTILEPROTIC DRUGS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Sulfone</div><div class="chart-list"><ol><li>Dapsone</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Phenazine derivative</div><div class="chart-list"><ol><li>Clofazimine</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antitubercular drugs</div><div class="chart-list"><ol><li>Rifampin</li><li>Ethionamide</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Other antibiotics</div><div class="chart-list"><ol><li>Ofloxacin</li><li>Moxifloxacin</li><li>Minocycline</li><li>Clarithromycin</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div21'));
-                  chart.draw(data, options);
-              }
-          </script>
-              <div class="chart" id="chart_div21"></div> 
-              <script type="text/javascript">
-                google.charts.load('current', { 'packages': ['orgchart'] });
-                google.charts.setOnLoadCallback(drawChart);
-        
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Name');
-                    data.addColumn('string', 'Manager');
-                    data.addColumn('string', 'ToolTip');
-        
-                    data.addRows([
-                        [{ 'v': '1', 'f': '<div class="chart-heading">ADRENERGIC DRUGS (Sympathomimetics)</div>' }, '', ''],
-                        [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pressor Agents</div><div class="chart-list"><ol><li>Noradrenaline (Norepinephrine)</li><li>Ephedrine</li><li>Dopamine</li><li>Phenylephrine</li><li>Methoxamine</li><li>Mephentermine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>Isoprenaline</li><li>Salbutamol (Albuterol)</li><li>Terbutaline</li><li>Salmeterol</li><li>Formoterol</li><li>Bambuterol</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.3', 'f': '<div class="chart-class-heading">CNS Stimulants</div><div class="chart-list"><ol><li>Amphetamine</li><li>Dexamphetamine</li><li>Methamphetamine</li><li>Methylphenidate</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Uterine Relaxants</div><div class="chart-list"><ol><li>Ritodrine</li><li>Isoxsuprine</li><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Cardiac Stimulants</div><div class="chart-list"><ol><li>Adrenaline</li><li>Isoprenaline</li><li>Dobutamine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.6', 'f': '<div class="chart-class-heading">Nasal Decongestants</div><div class="chart-list"><ol><li>Xylometazoline</li><li>Oxymetazoline</li><li>Naphazoline</li><li>Phenylephrine</li><li>Pseudoephedrine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.7', 'f': '<div class="chart-class-heading">Anorectics</div><div class="chart-list"><ol><li>Amphetamine</li><li>Fenfluramine</li><li>Sibutramine</li></ol></div>' }, '1', ''],
-                    ]);
-        
-                    var options = {
-                        allowHtml: true,
-                        size: 'medium',
-                        nodeSpacing: 40,
-                        allowCollapse: true,
-                        compactRows: true,
-                    };
-                    var chart = new google.visualization.OrgChart(document.getElementById('chart_div22'));
-                    chart.draw(data, options);
-                }
-            </script>
-              <div class="chart" id="chart_div22"></div>
-              <script type="text/javascript">
-                google.charts.load('current', { 'packages': ['orgchart'] });
-                google.charts.setOnLoadCallback(drawChart);
-        
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Name');
-                    data.addColumn('string', 'Manager');
-                    data.addColumn('string', 'ToolTip');
-        
-                    data.addRows([
-                        [{ 'v': '1', 'f': '<div class="chart-heading">OPIOIDS</div>' }, '', ''],
-                        [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural Opium Alkaloids</div><div class="chart-list"><ol><li>Morphine</li><li>Codeine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Semi-Synthetic Opioids</div><div class="chart-list"><ol><li>Diacetylmorphine (Heroin)</li><li>Pholcodine</li><li>Ethylmorphine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Synthetic Opioids</div><div class="chart-list"><ol><li>Pethidine (Meperidine)</li><li>Methadone</li><li>Fentanyl</li><li>Remifentanil</li><li>Tramadol</li><li>Tapentadol</li></ol></div>' }, '1', ''],
-                    ]);
-        
-                    var options = {
-                        allowHtml: true,
-                        size: 'medium',
-                        nodeSpacing: 40,
-                        allowCollapse: true,
-                        compactRows: true,
-                    };
-                    var chart = new google.visualization.OrgChart(document.getElementById('chart_div23'));
-                    chart.draw(data, options);
-                }
-            </script>
-              <div class="chart" id="chart_div23"></div>
-              <script type="text/javascript">
-                google.charts.load('current', { 'packages': ['orgchart'] });
-                google.charts.setOnLoadCallback(drawChart);
-        
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Name');
-                    data.addColumn('string', 'Manager');
-                    data.addColumn('string', 'ToolTip');
-        
-                    data.addRows([
-                        [{ 'v': '1', 'f': '<div class="chart-heading">ANTIPSYCHOTIC DRUGS (Neuroleptic Drugs)</div>' }, '', ''],
-                        [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Phenothiazines</div><div class="chart-list"><ol><li>Aliphatic Side Chain<ul><li>Chlorpromazine</li><li>Triflupromazine</li></ul></li><li>Piperidine Side Chain<ul><li>Thioridazine</li></ul></li><li>Piperazine Side Chain<ul><li>Trifluoperazine</li><li>Fluphenazine</li></ul></li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Atypical Antipsychotics</div><div class="chart-list"><ol><li>Clozapine</li><li>Risperidone</li><li>Olanzapine</li><li>Quetiapine</li><li>Aripiprazole</li><li>Ziprasidone</li><li>Amisulpiride</li><li>Zotepine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Butyrophenones</div><div class="chart-list"><ol><li>Haloperidol</li><li>Trifluperidol</li><li>Penfluridol</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Other Heterocyclic Compounds</div><div class="chart-list"><ol><li>Pimozide</li><li>Loxapine</li><li>Levosulpiride</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Thioxanthine</div><div class="chart-list"><ol><li>Flupenthixol</li></ol></div>' }, '1', ''],
-                    ]);
-        
-                    var options = {
-                        allowHtml: true,
-                        size: 'medium',
-                        nodeSpacing: 40,
-                        allowCollapse: true,
-                        compactRows: true,
-                    };
-                    var chart = new google.visualization.OrgChart(document.getElementById('chart_div24'));
-                    chart.draw(data, options);
-                }
-            </script>
-              <div class="chart" id="chart_div24"></div>
-              <script type="text/javascript">
-                google.charts.load('current', { 'packages': ['orgchart'] });
-                google.charts.setOnLoadCallback(drawChart);
-        
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Name');
-                    data.addColumn('string', 'Manager');
-                    data.addColumn('string', 'ToolTip');
-        
-                    data.addRows([
-                        [{ 'v': '1', 'f': '<div class="chart-heading">ANTIEPILEPTIC DRUGS</div>' }, '', ''],
-                        [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Barbiturate</div><div class="chart-list"><ol><li>Phenobarbitone</li><li>Deoxybarbiturate<ul><li>Primidone</li></ul></li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Hydantoin</div><div class="chart-list"><ol><li>Phenytoin</li><li>Fosphenytoin</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Iminostilbene</div><div class="chart-list"><ol><li>Carbamazepine</li><li>Oxcarbazepine</li><li>Eslicarbazepine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Succinimide</div><div class="chart-list"><ol><li>Ethosuximide</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Aliphatic Carboxylic Acid</div><div class="chart-list"><ol><li>Valproate Sodium (Valproic Acid)</li><li>Divalproex</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.6', 'f': '<div class="chart-class-heading">Benzodiazepines</div><div class="chart-list"><ol><li>Clonazepam</li><li>Diazepam</li><li>Lorazepam</li><li>Clobazam</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.7', 'f': '<div class="chart-class-heading">Phenyltriazine</div><div class="chart-list"><ol><li>Lamotrigine</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.8', 'f': '<div class="chart-class-heading">Newer Drugs</div><div class="chart-list"><ol><li>Topiramate</li><li>Levetiracetam</li><li>Zonisamide</li><li>Vigabatrin</li><li>Tiagabine</li><li>Lacosamide</li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.9', 'f': '<div class="chart-class-heading">Cyclic GABA Analogues</div><div class="chart-list"><ol><li>Gabapentin</li><li>Pregabalin</li></ol></div>' }, '1', ''],
-                    ]);
-        
-                    var options = {
-                        allowHtml: true,
-                        size: 'medium',
-                        nodeSpacing: 40,
-                        allowCollapse: true,
-                        compactRows: true,
-                    };
-                    var chart = new google.visualization.OrgChart(document.getElementById('chart_div25'));
-                    chart.draw(data, options);
-                }
-            </script>
-              <div class="chart" id="chart_div25"></div>
-              <script type="text/javascript">
-                google.charts.load('current', { 'packages': ['orgchart'] });
-                google.charts.setOnLoadCallback(drawChart);
-        
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Name');
-                    data.addColumn('string', 'Manager');
-                    data.addColumn('string', 'ToolTip');
-        
-                    data.addRows([
-                        [{ 'v': '1', 'f': '<div class="chart-heading">LOCAL ANESTHETICS</div>' }, '', ''],
-                        [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Injectable Anesthetic</div><div class="chart-list"><ol><li>Low Potency, Short Duration<ul><li>Procaine</li><li>Chloroprocaine</li></ul></li><li>Intermediate Potency and Duration<ul><li>Lidocaine (Lignocaine)</li><li>Prilocaine</li></ul></li><li>High Potency, Long Duration<ul><li>Tetracaine</li><li>Bupivacaine</li><li>Ropivacaine</li><li>Dibucaine</li></ul></li></ol></div>' }, '1', ''],
-                        [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Surface Anesthetic</div><div class="chart-list"><ol><li>Soluble<ul><li>Cocaine</li><li>Lidocaine</li><li>Tetracaine</li><li>Proparacaine</li></ul></li><li>Insoluble<ul><li>Benzocaine</li><li>Butylamino-benzoate</li><li>Oxethazaine</li></ul></li></ol></div>' }, '1', ''],
-                    ]);
-        
-                    var options = {
-                        allowHtml: true,
-                        size: 'medium',
-                        nodeSpacing: 40,
-                        allowCollapse: true,
-                        compactRows: true,
-                    };
-                    var chart = new google.visualization.OrgChart(document.getElementById('chart_div26'));
-                    chart.draw(data, options);
-                }
-            </script>
-              <div class="chart" id="chart_div26"></div>
-              <script type="text/javascript">
-                google.charts.load('current', { 'packages': ['orgchart'] });
-                google.charts.setOnLoadCallback(drawChart);
-        
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Name');
-                    data.addColumn('string', 'Manager');
-                    data.addColumn('string', 'ToolTip');
-        
-                    data.addRows([
-                        [{ 'v': '1', 'f': '<div class="chart-heading">GENERAL ANESTHETICS</div>' }, '', ''],
-                        [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Inhalational</div>' }, '1', ''],
-                        [{ 'v': '2.1', 'f': '<div class="chart-class-heading">Gas</div><div class="chart-list"><ol><li>Nitrous Oxide</li></ol></div>' }, '1.1', ''],
-                        [{ 'v': '2.2', 'f': '<div class="chart-class-heading">Volatile Liquids</div><div class="chart-list"><ol><li>Ether</li><li>Halothane</li><li>Isoflurane</li><li>Desflurane</li><li>Sevoflurane</li></ol></div>' }, '1.1', ''],
-                        [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Intravenous</div>' }, '1', ''],
-                        [{ 'v': '2.3', 'f': '<div class="chart-class-heading">Fast Acting Drugs</div><div class="chart-list"><ol><li>Thiopentone Sodium</li><li>Methohexitone Sodium</li><li>Propofol</li><li>Etomidate</li></ol></div>' }, '1.2', ''],
-                        [{ 'v': '2.4', 'f': '<div class="chart-class-heading">Slower Acting Drugs</div><div class="chart-list"><ol><li>Benzodiazepines<ul><li>Diazepam</li><li>Lorazepam</li><li>Midazolam</li></ul></li><li>Opioid Analgesic<ul><li>Fentanyl</li><li>Remifentanil</li></ul></li></ol></div>' }, '1.2', ''],
-                        [{ 'v': '2.5', 'f': '<div class="chart-class-heading">Dissociative Anesthetic</div><div class="chart-list"><ol><li>Ketamine</li></ol></div>' }, '1.2', ''],
-                    ]);
-        
-                    var options = {
-                        allowHtml: true,
-                        size: 'medium',
-                        nodeSpacing: 40,
-                        allowCollapse: true,
-                        compactRows: true,
-                    };
-                    var chart = new google.visualization.OrgChart(document.getElementById('chart_div27'));
-                    chart.draw(data, options);
-                }
-            </script>
-             <div class="chart" id="chart_div11"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR COUGH</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Pharyngeal demulcents</div><div class="chart-list"><ol><li>Lozenges</li><li>Syrups</li><li>Glycerine</li><li>Liquorice</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Expectorants (Mucokinetics)</div><div class="chart-list"><ol><li>Secretion enhancers</li><li>Mucolytics</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Secretion enhancers</div><div class="chart-list"><ol><li>Pot. citrate</li><li>Pot. iodide</li><li>Guaiphenesin</li><li>Tolu balsam</li><li>Vasaka</li><li>Ammon. chloride</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Mucolytics</div><div class="chart-list"><ol><li>Bromhexine</li><li>Ambroxol</li><li>Acetyl cysteine</li><li>Carbocisteine</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antitussives (Cough centre suppressants)</div><div class="chart-list"><ol><li>Opioids</li><li>Nonopioids</li><li>Antihistaminics</li><li>Pulmonary receptor desensitizer</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Opioids</div><div class="chart-list"><ol><li>Codeine</li><li>Ethylmorphine</li><li>Pholcodine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Nonopioids</div><div class="chart-list"><ol><li>Noscapine</li><li>Dextromethorphan</li><li>Chlophedianol</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Antihistaminics</div><div class="chart-list"><ol><li>Chlorpheniramine</li><li>Diphenhydramine</li><li>Promethazine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Pulmonary receptor desensitizer</div><div class="chart-list"><ol><li>Prenoxdiazine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Adjuvant antitussives (Bronchodilators)</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div12'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div12"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">DRUGS FOR BRONCHIAL ASTHMA</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Leukotriene antagonists</div><div class="chart-list"><ol><li>Montelukast</li><li>Zafirlukast</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Mast cell stabilizers</div><div class="chart-list"><ol><li>Sod. cromoglycate</li><li>Ketotifen</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Corticosteroids</div><div class="chart-list"><ol><li>Systemic</li><li>Inhalational</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">Systemic</div><div class="chart-list"><ol><li>Hydrocortisone</li><li>Prednisolone</li><li>Other glucocorticoids</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Inhalational</div><div class="chart-list"><ol><li>Beclomethasone dipropionate</li><li>Budesonide</li><li>Fluticasone propionate</li><li>Flunisolide</li><li>Ciclesonide</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Anti-IgE antibody</div><div class="chart-list"><ol><li>Omalizumab</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Bronchodilators</div><div class="chart-list"><ol><li>B2 Sympathomimetics</li><li>Methylxanthines</li><li>Anticholinergics</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.5.1', 'f': '<div class="chart-class-heading">B2 Sympathomimetics</div><div class="chart-list"><ol><li>Salbutamol</li><li>Terbutaline</li><li>Bambuterol</li><li>Salmeterol</li><li>Formoterol</li></ol></div>' }, '1.5', ''],
-                      [{ 'v': '1.5.2', 'f': '<div class="chart-class-heading">Methylxanthines</div><div class="chart-list"><ol><li>Theophylline</li><li>Aminophylline</li><li>Choline theophyllinate</li><li>Hydroxyethyl theophylline</li><li>Doxophylline</li></ol></div>' }, '1.5', ''],
-                      [{ 'v': '1.5.3', 'f': '<div class="chart-class-heading">Anticholinergics</div><div class="chart-list"><ol><li>Ipratropium Br.</li><li>Tiotropium Br.</li></ol></div>' }, '1.5', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div13'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div13"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">THYROID INHIBITORS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Inhibit hormone synthesis (Antithyroid drugs)</div><div class="chart-list"><ol><li>Propylthiouracil</li><li>Methimazole</li><li>Carbimazole</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Inhibit iodide trapping (Ionic inhibitors)</div><div class="chart-list"><ol><li>Thiocyanates (-SCN)</li><li>Perchlorates (-CIO4)</li><li>Nitrates (-NO3)</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Inhibit hormone release</div><div class="chart-list"><ol><li>Iodine</li><li>Iodides of Na, K</li><li>Organic iodide</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Destroy thyroid tissue</div><div class="chart-list"><ol><li>Radioactive iodine 131 I</li></ol></div>' }, '1', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div14'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div14"></div>
-             <script type="text/javascript">
-              google.charts.load('current', { 'packages': ['orgchart'] });
-              google.charts.setOnLoadCallback(drawChart);
-      
-              function drawChart() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
-                  data.addColumn('string', 'ToolTip');
-      
-                  data.addRows([
-                      [{ 'v': '1', 'f': '<div class="chart-heading">ORAL ANTIDIABETIC DRUGS</div>' }, '', ''],
-                      [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Enhance insulin secretion</div><div class="chart-list"><ol><li>KATP channel blockers</li><li>Meglitinide/Phenylalanine analogues</li><li>Dipeptidyl peptidase-4 (DPP-4) inhibitors</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.1.1', 'f': '<div class="chart-class-heading">KATP channel blockers (Sulfonylureas)</div><div class="chart-list"><ol><li>Tolbutamide</li><li>Glibenclamide</li><li>Glipizide</li><li>Gliclazide</li><li>Glimepiride</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.2', 'f': '<div class="chart-class-heading">Meglitinide/Phenylalanine analogues</div><div class="chart-list"><ol><li>Repaglinide</li><li>Nateglinide</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.1.3', 'f': '<div class="chart-class-heading">Dipeptidyl peptidase-4 (DPP-4) inhibitors</div><div class="chart-list"><ol><li>Sitagliptin</li><li>Vildagliptin</li><li>Saxagliptin</li><li>Linagliptin</li><li>Alogliptin</li></ol></div>' }, '1.1', ''],
-                      [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Overcome insulin resistance</div><div class="chart-list"><ol><li>Biguanide (AMPK activator)</li><li>Thiazolidinedione (PPAR activator)</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.2.1', 'f': '<div class="chart-class-heading">Biguanide (AMPK activator)</div><div class="chart-list"><ol><li>Metformin</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.2.2', 'f': '<div class="chart-class-heading">Thiazolidinedione (PPAR activator)</div><div class="chart-list"><ol><li>Pioglitazone</li></ol></div>' }, '1.2', ''],
-                      [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Miscellaneous drugs</div><div class="chart-list"><ol><li>a-Glucosidase inhibitors</li><li>Amylin analogue</li><li>Dopamine D2 agonist</li><li>Sod-glucose cotransport-2 (SGLT-2) inhibitor</li></ol></div>' }, '1', ''],
-                      [{ 'v': '1.3.1', 'f': '<div class="chart-class-heading">a-Glucosidase inhibitors</div><div class="chart-list"><ol><li>Acarbose</li><li>Miglitol</li><li>Voglibose</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.2', 'f': '<div class="chart-class-heading">Amylin analogue</div><div class="chart-list"><ol><li>Pramlintide</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.3', 'f': '<div class="chart-class-heading">Dopamine D2 agonist</div><div class="chart-list"><ol><li>Bromocriptine</li></ol></div>' }, '1.3', ''],
-                      [{ 'v': '1.3.4', 'f': '<div class="chart-class-heading">Sod-glucose cotransport-2 (SGLT-2) inhibitor</div><div class="chart-list"><ol><li>Dapagliflozin</li></ol></div>' }, '1.3', ''],
-                  ]);
-      
-                  var options = {
-                      allowHtml: true,
-                      size: 'medium',
-                      nodeSpacing: 40,
-                      allowCollapse: true,
-                      compactRows: true,
-                  };
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div15'));
-                  chart.draw(data, options);
-              }
-          </script>
-             <div class="chart" id="chart_div15"></div>
-              <div class="chart" id="chart_div27"></div>
-              <div class="chart" id="chart_div28"></div>
-              <div class="chart" id="chart_div29"></div>
-             
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">ANDROGENS AND RELATED DRUGS</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Androgens</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-subclass-heading">Natural</div><div class="chart-list"><ol><li>Testosterone</li><li>Dihydrotestosterone</li><li>Androsterone</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.1.2', 'f': '<div class="chart-subclass-heading">Synthetic</div><div class="chart-list"><ol><li>Methyltestosterone</li><li>Fluoxymesterone</li><li>Mesterolone</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Anabolic steroids</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Methandienone</li><li>Nandrolone phenylpropionate</li><li>Nandrolone decanoate</li><li>Oxymetholone</li><li>Stanozolol</li></ol></div>' }, '1.2', ''],
+
+                [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Antiandrogens</div>' }, '1', ''],
+                [{ 'v': '1.3.1', 'f': '<div class="chart-list"><ol><li>Cyproterone acetate</li><li>Flutamide</li><li>Bicalutamide</li></ol></div>' }, '1.3', ''],
+               
+                [{ 'v': '1.4', 'f': '<div class="chart-class-heading">5α-Reductase inhibitors</div>' }, '1', ''],
+                [{ 'v': '1.4.1', 'f': '<div class="chart-list"><ol><li>Finasteride</li><li>Dutasteride</li></ol></div>' }, '1.4', ''],
+
+              ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div29'));
+            chart.draw(data, options);
+        }
+    </script>
+      <div class="chart" id="chart_div29"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">ESTROGENS AND RELATED DRUGS</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Estrogens</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-subclass-heading">Natural</div>' }, '1.1', ''],
+                [{ 'v': '1.1.1.1', 'f': '<div class="chart-list"><ol><li>Estradiol</li><li>Estrone</li><li>Estriol</li></ol></div>' }, '1.1.1', ''],
+
+                [{ 'v': '1.1.2', 'f': '<div class="chart-subclass-heading">Synthetic</div>' }, '1.1', ''],
+                [{ 'v': '1.1.2.1', 'f': '<div class="chart-subclass-heading">Steroidal</div><div class="chart-list"><ol><li>Ethinylestradiol</li><li>Mestranol</li><li>Tibolone</li></ol></div>' }, '1.1.2', ''],
+                [{ 'v': '1.1.2.2', 'f': '<div class="chart-subclass-heading">Nonsteroidal</div><div class="chart-list"><ol><li>Diethylstilbestrol</li><li>Hexestrol</li><li>Dienestrol</li></ol></div>' }, '1.1.2', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Antiestrogen</div>' }, '1', ''],
+                [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Selective estrogen receptor down regulator</div>' }, '1', ''],
+                [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Selective estrogen receptor modulators</div>' }, '1', ''],
+                [{ 'v': '1.5', 'f': '<div class="chart-class-heading">Aromatase inhibitors</div>' }, '1', ''],
+                
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Clomiphene citrate</li></ol></div>' }, '1.2', ''],
+                [{ 'v': '1.3.1', 'f': '<div class="chart-list"><ol><li>Fulvestrant</li></ol></div>' }, '1.3', ''],
+                [{ 'v': '1.4.1', 'f': '<div class="chart-list"><ol><li>Tamoxifen citrate</li><li>Toremifene</li><li>Raloxifene</li></ol></div>' }, '1.4', ''],
+                [{ 'v': '1.5.1', 'f': '<div class="chart-list"><ol><li>Letrozole</li><li>Anastrozole</li><li>Exemestane</li></ol></div>' }, '1.5', ''],
+
+           
+              ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div30'));
+            chart.draw(data, options);
+        }
+    </script>
+      <div class="chart" id="chart_div30"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">PROGESTINS</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Natural progestins</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-list"><ol><li>Progesterone</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Synthetic progestins</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-subclass-heading">Progesterone derivative</div>' }, '1.2', ''],
+                [{ 'v': '1.2.1.1', 'f': '<div class="chart-list"><ol><li>Medroxyprogesterone acetate</li><li>Megestrol acetate</li><li>Dydrogesterone</li><li>Hydroxyprogesterone caproate</li></ol></div>' }, '1.2.1', ''],
+
+                [{ 'v': '1.2.1.2', 'f': '<div class="chart-subclass-heading">Newer compound</div><div class="chart-list"><ol><li>Nomegestrol acetate</li></ol></div>' }, '1.2.1', ''],
+                [{ 'v': '1.2.3', 'f': '<div class="chart-subclass-heading">19-Nortestosterone derivatives</div>' }, '1.2', ''],
+                [{ 'v': '1.2.3.1', 'f': '<div class="chart-subclass-heading">Estranes</div><div class="chart-list"><ol><li>Norethindrone (Norethisterone)</li><li>Lynestrenol (ethinylestrenol)</li><li>Allylestrenol</li></ol></div>' }, '1.2.3', ''],
+                [{ 'v': '1.2.3.2', 'f': '<div class="chart-subclass-heading">Gonanes</div><div class="chart-list"><ol><li>Levonorgestrel</li><li>Desogestrel</li><li>Norgestimate</li><li>Gestodene</li></ol></div>' }, '1.2.3', ''],
+              
+            ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div31'));
+            chart.draw(data, options);
+        }
+    </script>
+      <div class="chart" id="chart_div31"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">UTERINE STIMULANTS (Oxytocics)</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Posterior pituitary hormone</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-list"><ol><li>Oxytocin</li><li>Desamino-oxytocin</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Ergot alkaloids</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Ergometrine (Ergonovine)</li><li>Methylergometrine</li></ol></div>' }, '1.2', ''],
+                [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Prostaglandins (PGs)</div>' }, '1', ''],
+                [{ 'v': '1.3.1', 'f': '<div class="chart-list"><ol><li>PGE2 (Dinoprostone)</li><li>PGF2α (Dinoprost)</li><li>15-methyl PGF2α (Carboprost)</li><li>Misoprostol (+ Mifepristone)</li></ol></div>' }, '1.3', ''],
+                [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Miscellaneous</div>' }, '1', ''],
+                [{ 'v': '1.4.1', 'f': '<div class="chart-list"><ol><li>Ethacridine</li><li>Quinine</li></ol></div>' }, '1.4', ''],
+            ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div32'));
+            chart.draw(data, options);
+        }
+    </script>
+      <div class="chart" id="chart_div32"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">UTERINE RELAXANTS (Tocolytics)</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Adrenergic agonists</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-list"><ol><li>Ritodrine</li><li>Salbutamol</li><li>Terbutaline</li><li>Isoxsuprine</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Calcium channel blockers</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Nifedipine</li><li>(Other dihydropyridines)</li></ol></div>' }, '1.2', ''],
+                [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Oxytocin antagonist</div>' }, '1', ''],
+                [{ 'v': '1.3.1', 'f': '<div class="chart-list"><ol><li>Atosiban</li></ol></div>' }, '1.3', ''],
+                [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Miscellaneous drugs</div>' }, '1', ''],
+                [{ 'v': '1.4.1', 'f': '<div class="chart-list"><ol><li>Magnesium sulfate</li><li>Progesterone</li><li>Nitrates</li><li>Halothane</li></ol></div>' }, '1.4', ''],
+            ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div33'));
+            chart.draw(data, options);
+        }
+    </script>
+      <div class="chart" id="chart_div33"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">Influences Affecting Bone Turnover</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">↑ Resorption</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-list"><ol><li>Corticosteroids</li><li>Parathormone</li><li>Thyroxine (excess)</li><li>Hypervitaminosis D</li><li>Prostaglandin E2</li><li>Interleukin 1 & 6</li><li>Alcoholism</li><li>Loop diuretics</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">↓ Resorption</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Androgens/Estrogens</li><li>Calcitonin</li><li>Growth hormone</li><li>Bisphosphonates</li><li>Fluoride</li><li>Gallium nitrate</li><li>Mithramycin</li><li>Thiazide diuretics</li></ol></div>' }, '1.2', ''],
+            ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div34'));
+            chart.draw(data, options);
+        }
+    </script>
+      <div class="chart" id="chart_div34"></div>
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['orgchart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+                [{ 'v': '1', 'f': '<div class="chart-heading">Bisphosphonates</div>' }, '', ''],
+                [{ 'v': '1.1', 'f': '<div class="chart-class-heading">First generation BPNs</div>' }, '1', ''],
+                [{ 'v': '1.1.1', 'f': '<div class="chart-list"><ol><li>Etidronate</li><li>Tiludronate</li></ol></div>' }, '1.1', ''],
+                [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Second generation BPNs</div>' }, '1', ''],
+                [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li>Pamidronate</li><li>Alendronate</li><li>Ibandronate</li></ol></div>' }, '1.2', ''],
+                [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Third generation BPNs</div>' }, '1', ''],
+                [{ 'v': '1.3.1', 'f': '<div class="chart-list"><ol><li>Risedronate</li><li>Zoledronate</li></ol></div>' }, '1.3', ''],
+            ]);
+
+            var options = {
+                allowHtml: true,
+                size: 'medium',
+                nodeSpacing: 40,
+                allowCollapse: true,
+                compactRows: true,
+            };
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div35'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div class="chart" id="chart_div35"></div>
+    <script type="text/javascript">
+      google.charts.load('current', { 'packages': ['orgchart'] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+          data.addColumn('string', 'ToolTip');
+
+          data.addRows([
+              [{ 'v': '1', 'f': '<div class="chart-heading">SEDATIVE-HYPNOTIC DRUGS</div>' }, '', ''],
+              [{ 'v': '1.1', 'f': '<div class="chart-class-heading">Benzodiazepines</div>' }, '1', ''],
+              [{ 'v': '1.1.1', 'f': '<div class=chart-class-heading>Hypnotic</div><div class="chart-list"><ol><li>Diazepam</li><li>Flurazepam</li><li>Nitrazepam</li><li>Alprazolam</li><li>Lorazepam</li><li>Temazepam</li><li>Triazolam</li></ol></li></div>' }, '1.1', ''],
+              [{ 'v': '1.1.2', 'f': '<div class=chart-class-heading>Antianxiety</div><div class="chart-list"><ol><li>Diazepam</li><li>Chlordiazepoxide</li><li>Oxazepam</li><li>Lorazepam</li><li>Alprazolam</li><li>Clonazepam</li></ol></li></ol></div>' }, '1.1', ''],
+              [{ 'v': '1.1.3', 'f': '<div class=chart-class-heading>Anticonvulsant</div><div class="chart-list"><ol><li>Clonazepam</li><li>Clobazam</li><li>Diazepam</li><li>Lorazepam</li></ol></li></ol></div>' }, '1.1', ''],
+
+              [{ 'v': '1.2', 'f': '<div class="chart-class-heading">Barbiturates</div>' }, '1', ''],
+              [{ 'v': '1.2.1', 'f': '<div class="chart-list"><ol><li><b>Long acting</b><ol><li>Phenobarbitone</li></ol></li><li><b>Short acting</b><ol><li>Butobarbitone</li><li>Pentobarbitone</li></ol></li><li><b>Ultra-short acting</b><ol><li>Thiopentone</li><li>Methohexitone</li></ol></li></ol></div>' }, '1.2', ''],
+              [{ 'v': '1.3', 'f': '<div class="chart-class-heading">Non-benzodiazepines</div>' }, '1', ''],
+              [{ 'v': '1.3.1', 'f': '<div class="chart-list"><ol><li>Zopiclone</li><li>Eszopiclone</li><li>Zolpidem</li><li>Zaleplon</li><li>Etizolam</li></ol></div>' }, '1.3', ''],
+              [{ 'v': '1.4', 'f': '<div class="chart-class-heading">Other hypnotics</div>' }, '1', ''],
+              [{ 'v': '1.4.1', 'f': '<div class="chart-list"><ol><li>Triclofos</li><li>Melatonin</li><li>Ramelteon</li><li>Suvorexant</li></ol></div>' }, '1.4', ''],
+          ]);
+
+          var options = {
+              allowHtml: true,
+              size: 'medium',
+              nodeSpacing: 40,
+              allowCollapse: true,
+              compactRows: true,
+          };
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div36'));
+          chart.draw(data, options);
+      }
+  </script>
+    <div class="chart" id="chart_div36"></div>
+    <div class="chart" id="chart_div37"></div>
+    <div class="chart" id="chart_div38"></div>
+    <div class="chart" id="chart_div39"></div>
+    <div class="chart" id="chart_div40"></div>
+    <div class="chart" id="chart_div41"></div>
+    <div class="chart" id="chart_div42"></div>
+
 
 
 
@@ -1137,8 +1509,8 @@
   </script>
   <script src="/script/bookscript.js"></script>
 
- 
-   
+
+
 </body>
 
 </html>
