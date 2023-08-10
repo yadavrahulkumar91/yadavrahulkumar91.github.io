@@ -1,25 +1,252 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="bookstyle.css">
-    
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
-    <div id="home-container" class="container">    
 
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <div id="home-container" class="container">    
+      <h1>A. Photosynthesis</h1>
+      <p>Photosynthesis is simply defined as the formation of carbohydrates from \(CO_2\) and \(H_2O\) by illuminated green cells of plants.</p>
+      
+      <h2>B. Reaction</h2>
+      <p>
+        \(6CO_2 + 12H_2O^{18} \xrightarrow{{\text{Light}}} C_6H_{12}O_6 + 6O_2^{18↑} + 6H_2O\)
+      </p>
+      <ol>
+        <li>
+          <p>\(CO_2\) and \(H_2O\) → Raw material</p>
+        </li>
+        <li>
+          <p>\(C_6H_{12}O_6\) → Required product</p>
+        </li>
+        <li>
+          <p>\(O_2\) and \(H_2O\) → Byproduct</p>
+        </li>
+        <li>
+          <p>Main/Ultimate source of energy is sunlight.</p>
+          <ol>
+            <li>Maximum photosynthesis occurs in white light/sunlight.</li>
+            <li>Best spectrum for photosynthesis (Effective) = White light > Red > Blue > Green</li>
+            <li>Best absorption spectrum for photosynthesis = White light > Blue > Red > Green</li>
+          </ol>
+        </li>
+        <li>
+          <p>\(O_2\) evolved during photosynthesis comes from \(H_2O\) and not from \(CO_2\).</p>
+          <p>This was experimentally confirmed by Ruben and Kamen while working on Chlorella alga (unicellular green alga) using radioactive isotopes oxygen, i.e., \(O_2^{18}\).</p>
+        </li>
+        <li>
+          <p>\(O_2\) present in glucose molecule and water comes from \(CO_2\).</p>
+        </li>
+        <li>
+          <p>About 90% of total photosynthesis in the world is done by algae (mainly by BGA) in oceans and freshwater. [IOM 2010]</p>
+          <p>Volume of \(CO_2\) absorbed in photosynthesis is almost equal to \(O_2\) liberated. [IOM 2006]</p>
+        </li>
+      </ol>
+
+      <h1>Comparison: Chl-a vs Chl-b</h1>
+      <table>
+          <tr>
+              <th>Chl-a</th>
+              <th>Chl-b</th>
+          </tr>
+          <tr>
+              <td>$C_\text{55} H_\text{72} O_5 N_4 Mg$</td>
+              <td>$C_\text{55} H_\text{70} O_6 N_4 Mg$</td>
+          </tr>
+          <tr>
+              <td>Contains $−CH_3$ group at $ 3^\text{rd} $ carbon of II^nd pyrole ring.</td>
+              <td>Contains $−CHO$ group at $3^\text{rd}$ carbon of II^nd pyrole ring.</td>
+          </tr>
+      </table>
+
+      <h1>Comparison: PS II vs PS I</h1>
+      <table>
+          <tr>
+              <th>1) PS II</th>
+              <th>PS I</th>
+          </tr>
+          <tr>
+              <td>Located only on grana lamella.</td>
+              <td>Located on both grana and stroma lamella.</td>
+          </tr>
+          <tr>
+              <td>Rxn centre: $P_\text{680}$</td>
+              <td>Rxn centre:$ P_\text{700}$</td>
+          </tr>
+          <tr>
+              <td>Chl"-"b &gt; Chl"-"a</td>
+              <td>Chl"-"a &gt; Chl"-"b</td>
+          </tr>
+          <tr>
+              <td>It picks up electrons emitted during photolysis of water and performs non-cyclic photophosphorylation.</td>
+              <td>It performs cyclic phosphorylation independently.</td>
+          </tr>
+          <tr>
+              <td>PS-II is more strongly fluorescent than PS-I.</td>
+              <td>PS-I is less fluorescent than PS-II.</td>
+          </tr>
+      </table>
+
+
+
+
+      <h1>Comparison: Non-cyclic vs Cyclic Photophosphorylation</h1>
+      <table border="1">
+          <tr>
+              <th>a. S.N.</th>
+              <th>Non-cyclic photophosphorylation</th>
+              <th>Cyclic photophosphorylation</th>
+          </tr>
+          <tr>
+              <td>Photolysis of water</td>
+              <td>\(4 \, H_2 O \, (\, \rightleftharpoons \, \, \stackrel{h\nu, \text{ Pigment}}{\longrightarrow} \, \, Mn^{2+}, \, Cl^- \,) \, 2H_2 O + O_2 + 4H^+ + 4e^-\)<br>i. No of water molecules required = 4<br>ii. No of water molecules used = 2</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>Found in</td>
+              <td>a. Higher plants and b. BGA/Cyanobacteria<br>i. About 83% O2 evolved by BGA.<br>ii. About 95% O2 comes from the sea.</td>
+              <td>a. Bacteria and b. few Red algae</td>
+          </tr>
+          <tr>
+              <td>Wavelength</td>
+              <td>Common (Visible rays)</td>
+              <td>Infrared (IR)</td>
+          </tr>
+          <tr>
+              <td>Primary acceptor</td>
+              <td>2</td>
+              <td>1</td>
+          </tr>
+          <tr>
+              <td>Pigment system</td>
+              <td>a. PS-I and b. PS-II</td>
+              <td>a. PS-I only</td>
+          </tr>
+          <tr>
+              <td>Source of e– and H+</td>
+              <td>H2O</td>
+              <td>PS-I</td>
+          </tr>
+          <tr>
+              <td>Terminal acceptor of proton(H+)</td>
+              <td>NADP</td>
+              <td>PS-I<br>a. Universal H+ acceptor = NAD<br>b. Natural H+ acceptor = NADP</td>
+          </tr>
+          <tr>
+              <td>Production</td>
+              <td>a. H2O = 2<br>b. O2 = 1 (Oxygenic)<br>c. ATP = 1<br>d. NADPH2 = 2</td>
+              <td>a. H2O = 0<br>b. O2 = 0 (Anoxygenic)<br>c. ATP = ②<br>d. NADPH2 = 0</td>
+          </tr>
+          <tr>
+              <td>Significance</td>
+              <td>H2O, O2, NADH2</td>
+              <td>ATP</td>
+          </tr>
+      </table>
+
+
+      <h1>Comparison: C3, C4, and CAM Plants</h1>
+      <table>
+          <tr>
+              <th>a. Characters</th>
+              <th>C3-plants</th>
+              <th>C4-plants</th>
+              <th>CAM plants</th>
+          </tr>
+          <tr>
+              <td>CO2 acceptor</td>
+              <td>RUBP (5 C)</td>
+              <td>a. Primary = PEP(Phosphoenol pyruvic acid) [Mesophyll cell]<br>b. Secondary = RuBP (Rubisco-1,5-biphosphate) [Bundle sheath cell]</td>
+              <td>a. Primary = PEP (Night)<br>b. Secondary = RuBP (Day)</td>
+          </tr>
+          <tr>
+              <td>1st enzyme</td>
+              <td>Rubisco</td>
+              <td>PEP carboxylase</td>
+              <td>PEP carboxylase</td>
+          </tr>
+          <tr>
+              <td>1st stable compound</td>
+              <td>3-PGA [3C]</td>
+              <td>OAA (Oxalo acetic acid) [4C]</td>
+              <td>Malic acid [4C] &gt; OAA [4C]</td>
+          </tr>
+          <tr>
+              <td>CO2 compensation point (Minimum CO2 required for photosynthetic)</td>
+              <td>45–100 ppm</td>
+              <td>15–25 ppm</td>
+              <td>5–10 ppm</td>
+          </tr>
+          <tr>
+              <td>Leaf 🍃 anatomy</td>
+              <td>❌</td>
+              <td>✔ Krantz anatomy</td>
+              <td>❌</td>
+          </tr>
+          <tr>
+              <td>Types of Chloroplast</td>
+              <td>Single type</td>
+              <td>Two types<br>- Granal chloroplast<br>- Agranal chloroplast</td>
+              <td>Single type</td>
+          </tr>
+          <tr>
+              <td>C3 cycle 🚴 takes at</td>
+              <td>All photosynthetic cells</td>
+              <td>Bundle sheath cell</td>
+              <td>All photosynthetic cells</td>
+          </tr>
+          <tr>
+              <td>Requirement per glucose molecule</td>
+              <td>6CO_2:12NADH_2:18ATP=1:2:3</td>
+              <td>6CO_2:12NADH_2:30ATP=1:2:5</td>
+              <td>6CO_2:12NADH_2:30ATP=1:2:5</td>
+          </tr>
+          <tr>
+              <td>Optimum temperature</td>
+              <td>25 to 30°C</td>
+              <td>35 to 45°C</td>
+              <td>&gt; 45°C</td>
+          </tr>
+          <tr>
+              <td>Photorespiration</td>
+              <td>May be (less common)</td>
+              <td>No chance</td>
+              <td>May be</td>
+          </tr>
+          <tr>
+              <td>Examples</td>
+              <td>a. Algae<br>b. Bryophyte<br>c. Pteridophyte<br>d. Gymnosperm (No exception)<br>e. Common in Dicot</td>
+              <td>a. Common in Monocot<br>b. Rarely in dicot like<br>c. Rarely in Monocot like</td>
+              <td>a. Bryophyte<br>b. Crassulaceae family<br>c. Orchidaceae family<br>d. Desert 🏜 plants<br>e. Tropical plants</td>
+          </tr>
+      </table>
 
     </div>
 
@@ -36,14 +263,16 @@
     
     </div>
     
- 
-    
-   <script src="bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
   
-  </body>
-</html>ECHO is on.
+  
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var contentPageLocation = "../contentBotany.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+
+</body>
+
+</html>

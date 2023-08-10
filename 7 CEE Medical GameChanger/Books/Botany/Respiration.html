@@ -1,26 +1,181 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="bookstyle.css">
-    
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
-    <div id="home-container" class="container">    
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <div id="home-container" class="container"> 
+      
+      <h1>A. Chemical Equation of Respiration</h1>
+      <h2>a. Aerobic Respiration (Complete Oxidation)</h2>
+      <p>
+        \(C_6H_{12}O_6 + 6O_2 \rightarrow 6CO_2 + 6H_2O + 36/38 \, ATP\)
+      </p>
+      
+      <h2>b. Complete Oxidation of Glucose in Aerobic Respiration</h2>
+      <p>
+        \(C_6H_{12}O_6 + 6O_2 + 10H_2O \rightarrow 6CO_2 + 16H_2O + 36/38 \, ATP \, (686 \, kCal / 673 \, kCal \, earlier)\)
+      </p>
+      <ol>
+        <li>
+          <p>10 molecules of \(H_2O\) are used (2 in glycolysis and 8 in Kreb's cycle), while 16 molecules of \(H_2O\) are produced in one complete cycle of respiration.</p>
+        </li>
+        <li>
+          <p>1 ATP gives 8.15 kCal (A/C new concept). Hence efficiency of respiration in aerobes is</p>
+          <p>\(\eta = \frac{{38 \times 8.15 \, \text{kCal}}}{{686 \, \text{kCal}}} \times 100\% = 45.14\%\)</p>
+        </li>
+      </ol>
+      <p><em>Note: Previously 1 ATP = 7.3 kCal</em></p>
 
 
+      <h1>Comparison of Aerobic and Anaerobic Respiration</h1>
+      <table>
+          <tr>
+              <th>i. Aerobic respiration</th>
+              <th>Anaerobic respiration</th>
+          </tr>
+          <tr>
+              <td>1) Respiration with the use of Oxygen.</td>
+              <td>1) Without the use of Oxygen</td>
+          </tr>
+          <tr>
+              <td>2) Water is evolved since oxygen of water is evolved from Atmospheric oxygen.</td>
+              <td>2) Water is not evolved because oxygen is not taken</td>
+          </tr>
+          <tr>
+              <td>3) Complete oxidation of Substrate.</td>
+              <td>3) Incomplete oxidation of Substrate</td>
+          </tr>
+          <tr>
+              <td>4) More energy (36 or 38 ATP is produced)</td>
+              <td>4) Less energy (2 ATP is produced)</td>
+          </tr>
+      </table>
+
+      <h1>Comparison of Different Types of Respiration</h1>
+      <table>
+          <tr>
+              <th>i. Floating respiration/ Protoplasmic respiration</th>
+              <th>Superficial respiration</th>
+          </tr>
+          <tr>
+              <td>Substrate used: Carbohydrate > Lipid > Fat </td>
+              <td>> Protein</td>
+          </tr>
+      </table>
+
+      <h1>ATP Production Steps</h1>
+      <table>
+          <tr>
+              <th>Steps</th>
+              <th>Substrate ATP</th>
+              <th>Through NADH2</th>
+              <th>Through FADH2</th>
+              <th>Total ATP</th>
+          </tr>
+          <tr>
+              <td>Glycolysis</td>
+              <td>2</td>
+              <td>6 (2 × 3 = 6)</td>
+              <td></td>
+              <td>8 (6)</td>
+          </tr>
+          <tr>
+              <td>Oxidative decarboxylation</td>
+              <td></td>
+              <td>6 (2 × 3 = 6)</td>
+              <td></td>
+              <td>6</td>
+          </tr>
+          <tr>
+              <td>Kreb's cycle</td>
+              <td>2 (GTP)</td>
+              <td>18 (6 × 3 = 18)</td>
+              <td>4 (2 × 2 = 4)</td>
+              <td>24</td>
+          </tr>
+          <tr>
+              <td>ETS</td>
+              <td></td>
+              <td>30 (10 × 3 = 30)</td>
+              <td>4 (2 × 2 = 4)</td>
+              <td>36 (Eukaryotes) / 38 (Prokaryotes, Heart, Lungs, Kidney)</td>
+          </tr>
+      </table>
+      <h1>F. Respiratory Quotient</h1>
+      <h2>a. Definition of Respiratory Quotient</h2>
+      <p>
+        Respiratory quotient is defined as the ratio of the volume of \(CO_2\) evolved to \(O_2\) consumed in respiration.
+      </p>
+      <p>
+        \(R.Q. = \frac{{\text{Volume of } CO_2 \text{ evolved}}}{{\text{Volume of } O_2 \text{ consumed}}}\)
+      </p>
+      
+      <h2>b. Measurement of Respiratory Quotient</h2>
+      <p>
+        Respiratory quotient is measured by Ganong’s respirometer.
+      </p>
+      
+      <h2>c. Respiratory Quotient and Respiratory Substrates</h2>
+      <p>
+        Respiratory quotient depends on the respiratory substrate being used.
+      </p>
+      <ol>
+        <li>
+          <p>RQ = 1 for carbohydrates. [Floating respiration]</p>
+        </li>
+        <li>
+          <p>RQ &lt; 1 for lipids, fats (0.7), and proteins (0.8-0.9). [Protoplasmic respiration]</p>
+        </li>
+        <li>
+          <p>RQ &gt; 1 for organic acids like:</p>
+          <ul>
+            <li>Malic acid (\(COOH\))</li>
+            <li>Oxalic acid</li>
+          </ul>
+        </li>
+        <li>
+          <p>RQ = 0 for succulent plants like:</p>
+          <ul>
+            <li>Bryophyllum</li>
+            <li>Opuntia</li>
+            <li>Agave</li>
+            <li>Aloe</li>
+          </ul>
+        </li>
+        <li>
+          <p>RQ = ∞ for anaerobic respiration because \(O_2\) is not used. Example: Yeast</p>
+        </li>
+      </ol>
+
+      
     </div>
 
     <div id="questions-container" class="container" style="display:none">
@@ -36,14 +191,16 @@
     
     </div>
     
- 
-    
-   <script src="bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
   
-  </body>
-</html>ECHO is on.
+  
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var contentPageLocation = "../contentBotany.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+
+</body>
+
+</html>

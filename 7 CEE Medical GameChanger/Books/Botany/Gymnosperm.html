@@ -1,24 +1,303 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="bookstyle.css">
-    
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
     <div id="home-container" class="container">    
+
+      <h2>Introduction</h2>
+      <ul>
+          <li>Gymnosperms are called "naked-seeded" plants because they lack an ovary.</li>
+          <li>Some members of gymnosperms are known as "living fossils," which are organisms present in both living and fossil forms without significant evolutionary changes.</li>
+          <ul>
+              <li>Examples: Cycas, Ginkgo, Metasequoia</li>
+          </ul>
+      </ul>
+      
+      <h2>Conduction Tissue</h2>
+      <ul>
+          <li>Xylem is without vessels, except in the Gnetales order where vessels are present (+ve).</li>
+          <ul>
+              <li>Gnetum, Ephedra, Welwitschia</li>
+          </ul>
+          <li>Phloem lacks companion cells and instead has albuminous tissue (+ve).</li>
+          <li>Sieve tube is absent, and sieve cells are present (+ve).</li>
+      </ul>
+      
+      <h2>Leaf and Size</h2>
+      <ul>
+          <li>Leaves are unipinnately compounded.</li>
+          <li>Gymnosperms are generally large-sized and branched, with exceptions like Cycas and Zamia pygmaea (smallest gymnosperm).</li>
+      </ul>
+      
+      <h2>Reproductive Structures and Pollination</h2>
+      <ul>
+          <li>Male and female reproductive structures are called Male cone and Female cone, respectively, except for the Female cone of Cycas.</li>
+          <li>Pollination is anemophilous (by wind).</li>
+          <li>Pollination in gymnosperms involves the transfer of microspores from microsporophyll to ovule directly.</li>
+      </ul>
+      
+      <h2>Fertilization and Endosperm</h2>
+      <ul>
+          <li>Ovule is typically orthotropous, except in Pinus, where it's anatropous (PAN).</li>
+          <li>Fertilization is Siphonogamous type, except for Cycas, which has Zooidogamous type.</li>
+          <ul>
+              <li>Zooidogamous type involves motile male gamete movement with the help of flagella or cilia.</li>
+              <li>Siphonogamous type involves non-motile male gametes and pollen tube.</li>
+          </ul>
+          <li>Endosperm is haploid.</li>
+      </ul>
+      
+      <h2>Classification of Gymnosperms</h2>
+      <table>
+        <tr>
+            <th>Class</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>A. Cycadopsida "Cycads"</td>
+            <td>1. Cycas</td>
+        </tr>
+        <tr>
+            <td>B. Ginkgopsida</td>
+            <td>1. Ginkgo biloba → Maiden hair tree</td>
+        </tr>
+        <tr>
+            <td>C. Gnetopsida "Gnetales"</td>
+            <td>1. Gnetum</td>
+        </tr>
+        <tr>
+            <td>D. Coniferopsida "Conifers"</td>
+            <td>1. Pinus<br>2. Cedrus<br>3. Sequoia<br>4. Auricaria excelsa (Christmas tree)<br>5. Auricaria imbricata "Auricona" (Monkey puzzle plant)</td>
+        </tr>
+    </table>
+      
+      <h2>Tallest Tree</h2>
+      <p>The tallest tree is:</p>
+      <ul>
+          <li>Eucalyptus regnans</li>
+          <li>Sequoia giganteum</li>
+          <li>Mangifera indica</li>
+          <li>Pinus roxburgii</li>
+          <ul>
+              <li>Many species of Sequoia are taller than Eucalyptus, except Eucalyptus regnans, which is called the tallest tree.</li>
+          </ul>
+      </ul>
+      
+
+
+      
+<h1>Cycas Plants</h1>
+
+<h2>Introduction</h2>
+<ul>
+    <li>Cycas is a member of Cycadopsida.</li>
+    <li>Cycas revoluta is native to Nepal.</li>
+</ul>
+
+<h2>Habitat and Plant Body</h2>
+<ul>
+    <li>The plant is found in physical xerophytic conditions, which include hot climates and tropical regions.</li>
+    <li>The plant body is an unbranched tree, differentiated into:</li>
+    <ul>
+        <li>Root</li>
+        <ul>
+            <li>Coralloid root is -ve geotropic (apogeotropic) and contains Nostoc and Anabaena symbiotically.</li>
+        </ul>
+        <li>Stem</li>
+        <ul>
+            <li>The stem is solid, cylindrical, and unbranched, referred to as Caudex type.</li>
+            <li>Leaf scars are found around the stem due to persistent leaf bases.</li>
+            <li>The wood is porous and soft, commercially less important.</li>
+        </ul>
+        <li>Leaf</li>
+        <ul>
+            <li>Leaves show xerophytic adaptations like thick cuticles and sunken stomata.</li>
+        </ul>
+    </ul>
+</ul>
+
+<h2>Reproductive Structures</h2>
+<ul>
+    <li>Male plant consists of Male cone where microspores or pollen grains are produced.</li>
+    <li>Female plant doesn't contain a female cone, but megasporophylls are loosely arranged in a rosette form.</li>
+</ul>
+
+<h2>Ovules and Fertilization</h2>
+<ul>
+    <li>Ovules of Cycas are orthotropous, unitegmic, and the largest among the plant kingdom.</li>
+    <li>Ovules consist of:</li>
+    <ul>
+        <li>Pollen chamber</li>
+        <li>Archegonial chamber</li>
+        <li>Archegonia without Neck Canal Cell (NCC)</li>
+        <ul>
+            <li>2 Neck cells (Cover cells) are +ve.</li>
+        </ul>
+    </ul>
+</ul>
+
+<h2>Male Gametes and Pollination</h2>
+<ul>
+    <li>Male gametes of Cycas are top-shaped, multiflagellated, and the largest among the plant kingdom.</li>
+    <li>Pollination is anemophilous type, taking place at the 3-celled stage.</li>
+    <ul>
+        <li>1 Prothallial cell (PC)</li>
+        <li>1 Generative cell (GC)</li>
+        <li>1 Tube cell (TC)</li>
+    </ul>
+</ul>
+
+<h2>Fertilization and Seed Development</h2>
+<ul>
+    <li>Fertilization is zooidiogamous type, intermediate between zooidiogamy and Siphonogamy.</li>
+    <li>Pollen tube is formed but does not carry the male gamete; it only works as a haustorium to absorb liquid.</li>
+    <li>After fertilization, the ovule develops into two cotyledons.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<h1>Pinus Species and Plant Characteristics</h1>
+
+<h2>Species of Pinus Commonly Found in Nepal</h2>
+<ul>
+    <li>3-needled: Pinus roxburghii/ Chir pine/ Rani salla</li>
+    <li>5-needled: Pinus wallichiana/ Blue pine/ Gobre salla</li>
+</ul>
+
+<h2>Plant Body and Characteristics</h2>
+<ul>
+    <li>Plant body of Pinus is sporophyte divided into Root, Stem, and Leaves.</li>
+    <li>Root</li>
+    <ul>
+        <li>Tap root and lateral roots are developed.</li>
+        <li>Vascular bundle:</li>
+        <ul>
+            <li>Diarch to tetrarch arrangement.</li>
+            <li>Radial type arrangement.</li>
+            <li>Protoxylem = Exarch.</li>
+            <li>Resin canals found between patches of protoxylem.</li>
+        </ul>
+        <li>Pith absent or reduced (Protostele).</li>
+    </ul>
+    <li>Stem</li>
+    <ul>
+        <li>One main axis of growth (Monopodial).</li>
+        <li>Main stem is monopodial and excurrent.</li>
+        <li>Two types of branches:</li>
+        <ul>
+            <li>Long branches (unlimited growth).</li>
+            <li>Short branches (limited growth, with needles).</li>
+        </ul>
+        <li>Wavy stem due to leaf base presence.</li>
+        <li>Layer structure: Cuticle, Epidermis, Cortex zone, Endodermis, Parenchymatous.</li>
+        <li>Vascular bundle:</li>
+        <ul>
+            <li>Conjoint, collateral, open endarch arrangement.</li>
+            <li>Wood characteristics:</li>
+            <ul>
+                <li>Monoxylic and Pycnoxylic (compact and hard).</li>
+                <li>Stele = Eustele.</li>
+                <li>Secondary growth is normal.</li>
+                <li>Tracheids possess bordered pits.</li>
+            </ul>
+        </ul>
+    </ul>
+    <li>Leaf</li>
+    <ul>
+        <li>Needle-like foliage leaves on dwarf shoots.</li>
+        <li>Cataphylls/scale leaves on both long and dwarf shoots.</li>
+        <li>Wavy due to leaf bases.</li>
+    </ul>
+</ul>
+
+<h2>Sexual Reproduction</h2>
+<ul>
+    <li>Pinus is Monoecious and Autoecious.</li>
+    <li>Monoecious: Male and Female cones found on separate branches of the same tree.</li>
+    <li>Fertilization occurs after 11-15 months of pollination, by Siphonogamy (Non-motile gamete).</li>
+    <li>Seeds are matured and ready for germination after 3 years of development.</li>
+    <li>Seed germination is Epigeal type.</li>
+    <li>Each seed consists of 2 to 18 cotyledons.</li>
+</ul>
+
+<h2>Male Cone</h2>
+<p>Male cones develop in the axils of scale leaves found in clusters.</p>
+
+<h2>Female Cone</h2>
+<p>Female cones arise in the axils of scale leaves at the tip of new strong shoots at some distance from the male cones. They grow in about 3 years.</p>
+<p>Female cone is considered as a modified inflorescence due to the presence of a bract.</p>
+
+<h2>Megasporophyll of Female Cone</h2>
+<p>The megasporophyll of the female cone consists of:</p>
+<ol>
+    <li>Ovuliferous scale</li>
+    <ul>
+        <li>Each ovuliferous scale bears 2 naked ovules towards the basal region on the upper (adaxial) side.</li>
+        <li>Ovules/Megasporangia are unitegmic and anatropous type.</li>
+        <li>Megaspores are formed by meiosis in the megaspore mother cell (MMC).</li>
+        <li>Functional megaspore germinates to form the female gametophyte bearing archegonia (2 to 5 in number).</li>
+        <li>Archegonium consists of 4+4=8 neck cells:</li>
+        <ul>
+            <li>1 Venter Canal Cell (VCC)</li>
+            <li>1 Egg cell</li>
+            <li>0 Neck Canal cell (NCC)</li>
+        </ul>
+    </ul>
+    <li>Bract scale</li>
+</ol>
+
+<h2>Pollination and Fertilization</h2>
+<p>1. Pollen tube acts as a pollen carrier.</p>
+<p>2. Pollen grains are winged (wings develop from exine).</p>
+<ul>
+    <li>Winged Pollen grain = Pinus (Develops from exine)</li>
+    <li>Winged seed = Moringa</li>
+    <li>Winged fruit = Hiptage & Shorea</li>
+</ul>
+<p>3. Pollination takes place at the 4-celled stage (2 prothallial cells, 1 generative cell, 1 tube cell).</p>
+<p>4. During pollination, the atmosphere becomes yellowish, called the Shower of sulphur.</p>
+<p>5. The body cell divides to form 2 passive male gametes.</p>
+<p>6. The pollen tube bursts, and the two gametes are liberated. Only one of these fuses with the egg nucleus, the other degenerates.</p>
+
+<h2>Male Gamete</h2>
+<p>The male gamete is non-motile and winged.</p>
 
 
     </div>
@@ -36,14 +315,16 @@
     
     </div>
     
- 
-    
-   <script src="bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
   
-  </body>
+  
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var contentPageLocation = "../contentBotany.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+
+</body>
+
 </html>

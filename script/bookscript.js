@@ -979,3 +979,14 @@ function openContainer(evt, containerName) {
   evt.currentTarget.className += " active-tab";
 }
 
+
+
+
+// const topItem = document.querySelector('.chart-heading');
+// const parent = topItem.closest('.parent');
+//   parent.classList.add('new-background');
+
+// if (topItem.textContent === 'Top-Aligned Item') {
+//   const parent = topItem.closest('.parent');
+//   parent.classList.add('top-aligned-parent');
+// }
