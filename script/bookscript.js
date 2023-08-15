@@ -56,42 +56,36 @@ choicesElements.forEach(element => {
 
 
 
-// Get all elements with the class "answer"
-const answerElements = document.querySelectorAll('.solution');
+// const answerElements = document.querySelectorAll('.solution');
 
-// Loop through each element and attach the new button
-answerElements.forEach(element => {
-  // Create a new button element with the class "check-button" and onclick event handler
-  const button = document.createElement('button');
-  button.className = 'check-button';
-  button.textContent = 'Check';
-  button.onclick = function () {
-    checkAnswer(this); // Call the checkAnswer function with the clicked button as an argument
-  };
+// answerElements.forEach(element => {
+//   const button = document.createElement('button');
+//   button.className = 'check-button';
+//   button.textContent = 'Check';
+//   button.onclick = function () {
+//   checkAnswer(this); 
+//   };
 
-  // Insert the new button element after the current element
-  element.insertAdjacentElement('afterend', button);
-});
+//   element.insertAdjacentElement('afterend', button);
+// });
 
 
-
-// Get all elements with the class "choices"
 const choicesElements1 = document.querySelectorAll('.choices');
 
-// Loop through each choices element
 choicesElements1.forEach((choicesElement, index) => {
-  // Get all elements with the class "choice" within the current choices element
   const choiceElements = choicesElement.querySelectorAll('.choice');
 
-  // Loop through each choice element and insert the input
   choiceElements.forEach((choiceElement, choiceIndex) => {
-    // Create a new input element with the given attributes
     const input = document.createElement('input');
     input.type = 'radio';
     input.name = 'q' + (index + 1);
-    input.value = String.fromCharCode(97 + choiceIndex); // 'a' for the first choice, 'b' for the second, and so on
+    input.value = String.fromCharCode(97 + choiceIndex); 
 
-    // Insert the input element into the current choice element
+      // Attach the onchange event handler to the input element
+      input.onchange = function() {
+        checkAnswer(input);
+      };
+
     choiceElement.insertBefore(input, choiceElement.firstChild);
   });
 });
@@ -103,15 +97,12 @@ choicesElements1.forEach((choicesElement, index) => {
 
 
 function checkAnswer(button) {
-  // Get the question div and the selected radio button
   var questionDiv = button.closest('.questions');
   var selectedAnswer = questionDiv.querySelector('input[type="radio"]:checked');
 
-  // Get the answer div and the solution div
   var answerDiv = questionDiv.querySelector('.answer');
   var solutionDiv = questionDiv.querySelector('.solution');
 
-  // Check if an answer is selected
   if (selectedAnswer === null) {
     alert('Please select an answer.');
     return;
@@ -120,19 +111,23 @@ function checkAnswer(button) {
   // Check if the selected answer is correct
   if (selectedAnswer.value === questionDiv.dataset.answer) {
     // Display "Correct!" message in the answer div
-    answerDiv.style.display = 'block';
+    questionDiv.style.background = '#d4edda';
+
+    // answerDiv.style.display = 'block';
     answerDiv.style.color = 'green';
     answerDiv.style.background = '#d4edda';
-    answerDiv.style.border = '1px solid #c3e6cb';
+    questionDiv.style.border = ' solid #c3e6cb';
     answerDiv.textContent = 'Correct!';
     solutionDiv.style.display = 'block';
   } else {
     // Show the solution if it is hidden
     var answerDiv = questionDiv.querySelector('.answer');
-    answerDiv.style.display = 'block';
+    questionDiv.style.background = '#f8d7da';
+
+    // answerDiv.style.display = 'block';
     answerDiv.style.color = 'red';
     answerDiv.style.background = '#f8d7da';
-    answerDiv.style.border = '1px solid #f5c6cb';
+    questionDiv.style.border = ' solid #f5c6cb';
     answerDiv.textContent = 'Incorrect.';
     solutionDiv.style.display = 'block';
   }
