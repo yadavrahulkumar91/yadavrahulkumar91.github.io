@@ -32,12 +32,6 @@ document.head.appendChild(script3);
 
 
 
-
-
-
-
-
-
 //form
 
 // Get all elements with the class "choices"
@@ -79,15 +73,33 @@ choicesElements1.forEach((choicesElement, index) => {
     const input = document.createElement('input');
     input.type = 'radio';
     input.name = 'q' + (index + 1);
-    input.value = String.fromCharCode(97 + choiceIndex); 
+    input.value = String.fromCharCode(97 + choiceIndex);
 
-      // Attach the onchange event handler to the input element
-      input.onchange = function() {
-        checkAnswer(input);
-      };
+    // Attach the onchange event handler to the input element
+    input.onchange = function () {
+      checkAnswer(input);
+    };
 
     choiceElement.insertBefore(input, choiceElement.firstChild);
   });
+});
+
+
+// Get all elements with the class 'question'
+const questionElements = document.querySelectorAll('.question');
+
+// Loop through each 'question' element
+questionElements.forEach((questionElement, index) => {
+  // Create a new 'div' element with the class 'question-child'
+  const questionChildElement = document.createElement('div');
+  questionChildElement.classList.add('question-child');
+
+  // Move the content of the 'question' element to the 'question-child' element
+  questionChildElement.innerHTML = questionElement.innerHTML;
+
+  // Replace the content of the 'question' element with the 'question-child' element
+  questionElement.innerHTML = '';
+  questionElement.appendChild(questionChildElement);
 });
 
 
@@ -434,20 +446,20 @@ var activitySectionDiv = [];
 var a = 0;
 
 for (var i = 0; i < homeContainer.length; i++) {
- // Get the ID from the corresponding container
- var containerId = homeContainer[i].id;
+  // Get the ID from the corresponding container
+  var containerId = homeContainer[i].id;
 
-  
+
 
   // Create a Sidebar menu element
-sidebarDiv[i]= document.createElement('div');
-sidebarDiv[i].classList.add('sidebar-div');
- sidebarDiv[i].id = "sidebarDiv" + containerId;
+  sidebarDiv[i] = document.createElement('div');
+  sidebarDiv[i].classList.add('sidebar-div');
+  sidebarDiv[i].id = "sidebarDiv" + containerId;
 
 
- activitySectionDiv[i] = document.createElement('div');
-activitySectionDiv[i].classList.add('activity-section-div');
-activitySectionDiv[i].id = "activitySectionDiv" + containerId;
+  activitySectionDiv[i] = document.createElement('div');
+  activitySectionDiv[i].classList.add('activity-section-div');
+  activitySectionDiv[i].id = "activitySectionDiv" + containerId;
 
 
 
@@ -461,7 +473,7 @@ activitySectionDiv[i].id = "activitySectionDiv" + containerId;
   var previousLevel = 0;
 
 
-  for (j=0; j < homeContainerElements.length; j++, a++) {
+  for (j = 0; j < homeContainerElements.length; j++, a++) {
     var homeContainerElement = homeContainerElements[j];
 
     if (homeContainerElement.tagName === 'TABLE') {
@@ -966,7 +978,7 @@ function openContainer(evt, containerName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
   }
-  
+
   document.getElementById(containerName + "-container").style.display = "block";
   document.getElementById("sidebarDiv" + containerName + "-container").style.display = "block";
   document.getElementById("activitySectionDiv" + containerName + "-container").style.display = "block";

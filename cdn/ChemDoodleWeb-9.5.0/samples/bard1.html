@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Benzene Structure</title>
+<script type="text/javascript" src="../install/ChemDoodleWeb.js"></script>
+</head>
+<body>
+<div id="canvas"></div>
+<script>
+var canvas = document.getElementById("canvas");
+var chemdoodle = new ChemDoodleWeb.ChemDoodle(canvas);
+
+// Create a benzene molecule
+var benzene = chemdoodle.createMolecule("C6H6");
+
+// Draw the benzene molecule
+benzene.draw();
+</script>
+</body>
+</html>

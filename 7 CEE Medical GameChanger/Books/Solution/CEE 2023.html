@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
 
+    <link rel="stylesheet" href="/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.css" type="text/css">
+    <script type="text/javascript" src="/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.js"></script>
+    <style>
+        #benzene {
+            color: red;
+            background-color: aqua;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -34,6 +43,16 @@
     <main>
         <div class="MCQ-container">
 
+            <!-- <script>
+                let benzeneCanvas = new ChemDoodle.ViewerCanvas('benzene', 150, 150);
+                benzeneCanvas.emptyMessage = 'No Data Loaded!';
+                let benzeneMolFile =
+                  'CT1001419667\n CHEMDOOD08070920033D 0   0.00000     0.00000     0\n[Insert Comment Here]  \n 12 12  0  1  0               999 V2000\n   -0.0167    1.3781    0.0096 C   0 00  0  0  0  0  0  0  0  0  0  0\n    0.0021   -0.0041    0.0020  C  0 00  0  0  0  0  0  0  0  0  0  0\n    1.1709    2.0855    0.0021 C   0 00  0  0  0  0  0  0  0  0  0  0\n    1.2084   -0.6789   -0.0132 C   0 00  0  0  0  0  0  0  0  0  0  0\n    2.3960    0.0285   -0.0212 C   0 00  0  0  0  0  0  0  0  0  0  0\n    2.3773    1.4107   -0.0131 C   0 00  0  0  0  0  0  0  0  0  0  0\n   -0.9592    1.9054    0.0170 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9258   -0.5567    0.0083 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1563    3.1654    0.0077 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2231   -1.7588   -0.0184 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3385   -0.4987   -0.0324 H   0  0  0  0  0  0  0  0  0  0  0  0\n    3.3051    1.9634   -0.0197 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2 02  0  1  0  0\n  1  3 01  0  1  0  0\n  1  7  1  0  0  0  0\n  2  4 01  0  1  0  0\n  2  8  1  0  0  0  0\n  3  6 02  0  1  0  0\n  3  9  1  0  0  0  0\n  4  5 02  0  1  0  0\n  4 10  1  0  0  0  0\n  5  6 01  0  1  0  0\n  5 11  1  0  0  0  0\n  6 12  1  0  0  0  0\nM  END\n$$$$';
+                let benzene = ChemDoodle.readMOL(benzeneMolFile);
+                benzeneCanvas.loadMolecule(benzene);
+            </script> -->
+
+
             <div class="questions" data-answer="a">
                 <div class="question">
                     Why does the web of a spider shine?
@@ -60,11 +79,15 @@
             </div>
 
 
-            <div class="questions" data-answer="a">
+            <div class="questions" data-answer="c">
                 <div class="question">
                     Find the equivalent resistance when each resistor (R) is 1 Ω. Calculate the values of resistance
-                    A and H.
+                    A and B.
                 </div>
+                <picture>
+
+                    <img class="left" src="/image/cee/Solution/Resistance1.png">
+                </picture>
                 <div class="choices">
 
                     <div class="choice">
@@ -82,7 +105,9 @@
 
                 </div>
 
-                <div class="solution">(a) The equivalent resistance when each resistor is 1 Ω is also 1 Ω.</div>
+                <div class="solution">(c) By applying perpendicular axis symmetry. Point lying on the line PS have same
+                    potential therefore Resistance between PQ and RS can be removed. So, $R_\text{AB} = \frac{3}{4} Ω.$
+                </div>
 
             </div>
 
@@ -170,8 +195,16 @@
 
             <div class="questions" data-answer="d">
                 <div class="question">
-                    The magnetic field at the center is:
+                    <div>
+
+                        The magnetic field at the center is:
+                    </div>
+
                 </div>
+                <picture>
+
+                    <img class="left" src="/image/cee/Solution/CEE20231.png">
+                </picture>
                 <div class="choices">
 
                     <div class="choice">
@@ -195,9 +228,9 @@
             </div>
 
 
-            <div class="questions" data-answer="c">
-                <div class="question">
-                    $f = M$ Hz, $E = 200$ V. In an LCR circuit, the value of $E$ is more than 220 at:
+            <div class="questions confusion" data-answer="c">
+                <div class="question ">
+                    $f = 50 Hz$, $E = 200 V$ . In an LCR circuit, the value of $E$ is more than 220 at:
                 </div>
                 <div class="choices">
 
@@ -271,10 +304,14 @@
                 <div class="solution">(b) Substances exist in the solid state at low temperatures.</div>
 
             </div>
-            <div class="questions" data-answer="b">
+            <div class="questions" data-answer="a">
                 <div class="question">
                     Which of the following determines the point of maximum photoelectric current saturation?
                 </div>
+                <picture>
+
+                    <img class="left small-image" src="/image/cee/Solution/photoelectric.jpg">
+                </picture>
                 <div class="choices">
 
                     <div class="choice">
@@ -377,7 +414,7 @@
                     \text{m}\).</div>
 
             </div>
-            <div class="questions" data-answer="a">
+            <div class="questions" data-answer="b">
                 <div class="question">
                     If \(E\) denotes the electric field present between two plates of a capacitor having length
                     \(d\) and area \(A\), then the energy stored in the capacitor is:
@@ -438,6 +475,10 @@
                     Two blocks, each of mass M, are resting on a frictionless inclined plane as shown in the figure.
                     Then:
                 </div>
+                <picture>
+
+                    <img class="left small-image" src="/image/cee/Solution/blocks.jpg">
+                </picture>
                 <div class="choices">
 
                     <div class="choice">
@@ -488,7 +529,7 @@
 
 
 
-            <div class="questions" data-answer="b">
+            <div class="questions" data-answer="a">
                 <div class="question">
                     At what height from Earth's surface is the acceleration due to gravity (g) reduced by 4 times?
                 </div>
@@ -676,7 +717,7 @@
             </div>
 
 
-            <div class="questions" data-answer="c">
+            <div class="questions confusion" data-answer="c">
                 <div class="question">
                     The intensity level due to waves of the same frequency in a given medium is 1 Bel and 5 Bel; the
                     ratio of their amplitudes is:
@@ -849,6 +890,9 @@
             <div class="questions" data-answer="a">
                 <div class="question">
                     Find \( x \) and \( y \) in the following nuclear reaction:
+                </div>
+                <div class="overflow-scroll">
+
                     <p>\( 7\text{{N}}^{14} + 0\text{{n}}^1 \rightarrow 6\text{{C}}^{14} + x \)</p>
                     <p>\( 5\text{{B}}^{10} + 2\text{{He}}^4 \rightarrow 7\text{{N}}^{13} + y \)</p>
                 </div>
@@ -873,10 +917,14 @@
 
                 </div>
 
-                <div class="solution">(a) The balanced nuclear equations are:</div>
-                <p>\( 7\text{{N}}^{14} + 0\text{{n}}^1 \rightarrow 6\text{{C}}^{14} + 1\text{{H}}^1 \)</p>
-                <p>\( 5\text{{B}}^{10} + 2\text{{He}}^4 \rightarrow 7\text{{N}}^{13} + 0\text{{n}}^1 \)</p>
-                <div class="solution">Therefore, \( x = 1\text{{H}}^1 \) and \( y = 0\text{{n}}^1 \).</div>
+                <div class="solution">
+                    <div class="overflow-scroll">
+                        (a) The balanced nuclear equations are:
+                        <p>\( 7\text{{N}}^{14} + 0\text{{n}}^1 \rightarrow 6\text{{C}}^{14} + 1\text{{H}}^1 \)</p>
+                        <p>\( 5\text{{B}}^{10} + 2\text{{He}}^4 \rightarrow 7\text{{N}}^{13} + 0\text{{n}}^1 \)</p>
+                        Therefore, \( x = 1\text{{H}}^1 \) and \( y = 0\text{{n}}^1 \).
+                    </div>
+                </div>
 
             </div>
             <div class="questions" data-answer="a">
@@ -1080,7 +1128,7 @@
 
             <div class="questions" data-answer="c">
                 <div class="question">
-                    6g of oxygen at pressure \( P \) and temperature 300 K in a vessel is allowed to diffuse through
+                    6g of oxygen at pressure P and temperature 300 K in a vessel is allowed to diffuse through
                     a small hole, and the final pressure is 2P and temperature 400 K. How much oxygen is leaked out?
                 </div>
                 <div class="choices">
@@ -4406,23 +4454,51 @@
                 <div class="question">
                     Identify X:
                 </div>
+                <div class="chemical-reaction">
+                    <div class="center">
+
+                        \(
+                        X \xrightarrow[CH_3COONa]{(CH_2COO)_2O}
+                        \)
+                    </div>
+                    <div>
+                        <picture>
+
+                            <img class="xsmall-image" src="/image/CEE/Solution/Cinnamic-acid.png">
+                            <figcaption>Cinnamic acid</figcaption>
+                        </picture>
+                    </div>
+
+                </div>
                 <div class="choices">
 
                     <div class="choice">
+                        <picture>
 
-                        H = CHCOOH
+                            <img class="xxsmall-image" src="/image/CEE/Solution/Benzaldehyde.png">
+                            <figcaption>Benzaldehyde</figcaption>
+                        </picture>
                     </div>
                     <div class="choice">
+                        <picture>
 
-                        CH3COONa
+                            <img class="xxsmall-image" src="/image/CEE/Solution/Benzoic acid.png">
+                            <figcaption></figcaption>
+                        </picture>
                     </div>
                     <div class="choice">
+                        <picture>
 
-                        C6H5COOH
+                            <img class="xxsmall-image" src="/image/CEE/Solution/Nitrobenzene.png">
+                            <figcaption></figcaption>
+                        </picture>
                     </div>
                     <div class="choice">
+                        <picture>
 
-                        CH3COOC2H5
+                            <img class="xxsmall-image" src="/image/CEE/Solution/Aminobenzene.png">
+                            <figcaption></figcaption>
+                        </picture>
                     </div>
 
                 </div>
@@ -5006,6 +5082,10 @@
             <div class="questions" data-answer="b">
                 <div class="question">
                     KIDNEY 54114, BRAIN = ?
+
+
+
+
                 </div>
                 <div class="choices">
 
@@ -5031,36 +5111,296 @@
                 <div class="solution">(b) KIDNEY (atomic number 54) + BRAIN (atomic number 22) = 32/22</div>
 
             </div>
+            <div class="questions" data-answer="128">
+                <div class="question">
+                   <img class="small-image" src="/image/cee/Solution/Yshaped.jpg">
+                   </div>
+                <div class="choices">
+                    <div class="choice">
+                        
+                    </div>
+                    <div class="choice">
+                       
+                    </div>
+                    <div class="choice">
+                        
+                    </div>
+                    <div class="choice">
+                      
+                    </div>
+                </div>
+                <div class="solution"></div>
+            </div>
+            <div class="questions" data-answer="128">
+                <div class="question">
+                    2, 12, 30, 56, 92, ?, 108
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        112
+                    </div>
+                    <div class="choice">
+                        116
+                    </div>
+                    <div class="choice">
+                        120
+                    </div>
+                    <div class="choice">
+                        128
+                    </div>
+                </div>
+                <div class="solution">(d) The pattern is +10, +18, +26, +34. So, the next number is 92 + 42 = 128.</div>
+            </div>
+            <div class="questions" data-answer="a">
+                <div class="question">
+                    A B (2 ticket) + A C (3 ticket) = cost \$77<br>
+                    A B (3 ticket) + A C (2 ticket) = cost \$73<br>
+                    What is the cost for A B & A C?
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        A B = $37, A C = $40
+                    </div>
+                    <div class="choice">
+                        A B = $40, A C = $37
+                    </div>
+                    <div class="choice">
+                        A B = $35, A C = $42
+                    </div>
+                    <div class="choice">
+                        A B = $42, A C = $35
+                    </div>
+                </div>
+                <div class="solution">(a) Solve the system of equations to find A B = $37 and A C = $40.</div>
+            </div>
 
+            <div class="questions" data-answer="50">
+                <div class="question">
+                    Out of 500 questions, a boy answered 800/0 correctly for 250 questions. How much percentage should
+                    be correct questions from the remaining to get over 0/0?
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        10%
+                    </div>
+                    <div class="choice">
+                        20%
+                    </div>
+                    <div class="choice">
+                        25%
+                    </div>
+                    <div class="choice">
+                        50%
+                    </div>
+                </div>
+                <div class="solution">(c) The boy answered 800/0 correctly for 250 questions, which means he answered
+                    0/0 for the remaining 250 questions. To get an average of 0/0, he needs to answer all of the
+                    remaining questions correctly, which is 25% of the total.</div>
+            </div>
+
+            <div class="questions" data-answer="c">
+                <div class="question">
+                    Which one of the following dice is correct?
+                    <img class="small-image" src="/image/cee/Solution/cubefoldingquestion.jpg">
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Front face -->
+                            <polygon points="50,50 150,50 100,0 0,0" fill="#9E9E9E" />
+                            <text x="75" y="25" fill="black">N</text>
+                            <!-- Left face -->
+                            <polygon points="0,100 50,150 50,50 0,0" fill="#BDBDBD" />
+                            <text x="15" y="75" fill="black">E</text>
+                            <!-- Top face -->
+                            <polygon points="50,50 50,150 150,150 150,50" fill="#E0E0E0" />
+                            <text x="85" y="125" fill="black">P</text>
+                        </svg>
+                    </div>
+                    <div class="choice" style="align-self: center;">
+                        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Front face -->
+                            <polygon points="50,50 150,50 100,0 0,0" fill="#9E9E9E" />
+                            <text x="75" y="25" fill="black">N</text>
+                            <!-- Left face -->
+                            <polygon points="0,100 50,150 50,50 0,0" fill="#BDBDBD" />
+                            <text x="15" y="75" fill="black">L</text>
+                            <!-- Top face -->
+                            <polygon points="50,50 50,150 150,150 150,50" fill="#E0E0E0" />
+                            <text x="85" y="125" fill="black">E</text>
+                        </svg>
+                    </div>
+                    <div class="choice">
+                        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Front face -->
+                            <polygon points="50,50 150,50 100,0 0,0" fill="#9E9E9E" />
+                            <text x="75" y="25" fill="black">E</text>
+                            <!-- Left face -->
+                            <polygon points="0,100 50,150 50,50 0,0" fill="#BDBDBD" />
+                            <text x="15" y="75" fill="black">P</text>
+                            <!-- Top face -->
+                            <polygon points="50,50 50,150 150,150 150,50" fill="#E0E0E0" />
+                            <text x="85" y="125" fill="black">A</text>
+                        </svg>
+                    </div>
+                    <div class="choice">
+                        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Front face -->
+                            <polygon points="50,50 150,50 100,0 0,0" fill="#9E9E9E" />
+                            <text x="75" y="25" fill="black">L</text>
+                            <!-- Left face -->
+                            <polygon points="0,100 50,150 50,50 0,0" fill="#BDBDBD" />
+                            <text x="15" y="75" fill="black">I</text>
+                            <!-- Top face -->
+                            <polygon points="50,50 50,150 150,150 150,50" fill="#E0E0E0" />
+                            <text x="85" y="125" fill="black">E</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="solution">(c) This is the correct dice.</div>
+            </div>
+
+
+            <div class="questions" data-answer="d">
+
+                <div class="question">
+                    Reading from one of the corner makes meaningful word. What is its fifth letter.
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <td>T</td>
+                                <td>R</td>
+                                <td>C</td>
+
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>Y</td>
+                                <td>H</td>
+
+                            </tr>
+                            <tr>
+                                <td>I</td>
+                                <td>M</td>
+                                <td>E</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="choices">
+
+                    <div class="choice">
+
+                        Y
+                    </div>
+                    <div class="choice">
+
+                        E
+                    </div>
+                    <div class="choice">
+
+                        I
+                    </div>
+                    <div class="choice">
+
+                        S
+                    </div>
+
+                </div>
+                <div class="answer"></div>
+                <div class="solution"></div>
+
+            </div>
+            <div class="questions" data-answer="d">
+                <div class="question">
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td>9</td>
+                                <td>5</td>
+                                <td>E</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>H</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>39</td>
+                                <td>18</td>
+                                <td>?</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="choices">
+
+                    <div class="choice">
+
+                        E
+                    </div>
+                    <div class="choice">
+
+                        D
+                    </div>
+                    <div class="choice">
+
+                        F
+                    </div>
+                    <div class="choice">
+
+                        G
+                    </div>
+
+                </div>
+                <div class="answer"></div>
+                <div class="solution"></div>
+
+            </div>
 
             <div class="questions" data-answer="a">
                 <div class="question">
-                    Based on the given information, which subject falls on Tuesday?
+                    A training college has to conduct a refresher course for teachers of six different subjects:
+                    Microbiology, Physiology, Surgery, Anatomy, Biochemistry, and Orthopedics from 22nd to 28th July.
+                    The following conditions apply:
+                    <br>
+                    i. Course should start with Physiology.
+                    <br>
+                    ii. 23rd July being Sunday, should be a holiday.
+                    <br>
+                    iii. Course should end with Biochemistry.
+                    <br>
+                    iv. Surgery should be immediately after the holiday.
+                    <br>
+                    v. There should be a gap of one day between Anatomy and Orthopedics.
+                    <br>
+                    Based on the above information, which subject falls on Tuesday?
                 </div>
                 <div class="choices">
-
                     <div class="choice">
-
                         Biochemistry
                     </div>
                     <div class="choice">
-
                         Physiology
                     </div>
                     <div class="choice">
-
                         Surgery
                     </div>
                     <div class="choice">
-
                         Microbiology
                     </div>
-
                 </div>
-                <div class="answer"></div>
-                <div class="solution">(a) Biochemistry falls on Tuesday.</div>
-
+                <div class="solution">(a) Correct answer explanation here.</div>
             </div>
+
             <div class="questions" data-answer="d">
                 <div class="question">
                     The sum of the ages of five children, with an age gap of 3 years, is 60. What is the age of the
@@ -5091,33 +5431,203 @@
 
             </div>
 
+
+            <div class="questions" data-answer="b">
+                <div class="question">
+                    A piece of paper is folded & cut as shown below in the question figure. From the given answer
+                    figures, indicate how it will appear when unfolded.
+                    <img width="225px" src="/image/cee/Solution/Paperfoldingquestion.png">
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        <img width="100px" src="/image/cee/Solution/Paperfolding1.png">
+                    </div>
+                    <div class="choice">
+                        <img width="100px" src="/image/cee/Solution/Paperfolding2.png">
+                    </div>
+                    <div class="choice">
+                        <img width="100px" src="/image/cee/Solution/Paperfolding3.png">
+                    </div>
+                    <div class="choice">
+                        <img width="100px" src="/image/cee/Solution/Paperfolding4.png">
+                    </div>
+                </div>
+                <div class="solution">(b) Correct answer explanation here.</div>
+            </div>
+
+            <div class="questions" data-answer="a">
+                <div class="question">
+                    Choose the correct statement regarding the cause and effect relationship between the following
+                    statements.
+                    <p>Statement I: To study in BPH, one has to appear in a single common exam for any college they want
+                        to join.</p>
+                    <p>Statement II: Medical Education Commission (MEC) is responsible for conducting a common exam for
+                        BPH.</p>
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        Statement I is the cause, and statement II is the effect.
+                    </div>
+                    <div class="choice">
+                        Statement I is the effect, and statement II is the cause.
+                    </div>
+                    <div class="choice">
+                        Both statements I and II are independent causes and effects.
+                    </div>
+                    <div class="choice">
+                        Both statements I and II are effects of a common cause.
+                    </div>
+                </div>
+                <div class="solution">(a) Correct answer explanation here.</div>
+            </div>
+            <div class="questions" data-answer="c">
+                <div class="question">
+                    A boy said pointing to a girl, "She is the daughter of the son of the father of my uncle." What is
+                    the relation between them?
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        Sister
+                    </div>
+                    <div class="choice">
+                        Daughter in law
+                    </div>
+                    <div class="choice">
+                        Nephew
+                    </div>
+                    <div class="choice">
+                        Mother
+                    </div>
+                </div>
+                <div class="solution">(c) Correct answer explanation here.</div>
+            </div>
             <div class="questions" data-answer="d">
                 <div class="question">
-                    The sum of the ages of five children, with an age gap of 3 years, is 60. What is the age of the
-                    youngest one?
+                    If South East becomes North, and South West becomes East, then what will West become?
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        South East
+                    </div>
+                    <div class="choice">
+                        North East
+                    </div>
+                    <div class="choice">
+                        North
+                    </div>
+                    <div class="choice">
+                        West
+                    </div>
+                </div>
+                <div class="solution">(d) Correct answer explanation here.</div>
+            </div>
+            <div class="questions" data-answer="a">
+                <div class="question">
+                    In the kitchen, boxes of vegetables, salads, fruits, and snacks were stacked in a sequence. The
+                    first box was of fruits, and the vegetable was placed between snacks and salads. If the box of
+                    fruits was followed by the box of snacks, then what was the content of the last box?
+                </div>
+                <div class="choices">
+                    <div class="choice">
+                        Snacks
+                    </div>
+                    <div class="choice">
+                        Vegetables
+                    </div>
+                    <div class="choice">
+                        Fruits
+                    </div>
+                    <div class="choice">
+                        Salads
+                    </div>
+                </div>
+                <div class="solution">(a) Correct answer explanation here.</div>
+            </div>
+
+            <div class="questions" data-answer="d">
+                <div class="question">
+                    A ladder of length 100 m rests against the wall
+                    and makes angle 45&deg with the horizontal. Find
+                    the distance foot of ladder & wall.
                 </div>
                 <div class="choices">
 
                     <div class="choice">
 
-                        6
+                        $100/ \sqrt{2}$
                     </div>
                     <div class="choice">
 
-                        4
+                        $100 \sqrt{2}$
                     </div>
                     <div class="choice">
 
-                        2
+                        $200 \sqrt{2}$
                     </div>
                     <div class="choice">
 
-                        5
+                        $200/ \sqrt{2}$
                     </div>
 
                 </div>
                 <div class="answer"></div>
                 <div class="solution">(d) The age of the youngest child is 5 years.</div>
+
+            </div>
+            <div class="questions" data-answer="d">
+                <div class="question">
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <td>44</td>
+                                <td>8</td>
+                                <td>51</td>
+                                <td>F</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>7</td>
+                                <td>56</td>
+                                <td>K</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>5</td>
+                                <td>25</td>
+                                <td>G</td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>6</td>
+                                <td>32</td>
+                                <td>?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="choices">
+
+                    <div class="choice">
+
+                        E
+                    </div>
+                    <div class="choice">
+
+                        D
+                    </div>
+                    <div class="choice">
+
+                        F
+                    </div>
+                    <div class="choice">
+
+                        G
+                    </div>
+
+                </div>
+                <div class="answer"></div>
+                <div class="solution"></div>
 
             </div>
         </div>

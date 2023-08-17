@@ -1,4 +1,68 @@
 
+function loadChemDoodleResources(callback) {
+    // Create and append the link element for CSS
+    var cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = '/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.css';
+    cssLink.type = 'text/css';
+
+    // Create and append the script element for JavaScript
+    var script4 = document.createElement('script');
+    script4.type = 'text/javascript';
+    script4.src = '/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.js';
+
+    // Append the link and script elements to the head of the document
+    document.head.appendChild(cssLink);
+    document.head.appendChild(script4);
+
+    // Add load event listeners to both CSS and JS resources
+    cssLink.addEventListener('load', function() {
+        script4.addEventListener('load', callback); // Execute the callback after JS loads
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+// var cssLink = document.createElement('link');
+// cssLink.rel = 'stylesheet';
+// cssLink.href = '/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.css';
+// cssLink.type = 'text/css';
+// document.head.appendChild(cssLink);
+
+// var script4 = document.createElement('script');
+// script4.type = 'text/javascript';
+// script4.src = '/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.js';
+// document.head.appendChild(script4);
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var cssLink = document.createElement('link');
+//     cssLink.rel = 'stylesheet';
+//     cssLink.href = '/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.css';
+//     cssLink.type = 'text/css';
+//     document.head.appendChild(cssLink);
+
+//     // Create and append the script element for JavaScript
+//     var script4 = document.createElement('script');
+//     script4.type = 'text/javascript';
+//     script4.src = '/cdn/ChemDoodleWeb-9.5.0/install/ChemDoodleWeb.js';
+//     document.head.appendChild(script4);
+// });
+
+
+
 
 
 /*
