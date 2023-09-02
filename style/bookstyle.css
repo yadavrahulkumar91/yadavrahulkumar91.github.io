@@ -184,6 +184,7 @@ header .lesson-no-box h1{
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   cursor: pointer;
+  display:none;
   }
   .active-tab {
   background-color: #ffffff;
@@ -424,6 +425,8 @@ main {
   hyphens: auto;
 
   margin-left:2%;
+
+  text-indent: 30px;
 }
 
 /* Style for image in main content */

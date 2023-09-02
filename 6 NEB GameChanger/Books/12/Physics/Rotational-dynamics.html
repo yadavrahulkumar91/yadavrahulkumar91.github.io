@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
-    <script src="/script/bookscript.js"></script>
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
     
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
     <div id="home-container" class="container">    
       <h2>Equation of Angular Motion and Relation between Linear and Angular Kinematics</h2>
 
@@ -35,10 +47,10 @@
 
 <p>Where:</p>
 <ul>
-  <li>$$\theta$$ represents the angular displacement in radians</li>
-  <li>$$\omega_0$$ represents the initial angular velocity in radians per second</li>
-  <li>$$\alpha$$ represents the angular acceleration in radians per second squared</li>
-  <li>$$t$$ represents the time in seconds</li>
+  <li>$\theta$ represents the angular displacement in radians</li>
+  <li>$\omega_0$ represents the initial angular velocity in radians per second</li>
+  <li>$\alpha$ represents the angular acceleration in radians per second squared</li>
+  <li>$t$ represents the time in seconds</li>
 </ul>
 
 <p>This equation is derived using the principles of rotational kinematics, similar to how equations of linear motion are derived from linear kinematics.</p>
@@ -53,9 +65,9 @@
 
 <p>Where:</p>
 <ul>
-  <li>$$s$$ represents the linear displacement in meters</li>
-  <li>$$r$$ represents the radius of the circular path in meters</li>
-  <li>$$\theta$$ represents the angular displacement in radians</li>
+  <li>$s$ represents the linear displacement in meters</li>
+  <li>$r$ represents the radius of the circular path in meters</li>
+  <li>$\theta$ represents the angular displacement in radians</li>
 </ul>
 
 <p>This equation shows that the linear displacement is directly proportional to the radius and the angular displacement.</p>
@@ -66,9 +78,9 @@
 
 <p>Where:</p>
 <ul>
-  <li>$$v$$ represents the linear velocity in meters per second</li>
-  <li>$$r$$ represents the radius of the circular path in meters</li>
-  <li>$$\omega$$ represents the angular velocity in radians per second</li>
+  <li>$v$ represents the linear velocity in meters per second</li>
+  <li>$r$ represents the radius of the circular path in meters</li>
+  <li>$\omega$ represents the angular velocity in radians per second</li>
 </ul>
 
 <p>This equation demonstrates that the linear velocity is directly proportional to the radius and the angular velocity.</p>
@@ -145,29 +157,29 @@
 <h1>Moment of Inertia of a Uniform Rod</h1>
 <p>In physics, the moment of inertia is a measure of an object's resistance to rotational motion about a particular axis. It quantifies how the mass of an object is distributed around that axis. For a uniform rod, the moment of inertia depends on its length and the axis of rotation.</p>
 <h2>Formula for Moment of Inertia</h2>
-<p>The moment of inertia, often denoted by $$I$$, for a uniform rod rotating about an axis perpendicular to its length can be calculated using the following formula:</p>
+<p>The moment of inertia, often denoted by $I$, for a uniform rod rotating about an axis perpendicular to its length can be calculated using the following formula:</p>
 <div>
   <p>$$I = \frac{1}{12} m \ell^2$$</p>
 </div>
 <p>Where:</p>
 <ul>
-  <li>$$I$$ is the moment of inertia</li>
-  <li>$$m$$ is the mass of the rod</li>
-  <li>$$\ell$$ is the length of the rod</li>
+  <li>$I$ is the moment of inertia</li>
+  <li>$m$ is the mass of the rod</li>
+  <li>$\ell$ is the length of the rod</li>
 </ul>
 <p>This formula assumes that the rotation axis passes through the center of mass of the rod. It is important to note that the mass should be in kilograms (kg) and the length should be in meters (m) for consistent units.</p>
 <h2>Derivation of the Formula</h2>
-<p>To derive the moment of inertia formula for a uniform rod, consider the rod as a collection of infinitesimally small masses $$dm$$ distributed along its length $$\ell$$. The mass of each small element can be expressed as:</p>
+<p>To derive the moment of inertia formula for a uniform rod, consider the rod as a collection of infinitesimally small masses $dm$ distributed along its length $\ell$. The mass of each small element can be expressed as:</p>
 <div>
   <p>$$dm = \frac{m}{\ell} dx$$</p>
 </div>
-<p>Where $$dx$$ is an infinitesimally small length along the rod.</p>
+<p>Where $dx$ is an infinitesimally small length along the rod.</p>
 <p>The moment of inertia of each small mass element about the axis of rotation can be calculated using the formula:</p>
 <div>
   <p>$$dI = r^2 dm$$</p>
 </div>
-<p>Where $$r$$ is the perpendicular distance from the mass element to the axis of rotation.</p>
-<p>Since the rod is uniform, the mass distribution is constant. Thus, the perpendicular distance $$r$$ is equal to the distance from the axis of rotation to the center of mass of the rod, which is $$\frac{\ell}{2}$$. Substituting these values into the equation:</p>
+<p>Where $r$ is the perpendicular distance from the mass element to the axis of rotation.</p>
+<p>Since the rod is uniform, the mass distribution is constant. Thus, the perpendicular distance $r$ is equal to the distance from the axis of rotation to the center of mass of the rod, which is $\frac{\ell}{2}$. Substituting these values into the equation:</p>
 <div>
   <p>$$dI = \left(\frac{\ell}{2}\right)^2 \frac{m}{\ell} dx = \frac{1}{4} m dx$$</p>
 </div>
@@ -177,9 +189,9 @@
 </div>
 <p>Solving the integral:</p>
 <div>
-  <p>$$I = \frac{1}{4} m \int dx$$</p>
-  <p>$$I = \frac{1}{4} m \ell$$</p>
-  <p>$$I = \frac{1}{12} m \ell^2$$</p>
+  <p>$I = \frac{1}{4} m \int dx$</p>
+  <p>$I = \frac{1}{4} m \ell$</p>
+  <p>$I = \frac{1}{12} m \ell^2$</p>
 </div>
 <p>This is the final formula for the moment of inertia of a uniform rod.</p>
 <h2>Image: Moment of Inertia of a Uniform Rod</h2>
@@ -303,12 +315,16 @@
     
  
     
-   <script src="bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
+     
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var contentPageLocation = "../contentPhysics.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
   
   </body>
-</html>ECHO is on.
+  
+  </html>
+  

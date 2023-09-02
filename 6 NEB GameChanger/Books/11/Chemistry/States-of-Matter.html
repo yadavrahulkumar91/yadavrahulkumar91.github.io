@@ -1,25 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="/style/bookstyle.css">
-    
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+
     <div id="home-container" class="container">  
-      
+        <h1>Characteristics of Solid, Liquid, and Gas States</h1>
+        <table>
+          <tr>
+            <th>Aspect</th>
+            <th>Solid</th>
+            <th>Liquid</th>
+            <th>Gas</th>
+          </tr>
+          <tr>
+            <td>Shape</td>
+            <td>Definite shape</td>
+            <td>No definite shape; takes shape of container</td>
+            <td>No definite shape; spreads to fill container</td>
+          </tr>
+          <tr>
+            <td>Volume</td>
+            <td>Definite volume</td>
+            <td>Definite volume</td>
+            <td>No definite volume; fills entire container</td>
+          </tr>
+          <tr>
+            <td>Particle Arrangement</td>
+            <td>Tightly packed, ordered arrangement</td>
+            <td>Close arrangement, less ordered</td>
+            <td>Loosely packed, random arrangement</td>
+          </tr>
+          <tr>
+            <td>Particle Motion</td>
+            <td>Vibrational motion around fixed positions</td>
+            <td>Particles flow past each other; moderate motion</td>
+            <td>Particles move rapidly and freely</td>
+          </tr>
+          <tr>
+            <td>Intermolecular Forces</td>
+            <td>Strong intermolecular forces</td>
+            <td>Moderate intermolecular forces</td>
+            <td>Weak intermolecular forces</td>
+          </tr>
+          <tr>
+            <td>Cohesive Forces</td>
+            <td>High cohesive forces</td>
+            <td>Moderate cohesive forces</td>
+            <td>Low cohesive forces</td>
+          </tr>
+          <tr>
+            <td>Thermal Energy</td>
+            <td>Low thermal energy</td>
+            <td>Moderate thermal energy</td>
+            <td>High thermal energy</td>
+          </tr>
+          <tr>
+            <td>Temperature Existence</td>
+            <td>Exists as definite melting point</td>
+            <td>Exists as definite boiling point</td>
+            <td>No fixed temperature transitions</td>
+          </tr>
+          <tr>
+            <td>Compressibility</td>
+            <td>Low compressibility</td>
+            <td>Low compressibility</td>
+            <td>High compressibility</td>
+          </tr>
+          <tr>
+            <td>Energy Transfer</td>
+            <td>Poor heat and electricity conductors</td>
+            <td>Good heat and electricity conductors</td>
+            <td>Variable heat and electricity conductors</td>
+          </tr>
+          <tr>
+            <td>Examples</td>
+            <td>Wood, metal, ice</td>
+            <td>Water, milk, oil</td>
+            <td>Air, helium, oxygen</td>
+          </tr>
+        </table>
       <h1>7.1 Gaseous State</h1>
     
       <h2>7.1.1 Kinetic Theory of Gas and its Postulates</h2>
@@ -196,14 +284,15 @@
     </div>
     
  
-    
-
-   <script src="/script/bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
   
-  </body>
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var contentPageLocation = "../chemistryContent.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+
+</body>
+
 </html>

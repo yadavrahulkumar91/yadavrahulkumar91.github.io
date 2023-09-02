@@ -1,115 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="/style/bookstyle.css">
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
     
-
-<style>
-
-
-.periodic-table {
-
-  border-collapse: collapse;
-}
-
-.periodic-table th, .periodic-table td {
-    border: 1px solid #000;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    text-align: center;
-}
-
-.element {
-    position: relative;
-}
-
-.symbol {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.atomic-number {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 12px;
-    color: #555;
-}
-
-.atomic-mass {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    font-size: 12px;
-    color: #555;
-}
-
-.element-name {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    font-size: 10px;
-    color: #555;
-}
-
-.hydrogen {
-    background-color: #ffeb99;
-    color: #000;
-}
-
-.helium {
-    background-color: #d9ffff;
-    color: #000;
-}
-
-/* Define different styles for other element groups */
-/* You can add more styles for other groups as needed */
-
-
-
-
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
     <div id="home-container" class="container">    
         <h1>4.1 Modern Periodic Law and Modern Periodic Table</h1>
   
@@ -341,12 +263,15 @@
     
  
     
-   <script src="/script/bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
-  
-  </body>
+ 
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var contentPageLocation = "../chemistryContent.html";
+  </script>
+  <script src="/script/bookscript.js"></script>
+
+</body>
+
 </html>

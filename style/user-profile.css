@@ -182,3 +182,10 @@
 #change-password-id {
     display: none;
 }
+
+
+.sign-in-form, .sign-up-form {
+    height:90vh;
+    overflow-y: scroll;
+}
+

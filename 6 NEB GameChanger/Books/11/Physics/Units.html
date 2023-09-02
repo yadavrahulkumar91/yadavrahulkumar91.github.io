@@ -5,6 +5,13 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> 
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script> -->
+	
+	
+	<script src="/script/firebase-config.js"></script>
 
 </head>
 
@@ -36,6 +43,64 @@
     </script>
   </header>
   <main>
+
+		<form id="commentForm">
+			<input type="text" id="name" placeholder="Name" required>
+			<input type="email" id="email" placeholder="Email" required>
+			<textarea id="comment" placeholder="Your comment" required></textarea>
+			<button type="submit">Submit Comment</button>
+		  </form>
+		
+		  <div id="commentSection"></div>
+		  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+		  <script>
+			// Initialize Firebase
+			
+		
+			firebase.initializeApp(firebaseConfig);
+		
+			const database = firebase.database();
+			const commentForm = document.getElementById('commentForm');
+			const commentSection = document.getElementById('commentSection');
+		
+			commentForm.addEventListener('submit', (event) => {
+			  event.preventDefault();
+		
+			  const name = document.getElementById('name').value;
+			  const email = document.getElementById('email').value;
+			  const commentText = document.getElementById('comment').value;
+		
+			  const newCommentRef = database.ref('comments').push();
+			  newCommentRef.set({
+				name: name,
+				email: email,
+				comment: commentText,
+				timestamp: firebase.database.ServerValue.TIMESTAMP
+			  });
+		
+			  commentForm.reset();
+			});
+		
+			function loadComments() {
+			  const commentsRef = database.ref('comments');
+			  commentsRef.on('value', (snapshot) => {
+				commentSection.innerHTML = '';
+		
+				snapshot.forEach((childSnapshot) => {
+				  const comment = childSnapshot.val();
+				  const commentDiv = document.createElement('div');
+				  commentDiv.innerHTML = `<strong>${comment.name}</strong> (${comment.email}): ${comment.comment}`;
+				  commentSection.appendChild(commentDiv);
+				});
+			  });
+			}
+		
+			loadComments();
+		  </script>
+
+
+
 
     <div id="home-container" class="container">
       <h1>Precision and Significant Figures</h1>

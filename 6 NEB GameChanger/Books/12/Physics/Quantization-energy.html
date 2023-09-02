@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
-    <script src="/script/bookscript.js"></script>
+
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left-box-container">
+      <div class="unit-left-lesson">
+        <div class="unit-left"></div>
+        <div class="lesson-no-box" id="lesson-no-id"></div>
+      </div>
+      <div class="unit-name-box" id="unit-name-id"></div>
+    </div>
+
+    <div class="header-center">
+      <div class="lesson-name" id="lesson-name-id"></div>
+      <div class="tab-bar">
+        <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+        <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+        <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+        <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+      </div>
+    </div>
+
+  </header>
+  <main>
     
-  </head>
-  <body>
-    
-    <header>
-      <h1></h1>
-      <p></p>
-    </header>
-    <center><div>
-      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
-      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
-      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
-      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
-    </div></center>
-        
     <div id="home-container" class="container">    
 
       <h1>Bohr's Theory of the Hydrogen Atom</h1>
@@ -232,6 +244,75 @@
          <li>Characteristic radiation: Electrons collide with inner-shell electrons of atoms, causing the removal of an inner-shell electron. This vacancy is then filled by an outer-shell electron, resulting in the emission of X-rays with specific wavelengths characteristic of the atom.</li>
       </ol>
       
+      <h2>Types of X-rays: Hard vs Soft X-rays</h2>
+      <p>X-rays are a form of electromagnetic radiation with varying energy levels, resulting in two main categories: hard X-rays and soft X-rays. These distinctions are important for their applications in different fields. Let's explore the differences between hard and soft X-rays:</p>
+      
+      <h3>Hard X-rays</h3>
+      <p>Hard X-rays have higher energy levels and shorter wavelengths compared to soft X-rays. They are better suited for penetrating dense materials and are commonly used in various applications:</p>
+      
+      <h4>Medical Imaging</h4>
+      <p>Hard X-rays are utilized in medical imaging to visualize dense tissues like bones. They can penetrate through the body to create detailed images of skeletal structures, helping diagnose fractures, joint issues, and other bone-related conditions.</p>
+      
+      <h4>Security Scanning</h4>
+      <p>In security applications, hard X-rays are employed for baggage and cargo scanning at airports and customs checkpoints. These X-rays can penetrate through suitcases and containers, allowing authorities to identify hidden objects or contraband items.</p>
+      
+      <h4>Material Analysis</h4>
+      <p>Hard X-rays are used in material analysis techniques such as X-ray diffraction and X-ray spectroscopy. These methods help researchers study the atomic and molecular structures of crystals and materials, contributing to fields like chemistry, physics, and materials science.</p>
+      
+      <h3>Soft X-rays</h3>
+      <p>Soft X-rays have lower energy levels and longer wavelengths compared to hard X-rays. They are particularly useful for studying the surface properties and electronic structures of materials:</p>
+      
+      <h4>Electronic Device Characterization</h4>
+      <p>Soft X-rays are valuable for investigating the electronic properties of materials used in electronic devices. They help researchers understand the behavior of semiconductors, metals, and other materials at the nanoscale, aiding in the development of advanced technologies.</p>
+      
+      <h4>Synchrotron Radiation</h4>
+      <p>Soft X-rays are produced in synchrotron facilities, where charged particles are accelerated to high speeds and emit synchrotron radiation. This radiation is used in a range of scientific experiments, including studies of molecular structures, protein interactions, and surface chemistry.</p>
+      
+      <h4>Biomedical Research</h4>
+      <p>Soft X-rays play a role in biomedical research by allowing scientists to study biological samples and proteins. Techniques like X-ray crystallography using soft X-rays help reveal the intricate structures of biomolecules, leading to advancements in drug design and disease understanding.</p>
+      
+      <p>The distinction between hard and soft X-rays highlights their unique properties and applications in various scientific, medical, and industrial contexts.</p>
+
+      <table>
+         <tr>
+           <th>Aspect</th>
+           <th>Hard X-rays</th>
+           <th>Soft X-rays</th>
+         </tr>
+         <tr>
+           <td>Energy Level</td>
+           <td>Higher</td>
+           <td>Lower</td>
+         </tr>
+         <tr>
+           <td>Wavelength</td>
+           <td>Shorter</td>
+           <td>Longer</td>
+         </tr>
+         <tr>
+           <td>Penetration</td>
+           <td>Effective for dense materials</td>
+           <td>Less effective for dense materials</td>
+         </tr>
+         <tr>
+           <td>Applications</td>
+           <td>
+             <ul>
+               <li>Medical imaging (bones)</li>
+               <li>Security scanning</li>
+               <li>Material analysis</li>
+             </ul>
+           </td>
+           <td>
+             <ul>
+               <li>Electronic device characterization</li>
+               <li>Synchrotron radiation experiments</li>
+               <li>Biomedical research</li>
+             </ul>
+           </td>
+         </tr>
+       </table>
+
       <h2>Uses of X-rays</h2>
       
       <p>X-rays have numerous applications across various fields, including:</p>
@@ -306,12 +387,15 @@
     
  
     
-   <script src="bookscript.js"></script>
-   
-   <footer>
-      <p>&copy; 2023 GameChanger</p>
-      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
-    </footer>
-  
-  </body>
-</html>ECHO is on.
+        
+</main>
+<footer>
+</footer>
+<script>
+  var contentPageLocation = "../contentPhysics.html";
+</script>
+<script src="/script/bookscript.js"></script>
+
+</body>
+
+</html>

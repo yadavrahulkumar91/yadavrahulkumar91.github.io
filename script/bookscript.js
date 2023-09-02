@@ -912,7 +912,7 @@ fetch(contentPageLocation)
       // Check if the unit name is found, and exit the loop
       if (unitName !== '') {
         break;
-      }
+      } 
     }
 
     console.log("Unit Name:", unitName);

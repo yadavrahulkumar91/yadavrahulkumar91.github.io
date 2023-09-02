@@ -2,5 +2,6 @@
     "livePreview.defaultPreviewPath": "/10 MBBS GameChanger/Books/TU Super Fast Track/Paper-IV.html",
     "html.validate.styles": false,
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 8000
+    "editor.wordWrapColumn": 8000,
+    "liveServer.settings.multiRootWorkspaceName": "yadavrahulkumar91.github.io"
 }
