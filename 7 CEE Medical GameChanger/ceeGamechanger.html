@@ -14,7 +14,7 @@
     
         <div id="header"></div>
 	<script>
-		fetch('/html/header.html')
+		fetch('/html/header/content.html')
 			.then(response => response.text())
 			.then(data => {
 				document.getElementById('header').innerHTML = data;
@@ -29,27 +29,27 @@
                 <h3>Our Books</h3>
                 <div class="book-container">
                     <div class="container2">
-                        <div class="boxbook" onclick="location.href='Books/contentSolution.html';">
+                        <div class="boxbook" onclick="location.href='Books/Solution/content.html';">
                             <img src="/image/superCompleteSolution.jpg" alt="Super Complete Solution">
                         </div>
                         <!--<h2>Super Complete Solution</h2> -->
-                        <div class="boxbook" onclick="location.href='Books/contentPhysics.html';">
+                        <div class="boxbook" onclick="location.href='Books/physics/content.html';">
                             <img src="/image" alt="Physics">
                             <h2>Physics</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='Books/contentChemistry.html';">
+                        <div class="boxbook" onclick="location.href='Books/chemistry/content.html';">
                             <img src="iom.jpeg" alt="Chemistry">
                             <h2>Chemistry</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='Books/contentZoology.html';">
+                        <div class="boxbook" onclick="location.href='Books/zoology/content.html';">
                             <img src="ku-sms.jpg" alt="Biology">
                             <h2>Zoology</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='Books/contentBotany.html';">
+                        <div class="boxbook" onclick="location.href='Books/botany/content.html';">
                             <img src="/image/CEEBotanyGameChanger.png" alt="Biology">
                             <h2>Botany</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='Books/contentMAT.html';">
+                        <div class="boxbook" onclick="location.href='Books/MAT/content.html';">
                             <img src="/image/CEEMatGameChanger.png" alt="MATS">
                             <h2>MAT</h2>
                         </div>
@@ -62,23 +62,23 @@
                 <h3>Reference Books</h3>
                 <div class="book-container">
                     <div class="container2">
-                        <div class="boxbook" onclick="location.href='TU Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='TU Super Fast Track/Paper content/content.html';">
                             <img src="iom.jpeg" alt="TU Super Fast Track">
                             <h2>TU MBBS Super Fast Track</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='KU Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='KU Super Fast Track/Paper content/content.html';">
                             <img src="iom.jpeg" alt="KU Super Fast Track">
                             <h2>Anatomy</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='PAHS Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='PAHS Super Fast Track/Paper content/content.html';">
                             <img src="ku-sms.jpg" alt="PAHS Super Fast Track">
                             <h2>Biochemistry</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='BPKIHS Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='BPKIHS Super Fast Track/Paper content/content.html';">
                             <img src="bpkihs.jpg" alt="BPKIHS Super Fast Track">
                             <h2>Microbiology</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='KAHS Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='KAHS Super Fast Track/Paper content/content.html';">
                             <img src="pahs.jpg" alt="KAHS Super Fast Track">
                             <h2>Physiology</h2>
                         </div>
@@ -91,23 +91,23 @@
                 <h3>Any Recent Resources</h3>
                 <div class="book-container">
                     <div class="container2">
-                        <div class="boxbook" onclick="location.href='TU Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='TU Super Fast Track/Paper content/content.html';">
                             <img src="iom.jpeg" alt="TU Super Fast Track">
                             <h2>TU MBBS Super Fast Track</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='KU Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='KU Super Fast Track/Paper content/content.html';">
                             <img src="iom.jpeg" alt="KU Super Fast Track">
                             <h2>Anatomy</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='PAHS Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='PAHS Super Fast Track/Paper content/content.html';">
                             <img src="ku-sms.jpg" alt="PAHS Super Fast Track">
                             <h2>Biochemistry</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='BPKIHS Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='BPKIHS Super Fast Track/Paper content/content.html';">
                             <img src="bpkihs.jpg" alt="BPKIHS Super Fast Track">
                             <h2>Microbiology</h2>
                         </div>
-                        <div class="boxbook" onclick="location.href='KAHS Super Fast Track/Paper content.html';">
+                        <div class="boxbook" onclick="location.href='KAHS Super Fast Track/Paper content/content.html';">
                             <img src="pahs.jpg" alt="KAHS Super Fast Track">
                             <h2>Physiology</h2>
                         </div>
@@ -311,7 +311,7 @@
 
     <footer id="footer">
         <script>
-            fetch('footer.html')
+            fetch('footer/content.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('/html/footer').innerHTML = data;

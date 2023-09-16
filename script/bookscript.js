@@ -14,32 +14,39 @@ var mainElement = document.getElementsByTagName('main')[0];
 
 const firebaseAppCompat = createAndAppendElement(headElement, 'script', {
   type: 'text/javascript',
-  src: 'https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js'
+  src: 'https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js',
+  async: false,
 });
 
 const firebaseAuthCompat = createAndAppendElement(headElement, 'script', {
   type: 'text/javascript',
-  src: 'https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js'
+  src: 'https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js',
+  async: false,
 });
 
 const firebaseApp = createAndAppendElement(headElement, 'script', {
   type: 'text/javascript',
-  src: 'https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js'
+  src: 'https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js',
+  async: false,
 });
 
 const firebaseAuth = createAndAppendElement(headElement, 'script', {
   type: 'text/javascript',
-  src: 'https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js'
+  src: 'https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js',
+  async: false,
 });
 
 const firebaseDatabase = createAndAppendElement(headElement, 'script', {
   type: 'text/javascript',
-  src: 'https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js'
+  src: 'https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js',
+  async: false,
 });
 
 const firebaseStorage = createAndAppendElement(headElement, 'script', {
   type: 'text/javascript',
-  src: 'https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js'
+  src: 'https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js',
+  async: false,
+
 });
 
 const quillScript = createAndAppendElement(headElement, 'script', {
@@ -50,15 +57,18 @@ const quillScript = createAndAppendElement(headElement, 'script', {
 const scripts = [
   {
     type: 'text/javascript',
-    src: 'https://polyfill.io/v3/polyfill.min.js?features=es6'
+    src: 'https://polyfill.io/v3/polyfill.min.js?features=es6',
+    async: false,
   },
   {
     type: 'text/javascript',
-    src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+    src: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+    async: false,
   },
   {
     type: 'text/javascript',
-    src: 'https://www.gstatic.com/charts/loader.js'
+    src: 'https://www.gstatic.com/charts/loader.js',
+    async: false,
   },
 
 
@@ -223,17 +233,17 @@ let quillScriptLoaded = false;
 
 firebaseApp.onload = () => {
   firebaseAppLoaded = true;
-  // checkFirebaseLoaded();
+  checkFirebaseLoaded();
 };
 
 firebaseAuth.onload = () => {
   firebaseAuthLoaded = true;
-  // checkFirebaseLoaded();
+  checkFirebaseLoaded();
 };
 
 firebaseDatabase.onload = () => {
   firebaseDatabaseLoaded = true;
-  // checkFirebaseLoaded();
+  checkFirebaseLoaded();
 };
 
 firebaseStorage.onload = () => {

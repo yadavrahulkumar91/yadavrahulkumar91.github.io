@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/style/bookstyle.css">
+
+
+
+</head>
+
+<body>
+
+  <header></header>
+  <center>
+    <div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div>
+  </center>
+
+  <div id="home-container" class="container">
+    <p><strong>Exercise 1.1</strong></p>
+    <p>1.</p>
+    <p>Soln:</p>
+    <ol type="a">
+      <li>
+        \(A \cup B = \{1, 2, 3, 4\} \cup \{3, 5, 7, 8\} = \{1, 2, 3, 4, 5, 7, 8\}\)
+      </li>
+      <li>
+        \(A \cap C = \{1, 2, 3, 4\} \cap \{1, 2, 7, 8\} = \{1, 2\}\)
+      </li>
+      <li>
+        \((A - B) \cap C = (\{1, 2, 3, 4\} - \{3, 5, 7, 8\}) \cap \{1, 2, 7, 8\} = \{1, 2, 4\} \cap \{1, 2, 7, 8\} =
+        \{1, 2\}\)
+      </li>
+      <li>
+        \(A \cup C = \{1, 2, 3, 4\} \cup \{1, 2, 7, 8\}\)<br>
+        So, \(A \cup C = \{1, 2, 3, 4, 7, 8\}\)<br>
+        Now, \(\overline{{AUC}} = U - (A \cup C)\)<br>
+        So, \(\overline{{AUC}} = \{5, 6, 9, 10\}\)
+      </li>
+      <li>
+        \(\overline{B} = U - B = \{1, 2, 3, \ldots, 9, 10\} - \{3, 5, 7, 8\} = \{1, 2, 4, 6, 9, 10\}\)<br>
+        Or, \(\overline{C} = U - C = \{1, 2, 3, \ldots, 9, 10\} - \{1, 2, 7, 8\}\)<br>
+        Or, \(\overline{B} \cup \overline{C} = \{1, 2, 4, 6, 9, 10\} \cup \{3, 4, 5, 6, 9, 10\}\)<br>
+        Or, \(\overline{B} \cup \overline{C} = \{1, 2, 3, 4, 5, 6, 9, 10\}\)
+      </li>
+      <li>
+        \((A \cup B) - C = \{1, 2, 3, 4, 5, 7, 8\} - \{1, 2, 7, 8\}\) [from 1(a)]<br>
+        \(= \{3, 4, 5\}\)
+      </li>
+    </ol>
+    <p>2.</p>
+    <p>Soln:</p>
+    <ol type="a">
+      <li>
+        \(A \cup B = \{b, c, d, e\} \cup \{d, e, f, g, h, i\} = \{b, c, d, e, f, g, h, i\}\)
+      </li>
+      <li>
+        \(A \cap C = \{b, c, d, e\} \cap \{a, e, i, o, u\} = \{e\}\)
+      </li>
+      <li>
+        \(A - B = \{b, c, d, e\} - \{d, e, f, g, h, i\} = \{b, c\}\)
+      </li>
+      <li>
+        \(A - C = \{b, c, d, e\} - \{a, e, i, o, u\} = \{b, c, d\}\)
+      </li>
+      <li>
+        \((A - C) \cap C = \{b, c, d\} \cap \{a, e, i, o, u\}\) [from 2(d)]<br>
+        \(= \emptyset\)
+      </li>
+      <li>
+        \(A \Delta D = (A - D) \cup (D - A)\)<br>
+        \(= (\{b, c, d, e\} - \{b, d, j, k\}) \cup (\{b, d, j, k\} - \{b, c, d, e\})\)<br>
+        \(= \{c, e\} \cup \{j, k\} = \{c, e, j, k\}\)
+      </li>
+      <li>
+        \((A \cup B) - C = \{b, c, d, e, f, g, h, i\} - \{a, e, i, o, u\}\) [from 2(a)]<br>
+        \(= \{b, c, d, f, g, h\}\)
+      </li>
+      <li>
+        \(\overline{B} = U - B = \{a, b, c, d, \ldots, i, j, k\} - \{d, e, f, g, h, i\} = \{a, b, c\}\)
+      </li>
+      <li>
+        \(A - B = U - (A - B)\)<br>
+        \(= \{a, b, c, d, \ldots, i, j, k\} - \{b, c\} = \{a, d, e, f, g, h, i, j, k\}\)
+      </li>
+    </ol>
+
+    <p><strong>3.</strong></p>
+    <p>Soln:</p>
+    <ol type="a">
+      <li>
+        Here, \(U = \{x : x \text{ is a positive integer less than 12}\}\)<br>
+        So, \(U = \{1, 2, 3, \ldots, 11\}\)
+        <p>Now, \(A \cup B = \{3, 5, 7, 9\} \cup \{1, 2, 3, 8, 9\} = \{1, 2, 3, 5, 7, 8, 9\}\)</p>
+        <p>So, \(A \cup B^c = U - (A \cup B)\)</p>
+        <p>\(= \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\} - \{1, 2, 3, 5, 7, 8, 9\}\)</p>
+        <p>\(= \{4, 6, 10, 11\}\)</p>
+      </li>
+      <li>
+        \(A - B = \{3, 5, 7, 9\} - \{1, 2, 3, 8, 9\} = \{5, 7\}\)
+        <p>So, \((A - B) \cup C = \{5, 7\} \cup \{1, 4, 5, 7, 10\} = \{1, 4, 5, 7, 10\}\)</p>
+      </li>
+      <li>
+        \(A - C = \{3, 5, 7, 9\} - \{1, 4, 7, 10\} = \{3, 5, 9\}\)
+        <p>So, \((A - C) \cap B = \{3, 5, 9\} \cap \{1, 2, 3, 8, 9\} = \{3, 9\}\)</p>
+      </li>
+    </ol>
+
+
+    <p><strong>b</strong></p>
+    <p>Soln:</p>
+    <p>Here, \(U = \{x : x \text{ is a natural number up to 20}\}\)</p>
+    <p>So, \(U = \{1, 2, 3, \ldots, 20\}\)</p>
+    <p>\(A = \{x : x \geq 6\} = \{6, 7, 8, \ldots, 20\}\)</p>
+    <p>\(B = \{x : x \leq 8\} = \{1, 2, 3, \ldots, 8\}\)</p>
+    <p>\(C = \{x : 10 < x < 15\}=\{11, 12, 13, 14\}\)</p>
+        <p>Now, \(B \cup C = \{1, 2, 3, 4, 5, 6, 7, 8\} \cup \{11, 12, 13, 14\}\)</p>
+        <p>So, \(B \cup C = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14\}\)</p>
+        <p>Again, \(A \cap B = \{6, 7, 8, \ldots, 20\} \cap \{1, 2, 3, \ldots, 8\} = \{6, 7, 8\}\)</p>
+        <p>And, \(A - C = \{6, 7, 8, \ldots, 20\} - \{11, 12, 13, 14\}\)</p>
+        <p>\(= \{6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20\}\)</p>
+        <p>And \(A \cup B = \{6, 7, 8, \ldots, 20\} \cup \{1, 2, 3, \ldots, 8\}\)</p>
+        <p>\(= \{1, 2, 3, \ldots, 20\} = U\)</p>
+        <p>So, \(A \cup B^c = U - (A \cup B) = U - U = \emptyset\)</p>
+
+
+
+        <p><strong>Exercise 4</strong></p>
+        <p>a.</p>
+        <p>Soln: Here,</p>
+        <p>\(A = \{x : x = 2n + 1, n \leq 5, n \in N\}\)</p>
+        <p>So, \(A = \{3, 5, 7, 9, 11\}\)</p>
+        <p>\(B = \{x : x = 3n - 2, n \leq 4, n \in N\}\)</p>
+        <p>So, \(B = \{1, 4, 7, 10\}\)</p>
+        <p>Now, \(A \cup B = \{3, 5, 7, 9, 11\} \cup \{1, 4, 7, 10\}\)</p>
+        <p>\(= \{1, 3, 4, 5, 7, 9, 10, 11\}\)</p>
+        <p>\(A \cap B = \{3, 5, 7, 9, 11\} \cap \{1, 4, 7, 10\} = \{7\}\)</p>
+        <p>And, \(B - A = \{1, 4, 7, 10\} - \{3, 5, 7, 9, 11\} = \{1, 4, 10\}\)</p>
+        <p>b.</p>
+        <p>Soln:</p>
+        <p>Here, \(U = \{1, 2, 3, \ldots\}\)</p>
+        <p>\(A = \{3, 6, 9, 12, 15, 18\}\)</p>
+        <p>\(B = \{6, 12, 18, 24, 30\}\)</p>
+        <p>So, \(A \cap B = \{3, 6, 9, 12, 15, 18\} \cap \{6, 12, 18, 24, 30\}\).</p>
+        <p>\(= \{6, 12, 18\}\)</p>
+        <p>And \(A - B = \{3, 6, 9, 12, 15, 18\} - \{6, 12, 18, 24, 30\} = \{3, 9, 15\}\)</p>
+        <p>c.</p>
+        <p>Soln:</p>
+        <p>Here, \(U = \{x : -1 \leq x - 2 \leq 7\} = \{1, 2, 3, 4, 5, 6, 7, 8, 9\}\)</p>
+        <p>\(A = \{x : x \text{ is a prime number}\} = \{2, 3, 5, 7\}\)</p>
+        <p>\(B = \{x : x \text{ is an odd number}\} = \{1, 3, 5, 7, 9\}\)</p>
+        <p>Now,</p>
+        <p>(i) The set of elements which are either prime or odd = \(A \cup B = \{2, 3, 5, 7\} \cup \{1, 3, 5, 7, 9\} =
+          \{1, 2, 3, 5, 7, 9\}\)</p>
+        <p>(ii) The set of elements which are both prime and odd = \(A \cap B = \{2, 3, 5, 7\} \cap \{1, 3, 5, 7, 9\} =
+          \{3, 5, 7\}\)</p>
+        <p>(iii) The set of elements which are prime but not odd = \(A - B = \{2, 3, 5, 7\} - \{1, 3, 5, 7, 9\} =
+          \{2\}\)</p>
+
+
+        <ol type="1">
+          <li>
+            <p>Soln: Here,</p>
+            <p>\(A \cup B = \{a, b, c, d\} \cup \{c, d, e, f\} = \{a, b, c, d, e, f\}\)</p>
+            <p>\(A \cup C = \{a, b, c, d\} \cup \{d, e, f, g, h\} = \{a, b, c, d, e, f, g, h\}\)</p>
+            <p>\(B \cap C = \{c, d, e, f\} \cup \{d, e, f, g, h\} = \{d, e, f\}\)</p>
+            <p>a. L.H.S. = \(A \cup (B \cap C)\)</p>
+            <p>= \(\{a, b, c, d, e, f\} \cup \{d, e, f\} = \{a, b, c, d, e, f\}\)</p>
+            <p>R.H.S. = \((A \cup B) \cap (A \cup C)\)</p>
+            <p>= \(\{a, b, c, d, e, f\} \cap \{a, b, c, d, e, f, g, h\} = \{a, b, c, d, e, f\}\)</p>
+            <p>Hence, \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</p>
+          </li>
+          <li>
+            <p>b. \(A \cap B = \{a, b, c, d\} \cap \{c, d, e, f\} = \{c, d\}\)</p>
+            <p>\(A \cap C = \{a, b, c, d\} \cap \{d, e, f, g, h\} = \{d\}\)</p>
+            <p>\(B \cup C = \{c, d, e, f\} \cup \{d, e, f, g, h\} = \{c, d, e, f, g, h\}\)</p>
+            <p>Now, LHS = \(A \cap (B \cup C) = \{a, b, c, d\} \cap \{c, d, e, f, g, h\} = \{c, d\}\)</p>
+            <p>RHS = \((A \cap B) \cup (A \cap C) = \{c, d\} \cup \{d\} = \{c, d\}\)</p>
+            <p>Hence, \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</p>
+          </li>
+          <li>
+            <p>c. soln: \(A^¯ = U - A = \{a, b, c, d, e, f, g, h\} - \{a, b, c, d\} = \{e, f, g, h\}\)</p>
+            <p>\(B^¯ = U - B = \{a, b, c, d, e, f, g, h\} - \{c, d, e, f\} = \{a, b, g, h\}\)</p>
+            <p>Now, LHS = \(A \cup B^¯\)</p>
+            <p>= \(U - (A \cup B)\)</p>
+            <p>= \(\{a, b, c, d, e, f, g, h\} - \{a, b, c, d, e, f\} = \{g, h\}\)</p>
+            <p>R.H.S. = \(A^¯ \cap B^¯ = \{e, f, g, h\} \cap \{a, b, g, h\} = \{g, h\}\)</p>
+            <p>Hence, \(A \cup B^¯ = A^¯ \cap B^¯\)</p>
+          </li>
+          <li>
+            <p>Here,</p>
+            <p>\(A - B = \{a, b, c, d\} - \{c, d, e, f\} = \{a, b\}\)</p>
+            <p>\(A - C = \{a, b, c, d\} - \{d, e, f, g, h\} = \{a, b, c\}\)</p>
+            <p>Now, LHS = \(A - (B \cup C) = \{a, b, c, d\} - \{c, d, e, f, g, h\} = \{a, b\}\)</p>
+            <p>RHS = \((A - B) \cap (A - C) = \{a, b\} \cap \{a, b, c\} = \{a, b\}\)</p>
+            <p>Hence, \(A - (B \cup C) = (A - B) \cap (A - C)\).</p>
+          </li>
+        </ol>
+
+
+        <ol start="6">
+          <li>
+            <p>a. Soln:</p>
+            <ol type="i">
+              <li>
+                <p>We have,</p>
+                <p>\(n(A \cup B) = n(A) + n(B) - n(A \cap B)\)</p>
+                <p>Or, 80 = 75 + 40 - \(n(A \cap B)\)</p>
+                <p>Or, \(n(A \cap B) = 155 - 80 = 35\)</p>
+              </li>
+              <li>
+                <p>\(n(A - B) = n(A) - n(A \cap B) = 75 - 35 = 40\)</p>
+              </li>
+              <li>
+                <p>\(n(A \cup B)^¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\) = \(n(U) - n(A \cup B) = 100 - 80 = 20\)</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>b. Soln:</p>
+            <ol type="i">
+              <li>
+                <p>\(n(A \cup B) = n(B)\) [\(A \subseteq B\)]</p>
+                <p>So, \(n(A \cup B) = 50\)</p>
+              </li>
+              <li>
+                <p>\(n(A \cap B) = n(A)\) [\(A \subseteq B\)]</p>
+                <p>So, \(n(A \cap B) = 37\)</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>Soln:</p>
+            <p>Let B = basketball, V = volleyball</p>
+            <p>So, \(n(B) = 32\), \(n(V) = 25\), \(n(B \cap V) = 13\)</p>
+            <p>Thus, the number of students playing at least one game,</p>
+            <p>\(n(B \cup V) = n(B) + n(V) - n(B \cap V) = 32 + 25 - 13 = 44\)</p>
+          </li>
+          <li>
+            <p>Soln:</p>
+            <p>Here, Let N = Nepali, Ne = Newari</p>
+            <p>So, \(n(N) = 60\%\), \(n(Ne) = 50\%\), \(n(N \cup Ne) = 100\%\)</p>
+            <p>\(n(N \cap Ne) = ?\)</p>
+            <p>We have,</p>
+            <p>\(n(N \cup Ne) = n(N) + n(Ne) - n(N \cap Ne)\)</p>
+            <p>or, 100\% = 60\% + 50\% - \(n(N \cap Ne)\)</p>
+            <p>So, \(n(N \cap Ne) = 110\% - 100\% = 10\%\)</p>
+          </li>
+        </ol>
+
+
+        <p><strong>Exercise 9</strong></p>
+        <p>Soln: Here, let \(M =\) Mathematics, \(S =\) statistics,</p>
+        <p>So, \(n(U) = 120\), \(n(M) = 90\), \(n(S) = 72\).</p>
+        <p>\(n(MUS) = 10\), \(n(M \cap S) = ?\)</p>
+        <p>We have,</p>
+        <p>\(n(U) = n(M) + n(S) – n(M \cap S) + n(MUS)\)</p>
+        <p>or, \(120 = 90 + 72 – n(M \cap S) + 10\)</p>
+        <p>so, \(n(M \cap S) = 52\).</p>
+        <p><strong>Exercise 10</strong></p>
+        <p>Soln:</p>
+        <p>(a)</p>
+        <p>Let \(T =\) tea and \(C =\) coffee</p>
+        <p>So, \(n(U) = 65\), \(n(T) = 38\), \(n (T – C) = 20\)</p>
+        <p>\(n(TUC) = 15\).</p>
+        <p>To find,</p>
+        <p>(a) \(n(T \cap C)\) (b) \(n(C – T)\)</p>
+        <p>\(= 38 – 20 = 18\).</p>
+        <p>(b)</p>
+        <p>\(n(C – T) = ?\) [first we have to find \(n(C)\)]</p>
+        <p>Since, \(n(U) = n(T) + n(C) – n(T \cap C) + n(TUC)\)</p>
+        <p>Or, \(65 = 38 + n(C) – 18 + 15\)</p>
+        <p>So, \(n(C) = 65 – 35 = 30\).</p>
+        <p>So, \(n(C – T) = n(C) – n(T \cap C) = 30 – 18 = 12\).</p>
+        <p><strong>Exercise 11</strong></p>
+        <p>Soln:</p>
+        <p>Let \(M =\) mathematics, \(S =\) statistics</p>
+        <p>So, \(n(U) = 100\%\), \(n(M) = 27\%\), \(n(S) = 31\%\).</p>
+        <p>\(n(M \cap S) = 60\%\)</p>
+        <p>Failed in examination, \(n(MUS) = ?\)</p>
+        <p>We have, \(n(MUS) = n(M) + n(S) – n(M \cap S)\)</p>
+        <p>\(= 27\% + 31\% – 6\% = 58\% – 6\% = 52\%\).</p>
+        <p>Passed in both subjects, \(n(MUS) = 100\% – 52\% = 48\%\).</p>
+        <p><strong>Exercise 12</strong></p>
+        <p>Soln:</p>
+        <p>Let \(M =\) Mathematics, \(P =\) physics,</p>
+        <p>\(S =\) Statistics,</p>
+        <p>\(n(M) = 12\),</p>
+        <p>\(n(P) = 11\)</p>
+        <p>\(n(S) = 15\)</p>
+        <p>\(no(M) = 4\)</p>
+        <p>\(no(S) = 7\)</p>
+        <p>\(no(S \cap P) = 3\)</p>
+        <p>\(no(M \cap S) = 1\)</p>
+        <p>Now,</p>
+        <p>(a)</p>
+        <p>Students reading all three subjects,</p>
+        <p>\(n(M \cap P \cap S) = n(S) – no(M) – no(M \cap S) – no(S \cap P) – no(S)\)</p>
+        <p>\(= 15 – 1 – 3 – 7 = 4\)</p>
+        <p>(b)</p>
+        <p>Students reading math’s and physics only,</p>
+        <p>\(no(M \cap P) = n(M) – no(M) – no(M \cap S) – n(M \cap P \cap S)\)</p>
+        <p>\(= 12 – 4 – 1 – 4 = 3\).</p>
+        <p>(c)</p>
+        <p>Students reading physics only, \(no(P)\)</p>
+        <p>We have, \(no(P) = n(P) – no(M \cap P) – no(S \cap P) – n(M \cap P \cap S)\)</p>
+        <p>\(= 11 – 3 – 3 – 4 = 1\).</p>
+        <p>(d)</p>
+        <p>Total students, from Venn – diagram,</p>
+        <p>\(n(M \cup S \cup P) = 4 + 1 + 7 + 3 + 1 + 3 + 4\)</p>
+        <p>so, \(n(M \cup S \cup P) = 23\).</p>
+
+
+        <p><strong>Exercise 9</strong></p>
+        <p>Soln: Here, let \(M =\) Mathematics, \(S =\) statistics,</p>
+        <p>So, \(n(U) = 120\), \(n(M) = 90\), \(n(S) = 72\).</p>
+        <p>\(n(MUS) = 10\), \(n(M \cap S) = ?\)</p>
+        <p>We have,</p>
+        <p>\(n(U) = n(M) + n(S) – n(M \cap S) + n(MUS)\)</p>
+        <p>or, \(120 = 90 + 72 – n(M \cap S) + 10\)</p>
+        <p>so, \(n(M \cap S) = 52\).</p>
+        <p><strong>Exercise 10</strong></p>
+        <p>Soln:</p>
+        <p>(a)</p>
+        <p>Let \(T =\) tea and \(C =\) coffee</p>
+        <p>So, \(n(U) = 65\), \(n(T) = 38\), \(n (T – C) = 20\)</p>
+        <p>\(n(TUC) = 15\).</p>
+        <p>To find,</p>
+        <p>(a) \(n(T \cap C)\) (b) \(n(C – T)\)</p>
+        <p>\(= 38 – 20 = 18\).</p>
+        <p>(b)</p>
+        <p>\(n(C – T) = ?\) [first we have to find \(n(C)\)]</p>
+        <p>Since, \(n(U) = n(T) + n(C) – n(T \cap C) + n(TUC)\)</p>
+        <p>Or, \(65 = 38 + n(C) – 18 + 15\)</p>
+        <p>So, \(n(C) = 65 – 35 = 30\).</p>
+        <p>So, \(n(C – T) = n(C) – n(T \cap C) = 30 – 18 = 12\).</p>
+        <p><strong>Exercise 11</strong></p>
+        <p>Soln:</p>
+        <p>Let \(M =\) mathematics, \(S =\) statistics</p>
+        <p>So, \(n(U) = 100\%\), \(n(M) = 27\%\), \(n(S) = 31\%\).</p>
+        <p>\(n(M \cap S) = 60\%\)</p>
+        <p>Failed in examination, \(n(MUS) = ?\)</p>
+        <p>We have, \(n(MUS) = n(M) + n(S) – n(M \cap S)\)</p>
+        <p>\(= 27\% + 31\% – 6\% = 58\% – 6\% = 52\%\).</p>
+        <p>Passed in both subjects, \(n(MUS) = 100\% – 52\% = 48\%\).</p>
+        <p><strong>Exercise 12</strong></p>
+        <p>Soln:</p>
+        <p>Let \(M =\) Mathematics, \(P =\) physics,</p>
+        <p>\(S =\) Statistics,</p>
+        <p>\(n(M) = 12\),</p>
+        <p>\(n(P) = 11\)</p>
+        <p>\(n(S) = 15\)</p>
+        <p>\(no(M) = 4\)</p>
+        <p>\(no(S) = 7\)</p>
+        <p>\(no(S \cap P) = 3\)</p>
+        <p>\(no(M \cap S) = 1\)</p>
+        <p>Now,</p>
+        <p>(a)</p>
+        <p>Students reading all three subjects,</p>
+        <p>\(n(M \cap P \cap S) = n(S) – no(M) – no(M \cap S) – no(S \cap P) – no(S)\)</p>
+        <p>\(= 15 – 1 – 3 – 7 = 4\)</p>
+        <p>(b)</p>
+        <p>Students reading math’s and physics only,</p>
+        <p>\(no(M \cap P) = n(M) – no(M) – no(M \cap S) – n(M \cap P \cap S)\)</p>
+        <p>\(= 12 – 4 – 1 – 4 = 3\).</p>
+        <p>(c)</p>
+        <p>Students reading physics only, \(no(P)\)</p>
+        <p>We have, \(no(P) = n(P) – no(M \cap P) – no(S \cap P) – n(M \cap P \cap S)\)</p>
+        <p>\(= 11 – 3 – 3 – 4 = 1\).</p>
+        <p>(d)</p>
+        <p>Total students, from Venn – diagram,</p>
+        <p>\(n(M \cup S \cup P) = 4 + 1 + 7 + 3 + 1 + 3 + 4\)</p>
+        <p>so, \(n(M \cup S \cup P) = 23\).</p>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div id="questions-container" class="container" style="display:none">
+
+    <ol>
+      <li>
+        <p>Proof:</p>
+        <p>(a)</p>
+        <p>Let \(x\) be an element of \(A \cap B\).</p>
+        <p>Then, \(x \in A \cap B \Rightarrow x \in A\) and \(x \in B\).</p>
+        <p>\(\Rightarrow x \in B\).</p>
+        <p>So, \(A \cap B \subseteq B\).</p>
+        <p>(b)</p>
+        <p>Let \(x\) be an element of \(A - B\).</p>
+        <p>Then, \(x \in A - B \Rightarrow x \in A\) and \(x \notin B\).</p>
+        <p>\(\Rightarrow x \in A\).</p>
+        <p>So, \(A - B \subseteq A\).</p>
+        <p>(c)</p>
+        <p>Let \(x\) be an element of \(A - B\).</p>
+        <p>Then, \(x \in A - B \Rightarrow x \in A\) and \(x \notin B\),</p>
+        <p>\(\Rightarrow x \in A\).</p>
+        <p>\(\Rightarrow x \in A \cup B\)</p>
+        <p>So, \(A - B \subseteq A \cup B\).</p>
+      </li>
+      <li>
+        <p>(a)</p>
+        <p>Let \(x\) be an element of \(A\).</p>
+        <p>Then \(x \in A \Rightarrow x \notin B\)  [\(A \cap B = \emptyset\)].</p>
+        <p>\(\Rightarrow x \in B^¯\)</p>
+        <p>So, \(A \subseteq B^¯\)</p>
+        <p>(b)</p>
+        <p>\(B \cap A^¯\)</p>
+        <p>= \(\{x : x \in B \text{ and } x \in A^¯\}\)</p>
+        <p>= \(\{x : x \in B \text{ and } x \notin A\}\)  [\(x \notin A\)]</p>
+        <p>(c)</p>
+        <p>\(A \cup B^¯\)</p>
+        <p>= \(\{x : x \in A \text{ or } x \in B^¯\}\)</p>
+        <p>= \(\{x : x \in B^¯\}\)  [\(A \cap B = \emptyset\)]</p>
+        <p>= \(B^¯\)</p>
+      </li>
+      <li>
+        <p>Proof:</p>
+        <p>(a)</p>
+        <p>Let \(x\) be an element of \(B^¯\).</p>
+        <p>Then, \(x \in B^¯ \Rightarrow x \notin B\).</p>
+        <p>= \(x \notin A\)   [\(A \subseteq B\)].</p>
+        <p>\(\Rightarrow x \in A^¯\).</p>
+        <p>So, \(B^¯ \subseteq A^¯\)</p>
+        <p>(b)</p>
+        <p>\(A \cup B = \{x : x \in A \text{ or } x \in B\}\)</p>
+        <p>= \(\{x : x \in B\}\)             [\(A \subseteq B\)]</p>
+        <p>= \(B\)</p>
+        <p>(c)</p>
+        <p>\(A \cap B = \{x : x \in A \text{ and } x \in B\}\)</p>
+        <p>= \(\{x : x \in A\}\)             [\(A \subseteq B\)]</p>
+        <p>= \(A\)</p>
+      </li>
+    </ol>
+
+    <p><strong>Exercise 4</strong></p>
+    <p>Proof:</p>
+    <p>(a)</p>
+    <p>\(B - A = \{x : x \in B \text{ and } x \notin A\}\)</p>
+    <p>\(= \{x : x \in B \text{ and } x \in A^c\} = \{x : x \in B \cap A^c\}\)</p>
+    <p>So, \(B - A = B \cap A^c\)</p>
+    <p>(b)</p>
+    <p>\(A - B^c = \{x : x \in A \text{ and } x \notin B^c\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } x \in B\} = \{x : x \in A \cap B\} = A \cap B\)</p>
+    <p>So, \(B - A = B \cap A^c\)</p>
+    <p>(c)</p>
+    <p>\(A - B = \{x : x \in A \text{ and } x \notin B\}\)</p>
+    <p>\(= \{x : x \notin A^c \text{ and } x \in B^c\} = \{x : x \in B^c - A^c\} = B^c - A^c\)</p>
+    <p>(d)</p>
+    <p>\(A - (A - B) = \{x : x \in A \text{ and } x \notin (A - B)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } x \in (A \cap B)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } x \in A \text{ and } x \in B\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } x \in B\} = \{x : x \in (A \cap B)\} = A \cap B\)</p>
+    <p>So, \(A - (A - B) = A \cap B\)</p>
+    <p>(e)</p>
+    <p>\((A - B) \cap B = \{x : x \in (A - B) \text{ and } x \in B\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } x \notin B \text{ and } x \in B\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } (x \in B \text{ and } x \in B)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } x \in \emptyset\} = \{x : x \in A \cap \emptyset\} = \emptyset\)</p>
+    <p><strong>Exercise 5</strong></p>
+    <p>Proof:</p>
+    <p>(a)</p>
+    <p>\(A \cup (B \cap C) = \{x : x \in A \text{ or } x \in (B \cap C)\}\)</p>
+    <p>\(= \{x : x \in A \text{ or } (x \in B \text{ and } x \in C)\}\)</p>
+    <p>\(= \{x : (x \in A \text{ or } x \in B) \text{ and } (x \in A \text{ or } x \in C)\}\)</p>
+    <p>\(= \{x : x \in (A \cup B) \text{ and } x \in (A \cup C)\}\)</p>
+    <p>\(= (A \cup B) \cap (A \cup C)\)</p>
+    <p>(b)</p>
+    <p>\(A \cap (B \cup C) = \{x : x \in A \text{ and } x \in (B \cup C)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } (x \in B \text{ or } x \in C)\}\)</p>
+    <p>\(= \{x : (x \in A \text{ and } x \in B) \text{ or } (x \in A \text{ and } x \in C)\}\)</p>
+    <p>\(= \{x : x \in (A \cap B) \text{ or } x \in (A \cap C)\}\)</p>
+    <p>\(= (A \cap B) \cup (A \cap C)\)</p>
+    <p><strong>Exercise 6</strong></p>
+    <p>(a)</p>
+    <p>\((A \cup B)' = \{x : x \notin (A \cup B)\}\)</p>
+    <p>\(= \{x : x \notin A \text{ and } x \notin B\} = \{x : x \in A^c \text{ and } x \in B^c\}\)</p>
+    <p>\(= \{x : x \in (A^c \cap B^c)\} = A^c \cap B^c\)</p>
+    <p>(b)</p>
+    <p>\((A \cap B)' = \{x : x \notin (A \cap B)\}\)</p>
+    <p>\(= \{x : x \notin A \text{ or } x \notin B\} = \{x : x \in A^c \text{ or } x \in B^c\}\)</p>
+    <p>\(= \{x : x \in (A^c \cup B^c)\} = A^c \cup B^c\)</p>
+    <p>(c)</p>
+    <p>\(A - (B \cup C) = \{x : x \in A \text{ and } x \notin (B \cup C)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } (x \notin B \text{ and } x \notin C)\}\)</p>
+    <p>\(= x : (x \in A \text{ and } x \notin B) \text{ and } (x \in A \text{ and } x \notin C)\)</p>
+    <p>\(= \{x : x \in (A - B) \text{ and } x \in (A - C)\}\)</p>
+    <p>So, \(A - (B \cup C) = (A - B) \cap (A - C)\)</p>
+    <p>Again, \(A - (B \cup C) = \{x : x \in A \text{ and } x \notin (B \cup C)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } (x \notin B \text{ or } x \notin C)\}\)</p>
+    <p>\(= \{x : (x \in A \text{ and } x \notin B) \text{ or } x \notin C\}\)</p>
+    <p>\(= \{x : x \in (A - B) \text{ or } x \notin C\}\)</p>
+    <p>\(= (A - B) - C\)</p>
+    <p>(d)</p>
+    <p>\(A - (B \cap C) = \{x : x \in A \text{ and } x \notin (B \cap C)\}\)</p>
+    <p>\(= \{x : x \in A \text{ and } (x \notin B \text{ or } x \notin C)\}\)</p>
+    <p>\(= \{x : (x \in A \text{ and } x \notin B) \text{ or } (x \in A \text{ and } x \notin C)\}\)</p>
+    <p>\(= \{x : x \in (A - B) \text{ or } x \in (A - C)\}\)</p>
+    <p>\(= (A - B) \cup (A - C)\)</p>
+    
+
+  </div>
+
+  <div id="videos-container" class="container" style="display:none">
+    <ol>
+      <li>
+        <p>Soln:</p>
+        <p>\(|-2| + 4 = 2 + 4 = 6\)</p>
+        <p>\(|-5| + |-2| - 3 = 5 + 2 - 3 = 4\)</p>
+        <p>\(2 + |-3| - |-5| = 2 + 3 - 5 = 0\)</p>
+        <p>\(|3 - |-5|| = |3 - 5| = |-2| = 2\)</p>
+      </li>
+      <li>
+        <p>(i)</p>
+        <p>Here, \(x = 2\) and \(y = 3\).</p>
+        <p>(a)</p>
+        <p>\(|x + y| = |2 + 3| = 5\)</p>
+        <p>And \(|x| + |y| = |2| + |3| = 5\)</p>
+        <p>Hence, \(|x| + |y| = |x + y|\).</p>
+        <p>(b)</p>
+        <p>\(|x - y| = |2 - 3| = 1\)</p>
+        <p>And \(|x| - |y| = |2| - |3| = -1\)</p>
+        <p>Hence, \(|x - y| > |x| - |y|\)</p>
+        <p>(c)</p>
+        <p>\(|xy| = |2 \cdot 3| = |6| = 6\)</p>
+        <p>\(|x| \cdot |y| = |2| \cdot |3| = |6| = 6\).</p>
+        <p>Hence, \(|xy| = |x| \cdot |y|\)</p>
+        <p>(d)</p>
+        <p>Or, \(\left||xy|\right| = \left|2 \cdot 3\right| = 6\) and \(\left|x\right| \cdot \left|y\right| = \left|2\right| \cdot \left|3\right| = 6\)</p>
+        <p>Hence, \(\left||xy|\right| = \left|x\right| \cdot \left|y\right|\)</p>
+      </li>
+      <li>
+        <p>(ii)</p>
+        <p>Here, \(x = 2\) and \(y = -3\)</p>
+        <p>(a)</p>
+        <p>\(|x + y| = |2 - 3| = |-1| = 1\)</p>
+        <p>And \(|x| - |y| = |2| + |-3| = 2 + 3 = 5\)</p>
+        <p>Hence, \(|x + y| < |x| + |y|\).</p>
+        <p>(b)</p>
+        <p>\(|x - y| = |2 + 3| = 5\)</p>
+        <p>And \(|x| - |y| = |2| - |-3| = 2 - 3 = -1\)</p>
+        <p>Hence, \(|x - y| > |x| - |y|\)</p>
+        <p>(c)</p>
+        <p>\(|xy| = |2 \cdot (-3)| = |-6| = 6\)</p>
+        <p>\(|x| \cdot |y| = |2| \cdot |-3| = |6| = 6\).</p>
+        <p>Hence, \(|xy| = |x| \cdot |y|\)</p>
+        <p>(d)</p>
+        <p>Or, \(\left||xy|\right| = \left|2 - 3\right| = 2/3\) and \(\left|x\right| \cdot \left|y\right| = \left|2\right| \cdot \left|-3\right| = 2/3\)</p>
+        <p>Hence, \(\left||xy|\right| = \left|x\right| \cdot \left|y\right|\)</p>
+      </li>
+    </ol>
+
+
+    <ol>
+      <li>
+        <p>Soln: Here</p>
+        <p>a.</p>
+        <p>\(x - 1 > 2\)</p>
+        <p>or, \(x - 1 + 1 > 2 + 1\)</p>
+        <p>So, \(x > 3\)</p>
+        <p>b.</p>
+        <p>\(x - 3 \leq 5\)</p>
+        <p>or, \(x - 3 + 3 \leq 5 + 3\)</p>
+        <p>or, \(x \leq 8\)</p>
+        <p>c.</p>
+        <p>\(-1 < x - 2 < 3\)</p>
+        <p>Or, \(-1 + 2 < x - 2 + 2 < 3 + 2\)</p>
+        <p>Or, \(1 < x < 5\)</p>
+        <p>d.</p>
+        <p>\(-3 \leq 2x - 1 \leq 5\)</p>
+        <p>or, \(-3 + 1 \leq 2x - 1 + 1 \leq 5 + 1\)</p>
+        <p>or, \(-2 \leq 2x \leq 6\)</p>
+        <p>So, \(-1 \leq x \leq 3\).</p>
+      </li>
+    </ol>
+
+    <h3>4. Solution:</h3>
+
+<h4>(a)</h4>
+
+<p>A = \([-3, 1)\) and B = \([-2, 4]\)</p>
+
+<p>(i)</p>
+<p>A \cup B = \([-3, 1)\) \cup \([-2, 4]\)</p>
+<p>= \(\{x: -3 \leq x < 1\}\) \cup \(\{x: -2 \leq x \leq 4\}\) = \(\{x: -3 \leq x \leq 4\}\) = \([-3, 4]\)</p>
+
+<p>(ii)</p>
+<p>A \cap B = \([-3, 1)\) \cap \([-2, 4]\)</p>
+<p>= \(\{x: -3 \leq x < 1\}\) \cap \(\{x: -2 \leq x \leq 4\}\) = \(\{x: -2 \leq x < 1\}\) = \([-2, 1)\)</p>
+
+<p>(iii)</p>
+<p>A - B = \([-3, 1)\) - \([-2, 4]\)</p>
+<p>= \(\{x: -3 \leq x < 1\}\) - \(\{x: -2 \leq x \leq 4\}\) = \(\{x: -3 \leq x < -2\}\) = \([-3, -2)\)</p>
+
+<p>(iv)</p>
+<p>B - A = \([-2, 4]\) - \([-3, 1)\)</p>
+<p>= \(\{x: -2 \leq x \leq 4\}\) - \(\{x: -3 \leq x < 1\}\) = \(\{x: 1 \leq x \leq 4\}\) = \([1, 4]\)</p>
+
+<h4>(b)</h4>
+
+<p>A = \((-1, 4)\) and B = \([3, 5]\)</p>
+
+<p>(i)</p>
+<p>A \cup B = \((-1, 4)\) \cup \([3, 5)\)</p>
+<p>= \(\{x: -1 < x < 4\}\) \cup \(\{x: 3 \leq x < 5\}\) = \(\{x: -1 < x < 5\}\) = \((-1, 5)\)</p>
+
+<p>(ii)</p>
+<p>A \cap B = \((-1, 4)\) \cap \([3, 5)\)</p>
+<p>= \(\{x: -1 < x < 4\}\) \cap \(\{x: 3 \leq x < 5\}\) = \(\{x: 3 \leq x < 4\}\) = \([3, 4)\)</p>
+
+<p>(iii)</p>
+<p>A - B = \((-1, 4)\) - \([3, 5]\)</p>
+<p>= \(\{x: -1 < x < 4\}\) - \(\{x: 3 \leq x < 5\}\) = \(\{x: -1 < x < 3\}\) = \((-1, 3)\)</p>
+
+<h3>5. Solution:</h3>
+
+<p>Here,</p>
+
+<p>(a)</p>
+<p>\(|x| < 4\)</p>
+<p>So, \(-4 < x < 4\)</p>
+
+<p>(b)</p>
+<p>\(|x - 3| < 2\)</p>
+<p>\(-2 < x - 3 < 2\)</p>
+<p>\(-2 + 3 < x - 3 + 3 < 2 + 3\)</p>
+<p>So, \(1 < x < 5\)</p>
+
+<p>(c)</p>
+<p>\(|2x + 1| \leq 3\)</p>
+<p>\(-3 \leq 2x + 1 \leq 3\)</p>
+<p>\(-3 - 1 \leq 2x + 1 - 1 \leq 3 - 1\)</p>
+<p>\(-4 \leq 2x \leq 2\)</p>
+<p>So, \(-2 \leq x \leq 1\)</p>
+
+<p>(d)</p>
+<p>\(|2x - 1| \leq 5\)</p>
+<p>\(-5 \leq 2x - 1 \leq 5\)</p>
+<p>\(-5 + 1 \leq 2x - 1 + 1 \leq 5 + 1\)</p>
+<p>\(-4 \leq 2x \leq 6\)</p>
+<p>So, \(-2 \leq x \leq 3\)</p>
+
+<h3>6. Solution:</h3>
+
+<p>Here,</p>
+
+<p>(a)</p>
+<p>\(-5 < x < 7\)</p>
+<p>\(-5 - 1 < x - 1 < 7 - 1\)</p>
+<p>\(-6 < x - 1 < 6\)</p>
+<p>So, \(\left|x - 1\right| < 6\)</p>
+
+<p>(b)</p>
+<p>\(-3 \leq x \leq -1\)</p>
+<p>\(-3 + 2 \leq x + 2 \leq -1 + 2\)</p>
+<p>\(-1 \leq x + 2 \leq 1\)</p>
+<p>So, \(\left|x + 2\right| \leq 1\)</p>
+
+<p>(c)</p>
+<p>\(-3 < x < 4\)</p>
+<p>\(-6 < 2x < 8\)</p>
+<p>\(-6 - 1 < 2x - 1 < 8 - 1\)</p>
+<p>\(-7 < 2x - 1 < 7\)</p>
+<p>So, \(\left|2x - 1\right| < 7\)</p>
+
+<p>(d)</p>
+<p>\(-4 \leq x \leq -1\)</p>
+<p>\(-8 \leq 2x \leq -2\)</p>
+<p>\(-8 + 5 \leq 2x + 5 \leq -2 + 5\)</p>
+<p>\(-3 \leq 2x + 5 \leq 3\)</p>
+<p>So, \(\left|2x + 5\right| \leq 3\)</p>
+
+
+<ol>
+  <li>
+    <p>Soln: Here,</p>
+    <p>(a)</p>
+    <p>\(|x + 2| < 4.\)</p>
+    <p>\(-4 < x + 2 < 4\)</p>
+    <p>\(-4 - 2 < x + 2 - 2 < 4 - 2\)</p>
+    <p>\(-6 < x < 2.\)</p>
+    <p>So, the solution is \(\{x: -6 < x < 2\}\) and the graph is:</p>
+    <br>
+    <p>(b)</p>
+    <p>\(|x - 1| \leq 2.\)</p>
+    <p>\(-2 \leq x - 1 \leq 2\)</p>
+    <p>\(-2 + 1 \leq x - 1 + 1 \leq 2 + 1\)</p>
+    <p>\(-1 \leq x \leq 3.\)</p>
+    <p>So, the solution is \(\{x: -1 \leq x \leq 3\}\) and the graph is:</p>
+    <br>
+    <p>(c)</p>
+    <p>\(|2x + 3| \leq 1.\)</p>
+    <p>\(-1 \leq 2x + 3 \leq 1\)</p>
+    <p>\(-1 - 3 \leq 2x + 3 - 3 \leq 1 - 3\)</p>
+    <p>\(-4 \leq 2x \leq -2.\)</p>
+    <p>\(-2 \leq x \leq -1\)</p>
+    <p>So, the solution is \(\{x: -2 \leq x \leq -1\}\) and the graph is:</p>
+    <br>
+    <p>(d)</p>
+    <p>Here, two cases arise,</p>
+    <p>Case I:</p>
+    <p>When \((x - 1) > 0\) then.</p>
+    <p>\(x - 1 + 1 > 1 + 1\)</p>
+    <p>So, \(x > 2\), i.e. \(x \in (2, \infty)\)</p>
+    <p>Case II:</p>
+    <p>When \((x - 1) < 0\) then,</p>
+    <p>\(x - 1 < -1\)</p>
+    <p>\(x - 1 + 1 < -1 + 1\)</p>
+    <p>So, \(x < 0\) i.e. \(x \in (-\infty, 0)\)</p>
+    <p>Hence, the required solution of \(|x - 1| > 1\) is \(\{x: x < 0 \text{ or } x > 2\}\) i.e. \(x \in (-\infty, 0) \cup (2, \infty)\)</p>
+    <p>The graph is:</p>
+    <br>
+    <p>(e)</p>
+    <p>\(|2x + 1| \geq 3\)</p>
+    <p>Here, two cases arise</p>
+    <p>Case I:</p>
+    <p>When \((2x + 1) > 0\) then.</p>
+    <p>\((2x + 1) \geq 3\)</p>
+    <p>\(2x + 1 - 1 \geq 3 - 1\)</p>
+    <p>\(2x \geq 2\)</p>
+    <p>So, \(x \geq 1\) i.e. \(x \in [1, \infty)\)</p>
+    <p>Case II:</p>
+    <p>When \((2x + 1) < 0\) then,</p>
+    <p>\(- (2x + 1) > 3\)</p>
+    <p>\(2x + 1 \leq -3\)</p>
+    <p>\(2x + 1 - 1 \leq -3 - 1\)</p>
+    <p>\(2x \leq -4\)</p>
+    <p>So, \(x \leq -2\).i.e. \(x \in (-\infty, -2]\)</p>
+    <p>Thus, the required solution is \(\{x: x \leq -2 \text{ or } x \geq 1\}\)</p>
+    <p>i.e. \(x \in (-\infty, -2] \cup [1, \infty)\) and the graph is:</p>
+  </li>
+</ol>
+<br>
+<ol start="8">
+  <li>
+    <p>Proof:</p>
+    <p>(a)</p>
+    <p>Here,</p>
+    <p>\(a + b = b + c\)</p>
+    <p>\(a + b - b = b - b + c\)</p>
+    <p>So, \(a = c\).</p>
+    <br>
+    <p>(b)</p>
+    <p>Here, \(ac = bc\)</p>
+    <p>\((ac)c^{-1} = (bc)c^{-1}\)</p>
+    <p>\(a(c(c^{-1})) = b(c(c^{-1}))\) [Associativity]</p>
+    <p>\(a \cdot 1 = b \cdot 1\)</p>
+    <p>So, \(a = b\).</p>
+    <br>
+    <p>(c)</p>
+    <p>Here, \(a < b\).</p>
+    <p>So, \(a + c < b + c\) [adding c on both sides]</p>
+    <br>
+    <p>(d)</p>
+    <p>Here, \(a < b\).</p>
+    <p>\(a - b < 0\) .... (i)</p>
+    <p>And \(c < d\)</p>
+    <p>\(c - d < 0\) .... (ii)</p>
+    <p>Adding (i) and (ii) we have,</p>
+    <p>\(a - b + c - d < 0\)</p>
+    <p>\(a - b + b + c - d + d < b + d\) [Adding b + d on both sides]</p>
+    <p>So, \(a + c < b + d\).</p>
+    <br>
+    <p>(e)</p>
+    <p>Here, \(a > b\)</p>
+    <p>\((a - b)c < 0 \cdot c\)                  [c < 0]</p>
+    <p>\(ac - bc < 0\)</p>
+    <p>\(ac + bc\)</p>
+    <p>\(ac\)</p>
+    <br>
+    <p>(f)</p>
+    <p>Here, \(a > b\)</p>
+    <p>\(a - b > 0\)</p>
+    <p>\(a - bc > 0 \cdot c\)                 [c > 0]</p>
+    <p>\(ac - bc > 0\)</p>
+    <p>\(ac - bc + bc > bc\)                          [Adding bc on both sides]</p>
+    <p>So, \(ac > bc\)</p>
+  </li>
+</ol>
+
+
+  </div>
+
+  <div id="remnant-container" class="container" style="display:none">
+    <ol>
+      <li>
+        <p><strong>Soln:</strong></p>
+        <ol type="a">
+          <li>Given sentence is a statement; its truth value is \(T\).</li>
+          <li>Given sentence is a statement; its truth value is \(F\).</li>
+          <li>Given sentence is a statement; its truth value is \(T\).</li>
+          <li>Given sentence is an interrogative sentence, so it is not a statement.</li>
+          <li>Given sentence is an imperative sentence, so it is not a statement.</li>
+          <li>Given sentence is an exclamatory sentence, so it is not a statement.</li>
+        </ol>
+      </li>
+      <li>
+        <p><strong>Solution:</strong></p>
+        <ol type="a">
+          <li>Demand is not increasing.</li>
+          <li>Supply is not decreasing.</li>
+          <li>Demand is increasing and supply is decreasing.</li>
+          <li>Demand is increasing or supply is decreasing.</li>
+          <li>Demand is not increasing and supply is decreasing.</li>
+          <li>Demand is increasing or supply is not decreasing.</li>
+          <li>Neither demand is increasing nor supply is decreasing.</li>
+          <li>It is false that demand is increasing and supply is decreasing.</li>
+        </ol>
+      </li>
+      <li>
+        <p><strong>Soln:</strong></p>
+        <ol type="a">
+          <li>\(p \land q\)</li>
+          <li>\(p \lor q\)</li>
+          <li>\(\neg p \land \neg q\)</li>
+          <li>\(\neg (p \lor q)\)</li>
+        </ol>
+      </li>
+    </ol>
+
+
+
+
+    <h3>(a) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~p</th>
+    <th>~p ^ q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+</table>
+<h3>(b) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~p</th>
+    <th>~q</th>
+    <th>~p v (~q)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+<h3>(c) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p ^ q</th>
+    <th>~p ^ q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+<h3>(d) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~q</th>
+    <th>p v (~q)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+<h3>(e) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p à q</th>
+    <th>q à p</th>
+    <th>(p à q)^(q à p)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+<h3>(f) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~p</th>
+    <th>~p ^ q</th>
+    <th>p v q</th>
+    <th>(~p ^ q)à(p v q)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+</table>
+<h3>5. (a) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p^q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+<h3>(b) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~q</th>
+    <th>p v (~q)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+<h3>(c) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~p</th>
+    <th>~q</th>
+    <th>~p ^ ~q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+<h3>(d) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>s</th>
+    <th>p ^ s</th>
+    <th>q v (p ^ s)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+<h3>(e) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>~p</th>
+    <th>~(~p)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+</table>
+<h3>(f) Solution:</h3>
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>r</th>
+    <th>s</th>
+    <th>p v q</th>
+    <th>r v s</th>
+    <th>(pvq)^(rvs)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+<h3>6. Solution:</h3>
+<h3>(a)</h3>
+We prove the given relation using a truth table.
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>~p</th>
+    <th>p ^ ~p</th>
+    <th>c = contradiction</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+So, from the above truth table, p ^ ~p ≡ c.
+
+<h3>(b)</h3>
+We know the given relation using a truth table:
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p v q</th>
+    <th>q v p</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+From the above truth table, p v q ≡ p v p.
+
+<h3>(c)</h3>
+We prove the given relation using a truth table:
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~p</th>
+    <th>~q</th>
+    <th>p v (~q)</th>
+    <th>~[p v (~q)]</th>
+    <th>~p ^ q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+</table>
+From the above truth table, ~[p v (~q)] ≡ ~p ^ q.
+
+<h3>(d)</h3>
+We prove the given relation using a truth table:
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>~p</th>
+    <th>~q</th>
+    <th>~p ^ q</th>
+    <th>~[(~p) ^ q]</th>
+    <th>p v (~q)</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+</table>
+From the above truth table, ~p [(~p ^ q)] ≡ p v (~q).
+
+
+
+
+Certainly! Here's the formatted version of the given statements in HTML with MathJax for LaTeX rendering:
+
+<ol>
+  <li>
+    <p><strong>(i)</strong></p>
+    <ol type="a">
+      <li>
+        <p>Antecedent: \(3\) is a natural number.</p>
+        <p>Consequent: \(13\) is a rational number.</p>
+      </li>
+      <li>
+        <p>Antecedent: \(x = 2\).</p>
+        <p>Consequent: \(x^2 = 4\).</p>
+      </li>
+      <li>
+        <p>Antecedent: The battery is low.</p>
+        <p>Consequent: The mobile will not work well.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>(ii)</strong></p>
+    <ol type="a">
+      <li>
+        <p>Converse: If \(\frac{1}{3}\) is a rational number, then \(3\) is a natural number.</p>
+        <p>Inverse: If \(3\) is not a natural number, then \(\frac{1}{3}\) is not a natural number.</p>
+        <p>Contra positive: If \(\frac{1}{3}\) is not a rational number, then \(3\) is not a natural number.</p>
+      </li>
+      <li>
+        <p>Converse: If \(x^2 = 4\), then \(x = 2\).</p>
+        <p>Inverse: If \(x \neq 2\), then \(x^2 \neq 4\).</p>
+        <p>Contra positive: If \(x^2 \neq 4\), then \(x \neq 2\).</p>
+      </li>
+      <li>
+        <p>Converse: If the mobile does not work well, then the battery is low.</p>
+        <p>Inverse: If the battery is not low, then the mobile works well.</p>
+        <p>Contra positive: If the mobile works well, then the battery is not low.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>(iii)</strong></p>
+    <ol type="a">
+      <li>3 is a natural number and \(\frac{1}{3}\) is not a rational number.</li>
+      <li>\(x = 2\) and \(x^2 = 4\).</li>
+      <li>The battery is low and the mobile works well.</li>
+    </ol>
+  </li>
+</ol>
+
+<h3>7.</h3>
+Solution:
+
+<a href="#7a">a. Light does not travel in a straight line.</a>
+
+<a href="#7b">b. River can not be used to produce electricity.</a>
+
+<a href="#7c">c. x ≤ 0.</a>
+
+<a href="#7d">d. No student is weak in mathematics.</a>
+
+<a href="#7e">e. Some teachers are not laborious.</a>
+
+<h3>8.</h3>
+Solution:
+
+<h4>(a)</h4>
+Let p be the statement "3 + 2 = 5" and q be the statement "6 is a multiple of 5".
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p v q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>F</td>
+    <td>T</td>
+  </tr>
+</table>
+Negation: 3 + 2 ≠ 5 and 6 is not a multiple of 5.
+
+<h4>(b)</h4>
+Let p be the statement "8 is a prime number" and q be the statement "4 is even".
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p ^ q</th>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>F</td>
+  </tr>
+</table>
+Negation: 8 is not a prime number or 4 is even.
+
+<h4>(c)</h4>
+Let p be the statement "3 > 0" and q be the statement "4 + 6 = 10".
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>pàq</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+Negation: 3 ≤ 0 and 4 + 6 = 10.
+
+<h4>(d)</h4>
+Let p be the statement "2 is odd", q be the statement "3 is a natural number", and r be the statement "2 + 3 = 8".
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p v q</th>
+    <th>r</th>
+    <th>(p v q)àr</th>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>F</td>
+    <td>F</td>
+  </tr>
+</table>
+Negation: 2 is odd or 3 is a natural number and 2 + 3 ≠ 8.
+
+<h4>(e)</h4>
+Let p be the statement "2 * 3 = 5", q be the statement "3 > 1", and r be the statement "6 is even".
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>pàq</th>
+    <th>r</th>
+    <th>(pàq)àr</th>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+Negation: 2 * 3 = 5 à 3 > 1 and 6 is odd.
+
+<h4>(f)</h4>
+Let p be the statement "A triangle ABC is right-angled at B" and q be the statement "AB^2 + BC^2 = AC^2".
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>pàq</th>
+    <th>qàp</th>
+    <th>pß>q</th>
+  </tr>
+  <tr>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+    <td>T</td>
+  </tr>
+</table>
+Negation: A triangle is right-angled at B and AB^2 + BC^2 ≠ AC^2.
+
+<br><br>
+
+<a id="7a"></a>
+
+<p><strong>a. Light does not travel in a straight line.</strong></p>
+<a id="7b"></a>
+
+<p><strong>b. River can not be used to produce electricity.</strong></p>
+<a id="7c"></a>
+
+<p><strong>c. x ≤ 0.</strong></p>
+<a id="7d"></a>
+
+<p><strong>d. No student is weak in mathematics.</strong></p>
+<a id="7e"></a>
+
+<p><strong>e. Some teachers are not laborious.</strong></p>
+
+
+
+
+Certainly! Here's the formatted version of the given statements using HTML tables and MathJax for math formatting:
+
+<ol>
+  <li>
+    <p><strong>Solution:</strong></p>
+    <p>We prove the above relation by using a truth table as follows:</p>
+    <ol type="a">
+      <li>
+        <p>
+          <table>
+            <tr>
+              <th>p</th>
+              <th>q</th>
+              <th>\(\neg p\)</th>
+              <th>\(\neg p \lor q\)</th>
+              <th>\(p \lor (\neg p \lor q)\)</th>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+          </table>
+        </p>
+        <p>Here, the compound statement \(p \lor (\neg p \lor q)\) is true whatever be the truth of its components. Therefore, \(p \lor (\neg p \lor q)\) is a tautology.</p>
+      </li>
+      <li>
+        <p>
+          <table>
+            <tr>
+              <th>p</th>
+              <th>q</th>
+              <th>\(p \land q\)</th>
+              <th>\(p \lor q\)</th>
+              <th>\((p \land q) \rightarrow (p \lor q)\)</th>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+            </tr>
+          </table>
+        </p>
+        <p>Here, the compound statement \((p \land q) \rightarrow (p \lor q)\) is true whatever be the truth of its components. Therefore, \((p \land q) \rightarrow (p \lor q)\) is a tautology.</p>
+      </li>
+      <li>
+        <p>
+          <table>
+            <tr>
+              <th>p</th>
+              <th>q</th>
+              <th>\(p \lor q\)</th>
+              <th>\(\neg (p \lor q)\)</th>
+              <th>\(\neg (p \lor q) \land q\)</th>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+          </table>
+        </p>
+        <p>Here, the statement \(\neg (p \lor q) \land q\) is false whatever the truth values of its components. Therefore, the statement \(\neg (p \lor q) \land q\) is a contradiction.</p>
+      </li>
+      <li>
+        <p>
+          <table>
+            <tr>
+              <th>p</th>
+              <th>q</th>
+              <th>\(p \land q\)</th>
+              <th>\(p \lor q\)</th>
+              <th>\((p \land q) \land \neg (p \lor q)\)</th>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+            </tr>
+          </table>
+        </p>
+        <p>Here, the statement \((p \land q) \land \neg (p \lor q)\) is false whatever the truth values of its components. Therefore, the statement \((p \land q) \land \neg (p \lor q)\) is a contradiction.</p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+
+
+
+  </div>
+
+
+
+  <script src="/script/bookscript.js"></script>
+
+  <footer>
+    <p>&copy; 2023 GameChanger</p>
+    <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+  </footer>
+
+
+</body>
+
+</html>
+

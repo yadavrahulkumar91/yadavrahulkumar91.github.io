@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/style/user-profile.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> -->
+
+
+    <script src="/script/firebase-config.js"></script>
+    <script src="/script/user-profile.js"></script>
+
+
+    <link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.2.6/quill.min.js"></script>
+
+
+    <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from this dialog box:
+       * Firebase Console > Project Settings > Add App > Web.
+       ***************************************************************************************** -->
+    <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <header>
+    </header>
+    <main>
+        <div id="user-profile" onclick="showUserSection(event)">
+            <span id="user-email"></span><br>
+            <span id="user-display-name"></span>
+            <span id="user-date-of-birth">Hi</span>
+            <span id="user-phone-number">Hi</span>
+            <span>I am here</span>
+            <!--
+		  <img id="profilePic" src="" alt="User Profile Picture">
+		  <span id="username"></span>
+		  -->
+        </div>
+        <div class="sign-in-button" id="sign-in-sign-up" onclick="openSignIn(event)"><i class="fas fa-user"></i></div>
+
+        <!-- <div class="modal-bg" id="modal-bg">
+            <div class="modal" style="display:block"> -->
+        <!-- <div class="close-button" onclick="closeSignIn(event)">&times;</div> -->
+        <form class="sign-in-form" id="sign-in-id">
+            <h1>Sign in</h1>
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-input" type="email" id="sign-in-email" name="email" required><br>
+            <label class="form-label" for="password">Password:</label>
+            <input class="form-input" type="password" id="sign-in-password" name="password" required><br>
+            <button class="button" type="submit" id="signin-btn">Sign in</button><br>
+
+            <div class="sign-up-link" onclick="showResetPassword(event)">
+                <span class="link-label">Forgot password!</span>
+            </div>
+            <div class="sign-up-link" onclick="showSignUp(event)">
+                <span class="link-label">Don’t have an account?</span>
+            </div>
+
+            <div style="display:none">
+                <div id="google-signin-button">
+                    <img id="google-logo" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                        alt="Google Logo">
+                    Google Sign in
+                </div>
+                <button id="facebook-login-button">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    Login with Facebook
+                </button>
+
+                <button id="phone-signin-button">
+                    <i class="fa-duotone fa-phone"></i> Sign in with Phone Number
+                </button>
+
+                <!-- Input field for entering phone number -->
+                <input type="text" id="phone-input" style="display: none;" placeholder="Enter your phone number">
+
+                <!-- Button to send verification code -->
+                <button id="send-code-button" style="display: none;">Send Verification Code</button>
+
+                <!-- Input field for entering verification code -->
+                <input type="text" id="verification-code-input" placeholder="Enter verification code"
+                    style="display: none;">
+
+                <!-- Button to verify the verification code -->
+                <button id="verify-code-button" style="display: none;">Verify Code</button>
+
+            </div>
+
+            <div id="firebaseui-auth-container"></div>
+
+            <div class="error" id="sign-in-message"></div>
+        </form>
+
+        <form class="sign-up-form" id="sign-up-id">
+            <h1>Sign Up</h1>
+            <div id="form">
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-input" type="email" id="sign-up-email" name="email" required><br>
+
+                <label class="form-label" for="password">Password:</label>
+                <input class="form-input" type="password" id="sign-up-password" name="password" required><br>
+
+                <label class="form-label" for="first-name">First Name:</label>
+                <input class="form-input" type="text" id="first-name" name="first-name" required><br>
+
+                <label class="form-label" for="last-name">Last Name:</label>
+                <input class="form-input" type="text" id="last-name" name="last-name" required><br>
+
+                <label class="form-label" for="middle-name">Middle Name:</label>
+                <input class="form-input" type="text" id="middle-name" name="middle-name"><br>
+
+                <label class="form-label" for="phone-number">Phone Number:</label>
+                <input class="form-input" type="tel" id="phone-number" name="phone-number"><br>
+
+                <label class="form-label" for="photo">Photo:</label>
+                <input class="form-input" type="file" id="photo" name="photo"><br>
+
+                <label class="form-label" for="date-of-birth">Date of Birth:</label>
+                <input class="form-input" type="date" id="date-of-birth" name="date-of-birth"><br>
+
+                <div class="message" id="sign-up-message"></div>
+
+                <button class="button" type="submit" id="signup-btn">Sign Up</button>
+
+                <div class="sign-up-link" onclick="showSignIn(event)">
+                    <span class="link-label">Already have an account.</span>
+                </div>
+            </div>
+        </form>
+
+
+
+        <div class="reset-password-form" id="reset-password-id">
+            <h1>Password Reset</h1>
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-input" type="email" id="reset-password-email" name="email" required><br>
+            <button class="button" id="reset-password-button">Send Password Reset Email</button>
+            <div class="message" id="reset-password-message"></div>
+
+            <div class="sign-up-link" onclick="showSignIn(event)">
+                <span class="link-label">Password reminded!</span>
+            </div>
+
+        </div>
+
+        <div class="user-section" id="user-section-id">
+            <h2>User Section</h2>
+            <p>You are signed in as: <span class="user-email"></span></p>
+            <button class="button" onclick="signOut()">Sign Out</button>
+            <button class="button" onclick="showChangePassword(event)">Change Password</button>
+        </div>
+
+        <form class="change-password" id="change-password-id">
+            <h2>Change Password</h2>
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="change-password-email" name="email" class="form-input" required><br>
+            <label for="current-password" class="form-label">Current Password:</label>
+            <input type="password" id="current-password" name="current-password" class="form-input" required><br>
+            <label for="new-password" class="form-label">New Password:</label>
+            <input type="password" id="new-password" name="new-password" class="form-input" required><br>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit" class="button">Change Password</button>
+        </form>
+
+
+
+
+
+        </div>
+
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="/script/user-profile-firebase.js"></script>
+
+</body>
+
+</html>

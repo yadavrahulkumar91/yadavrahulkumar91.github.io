@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/style/bookstyle.css">
+    <script src="/script/bookscript.js"></script>
+    
+  </head>
+  <body>
+    
+    <header>
+      <h1></h1>
+      <p></p>
+    </header>
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div></center>
+        
+    <div id="home-container" class="container">  
+      <h1>Triangle, Parallelogram, and Polygon Laws of Vectors</h1>
+
+<p>In physics, vectors are mathematical quantities that have both magnitude and direction. They are commonly used to represent physical quantities such as displacement, velocity, and force. When working with vectors, it is important to understand the laws that govern their addition and subtraction. In this section, we will explore the triangle, parallelogram, and polygon laws of vectors.</p>
+
+<h2>Triangle Law of Vectors</h2>
+
+<p>The triangle law of vectors states that if two vectors are represented by two sides of a triangle taken in the same order, then their resultant vector is represented by the closing side of the triangle taken in the opposite order.</p>
+
+<p>To illustrate this, let's consider two vectors, <strong>A</strong> and <strong>B</strong>:</p>
+
+<p style="text-align: center;">
+   A
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="75" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="75,50 70,45 70,55" style="fill:black" />
+   </svg>
+   B
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="60" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="60,50 55,45 55,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The resultant vector <strong>R</strong> is obtained by connecting the tail of vector <strong>A</strong> to the tip of vector <strong>B</strong>:</p>
+
+<p style="text-align: center;">
+   R
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="135" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="135,50 130,45 130,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>Mathematically, the triangle law of vectors can be expressed as:</p>
+
+<p style="text-align: center;">A + B = R</p>
+
+<h2>Parallelogram Law of Vectors</h2>
+
+<p>The parallelogram law of vectors states that if two vectors are represented by two adjacent sides of a parallelogram, then their resultant vector is represented by the diagonal of the parallelogram that starts from their common point.</p>
+
+<p>To visualize this, let's consider two vectors, <strong>A</strong> and <strong>B</strong>:</p>
+
+<p style="text-align: center;">
+   A
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="75" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="75,50 70,45 70,55" style="fill:black" />
+   </svg>
+   B
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="60" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="60,50 55,45 55,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The resultant vector <strong>R</strong> is represented by the diagonal of the parallelogram formed by vectors <strong>A</strong> and <strong>B</strong>:</p>
+
+<p style="text-align: center;">
+   R
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="135" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="135,50 130,45 130,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The parallelogram law of vectors can be expressed mathematically as:</p>
+
+<p style="text-align: center;">A + B = R</p>
+
+<h2>Polygon Law of Vectors</h2>
+
+<p>The polygon law of vectors extends the concept of vector addition to more than two vectors. It states that if a number of vectors are represented by the sides of a polygon taken in the same order, then their resultant vector is represented by the closing side of the polygon taken in the opposite order.</p>
+
+<p>Let's consider three vectors, <strong>A</strong>, <strong>B</strong>, and <strong>C</strong>:</p>
+
+<p style="text-align: center;">
+   A
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="75" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="75,50 70,45 70,55" style="fill:black" />
+   </svg>
+   B
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="60" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="60,50 55,45 55,55" style="fill:black" />
+   </svg>
+   C
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="45" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="45,50 40,45 40,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The resultant vector <strong>R</strong> is obtained by connecting the tail of vector <strong>A</strong> to the tip of vector <strong>C</strong>:</p>
+
+<p style="text-align: center;">
+   R
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="135" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="135,50 130,45 130,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The polygon law of vectors can be expressed mathematically as:</p>
+
+<p style="text-align: center;">A + B + C = R</p>
+
+
+<h1>Resolution of Vectors; Unit Vectors</h1>
+
+<p>In physics, the resolution of vectors refers to the process of breaking down a vector into its components along specific axes or directions. This process allows us to analyze the effect of a vector in different directions and perform calculations accordingly. Additionally, unit vectors play a significant role in vector resolution as they provide direction and scale to the vector components. In this section, we will explore the concepts of vector resolution and unit vectors.</p>
+
+<h2>Resolution of Vectors</h2>
+
+<p>Resolution of a vector involves determining its components along different axes or directions. This is often done using trigonometry and the concept of right triangles. Let's consider a vector <strong>V</strong>:</p>
+
+<p style="text-align: center;">
+   V
+   <svg width="150" height="150">
+      <line x1="50" y1="100" x2="125" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="125,50 120,45 130,45" style="fill:black" />
+   </svg>
+</p>
+
+<p>We can resolve vector <strong>V</strong> into its components along two perpendicular axes, typically referred to as the horizontal (x-axis) and vertical (y-axis) axes. The components are denoted as <strong>V<sub>x</sub></strong> and <strong>V<sub>y</sub></strong>, respectively.</p>
+
+<p style="text-align: center;">
+   V<sub>x</sub>
+   <svg width="150" height="150">
+      <line x1="50" y1="100" x2="100" y2="100" style="stroke:black;stroke-width:2" />
+      <polygon points="100,100 95,105 95,95" style="fill:black" />
+   </svg>
+   V<sub>y</sub>
+   <svg width="150" height="150">
+      <line x1="50" y1="100" x2="50" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="50,50 45,55 55,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The magnitudes of the vector components can be determined using trigonometry. If the angle between the vector and the positive x-axis is denoted as θ, then:</p>
+
+<p style="text-align: center;">V<sub>x</sub> = V * cos(θ)</p>
+<p style="text-align: center;">V<sub>y</sub> = V * sin(θ)</p>
+
+<p>These equations allow us to find the horizontal and vertical components of the vector <strong>V</strong> by multiplying its magnitude (<strong>V</strong>) by the appropriate trigonometric functions of the angle θ.</p>
+
+<h2>Unit Vectors</h2>
+
+<p>Unit vectors are vectors that have a magnitude of 1 and are used to provide direction and scale to other vectors. They are typically represented by the symbols <strong>i</strong>, <strong>j</strong>, and <strong>k</strong> to represent the x-axis, y-axis, and z-axis, respectively, in three-dimensional space.</p>
+
+<p>By combining the unit vectors with the magnitudes of the vector components, we can represent the original vector <strong>V</strong> as the sum of its components along the respective axes:</p>
+
+<p style="text-align: center;">V = V<sub>x</sub> * <strong>i</strong> + V<sub>y</sub> * <strong>j</strong></p>
+
+<p>Here, <strong>i</strong> and <strong>j</strong> are the unit vectors along the x-axis and y-axis, respectively. For vectors in three-dimensional space, we would also include the unit vector <strong>k</strong> along the z-axis.</p>
+
+<p>The unit vectors not only provide direction but also allow us to scale the magnitudes of the components as needed. By multiplying the magnitudes by the unit vectors, we can reconstruct the original vector <strong>V</strong>.</p>
+
+
+<h1>Scalar and Vector Products</h1>
+
+<p>In physics, scalar and vector products are mathematical operations performed on vectors that yield different types of results. The scalar product, also known as the dot product, produces a scalar quantity, while the vector product, also known as the cross product, yields a vector quantity. In this section, we will explore the concepts of scalar and vector products.</p>
+
+<h2>Scalar Product (Dot Product)</h2>
+
+<p>The scalar product, denoted as A · B (read as "A dot B"), is an operation that combines two vectors to produce a scalar quantity. It is defined as the product of the magnitudes of the vectors and the cosine of the angle between them.</p>
+
+<p>Let's consider two vectors, <strong>A</strong> and <strong>B</strong>:</p>
+
+<p style="text-align: center;">
+   A
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="75" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="75,50 70,45 70,55" style="fill:black" />
+   </svg>
+   B
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="60" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="60,50 55,45 55,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The scalar product of vectors <strong>A</strong> and <strong>B</strong> is given by:</p>
+
+<p style="text-align: center;">A · B = |A| * |B| * cos(θ)</p>
+
+<p>where |A| and |B| represent the magnitudes of vectors <strong>A</strong> and <strong>B</strong>, respectively, and θ is the angle between the two vectors.</p>
+
+<p>The scalar product allows us to calculate the work done by a force along a particular direction, determine the angle between two vectors, and find projections of a vector onto another.</p>
+
+<h2>Vector Product (Cross Product)</h2>
+
+<p>The vector product, denoted as A × B (read as "A cross B"), is an operation that combines two vectors to produce a vector quantity. It is defined as the product of the magnitudes of the vectors, the sine of the angle between them, and a unit vector perpendicular to the plane containing the two vectors.</p>
+
+<p>Let's consider two vectors, <strong>A</strong> and <strong>B</strong>:</p>
+
+<p style="text-align: center;">
+   A
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="75" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="75,50 70,45 70,55" style="fill:black" />
+   </svg>
+   B
+   <svg width="100" height="100">
+      <line x1="0" y1="50" x2="60" y2="50" style="stroke:black;stroke-width:2" />
+      <polygon points="60,50 55,45 55,55" style="fill:black" />
+   </svg>
+</p>
+
+<p>The vector product of vectors <strong>A</strong> and <strong>B</strong> is given by:</p>
+
+<p style="text-align: center;">A × B = |A| * |B| * sin(θ) * n</p>
+
+<p>where |A| and |B| represent the magnitudes of vectors <strong>A</strong> and <strong>B</strong>, respectively, θ is the angle between the two vectors, and <strong>n</strong> is a unit vector perpendicular to the plane containing <strong>A</strong> and <strong>B</strong>.</p>
+
+<p>The vector product allows us to determine the direction of the resultant vector, calculate torque, find the area of a parallelogram or triangle, and identify the axis of rotation.</p>
+
+  
+
+
+    </div>
+
+    <div id="questions-container" class="container" style="display:none">
+    
+    
+    </div>
+  
+    <div id="videos-container" class="container" style="display:none">
+    
+    </div>
+
+    <div id="remnant-container" class="container" style="display:none">
+    
+    </div>
+    
+ 
+    
+   <script src="bookscript.js"></script>
+   
+   <footer>
+      <p>&copy; 2023 GameChanger</p>
+      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+    </footer>
+  
+  </body>
+</html> 

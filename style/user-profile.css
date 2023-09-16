@@ -1,4 +1,4 @@
-.modal-bg {
+/* .modal-bg {
     display: none;
     position: fixed;
     top: 0;
@@ -18,7 +18,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-}
+} */
 
 .close-button {
     position: absolute;
@@ -189,3 +189,60 @@
     overflow-y: scroll;
 }
 
+
+
+
+
+.highlighted {
+    background-color: yellow;
+}
+#google-signin-button {
+display: flex;
+align-items: center;
+background-color: #fff; /* Background color of the button */
+border: 1px solid #ccc; /* Border color */
+border-radius: 4px; /* Rounded corners */
+padding: 10px 20px; /* Padding around the button text */
+cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Style for the Google logo */
+#google-logo {
+width: 20px; /* Adjust the size as needed */
+height: 20px;
+margin-right: 10px; /* Spacing between the logo and text */
+}
+/* Style for the Phone Number Sign-In button */
+#phone-signin-button {
+display: flex;
+align-items: center;
+background-color: #007bff; /* Background color of the button (adjust as needed) */
+color: #fff; /* Text color */
+border: none; /* Remove border */
+border-radius: 4px; /* Rounded corners */
+padding: 10px 20px; /* Padding around the button text */
+cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Style for the phone icon */
+#phone-icon {
+width: 20px; /* Adjust the size as needed */
+height: 20px;
+margin-right: 10px; /* Spacing between the icon and text */
+}
+
+#facebook-login-button {
+    background-color: #1877f2; /* Facebook blue color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for the Facebook logo image */
+#facebook-logo {
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust spacing between text and logo */
+}

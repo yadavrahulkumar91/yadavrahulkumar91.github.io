@@ -5,97 +5,13 @@
 	<title>GameChanger - Change the game of your field</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/style/index.css">
-	<link rel="stylesheet" type="text/css" href="/style/user-profile.css">
-	<link rel="icon" type="image/x-icon" href="GCround.png">
+	<script src="/script/index.js"></script>
+	<link rel="icon" type="image/x-icon" href="/image/GCround.png">
 	<link rel="stylesheet" type="text/css" href="/style/header.css">
 	<link rel="stylesheet" type="text/css" href="/style/footer.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
-
-	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-	<!-- <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> -->
-
-
-	<script src="/script/firebase-config.js"></script>
-	<script src="/script/user-profile.js"></script>
-
-
-	<link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet">
-	<script src="https://cdn.quilljs.com/1.2.6/quill.min.js"></script>
-
-
-    <!-- *******************************************************************************************
-       * TODO(DEVELOPER): Paste the initialization snippet from this dialog box:
-       * Firebase Console > Project Settings > Add App > Web.
-       ***************************************************************************************** -->
-    <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css" />
-
-
-	<style>
-		.highlighted {
-			background-color: yellow;
-		}
-		#google-signin-button {
-      display: flex;
-      align-items: center;
-      background-color: #fff; /* Background color of the button */
-      border: 1px solid #ccc; /* Border color */
-      border-radius: 4px; /* Rounded corners */
-      padding: 10px 20px; /* Padding around the button text */
-      cursor: pointer; /* Add a pointer cursor on hover */
-    }
-
-    /* Style for the Google logo */
-    #google-logo {
-      width: 20px; /* Adjust the size as needed */
-      height: 20px;
-      margin-right: 10px; /* Spacing between the logo and text */
-    }
-	    /* Style for the Phone Number Sign-In button */
-		#phone-signin-button {
-      display: flex;
-      align-items: center;
-      background-color: #007bff; /* Background color of the button (adjust as needed) */
-      color: #fff; /* Text color */
-      border: none; /* Remove border */
-      border-radius: 4px; /* Rounded corners */
-      padding: 10px 20px; /* Padding around the button text */
-      cursor: pointer; /* Add a pointer cursor on hover */
-    }
-
-    /* Style for the phone icon */
-    #phone-icon {
-      width: 20px; /* Adjust the size as needed */
-      height: 20px;
-      margin-right: 10px; /* Spacing between the icon and text */
-    }
-
-	#facebook-login-button {
-            background-color: #1877f2; /* Facebook blue color */
-            color: #fff; /* Text color */
-            padding: 10px 20px; /* Adjust padding as needed */
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        /* Style for the Facebook logo image */
-        #facebook-logo {
-            vertical-align: middle;
-            margin-right: 10px; /* Adjust spacing between text and logo */
-        }
-	</style>
-	
 </head>
 
 <body>
@@ -109,187 +25,33 @@
 		</div>
 
 
-		<div id="user-profile" style="display: none;" onclick="showUserSection(event)">
+		<div id="user-profile" onclick="showUserSection(event)">
 			<span id="user-email"></span><br>
 			<span id="user-display-name"></span>
-			<span id="user-date-of-birth">Hi</span> 
+			<span id="user-date-of-birth">Hi</span>
 			<span id="user-phone-number">Hi</span>
 			<span>I am here</span>
 			<!--
 		  <img id="profilePic" src="" alt="User Profile Picture">
 		  <span id="username"></span>
+		
 		  -->
+			<div class="modal-bg" id="modal-bg">
+				<div class="modal">
+					<div class="close-button" onclick="closeSignIn(event)">&times;</div>
+					<iframe src="/user-profile.html"></iframe>
+				</div>
+			</div>
 		</div>
+
 
 		<div class="sign-in-button" id="sign-in-sign-up" onclick="openSignIn(event)"><i class="fas fa-user"></i></div>
 	</header>
 
-	<div class="modal-bg" id="modal-bg">
-		<div class="modal">
-			<div class="close-button" onclick="closeSignIn(event)">&times;</div>
-			<form class="sign-in-form" id="sign-in-id">
-				<h1>Sign in</h1>
-				<label class="form-label" for="email">Email:</label>
-				<input class="form-input" type="email" id="sign-in-email" name="email" required><br>
-				<label class="form-label" for="password">Password:</label>
-				<input class="form-input" type="password" id="sign-in-password" name="password" required><br>
-				<button class="button" type="submit" id="signin-btn">Sign in</button><br>
 
-				<div class="sign-up-link" onclick="showResetPassword(event)">
-					<span class="link-label">Forgot password!</span>
-				</div>
-				<div class="sign-up-link" onclick="showSignUp(event)">
-					<span class="link-label">Don’t have an account?</span>
-				</div>
-			
-			<div style="display:none">
-				<div id="google-signin-button">
-					<img id="google-logo" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
-					Google Sign in
-				  </div>
-				  <button id="facebook-login-button">
-					<img id="facebook-logo" src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/m6PC1oFt23u.png" alt="Facebook Logo" width="20" height="20"> Login with Facebook
-				</button>	
-
-				  <button id="phone-signin-button">
-					<img id="phone-icon" src="phone-icon.png" alt="Phone Icon"> 
-					Sign in with Phone Number
-				  </button>
-
-				  
-  <!-- Button to initiate phone number sign-in -->
-  <!-- <button id="phone-signin-button">Sign in with Phone Number</button> -->
-
-  <!-- Input field for entering phone number -->
-  <input type="text" id="phone-input" style="display: none;" placeholder="Enter your phone number">
-
-  <!-- Button to send verification code -->
-  <button id="send-code-button" style="display: none;">Send Verification Code</button>
-
-  <!-- Input field for entering verification code -->
-  <input type="text" id="verification-code-input" placeholder="Enter verification code" style="display: none;">
-
-  <!-- Button to verify the verification code -->
-  <button id="verify-code-button" style="display: none;">Verify Code</button>
-
-</div>
-
-				<div id="firebaseui-auth-container"></div>
-
-				<div class="error" id="sign-in-message"></div>
-			</form>
-
-			<form class="sign-up-form" id="sign-up-id">
-				<h1>Sign Up</h1>
-				<div id="form">
-					<label class="form-label" for="email">Email:</label>
-					<input class="form-input" type="email" id="sign-up-email" name="email" required><br>
-
-					<label class="form-label" for="password">Password:</label>
-					<input class="form-input" type="password" id="sign-up-password" name="password" required><br>
-
-					<label class="form-label" for="first-name">First Name:</label>
-					<input class="form-input" type="text" id="first-name" name="first-name" required><br>
-
-					<label class="form-label" for="last-name">Last Name:</label>
-					<input class="form-input" type="text" id="last-name" name="last-name" required><br>
-
-					<label class="form-label" for="middle-name">Middle Name:</label>
-					<input class="form-input" type="text" id="middle-name" name="middle-name"><br>
-
-					<label class="form-label" for="phone-number">Phone Number:</label>
-					<input class="form-input" type="tel" id="phone-number" name="phone-number"><br>
-
-					<label class="form-label" for="photo">Photo:</label>
-					<input class="form-input" type="file" id="photo" name="photo"><br>
-
-					<label class="form-label" for="date-of-birth">Date of Birth:</label>
-					<input class="form-input" type="date" id="date-of-birth" name="date-of-birth"><br>
-
-					<div class="message" id="sign-up-message"></div>
-
-					<button class="button" type="submit" id="signup-btn">Sign Up</button>
-
-					<div class="sign-up-link" onclick="showSignIn(event)">
-						<span class="link-label">Already have an account.</span>
-					</div>
-				</div>
-			</form>
-
-
-
-			<div class="reset-password-form" id="reset-password-id">
-				<h1>Password Reset</h1>
-				<label class="form-label" for="email">Email:</label>
-				<input class="form-input" type="email" id="reset-password-email" name="email" required><br>
-				<button class="button" id="reset-password-button">Send Password Reset Email</button>
-				<div class="message" id="reset-password-message"></div>
-
-				<div class="sign-up-link" onclick="showSignIn(event)">
-					<span class="link-label">Password reminded!</span>
-				</div>
-
-			</div>
-
-			<div class="user-section" id="user-section-id">
-				<h2>User Section</h2>
-				<p>You are signed in as: <span class="user-email"></span></p>
-				<button class="button" onclick="signOut()">Sign Out</button>
-				<button class="button" onclick="showChangePassword(event)">Change Password</button>
-			</div>
-
-			<form class="change-password" id="change-password-id">
-				<h2>Change Password</h2>
-
-				<label for="email" class="form-label">Email:</label>
-				<input type="email" id="change-password-email" name="email" class="form-input" required><br>
-				<label for="current-password" class="form-label">Current Password:</label>
-				<input type="password" id="current-password" name="current-password" class="form-input" required><br>
-				<label for="new-password" class="form-label">New Password:</label>
-				<input type="password" id="new-password" name="new-password" class="form-input" required><br>
-				<div id="error-message" class="error-message"></div>
-				<button type="submit" class="button">Change Password</button>
-			</form>
-
-
-
-
-
-		</div>
-
-	</div>
 
 
 	<main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		<!-- Sector options section -->
@@ -675,41 +437,6 @@
 	-->
 
 
-	<h2>Comment Section</h2>
-	<form id="commentForm">
-		<input type="text" id="name" placeholder="Name" required>
-		<input type="email" id="email" placeholder="Email" required>
-		<textarea id="comment" placeholder="Your comment" required></textarea>
-		<button type="submit">Submit Comment</button>
-	</form>
-
-	<div id="commentSection"></div>
-
-
-
-
-
-
-
-
-
-	<h1>Welcome to Your Personal Notes</h1>
-	<!-- <button id="signout">Sign Out</button> -->
-	<div>
-		<h2>Your Notes</h2>
-		<textarea id="note" rows="4" cols="50"></textarea>
-		<button id="save">Save Note</button>
-	</div>
-
-	<!-- <button id="highlight">Highlight Selected Text</button> -->
-
-
-
-	<div id="editor"></div>
-	<button id="save1">Save Note</button>
-
-
-
 
 	</main>
 
@@ -762,7 +489,7 @@
 
 
 	</footer>
-	<script src="/script/user-profile-firebase.js"></script>
+	<!-- <script src="/script/user-profile-firebase.js"></script> -->
 </body>
 
 </html>

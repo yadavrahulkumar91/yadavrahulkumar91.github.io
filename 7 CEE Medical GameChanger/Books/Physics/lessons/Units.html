@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/style/bookstyle.css">
+    <script src="/script/bookscript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+  </head>
+  <body>
+    
+
+    <header></header>
+    <center><div>
+      <div class="tab active-tab" onclick="openContainer(event, 'home')">Home</div>
+      <div class="tab" onclick="openContainer(event, 'questions')">Questions</div>
+      <div class="tab" onclick="openContainer(event, 'videos')">Videos</div>
+      <div class="tab" onclick="openContainer(event, 'remnant')">Remnant memory</div>
+    </div></center>
+        
+    <div id="home-container" class="container"> 
+      
+    
+
+      
+        <h1>Physical Quantities</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Symbol</th>
+              <th>Dimensions</th>
+              <th>SI Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mass</td>
+              <td>m</td>
+              <td>M</td>
+              <td>kilogram (kg)</td>
+            </tr>
+            <tr>
+              <td>Length</td>
+              <td>L</td>
+              <td>L</td>
+              <td>meter (m)</td>
+            </tr>
+            <tr>
+              <td>Time</td>
+              <td>T</td>
+              <td>T</td>
+              <td>second (s)</td>
+            </tr>
+            <tr>
+              <td>Electric current</td>
+              <td>I</td>
+              <td>I</td>
+              <td>ampere (A)</td>
+            </tr>
+            <tr>
+              <td>Temperature</td>
+              <td>Θ</td>
+              <td>Θ</td>
+              <td>kelvin (K)</td>
+            </tr>
+            <tr>
+              <td>Amount of substance</td>
+              <td>N</td>
+              <td>N</td>
+              <td>mole (mol)</td>
+            </tr>
+            <tr>
+              <td>Luminous intensity</td>
+              <td>Iv</td>
+              <td>Iv</td>
+              <td>candela (cd)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <thead>
+            <tr>
+              <th>S.N</th>
+              <th>Physical quantity</th>
+              
+              <th>Name of Units</th>
+              <th>Symbol for Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>Angle</td>
+              <td>Radian</td>
+              <td>rad</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Solid angle</td>
+              <td>Steradian</td>
+              <td>st</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Prefixes for Power of 10</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Power of 10</th>
+				<th>Prefix</th>
+				<th>Symbol</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>10<sup>24</sup></td>
+				<td>yotta</td>
+				<td>Y</td>
+			</tr>
+			<tr>
+				<td>10<sup>21</sup></td>
+				<td>zetta</td>
+				<td>Z</td>
+			</tr>
+			<tr>
+				<td>10<sup>18</sup></td>
+				<td>exa</td>
+				<td>E</td>
+			</tr>
+			<tr>
+				<td>10<sup>15</sup></td>
+				<td>peta</td>
+				<td>P</td>
+			</tr>
+			<tr>
+				<td>10<sup>12</sup></td>
+				<td>tera</td>
+				<td>T</td>
+			</tr>
+			<tr>
+				<td>10<sup>9</sup></td>
+				<td>giga</td>
+				<td>G</td>
+			</tr>
+			<tr>
+				<td>10<sup>6</sup></td>
+				<td>mega</td>
+				<td>M</td>
+			</tr>
+			<tr>
+				<td>10<sup>3</sup></td>
+				<td>kilo</td>
+				<td>k</td>
+			</tr>
+			<tr>
+				<td>10<sup>2</sup></td>
+				<td>hecto</td>
+				<td>h</td>
+			</tr>
+			<tr>
+				<td>10<sup>1</sup></td>
+				<td>deca</td>
+				<td>da</td>
+			</tr>
+			<tr>
+				<td>10<sup>-1</sup></td>
+				<td>deci</td>
+				<td>d</td>
+			</tr>
+			<tr>
+				<td>10<sup>-2</sup></td>
+				<td>centi</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>10<sup>-3</sup></td>
+				<td>milli</td>
+				<td>m</td>
+			</tr>
+			<tr>
+				<td>10<sup>-6</sup></td>
+				<td>micro</td>
+				<td>μ</td>
+			</tr>
+			<tr>
+				<td>10<sup>-9</sup></td>
+				<td>nano</td>
+				<td>n</td>
+			</tr>
+			<tr>
+				<td>10<sup>-12</sup></td>
+				<td>pico</td>
+				<td>p</td>
+			</tr>
+			<tr>
+				<td>10<sup>-15</sup></td>
+				<td>femto</td>
+				<td>f</td>
+      </tr>
+      <tr>
+				<td>10<sup>-18</sup></td>
+				<td>atto</td>
+				<td>a</td>
+			</tr>
+			<tr>
+				<td>10<sup>-21</sup></td>
+				<td>zepto</td>
+				<td>z</td>
+			</tr>
+			<tr>
+				<td>10<sup>-24</sup></td>
+				<td>yocto</td>
+				<td>y</td>
+			</tr>
+		</tbody>
+	</table>
+
+  <h2>Conversions</h2>
+  <ol>
+    <li>Unit of Luminosity/luminous intensity = Candela (cd)</li>
+    <li>1 inch = 2.54 cm = 0.0254 m</li>
+    <li>1 foot = 0.3048 m</li>
+    <li>1 AU = 1.496×10<sup>11</sup> m</li>
+    <li>1 ly = 9.46×10<sup>15</sup> m</li>
+    <li>1 X-ray unit = 10<sup>−13</sup> m</li>
+    <li>Fermi = smallest unit used in nuclear physics.</li>
+    <li>1 amu = 1.66×10<sup>−27</sup> kg</li>
+    <li>1 torr = 1 mm of Hg = 133.33 pa</li>
+    <li>1 pascal = 1 N/m<sup>2</sup></li>
+    <li>1 shake = 10<sup>−8</sup> sec</li>
+    <li>1 eV = 1.6×10<sup>−19</sup> Joule</li>
+    <li>1 kWhr = 3.6×10<sup>6</sup> joule</li>
+    <li>1 L = 10<sup>3</sup> cm<sup>3</sup> = 1 dm<sup>3</sup> = 10<sup>−3</sup> m<sup>3</sup></li>
+    <li>Size of Galaxy = 10<sup>21</sup> m order</li>
+    <li>Mass of Galaxy 🌌 = 10<sup>41</sup> kg</li>
+    <ul>
+      <li>Mass of Milky Way Galaxy 🌌 = 3×10<sup>41</sup> kg</li>
+    </ul>
+    <li>Nucleus = 10<sup>−15</sup> m</li>
+    <li>Atom = 10<sup>−10</sup> m</li>
+  </ol>
+      
+
+  <h2>Dimension</h2>
+  <ol>
+    
+      
+        <li>$\sqrt{LC} = CR = \frac{L}{R} = [T]$</li>
+        <li>Plant constant ($h$) = Angular momentum ($\frac{J}{L}$) = $[ML^2 T^{-1}]$</li>
+        <li>Impulse = Linear momentum = $[MLT^{-1}]$</li>
+        <li>Vander Walls' Equation
+          <ul>
+            <li>$(P + \frac{a}{V^2})(V - b) = RT$</li>
+            <li>$a, b \rightarrow$ Constants</li>
+            <li>$R \rightarrow$ Universal gas constant = $8.31 \, \text{Jmol}^{-1} \, \text{K}^{-1}$</li>
+          </ul>
+        </li>
+      
+    </li>
+    <li>
+      <p>Coefﬁcient of viscosity ($\eta$) = $[ML^{-1} T^{-1}]$</p>
+    </li>
+    <li>
+      <p>Permittivity ($\varepsilon$) = $[M^{-1} L^{-3} T^4 A^2]$</p>
+    </li>
+    <li>
+      <p>Permeability ($\mu$) = $[MLT^{-2} A^{-2}]$</p>
+    </li>
+    <li>
+      <p>$c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}} = [LT^{-1}]$</p>
+    </li>
+  </ol>
+  
+	<h2>7. Dimensionless quantities</h2>
+	<ol>
+		<li>
+			<p>a. Mechanical equivalent of heat (J)</p>
+		</li>
+		<li>
+			<p>b. Emissivity (e)</p>
+		</li>
+		<li>
+			<p>c. Magnetic susceptibility (χ) and electric susceptibility</p>
+		</li>
+		<li>
+			<p>d. Dielectric constant (K)</p>
+		</li>
+		<li>
+			<p>e. Coefficient of friction (μ)</p>
+		</li>
+		<li>
+			<p>f. Loudness (L)</p>
+		</li>
+		<li>
+			<p>g. $e^2/(\epsilon_0 h)$ = fine structure constant</p>
+		</li>
+	</ol>
+
+	<h2>8. Error</h2>
+	<ol>
+		<li>
+			<p>a. $X = \frac{{x^a y^b}}{{z^c}}$</p>
+		</li>
+		<li>
+			<p>b. Relative error $\left(\frac{{\Delta X}}{{X}}\right) = a \frac{{\Delta x}}{{x}} + b \frac{{\Delta y}}{{y}} + c \frac{{\Delta z}}{{z}}$</p>
+			<p>The uncertainty in a measurement is called an error.</p>
+		</li>
+		<li>
+			<p>There are 3 types of errors, namely:</p>
+			<ul>
+				<li>Systematic error</li>
+				<li>Random error</li>
+				<li>Gross error</li>
+			</ul>
+		</li>
+	</ol>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div id="questions-container" class="container" style="display:none">
+
+      <ol>
+ 
+        <div class="questions" data-answer="b">
+          <div class="question">
+              <li>1. 1 torr is</li>
+          </div>
+          <div class="choices">
+              <ol>
+                  <div class="choice">
+                      <input type="radio" name="q1" value="a">
+                      <li>1 atm</li>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" name="q1" value="b">
+                      <li>1 mm of Hg</li>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" name="q1" value="c">
+                      <li>1 cm of Hg</li>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" name="q1" value="d">
+                      <li>1 bar</li>
+                  </div>
+              </ol>
+          </div>
+          <div class="answer"></div>
+          <div class="solution">(b) 1 torr is equivalent to 1 mm of Hg.</div>
+          <button class="check-button" onclick="checkAnswer(this)">Check</button>
+      </div>
+      
+      <div class="questions" data-answer="c">
+          <div class="question">
+              <li>2. What is the dimension of capacitance?</li>
+          </div>
+          <div class="choices">
+              <ol>
+                  <div class="choice">
+                      <input type="radio" name="q2" value="a">
+                      <li>[$M^{-1} L^2 T^{-3} A^{-2}$]</li>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" name="q2" value="b">
+                      <li>[$LT^{-4}$]</li>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" name="q2" value="c">
+                      <li>[$M^{-1} L^{-2} T^4 A^2$]</li>
+                  </div>
+              </ol>
+          </div>
+          <div class="answer"></div>
+          <div class="solution">(c) The dimension of capacitance is [$M^{-1} L^{-2} T^4 A^2$].</div>
+          <button class="check-button" onclick="checkAnswer(this)">Check</button>
+      </div>
+
+      <div class="questions" data-answer="d">
+        <div class="question">
+            <li>a. $NC^{-1}$ has the same dimension as [KU 2009]</li>
+        </div>
+        <div class="choices">
+            <ol>
+                <div class="choice">
+                    <input type="radio" name="qa" value="a">
+                    <li>Volt meter</li>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="qa" value="b">
+                    <li>Farad meter</li>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="qa" value="c">
+                    <li>Farad/meter</li>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="qa" value="d">
+                    <li>Volt/meter</li>
+                </div>
+            </ol>
+        </div>
+        <div class="answer"></div>
+        <div class="solution">(d) $NC^{-1}$ has the same dimension as Volt/meter.</div>
+        <button class="check-button" onclick="checkAnswer(this)">Check</button>
+    </div>
+    
+    <div class="questions" data-answer="a">
+        <div class="question">
+            <li>b. The unit of $\epsilon_0$, the absolute permittivity of free space, are</li>
+        </div>
+        <div class="choices">
+            <ol>
+                <div class="choice">
+                    <input type="radio" name="qb" value="a">
+                    <li>CV$^{-1}$ m$^{-1}$</li>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="qb" value="b">
+                    <li>CA$^{-1}$ m$^{-1}$</li>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="qb" value="c">
+                    <li>C$^{-2}$ m$^{-2}$</li>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="qb" value="d">
+                    <li>Cm</li>
+                </div>
+            </ol>
+        </div>
+        <div class="answer"></div>
+        <div class="solution">(a) The unit of $\epsilon_0$, the absolute permittivity of free space, is CV$^{-1}$ m$^{-1}$.</div>
+        <button class="check-button" onclick="checkAnswer(this)">Check</button>
+    </div>
+
+    <div class="questions" data-answer="d">
+      <div class="question">
+          <li>c. The position $x$ of a particle at time $t$ is given by $x=\frac{b}{a}(1-e^{at})$ where $a$ and $b$ are non-zero constants. The dimensions of $b$ are</li>
+      </div>
+      <div class="choices">
+          <ol>
+              <div class="choice">
+                  <input type="radio" name="q1" value="a">
+                  <li>$[M^0 LT^2]$</li>
+              </div>
+              <div class="choice">
+                  <input type="radio" name="q1" value="b">
+                  <li>$[M^0 LT^0]$</li>
+              </div>
+              <div class="choice">
+                  <input type="radio" name="q1" value="c">
+                  <li>$[M^0 L^0 T^{-1}]$</li>
+              </div>
+              <div class="choice">
+                  <input type="radio" name="q1" value="d">
+                  <li>$[M^0 LT^{-1}]$</li>
+              </div>
+          </ol>
+      </div>
+      <div class="answer"></div>
+      <div class="solution">(d) Dimensional formula of the given equation can be written as $[x]=\frac{[b]}{[a]}[t]^{-1}(1-e^{[a][t]})$. The right-hand side must be dimensionally equal to the left-hand side, which has dimensions of length. So, $[b] = [M^0 L T^{-1}] \times [T] = [M^0 LT^{-1}]$.</div>
+      <button class="check-button" onclick="checkAnswer(this)">Check</button>
+  </div>
+
+
+
+  </ol>
+      
+
+
+    </div>
+    
+    
+    </div>
+  
+    <div id="videos-container" class="container" style="display:none">
+    
+    </div>
+
+    <div id="remnant-container" class="container" style="display:none">
+    
+    </div>
+    
+ 
+    
+   
+   
+   <footer>
+      <p>&copy; 2023 GameChanger</p>
+      <p><a href="https://unsplash.com/photos/LUMjfKzvkEA"></a></p>
+    </footer>
+  
+  </body>
+</html> 
+ 
+
