@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "build": "esbuild --outfile=sw.js --bundle sw.ts && workbox injectManifest"
+    },
+    "devDependencies": {
+        "workbox-cli": "^7.0.0"
+    }
+}

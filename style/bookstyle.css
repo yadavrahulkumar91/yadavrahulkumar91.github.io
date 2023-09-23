@@ -2085,6 +2085,12 @@ blockquote {
     border-radius: 50%;
 }
 
+.user-section {
+  position: absolute;
+  top: 5px; /* You can adjust the top position as needed */
+  right: 5px;
+}
+
 .clickable-profile {
     display: block;
     justify-self: center;

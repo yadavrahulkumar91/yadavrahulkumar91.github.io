@@ -187,7 +187,6 @@ function closeSignIn(event) {
 
 
 
-
 // Add an event listener to check when both scripts are loaded
 let firebaseAppCompatLoaded = false;
 let firebaseAuthCompatLoaded = false;
@@ -320,6 +319,7 @@ function initializeFirebase() {
       // Function to show user section
       // Create the user-section div
       const userSectionDiv = createAndAppendElement(headerElement, 'div', {
+        class: 'user-section',
         id: 'user-section'
       });
 
@@ -507,143 +507,6 @@ loadComments();
   });
 
 }
-
-// function checkFirebaseLoaded1() {
-//   if (firebaseAppLoaded && firebaseAuthLoaded && firebaseDatabaseLoaded) {
-    // const noteTextarea = document.getElementById("note");
-    // const saveButton = document.getElementById("save");
-
-    // let currentUser = null;
-    // firebase.auth().onAuthStateChanged(user => {
-    //   if (user) {
-    //     currentUser = user;
-    //     initUserNote();
-    //   } else {
-    //     // window.location.replace("login.html"); 
-    //     // Redirect to login page if not logged in
-    //   }
-    // });
-
-    // saveButton.addEventListener("click", () => {
-    //   const userNote = noteTextarea.value;
-    //   if (currentUser) {
-    //     database.ref("user-notes/" + currentUser.uid).set({
-    //       note: userNote
-    //     });
-    //   }
-    // });
-
-    // function initUserNote() {
-    //   const userNoteRef = database.ref("user-notes/" + currentUser.uid);
-    //   userNoteRef.once("value")
-    //     .then(snapshot => {
-    //       const userData = snapshot.val();
-    //       if (userData && userData.note) {
-    //         noteTextarea.value = userData.note;
-    //       }
-    //     });
-    // }
-//   }
-// }
-
-
-// function checkFirebaseLoaded2() {
-//   if (quillScriptLoaded && firebaseStorageLoaded) {
-
-    // const firebaseConfig = {
-    //   apiKey: "AIzaSyD4f2qv32PaDfYdo5m8qdN_pxGSEX6QUhw",
-    //   authDomain: "gamechanger-f5da7.firebaseapp.com",
-    //   databaseURL: "https://gamechanger-f5da7-default-rtdb.firebaseio.com",
-    //   projectId: "gamechanger-f5da7",
-    //   storageBucket: "gamechanger-f5da7.appspot.com",
-    //   messagingSenderId: "358268649157",
-    //   appId: "1:358268649157:web:8439649bc02f3a6cb8faac",
-    //   measurementId: "G-QBH1QYTY8V"
-    // };
-    // firebase.initializeApp(firebaseConfig);
-
-
-    // var storage = firebase.storage();
-    // var storageRef = storage.ref();
-    // var options = {
-    //   modules: {
-    //     toolbar: [
-    //       ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-    //       ['blockquote', 'code-block'],
-
-    //       ['link', 'image', 'video'],                 // Insert options
-    //       [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-    //       [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-    //       [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-    //       [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-    //       [{ 'direction': 'rtl' }],                         // text direction
-
-    //       [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-    //       [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-    //       [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-    //       [{ 'font': [] }],
-    //       [{ 'align': [] }],
-
-    //       ['clean']                                         // remove formatting button
-    //     ],
-    //     history: {
-    //       delay: 2000,
-    //       maxStack: 500,
-    //       userOnly: true
-    //     }
-    //   },
-    //   placeholder: 'Compose an epic...',
-    //   readOnly: false,
-    //   theme: 'snow',
-    // };
-    // var quill = new Quill('#editor', options);
-
-
-    // const saveButton1 = document.getElementById("save1");
-    // saveButton1.addEventListener("click", () => {
-
-    //   if (user) {
-    //     var noteContent = quill.root.innerHTML; // Get the HTML content from Quill
-
-    //     // Upload the content to Firebase Cloud Storage
-    //     var storageRef = firebase.storage().ref();
-    //     var userNoteRef = storageRef.child('notes/' + user.uid + '/note1.html');
-    //     // Adjust the path based on the user's UID
-
-    //     userNoteRef.putString(noteContent, 'raw').then(function (snapshot) {
-    //       console.log('Note content uploaded successfully!');
-    //     });
-
-
-    //   } else {
-    //     console.log("User not authenticated.");
-    //   }
-
-
-    // });
-    // if (user) {
-    //   // Retrieve the note content for the user
-    //   var storageRef = firebase.storage().ref();
-    //   var userNoteRef = storageRef.child('notes/' + user.uid + '/note1.html');
-
-    //   userNoteRef.getDownloadURL().then(function (url) {
-    //     fetch(url)
-    //       .then(response => response.text())
-    //       .then(content => {
-    //         quill.clipboard.dangerouslyPasteHTML(content);
-    //       });
-    //   });
-    // } else {
-    //   console.log("User not authenticated.");
-    // }
-
-
-
-
-//   }
-// }
-
 
 
 
@@ -1322,166 +1185,15 @@ function openContainer(evt, containerName) {
 
 
 
+function offline(){
 
-
-
-// firebase.initializeApp(firebaseConfig);
-
-// const database = firebase.database();
-// const commentForm = document.getElementById('commentForm');
-// const commentSection = document.getElementById('commentSection');
-
-// commentForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-
-//   const name = document.getElementById('name').value;
-//   const email = document.getElementById('email').value;
-//   const commentText = document.getElementById('comment').value;
-
-//   const newCommentRef = database.ref('comments').push();
-//   newCommentRef.set({
-//     name: name,
-//     email: email,
-//     comment: commentText,
-//     timestamp: firebase.database.ServerValue.TIMESTAMP
-//   });
-
-//   commentForm.reset();
-// });
-
-// function loadComments() {
-//   const commentsRef = database.ref('comments');
-//   commentsRef.on('value', (snapshot) => {
-//     commentSection.innerHTML = '';
-
-//     snapshot.forEach((childSnapshot) => {
-//       const comment = childSnapshot.val();
-//       const commentDiv = document.createElement('div');
-//       commentDiv.innerHTML = `<strong>${comment.name}</strong> (${comment.email}): ${comment.comment}`;
-//       commentSection.appendChild(commentDiv);
-//     });
-//   });
-// }
-
-// loadComments();
-
-
-
-
-
-
-// const noteTextarea = document.getElementById("note");
-// const saveButton = document.getElementById("save");
-
-// let currentUser = null;
-
-// firebase.auth().onAuthStateChanged(user => {
-//   if (user) {
-//     currentUser = user;
-//     initUserNote();
-//   } else {
-//     // window.location.replace("login.html");
-//     // Redirect to login page if not logged in
-//   }
-// });
-
-// saveButton.addEventListener("click", () => {
-//   const userNote = noteTextarea.value;
-//   if (currentUser) {
-//     database.ref("user-notes/" + currentUser.uid).set({
-//       note: userNote
-//     });
-//   }
-// });
-
-// function initUserNote() {
-//   const userNoteRef = database.ref("user-notes/" + currentUser.uid);
-//   userNoteRef.once("value")
-//     .then(snapshot => {
-//       const userData = snapshot.val();
-//       if (userData && userData.note) {
-//         noteTextarea.value = userData.note;
-//       }
-//     });
-// }
-
-
-
-
-// var storage = firebase.storage();
-// var storageRef = storage.ref();
-
-
-// var options = {
-//   modules: {
-//     toolbar: [
-//       ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-//       ['blockquote', 'code-block'],
-
-//       ['link', 'image', 'video'],                 // Insert options
-//       [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-//       [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-//       [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-//       [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-//       [{ 'direction': 'rtl' }],                         // text direction
-
-//       [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-//       [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-//       [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-//       [{ 'font': [] }],
-//       [{ 'align': [] }],
-
-//       ['clean']                                         // remove formatting button
-//     ],
-//     history: {
-//       delay: 2000,
-//       maxStack: 500,
-//       userOnly: true
-//     }
-//   },
-//   placeholder: 'Compose an epic...',
-//   readOnly: false,
-//   theme: 'snow',
-// };
-// var quill = new Quill('#editor', options);
-
-
-// const saveButton1 = document.getElementById("save1");
-// saveButton1.addEventListener("click", () => {
-
-//   if (user) {
-//     var noteContent = quill.root.innerHTML; // Get the HTML content from Quill
-
-//     // Upload the content to Firebase Cloud Storage
-//     var storageRef = firebase.storage().ref();
-//     var userNoteRef = storageRef.child('notes/' + user.uid + '/note1.html');
-//     // Adjust the path based on the user's UID
-
-//     userNoteRef.putString(noteContent, 'raw').then(function (snapshot) {
-//       console.log('Note content uploaded successfully!');
-//     });
-
-
-//   } else {
-//     console.log("User not authenticated.");
-//   }
-
-
-// });
-// if (user) {
-//   // Retrieve the note content for the user
-//   var storageRef = firebase.storage().ref();
-//   var userNoteRef = storageRef.child('notes/' + user.uid + '/note1.html');
-
-//   userNoteRef.getDownloadURL().then(function (url) {
-//     fetch(url)
-//       .then(response => response.text())
-//       .then(content => {
-//         quill.clipboard.dangerouslyPasteHTML(content);
-//       });
-//   });
-// } else {
-//   console.log("User not authenticated.");
-// }
-
+ preventDefault(); 
+  
+  
+  window.addEventListener('load', () =>{
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  }
+  )
+};
