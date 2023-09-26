@@ -6,7 +6,7 @@ module.exports = {
 	swDest: 'sw.js',
 	swSrc: 'sw.js',
 	  // Configure maximumFileSizeToCacheInBytes to increase the precaching limit
-	  maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 5 MB
+	  maximumFileSizeToCacheInBytes: 25 * 1024 * 1024, // 5 MB
 
 
 
